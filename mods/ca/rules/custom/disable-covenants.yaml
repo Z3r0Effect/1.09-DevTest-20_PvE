@@ -1,0 +1,65 @@
+Player:
+	-ProvidesPrerequisitesOnCount@NodCovenants:
+
+wrath.covenant:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+unity.covenant:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+zeal.covenant:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+covenant.upgrade:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+lastnk.upgrade:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+cust.upgrade:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+rbug.upgrade:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+covenant.upgrade2:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+cyborgarmor.upgrade:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+cyborgdmg.upgrade:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+cyborgprod.upgrade:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+cyborgspeed.upgrade:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+^AssassinSquadPower:
+	ProduceActorPowerCA@AssassinSquad:
+		Prerequisites: ~disabled
+
+^HackerCellPower:
+	ProduceActorPowerCA@HackerCell:
+		Prerequisites: ~disabled
+
+^ConfessorCabalPower:
+	ProduceActorPowerCA@ConfessorCabal:
+		Prerequisites: ~disabled
+
+RMBC:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+AVTR:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+REAP:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+ENLI:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+TMPP:
+	Inherits@CAMPAIGNDISABLED: ^Disabled

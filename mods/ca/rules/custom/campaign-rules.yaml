@@ -1,0 +1,1135 @@
+^ExistsInWorld:
+	GivesExperienceCA:
+		ActorExperienceOnDamage: false
+	ScriptTags:
+
+^Palettes:
+	TintPostProcessEffect:
+
+Player:
+	-ConquestVictoryConditions:
+	MissionObjectives:
+	Shroud:
+		ExploredMapCheckboxEnabled: False
+		ExploredMapCheckboxLocked: True
+		ExploredMapCheckboxVisible: False
+		FogCheckboxEnabled: True
+		FogCheckboxLocked: False
+		FogCheckboxVisible: True
+	PlayerResources:
+		DefaultCashDropdownLocked: True
+		DefaultCashDropdownVisible: False
+		DefaultCash: 0
+		SelectableCash: 0, 1000, 2000, 5000
+	ModularBot@CampaignAI:
+		Name: Campaign AI
+		Type: campaign
+	ModularBot@DormantAI:
+		Name: Dormant AI
+		Type: dormant
+	GrantConditionOnBotOwner@CampaignAI:
+		Condition: enable-campaign-ai
+		Bots: campaign
+	SupportPowerBotModule:
+		RequiresCondition: enable-brutal-ai || enable-vhard-ai || enable-hard-ai || enable-normal-ai || enable-easy-ai || enable-naval-ai || enable-campaign-ai
+	HarvesterBotModuleCA:
+		RequiresCondition: enable-brutal-ai || enable-vhard-ai || enable-hard-ai || enable-normal-ai || enable-easy-ai || enable-naval-ai || enable-campaign-ai
+	LobbyPrerequisiteCheckbox@GLOBALBOUNTY:
+		Enabled: False
+		Locked: True
+		Visible: False
+	LobbyPrerequisiteCheckbox@FORCESHIELD:
+		Enabled: False
+		Locked: True
+		Visible: False
+	LobbyPrerequisiteCheckbox@GLOBALFACTUNDEPLOY:
+		Locked: True
+		Visible: False
+	LobbyPrerequisiteCheckbox@NAVY:
+		Locked: True
+		Visible: False
+	LobbyPrerequisiteCheckbox@BALANCEDHARVESTING:
+		Locked: True
+		Visible: False
+	LobbyPrerequisiteCheckbox@FASTREGROWTH:
+		Locked: True
+		Visible: False
+	LobbyPrerequisiteCheckbox@REVEALONFIRE:
+		Locked: True
+		Visible: False
+	DeveloperMode:
+		CheckboxLocked: True
+		CheckboxVisible: False
+	LobbyPrerequisiteDropdown@QUEUETYPE:
+		Default: global.singlequeue
+		Locked: True
+		Visible: False
+		Values:
+			global.singlequeue: options-queuetype.singlequeue
+	CampaignProgressTracker:
+
+World:
+	CrateSpawner:
+		CheckboxEnabled: False
+		CheckboxLocked: True
+		CheckboxVisible: False
+	-SpawnStartingUnits:
+	-MapStartingLocations:
+	ScriptLobbyDropdown@DIFFICULTY:
+		ID: difficulty
+		Label: dropdown-difficulty.label
+		Description: dropdown-difficulty.description
+		Values:
+			easy: options-difficulty.easy
+			normal: options-difficulty.normal
+			hard: options-difficulty.hard
+			vhard: options-difficulty.vhard
+			brutal: options-difficulty.brutal
+		Default: normal
+	ObjectivesPanel:
+		PanelName: MISSION_OBJECTIVES
+	MapBuildRadius:
+		AllyBuildRadiusCheckboxEnabled: False
+		AllyBuildRadiusCheckboxLocked: True
+		AllyBuildRadiusCheckboxVisible: False
+		BuildRadiusCheckboxEnabled: True
+		BuildRadiusCheckboxLocked: False
+		BuildRadiusCheckboxVisible: True
+	MapOptions:
+		TechLevelDropdownLocked: True
+		TechLevelDropdownVisible: False
+		ShortGameCheckboxEnabled: False
+		ShortGameCheckboxLocked: True
+		ShortGameCheckboxVisible: False
+		BlindPickModeCheckboxVisible: False
+	TimeLimitManager:
+		TimeLimitLocked: True
+		TimeLimitDropdownVisible: False
+	MusicPlaylist:
+		VictoryMusic: score
+		DefeatMusic: map
+	Faction@0:
+		Selectable: True
+		Description: faction-allies.description
+	Faction@4:
+		Selectable: True
+		Description: faction-soviet.description
+	Faction@8:
+		Selectable: True
+		Description: faction-gdi.description
+	Faction@12:
+		Selectable: True
+		Description: faction-nod.description
+	Faction@16:
+		Selectable: True
+		Description: faction-scrin.description
+
+^Infantry:
+	GrantConditionOnPrerequisite@BIO:
+		Prerequisites: disabled
+
+^Disabled:
+	Buildable:
+		Prerequisites: ~disabled
+
+^NameTag:
+	WithNameTagDecoration:
+		MaxLength: 5
+		ValidRelationships: Ally
+		UsePlayerColor: True
+		Position: Top
+		Margin: 0,-15
+
+# Assigned to actors in missions, assigned in lua dynamically
+# (so we use DummyConditionConsumer to prevent yaml warnings)
+
+^ActorDifficultyConditions:
+	ExternalCondition@EASY:
+		Condition: difficulty-easy
+	ExternalCondition@NORMAL:
+		Condition: difficulty-normal
+	ExternalCondition@HARD:
+		Condition: difficulty-hard
+	ExternalCondition@VHARD:
+		Condition: difficulty-vhard
+	ExternalCondition@BRUTAL:
+		Condition: difficulty-brutal
+	DummyConditionConsumer@EASY:
+		Condition: difficulty-easy
+	DummyConditionConsumer@NORMAL:
+		Condition: difficulty-normal
+	DummyConditionConsumer@HARD:
+		Condition: difficulty-hard
+	DummyConditionConsumer@VHARD:
+		Condition: difficulty-vhard
+	DummyConditionConsumer@BRUTAL:
+		Condition: difficulty-brutal
+
+# Prevent neutralised units decaying
+
+^AffectedByDriverKill:
+	ChangesHealth@DRIVER_DEAD:
+		PercentageStep: 0
+
+# Reduce XP gain for snipers to prevent excessive exploiting of driver kill
+
+SNIP:
+	GainsExperienceMultiplier@TenPercentXp:
+		Modifier: 10
+
+# Extra power for AI to reduce the number of power plants needed
+
+^AiExtraPower:
+	GrantConditionOnPrerequisite@OwnedByAi:
+		Condition: owned-by-ai
+		Prerequisites: botplayer
+	PowerMultiplier@EXTRAPOWER:
+		Modifier: 130
+		RequiresCondition: owned-by-ai
+
+POWR:
+	Inherits@EXTRAPOWER: ^AiExtraPower
+
+APWR:
+	Inherits@EXTRAPOWER: ^AiExtraPower
+
+TPWR:
+	Inherits@EXTRAPOWER: ^AiExtraPower
+
+NUKE:
+	Inherits@EXTRAPOWER: ^AiExtraPower
+
+NUK2:
+	Inherits@EXTRAPOWER: ^AiExtraPower
+
+REAC:
+	Inherits@EXTRAPOWER: ^AiExtraPower
+
+REA2:
+	Inherits@EXTRAPOWER: ^AiExtraPower
+
+# Defense structure external disable condition to allow disabling of specific defenses for AI
+
+PRIS:
+	ExternalCondition@DISABLED:
+		Condition: disabled
+
+HTUR:
+	ExternalCondition@DISABLED:
+		Condition: disabled
+
+AGUN:
+	ExternalCondition@DISABLED:
+		Condition: disabled
+
+GAP:
+	ExternalCondition@DISABLED:
+		Condition: disabled
+
+TSLA:
+	ExternalCondition@DISABLED:
+		Condition: disabled
+
+SAM:
+	ExternalCondition@DISABLED:
+		Condition: disabled
+
+ATWR:
+	ExternalCondition@DISABLED:
+		Condition: disabled
+
+STWR:
+	ExternalCondition@DISABLED:
+		Condition: disabled
+
+CRAM:
+	ExternalCondition@DISABLED:
+		Condition: disabled
+
+OBLI:
+	ExternalCondition@DISABLED:
+		Condition: disabled
+
+NSAM:
+	ExternalCondition@DISABLED:
+		Condition: disabled
+
+LASP:
+	ExternalCondition@DISABLED:
+		Condition: disabled
+
+SCOL:
+	ExternalCondition@DISABLED:
+		Condition: disabled
+
+SSPK:
+	-ExternalCondition@DISABLED:
+
+SHAR:
+	ExternalCondition@DISABLED:
+		Condition: disabled
+
+SGEN:
+	ExternalCondition@DISABLED:
+		Condition: disabled
+
+# Prevent Boris MiG being targeted
+
+SMIG:
+	-Targetable@AIRBORNE:
+
+# Supply Truck not buildable, slower and doesn't drop money crate
+
+TRUK:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+	Mobile:
+		Speed: 54
+	-SpawnActorOnDeath:
+
+# Civilian buildings don't spawn civilians on death
+
+^CivBuilding:
+	-SpawnRandomActorOnDeath@1:
+	-SpawnRandomActorOnDeath@2:
+	-SpawnRandomActorOnDeath@3:
+
+# Crate adjustments
+
+MONEYCRATE:
+	Tooltip:
+		Name: Crate
+	CrateCA:
+		Duration: 0
+	GiveCashCrateAction:
+		Amount: 2000
+		ExcludedActorTypes: c1, c2, c3, c4, c5, c6, c7, c8, c9, c10
+	RenderSprites:
+		Image: scrate
+
+HEALCRATE:
+	CrateCA:
+		Duration: 0
+
+# Special/utility actors
+
+ai.unlimited.power:
+	Inherits@DUMMY: ^InvisibleDummy
+	Power:
+		Amount: 10000
+
+ai.superweapons.enabled:
+	Inherits@DUMMY: ^InvisibleDummy
+	ProvidesPrerequisite:
+
+ai.minor.superweapons.enabled:
+	Inherits@DUMMY: ^InvisibleDummy
+	ProvidesPrerequisite:
+
+ai.supportpowers.enabled:
+	Inherits@DUMMY: ^InvisibleDummy
+	ProvidesPrerequisite:
+
+ai.reveal.map:
+	Inherits@DUMMY: ^InvisibleDummy
+	RevealsMap:
+		RevealGeneratedShroud: false
+
+hold3.strat:
+	Inherits@DUMMY: ^InvisibleDummy
+	ProvidesPrerequisite@upgradename:
+
+radar.dummy:
+	Inherits@DUMMY: ^InvisibleDummy
+	ProvidesRadar:
+
+spy.plane.dummy:
+	Inherits@DUMMY: ^InvisibleDummy
+	Inherits@SpyPlanePower: ^SpyPlanePower
+	AirstrikePowerCA@spyplane:
+		-PauseOnCondition:
+
+SMALLCAMERA:
+	Inherits: CAMERA
+	RevealsShroud:
+		Range: 5c0
+
+LARGECAMERA:
+	Inherits: CAMERA
+	RevealsShroud:
+		Range: 17c0
+
+WARPIN:
+	Inherits: SMALLCAMERA
+	-RenderSpritesEditorOnly:
+	RenderSprites:
+		Image: empty
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
+	WithRestartableIdleOverlay@WARPIN:
+		PlayOnce: true
+		Image: chronobubble
+		Sequence: warpin
+		Palette: ra2effect-ignore-lighting-alpha75
+
+HIDDENSPAWNER:
+	Inherits@0: ^InvisibleDummy
+	Inherits@1: ^ProducesInfantry
+	Inherits@2: ^ProducesVehicles
+	Inherits@3: ^ProducesAircraft
+	Building:
+		Dimensions: 1,1
+		Footprint: _
+		TerrainTypes: Clear,Road
+	EditorOnlyTooltip:
+		Name: (hiddenspawner)
+	AlwaysVisible:
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+		Image: waypoint
+	BodyOrientation:
+		QuantizedFacings: 1
+	MapEditorData:
+		Categories: System
+	Exit:
+		ExitCell: 0,2
+	RallyPoint:
+	ExternalCondition@FIX1:
+		Condition: forceshield
+	ExternalCondition@FIX2:
+		Condition: being-warped
+
+# Prevent AI Hospitals/Machine Shops spawning units
+
+HOSP:
+	GrantConditionOnPrerequisite@OwnedByAi:
+		Condition: owned-by-ai
+		Prerequisites: botplayer
+	PeriodicProducerCA@MEDIC:
+		RequiresCondition: !is-neutral && !scrinplayer && !owned-by-ai
+	PeriodicProducerCA@REJUVENATOR:
+		RequiresCondition: !is-neutral && scrinplayer && !owned-by-ai
+
+MACS:
+	GrantConditionOnPrerequisite@OwnedByAi:
+		Condition: owned-by-ai
+		Prerequisites: botplayer
+	PeriodicProducerCA@MECHANIC:
+		RequiresCondition: !is-neutral && !scrinplayer && !owned-by-ai
+	PeriodicProducerCA@ARTIFICER:
+		RequiresCondition: !is-neutral && scrinplayer && !owned-by-ai
+
+# Prevent duplicate basic infantry when dual-tech is available
+
+E2:
+	Buildable:
+		Prerequisites: ~infantry.e2, ~!pyle
+
+N1:
+	Buildable:
+		Prerequisites: ~!tmpp, ~infantry.td, ~!infantry.ra
+
+N3:
+	Buildable:
+		Prerequisites: ~!tmpp, ~infantry.td, ~!infantry.ra
+
+N6:
+	Buildable:
+		Prerequisites: ~infantry.td, ~!infantry.ra
+
+# So AI can produce Shadow Operatives
+
+SHAD:
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildPaletteOrder: 500
+		Prerequisites: ~disabled
+		BuildAtProductionType: Soldier
+		Description: Elite stealth infantry.
+
+# Disable the ability to transfer resources from AI players on capturing (lua script handles cash reward)
+
+PROC:
+	InfiltrateForCash:
+		Maximum: 600
+	StoresPlayerResourcesCA:
+		DisableTransferFromBotOwner: true
+
+PROC.TD:
+	InfiltrateForCash:
+		Maximum: 600
+	StoresPlayerResourcesCA:
+		DisableTransferFromBotOwner: true
+
+PROC.SCRIN:
+	InfiltrateForCash:
+		Maximum: 600
+	StoresPlayerResourcesCA:
+		DisableTransferFromBotOwner: true
+
+SILO:
+	StoresPlayerResourcesCA:
+		DisableTransferFromBotOwner: true
+
+SILO.TD:
+	StoresPlayerResourcesCA:
+		DisableTransferFromBotOwner: true
+
+SILO.SCRIN:
+	StoresPlayerResourcesCA:
+		DisableTransferFromBotOwner: true
+
+# Require ai.superweapons.enabled for superweapons to be enabled for AI players & don't show enemy timers for minor superweapons
+
+^AiSuperweaponsEnabled:
+	GrantConditionOnPrerequisite@OwnedByAi:
+		Condition: owned-by-ai
+		Prerequisites: botplayer
+	GrantConditionOnPrerequisite@AiSuperweaponsEnabled:
+		Condition: ai-superweapons-enabled
+		Prerequisites: ai.superweapons.enabled
+
+^AiMinorSuperweaponsEnabled:
+	GrantConditionOnPrerequisite@OwnedByAi:
+		Condition: owned-by-ai
+		Prerequisites: botplayer
+	GrantConditionOnPrerequisite@AiSuperweaponsEnabled:
+		Condition: ai-minor-superweapons-enabled
+		Prerequisites: ai.minor.superweapons.enabled
+
+WEAT:
+	Inherits@AiSuperweaponsEnabled: ^AiSuperweaponsEnabled
+	DetonateWeaponPower@LightningStorm:
+		RequiresCondition: ai-superweapons-enabled || !owned-by-ai
+
+PDOX:
+	Inherits@AiMinorSuperweaponsEnabled: ^AiMinorSuperweaponsEnabled
+	DetonateWeaponPower@ChronoAI:
+		RequiresCondition: ai-minor-superweapons-enabled || !owned-by-ai
+
+MSLO:
+	Inherits@AiSuperweaponsEnabled: ^AiSuperweaponsEnabled
+	NukePower@ABomb:
+		RequiresCondition: ai-superweapons-enabled || !owned-by-ai
+
+IRON:
+	Inherits@AiMinorSuperweaponsEnabled: ^AiMinorSuperweaponsEnabled
+	GrantExternalConditionPowerCA@IRONCURTAIN:
+		RequiresCondition: ai-minor-superweapons-enabled || !owned-by-ai
+
+EYE:
+	Inherits@AiSuperweaponsEnabled: ^AiSuperweaponsEnabled
+	DetonateWeaponPower@IonStorm:
+		RequiresCondition: ai-superweapons-enabled || !owned-by-ai
+
+PATR:
+	Inherits@AiMinorSuperweaponsEnabled: ^AiMinorSuperweaponsEnabled
+	AttackOrderPowerCA@EMPMISSILE:
+		RequiresCondition: ai-minor-superweapons-enabled || !owned-by-ai
+
+MSLO.Nod:
+	Inherits@AiSuperweaponsEnabled: ^AiSuperweaponsEnabled
+	NukePower@Chemmiss:
+		RequiresCondition: ai-superweapons-enabled || !owned-by-ai
+
+SGEN:
+	Inherits@AiMinorSuperweaponsEnabled: ^AiMinorSuperweaponsEnabled
+	GrantExternalConditionPowerCA@SGEN:
+		RequiresCondition: ai-minor-superweapons-enabled || !owned-by-ai
+		DisplayTimerRelationships: Ally
+
+RFGN:
+	Inherits@AiSuperweaponsEnabled: ^AiSuperweaponsEnabled
+	DetonateWeaponPower@RiftGenerator:
+		RequiresCondition: ai-superweapons-enabled || !owned-by-ai
+
+MANI:
+	Inherits@AiMinorSuperweaponsEnabled: ^AiMinorSuperweaponsEnabled
+	GrantExternalConditionPowerCA@SUPPRESSION:
+		RequiresCondition: ai-minor-superweapons-enabled || !owned-by-ai
+
+TMPL:
+	Inherits@AiMinorSuperweaponsEnabled: ^AiMinorSuperweaponsEnabled
+	NukePower@Cluster:
+		RequiresCondition: ai-minor-superweapons-enabled || !owned-by-ai
+
+# Disable GPS for AI
+
+^GpsPower:
+	GrantConditionOnPrerequisite@OwnedByAi:
+		Condition: owned-by-ai
+		Prerequisites: botplayer
+	DummyGpsPower@NOFOG:
+		RequiresCondition: !gps-launched && !fogenabled && !owned-by-ai
+	DummyGpsPower@FOG:
+		RequiresCondition: !gps-launched && fogenabled && !owned-by-ai
+	ProduceActorPowerCA@SatelliteLaunched:
+		Prerequisites: ~!botplayer
+	ProduceActorPowerCA@InitialSatelliteScan:
+		Prerequisites: anyradar, ~!gps.satellite.firstscan, ~fogenabled, ~!botplayer
+	ProduceActorPowerCA@SatelliteScan:
+		Prerequisites: anyradar, ~gps.satellite, ~gps.satellite.firstscan, ~fogenabled, ~!botplayer
+	ProduceActorPowerCA@SatelliteScanNoFog:
+		Prerequisites: anyradar, ~!fogenabled, ~!botplayer
+
+# Increase launch time for player GPS
+
+^GpsPower:
+	DummyGpsPower@FOG:
+		Delay: 17250
+	DummyGpsPower@NOFOG:
+		Delay: 22500
+	ProduceActorPowerCA@InitialSatelliteScan
+		ChargeInterval: 22500
+	ProduceActorPowerCA@SatelliteScanNoFog:
+		ChargeInterval: 22500
+
+# Disable Cloning Vat for AI
+
+CVAT:
+	CargoCloner@SQ:
+		RequiresCondition: !global-multiqueue && !owned-by-ai
+	CargoCloner@MQ:
+		RequiresCondition: global-multiqueue && !owned-by-ai
+	GrantConditionOnPrerequisite@OwnedByAi:
+		Condition: owned-by-ai
+		Prerequisites: botplayer
+
+# Manual targeting for Tesla Coil boost (otherwise they get stuck when AI attack moves)
+
+SHOK:
+	-AutoTargetPriority@TESLANORMAL:
+	-AutoTargetPriority@TESLAAMOVE:
+	AttackMove:
+		-AttackMoveCondition:
+
+# Kirov damage boost since no subfaction variants are available
+
+KIRO:
+	FirepowerMultiplier@CampaignDamage:
+		Modifier: 110
+
+# Special units/buildings
+
+TRAN.evac:
+	Inherits: TRAN
+	-Buildable:
+	RenderSprites:
+		Image: tran
+	DamageMultiplier@INVULN:
+		Modifier: 0
+	-KillsSelf@Emp:
+	Aircraft:
+		TurnToLand: True
+		InitialFacing: 0
+
+PDGY:
+	Inherits: MAST
+	-Buildable:
+	RenderSprites:
+		Image: mast
+	GrantCondition@Elite:
+		Condition: rank-elite
+
+ETPD:
+	Inherits: TPOD
+	Inherits@ActorDifficultyConditions: ^ActorDifficultyConditions
+	Inherits@SHIELDS: ^ScrinShields
+	Inherits@A2GPROTECTION: ^AirToGroundProtection
+	Inherits@SHRAPNEL: ^ThrowsShrapnelBig
+	Inherits@COMMANDOSKULL: ^CommandoSkull
+	Turreted@SHIELDS:
+		Offset: 0,0,0
+	GrantCondition@SHIELDS:
+		Condition: shields-upgrade
+	Tooltip:
+		Name: Exterminator Tripod
+	-Buildable:
+	TooltipExtras:
+		Description: Super heavy assault walker with beam weapons.
+		Strengths: Strong vs all ground units and structures.
+	Mobile:
+		Speed: 36
+		PauseOnCondition: empdisable || notmobile
+		ImmovableCondition: alive
+	GrantCondition@ALIVE:
+		Condition: alive
+	Armament@PRIMARY:
+		Weapon: ExterminatorLaser
+		LocalOffset: 800,650,1000
+	Armament@PRIMARY2:
+		Weapon: ExterminatorLaser
+		LocalOffset: 800,450,1500
+		FireDelay: 2
+		MuzzleSequence: muzzle
+		MuzzlePalette: scrin
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: ExterminatorLaserReversed
+		LocalOffset: 800,-650,1000
+	Armament@SECONDARY2:
+		Name: secondary
+		Weapon: ExterminatorLaserReversed
+		LocalOffset: 800,-450,1500
+		FireDelay: 22
+		MuzzleSequence: muzzle
+		MuzzlePalette: scrin
+	AttackTurreted:
+		PauseOnCondition: empdisable || being-warped
+	Health:
+		HP: 900000
+	Shielded:
+		MaxStrength: 650000
+		RegenAmount: 1000
+	Valued:
+		Cost: 10000
+	RevealsShroud:
+		Range: 7c0
+	TurretedFloating:
+		TurnSpeed: 8
+	Selectable:
+		Bounds: 1800, 3200, 0, -600
+	AutoTarget:
+		InitialStanceAI: AttackAnything
+	SpawnActorOnDeath:
+		Actor: ETPD.Husk
+	Targetable@CampaignBoss:
+		TargetTypes: CampaignBoss
+	Targetable@ExterminatorTripod:
+		TargetTypes: ExterminatorTripod
+	Targetable@SHIELDED:
+		TargetTypes: Shielded
+		RequiresCondition: shields-up
+	Targetable@MindControlResistant:
+		TargetTypes: MindControlResistant
+	Targetable@MindControlImmune:
+		TargetTypes: MindControlImmune
+		RequiresCondition: shields-up
+	Targetable@ChaosImmune:
+		TargetTypes: ChaosImmune
+		RequiresCondition: shields-up
+	Targetable@DriverKillImmune:
+		TargetTypes: DriverKillImmune
+	RevealsShroudMultiplier@Blinded:
+		Modifier: 80
+	RangeMultiplier@Blinded:
+		Modifier: 80
+		RequiresCondition: blinded
+	FirepowerMultiplier@Blinded:
+		Modifier: 90
+		RequiresCondition: blinded
+	SpeedMultiplier@TEMPORAL:
+		Modifier: 75
+	ReloadDelayMultiplier@TEMPORAL:
+		Modifier: 120
+		RequiresCondition: being-warped
+	CaptureManager:
+		-BeingCapturedCondition:
+	-ExternalCondition@UNITSELL:
+	-Sellable:
+	ChangesHealth@THEAL:
+		Step: 2000
+		PercentageStep: 0
+	FireWarheadsOnDeath:
+		Weapon: 380mm
+		EmptyWeapon: 380mm
+	-HealthCapDamageMultiplier@CHRONO:
+	DummyConditionConsumer@CHRONO:
+		Condition: chronoshifted
+
+ETPD.Husk:
+	Inherits: TPOD.Husk
+	Tooltip:
+		Name: Husk (Exterminator Tripod)
+	RenderSprites:
+		Image: etpd.destroyed
+
+VENG:
+	Inherits: ^Vehicle
+	Inherits@ActorDifficultyConditions: ^ActorDifficultyConditions
+	Inherits@ScrinUnitPalette: ^ScrinUnitPalette
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@BERSERK: ^Berserk
+	Inherits@HOVERTRAIL: ^HoverTrail
+	Inherits@SCRINVEHICLEVOICE: ^ScrinVehicleVoice
+	Inherits@HeavyArmor: ^HeavyArmor
+	Inherits@A2GPROTECTION: ^AirToGroundProtection
+	Inherits@COMMANDOSKULL: ^CommandoSkull
+	TooltipExtras:
+		Description: Colossal Malefic Scrin war machine.
+		Strengths: • Unknown
+		Weaknesses: • Unknown
+	Valued:
+		Cost: 15000
+	Tooltip:
+		Name: Void Engine
+	Selectable:
+		Bounds: 2800, 3000, 0, -600
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 2250000
+	HitShape:
+		Type: Circle
+			Radius: 768
+	Mobile:
+		TurnSpeed: 4
+		Speed: 10
+		Locomotor: sheavytracked
+		PauseOnCondition: empdisable || notmobile
+	-Crushable:
+	WithShadow:
+		Offset: 43, 128, 0
+		ZOffset: -129
+		RequiresCondition: !invisibility
+	Hovers:
+		BobDistance: -25
+		Ticks: 12
+		RequiresCondition: !empdisable && !being-warped && !driver-dead
+	RevealsShroud:
+		Range: 10c0
+	Armament:
+		Weapon: VoidEngineBeam
+		LocalOffset: 1100,0,700
+		MuzzleSequence: muzzle
+		MuzzlePalette: scrin
+	WithMuzzleOverlay:
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+	WithProductionIconOverlay:
+		Types: Veterancy
+		Prerequisites: vehicles.upgraded
+	AttackFrontal:
+		PauseOnCondition: empdisable
+		TargetFrozenActors: True
+		ForceFireIgnoresActors: True
+		FacingTolerance: 8
+	GrantConditionOnTerrain@ONWATER:
+		TerrainTypes: Water
+		Condition: onwater
+	KillsSelf@SINK:
+		RequiresCondition: onwater && (empdisable || driver-dead)
+	Targetable@ONWATER:
+		TargetTypes: Water, Ship
+		RequiresCondition: onwater
+	SpawnActorOnDeath:
+		Actor: VENG.Husk
+		RequiresCondition: !being-warped
+	SpawnActorOnDeath@Rift:
+		Actor: voidenginedeathrift
+		RequiresCondition: !being-warped
+	AutoTarget:
+		InitialStanceAI: AttackAnything
+	Targetable@MindControlImmune:
+		TargetTypes: MindControlImmune
+	Targetable@ChaosImmune:
+		TargetTypes: ChaosImmune
+	Targetable@DriverKillImmune:
+		TargetTypes: DriverKillImmune
+	Targetable@CampaignBoss:
+		TargetTypes: CampaignBoss
+	Targetable@VoidEngine:
+		TargetTypes: VoidEngine
+	ExternalCondition@chilled:
+		TotalCap: 2
+	ChangesHealth:
+		Step: 2000
+		Delay: 25
+		StartIfBelow: 100
+		DamageCooldown: 250
+	ReloadDelayMultiplier@concussion:
+		Modifier: 120
+	SpeedMultiplier@TEMPORAL:
+		Modifier: 75
+	ReloadDelayMultiplier@TEMPORAL:
+		Modifier: 120
+		RequiresCondition: being-warped
+	RevealsShroudMultiplier@Blinded:
+		Modifier: 80
+	RangeMultiplier@Blinded:
+		Modifier: 80
+		RequiresCondition: blinded
+	FirepowerMultiplier@Blinded:
+		Modifier: 90
+		RequiresCondition: blinded
+	RangeMultiplier@GAPVEILED:
+		Modifier: 80
+	FirepowerMultiplier@NORMAL:
+		Modifier: 75
+		RequiresCondition: difficulty-normal
+	FirepowerMultiplier@EASY:
+		Modifier: 50
+		RequiresCondition: difficulty-easy
+	DamageMultiplier@NORMAL:
+		Modifier: 125
+		RequiresCondition: difficulty-normal
+	DamageMultiplier@EASY:
+		Modifier: 150
+		RequiresCondition: difficulty-easy
+	DamageTypeDamageMultiplier@A2GPROTECTION:
+		Modifier: 75
+		RequiresCondition: !difficulty-easy
+	-HealthCapDamageMultiplier@CHRONO:
+	DummyConditionConsumer@CHRONO:
+		Condition: chronoshifted
+
+VENG.Husk:
+	Inherits: ^Husk
+	Inherits@ScrinUnitPalette: ^ScrinUnitPalette
+	Tooltip:
+		Name: Husk (Void Engine)
+	RenderSprites:
+		Image: veng.destroyed
+
+VoidEngineRift:
+	Inherits: ^RiftBase
+	EditorOnlyTooltip:
+		Name: (Void Engine Rift)
+	RenderSprites:
+		Image: riftmd
+	PeriodicExplosion:
+		Weapon: VoidEngineRift
+	KillsSelf:
+		Delay: 264
+	SpawnActorOnDeath:
+		Actor: voidengineriftfade
+		SkipMakeAnimations: false
+	# required for spawning actor on death
+	Health:
+		HP: 1
+	WithSpriteBody:
+		StartSequence: make
+
+VoidEngineRiftFade:
+	Inherits: VoidEngineRift
+	WithSpriteBody:
+		Sequence: dead
+	WithMakeAnimation:
+		Sequence: die
+	KillsSelf:
+		Delay: 24
+	-SpawnActorOnDeath:
+	-PeriodicExplosion:
+
+VoidEngineDeathRift:
+	Inherits: VoidEngineRift
+	KillsSelf:
+		Delay: 1512
+
+SCRINPURIFIER:
+	Inherits: ^TechBuilding
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 2048, 2048
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	RevealsShroud:
+		Range: 10c0
+	CaptureManager:
+	CapturableProgressBlink:
+	Capturable:
+		Types: building
+	CapturableProgressBar:
+	Tooltip:
+		Name: Scrin Tiberium Purifier
+	WithIdleOverlay@ACTIVE:
+		Sequence: purification
+		Offset: 800,50,-150
+	Health:
+		HP: 150000
+	-CaptureNotification:
+
+WORMHOLELG:
+	Inherits: ^WormholeBase
+	MapEditorData:
+		Categories: System
+
+WORMHOLEXL:
+	Inherits: ^WormholeBase
+	Tooltip:
+		Name: Gateway
+	MapEditorData:
+		Categories: System
+
+WORMHOLEXXL:
+	Inherits: ^WormholeBase
+	Tooltip:
+		Name: Gateway
+	MapEditorData:
+		Categories: System
+
+# Smudge makers
+
+^WeaponDetonaterDummy:
+	Inherits@DUMMY: ^InvisibleDummy
+	Immobile:
+		OccupiesSpace: false
+	BodyOrientation:
+		QuantizedFacings: 1
+	WithSpriteBody:
+	Interactable:
+		Bounds: 64, 64
+	KillsSelf:
+		Delay: 25
+		RemoveInstead: true
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+		Image: waypoint
+	MapEditorData:
+		Categories: System
+
+CraterMaker1:
+	Inherits: ^WeaponDetonaterDummy
+	PeriodicExplosion:
+		Weapon: CraterMaker1
+	EditorOnlyTooltip:
+		Name: Crater Maker x1
+
+CraterMaker2:
+	Inherits: ^WeaponDetonaterDummy
+	PeriodicExplosion:
+		Weapon: CraterMaker2
+	EditorOnlyTooltip:
+		Name: Crater Maker x2
+
+ScorchMaker1:
+	Inherits: ^WeaponDetonaterDummy
+	PeriodicExplosion:
+		Weapon: ScorchMaker1
+	EditorOnlyTooltip:
+		Name: Scorch Maker x1
+
+ScorchMaker2:
+	Inherits: ^WeaponDetonaterDummy
+	PeriodicExplosion:
+		Weapon: ScorchMaker2
+	EditorOnlyTooltip:
+		Name: Scorch Maker x2
+
+# Enable Soviet/GDI aircraft from Helipad
+
+YAK:
+	Buildable:
+		Prerequisites: ~aircraft.soviet, ~techlevel.medium
+
+HALO:
+	Buildable:
+		Prerequisites: ~aircraft.soviet, ~techlevel.medium
+
+MIG:
+	Buildable:
+		Prerequisites: ~aircraft.soviet, ~techlevel.medium
+
+SUK:
+	Buildable:
+		Prerequisites: stek, ~aircraft.soviet, ~!seismic.upgrade, ~techlevel.high
+
+KIRO:
+	Buildable:
+		Prerequisites: stek, ~aircraft.kiro, ~techlevel.high
+
+ORCA:
+	Buildable:
+		Prerequisites: ~aircraft.gdi, ~techlevel.medium
+
+A10:
+	Buildable:
+		Prerequisites: ~aircraft.gdi, ~!sidewinders.upgrade, ~!avenger.upgrade, ~techlevel.medium
+
+ORCB:
+	Buildable:
+		Prerequisites: ~aircraft.gdi, gtek, ~techlevel.high
+
+# Enable subfaction specific units/upgrades for all campaign missions
+
+## Soviets
+
+E8:
+	Buildable:
+		Prerequisites: ~barr, anyradar, ~!deso.upgrade, ~techlevel.medium
+
+DESO:
+	Buildable:
+		Prerequisites: ~barr, anyradar, ~deso.upgrade, ~techlevel.medium
+
+TTNK:
+	Buildable:
+		Prerequisites: anyradar, ~vehicles.soviet, ~techlevel.medium
+
+V2RL:
+	Buildable:
+		Prerequisites: anyradar, ~vehicles.soviet, ~techlevel.medium
+
+ISU:
+	Buildable:
+		Prerequisites: anyradar, ~vehicles.soviet, ~techlevel.medium
+
+V3RL:
+	Buildable:
+		Prerequisites: stek, ~vehicles.soviet, ~techlevel.high
+
+deso.upgrade:
+	Buildable:
+		Prerequisites: ~player.soviet, stek, ~techlevel.high
+
+tarc.upgrade:
+	Buildable:
+		Prerequisites: ~player.soviet, stek, ~techlevel.high
+
+seismic.upgrade:
+	Buildable:
+		Prerequisites: ~player.soviet, stek, ~techlevel.high
+
+## GDI
+
+DISR:
+	Buildable:
+		Prerequisites: gtek, ~vehicles.gdi, ~techlevel.high
+
+sonic.upgrade:
+	Buildable:
+		Prerequisites: gtek, ~player.gdi, ~techlevel.high
+
+# For attack interval calculations, factoring in extra value from cargo
+
+SAPC.AI:
+	Valued:
+		Cost: 2100
+
+SAPC.AI2:
+	Valued:
+		Cost: 2725
+
+APC.AI:
+	Valued:
+		Cost: 1500
+
+DELP.AI:
+	Valued:
+		Cost: 1700
+
+VULC.AI:
+	Valued:
+		Cost: 1560
+
+BTR.AI:
+	Valued:
+		Cost: 1475
+
+BATF.AI:
+	Valued:
+		Cost: 2500
+
+APC2.NODAI:
+	Valued:
+		Cost: 1400
+
+APC2.GDIAI:
+	Valued:
+		Cost: 1360
+
+INTL.AI2:
+	Valued:
+		Cost: 1875

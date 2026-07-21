@@ -1,0 +1,43 @@
+Player:
+	-ProvidesPrerequisitesOnTimeline:
+
+^TimeSkipPower:
+	ProduceActorPowerCA@TimeSkip:
+		Prerequisites: ~disabled
+
+economy.policy:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+defense.policy:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+development.policy:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+greece.coalition:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+sweden.coalition:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+korea.coalition:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+ALHQ:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+CRYO:
+	Buildable:
+		Prerequisites: atek, ~vehicles.allies, ~techlevel.high
+
+PMAK:
+	Buildable:
+		Prerequisites: atek, ~aircraft.allies, ~techlevel.high
+
+ENFO:
+	Buildable:
+		Prerequisites: ~tent, atek, ~techlevel.high
+
+OREP:
+	Buildable:
+		Prerequisites: ~structures.allies, atek, ~techlevel.high

@@ -1,0 +1,67 @@
+World:
+	LuaScript:
+		Scripts: campaign.lua, coop.lua, ca|missions/main-campaign/ca36-reckoning/reckoning.lua, reckoning-coop.lua
+	ScriptLobbyDropdown@basesharing:
+		Values:
+			-1:
+		Default: 0
+		Locked: True
+	ScriptLobbyDropdown@incomeshare:
+		Values:
+			-10:
+			-15:
+			-20:
+			-25:
+			-30:
+			-35:
+			-40:
+			-45:
+			-50:
+			-100:
+			-125:
+			-150:
+			-175:
+			-999:
+		Default: 0
+		Locked: True
+	ScriptLobbyDropdown@etpdfreq:
+		ID: etpdfreq
+		Label: Exterminator Frequency
+		Description: Increases the frequency of Exterminator Tripod spawns (Exterminators are unaffected by other options besides difficulty).
+		Values:
+			0: +0%
+			25: +25%
+			50: +50%
+			75: +75%
+			100: +100%
+			125: +125%
+			150: +150%
+			175: +175%
+			200: +200%
+			250: +250%
+			300: +300%
+			350: +350%
+			400: +400%
+		Default: 0
+		DisplayOrder: 999
+	LobbyMissionInfo@InitialObjectives:
+		Prefix: Initial Objectives
+		Text: • Destroy all Scrin forces loyal to the Overlord.
+
+Player:
+	ProvidesPrerequisitesOnCount@ScrinAllegiances:
+		-CountReachedNotifications:
+		-CountReachedTextNotifications:
+
+loyalist.allegiance:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+rebel.allegiance:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+malefic.allegiance:
+	Inherits@CAMPAIGNDISABLED: ^Disabled
+
+^ColonySpikePower:
+	DetonateWeaponPower@ColonySpike:
+		Prerequisites: ~disabled

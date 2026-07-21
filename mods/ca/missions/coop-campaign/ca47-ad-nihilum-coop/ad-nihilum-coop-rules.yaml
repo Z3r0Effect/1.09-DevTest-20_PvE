@@ -1,0 +1,26 @@
+World:
+	LuaScript:
+		Scripts: campaign.lua, coop.lua, ca|missions/main-campaign/ca47-ad-nihilum/ad-nihilum.lua, ad-nihilum-coop.lua
+	ScriptLobbyDropdown@voidfreq:
+		ID: voidfreq
+		Label: Void Engine Frequency
+		Description: Increases the frequency of Void Engine spawns (Void Engines are unaffected by other options besides difficulty).
+		Values:
+			0: +0%
+			25: +25%
+			50: +50%
+			75: +75%
+			100: +100%
+			125: +125%
+			150: +150%
+			175: +175%
+			200: +200%
+			250: +250%
+			300: +300%
+			350: +350%
+			400: +400%
+		Default: 0
+		DisplayOrder: 999
+	LobbyMissionInfo@InitialObjectives:
+		Prefix: Initial Objectives
+		Text: • Eliminate all Malefic Scrin forces.\n• Do not allow any Void Engines to break through.

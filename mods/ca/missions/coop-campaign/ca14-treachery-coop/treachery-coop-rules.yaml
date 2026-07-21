@@ -1,0 +1,25 @@
+World:
+	LuaScript:
+		Scripts: campaign.lua, coop.lua, ca|missions/main-campaign/ca14-treachery/treachery.lua, treachery-coop.lua
+	ScriptLobbyDropdown@basesharing:
+		Values:
+			-0:
+		Default: 1
+		Locked: True
+	LobbyMissionInfo@InitialObjectives:
+		Prefix: Initial Objectives
+		Text: • [Optional] Take control of the abandoned Soviet base.\n• Locate and kill General Yegerov.
+
+BORI:
+	TooltipExtras:
+		Description: Elite commando infantry armed with a high-powered assault rifle.
+
+BORI.Clone:
+	Inherits: BORI
+	RenderSprites:
+		Image: boris
+	Selectable:
+		Class: bori
+	-Encyclopedia:
+	Tooltip:
+		Name: Boris Clone

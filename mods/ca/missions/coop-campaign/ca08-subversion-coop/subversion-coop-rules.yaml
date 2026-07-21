@@ -1,0 +1,20 @@
+World:
+	LuaScript:
+		Scripts: campaign.lua, coop.lua, ca|missions/main-campaign/ca08-subversion/subversion.lua, subversion-coop.lua
+	LobbyMissionInfo@InitialObjectives:
+		Prefix: Initial Objectives
+		Text: • Hack the GDI Advanced Communications Center.\n• Cut off the Allied base and destroy it using the Ion Cannon.
+	LobbyMissionInfo@Notes:
+		Prefix: Note
+		Text: Respawns can be enabled for this mission.
+		PrefixColor: FF9900
+		TextColor: FF9900
+
+STNK.Nod:
+	Inherits@NameTag: ^NameTag
+
+RMBO:
+	Inherits@NameTag: ^NameTag
+
+HACK:
+	Inherits@NameTag: ^NameTag

@@ -1,0 +1,1676 @@
+^Sidebar:
+	Image: sidebar.png
+
+^Dialog:
+	Image: dialog.png
+
+^Glyphs:
+	Image: glyphs.png
+	Image2x: glyphs-2x.png
+	Image3x: glyphs-3x.png
+
+sidebar-bits:
+	Inherits: ^Glyphs
+	Regions:
+		production-tooltip-time: 136, 51, 16, 16
+		production-tooltip-power: 102, 51, 16, 16
+		production-tooltip-cost: 68, 51, 16, 16
+		production-tooltip-armor: 17, 119, 16, 16
+		indicator-muted: 68, 145, 24, 24
+
+production-icons:
+	Inherits: ^Glyphs
+	Regions:
+		building: 0, 68, 16, 16
+		building-disabled: 0, 85, 16, 16
+		building-alert: 0, 102, 16, 16
+		defense: 17, 68, 16, 16
+		defense-disabled: 17, 85, 16, 16
+		defense-alert: 17, 102, 16, 16
+		infantry: 34, 68, 16, 16
+		infantry-disabled: 34, 85, 16, 16
+		infantry-alert: 34, 102, 16, 16
+		vehicle: 51, 68, 16, 16
+		vehicle-disabled: 51, 85, 16, 16
+		vehicle-alert: 51, 102, 16, 16
+		aircraft: 68, 68, 16, 16
+		aircraft-disabled: 68, 85, 16, 16
+		aircraft-alert: 68, 102, 16, 16
+		ship: 187, 68, 16, 16
+		ship-disabled: 187, 85, 16, 16
+		ship-alert: 187, 102, 16, 16
+		upgrade: 85, 68, 16, 16
+		upgrade-disabled: 85, 85, 16, 16
+		upgrade-alert: 85, 102, 16, 16
+
+order-icons:
+	Inherits: ^Glyphs
+	Regions:
+		repair: 136, 68, 16, 16
+		repair-disabled: 136, 85, 16, 16
+		repair-active: 136, 102, 16, 16
+		sell: 119, 68, 16, 16
+		sell-disabled: 119, 85, 16, 16
+		sell-active: 119, 102, 16, 16
+		options: 102, 68, 16, 16
+		options-disabled: 102, 85, 16, 16
+		options-active: 102, 102, 16, 16
+		beacon: 153, 68, 16, 16
+		beacon-disabled: 153, 85, 16, 16
+		beacon-active: 153, 102, 16, 16
+		power: 170, 68, 16, 16
+		power-disabled: 170, 85, 16, 16
+		power-active: 170, 102, 16, 16
+		stats: 204, 68, 16, 16
+		stats-disabled: 204, 85, 16, 16
+		stats-active: 204, 102, 16, 16
+		upgrade: 85, 68, 16, 16
+		upgrade-disabled: 85, 85, 16, 16
+		upgrade-active: 85, 102, 16, 16
+		cancel: 51, 119, 16, 16
+		cancel-disabled: 51, 136, 16, 16
+		cancel-active: 51, 153, 16, 16
+
+power-icons:
+	Inherits: ^Glyphs
+	Regions:
+		power-normal: 102, 51, 16, 16
+		power-critical: 119, 51, 16, 16
+
+cash-icons:
+	Inherits: ^Glyphs
+	Regions:
+		cash-normal: 68, 51, 16, 16
+		cash-critical: 85, 51, 16, 16
+
+stance-icons:
+	Inherits: ^Glyphs
+	Regions:
+		attack-anything: 0, 119, 16, 16
+		attack-anything-disabled: 0, 136, 16, 16
+		defend: 17, 119, 16, 16
+		defend-disabled: 17, 136, 16, 16
+		return-fire: 34, 119, 16, 16
+		return-fire-disabled: 34, 136, 16, 16
+		hold-fire: 51, 119, 16, 16
+		hold-fire-disabled: 51, 136, 16, 16
+
+stance-icons-highlighted:
+	Inherits: stance-icons
+	Regions:
+		attack-anything: 0, 153, 16, 16
+		defend: 17, 153, 16, 16
+		return-fire: 34, 153, 16, 16
+		hold-fire: 51, 153, 16, 16
+
+command-icons:
+	Inherits: ^Glyphs
+	Regions:
+		attack-move: 0, 207, 24, 24
+		attack-move-disabled: 0, 232, 24, 24
+		force-move: 25, 207, 24, 24
+		force-move-disabled: 25, 232, 24, 24
+		force-attack: 50, 207, 24, 24
+		force-attack-disabled: 50, 232, 24, 24
+		guard: 75, 207, 24, 24
+		guard-disabled: 75, 232, 24, 24
+		deploy: 100, 207, 24, 24
+		deploy-disabled: 100, 232, 24, 24
+		scatter: 125, 207, 24, 24
+		scatter-disabled: 125, 232, 24, 24
+		stop: 150, 207, 24, 24
+		stop-disabled: 150, 232, 24, 24
+		queue-orders: 175, 207, 24, 24
+		queue-orders-disabled: 175, 232, 24, 24
+
+command-icons-highlighted:
+	Inherits: command-icons
+
+sidebar-observer:
+	Inherits: ^Sidebar
+	Regions:
+		background: 0, 185, 238, 287
+		replay-bottom: 0, 472, 238, 40
+		observer-bottom: 0, 176, 238, 8
+
+observer-scrollpanel-button:
+	Inherits: ^Dialog
+	PanelRegion: 769, 257, 2, 2, 122, 122, 2, 2
+
+observer-scrollpanel-button-hover:
+	Inherits: observer-scrollpanel-button
+
+observer-scrollpanel-button-pressed:
+	Inherits: ^Dialog
+	PanelRegion: 897, 257, 2, 2, 122, 122, 2, 2
+
+observer-scrollpanel-button-disabled:
+	Inherits: ^Dialog
+	PanelRegion: 769, 385, 2, 2, 122, 122, 2, 2
+
+observer-scrollheader:
+	Inherits: observer-scrollpanel-button-disabled
+
+observer-scrollheader-highlighted:
+	Inherits: observer-scrollpanel-button-disabled
+
+observer-scrollitem:
+
+observer-scrollitem-hover:
+	Inherits: observer-scrollpanel-button
+
+observer-scrollitem-pressed:
+	Inherits: observer-scrollpanel-button
+
+observer-scrollitem-highlighted:
+	Inherits: observer-scrollpanel-button-pressed
+
+# Used for the main menu frame
+dialog:
+	Inherits: ^Dialog
+	Regions:
+		background: 1, 1, 480, 480
+		border-r: 492, 1, 9, 190
+		border-l: 483, 1, 9, 190
+		border-b: 1, 492, 189, 9
+		border-t: 1, 483, 189, 9
+		corner-tl: 192, 483, 9, 9
+		corner-tr: 201, 483, 9, 9
+		corner-bl: 192, 492, 9, 9
+		corner-br: 201, 492, 9, 9
+
+# Used for Music and Map selection (normal button)
+dialog2:
+	Inherits: button
+
+# It's a Container, used in various places, like Hotkeys, ColorPicker, Asset Browser frames (looks like a pressed button)
+dialog3:
+	Inherits: button-pressed
+
+# Used for tooltips and the video player
+dialog4:
+	Inherits: ^Dialog
+	PanelRegion: 512, 387, 6, 6, 52, 52, 6, 6
+
+# completely black tile
+dialog5:
+	Inherits: ^Dialog
+	PanelRegion: 579, 387, 0, 0, 64, 64, 0, 0
+	PanelSides: Center
+
+lobby-bits:
+	Inherits: ^Glyphs
+	Regions:
+		spawn-claimed: 68, 119, 22, 22
+		spawn-unclaimed: 91, 119, 22, 22
+		spawn-disabled: 114, 119, 22, 22
+		admin: 170, 0, 6, 5
+		bot: 170, 51, 16, 16
+		colorpicker: 68, 119, 22, 22
+		huepicker: 136, 0, 7, 15
+		kick: 153, 0, 11, 11
+		protected: 0, 17, 12, 13
+		protected-disabled: 17, 17, 12, 13
+		authentication: 34, 17, 12, 13
+		authentication-disabled: 51, 17, 12, 13
+		admin-registered: 0, 51, 16, 16
+		admin-anonymous: 34, 51, 16, 16
+		player-registered: 17, 51, 16, 16
+		player-anonymous: 51, 51, 16, 16
+
+reload-icon:
+	Inherits: ^Glyphs
+	Regions:
+		enabled: 0, 34, 16, 16
+		disabled-0: 17, 34, 16, 16
+		disabled-1: 34, 34, 16, 16
+		disabled-2: 51, 34, 16, 16
+		disabled-3: 68, 34, 16, 16
+		disabled-4: 85, 34, 16, 16
+		disabled-5: 102, 34, 16, 16
+		disabled-6: 119, 34, 16, 16
+		disabled-7: 136, 34, 16, 16
+		disabled-8: 153, 34, 16, 16
+		disabled-9: 170, 34, 16, 16
+		disabled-10: 187, 34, 16, 16
+		disabled-11: 204, 34, 16, 16
+
+strategic:
+	Inherits: ^Glyphs
+	Regions:
+		unowned: 68, 119, 22, 22
+		critical_unowned: 137, 119, 22, 22
+		enemy_owned: 160, 119, 22, 22
+		player_owned: 160, 142, 22, 22
+
+flags:
+	Image: flags.png
+	Regions:
+		allies: 31, 16, 30, 15
+		england: 62, 16, 30, 15
+		germany: 93, 16, 30, 15
+		france: 124, 16, 30, 15
+		usa: 155, 16, 30, 15
+		soviet: 31, 32, 30, 15
+		russia: 62, 32, 30, 15
+		ukraine: 93, 32, 30, 15
+		iraq: 124, 32, 30, 15
+		yuri: 155, 32, 30, 15
+		gdi: 31, 48, 30, 15
+		talon: 62, 48, 30, 15
+		zocom: 93, 48, 30, 15
+		eagle: 124, 48, 30, 15
+		arc: 155, 48, 30, 15
+		nod: 31, 64, 30, 15
+		blackh: 62, 64, 30, 15
+		marked: 93, 64, 30, 15
+		legion: 124, 64, 30, 15
+		shadow: 155, 64, 30, 15
+		scrin: 31, 80, 30, 15
+		reaper: 62, 80, 30, 15
+		traveler: 93, 80, 30, 15
+		harbinger: 124, 80, 30, 15
+		collector: 155, 80, 30, 15
+		RandomAllies: 0, 16, 30, 15
+		RandomSoviet: 0, 32, 30, 15
+		RandomGDI: 0, 48, 30, 15
+		RandomNOD: 0, 64, 30, 15
+		RandomScrin: 0, 80, 30,15
+		Random: 0, 0, 30, 15
+		spectator: 0, 0, 30, 15
+
+music:
+	Inherits: ^Glyphs
+	Regions:
+		pause: 0, 0, 16, 16
+		stop: 17, 0, 16, 16
+		play: 34, 0, 16, 16
+		next: 51, 0, 16, 16
+		prev: 68, 0, 16, 16
+		fastforward: 85, 0, 16, 16
+
+scrollbar:
+	Inherits: ^Glyphs
+	Regions:
+		down_arrow: 68, 17, 16, 16
+		down_pressed: 85, 17, 16, 16
+		up_arrow: 102, 17, 16, 16
+		up_pressed: 119, 17, 16, 16
+		right_arrow: 136, 17, 16, 16
+		right_pressed: 153, 17, 16, 16
+		left_arrow: 170, 17, 16, 16
+		left_pressed: 187, 17, 16, 16
+
+progressbar-bg:
+	Inherits: button-pressed
+
+progressbar-thumb:
+	Inherits: button
+
+button:
+	Inherits: ^Dialog
+	PanelRegion: 513, 1, 2, 2, 122, 122, 2, 2
+
+# 5% lighter than a normal button (mouseover)
+button-hover:
+	Inherits: ^Dialog
+	PanelRegion: 513, 129, 2, 2, 122, 122, 2, 2
+
+button-pressed:
+	Inherits: ^Dialog
+	PanelRegion: 641, 1, 2, 2, 122, 122, 2, 2
+
+# 50% grey (disabled button)
+button-disabled:
+	Inherits: ^Dialog
+	PanelRegion: 513, 257, 2, 2, 122, 122, 2, 2
+
+button-highlighted:
+	Inherits: ^Dialog
+	PanelRegion: 769, 129, 2, 2, 122, 122, 2, 2
+
+button-highlighted-hover:
+	Inherits: button-highlighted
+
+button-highlighted-pressed:
+	Inherits: ^Dialog
+	PanelRegion: 897, 129, 2, 2, 122, 122, 2, 2
+
+button-highlighted-disabled:
+	Inherits: button-highlighted
+
+newsbutton:
+	Inherits: button
+
+newsbutton-hover:
+	Inherits: button
+
+newsbutton-highlighted:
+	Inherits: ^Dialog
+	PanelRegion: 769, 1, 2, 2, 122, 122, 2, 2
+
+newsbutton-highlighted-hover:
+	Inherits: newsbutton-highlighted
+
+newsbutton-highlighted-pressed:
+	Inherits: button-pressed
+
+newsbutton-pressed:
+	Inherits: button-pressed
+
+textfield:
+	Inherits: button-pressed
+
+textfield-hover:
+	Inherits: checkbox-hover
+
+textfield-disabled:
+	Inherits: checkbox-disabled
+
+textfield-focused:
+	Inherits: button-pressed
+
+scrollpanel-bg:
+	Inherits: button-pressed
+
+scrollpanel-button:
+	Inherits: button
+
+scrollpanel-button-hover:
+	Inherits: button-hover
+
+scrollpanel-button-pressed:
+	Inherits: button-pressed
+
+scrollpanel-button-disabled:
+	Inherits: button
+
+scrollitem:
+
+scrollitem-hover:
+	Inherits: ^Dialog
+	PanelRegion: 512, 452, 0, 0, 30, 30, 0, 0
+
+scrollitem-pressed:
+	Inherits: ^Dialog
+	PanelRegion: 543, 452, 0, 0, 30, 30, 0, 0
+
+scrollitem-highlighted:
+	Inherits: button-highlighted-pressed
+
+scrollitem-highlighted-hover:
+	Inherits: button-highlighted-pressed
+
+scrollitem-highlighted-pressed:
+	Inherits: button-highlighted-pressed
+
+scrollitem-nohover:
+
+scrollitem-nohover-highlighted:
+
+scrollheader:
+	Inherits: button
+
+scrollheader-highlighted:
+	Inherits: button
+
+scrollheader-highlighted-hover:
+	Inherits: button-hover
+
+slider:
+	Inherits: ^Dialog
+	Regions:
+		tick: 513, 2, 2, 4
+
+slider-track:
+	Inherits: button
+
+slider-thumb:
+	Inherits: button
+
+slider-thumb-hover:
+	Inherits: button-hover
+
+slider-thumb-pressed:
+	Inherits: button-pressed
+
+slider-thumb-disabled:
+	Inherits: button
+
+checkbox:
+	Inherits: button-pressed
+
+checkmark-tick:
+	Inherits: ^Glyphs
+	Regions:
+		checked: 187, 0, 16, 16
+		checked-pressed: 204, 0, 16, 16
+		unchecked: 0, 0, 0, 0
+		unchecked-pressed: 204, 0, 16, 16
+
+checkmark-tick-highlighted:
+	Inherits: checkmark-tick
+
+checkmark-cross:
+	Inherits: ^Glyphs
+	Regions:
+		checked: 221, 0, 16, 16
+		checked-pressed: 238, 0, 16, 16
+		unchecked: 0, 0, 0, 0
+		unchecked-pressed: 238, 0, 16, 16
+
+checkmark-cross-highlighted:
+	Inherits: checkmark-cross
+
+checkmark-mute:
+	Inherits: ^Glyphs
+	Regions:
+		unchecked: 0, 170, 16, 16
+		unchecked-pressed: 17, 170, 16, 16
+		checked: 17, 170, 16, 16
+		checked-pressed: 0, 170, 16, 16
+
+checkmark-mute-highlighted:
+	Inherits: checkmark-mute
+
+checkbox-hover:
+	Inherits: ^Dialog
+	PanelRegion: 641, 129, 2, 2, 122, 122, 2, 2
+
+checkbox-pressed:
+	Inherits: checkbox-hover
+
+checkbox-disabled:
+	Inherits: ^Dialog
+	PanelRegion: 641, 257, 2, 2, 122, 122, 2, 2
+
+checkbox-highlighted:
+	Inherits: ^Dialog
+	PanelRegion: 897, 1, 2, 2, 122, 122, 2, 2
+
+checkbox-highlighted-disabled:
+	Inherits: checkbox-disabled
+
+checkbox-highlighted-pressed:
+	Inherits: button-highlighted-pressed
+
+checkbox-toggle:
+
+checkbox-toggle-hover:
+	Inherits: button
+
+checkbox-toggle-pressed:
+	Inherits: checkbox-pressed
+
+checkbox-toggle-highlighted:
+
+checkbox-toggle-highlighted-hover:
+	Inherits: button-highlighted
+
+checkbox-toggle-highlighted-pressed:
+	Inherits: checkbox-highlighted-pressed
+
+mission-completion-tick:
+	Inherits: ^Glyphs
+	Regions:
+		incomplete: 209, 223, 16, 16
+		complete: 209, 240, 16, 16
+
+mission-completion-stars:
+	Inherits: ^Glyphs
+	Regions:
+		bronze: 0, 256, 17, 16
+		silver: 17, 256, 17, 16
+		gold: 34, 256, 17, 16
+
+loading-artwork:
+	Image: ca-loading-artwork.png
+	Image2x: ca-loading-artwork-2x.png
+	Image3x: ca-loading-artwork-3x.png
+	Regions:
+		logo: 0, 0, 1024, 256
+
+menu-logo:
+	Image: ca-menu-logo.png
+	Image2x: ca-menu-logo-2x.png
+	Image3x: ca-menu-logo-3x.png
+	Regions:
+		logo: 0, 0, 512, 256
+
+mainmenu-border:
+	Inherits: ^Dialog
+	PanelRegion: 650, 389, 39, 39, 38, 38, 39, 39
+	PanelSides: Edges
+
+scrollpanel-decorations:
+	Inherits: ^Glyphs
+	Regions:
+		down: 68, 17, 16, 16
+		down-pressed: 68, 17, 16, 16
+		down-disabled: 85, 17, 16, 16
+		up: 102, 17, 16, 16
+		up-pressed: 102, 17, 16, 16
+		up-disabled: 119, 17, 16, 16
+		right: 136, 17, 16, 16
+		right-pressed: 136, 17, 16, 16
+		right-disabled: 153, 17, 16, 16
+		left: 170, 17, 16, 16
+		left-pressed: 170, 17, 16, 16
+		left-disabled: 187, 17, 16, 16
+
+dropdown-decorations:
+	Inherits: ^Glyphs
+	Regions:
+		marker: 68, 17, 16, 16
+		marker-pressed: 68, 17, 16, 16
+		marker-disabled: 85, 17, 16, 16
+
+dropdown-separators:
+	Inherits: ^Dialog
+	Regions:
+		separator: 513, 2, 1, 19
+		separator-hover: 513, 130, 1, 19
+		separator-pressed: 766, 2, 1, 19
+		separator-disabled: 513, 258, 1, 19
+		observer-separator: 769, 258, 1, 19
+
+separator:
+	Inherits: button
+
+editor:
+	Inherits: ^Glyphs
+	Regions:
+		select: 34, 187, 16, 16
+		tiles: 0, 187, 16, 16
+		overlays: 17, 187, 16, 16
+		actors: 34, 68, 16, 16
+		tools: 136, 68, 16, 16
+		history: 136, 51, 16, 16
+		erase: 50, 187, 16, 16
+
+tab-button:
+	Inherits: button
+
+tab-button-hover:
+	Inherits: button-hover
+
+tab-button-pressed:
+	Inherits: button-highlighted-pressed
+
+tab-button-disabled:
+	Inherits: button-disabled
+
+tab-button-highlighted:
+	Inherits: button-highlighted-pressed
+
+tab-button-highlighted-hover:
+	Inherits: button-highlighted-pressed
+
+tab-button-highlighted-pressed:
+	Inherits: button-highlighted-pressed
+
+tab-button-highlighted-disabled:
+	Inherits: button-highlighted-disabled
+
+# #### New UI
+
+player-ui-bits-shared:
+	Image: player-ui-shared.png
+	Regions:
+		power-indicator: 1, 1, 11, 2
+
+power-meter:
+	Image: player-ui-shared.png
+	Regions:
+		red: 1,4,7,2
+		yellow: 1,7,7,2
+		green: 1,10,7,2
+		grey: 1,13,7,2
+
+unit-upgrade-buttons:
+	Image: unit-upgrade-button.png
+	Regions:
+		upgrade: 0, 0, 32, 32
+
+^PlayerUIBits:
+	Regions:
+		background: 0, 0, 258, 597
+		background-command-bar: 0, 598, 467, 47
+		radar: 28, 40, 222, 222
+		palette-borders-overlay: 260, 179, 194, 244
+		support-power-border-overlay: 260, 179, 64, 48
+
+^SidebarProductionTypeButton:
+	PanelRegion: 260, 7, 1, 1, 30, 24, 1, 1
+^SidebarProductionTypeButtonHover:
+	PanelRegion: 293, 7, 1, 1, 30, 24, 1, 1
+^SidebarProductionTypeButtonPressed:
+	PanelRegion: 326, 7, 1, 1, 30, 24, 1, 1
+^SidebarProductionTypeButtonHighlighted:
+	PanelRegion: 359, 7, 1, 1, 30, 24, 1, 1
+^SidebarProductionTypeButtonHighlightedHover:
+	Inherits: ^SidebarProductionTypeButtonHighlighted
+^SidebarProductionTypeButtonHighlightedPressed:
+	Inherits: ^SidebarProductionTypeButtonPressed
+^SidebarProductionTypeButtonDisabled:
+	PanelRegion: 392, 7, 1, 1, 30, 24, 1, 1
+^SidebarProductionTypeButtonHighlightedDisabled:
+	Inherits: ^SidebarProductionTypeButtonDisabled
+
+^SidebarProductionTabButton:
+	PanelRegion: 260, 34, 0, 0, 31, 24, 0, 0
+^SidebarProductionTabButtonHover:
+	PanelRegion: 292, 34, 0, 0, 31, 24, 0, 0
+^SidebarProductionTabButtonPressed:
+	PanelRegion: 324, 34, 0, 0, 31, 24, 0, 0
+^SidebarProductionTabButtonHighlighted:
+	PanelRegion: 356, 34, 0, 0, 31, 24, 0, 0
+^SidebarProductionTabButtonHighlightedHover:
+	Inherits: ^SidebarProductionTabButtonHighlighted
+^SidebarProductionTabButtonHighlightedPressed:
+	Inherits: ^SidebarProductionTabButtonPressed
+^SidebarProductionTabButtonDisabled:
+	PanelRegion: 388, 34, 0, 0, 31, 24, 0, 0
+^SidebarProductionTabButtonHighlightedDisabled:
+	Inherits: ^SidebarProductionTabButtonDisabled
+
+^SidebarProductionTabLeftButton:
+	PanelRegion: 425, 3, 0, 0, 17, 24, 0, 0
+^SidebarProductionTabLeftButtonHover:
+	PanelRegion: 443, 3, 0, 0, 17, 24, 0, 0
+^SidebarProductionTabLeftButtonPressed:
+	PanelRegion: 461, 3, 0, 0, 17, 24, 0, 0
+^SidebarProductionTabLeftButtonDisabled:
+	PanelRegion: 479, 3, 0, 0, 17, 24, 0, 0
+
+^SidebarProductionTabRightButton:
+	PanelRegion: 425, 31, 0, 0, 16, 24, 0, 0
+^SidebarProductionTabRightButtonHover:
+	PanelRegion: 442, 31, 0, 0, 16, 24, 0, 0
+^SidebarProductionTabRightButtonPressed:
+	PanelRegion: 459, 31, 0, 0, 16, 24, 0, 0
+^SidebarProductionTabRightButtonDisabled:
+	PanelRegion: 476, 31, 0, 0, 16, 24, 0, 0
+
+^SidebarTopButton:
+	Inherits: ^SidebarProductionTypeButton
+^SidebarTopButtonHover:
+	Inherits: ^SidebarProductionTypeButtonHover
+^SidebarTopButtonPressed:
+	Inherits: ^SidebarProductionTypeButtonPressed
+^SidebarTopButtonHighlighted:
+	Inherits: ^SidebarProductionTypeButtonHighlighted
+^SidebarTopButtonHighlightedHover:
+	Inherits: ^SidebarProductionTypeButtonHighlightedHover
+^SidebarTopButtonHighlightedPressed:
+	Inherits: ^SidebarProductionTypeButtonPressed
+^SidebarTopButtonDisabled:
+	Inherits: ^SidebarProductionTypeButtonDisabled
+^SidebarTopButtonHighlightedDisabled:
+	Inherits: ^SidebarProductionTabButtonDisabled
+
+^SidebarScrollUpButton:
+	PanelRegion: 260, 84, 0, 0, 97, 18, 0, 0
+^SidebarScrollUpButtonHover:
+	PanelRegion: 260, 103, 0, 0, 97, 18, 0, 0
+^SidebarScrollUpButtonPressed:
+	PanelRegion: 260, 122, 0, 0, 97, 18, 0, 0
+^SidebarScrollUpButtonDisabled:
+	PanelRegion: 260, 160, 0, 0, 97, 18, 0, 0
+
+^SidebarScrollDownButton:
+	PanelRegion: 358, 84, 0, 0, 96, 18, 0, 0
+^SidebarScrollDownButtonHover:
+	PanelRegion: 358, 103, 0, 0, 96, 18, 0, 0
+^SidebarScrollDownButtonPressed:
+	PanelRegion: 358, 122, 0, 0, 96, 18, 0, 0
+^SidebarScrollDownButtonDisabled:
+	PanelRegion: 358, 160, 0, 0, 96, 18, 0, 0
+
+^CommandBarButton:
+	PanelRegion: 458, 59, 0, 0, 34, 26, 0, 0
+^CommandBarButtonHover:
+	PanelRegion: 458, 86, 0, 0, 34, 26, 0, 0
+^CommandBarButtonPressed:
+	PanelRegion: 458, 113, 0, 0, 34, 26, 0, 0
+
+# ---- Allies
+
+player-ui-allies:
+	Image: player-ui-allies.png
+
+player-ui-bits-allies:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@REGIONS: ^PlayerUIBits
+
+sidebar-production-type-button-allies:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTypeButton
+sidebar-production-type-button-allies-hover:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHover
+sidebar-production-type-button-allies-pressed:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonPressed
+sidebar-production-type-button-allies-highlighted:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlighted
+sidebar-production-type-button-allies-highlighted-hover:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlightedHover
+sidebar-production-type-button-allies-highlighted-pressed:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlightedPressed
+sidebar-production-type-button-allies-disabled:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonDisabled
+sidebar-production-type-button-allies-highlighted-disabled:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlightedDisabled
+
+sidebar-production-tab-button-allies:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTabButton
+sidebar-production-tab-button-allies-hover:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHover
+sidebar-production-tab-button-allies-pressed:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTabButtonPressed
+sidebar-production-tab-button-allies-highlighted:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlighted
+sidebar-production-tab-button-allies-highlighted-hover:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlightedHover
+sidebar-production-tab-button-allies-highlighted-pressed:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlightedPressed
+sidebar-production-tab-button-allies-disabled:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTabButtonDisabled
+sidebar-production-tab-button-allies-highlighted-disabled:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlightedDisabled
+
+sidebar-production-tab-left-button-allies:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButton
+sidebar-production-tab-left-button-allies-hover:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButtonHover
+sidebar-production-tab-left-button-allies-pressed:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButtonPressed
+sidebar-production-tab-left-button-allies-disabled:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButtonDisabled
+
+sidebar-production-tab-right-button-allies:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTabRightButton
+sidebar-production-tab-right-button-allies-hover:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTabRightButtonHover
+sidebar-production-tab-right-button-allies-pressed:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTabRightButtonPressed
+sidebar-production-tab-right-button-allies-disabled:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarProductionTabRightButtonDisabled
+
+sidebar-top-button-allies:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarTopButton
+sidebar-top-button-allies-hover:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarTopButtonHover
+sidebar-top-button-allies-pressed:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarTopButtonPressed
+sidebar-top-button-allies-highlighted:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarTopButtonHighlighted
+sidebar-top-button-allies-highlighted-hover:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarTopButtonHighlightedHover
+sidebar-top-button-allies-highlighted-pressed:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarTopButtonHighlightedPressed
+sidebar-top-button-allies-disabled:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarTopButtonDisabled
+sidebar-top-button-allies-highlighted-disabled:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarTopButtonHighlightedDisabled
+
+sidebar-scrollup-button-allies:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarScrollUpButton
+sidebar-scrollup-button-allies-hover:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarScrollUpButtonHover
+sidebar-scrollup-button-allies-pressed:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarScrollUpButtonPressed
+sidebar-scrollup-button-allies-disabled:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarScrollUpButtonDisabled
+
+sidebar-scrolldown-button-allies:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarScrollDownButton
+sidebar-scrolldown-button-allies-hover:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarScrollDownButtonHover
+sidebar-scrolldown-button-allies-pressed:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarScrollDownButtonPressed
+sidebar-scrolldown-button-allies-disabled:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^SidebarScrollDownButtonDisabled
+
+commandbar-button-allies:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^CommandBarButton
+commandbar-button-allies-hover:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^CommandBarButtonHover
+commandbar-button-allies-pressed:
+	Inherits@IMAGE: player-ui-allies
+	Inherits@PANELREGION: ^CommandBarButtonPressed
+commandbar-button-allies-highlighted:
+	Inherits: commandbar-button-allies
+commandbar-button-allies-disabled:
+	Inherits: commandbar-button-allies
+commandbar-button-allies-highlighted-hover:
+	Inherits: commandbar-button-allies-hover
+commandbar-button-allies-highlighted-pressed:
+	Inherits: commandbar-button-allies-pressed
+commandbar-button-allies-highlighted-disabled:
+	Inherits: commandbar-button-allies
+
+# ---- Soviet
+
+player-ui-soviet:
+	Image: player-ui-soviet.png
+
+player-ui-bits-soviet:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@REGIONS: ^PlayerUIBits
+
+sidebar-production-type-button-soviet:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTypeButton
+sidebar-production-type-button-soviet-hover:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHover
+sidebar-production-type-button-soviet-pressed:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonPressed
+sidebar-production-type-button-soviet-highlighted:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlighted
+sidebar-production-type-button-soviet-highlighted-hover:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlightedHover
+sidebar-production-type-button-soviet-highlighted-pressed:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlightedPressed
+sidebar-production-type-button-soviet-disabled:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonDisabled
+sidebar-production-type-button-soviet-highlighted-disabled:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlightedDisabled
+
+sidebar-production-tab-button-soviet:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTabButton
+sidebar-production-tab-button-soviet-hover:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHover
+sidebar-production-tab-button-soviet-pressed:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTabButtonPressed
+sidebar-production-tab-button-soviet-highlighted:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlighted
+sidebar-production-tab-button-soviet-highlighted-hover:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlightedHover
+sidebar-production-tab-button-soviet-highlighted-pressed:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlightedPressed
+sidebar-production-tab-button-soviet-disabled:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTabButtonDisabled
+sidebar-production-tab-button-soviet-highlighted-disabled:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlightedDisabled
+
+sidebar-production-tab-left-button-soviet:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButton
+sidebar-production-tab-left-button-soviet-hover:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButtonHover
+sidebar-production-tab-left-button-soviet-pressed:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButtonPressed
+sidebar-production-tab-left-button-soviet-disabled:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButtonDisabled
+
+sidebar-production-tab-right-button-soviet:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTabRightButton
+sidebar-production-tab-right-button-soviet-hover:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTabRightButtonHover
+sidebar-production-tab-right-button-soviet-pressed:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTabRightButtonPressed
+sidebar-production-tab-right-button-soviet-disabled:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarProductionTabRightButtonDisabled
+
+sidebar-top-button-soviet:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarTopButton
+sidebar-top-button-soviet-hover:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarTopButtonHover
+sidebar-top-button-soviet-pressed:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarTopButtonPressed
+sidebar-top-button-soviet-highlighted:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarTopButtonHighlighted
+sidebar-top-button-soviet-highlighted-hover:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarTopButtonHighlightedHover
+sidebar-top-button-soviet-highlighted-pressed:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarTopButtonHighlightedPressed
+sidebar-top-button-soviet-disabled:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarTopButtonDisabled
+sidebar-top-button-soviet-highlighted-disabled:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarTopButtonHighlightedDisabled
+
+sidebar-scrollup-button-soviet:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarScrollUpButton
+sidebar-scrollup-button-soviet-hover:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarScrollUpButtonHover
+sidebar-scrollup-button-soviet-pressed:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarScrollUpButtonPressed
+sidebar-scrollup-button-soviet-disabled:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarScrollUpButtonDisabled
+
+sidebar-scrolldown-button-soviet:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarScrollDownButton
+sidebar-scrolldown-button-soviet-hover:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarScrollDownButtonHover
+sidebar-scrolldown-button-soviet-pressed:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarScrollDownButtonPressed
+sidebar-scrolldown-button-soviet-disabled:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^SidebarScrollDownButtonDisabled
+
+commandbar-button-soviet:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^CommandBarButton
+commandbar-button-soviet-hover:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^CommandBarButtonHover
+commandbar-button-soviet-pressed:
+	Inherits@IMAGE: player-ui-soviet
+	Inherits@PANELREGION: ^CommandBarButtonPressed
+commandbar-button-soviet-highlighted:
+	Inherits: commandbar-button-soviet
+commandbar-button-soviet-disabled:
+	Inherits: commandbar-button-soviet
+commandbar-button-soviet-highlighted-hover:
+	Inherits: commandbar-button-soviet-hover
+commandbar-button-soviet-highlighted-pressed:
+	Inherits: commandbar-button-soviet-pressed
+commandbar-button-soviet-highlighted-disabled:
+	Inherits: commandbar-button-soviet
+
+# ---- GDI
+
+player-ui-gdi:
+	Image: player-ui-gdi.png
+
+player-ui-bits-gdi:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@REGIONS: ^PlayerUIBits
+
+sidebar-production-type-button-gdi:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTypeButton
+sidebar-production-type-button-gdi-hover:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHover
+sidebar-production-type-button-gdi-pressed:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonPressed
+sidebar-production-type-button-gdi-highlighted:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlighted
+sidebar-production-type-button-gdi-highlighted-hover:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlightedHover
+sidebar-production-type-button-gdi-highlighted-pressed:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlightedPressed
+sidebar-production-type-button-gdi-disabled:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonDisabled
+sidebar-production-type-button-gdi-highlighted-disabled:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlightedDisabled
+
+sidebar-production-tab-button-gdi:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTabButton
+sidebar-production-tab-button-gdi-hover:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHover
+sidebar-production-tab-button-gdi-pressed:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTabButtonPressed
+sidebar-production-tab-button-gdi-highlighted:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlighted
+sidebar-production-tab-button-gdi-highlighted-hover:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlightedHover
+sidebar-production-tab-button-gdi-highlighted-pressed:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlightedPressed
+sidebar-production-tab-button-gdi-disabled:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTabButtonDisabled
+sidebar-production-tab-button-gdi-highlighted-disabled:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlightedDisabled
+
+sidebar-production-tab-left-button-gdi:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButton
+sidebar-production-tab-left-button-gdi-hover:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButtonHover
+sidebar-production-tab-left-button-gdi-pressed:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButtonPressed
+sidebar-production-tab-left-button-gdi-disabled:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButtonDisabled
+
+sidebar-production-tab-right-button-gdi:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTabRightButton
+sidebar-production-tab-right-button-gdi-hover:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTabRightButtonHover
+sidebar-production-tab-right-button-gdi-pressed:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTabRightButtonPressed
+sidebar-production-tab-right-button-gdi-disabled:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarProductionTabRightButtonDisabled
+
+sidebar-top-button-gdi:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarTopButton
+sidebar-top-button-gdi-hover:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarTopButtonHover
+sidebar-top-button-gdi-pressed:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarTopButtonPressed
+sidebar-top-button-gdi-highlighted:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarTopButtonHighlighted
+sidebar-top-button-gdi-highlighted-hover:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarTopButtonHighlightedHover
+sidebar-top-button-gdi-highlighted-pressed:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarTopButtonHighlightedPressed
+sidebar-top-button-gdi-disabled:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarTopButtonDisabled
+sidebar-top-button-gdi-highlighted-disabled:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarTopButtonHighlightedDisabled
+
+sidebar-scrollup-button-gdi:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarScrollUpButton
+sidebar-scrollup-button-gdi-hover:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarScrollUpButtonHover
+sidebar-scrollup-button-gdi-pressed:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarScrollUpButtonPressed
+sidebar-scrollup-button-gdi-disabled:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarScrollUpButtonDisabled
+
+sidebar-scrolldown-button-gdi:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarScrollDownButton
+sidebar-scrolldown-button-gdi-hover:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarScrollDownButtonHover
+sidebar-scrolldown-button-gdi-pressed:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarScrollDownButtonPressed
+sidebar-scrolldown-button-gdi-disabled:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^SidebarScrollDownButtonDisabled
+
+commandbar-button-gdi:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^CommandBarButton
+commandbar-button-gdi-hover:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^CommandBarButtonHover
+commandbar-button-gdi-pressed:
+	Inherits@IMAGE: player-ui-gdi
+	Inherits@PANELREGION: ^CommandBarButtonPressed
+commandbar-button-gdi-highlighted:
+	Inherits: commandbar-button-gdi
+commandbar-button-gdi-disabled:
+	Inherits: commandbar-button-gdi
+commandbar-button-gdi-highlighted-hover:
+	Inherits: commandbar-button-gdi-hover
+commandbar-button-gdi-highlighted-pressed:
+	Inherits: commandbar-button-gdi-pressed
+commandbar-button-gdi-highlighted-disabled:
+	Inherits: commandbar-button-gdi
+
+# ---- scrin
+
+player-ui-nod:
+	Image: player-ui-nod.png
+
+player-ui-bits-nod:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@REGIONS: ^PlayerUIBits
+
+sidebar-production-type-button-nod:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTypeButton
+sidebar-production-type-button-nod-hover:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHover
+sidebar-production-type-button-nod-pressed:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonPressed
+sidebar-production-type-button-nod-highlighted:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlighted
+sidebar-production-type-button-nod-highlighted-hover:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlightedHover
+sidebar-production-type-button-nod-highlighted-pressed:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlightedPressed
+sidebar-production-type-button-nod-disabled:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonDisabled
+sidebar-production-type-button-nod-highlighted-disabled:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlightedDisabled
+
+sidebar-production-tab-button-nod:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTabButton
+sidebar-production-tab-button-nod-hover:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHover
+sidebar-production-tab-button-nod-pressed:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTabButtonPressed
+sidebar-production-tab-button-nod-highlighted:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlighted
+sidebar-production-tab-button-nod-highlighted-hover:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlightedHover
+sidebar-production-tab-button-nod-highlighted-pressed:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlightedPressed
+sidebar-production-tab-button-nod-disabled:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTabButtonDisabled
+sidebar-production-tab-button-nod-highlighted-disabled:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlightedDisabled
+
+sidebar-production-tab-left-button-nod:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButton
+sidebar-production-tab-left-button-nod-hover:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButtonHover
+sidebar-production-tab-left-button-nod-pressed:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButtonPressed
+sidebar-production-tab-left-button-nod-disabled:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButtonDisabled
+
+sidebar-production-tab-right-button-nod:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTabRightButton
+sidebar-production-tab-right-button-nod-hover:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTabRightButtonHover
+sidebar-production-tab-right-button-nod-pressed:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTabRightButtonPressed
+sidebar-production-tab-right-button-nod-disabled:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarProductionTabRightButtonDisabled
+
+sidebar-top-button-nod:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarTopButton
+sidebar-top-button-nod-hover:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarTopButtonHover
+sidebar-top-button-nod-pressed:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarTopButtonPressed
+sidebar-top-button-nod-highlighted:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarTopButtonHighlighted
+sidebar-top-button-nod-highlighted-hover:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarTopButtonHighlightedHover
+sidebar-top-button-nod-highlighted-pressed:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarTopButtonHighlightedPressed
+sidebar-top-button-nod-disabled:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarTopButtonDisabled
+sidebar-top-button-nod-highlighted-disabled:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarTopButtonHighlightedDisabled
+
+sidebar-scrollup-button-nod:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarScrollUpButton
+sidebar-scrollup-button-nod-hover:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarScrollUpButtonHover
+sidebar-scrollup-button-nod-pressed:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarScrollUpButtonPressed
+sidebar-scrollup-button-nod-disabled:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarScrollUpButtonDisabled
+
+sidebar-scrolldown-button-nod:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarScrollDownButton
+sidebar-scrolldown-button-nod-hover:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarScrollDownButtonHover
+sidebar-scrolldown-button-nod-pressed:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarScrollDownButtonPressed
+sidebar-scrolldown-button-nod-disabled:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^SidebarScrollDownButtonDisabled
+
+commandbar-button-nod:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^CommandBarButton
+commandbar-button-nod-hover:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^CommandBarButtonHover
+commandbar-button-nod-pressed:
+	Inherits@IMAGE: player-ui-nod
+	Inherits@PANELREGION: ^CommandBarButtonPressed
+commandbar-button-nod-highlighted:
+	Inherits: commandbar-button-nod
+commandbar-button-nod-disabled:
+	Inherits: commandbar-button-nod
+commandbar-button-nod-highlighted-hover:
+	Inherits: commandbar-button-nod-hover
+commandbar-button-nod-highlighted-pressed:
+	Inherits: commandbar-button-nod-pressed
+commandbar-button-nod-highlighted-disabled:
+	Inherits: commandbar-button-nod
+
+# ---- Scrin
+
+player-ui-scrin:
+	Image: player-ui-scrin.png
+
+player-ui-bits-scrin:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@REGIONS: ^PlayerUIBits
+
+sidebar-production-type-button-scrin:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTypeButton
+sidebar-production-type-button-scrin-hover:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHover
+sidebar-production-type-button-scrin-pressed:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonPressed
+sidebar-production-type-button-scrin-highlighted:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlighted
+sidebar-production-type-button-scrin-highlighted-hover:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlightedHover
+sidebar-production-type-button-scrin-highlighted-pressed:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlightedPressed
+sidebar-production-type-button-scrin-disabled:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonDisabled
+sidebar-production-type-button-scrin-highlighted-disabled:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTypeButtonHighlightedDisabled
+
+sidebar-production-tab-button-scrin:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTabButton
+sidebar-production-tab-button-scrin-hover:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHover
+sidebar-production-tab-button-scrin-pressed:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTabButtonPressed
+sidebar-production-tab-button-scrin-highlighted:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlighted
+sidebar-production-tab-button-scrin-highlighted-hover:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlightedHover
+sidebar-production-tab-button-scrin-highlighted-pressed:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlightedPressed
+sidebar-production-tab-button-scrin-disabled:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTabButtonDisabled
+sidebar-production-tab-button-scrin-highlighted-disabled:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTabButtonHighlightedDisabled
+
+sidebar-production-tab-left-button-scrin:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButton
+sidebar-production-tab-left-button-scrin-hover:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButtonHover
+sidebar-production-tab-left-button-scrin-pressed:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButtonPressed
+sidebar-production-tab-left-button-scrin-disabled:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTabLeftButtonDisabled
+
+sidebar-production-tab-right-button-scrin:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTabRightButton
+sidebar-production-tab-right-button-scrin-hover:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTabRightButtonHover
+sidebar-production-tab-right-button-scrin-pressed:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTabRightButtonPressed
+sidebar-production-tab-right-button-scrin-disabled:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarProductionTabRightButtonDisabled
+
+sidebar-top-button-scrin:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarTopButton
+sidebar-top-button-scrin-hover:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarTopButtonHover
+sidebar-top-button-scrin-pressed:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarTopButtonPressed
+sidebar-top-button-scrin-highlighted:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarTopButtonHighlighted
+sidebar-top-button-scrin-highlighted-hover:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarTopButtonHighlightedHover
+sidebar-top-button-scrin-highlighted-pressed:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarTopButtonHighlightedPressed
+sidebar-top-button-scrin-disabled:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarTopButtonDisabled
+sidebar-top-button-scrin-highlighted-disabled:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarTopButtonHighlightedDisabled
+
+sidebar-scrollup-button-scrin:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarScrollUpButton
+sidebar-scrollup-button-scrin-hover:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarScrollUpButtonHover
+sidebar-scrollup-button-scrin-pressed:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarScrollUpButtonPressed
+sidebar-scrollup-button-scrin-disabled:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarScrollUpButtonDisabled
+
+sidebar-scrolldown-button-scrin:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarScrollDownButton
+sidebar-scrolldown-button-scrin-hover:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarScrollDownButtonHover
+sidebar-scrolldown-button-scrin-pressed:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarScrollDownButtonPressed
+sidebar-scrolldown-button-scrin-disabled:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^SidebarScrollDownButtonDisabled
+
+commandbar-button-scrin:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^CommandBarButton
+commandbar-button-scrin-hover:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^CommandBarButtonHover
+commandbar-button-scrin-pressed:
+	Inherits@IMAGE: player-ui-scrin
+	Inherits@PANELREGION: ^CommandBarButtonPressed
+commandbar-button-scrin-highlighted:
+	Inherits: commandbar-button-scrin
+commandbar-button-scrin-disabled:
+	Inherits: commandbar-button-scrin
+commandbar-button-scrin-highlighted-hover:
+	Inherits: commandbar-button-scrin-hover
+commandbar-button-scrin-highlighted-pressed:
+	Inherits: commandbar-button-scrin-pressed
+commandbar-button-scrin-highlighted-disabled:
+	Inherits: commandbar-button-scrin
+
+# ---- Main Menu External Resources
+
+discord-icon:
+	Image: external-resources.png
+	PanelRegion: 0, 0, 0, 0, 32, 32, 0, 0
+
+discord-icon-hover:
+	Image: external-resources.png
+	PanelRegion: 0, 32, 0, 0, 32, 32, 0, 0
+
+discord-icon-pressed:
+	Inherits: discord-icon
+
+youtube-icon:
+	Image: external-resources.png
+	PanelRegion: 32, 0, 0, 0, 32, 32, 0, 0
+
+youtube-icon-hover:
+	Image: external-resources.png
+	PanelRegion: 32, 32, 0, 0, 32, 32, 0, 0
+
+youtube-icon-pressed:
+	Inherits: youtube-icon
+
+twitter-icon:
+	Image: external-resources.png
+	PanelRegion: 64, 0, 0, 0, 32, 32, 0, 0
+
+twitter-icon-hover:
+	Image: external-resources.png
+	PanelRegion: 64, 32, 0, 0, 32, 32, 0, 0
+
+twitter-icon-pressed:
+	Inherits: twitter-icon
+
+facebook-icon:
+	Image: external-resources.png
+	PanelRegion: 96, 0, 0, 0, 32, 32, 0, 0
+
+facebook-icon-hover:
+	Image: external-resources.png
+	PanelRegion: 96, 32, 0, 0, 32, 32, 0, 0
+
+facebook-icon-pressed:
+	Inherits: facebook-icon
+
+ca-website-icon:
+	Image: external-resources.png
+	PanelRegion: 128, 0, 0, 0, 32, 32, 0, 0
+
+ca-website-icon-hover:
+	Image: external-resources.png
+	PanelRegion: 128, 32, 0, 0, 32, 32, 0, 0
+
+ca-website-icon-pressed:
+	Inherits: ca-website-icon
+
+tree-icon:
+	Image: external-resources.png
+	PanelRegion: 160, 0, 0, 0, 32, 32, 0, 0
+
+tree-icon-hover:
+	Image: external-resources.png
+	PanelRegion: 160, 32, 0, 0, 32, 32, 0, 0
+
+tree-icon-pressed:
+	Inherits: tree-icon
+
+spreadsheet-icon:
+	Image: external-resources.png
+	PanelRegion: 192, 0, 0, 0, 32, 32, 0, 0
+
+spreadsheet-icon-hover:
+	Image: external-resources.png
+	PanelRegion: 192, 32, 0, 0, 32, 32, 0, 0
+
+spreadsheet-icon-pressed:
+	Inherits: spreadsheet-icon
+
+moddb-icon:
+	Image: external-resources.png
+	PanelRegion: 224, 0, 0, 0, 32, 32, 0, 0
+
+moddb-icon-hover:
+	Image: external-resources.png
+	PanelRegion: 224, 32, 0, 0, 32, 32, 0, 0
+
+moddb-icon-pressed:
+	Inherits: moddb-icon
+
+# ---- Player Rank
+
+allied-coalition:
+	Image: branch-indicators.png
+	Regions:
+		disabled: 512, 512, 1, 1
+		influence-empty: 0, 0, 29, 65
+		influence-full: 30, 0, 29, 65
+		none: 60, 0, 29, 65
+		greece: 90, 0, 29, 65
+		korea: 120, 0, 29, 65
+		sweden: 150, 0, 29, 65
+		level0: 512, 512, 1, 1
+		level1: 182, 29, 10, 9
+		level2: 212, 29, 10, 9
+		level3: 242, 29, 10, 9
+
+soviet-player-ranks:
+	Image: branch-indicators.png
+	Regions:
+		disabled: 120, 66, 39, 67
+		level0: 0, 66, 39, 67
+		level1: 40, 66, 39, 67
+		level2: 80, 66, 39, 67
+		level3: 120, 66, 39, 67
+		level0-glow: 512, 512, 1, 1
+		level1-glow: 160, 66, 39, 67
+		level2-glow: 200, 66, 39, 67
+		level3-glow: 240, 66, 39, 67
+		rank-up: 397, 66, 115, 54
+
+gdi-strategy:
+	Image: branch-indicators.png
+	Regions:
+		disabled: 90, 134, 29, 65
+		level0: 0, 134, 29, 65
+		level1: 30, 134, 29, 65
+		level2: 60, 134, 29, 65
+		level3: 90, 134, 29, 65
+
+nod-covenant:
+	Image: branch-indicators.png
+	Regions:
+		disabled: 90, 200, 29, 65
+		level0: 0, 200, 29, 65
+		level1: 30, 200, 29, 65
+		level2: 60, 200, 29, 65
+		level3: 90, 200, 29, 65
+
+scrin-allegiance:
+	Image: branch-indicators.png
+	Regions:
+		disabled: 152, 266, 37, 71
+		level0: 0, 266, 37, 71
+		level1: 38, 266, 37, 71
+		level2: 76, 266, 37, 71
+		level3: 114, 266, 37, 71
+		level4: 152, 266, 37, 71
+		loyalist: 190, 266, 37, 71
+		rebel: 228, 266, 37, 71
+		malefic: 266, 266, 37, 71
+		level0-glow: 512, 512, 1, 1
+		level1-glow: 38, 338, 37, 71
+		level2-glow: 76, 338, 37, 71
+		level3-glow: 114, 338, 37, 71
+		level4-glow: 152, 338, 37, 71
+		loyalist-glow: 190, 338, 37, 71
+		rebel-glow: 228, 338, 37, 71
+		malefic-glow: 266, 338, 37, 71
+		ref-added: 397, 267, 115, 54

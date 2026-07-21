@@ -1,0 +1,26 @@
+World:
+	LuaScript:
+		Scripts: campaign.lua, coop.lua, ca|missions/main-campaign/ca04-containment/containment.lua, containment-coop.lua
+	ScriptLobbyDropdown@CAMLOCK:
+		ID: camlock
+		Label: Camera Lock
+		Description: Enable/disable locking the camera on your last unit.
+		Values:
+			enabled: Enabled
+			disabled: Disabled
+		Default: disabled
+		DisplayOrder: 999
+	LobbyMissionInfo@InitialObjectives:
+		Prefix: Initial Objectives
+		Text: • Destroy the 3 Soviet Atomic Reactors.\n• Eliminate SAM sites.\n• Destroy Missile Silos before they launch.\n• Neutralize the Chronosphere.
+	LobbyMissionInfo@Notes:
+		Prefix: Note
+		Text: Respawns can be enabled for this mission.
+		PrefixColor: FF9900
+		TextColor: FF9900
+
+SPY:
+	Inherits@NameTag: ^NameTag
+
+SEAL:
+	Inherits@NameTag: ^NameTag

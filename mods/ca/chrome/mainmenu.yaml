@@ -1,0 +1,419 @@
+Container@MAINMENU:
+	Logic: MainMenuLogicCA
+	Children:
+		LogicKeyListener@GLOBAL_KEYHANDLER:
+			Logic: MusicHotkeyLogic, ScreenshotHotkeyLogic, MuteHotkeyLogic
+				StopMusicKey: StopMusic
+				PauseMusicKey: PauseMusic
+				PrevMusicKey: PrevMusic
+				NextMusicKey: NextMusic
+				TakeScreenshotKey: TakeScreenshot
+				MuteAudioKey: ToggleMute
+		Background@BORDER:
+			Background: mainmenu-border
+			X: -15
+			Y: -15
+			Width: WINDOW_WIDTH + 30
+			Height: WINDOW_HEIGHT + 30
+		ImageCA@LOGO:
+			X: (WINDOW_WIDTH - 512) / 2
+			Y: 30
+			ImageCollection: menu-logo
+			ImageName: logo
+			MinXResolution: 1680
+		ImageCA@LOWRESLOGO:
+			X: (WINDOW_WIDTH - 512)
+			Y: 30
+			ImageCollection: menu-logo
+			ImageName: logo
+			MaxXResolution: 1679
+		Label@VERSION_LABEL:
+			Logic: VersionLabelLogic
+			X: (WINDOW_WIDTH) - 512 - 35
+			Y: 25
+			Width: 512
+			Height: 25
+			Align: Right
+			Font: Regular
+			Shadow: true
+		Container@MENUS:
+			X: 13 + (WINDOW_WIDTH - 522) / 4 - WIDTH / 2
+			Y: WINDOW_HEIGHT / 2 - HEIGHT / 2
+			Width: 200
+			Height: 360
+			Children:
+				Background@MAIN_MENU:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Children:
+						Label@MAINMENU_LABEL_TITLE:
+							X: 0
+							Y: 22
+							Width: 200
+							Height: 30
+							Text: Combined Arms
+							Align: Center
+							Font: MediumBold
+						Button@SINGLEPLAYER_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: 60
+							Width: 140
+							Height: 30
+							Text: Singleplayer
+							Font: Bold
+						Button@MULTIPLAYER_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: 100
+							Width: 140
+							Height: 30
+							Text: Multiplayer
+							Font: Bold
+						Button@SETTINGS_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: 140
+							Width: 140
+							Height: 30
+							Text: Settings
+							Font: Bold
+						Button@ENCYCLOPEDIA_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: 180
+							Width: 140
+							Height: 30
+							Text: Encyclopedia
+							Font: Bold
+						Button@EXTRAS_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: 220
+							Width: 140
+							Height: 30
+							Text: Extras
+							Font: Bold
+						Button@CONTENT_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: 260
+							Width: 140
+							Height: 30
+							Text: Manage Content
+							Font: Bold
+						Button@QUIT_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: 300
+							Width: 140
+							Height: 30
+							Text: Quit
+							Font: Bold
+				Background@SINGLEPLAYER_MENU:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Children:
+						Label@SINGLEPLAYER_MENU_TITLE:
+							X: 0
+							Y: 20
+							Width: 200
+							Height: 30
+							Text: Singleplayer
+							Align: Center
+							Font: Bold
+						Button@SKIRMISH_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: 60
+							Width: 140
+							Height: 30
+							Text: Skirmish
+							Font: Bold
+						Button@MISSIONS_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: 100
+							Width: 140
+							Height: 30
+							Text: Missions
+							Font: Bold
+						Button@LOAD_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: 140
+							Width: 140
+							Height: 30
+							Text: Load
+							Font: Bold
+						Button@BACK_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Key: escape
+							Y: 300
+							Width: 140
+							Height: 30
+							Text: Back
+							Font: Bold
+				Background@EXTRAS_MENU:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Children:
+						Label@EXTRAS_MENU_TITLE:
+							X: 0
+							Y: 20
+							Width: 200
+							Height: 30
+							Text: Extras
+							Align: Center
+							Font: Bold
+						Button@REPLAYS_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: 60
+							Width: 140
+							Height: 30
+							Text: Replays
+							Font: Bold
+						Button@MUSIC_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: 100
+							Width: 140
+							Height: 30
+							Text: Music
+							Font: Bold
+						Button@MAP_EDITOR_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: 140
+							Width: 140
+							Height: 30
+							Text: Map Editor
+							Font: Bold
+						Button@ASSETBROWSER_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: 180
+							Width: 140
+							Height: 30
+							Text: Asset Browser
+							Font: Bold
+						Button@CREDITS_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: 220
+							Width: 140
+							Height: 30
+							Text: Credits
+							Font: Bold
+						Button@BACK_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Key: escape
+							Y: 300
+							Width: 140
+							Height: 30
+							Text: Back
+							Font: Bold
+				Background@MAP_EDITOR_MENU:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Children:
+						Label@MAP_EDITOR_MENU_TITLE:
+							X: 0
+							Y: 20
+							Width: 200
+							Height: 30
+							Text: Map Editor
+							Align: Center
+							Font: Bold
+						Button@NEW_MAP_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: 60
+							Width: 140
+							Height: 30
+							Text: New Map
+							Font: Bold
+						Button@LOAD_MAP_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: 100
+							Width: 140
+							Height: 30
+							Text: Load Map
+							Font: Bold
+						Button@BACK_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Key: escape
+							Y: 300
+							Width: 140
+							Height: 30
+							Text: Back
+							Font: Bold
+		Container@PERFORMANCE_INFO:
+			Logic: PerfDebugLogic
+			Children:
+				Label@PERF_TEXT:
+					X: 30
+					Y: WINDOW_HEIGHT - 70
+					Width: 170
+					Height: 40
+					Contrast: true
+				Background@GRAPH_BG:
+					ClickThrough: true
+					Background: dialog4
+					X: WINDOW_WIDTH - 240
+					Y: WINDOW_HEIGHT - 240
+					Width: 210
+					Height: 210
+					Children:
+						PerfGraph@GRAPH:
+							X: 5
+							Y: 5
+							Width: 200
+							Height: 200
+		Container@MENU_NOTIFICATIONS:
+			Logic: MenuNotificationsLogic
+			Children:
+				Background@NEW_VERSION:
+					Background: dialog4
+					X: WINDOW_WIDTH - WIDTH - 25
+					Y: WINDOW_HEIGHT - 32 - HEIGHT - 25 - 4
+					Width: 270
+					Height: 65
+					Children:
+						Label@NEW_VERSION_LABEL:
+							X: 0
+							Y: 2
+							Width: PARENT_WIDTH
+							Height: 25
+							Align: Center
+							Font: Regular
+							Shadow: true
+							TextColor: ffff00
+							Text: Testing testing
+						ExternalLinkButton@NEW_VERSION_BUTTON:
+							X: PARENT_WIDTH / 2 - WIDTH / 2
+							Y: PARENT_HEIGHT - HEIGHT - 8
+							Width: 100
+							Height: 28
+							Background: button
+							Align: Center
+							Text: Download
+							Font: Regular
+							Url: null
+				Background@NOTIFICATIONS:
+					Background: dialog4
+					X: WINDOW_WIDTH - WIDTH - 25
+					Y: WINDOW_HEIGHT - 32 - HEIGHT - 25 - 4
+					Width: 300
+					Height: 200
+					Children:
+						Label@NOTIFICATIONS_TITLE:
+							X: 0
+							Y: 5
+							Width: PARENT_WIDTH
+							Height: 20
+							Align: Center
+							Font: Bold
+							Shadow: true
+							TextColor: ffff00
+							Text: Notifications
+						ScrollPanel@NOTIFICATIONS_PANEL:
+							X: 10
+							Y: 30
+							Width: PARENT_WIDTH - 20
+							Height: PARENT_HEIGHT - 40
+							Background: observer-scrollpanel-button-pressed
+							Children:
+								Container@NOTIFICATION_TEMPLATE:
+									X: 0
+									Y: 0
+									Width: PARENT_WIDTH
+									Height: 35
+									Children:
+										Label@NOTIFICATION_TITLE:
+											X: 8
+											Y: 0
+											Width: PARENT_WIDTH - 40
+											Height: 15
+											Font: Regular
+											TextColor: ff0000
+										Label@NOTIFICATION_BODY:
+											X: 8
+											Y: 18
+											Width: PARENT_WIDTH - 40
+											Height: 15
+											Font: Small
+		Container@EXTERNAL_LINKS:
+			Logic: ExternalLinksLogic
+			X: WINDOW_WIDTH - WIDTH - 25
+			Y: WINDOW_HEIGHT - HEIGHT - 25
+			Width: 236
+			Height: 32
+			Children:
+				ExternalLinkButton@DISCORD_LINK:
+					X: 0
+					Y: 0
+					Width: 32
+					Height: 32
+					Background: discord-icon
+					Align: Left
+					LeftMargin: 0
+					TooltipText: Discord Server
+					TooltipContainer: LINKS_TOOLTIP_CONTAINER
+					Url: https://discord.gg/2fUxXEKQhP
+				ExternalLinkButton@YOUTUBE_LINK:
+					X: 34
+					Y: 0
+					Width: 32
+					Height: 32
+					Background: youtube-icon
+					Align: Left
+					LeftMargin: 0
+					TooltipText: YouTube Channel
+					TooltipContainer: LINKS_TOOLTIP_CONTAINER
+					Url: https://www.youtube.com/@openracombinedarms
+				ExternalLinkButton@FACEBOOK_LINK:
+					X: 68
+					Y: 0
+					Width: 32
+					Height: 32
+					Background: facebook-icon
+					Align: Left
+					LeftMargin: 0
+					TooltipText: Facebook Page
+					TooltipContainer: LINKS_TOOLTIP_CONTAINER
+					Url: https://www.facebook.com/openracombinedarms
+				ExternalLinkButton@MODDB_LINK:
+					X: 102
+					Y: 0
+					Width: 32
+					Height: 32
+					Background: moddb-icon
+					Align: Left
+					LeftMargin: 0
+					TooltipText: ModDB
+					TooltipContainer: LINKS_TOOLTIP_CONTAINER
+					Url: https://www.moddb.com/mods/command-conquer-combined-arms
+				ExternalLinkButton@SPREADSHEET_LINK:
+					X: 136
+					Y: 0
+					Width: 32
+					Height: 32
+					Background: spreadsheet-icon
+					Align: Left
+					LeftMargin: 0
+					TooltipText: Unit Stats Spreadsheet
+					TooltipContainer: LINKS_TOOLTIP_CONTAINER
+					Url: https://docs.google.com/spreadsheets/d/1RDg36FKB2kTU-rlwn358B879DHYen2vcZTdE39-Fz6k
+				ExternalLinkButton@TECHTREE_LINK:
+					X: 170
+					Y: 0
+					Width: 32
+					Height: 32
+					Background: tree-icon
+					Align: Left
+					LeftMargin: 0
+					TooltipText: Tech Tree
+					TooltipContainer: LINKS_TOOLTIP_CONTAINER
+					Url: https://ca.oraladder.net/tech-tree
+				ExternalLinkButton@WEBSITE_LINK:
+					X: 204
+					Y: 0
+					Width: 32
+					Height: 32
+					Background: ca-website-icon
+					Align: Left
+					LeftMargin: 0
+					TooltipText: CA Website
+					TooltipContainer: LINKS_TOOLTIP_CONTAINER
+					Url: https://ca.oraladder.net
+				TooltipContainer@LINKS_TOOLTIP_CONTAINER:
+		Container@PLAYER_PROFILE_CONTAINER:
+			Logic: LoadLocalPlayerProfileLogic
+			X: 25
+			Y: 25

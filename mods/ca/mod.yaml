@@ -1,0 +1,192 @@
+Metadata:
+	Title: mod-title
+	Version: 1.09-DevTest-19
+	Website: https://www.moddb.com/mods/command-conquer-combined-arms
+	WebIcon32: https://ca.oraladder.net/img/icon_32x32.png
+	WindowTitle: mod-windowtitle
+
+PackageFormats: Mix
+
+FileSystem: ContentInstallerFileSystem
+	SystemPackages:
+		^EngineDir
+		$ca: ca
+		^EngineDir|mods/common: common
+		~^SupportDir|Content/ca: content
+		ca|scripts
+		ca|uibits
+	ContentPackages:
+		content|allies.mix
+		content|conquer.mix
+		content|lores.mix: lores
+		content|hires.mix
+		content|interior.mix
+		content|local.mix
+		content|russian.mix
+		content|snow.mix
+		content|sounds.mix
+		content|speech.mix
+		content|temperat.mix
+		content|cnc/desert.mix
+		content|expand/expand2.mix
+		content|expand/lores1.mix
+		content|expand/hires1.mix
+		~content|cnc/scores.mix
+		~content|ra/scores.mix
+		~content|ts/scores.mix
+		~content|ts/scores01.mix
+		~content|ra2/theme.mix
+		~content|ra2/thememd.mix
+		ca|bits
+		ca|bits/desert
+		ca|bits/jungle
+		ca|bits/winter
+		ca|bits/barren
+		ca|bits/temp
+		ca|bits/int
+		ca|bits/snow
+		ca|bits/audio
+		ca|bits/music
+		ca|bits/scrin
+		ca|bits/scrin/audio
+		ca|bits/scrin/terrain
+	RequiredContentFiles:
+		content|expand/chrotnk1.aud
+		content|expand/fixit1.aud
+		content|expand/jburn1.aud
+		content|expand/jchrge1.aud
+		content|expand/jcrisp1.aud
+		content|expand/jdance1.aud
+		content|expand/jjuice1.aud
+		content|expand/jjump1.aud
+		content|expand/jlight1.aud
+		content|expand/jpower1.aud
+		content|expand/jshock1.aud
+		content|expand/jyes1.aud
+		content|expand/madchrg2.aud
+		content|expand/madexplo.aud
+		content|expand/mboss1.aud
+		content|expand/mhear1.aud
+		content|expand/mhotdig1.aud
+		content|expand/mhowdy1.aud
+		content|expand/mhuh1.aud
+		content|expand/mlaff1.aud
+		content|expand/mrise1.aud
+		content|expand/mwrench1.aud
+		content|expand/myeehaw1.aud
+		content|expand/myes1.aud
+	ContentInstallerMod: ca-content
+
+MapFolders:
+	ca|missions/main-campaign: System
+	ca|missions/coop-campaign: System
+	ca|maps: System
+	~^SupportDir|maps/ca/1.09-DevTest-19: User
+
+LoadScreen: ImageLoadScreen
+	Image: ca|uibits/ca-loading-artwork.png
+	Image2x: ca|uibits/ca-loading-artwork-2x.png
+	Image3x: ca|uibits/ca-loading-artwork-3x.png
+	Width: 1024
+	Height: 256
+	Text: Loading...
+
+Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll, OpenRA.Mods.CA.dll
+
+FluentMessages:
+	common|fluent/common.ftl
+	common|fluent/chrome.ftl
+	common|fluent/hotkeys.ftl
+	common|fluent/rules.ftl
+	ca|fluent/ca.ftl
+	ca|fluent/chrome.ftl
+	ca|fluent/encyclopedia.ftl
+	ca|fluent/factions.ftl
+	ca|fluent/hotkeys.ftl
+	ca|fluent/options.ftl
+	ca|fluent/powers.ftl
+	ca|fluent/rules.ftl
+
+ServerTraits:
+	LobbyCommands
+	SkirmishLogic
+	PlayerPinger
+	MasterServerPinger
+	LobbySettingsNotification
+
+MapGrid:
+	TileSize: 24,24
+	Type: Rectangular
+
+DefaultOrderGenerator: UnitOrderGenerator
+
+SupportsMapsFrom: ca, ra
+
+SoundFormats: Aud, Wav, Mp3, Ogg
+
+SpriteFormats: ShpD2, R8, ShpTD, TmpRA, TmpTD, ShpTS
+
+SpriteSequenceFormat: ClassicTilesetSpecificSpriteSequence
+	TilesetCodes:
+		TEMPERAT: .tem
+		SNOW: .sno
+		INTERIOR: .int
+		DESERT: .des
+		JUNGLE: .jun
+		WINTER: .win
+		BARREN: .bar
+	TilesetExtensions:
+		TEMPERAT: .tem
+		SNOW: .sno
+		INTERIOR: .int
+		DESERT: .des
+		JUNGLE: .jun
+		WINTER: .win
+		BARREN: .bar
+
+VideoFormats: Vqa, Wsa
+
+TerrainFormat: DefaultTerrain
+
+AssetBrowser:
+	SpriteExtensions: .shp, .tmp, .tem, .win, .sno, .des, .int, .jun, .r8
+	AudioExtensions: .aud, .wav, .v00, .v01, .v02, .v03, .var
+	VideoExtensions: .vqa, .wsa
+
+GameSpeeds:
+	DefaultSpeed: default
+	Speeds:
+		slowest:
+			Name: options-game-speed.slowest
+			Timestep: 80
+			OrderLatency: 2
+		slower:
+			Name: options-game-speed.slower
+			Timestep: 50
+			OrderLatency: 3
+		default:
+			Name: options-game-speed.normal
+			Timestep: 40
+			OrderLatency: 3
+		fast:
+			Name: options-game-speed.fast
+			Timestep: 35
+			OrderLatency: 4
+		faster:
+			Name: options-game-speed.faster
+			Timestep: 30
+			OrderLatency: 4
+		fastest:
+			Name: options-game-speed.fastest
+			Timestep: 20
+			OrderLatency: 6
+
+ModCredits:
+	ModCreditsFile: ca|CREDITS
+	ModTabTitle: Combined Arms
+
+DiscordService:
+	ApplicationId: 787647352399200277
+
+Include: mod.content.yaml
+Include: mod.chrome.yaml

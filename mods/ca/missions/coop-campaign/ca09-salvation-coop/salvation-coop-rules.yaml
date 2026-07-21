@@ -1,0 +1,11 @@
+World:
+	LuaScript:
+		Scripts: campaign.lua, coop.lua, ca|missions/main-campaign/ca09-salvation/salvation.lua, salvation-coop.lua
+	ScriptLobbyDropdown@basesharing:
+		Values:
+			-0:
+		Default: 1
+		Locked: True
+	LobbyMissionInfo@InitialObjectives:
+		Prefix: Initial Objectives
+		Text: • Eliminate all Scrin forces.

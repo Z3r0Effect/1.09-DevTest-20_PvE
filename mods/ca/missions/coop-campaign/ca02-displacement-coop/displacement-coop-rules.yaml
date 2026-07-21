@@ -1,0 +1,11 @@
+World:
+	LuaScript:
+		Scripts: campaign.lua, coop.lua, ca|missions/main-campaign/ca02-displacement/displacement.lua, displacement-coop.lua
+	ScriptLobbyDropdown@basesharing:
+		Values:
+			-0:
+		Default: 1
+		Locked: True
+	LobbyMissionInfo@InitialObjectives:
+		Prefix: Initial Objectives
+		Text: • Clear a path for incoming convoys and protect them as they pass through.

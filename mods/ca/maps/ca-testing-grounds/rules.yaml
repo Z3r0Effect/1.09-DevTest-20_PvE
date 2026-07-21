@@ -1,0 +1,330 @@
+
+World:
+	LuaScript:
+		Scripts: testing-grounds.lua
+	MapOptions:
+		TechLevel: buildanything
+	MapBuildRadius:
+		BuildRadiusCheckboxEnabled: False
+
+Player:
+	PlayerResources:
+		SelectableCash: 50000000
+		DefaultCash: 50000000
+	DeveloperMode:
+		CheckboxEnabled: True
+		CheckboxLocked: True
+		CheckboxVisible: False
+	ModularBot@DormantAI:
+		Name: Dormant AI
+		Type: dormant
+	-ModularBot@BrutalAI:
+	-ModularBot@VeryHardAI:
+	-ModularBot@HardAI:
+	-ModularBot@NormalAI:
+	-ModularBot@EasyAI:
+	-ModularBot@NavalAI:
+	ChronoshiftPowerCA@TestingGroundsChrono:
+		OrderName: testmapchrono
+		Duration: 10000000
+		EnemyDuration: 10000000
+		Icon: chrono
+		ChargeInterval: 1
+		Name: Chronoshift
+		Description: Teleports units.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		KillCargo: false
+		Range: 4c512
+		MaxTargets: 50
+		InvalidTargetTypes: Husk, ChronoshiftImmune
+		SupportPowerPaletteOrder: 1
+		ShowSelectionBoxes: true
+		HoverSelectionBoxColor: b6f4ff
+		ShowTargetCircle: true
+		TargetCircleColor: b6f4ff
+		TargetTintColor: b6f4ff33
+		ShowDestinationCircle: true
+
+^Vehicle-NOUPG:
+	GrantConditionOnBotOwner@immobile:
+		Condition: dormant
+		Bots: dormant
+	GrantCondition@notmobile:
+		Condition: notmobile
+		RequiresCondition: dormant
+	SpeedMultiplier@immobile:
+		Modifier: 0
+		RequiresCondition: dormant
+
+^Infantry:
+	Inherits@Chronoshiftable: ^Chronoshiftable
+	GrantConditionOnBotOwner@immobile:
+		Condition: dormant
+		Bots: dormant
+	Mobile:
+		PauseOnCondition: being-warped || dormant
+	SpeedMultiplier@immobile:
+		Modifier: 0
+		RequiresCondition: dormant
+
+MDRN:
+	DummyConditionConsumer@notmobile:
+		Condition: notmobile
+
+MOLE:
+	DummyConditionConsumer@notmobile:
+		Condition: notmobile
+
+TSLA:
+	AttackTesla:
+		PauseOnCondition: build-incomplete || disabled || empdisable || being-warped || dormant
+	GrantConditionOnBotOwner@dormant:
+		Condition: dormant
+		Bots: dormant
+
+ATWR:
+	AttackTurreted:
+		PauseOnCondition: build-incomplete || disabled || empdisable || being-warped || dormant
+	GrantConditionOnBotOwner@dormant:
+		Condition: dormant
+		Bots: dormant
+
+OBLI:
+	AttackCharges:
+		PauseOnCondition: build-incomplete || disabled || empdisable || being-warped || dormant
+	GrantConditionOnBotOwner@dormant:
+		Condition: dormant
+		Bots: dormant
+
+GTWR:
+	AttackTurreted:
+		PauseOnCondition: build-incomplete || empdisable || being-warped || dormant
+	GrantConditionOnBotOwner@dormant:
+		Condition: dormant
+		Bots: dormant
+
+FTUR:
+	AttackTurreted:
+		PauseOnCondition: build-incomplete || empdisable || being-warped || dormant
+	GrantConditionOnBotOwner@dormant:
+		Condition: dormant
+		Bots: dormant
+
+PDGY:
+	Inherits: MAST
+	RenderSprites:
+		Image: mast
+	GrantCondition@Elite:
+		Condition: rank-elite
+
+4TNK:
+	ChangesHealth:
+		RequiresCondition: !dormant
+
+HTNK:
+	ChangesHealth:
+		RequiresCondition: !dormant
+
+E7:
+	Buildable:
+		BuildLimit: 0
+
+BORI:
+	Buildable:
+		BuildLimit: 0
+
+RMBO:
+	Buildable:
+		BuildLimit: 0
+
+YURI:
+	Buildable:
+		BuildLimit: 0
+
+MAST:
+	Buildable:
+		BuildLimit: 0
+
+bombard.strat:
+	Buildable:
+		Prerequisites: ~player.gdi
+
+bombard2.strat:
+	Buildable:
+		Prerequisites: ~player.gdi, ~bombard.strat
+
+seek.strat:
+	Buildable:
+		Prerequisites: ~player.gdi
+
+seek2.strat:
+	Buildable:
+		Prerequisites: ~player.gdi, ~seek.strat
+
+hold.strat:
+	Buildable:
+		Prerequisites: ~player.gdi
+
+hold2.strat:
+	Buildable:
+		Prerequisites: ~player.gdi, ~hold.strat
+
+#####################
+
+ActionWormhole:
+	Inherits: WORMHOLE
+	Targetable:
+		TargetTypes: None
+	-RallyPoint:
+	-TeleportNetwork:
+	WithTextDecoration:
+		Text: Action
+		Position: Top
+		Font: Small
+		ValidRelationships: Ally, Enemy, Neutral
+		Margin: 0, -15
+	RenderSprites:
+		Image: wormhole
+	GrantTimedConditionOnDeploy@Deploy:
+		DeployedCondition: deployed
+		CooldownTicks: 25
+		DeployedTicks: 1
+		StartsFullyCharged: true
+		ChargingColor: ff0000
+		DischargingColor: ffffff
+		ShowSelectionBarWhenFull: false
+	WithColoredOverlay@Deployed:
+		RequiresCondition: deployed
+		Color: ff0000aa
+	Production@Upgrade:
+		Produces: Upgrade
+	PeriodicProducerCA@Produce:
+		Actors: action.respawn
+		Type: Upgrade
+		ChargeDuration: 26
+		RequiresCondition: deployed
+		InitialChargeDuration: 0
+		ReadyAudio: UpgradeComplete
+		BlockedAudio: BuildingCannotPlaceAudio
+		ResetTraitOnEnable: true
+
+^InvisibleAction:
+	Inherits: ^InvisibleDummy
+	Buildable:
+		Queue: Upgrade
+		IconPalette: chrometd
+	RenderSprites:
+		Image: strategic.upgrade
+	PopControlled:
+	Tooltip:
+		Name: Invisible Action
+
+### --------
+
+wormhole.respawn:
+	Inherits: ActionWormhole
+	WithTextDecoration:
+		Text: Respawn Dummies
+		Color: 00FFFF
+	PeriodicProducerCA@Produce:
+		Actors: action.respawn
+		ReadyAudio: Building
+
+action.respawn:
+	Inherits: ^InvisibleAction
+
+### --------
+
+wormhole.clear.upgrades:
+	Inherits: ActionWormhole
+	WithTextDecoration:
+		Text: Clear Player Upgrades
+		Color: FF8800
+	PeriodicProducerCA@Produce:
+		Actors: action.clear.upgrades
+		ReadyAudio: Cancelled
+
+action.clear.upgrades:
+	Inherits: ^InvisibleAction
+
+### --------
+
+wormhole.enable.hazmat:
+	Inherits: ActionWormhole
+	WithTextDecoration:
+		Text: Enable Dummy Hazmat
+		Color: 00FF00
+	PeriodicProducerCA@Produce:
+		Actors: action.enable.hazmat
+
+action.enable.hazmat:
+	Inherits: ^InvisibleAction
+
+###
+
+wormhole.disable.hazmat:
+	Inherits: ActionWormhole
+	WithTextDecoration:
+		Text: Disable Dummy Hazmat
+		Color: FF0000
+	PeriodicProducerCA@Produce:
+		Actors: action.disable.hazmat
+		ReadyAudio: Cancelled
+
+action.disable.hazmat:
+	Inherits: ^InvisibleAction
+
+### --------
+
+wormhole.enable.flakarmor:
+	Inherits: ActionWormhole
+	WithTextDecoration:
+		Text: Enable Dummy Flak Armor
+		Color: 00FF00
+	PeriodicProducerCA@Produce:
+		Actors: action.enable.flakarmor
+
+action.enable.flakarmor:
+	Inherits: ^InvisibleAction
+
+###
+
+wormhole.disable.flakarmor:
+	Inherits: ActionWormhole
+	WithTextDecoration:
+		Text: Disable Dummy Flak Armor
+		Color: FF0000
+	PeriodicProducerCA@Produce:
+		Actors: action.disable.flakarmor
+		ReadyAudio: Cancelled
+
+action.disable.flakarmor:
+	Inherits: ^InvisibleAction
+
+### --------
+
+wormhole.enable.cyborgarmor:
+	Inherits: ActionWormhole
+	WithTextDecoration:
+		Text: Enable Dummy Cyborg Armor
+		Color: 00FF00
+	PeriodicProducerCA@Produce:
+		Actors: action.enable.cyborgarmor
+
+action.enable.cyborgarmor:
+	Inherits: ^InvisibleAction
+
+###
+
+wormhole.disable.cyborgarmor:
+	Inherits: ActionWormhole
+	WithTextDecoration:
+		Text: Disable Dummy Cyborg Armor
+		Color: FF0000
+	PeriodicProducerCA@Produce:
+		Actors: action.disable.cyborgarmor
+		ReadyAudio: Cancelled
+
+action.disable.cyborgarmor:
+	Inherits: ^InvisibleAction
