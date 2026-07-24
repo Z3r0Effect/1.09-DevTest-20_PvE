@@ -499,7 +499,7 @@
 	ExternalCondition@HeroOfTheUnion:
 		Condition: herooftheunion
 	FlatHealthDamageMultiplier@HeroOfTheUnion:
-		HP: 5000
+		HP: 9000
 		RequiresCondition: herooftheunion
 	SpeedMultiplier@HeroOfTheUnion:
 		Modifier: 100
@@ -511,7 +511,7 @@
 		Modifier: 80
 		RequiresCondition: herooftheunion
 	RangeMultiplier@HeroOfTheUnion:
-		Modifier: 110
+		Modifier: 115
 		RequiresCondition: herooftheunion
 	WithIdleOverlay@HeroOfTheUnionLight:
 		Sequence: light
@@ -538,7 +538,7 @@
 	ReloadDelayMultiplier@HeroOfTheUnion:
 		Modifier: 90
 	RangeMultiplier@HeroOfTheUnion:
-		Modifier: 110
+		Modifier: 115
 
 ^IdolOfKane:
 	ExternalCondition@IdolOfKaneBuff:

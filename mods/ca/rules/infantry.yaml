@@ -1474,6 +1474,8 @@ THF:
 
 SHOK:
 	Inherits: ^Soldier
+	Inherits@Inspirable: ^Inspirable
+	Inherits@HeroOfTheUnionTargetable: ^HeroOfTheUnionTargetable
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	AutoTargetPriority@DEFAULT:
 		InvalidTargets: NoAutoTarget, WaterStructure, AntiAirDefense, TeslaBoost, Disguised
@@ -2679,7 +2681,7 @@ ACOL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 11500
+		HP: 14500
 	Mobile:
 		Speed: 62
 		Voice: Move
@@ -3051,6 +3053,8 @@ JJET.UPG.Husk:
 
 E8:
 	Inherits: ^Soldier
+	Inherits@Inspirable: ^Inspirable
+	Inherits@HeroOfTheUnionTargetable: ^HeroOfTheUnionTargetable
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: InfantrySQ, InfantryMQ
@@ -3068,7 +3072,7 @@ E8:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 9400
+		HP: 10400
 	RevealsShroud:
 		Range: 7c0
 	Armament@PRIMARY:
@@ -3142,7 +3146,7 @@ DESO:
 	Valued:
 		Cost: 600
 	Health:
-		HP: 18500
+		HP: 20500
 	Voiced:
 		VoiceSet: DesVoice
 	Mobile:
@@ -3528,6 +3532,8 @@ IVAN:
 
 BRUT:
 	Inherits: ^Soldier
+	Inherits@Inspirable: ^Inspirable
+	Inherits@HeroOfTheUnionTargetable: ^HeroOfTheUnionTargetable
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@HEALINGCOOLDOWN: ^HealingCooldown
 	AutoTarget:
@@ -4218,7 +4224,7 @@ YURI:
 		Amount: 3
 		RequiresCondition: rank-elite
 	RangeMultiplier@RANK-ELITE:
-		Modifier: 115
+		Modifier: 120
 		RequiresCondition: rank-elite
 	RangedGpsRadarProvider:
 		Range: 14c0

@@ -287,7 +287,7 @@
 
 152mm:
 	Inherits: ^Cannon
-	ReloadDelay: 95
+	ReloadDelay: 85
 	Report: vapoat1a.aud
 	Range: 6c768
 	Burst: 2

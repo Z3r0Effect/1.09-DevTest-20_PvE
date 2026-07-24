@@ -72,7 +72,7 @@ DisintegratorIFVBeamAA:
 		Damage: 6800
 
 EnslaveInfantry:
-	Range: 10c0
+	Range: 12c0
 	ReloadDelay: 50
 	Projectile: InstantHit
 	ValidTargets: MindControllable
@@ -93,13 +93,13 @@ EnslaveInfantry:
 
 EnslaveVehicle:
 	Inherits: EnslaveInfantry
-	Range: 11c512
+	Range: 13c512
 	InvalidTargets: Infantry, MindControlImmune
 	Warhead@Flash: FlashTarget
 		ValidTargets: Vehicle
 
 DetonateSlave:
-	Range: 2c0
+	Range: 3c0
 	ReloadDelay: 1
 	Projectile: InstantHit
 	Warhead@1Dam: HealthPercentageDamage

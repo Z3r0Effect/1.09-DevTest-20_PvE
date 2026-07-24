@@ -9744,7 +9744,7 @@ XO:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45500
+		HP: 50500
 	Armor:
 		Type: Light
 	Mobile:
@@ -9863,7 +9863,7 @@ APOC:
 		Strengths: • Strong vs Heavy Armor, Light Armor
 		Attributes: • Can crush smaller vehicles and concrete walls\n• Self repairs to 50% out of combat
 	Valued:
-		Cost: 2000
+		Cost: 1800
 	Tooltip:
 		Name: Apocalypse Tank
 		GenericName: Tank
@@ -10103,7 +10103,7 @@ OVLD:
 		Weaknesses: • Cannot attack Aircraft
 		Attributes: • Can crush smaller vehicles and concrete walls\n• Self repairs to 50% out of combat\n• Empowers nearby basic infantry
 	Valued:
-		Cost: 2000
+		Cost: 1800
 	Tooltip:
 		Name: Overlord Tank
 		GenericName: Tank
