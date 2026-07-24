@@ -588,11 +588,11 @@ NukeCannonDeployer:
 		LaunchAngle: 92
 		Inaccuracy: 554
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
-		Damage: 6000
-		Falloff: 1000, 448, 192, 50, 18, 7, 0
+		Spread: 1c512
+		Damage: 60000
+		Falloff: 100, 25, 0
 		Versus:
-			None: 60
+			None: 35
 			Wood: 100
 			Concrete: 100
 			Light: 70
@@ -640,16 +640,16 @@ NukeCannonDeployer:
 		GlowFadeFrames: 30
 		GlowFadeInFrames: 12
 	Warhead@1Radiation: CreateTintedCells
-		Spread: 4c0
+		Spread: 3c0
 		Falloff: 65, 30, 5, 0
-		Level: 250
-		MaxLevel: 850
+		Level: 150
+		MaxLevel: 450
 		LayerName: radioactivity.medium
 		GlowScale: 1.5
 		GlowFadeFrames: 30
 		GlowFadeInFrames: 12
 	Warhead@2irrad: GrantExternalConditionCA
-		Range: 4c256
+		Range: 2c256
 		Duration: 250
 		Condition: irradiated
 		ValidTargets: Vehicle, Ship
