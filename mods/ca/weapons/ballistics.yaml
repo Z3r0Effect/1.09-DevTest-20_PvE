@@ -634,6 +634,25 @@ NukeCannonDeployer:
 		GlowScale: 1.5
 		GlowFadeFrames: 30
 		GlowFadeInFrames: 12
+	Warhead@1Radiation: CreateTintedCells
+		Spread: 3c0
+		Falloff: 65, 30, 5, 0
+		Level: 150
+		MaxLevel: 450
+		LayerName: radioactivity.medium
+		GlowScale: 1.5
+		GlowFadeFrames: 30
+		GlowFadeInFrames: 12
+	Warhead@2irrad: GrantExternalConditionCA
+		Range: 2c256
+		Duration: 250
+		Condition: irradiated
+		ValidTargets: Vehicle, Ship
+	Warhead@3Eff: CreateEffect
+		Explosions: radhit
+		ExplosionPalette: caneon
+	Warhead@4Eff: CreateEffect
+		Explosions: radburst
 
 280mmNeutron:
 	Inherits: 280mmAtomic
