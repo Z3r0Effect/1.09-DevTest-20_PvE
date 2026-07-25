@@ -502,16 +502,16 @@
 		HP: 5000
 		RequiresCondition: herooftheunion
 	SpeedMultiplier@HeroOfTheUnion:
-		Modifier: 110
+		Modifier: 120
 		RequiresCondition: herooftheunion
 	ReloadDelayMultiplier@HeroOfTheUnion:
-		Modifier: 90
+		Modifier: 80
 		RequiresCondition: herooftheunion
 	ReloadAmmoDelayMultiplier@HeroOfTheUnion:
-		Modifier: 90
+		Modifier: 80
 		RequiresCondition: herooftheunion
 	RangeMultiplier@HeroOfTheUnion:
-		Modifier: 115
+		Modifier: 120
 		RequiresCondition: herooftheunion
 	WithIdleOverlay@HeroOfTheUnionLight:
 		Sequence: light
