@@ -2099,13 +2099,20 @@
 
 ^InfiltrateForSupportPower:
 	Targetable@GrantSupportPowerInfiltrate:
-		RequiresCondition: !being-warped
+		RequiresCondition: !being-warped && !spy-infiltrate-cooldown
 		TargetTypes: GrantSupportPowerInfiltrate
 	InfiltrateToCreateProxyActor@SpySupportPower:
 		Types: GrantSupportPowerInfiltrate
 		InfiltrationNotification: BuildingInfiltrated
 		InfiltratedNotification: BaseAttack
 		PlayerExperience: 15
+	InfiltrateForTimedCondition@SpySupportPower:
+		Condition: spy-infiltrate-cooldown
+		Duration: 1500
+		Types: GrantSupportPowerInfiltrate
+		ShowSelectionBar: true
+		SelectionBarColor: aaaaaa
+		ApplyToAllOfType: true
 
 ^GeneticallyMutatable:
 	ExternalCondition@GMUT:
