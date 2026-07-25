@@ -1475,7 +1475,6 @@ THF:
 SHOK:
 	Inherits: ^Soldier
 	Inherits@Inspirable: ^Inspirable
-	Inherits@HeroOfTheUnionTargetable: ^HeroOfTheUnionTargetable
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	AutoTargetPriority@DEFAULT:
 		InvalidTargets: NoAutoTarget, WaterStructure, AntiAirDefense, TeslaBoost, Disguised
@@ -1564,6 +1563,7 @@ SHOK:
 
 TTRP:
 	Inherits: SHOK
+	Inherits@Inspirable: ^Inspirable
 	Inherits@HEALINGCOOLDOWN: ^HealingCooldown
 	Buildable:
 		BuildPaletteOrder: 91
@@ -3054,7 +3054,6 @@ JJET.UPG.Husk:
 E8:
 	Inherits: ^Soldier
 	Inherits@Inspirable: ^Inspirable
-	Inherits@HeroOfTheUnionTargetable: ^HeroOfTheUnionTargetable
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: InfantrySQ, InfantryMQ

@@ -571,7 +571,7 @@
 	DummyConditionGranter@Chronoshifted:
 		Condition: chronoshifted
 	HealthCapDamageMultiplier@CHRONO:
-		MaxHealthEquivalent: 47000
+		MaxHealthEquivalent: 55000
 		RequiresCondition: chronoshifted
 	GrantTimedCondition@TemporalFlux:
 		ForceFullDuration: true
@@ -644,7 +644,7 @@
 ^TemporalReinforcement:
 	GrantTimedCondition@TEMPINC:
 		Condition: warpin
-		Duration: 1000
+		Duration: 1500
 	KillsSelf@TEMPINC:
 		GrantsCondition: warpout
 		RequiresCondition: !warpin
