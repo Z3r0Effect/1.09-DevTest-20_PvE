@@ -505,10 +505,10 @@
 		Modifier: 120
 		RequiresCondition: herooftheunion
 	ReloadDelayMultiplier@HeroOfTheUnion:
-		Modifier: 80
+		Modifier: 85
 		RequiresCondition: herooftheunion
 	ReloadAmmoDelayMultiplier@HeroOfTheUnion:
-		Modifier: 80
+		Modifier: 85
 		RequiresCondition: herooftheunion
 	RangeMultiplier@HeroOfTheUnion:
 		Modifier: 120
@@ -2425,7 +2425,7 @@
 
 ^SovietT4Boost:
 	ProductionTimeMultiplier@IndustrialPlantBoost:
-		Multiplier: 95
+		Multiplier: 90
 		Prerequisites: indp, !indplowpower
 	ProductionCostMultiplier@IndustrialPlantBoost:
 		Multiplier: 90

@@ -222,7 +222,7 @@
 
 130mm:
 	Inherits: ^Cannon
-	ReloadDelay: 80
+	ReloadDelay: 75
 	Burst: 2
 	InvalidTargets: Infantry
 	Warhead@1Dam: SpreadDamage

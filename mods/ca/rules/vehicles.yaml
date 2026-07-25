@@ -4796,7 +4796,7 @@ HTNK.Hover:
 	TooltipExtras:
 		Attributes: • Can traverse water\n• Self repairs to 50% out of combat\n• Afterburner ability (with upgrade)
 	Mobile:
-		Speed: 60
+		Speed: 62
 		Locomotor: hover
 	Turreted:
 		TurnSpeed: 20
@@ -4875,7 +4875,7 @@ HTNK.Drone:
 	Valued:
 		Cost: 1400
 	Health:
-		HP: 90000
+		HP: 97000
 	Tooltip:
 		Name: Mammoth Drone
 	Mobile:
@@ -7495,7 +7495,7 @@ TITN:
 		HP: 110000
 	Mobile:
 		Locomotor: sheavytracked
-		Speed: 56
+		Speed: 58
 		Voice: Move
 	Passenger:
 		CustomPipType: red

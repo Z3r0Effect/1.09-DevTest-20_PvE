@@ -2113,7 +2113,7 @@ TitanRailgunImpact:
 		ValidRelationships: Enemy, Neutral, Ally
 
 IonZap:
-	ReloadDelay: 65
+	ReloadDelay: 80
 	Range: 7c256
 	Report: ion1.aud
 	Projectile: Railgun
