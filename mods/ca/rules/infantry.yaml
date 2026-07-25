@@ -3532,8 +3532,6 @@ IVAN:
 
 BRUT:
 	Inherits: ^Soldier
-	Inherits@Inspirable: ^Inspirable
-	Inherits@HeroOfTheUnionTargetable: ^HeroOfTheUnionTargetable
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@HEALINGCOOLDOWN: ^HealingCooldown
 	AutoTarget:

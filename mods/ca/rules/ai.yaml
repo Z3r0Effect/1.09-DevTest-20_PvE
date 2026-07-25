@@ -2198,16 +2198,16 @@ Player:
 		HarasserTypes: 1tnk, rtnk, bike, gdrn, gdrn.tow, hmmv.tow, stnk.nod, hstk, spec, lace, seek, pbul, n2, e2, ivan, n4, n5, e4
 		ConstructionYardTypes: fact,afac,sfac
 		StaticAntiAirTypes: agun, sam, nsam, cram, shar
-		IdleScanRadius: 14
-		AttackScanRadius: 7
-		MaxBaseRadius: 14
-		ProtectUnitScanRadius: 16
-		ProtectionScanRadius: 12
+		IdleScanRadius: 18
+		AttackScanRadius: 9
+		MaxBaseRadius: 16
+		ProtectUnitScanRadius: 28
+		ProtectionScanRadius: 16
 		HighValueTargetTypes: fact, afac, sfac, proc, proc.td, proc.scrin, atek, stek, gtek, tmpl, scrt, harv, harv.td, harv.td.upg, harv.scrin, harv.chrono
 		HighValueTargetPriority: 30
 		IgnoredEnemyTargetTypes: Wall
 		IndirectRouteChance: 50
-		AirToAirPriority: 40
+		AirToAirPriority: 60
 		BigAirThreats: pac, deva, kiro, mshp
 		AirSquadTargetArmorTypes:
 			heli: Aircraft, Heavy
@@ -2244,7 +2244,7 @@ Player:
 		MaxAirSuperiority: 2
 		AirToAirUnits: heli, yak, mig, orca, apch, scrn, venm, stmr, torm, enrv, a10.sw, a10.gau, harr, beag
 		AirThreatUnits: heli, harr, pmak, beag, hind, yak, mig, suk, suk.upg, kiro, orca, a10, a10.sw, a10.gau, orcb, auro, apch, venm, rah, scrn, stmr, enrv, mshp, phan, kamv, shde, vert, mcor
-		ProductionMinCashRequirement: 2000
+		ProductionMinCashRequirement: 1800
 		UnitIntervals:
 			mshp: 7500
 			mcv: 3000
@@ -2320,10 +2320,10 @@ Player:
 	SquadManagerBotModuleCA@hard:
 		RequiresCondition: enable-hard-ai
 		MinimumAttackForceDelay: 50
-		SquadValue: 11000
-		SquadValueMaxEarlyBonus: 4000
-		SquadValueMinLateBonus: 9000
-		SquadValueMaxLateBonus: 18000
+		SquadValue: 12000
+		SquadValueMaxEarlyBonus: 5000
+		SquadValueMinLateBonus: 8000
+		SquadValueMaxLateBonus: 20000
 		AirUnitsTypes: heli, harr, pmak, beag, hind, yak, mig, suk, suk.upg, kiro, orca, a10, a10.sw, a10.gau, orcb, auro, jack, apch, venm, rah, scrn, stmr, torm, enrv, mshp, phan, kamv, shde, vert, mcor
 		ExcludeFromSquadsTypes: harv, harv.td, harv.td.upg, harv.scrin, harv.chrono, mcv, amcv, smcv, dog, e6, n6, s6, badr, badr.bomber, badr.cbomber, badr.nbomber, badr.mbomber, b2b, p51, tran.paradrop, halo.paradrop, nhaw.paradrop, u2, smig, a10.bomber, c17, c17.cargo, c17.clustermines, c17.xo, galx, uav, ocar.reinforce, ocar.xo, ocar.pod, horn, yf23.bomber, pod, pod2, pod3, buzz, buzz.ai, mspk
 		NavalUnitsTypes: ss,msub,dd,ca,lst,pt,dd2,pt2,ss2,isub,sb,seas
@@ -2331,12 +2331,12 @@ Player:
 		HarasserTypes: 1tnk, rtnk, bike, gdrn, gdrn.tow, hmmv.tow, stnk.nod, hstk, spec, lace, seek, pbul, n2, e2, ivan, n4, n5, e4
 		ConstructionYardTypes: fact,afac,sfac
 		StaticAntiAirTypes: agun, sam, nsam, cram, shar
-		ProtectionScanRadius: 14
+		ProtectionScanRadius: 12
 		HighValueTargetTypes: fact, afac, sfac, proc, proc.td, proc.scrin, atek, stek, gtek, tmpl, scrt, harv, harv.td, harv.td.upg, harv.scrin, harv.chrono
-		HighValueTargetPriority: 14
+		HighValueTargetPriority: 10
 		IgnoredEnemyTargetTypes: Wall
 		IndirectRouteChance: 40
-		AirToAirPriority: 30
+		AirToAirPriority: 20
 		BigAirThreats: pac, deva, kiro, mshp
 		AirSquadTargetArmorTypes:
 			heli: Aircraft, Heavy
@@ -2389,11 +2389,11 @@ Player:
 			harv.chrono: 2250
 			rmbo: 5000
 			e7: 5000
-			mast: 5500
-			yuri: 5500
-			bori: 5500
-			u3.squad: 5500
-			gtnk.squad: 5500
+			mast: 7500
+			yuri: 7500
+			bori: 7500
+			u3.squad: 7500
+			gtnk.squad: 7500
 		UnitLimits:
 			e2: 5
 			n2: 8

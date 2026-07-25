@@ -499,16 +499,16 @@
 	ExternalCondition@HeroOfTheUnion:
 		Condition: herooftheunion
 	FlatHealthDamageMultiplier@HeroOfTheUnion:
-		HP: 9000
+		HP: 5000
 		RequiresCondition: herooftheunion
 	SpeedMultiplier@HeroOfTheUnion:
-		Modifier: 100
+		Modifier: 110
 		RequiresCondition: herooftheunion
 	ReloadDelayMultiplier@HeroOfTheUnion:
-		Modifier: 80
+		Modifier: 90
 		RequiresCondition: herooftheunion
 	ReloadAmmoDelayMultiplier@HeroOfTheUnion:
-		Modifier: 80
+		Modifier: 90
 		RequiresCondition: herooftheunion
 	RangeMultiplier@HeroOfTheUnion:
 		Modifier: 115
@@ -534,11 +534,11 @@
 ^HeroOfTheUnionTargetableGrenFlamer:
 	Inherits: ^HeroOfTheUnionTargetable
 	FlatHealthDamageMultiplier@HeroOfTheUnion:
-		HP: 1000
+		HP: 2500
 	ReloadDelayMultiplier@HeroOfTheUnion:
 		Modifier: 90
 	RangeMultiplier@HeroOfTheUnion:
-		Modifier: 115
+		Modifier: 125
 
 ^IdolOfKane:
 	ExternalCondition@IdolOfKaneBuff:

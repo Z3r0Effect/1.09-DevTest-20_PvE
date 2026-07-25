@@ -827,7 +827,7 @@
 		Name: Heroes of the Union
 		Condition: herooftheunion
 		Range: 7c512
-		MaxTargets: 20
+		MaxTargets: 5
 		ShowTargetCount: true
 		ValidTargets: HeroOfUnionTargetable
 		Duration: 0
