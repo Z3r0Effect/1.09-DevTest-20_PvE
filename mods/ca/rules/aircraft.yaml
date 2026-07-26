@@ -5091,7 +5091,7 @@ JACK:
 		Type: JackKnifeDive
 		TargetFrozenActors: true
 		DeployCursor: move
-	-AttackMove:
+	AttackMove:
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
 	Encyclopedia:
