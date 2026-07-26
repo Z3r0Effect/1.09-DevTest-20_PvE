@@ -1319,7 +1319,7 @@ MAST:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 22000
+		HP: 20000
 	Mobile:
 		Speed: 69
 	RevealsShroud:
@@ -1559,7 +1559,7 @@ GUNW:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 28000
+		HP: 30000
 	Armor:
 		Type: Light
 	Mobile:
@@ -1679,7 +1679,7 @@ SEEK:
 		Locomotor: lighthover
 		TurnSpeed: 24
 	Health:
-		HP: 23500
+		HP: 24000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -1763,7 +1763,7 @@ LACE:
 		Speed: 144
 		Locomotor: lighthover
 	Health:
-		HP: 13000
+		HP: 14000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -1854,7 +1854,7 @@ INTL:
 		TurnSpeed: 512
 		Locomotor: lighthover
 	Health:
-		HP: 44000
+		HP: 45000
 	RevealsShroud:
 		MinRange: 4c0
 		Range: 6c0
@@ -2010,7 +2010,7 @@ CORR:
 		Speed: 72
 		TurnSpeed: 16
 	Health:
-		HP: 36000
+		HP: 38000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -2096,7 +2096,7 @@ LCHR:
 		Speed: 82
 		TurnSpeed: 20
 	Health:
-		HP: 31000
+		HP: 32000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -2350,7 +2350,7 @@ DEVO:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 52500
+		HP: 50000
 	Armor:
 		Type: Light
 	Mobile:
@@ -2395,7 +2395,7 @@ DEVO:
 		Armaments: primary, primary-charged
 	WithSpriteTurret:
 	ProductionCostMultiplier@REAPBONUS:
-		Multiplier: 90
+		Multiplier: 88
 		Prerequisites: player.reaper
 	GrantConditionOnTerrain@ONWATER:
 		TerrainTypes: Water
@@ -2526,7 +2526,7 @@ RUIN:
 		TurnSpeed: 512
 		Locomotor: lighthover
 	Health:
-		HP: 25000
+		HP: 22000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -2630,7 +2630,7 @@ ATMZ:
 		Speed: 72
 		Locomotor: lighthover
 	Health:
-		HP: 28000
+		HP: 24000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -2694,7 +2694,7 @@ TPOD:
 	Voiced:
 		VoiceSet: TripodVoice
 	Valued:
-		Cost: 1700
+		Cost: 1800
 	Selectable:
 		Bounds: 1280, 2218, 0, -426
 	Tooltip:
@@ -2702,7 +2702,7 @@ TPOD:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 94000
+		HP: 91000
 	Mobile:
 		Locomotor: heavytracked
 		Speed: 52
@@ -2784,7 +2784,7 @@ RTPD:
 	TooltipExtras:
 		Attributes: • Can crush concrete walls\n• Weapons empowered by Tiberium or other resources\n• Self repairs on Tiberium or other resources when not in combat
 	Valued:
-		Cost: 1900
+		Cost: 2100
 	Tooltip:
 		Name: Reaper Tripod
 	Health:
@@ -2882,7 +2882,7 @@ OBLT:
 		Weaknesses: • Weak vs Heavy Armor\n• Cannot attack Aircraft
 		Attributes: • Can traverse water
 	Valued:
-		Cost: 2000
+		Cost: 2200
 	Tooltip:
 		Name: Obliterator
 	Selectable:
@@ -3010,7 +3010,7 @@ NULL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 38000
+		HP: 32000
 	Mobile:
 		TurnSpeed: 512
 		Speed: 60
@@ -3299,7 +3299,7 @@ TORM:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 28000
 	Shielded:
 		MaxStrength: 5500
 	RevealsShroud:
@@ -3435,7 +3435,7 @@ ENRV:
 		Weaknesses: • Weak vs Infantry
 		Attributes: • Slows targets
 	Valued:
-		Cost: 1400
+		Cost: 1700
 	Tooltip:
 		Name: Enervator
 		GenericName: Aircraft
@@ -3573,7 +3573,7 @@ DEVA:
 	Voiced:
 		VoiceSet: DevastatorVoice
 	Valued:
-		Cost: 1800
+		Cost: 2200
 	Tooltip:
 		Name: Devastator Warship
 		GenericName: Aircraft
@@ -3720,14 +3720,14 @@ PAC:
 	Voiced:
 		VoiceSet: PlanetaryAssaultCarrierVoice
 	Valued:
-		Cost: 1700
+		Cost: 2400
 	Tooltip:
 		Name: Planetary Assault Carrier
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 56000
+		HP: 60000
 	Shielded:
 		MaxStrength: 20000
 	Armor:
@@ -3964,14 +3964,14 @@ MSHP:
 	Voiced:
 		VoiceSet: MothershipVoice
 	Valued:
-		Cost: 2800
+		Cost: 3000
 	Tooltip:
 		Name: Mothership
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 130000
+		HP: 140000
 	Shielded:
 		MaxStrength: 26000
 	Armor:

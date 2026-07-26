@@ -850,7 +850,7 @@ TOW:
 	Range: 9c0
 	ValidTargets: Vehicle, Ship, Structure
 	Report: tow1.aud, tow2.aud
-	ReloadDelay: 100
+	ReloadDelay: 75
 	Projectile: MissileCA
 		Speed: 180
 		Inaccuracy: 0

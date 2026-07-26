@@ -1999,9 +1999,9 @@ MobileGapBeam:
 		Inaccuracy: 1c0
 
 RadarJammer:
-	ReloadDelay: 125
+	ReloadDelay: 150
 	Report: jammed.aud
-	Range: 11c0
+	Range: 10c0
 	Projectile: InstantHit
 	Warhead@2Spawn: SpawnActor
 		Actors: jamming.field
@@ -2012,7 +2012,7 @@ RadarJammer:
 
 VeilSmall:
 	ReloadDelay: 10
-	Range: 2c0
+	Range: 1c0
 	Projectile: InstantHit
 	Warhead@Cloud: CreateEffect
 		Explosions: veilcloud, veilcloudf
@@ -2024,12 +2024,12 @@ VeilSmall:
 VeilMedium:
 	Inherits: VeilSmall
 	Warhead@Cloud: CreateEffect
-		Inaccuracy: 4c768
+		Inaccuracy: 3c768
 
 VeilLarge:
 	Inherits: VeilSmall
 	Warhead@Cloud: CreateEffect
-		Inaccuracy: 7c0
+		Inaccuracy: 6c0
 
 Railgun:
 	ReloadDelay: 70

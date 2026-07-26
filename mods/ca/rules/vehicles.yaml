@@ -205,7 +205,7 @@ NUKC:
 		Weaknesses: • Cannot attack Aircraft\n• Has difficulty hitting moving targets
 		Attributes: • Can crush concrete walls
 	Valued:
-		Cost: 2100
+		Cost: 2300
 	Tooltip:
 		Name: Nuke Cannon
 	UpdatesPlayerStatistics:
@@ -216,7 +216,7 @@ NUKC:
 		HP: 60000
 	Mobile:
 		TurnSpeed: 8
-		Speed: 54
+		Speed: 48
 		Locomotor: heavytracked
 		Voice: Move
 		ImmovableCondition: deployed
@@ -547,7 +547,7 @@ GTNK:
 	Passenger:
 		Voice: Move
 	Health:
-		HP: 41250
+		HP: 48250
 	Armament:
 		Weapon: 105mm
 		LocalOffset: 720,0,80
@@ -838,7 +838,7 @@ GTNK.squad:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 62000
+		HP: 65000
 	Mobile:
 		Speed: 60
 	RevealsShroud:
@@ -963,7 +963,7 @@ GTNK.squad:
 		Name: Lasher Tank
 		GenericName: Tank
 	Health:
-		HP: 57000
+		HP: 58000
 	Selectable:
 		Class: 3tnk
 	Armament:
@@ -1030,7 +1030,7 @@ GTNK.squad:
 		Name: Atomic Lasher Tank
 		GenericName: Tank
 	Health:
-		HP: 57000
+		HP: 58000
 	Selectable:
 		Class: 3tnk
 	Armament:
@@ -1275,7 +1275,7 @@ GTNK.squad:
 	TooltipExtras:
 		Attributes: • Can crush concrete walls
 	Health:
-		HP: 65000
+		HP: 66000
 	Mobile:
 		Locomotor: heavytracked
 	FirepowerMultiplier@Lasher:
@@ -1774,13 +1774,13 @@ ISU:
 		Weaknesses: • Cannot attack Aircraft\n• Has difficulty hitting moving targets
 		Attributes: • Concussion shells slow enemy movement and rate of fire\n• Can crush concrete walls
 	Valued:
-		Cost: 1600
+		Cost: 1500
 	Tooltip:
 		Name: Siege Tank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 60000
+		HP: 62000
 	Mobile:
 		TurnSpeed: 8
 		Speed: 46
@@ -1863,7 +1863,7 @@ SPEC:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 18000
+		HP: 15000
 	Armor:
 		Type: Light
 	Mobile:
@@ -2890,7 +2890,7 @@ TTNK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 38000
+		HP: 38500
 	Mobile:
 		Speed: 60
 		Voice: Move
@@ -3011,14 +3011,14 @@ CTNK:
 		Weaknesses: • Weak vs Infantry
 		Attributes: • Special Ability: Teleport\n• Teleporting longer distances requires charge up
 	Valued:
-		Cost: 1600
+		Cost: 1500
 	Tooltip:
 		Name: Chrono Tank
 		GenericName: Tank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 32000
+		HP: 40000
 	Armor:
 		Type: Light
 	Mobile:
@@ -3040,7 +3040,7 @@ CTNK:
 		FacingTolerance: 0
 	PortableChronoCA:
 		Charges: 1
-		ChargeDelay: 275
+		ChargeDelay: 200
 		Cooldown: 50
 		HasDistanceLimit: true
 		MaxDistance: 48
@@ -3105,7 +3105,7 @@ QTNK:
 		Weaknesses: • Weak vs Infantry\n• Cannot attack Aircraft
 		Attributes: • Special Ability: Seismic Shockwave
 	Valued:
-		Cost: 1700
+		Cost: 1900
 	Tooltip:
 		Name: MAD Tank
 		GenericName: Tank
@@ -3350,7 +3350,7 @@ GDRN:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 38000
+		HP: 32000
 	Armor:
 		Type: Light
 	Mobile:
@@ -3466,7 +3466,7 @@ BGGY:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 19000
+		HP: 18500
 	Armor:
 		Type: Light
 	Mobile:
@@ -3876,7 +3876,7 @@ VULC:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 35000
 	Mobile:
 		Speed: 100
 	RevealsShroud:
@@ -4216,7 +4216,7 @@ MTNK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 52000
+		HP: 58000
 	Mobile:
 		Speed: 72
 	RevealsShroud:
@@ -4344,7 +4344,7 @@ MTNK.Drone:
 	Valued:
 		Cost: 600
 	Health:
-		HP: 60000
+		HP: 50000
 	Tooltip:
 		Name: Battle Drone
 		-RequiresCondition:
@@ -4484,7 +4484,7 @@ MDRN:
 	Selectable:
 		DecorationBounds: 682, 682, 0, -341
 	Health:
-		HP: 19500
+		HP: 18000
 	Armor:
 		Type: Light
 	HitShape:
@@ -4671,7 +4671,7 @@ HTNK:
 		Strengths: • Strong vs Heavy Armor, Light Armor, Infantry
 		Attributes: • Can crush concrete walls\n• Self repairs to 50% out of combat
 	Valued:
-		Cost: 1600
+		Cost: 1700
 	Tooltip:
 		Name: Mammoth Tank
 		GenericName: Tank
@@ -4873,9 +4873,9 @@ HTNK.Drone:
 		Weaknesses: • Requires active radar communication
 		Attributes: • Can crush concrete walls\n• Self repairs out of combat\n• Immune to mind control\n• XP of losses reclaimed by replacements
 	Valued:
-		Cost: 1400
+		Cost: 1300
 	Health:
-		HP: 94000
+		HP: 90000
 	Tooltip:
 		Name: Mammoth Drone
 	Mobile:
@@ -4964,7 +4964,7 @@ MSAM:
 	Passenger:
 		Voice: Move
 	Health:
-		HP: 22000
+		HP: 24000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -5103,7 +5103,7 @@ MLRS:
 		PauseOnCondition: aiming || being-captured || empdisable || being-warped || driver-dead || notmobile
 		BlockedCursor: move
 	Health:
-		HP: 16500
+		HP: 17000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -5273,7 +5273,7 @@ STNK.Nod:
 		Speed: 126
 		Voice: Move
 	Health:
-		HP: 27500
+		HP: 27000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -5396,7 +5396,7 @@ HSTK:
 		Speed: 100
 		Voice: Move
 	Health:
-		HP: 60000
+		HP: 36000
 	RevealsShroud:
 		MinRange: 5c0
 		Range: 8c0
@@ -5506,7 +5506,7 @@ BIKE:
 		TurnSpeed: 40
 		Speed: 170
 	Health:
-		HP: 14000
+		HP: 13000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -5588,7 +5588,7 @@ FTNK:
 	Mobile:
 		Speed: 76
 	Health:
-		HP: 47000
+		HP: 43000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -5641,7 +5641,7 @@ HFTK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 62000
+		HP: 56000
 	Mobile:
 		Speed: 60
 		Voice: Move
@@ -5817,7 +5817,7 @@ BTR:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 28000
+		HP: 26000
 	Mobile:
 		Speed: 100
 		Voice: Move
@@ -6092,7 +6092,7 @@ TRPC:
 		Weaknesses: • Unarmed
 		Attributes: • Empowers nearby basic infantry\n• Heals all nearby infantry\n• Detects cloaked units and mines
 	Valued:
-		Cost: 1500
+		Cost: 1750
 	Tooltip:
 		Name: Troop Crawler
 	UpdatesPlayerStatistics:
@@ -6462,7 +6462,7 @@ IFV:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 32000
+		HP: 34000
 	Armor:
 		Type: Light
 	Mobile:
@@ -7245,7 +7245,7 @@ IFV.AI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 32000
+		HP: 33500
 	Armor:
 		Type: Light
 	Mobile:
@@ -7364,7 +7364,7 @@ RECK:
 	Valued:
 		Cost: 1000
 	Health:
-		HP: 52000
+		HP: 54000
 	Mobile:
 		Speed: 60
 		TurnSpeed: 24
@@ -7483,7 +7483,7 @@ TITN:
 		Strengths: • Strong vs Heavy Armor, Light Armor, Infantry
 		Attributes: • Can crush smaller vehicles and concrete walls\n• Self repairs to 50% out of combat
 	Valued:
-		Cost: 1700
+		Cost: 1900
 	Selectable:
 		Bounds: 1280, 1706
 		DecorationBounds: 1280, 1706, 0, -100
@@ -7639,7 +7639,7 @@ JUGG:
 		Bounds: 1280, 1706
 		DecorationBounds: 1280, 1706, 0, -100
 	Valued:
-		Cost: 1900
+		Cost: 2000
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithFacingSpriteBody:
@@ -8034,7 +8034,7 @@ RTNK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 48000
+		HP: 45000
 	Mobile:
 		Speed: 100
 		Voice: Move
@@ -8250,7 +8250,7 @@ TNKD:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 48000
+		HP: 50000
 	Mobile:
 		Speed: 60
 		TurnSpeed: 16
@@ -8335,7 +8335,7 @@ MSAR:
 		Weaknesses: • Unarmed
 		Attributes: • Detects cloaked units (when deployed)\n• Increases nearby ground unit vision range (when deployed)\n• Special Ability: Activate Sensor Array
 	Health:
-		HP: 24000
+		HP: 30000
 	Armor:
 		Type: Light
 	Mobile:
@@ -8433,7 +8433,7 @@ PTNK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 22000
+		HP: 23500
 	Armor:
 		Type: Light
 	Mobile:
@@ -8584,7 +8584,7 @@ WTNK:
 		Name: Microwave Tank
 		GenericName: Tank
 	Health:
-		HP: 34000
+		HP: 32000
 	Armor:
 		Type: Light
 	Mobile:
@@ -8663,14 +8663,14 @@ BATF:
 	TooltipExtras:
 		Attributes: • Can crush smaller vehicles and concrete walls
 	Valued:
-		Cost: 1850
+		Cost: 2000
 	Tooltip:
 		Name: Battle Fortress
 	Health:
 		HP: 140000
 	Mobile:
 		Locomotor: sheavytracked
-		Speed: 48
+		Speed: 46
 		Voice: Move
 		TurnSpeed: 8
 	Passenger:
@@ -8765,7 +8765,7 @@ BATF:
 			impl: loaded
 			stlk: loaded
 			mast: loaded-cmdo
-		InitialUnits: E1,E1,E1,E3,E3
+		InitialUnits: E1,E1,E3,E3,E3
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud
@@ -8902,7 +8902,7 @@ MEMP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 58000
+		HP: 55000
 	Selectable:
 		Voice: SelectEMP
 	Mobile:
@@ -9022,13 +9022,13 @@ CDRN:
 		Weaknesses: • Cannot attack Aircraft, Buildings, Defenses
 		Attributes: • Special Ability: Expel Chaos Gas
 	Valued:
-		Cost: 750
+		Cost: 850
 	Tooltip:
 		Name: Chaos Drone
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 20000
+		HP: 22000
 	Armor:
 		Type: Light
 	Mobile:
@@ -9120,9 +9120,9 @@ CHPR:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 75000
+		HP: 76000
 	Mobile:
-		Speed: 48
+		Speed: 46
 		Locomotor: heavytracked
 		Voice: Move
 	Passenger:
@@ -9243,7 +9243,7 @@ CRYO:
 	Passenger:
 		Voice: Move
 	Health:
-		HP: 26000
+		HP: 27000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -9301,7 +9301,7 @@ PBUL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 18000
+		HP: 18500
 	Armor:
 		Type: Light
 	Mobile:
@@ -9667,7 +9667,7 @@ WOLV:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 46000
 	Armor:
 		Type: Light
 	Mobile:
@@ -9745,7 +9745,7 @@ XO:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 50500
+		HP: 45500
 	Armor:
 		Type: Light
 	Mobile:
@@ -9864,7 +9864,7 @@ APOC:
 		Strengths: • Strong vs Heavy Armor, Light Armor
 		Attributes: • Can crush smaller vehicles and concrete walls\n• Self repairs to 50% out of combat
 	Valued:
-		Cost: 1800
+		Cost: 2500
 	Tooltip:
 		Name: Apocalypse Tank
 		GenericName: Tank
@@ -9873,7 +9873,7 @@ APOC:
 	Health:
 		HP: 130000
 	Mobile:
-		Speed: 47
+		Speed: 45
 		TurnSpeed: 8
 		Locomotor: sheavytracked
 		Voice: Move
@@ -10104,7 +10104,7 @@ OVLD:
 		Weaknesses: • Cannot attack Aircraft
 		Attributes: • Can crush smaller vehicles and concrete walls\n• Self repairs to 50% out of combat\n• Empowers nearby basic infantry
 	Valued:
-		Cost: 1800
+		Cost: 2200
 	Tooltip:
 		Name: Overlord Tank
 		GenericName: Tank
@@ -10328,7 +10328,7 @@ THWK:
 	Inherits@HeavyArmor: ^HeavyArmor
 	RenderSprites:
 	Valued:
-		Cost: 1950
+		Cost: 1850
 	Tooltip:
 		Name: Tomahawk Launcher
 	UpdatesPlayerStatistics:
@@ -10343,7 +10343,7 @@ THWK:
 		Strengths: • Strong vs Buildings, Defenses, Light Armor
 		Weaknesses: • Cannot attack Aircraft\n• Has difficulty hitting moving targets\n• Cannot fire while moving\n• Rockets can be shot down by static anti-air defenses
 	Mobile:
-		Speed: 45
+		Speed: 44
 		Voice: Move
 		PauseOnCondition: launching || aiming || being-captured || empdisable || being-warped || driver-dead || notmobile
 	Passenger:
@@ -10673,7 +10673,7 @@ AVTR:
 		Weaknesses: • Cannot attack Aircraft
 		Attributes: • Can crush smaller vehicles and concrete walls\n• Self repairs to 50% out of combat
 	Valued:
-		Cost: 1650
+		Cost: 1900
 	Tooltip:
 		Name: Avatar
 	Selectable:
@@ -10681,10 +10681,10 @@ AVTR:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 90000
+		HP: 84000
 	Mobile:
-		TurnSpeed: 20
-		Speed: 60
+		TurnSpeed: 18
+		Speed: 58
 		Locomotor: sheavytracked
 		Voice: Move
 	RevealsShroud:
@@ -10900,12 +10900,12 @@ CUST:
 		Sequence: spinner
 		Offset: -150,0,0
 	ProximityExternalCondition@MachineLearning:
-		Range: 5c0
+		Range: 6c0
 		Condition: machine-learning
 		ValidRelationships: Ally
 		RequiresCondition: !empdisable && !being-warped
 	WithRadiatingCircle@MachineLearning:
-		EndRadius: 5c0
+		EndRadius: 6c0
 		Interval: 75
 		Duration: 50
 		ValidRelationships: Ally
