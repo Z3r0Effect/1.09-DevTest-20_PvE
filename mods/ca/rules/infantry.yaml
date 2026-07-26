@@ -3987,7 +3987,7 @@ BH:
 	Health:
 		HP: 27500
 	Mobile:
-		Speed: 68
+		Speed: 60
 		Voice: Move
 	RevealsShroud:
 		Range: 5c0

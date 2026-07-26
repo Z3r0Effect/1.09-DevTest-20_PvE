@@ -439,7 +439,7 @@ DevourerLaser:
 	Inherits: ^ScrinPlasmaBeam
 	Report: devourer-fire1.aud, devourer-fire2.aud
 	Range: 8c0
-	ReloadDelay: 95
+	ReloadDelay: 85
 	Projectile: PlasmaBeam
 		StartOffset: 0,360,0
 		FollowingOffset: 0,-36,0
@@ -741,7 +741,7 @@ TripodLaser:
 	Inherits: ^ScrinPlasmaBeam
 	Range: 7c256
 	Report: tripod-fire1.aud, tripod-fire2.aud, tripod-fire3.aud
-	ReloadDelay: 60
+	ReloadDelay: 65
 	Projectile: PlasmaBeam
 		Duration: 7
 		Colors: 7d44ffE6, eb66ffE6, 5763ffE6

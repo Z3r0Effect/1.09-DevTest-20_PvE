@@ -357,7 +357,7 @@ AvatarFlamer.UPG:
 
 BlackHandFlamer:
 	Inherits: HeavyFlameTankFlamer
-	ReloadDelay: 65
+	ReloadDelay: 80
 	BurstDelays: 2
 	Burst: 28
 	Range: 5c512
@@ -381,7 +381,7 @@ BlackHandFlamer:
 			Falloff: 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 80, 25, 0
 			FalloffBasis: DistanceFromSource
 	Warhead@1Dam: SpreadDamage
-		Damage: 960
+		Damage: 900
 		Versus:
 			None: 65
 			Wood: 70
@@ -2066,7 +2066,7 @@ TitanRailgun:
 	Inherits: Railgun
 	Report: titanrailgun1.aud, titanrailgun2.aud
 	ReloadDelay: 80
-	Range: 6c768
+	Range: 7c768
 	Projectile: RailgunCA
 		DamageActorsInLine: true
 		BeamColor: EEFFFFBB
@@ -2082,7 +2082,7 @@ TitanRailgun:
 		PassthroughToMaxRange: true
 		PassthroughMinDistance: 2c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 5000
+		Damage: 7500
 		Versus:
 			None: 30
 			Wood: 70
@@ -2640,7 +2640,7 @@ ApocRadBeamWeapon:
 	Inherits: RadBeamWeaponHeavy
 	Burst: 2
 	BurstDelays: 10
-	ReloadDelay: 105
+	ReloadDelay: 110
 	Warhead@2Dam: SpreadDamage
 		Spread: 256
 		Damage: 23500

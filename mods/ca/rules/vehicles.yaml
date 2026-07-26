@@ -3239,7 +3239,7 @@ HMMV:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 16500
+		HP: 20500
 	Armor:
 		Type: Light
 	Mobile:
@@ -3318,7 +3318,7 @@ HMMV.TOW:
 		Ammo: 1
 		AmmoCondition: ammo
 	ReloadAmmoPoolCA:
-		Delay: 200 # matches reload time of weapon
+		Delay: 150 # matches reload time of weapon
 		Count: 1
 		ShowSelectionBar: true
 		SelectionBarColor: aaaaaa
@@ -4671,7 +4671,7 @@ HTNK:
 		Strengths: • Strong vs Heavy Armor, Light Armor, Infantry
 		Attributes: • Can crush concrete walls\n• Self repairs to 50% out of combat
 	Valued:
-		Cost: 1700
+		Cost: 1600
 	Tooltip:
 		Name: Mammoth Tank
 		GenericName: Tank
@@ -4799,7 +4799,7 @@ HTNK.Hover:
 		Speed: 62
 		Locomotor: hover
 	Turreted:
-		TurnSpeed: 20
+		TurnSpeed: 25
 	Hovers:
 		BobDistance: -35
 		RequiresCondition: !empdisable && !being-warped && !driver-dead
@@ -4829,7 +4829,7 @@ HTNK.Hover:
 		ShowSelectionBar: true
 		StartsFullyCharged: true
 		DeployedTicks: 200
-		CooldownTicks: 1500
+		CooldownTicks: 750
 		ShowSelectionBarWhenFull: false
 		ChargingColor: 808080
 		DischargingColor: ff6600
@@ -4875,7 +4875,7 @@ HTNK.Drone:
 	Valued:
 		Cost: 1400
 	Health:
-		HP: 97000
+		HP: 94000
 	Tooltip:
 		Name: Mammoth Drone
 	Mobile:
@@ -8250,7 +8250,7 @@ TNKD:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 50000
+		HP: 48000
 	Mobile:
 		Speed: 60
 		TurnSpeed: 16

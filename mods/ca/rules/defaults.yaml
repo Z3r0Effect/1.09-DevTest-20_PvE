@@ -1245,15 +1245,15 @@
 		Modifier: 133
 	ReloadDelayMultiplier@GYRO:
 		RequiresCondition: gyrostabilizers
-		Modifier: 133
+		Modifier: 115
 	TimedConditionBar@GYRO:
 		Condition: gyrostabilizers
 	ExternalCondition@GYRO:
 		Condition: gyrostabilizers
 	GrantTimedConditionOnDeploy@GYRO:
 		DeployedCondition: gyrostabilizers
-		CooldownTicks: 1250
-		DeployedTicks: 450
+		CooldownTicks: 950
+		DeployedTicks: 550
 		StartsFullyCharged: true
 		ChargingColor: 808000
 		DischargingColor: ffff00

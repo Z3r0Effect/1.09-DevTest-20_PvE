@@ -222,11 +222,11 @@
 
 130mm:
 	Inherits: ^Cannon
-	ReloadDelay: 75
+	ReloadDelay: 70
 	Burst: 2
 	InvalidTargets: Infantry
 	Warhead@1Dam: SpreadDamage
-		Damage: 6400
+		Damage: 6200
 		Versus:
 			Concrete: 60
 			Light: 85
@@ -259,7 +259,7 @@
 	Inherits: 130mmTD
 	ReloadDelay: 28
 	Warhead@1Dam: SpreadDamage
-		Damage: 3200
+		Damage: 2600
 
 135mm:
 	Inherits: 130mm
@@ -287,7 +287,7 @@
 
 152mm:
 	Inherits: ^Cannon
-	ReloadDelay: 85
+	ReloadDelay: 95
 	Report: vapoat1a.aud
 	Range: 6c768
 	Burst: 2
@@ -333,7 +333,7 @@
 
 183mm:
 	Inherits: ^Cannon
-	ReloadDelay: 72
+	ReloadDelay: 85
 	Report: tnkfire6.aud
 	Range: 8c0
 	Projectile: Bullet
@@ -372,7 +372,7 @@ TurretGunTD:
 
 TitanGun:
 	Inherits: TurretGunTD
-	ReloadDelay: 65
+	ReloadDelay: 75
 	Report: vtadatta.aud, vtadattb.aud, vtadattc.aud
 	Range: 6c0
 	Warhead@1Dam: SpreadDamage
