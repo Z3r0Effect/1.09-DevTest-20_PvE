@@ -3516,6 +3516,9 @@
 	-SpeedMultiplier@chilled10:
 	WithShadow:
 		RequiresCondition: !invisibility
+	WithShadow@CLOAKED:
+		ShadowColor: 00000033
+		RequiresCondition: invisibility
 	SoundOnDamageTransitionCA:
 		DestroyedSounds: vrapdiea.aud, vrapdieb.aud
 		RequiresCondition: airborne
@@ -4874,6 +4877,8 @@
 	HitShape:
 		Type: Circle
 			Radius: 427
+	GivesExperienceCA:
+		PlayerExperienceModifier: 0
 	MapEditorData:
 		Categories: Critter
 
