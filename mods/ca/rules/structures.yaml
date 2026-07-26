@@ -5836,10 +5836,10 @@ OREP:
 	Tooltip:
 		Name: Ore Purifier
 	ResourcePurifierCA@Normal:
-		Modifier: 12
+		Modifier: 20
 		RequiresCondition: !disabled && !being-warped && !tech-locked && !economy-policy3
 	ResourcePurifierCA@EconomyPolicy3:
-		Modifier: 25
+		Modifier: 35
 		RequiresCondition: !disabled && !being-warped && !tech-locked && economy-policy3
 	GrantConditionOnPrerequisite@EconomyPolicy3:
 		Condition: economy-policy3

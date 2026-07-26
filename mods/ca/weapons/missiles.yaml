@@ -847,10 +847,10 @@ APTusk:
 
 TOW:
 	Inherits: ^AntiGroundMissile
-	Range: 8c0
+	Range: 9c0
 	ValidTargets: Vehicle, Ship, Structure
 	Report: tow1.aud, tow2.aud
-	ReloadDelay: 150
+	ReloadDelay: 100
 	Projectile: MissileCA
 		Speed: 180
 		Inaccuracy: 0
@@ -2269,7 +2269,7 @@ Rocket.P51.L:
 
 Hydra.R:
 	ReloadDelay: 80
-	Range: 7c0
+	Range: 8c0
 	MinRange: 0c256
 	Report: iggiat2a.aud, iggiat2b.aud
 	Burst: 6
@@ -2291,8 +2291,8 @@ Hydra.R:
 		ContrailStartWidth: 0c42
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 315
-		Falloff: 1000, 448, 192, 50, 18, 7, 0
+		Damage: 480
+		Falloff: 1000, 648, 292, 150, 78, 25, 0
 		Versus:
 			None: 100
 			Wood: 8
@@ -2327,7 +2327,7 @@ BlackEagleMissiles:
 		Image: MISSILE
 	Warhead@1Dam: SpreadDamage
 		Damage: 24000
-		Spread: 256
+		Spread: 556
 		Versus:
 			Concrete: 75
 	Warhead@VeiledCondition: GrantExternalConditionCA

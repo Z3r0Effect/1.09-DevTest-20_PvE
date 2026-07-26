@@ -112,6 +112,7 @@
 
 120mm:
 	Inherits: 90mm
+	Range: 6c768
 	ReloadDelay: 55
 	Report: tnkfire4.aud
 	Warhead@1Dam: SpreadDamage
@@ -121,18 +122,20 @@
 
 120mm.Drone:
 	Inherits: 120mm
+	Range: 6c768
 	ReloadDelay: 30
 	Warhead@1Dam: SpreadDamage
-		Damage: 1900
+		Damage: 2200
 
 120mmHEAT:
 	Inherits: 25mm
+	Range: 6c768
 	ReloadDelay: 50
 	Report: vmiratta.aud
 	Projectile: Bullet
 		Image: 120MMHEATN
 	Warhead@1Dam: SpreadDamage
-		Damage: 6400
+		Damage: 6600
 		Versus:
 			None: 30
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
@@ -1103,14 +1106,14 @@ DoubleDepthCharge:
 
 GuardianDroneGun:
 	Inherits: 25mm
-	ReloadDelay: 60
+	ReloadDelay: 45
 	Burst: 3
 	BurstDelays: 2
 	Report: gdrn-fire1.aud, gdrn-fire2.aud
 	Projectile: Bullet
 		Speed: 1c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 2700
+		Damage: 3000
 		Versus:
 			Wood: 65
 			Concrete: 35

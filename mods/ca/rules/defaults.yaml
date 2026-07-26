@@ -820,49 +820,49 @@
 		Prerequisites: seek3.strat
 	DamageMultiplier@HOLD:
 		RequiresCondition: hold
-		Modifier: 95
+		Modifier: 90
 	DamageMultiplier@HOLD2:
 		RequiresCondition: hold2
-		Modifier: 92
+		Modifier: 80
 	DamageMultiplier@HOLD3:
 		RequiresCondition: hold3
-		Modifier: 90
+		Modifier: 70
 	FirepowerMultiplier@BOMBARD:
 		RequiresCondition: bombard
-		Modifier: 103
+		Modifier: 110
 	FirepowerMultiplier@BOMBARD2:
 		RequiresCondition: bombard2
-		Modifier: 106
+		Modifier: 115
 	FirepowerMultiplier@BOMBARD3:
 		RequiresCondition: bombard3
-		Modifier: 109
+		Modifier: 120
 	ReloadDelayMultiplier@BOMBARD:
 		RequiresCondition: bombard
-		Modifier: 97
+		Modifier: 95
 	ReloadDelayMultiplier@BOMBARD2:
 		RequiresCondition: bombard2
-		Modifier: 95
+		Modifier: 90
 	ReloadDelayMultiplier@BOMBARD3:
 		RequiresCondition: bombard3
-		Modifier: 93
+		Modifier: 85
 	RangeMultiplier@SEEK:
 		RequiresCondition: seek
-		Modifier: 105
+		Modifier: 110
 	SpeedMultiplier@SEEK:
 		RequiresCondition: seek
-		Modifier: 105
+		Modifier: 110
 	RangeMultiplier@SEEK2:
 		RequiresCondition: seek2
-		Modifier: 108
+		Modifier: 120
 	SpeedMultiplier@SEEK2:
 		RequiresCondition: seek2
-		Modifier: 108
+		Modifier: 120
 	RangeMultiplier@SEEK3:
 		RequiresCondition: seek3
-		Modifier: 110
+		Modifier: 130
 	SpeedMultiplier@SEEK3:
 		RequiresCondition: seek3
-		Modifier: 110
+		Modifier: 130
 	WithDecoration@HOLD:
 		Image: pips
 		Sequence: pip-armor

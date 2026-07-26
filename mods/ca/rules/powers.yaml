@@ -1201,7 +1201,7 @@
 		Cursor: ability
 		Icon: fstorm
 		IconPalette: chrometd
-		ChargeInterval: 4500
+		ChargeInterval: 3500
 		Name: Firestorm
 		Description: Fires a barrage of rockets at the target area.
 		BeginChargeSpeechNotification: FireStormOffline
@@ -1213,13 +1213,13 @@
 		RequiresCondition: tower-rocket
 		Prerequisites: ~techlevel.high
 		SupportPowerPaletteOrder: 30
-		TargetCircleRadius: 6c512
+		TargetCircleRadius: 7c512
 		TargetCircleColor: ff660088
 		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayBeacon: True
-		BeaconAssumedLaunchDelay: 35
+		BeaconAssumedLaunchDelay: 25
 		BeaconRemoveAdvance: 25
-		BeaconAssumedProjectileSpeed: 220
+		BeaconAssumedProjectileSpeed: 280
 		BeaconPoster: firestorm
 		BeaconPosterPalette: temptd
 		ArrowSequence: arrow
@@ -1232,9 +1232,9 @@
 ^AdvancedRadarPower:
 	GrantPrerequisiteChargeDrainPowerCA@RADAR:
 		OrderName: advradarorder
-		DischargeModifier: 600
+		DischargeModifier: 700
 		Prerequisite: scan-active
-		ChargeInterval: 3500
+		ChargeInterval: 2500
 		Icon: arscan
 		IconPalette: chrometd
 		Name: Advanced Radar Scan
@@ -1248,7 +1248,7 @@
 		InsufficientPowerSpeechNotification: InsufficientPower
 		EndChargeTextNotification: Advanced Radar Scan ready.
 		Prerequisites: ~techlevel.high
-		EarlyDeactivationPenalty: 1000
+		EarlyDeactivationPenalty: 500
 		SupportPowerPaletteOrder: 30
 
 ^NaniteShieldPower:
@@ -1257,8 +1257,8 @@
 		OrderName: nshieldorder
 		Icon: nshield
 		Prerequisites: ~techlevel.high
-		ChargeInterval: 4500
-		LifeTime: 375
+		ChargeInterval: 3500
+		LifeTime: 575
 		Name: Nanite Shield
 		Description: Reduces the damage taken by all vehicles in the target area.
 		LaunchSound: srepaira.aud
@@ -1624,7 +1624,7 @@
 		IconPalette: chrometd
 		Prerequisites: ~techlevel.high
 		Cursor: ability
-		ChargeInterval: 7500
+		ChargeInterval: 10500
 		Name: Cluster Missile
 		Description: Launches a Cluster Missile which deals heavy damage at the target location.
 		EndChargeSpeechNotification: ClusMissileReady
@@ -1658,7 +1658,7 @@
 		BeaconPoster: clustermissile
 		BeaconPosterPalette: temptd
 		DisplayTimerRelationships: Ally
-		CircleRanges: 5c0
+		CircleRanges: 3c0
 		CircleColor: BB0000AA
 		CircleBorderColor: 770000AA
 		SupportPowerPaletteOrder: 40
@@ -1952,7 +1952,7 @@
 	RevealActorsPower@RESOURCESCAN:
 		CameraActor: camera.resourcescan
 		TargetActors: mine, gmine, split2, split3, splitblue, proc, proc.td, proc.scrin
-		LifeTime: 250
+		LifeTime: 350
 		OrderName: resourcescan
 		Icon: rescanpower
 		ChargeInterval: 3500

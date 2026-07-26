@@ -3318,7 +3318,7 @@ HMMV.TOW:
 		Ammo: 1
 		AmmoCondition: ammo
 	ReloadAmmoPoolCA:
-		Delay: 150 # matches reload time of weapon
+		Delay: 100 # matches reload time of weapon
 		Count: 1
 		ShowSelectionBar: true
 		SelectionBarColor: aaaaaa
@@ -3350,7 +3350,7 @@ GDRN:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 34000
+		HP: 38000
 	Armor:
 		Type: Light
 	Mobile:
@@ -3433,7 +3433,7 @@ GDRN.TOW:
 		Ammo: 1
 		AmmoCondition: ammo
 	ReloadAmmoPoolCA:
-		Delay: 200 # matches reload time of weapon
+		Delay: 100 # matches reload time of weapon
 		Count: 1
 		ShowSelectionBar: true
 		SelectionBarColor: aaaaaa
@@ -4344,7 +4344,7 @@ MTNK.Drone:
 	Valued:
 		Cost: 600
 	Health:
-		HP: 52000
+		HP: 60000
 	Tooltip:
 		Name: Battle Drone
 		-RequiresCondition:
@@ -8034,7 +8034,7 @@ RTNK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 44000
+		HP: 48000
 	Mobile:
 		Speed: 100
 		Voice: Move
@@ -8068,7 +8068,7 @@ RTNK:
 		Actor: RTNK.Husk
 		RequiresCondition: !being-warped
 	Cloak@NORMAL:
-		InitialDelay: 60
+		InitialDelay: 50
 		CloakDelay: 30
 		CloakSound: vmirat2a.aud
 		CloakedCondition: hidden

@@ -83,7 +83,7 @@ bombard.strat:
 		IconPalette: chrometd
 		Description: Firepower focused strategy, required for:\n• Zone Trooper\n• Tomahawk Launcher Research\n• Hailstorm Missiles Upgrade\n• Avenger Upgrade\n• Firestorm Missiles Power\n\n
 	TooltipExtras:
-		Strengths: + Increases firepower and rate of fire of vehicles and aircraft by 3%
+		Strengths: + Increases firepower and rate of fire by vehicles and aircraft by 10% and 5%, respectively.
 		Attributes: \n(!) Only ONE Strategy may be chosen.
 	Valued:
 		Cost: 750
@@ -107,7 +107,7 @@ bombard2.strat:
 		Prerequisites: ~player.gdi, gtek, ~bombard.strat, ~techlevel.high
 		Description: Increase Bombardment strategy bonuses.
 	TooltipExtras:
-		Strengths: + Increases firepower and rate of fire of vehicles and aircraft by a further 3%
+		Strengths: + Increases firepower and rate of fire of vehicles and aircraft by a further 5% and 5%, respectively.
 		-Attributes:
 	RenderSprites:
 		Image: bombard2.strat
@@ -128,7 +128,7 @@ bombard3.strat:
 		Description: Provides an napalm rocket barrage.
 		IconPalette: chrometd
 	TooltipExtras:
-		Strengths: + Increases firepower and rate of fire of vehicles and aircraft by a further 3%\n+ Unlocks Firestorm Missile Barrage power
+		Strengths: + Increases firepower and rate of fire of vehicles and aircraft by a further 5% and 5%, respectively.\n+ Unlocks Firestorm Missile Barrage power
 		Attributes: (!) Mutually exclusive with Supply Drop Zone
 	RenderSprites:
 		PlayerPalette: playertd
@@ -147,7 +147,7 @@ seek.strat:
 		IconPalette: chrometd
 		Description: Speed and weapon range focused strategy, required for:\n• Zone Raider\n• Enhanced Jumpjets Upgrade\n• Hypersonic Missiles Upgrade\n• Sidewinders Upgrade\n• Advanced Radar Power\n\n
 	TooltipExtras:
-		Strengths: + Increases speed and weapon range of vehicles and aircraft by 5%
+		Strengths: + Increases speed and weapon range of vehicles and aircraft by 10%
 		Attributes: \n(!) Only ONE Strategy may be chosen.
 	Valued:
 		Cost: 750
@@ -171,7 +171,7 @@ seek2.strat:
 		Prerequisites: ~player.gdi, gtek, ~seek.strat, ~techlevel.high
 		Description: Increase Seek & Destroy strategy bonuses.
 	TooltipExtras:
-		Strengths: + Increases speed and weapon range of vehicles and aircraft by a further 5%
+		Strengths: + Increases speed and weapon range of vehicles and aircraft by a further 10%
 		-Attributes:
 	RenderSprites:
 		Image: seek2.strat
@@ -192,7 +192,7 @@ seek3.strat:
 		Description: Provides detailed information on enemy locations.
 		IconPalette: chrometd
 	TooltipExtras:
-		Strengths: + Increases speed and weapon range of vehicles and aircraft by a further 5%\n+ Unlocks Advanced Radar Scan power
+		Strengths: + Increases speed and weapon range of vehicles and aircraft by a further 10%\n+ Unlocks Advanced Radar Scan power
 		Attributes: (!) Mutually exclusive with Supply Drop Zone
 	RenderSprites:
 		PlayerPalette: playertd
@@ -211,7 +211,7 @@ hold.strat:
 		IconPalette: chrometd
 		Description: Defensive strategy, required for:\n• Zone Defender\n• Point Defense Systems Upgrade\n• Hammerhead Missiles Upgrade\n• Ceramic Armor Upgrade\n• Nanite Shield Power\n\n
 	TooltipExtras:
-		Strengths: + Increases armor of vehicles and aircraft by 5%
+		Strengths: + Increases armor of vehicles and aircraft by 10%
 		Attributes: \n(!) Only ONE Strategy may be chosen.
 	Valued:
 		Cost: 750
@@ -235,7 +235,7 @@ hold2.strat:
 		Prerequisites: ~player.gdi, gtek, ~hold.strat,  ~techlevel.high
 		Description: Increase Hold the Line strategy bonuses.
 	TooltipExtras:
-		Strengths: + Increases armor of vehicles and aircraft by a further 5%
+		Strengths: + Increases armor of vehicles and aircraft by a further 10%
 		-Attributes:
 	RenderSprites:
 		Image: hold2.strat
@@ -256,7 +256,7 @@ hold3.strat:
 		Description: Provides the ability to shield units in an area
 		IconPalette: chrometd
 	TooltipExtras:
-		Strengths: + Increases armor of vehicles and aircraft by a further 5%\n+ Unlocks Nanite Shield power
+		Strengths: + Increases armor of vehicles and aircraft by a further 10%\n+ Unlocks Nanite Shield power
 		Attributes: (!) Mutually exclusive with Supply Drop Zone
 	RenderSprites:
 		PlayerPalette: playertd

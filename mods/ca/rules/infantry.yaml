@@ -2177,7 +2177,7 @@ SNIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 6500
 	RevealsShroud:
 		Range: 13c0
 		MinRange: 6c0
@@ -2216,7 +2216,7 @@ SNIP:
 		MuzzleSequence: garrison-muzzle
 		RequiresCondition: apb-upgrade
 	Mobile:
-		Speed: 43
+		Speed: 46
 		Voice: Move
 	Cloak@NORMAL:
 		InitialDelay: 150

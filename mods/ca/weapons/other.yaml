@@ -187,7 +187,7 @@ Chemspray:
 	Warhead@1Dam: SpreadDamage
 		Spread: 288
 		Falloff: 100, 50, 25, 12, 6, 3, 0
-		Damage: 1450
+		Damage: 1350
 		Versus:
 			None: 300
 			Wood: 135
@@ -381,7 +381,7 @@ BlackHandFlamer:
 			Falloff: 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 80, 25, 0
 			FalloffBasis: DistanceFromSource
 	Warhead@1Dam: SpreadDamage
-		Damage: 900
+		Damage: 800
 		Versus:
 			None: 65
 			Wood: 70

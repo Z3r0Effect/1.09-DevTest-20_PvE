@@ -243,7 +243,7 @@ ChainGun:
 
 GAU8:
 	Inherits: ^HeavyMG
-	Range: 7c0
+	Range: 8c0
 	ReloadDelay: 80
 	BurstDelays: 1
 	Burst: 15
@@ -256,7 +256,7 @@ GAU8:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 1900
+		Damage: 2600
 		Versus:
 			None: 200
 			Wood: 0
@@ -282,7 +282,7 @@ GAU8.Building:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 1280
+		Damage: 2080
 		Versus:
 			Wood: 100
 		ValidTargets: Building
@@ -578,7 +578,7 @@ M60mgMD:
 	ReloadDelay: 40
 
 M60mgMD.Attached:
-	Range: 6c256
+	Range: 7c256
 	Inherits: M60mgMD
 
 MGattG:
@@ -766,7 +766,7 @@ AKMBATF:
 
 SNIPER:
 	ReloadDelay: 110
-	Range: 10c0
+	Range: 9c0
 	Report: snipe.aud
 	Projectile: InstantHit
 		Blockable: true
