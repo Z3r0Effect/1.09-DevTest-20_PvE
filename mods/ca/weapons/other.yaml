@@ -650,7 +650,7 @@ Commandeer:
 		ValidTargets: NoCrew
 
 Heal:
-	ReloadDelay: 40
+	ReloadDelay: 70
 	Range: 6c0
 	ValidTargets: Healable
 	Projectile: InstantHit
@@ -658,34 +658,34 @@ Heal:
 	TargetActorCenter: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
-		Damage: -4500
+		Damage: -3500
 		Falloff: 100, 52, 20, 7, 0
 		ValidRelationships: Ally
 		ValidTargets: Healable
 		DebugOverlayColor: 00FF00
 		DamageTypes: DirectHeal
 	Warhead@2Dam: TargetDamage
-		Damage: -700
+		Damage: -600
 		ValidRelationships: Ally
 		ValidTargets: Healable
 		DamageTypes: DirectHeal
 		Delay: 20
 	Warhead@3Dam: TargetDamage
-		Damage: -700
+		Damage: -600
 		ValidRelationships: Ally
 		ValidTargets: Healable
 		DamageTypes: DirectHeal
 		Delay: 30
 	Warhead@4Dam: TargetDamage
-		Damage: -700
+		Damage: -600
 		ValidRelationships: Ally
 		ValidTargets: Healable
 		DamageTypes: DirectHeal
 		Delay: 50
 
 CustodianHeal:
-	ReloadDelay: 50
-	Range: 6c512
+	ReloadDelay: 70
+	Range: 4c512
 	Report: custheal.aud
 	ValidTargets: HealableCyborg, Repairable
 	TargetActorCenter: true
@@ -700,7 +700,7 @@ CustodianHeal:
 		SecondaryBeamColor: 4000FF40
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: -8000
+		Damage: -6000
 		Falloff: 100, 52, 20, 7, 0
 		DebugOverlayColor: 00FF00
 		ValidTargets: HealableCyborg, Repairable
@@ -720,7 +720,7 @@ Repair:
 	Range: 5c512
 	ValidTargets: Repairable
 	Warhead@1Dam: SpreadDamage
-		Damage: -6500
+		Damage: -4200
 		ValidTargets: Repairable
 		DamageTypes: DirectRepair
 	-Warhead@2Dam:
@@ -733,11 +733,11 @@ Repair:
 
 CyborgRepair:
 	Inherits: Repair
-	ReloadDelay: 50
+	ReloadDelay: 65
 
 RepairIFV:
 	Inherits: Repair
-	ReloadDelay: 20
+	ReloadDelay: 30
 	Warhead@3Eff: CreateEffect
 		Image: sparks_overlay
 		Explosions: idle
@@ -1006,7 +1006,7 @@ MADTankDetonate:
 	InvalidTargets: Infantry
 	Warhead@1Dam: HealthPercentageDamage
 		Spread: 14c0
-		Damage: 15
+		Damage: 8
 		Versus:
 			Heavy: 85
 			Light: 75
@@ -1014,19 +1014,19 @@ MADTankDetonate:
 	Warhead@2Dam: HealthPercentageDamage
 		Spread: 5c0
 		AffectsParent: true
-		Damage: 10
+		Damage: 5
 		ValidTargets: MADTank
 		Delay: 5
 	Warhead@3Dam: HealthPercentageDamage
 		Spread: 8c0
-		Damage: 19
+		Damage: 12
 		Versus:
 			Heavy: 85
 			Light: 75
 		InvalidTargets: MADTank, Infantry
 	Warhead@4Dam: HealthPercentageDamage
 		Spread: 4c0
-		Damage: 25
+		Damage: 19
 		Versus:
 			Heavy: 85
 			Light: 75
@@ -1047,7 +1047,7 @@ MADTankDetonate:
 		ImpactSounds: madexplo.aud
 		ImpactActors: false
 	Warhead@5Dam: SpreadDamage
-		Damage: 100000
+		Damage: 105000
 		Range: 0c0, 5c0, 6c0, 7c0, 10c0, 12c0, 14c0
 		Falloff: 100, 100, 85, 55, 30, 15, 0
 		DamageCalculationType: CenterPosition

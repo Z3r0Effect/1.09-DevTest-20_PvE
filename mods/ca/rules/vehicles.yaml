@@ -8663,7 +8663,7 @@ BATF:
 	TooltipExtras:
 		Attributes: • Can crush smaller vehicles and concrete walls
 	Valued:
-		Cost: 1700
+		Cost: 1850
 	Tooltip:
 		Name: Battle Fortress
 	Health:
@@ -8765,6 +8765,7 @@ BATF:
 			impl: loaded
 			stlk: loaded
 			mast: loaded-cmdo
+		InitialUnits: E1,E1,E1,E3,E3
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud
@@ -10672,7 +10673,7 @@ AVTR:
 		Weaknesses: • Cannot attack Aircraft
 		Attributes: • Can crush smaller vehicles and concrete walls\n• Self repairs to 50% out of combat
 	Valued:
-		Cost: 1750
+		Cost: 1650
 	Tooltip:
 		Name: Avatar
 	Selectable:
@@ -10680,7 +10681,7 @@ AVTR:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 105000
+		HP: 90000
 	Mobile:
 		TurnSpeed: 20
 		Speed: 60
@@ -10899,12 +10900,12 @@ CUST:
 		Sequence: spinner
 		Offset: -150,0,0
 	ProximityExternalCondition@MachineLearning:
-		Range: 6c0
+		Range: 5c0
 		Condition: machine-learning
 		ValidRelationships: Ally
 		RequiresCondition: !empdisable && !being-warped
 	WithRadiatingCircle@MachineLearning:
-		EndRadius: 8c0
+		EndRadius: 5c0
 		Interval: 75
 		Duration: 50
 		ValidRelationships: Ally

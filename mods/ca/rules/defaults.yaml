@@ -201,12 +201,12 @@
 		RequiresCondition: owned-by-brutal-ai && !noinsurance
 	CashTrickler@vhardinsurance:
 		Interval: 375
-		Amount: 1300
+		Amount: 1400
 		ShowTicks: False
 		RequiresCondition: owned-by-vhard-ai && !noinsurance
 	CashTrickler@hardinsurance:
 		Interval: 375
-		Amount: 900
+		Amount: 1100
 		ShowTicks: False
 		RequiresCondition: owned-by-hard-ai && !noinsurance
 	CashTrickler@normalinsurance:
@@ -1198,7 +1198,7 @@
 		Condition: heal-cooldown
 		RequiredHealing: 50000
 		StackDuration: 1125
-		MinimumHealing: 3500
+		MinimumHealing: 2500
 		DamageTypes: DirectHeal
 		ShowSelectionBar: true
 	Targetable@HEAL:
@@ -1229,7 +1229,7 @@
 ^TankBusterVulnerability:
 	DamageTypeDamageMultiplier@TANKBUSTERVULN:
 		DamageTypes: TankBuster
-		Modifier: 133
+		Modifier: 140
 
 ^AirToGroundProtection:
 	DamageTypeDamageMultiplier@A2GPROTECTION:
@@ -3651,6 +3651,7 @@
 		RepairingNotification: Repairing
 		RequiresCondition: !being-warped
 		RepairCondition: being-repaired
+	BuildingRepairBotModuleCA:
 	InstantlyRepairable:
 		RequiresCondition: !tnt && !c4 && !c4seal
 	AcceptsDeliveredCash:

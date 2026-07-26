@@ -795,7 +795,7 @@ Player:
 		RepairActorTypes: e6, n6, s6
 		EnemyAvoidanceRadius: 2c0
 	BuildingRepairBotModuleCA:
-		RequiresCondition: enable-brutal-ai || enable-vhard-ai || enable-hard-ai || enable-normal-ai || enable-easy-ai || enable-naval-ai
+	    RequiresCondition: enable-brutal-ai || enable-vhard-ai || enable-hard-ai || enable-normal-ai || enable-easy-ai || enable-naval-ai
 	PowerDownBotModuleCA:
 		RequiresCondition: enable-brutal-ai || enable-vhard-ai || enable-hard-ai || enable-normal-ai || enable-easy-ai || enable-naval-ai
 	McvManagerBotModuleCA@brutal:
@@ -2256,7 +2256,7 @@ Player:
 			harv.chrono: 8
 	SquadManagerBotModuleCA@hard:
 		RequiresCondition: enable-hard-ai
-		MinimumAttackForceDelay: 100
+		MinimumAttackForceDelay: 250
 		SquadValue: 12000
 		SquadValueMaxEarlyBonus: 5000
 		SquadValueMinLateBonus: 8000
@@ -2268,11 +2268,11 @@ Player:
 		HarasserTypes: 1tnk, rtnk, bike, gdrn, gdrn.tow, hmmv.tow, stnk.nod, hstk, spec, lace, seek, pbul, n2, e2, ivan, n4, n5, e4
 		ConstructionYardTypes: fact,afac,sfac
 		StaticAntiAirTypes: agun, sam, nsam, cram, shar
-		ProtectionScanRadius: 12
+		ProtectionScanRadius: 16
 		HighValueTargetTypes: fact, afac, sfac, proc, proc.td, proc.scrin, atek, stek, gtek, tmpl, scrt, harv, harv.td, harv.td.upg, harv.scrin, harv.chrono
-		HighValueTargetPriority: 10
+		HighValueTargetPriority: 15
 		IgnoredEnemyTargetTypes: Wall
-		IndirectRouteChance: 30
+		IndirectRouteChance: 40
 		AirToAirPriority: 20
 		BigAirThreats: pac, deva, kiro, mshp
 		AirSquadTargetArmorTypes:
@@ -2305,7 +2305,7 @@ Player:
 	UnitBuilderBotModuleCA@hard:
 		RequiresCondition: enable-hard-ai
 		IdleBaseUnitsMaximum: 150
-		MaxAircraft: 2
+		MaxAircraft: 3
 		MaintainAirSuperiority: false
 		MaxAirSuperiority: 2
 		AirToAirUnits: heli, yak, mig, orca, apch, scrn, venm, stmr, torm, enrv, a10.sw, a10.gau, harr, beag
@@ -2326,11 +2326,11 @@ Player:
 			harv.chrono: 2250
 			rmbo: 5000
 			e7: 5000
-			mast: 7500
-			yuri: 7500
-			bori: 7500
-			u3.squad: 7500
-			gtnk.squad: 7500
+			mast: 5500
+			yuri: 5500
+			bori: 5500
+			u3.squad: 5500
+			gtnk.squad: 5500
 		UnitLimits:
 			e2: 5
 			n2: 8

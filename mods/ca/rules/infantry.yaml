@@ -3454,7 +3454,7 @@ RMBC:
 		Prerequisites: player.marked
 	GrantConditionOnHealingReceived@REPAIRCOOLDOWN:
 		Condition: repair-cooldown
-		RequiredHealing: 100000
+		RequiredHealing: 85000
 		StackDuration: 2000
 		MinimumHealing: 3000
 		DamageTypes: DirectRepair
@@ -4456,7 +4456,7 @@ ENLI:
 		RequiresCondition: being-warped || empdisable
 	GrantConditionOnHealingReceived@REPAIRCOOLDOWN:
 		Condition: repair-cooldown
-		RequiredHealing: 100000
+		RequiredHealing: 85000
 		StackDuration: 3000
 		MinimumHealing: 4000
 		DamageTypes: DirectRepair
@@ -5355,7 +5355,7 @@ REAP:
 		-CrushedSequence:
 	GrantConditionOnHealingReceived@REPAIRCOOLDOWN:
 		Condition: repair-cooldown
-		RequiredHealing: 95000
+		RequiredHealing: 85000
 		StackDuration: 1000
 		MinimumHealing: 4000
 		DamageTypes: DirectRepair
