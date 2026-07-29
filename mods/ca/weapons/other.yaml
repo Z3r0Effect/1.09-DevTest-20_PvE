@@ -31,7 +31,7 @@
 FireballLauncher:
 	Inherits: ^FireWeapon
 	Report: firebl3.aud
-	Range: 9c0
+	Range: 9c256
 	ReloadDelay: 62
 	Projectile: BulletCA
 		Speed: 250
@@ -651,14 +651,14 @@ Commandeer:
 
 Heal:
 	ReloadDelay: 70
-	Range: 6c0
+	Range: 4c768
 	ValidTargets: Healable
 	Projectile: InstantHit
 		Blockable: true
 	TargetActorCenter: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
-		Damage: -3500
+		Damage: -3000
 		Falloff: 100, 52, 20, 7, 0
 		ValidRelationships: Ally
 		ValidTargets: Healable
@@ -684,8 +684,8 @@ Heal:
 		Delay: 50
 
 CustodianHeal:
-	ReloadDelay: 70
-	Range: 4c512
+	ReloadDelay: 75
+	Range: 3c512
 	Report: custheal.aud
 	ValidTargets: HealableCyborg, Repairable
 	TargetActorCenter: true
@@ -700,7 +700,7 @@ CustodianHeal:
 		SecondaryBeamColor: 4000FF40
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: -6000
+		Damage: -4500
 		Falloff: 100, 52, 20, 7, 0
 		DebugOverlayColor: 00FF00
 		ValidTargets: HealableCyborg, Repairable
@@ -717,10 +717,10 @@ CustodianHeal:
 
 Repair:
 	Inherits: Heal
-	Range: 5c512
+	Range: 4c512
 	ValidTargets: Repairable
 	Warhead@1Dam: SpreadDamage
-		Damage: -4200
+		Damage: -3800
 		ValidTargets: Repairable
 		DamageTypes: DirectRepair
 	-Warhead@2Dam:
@@ -1066,9 +1066,9 @@ MADTankDetonate:
 		ValidTargets: Ground, Infantry, Vehicle, Ship
 
 Laser:
-	ReloadDelay: 60
+	ReloadDelay: 50
 	ValidTargets: Ground, Water
-	Range: 11c512
+	Range: 12c0
 	Report: oblfire.aud
 	Projectile: LaserZapCA
 		Width: 56
@@ -1097,7 +1097,7 @@ Laser:
 Laser.Adv:
 	Inherits: Laser
 	Report: obelmod2.aud
-	Range: 12c0
+	Range: 13c0
 	-Projectile:
 	Projectile: PlasmaBeam
 		Duration: 21
@@ -1121,7 +1121,7 @@ Laser.Adv:
 LaserTur:
 	Inherits: Laser
 	ReloadDelay: 34
-	Range: 8c0
+	Range: 9c512
 	Report: lastur1.aud
 	Projectile: LaserZapCA
 		Width: 45
@@ -1140,7 +1140,7 @@ LaserTur:
 
 LaserTur.Adv:
 	Inherits: LaserTur
-	Range: 9c0
+	Range: 10c0
 	ReloadDelay: 30
 	Projectile: LaserZapCA
 		Duration: 10
@@ -1151,7 +1151,7 @@ LaserTur.Adv:
 
 LightTankLaser:
 	Inherits: LaserTur
-	Range: 6c768
+	Range: 7c256
 	ReloadDelay: 50
 	Report: tnklaser.aud
 	Warhead@1Dam: SpreadDamage
@@ -1178,7 +1178,7 @@ BattleTankLaser:
 
 RaiderBuggyLaser:
 	Inherits: M60mgTD
-	Range: 6c0
+	Range: 6c768
 	ReloadDelay: 25
 	-Burst:
 	-StartBurstReport:
@@ -1241,7 +1241,7 @@ XOLaser:
 			Heavy: 100
 
 XOCoilGun:
-	Range: 8c0
+	Range: 8c256
 	ReloadDelay: 40
 	Report: xo-coil1.aud
 	Burst: 2
@@ -1279,7 +1279,7 @@ PortaLaser:
 	ReloadDelay: 40
 	Burst: 2
 	BurstDelays: 3
-	Range: 7c0
+	Range: 7c512
 	-Report:
 	StartBurstReport: lasgun.aud, lasgun2.aud
 	Projectile: LaserZapCA
@@ -1305,7 +1305,7 @@ PortaLaser.Templar:
 
 PortaLaser.Templar.UPG:
 	Inherits: PortaLaser.Templar
-	Range: 7c512
+	Range: 8c0
 	StartBurstReport: lasgunupg.aud, lasgunupg2.aud
 	Projectile: LaserZapCA
 		Duration: 6
@@ -1316,7 +1316,7 @@ PortaLaser.Templar.UPG:
 
 IFVLaser:
 	Inherits: PortaLaser
-	Range: 8c0
+	Range: 8c512
 	-Burst:
 	-StartBurstReport:
 	Report: venmfireupg1.aud, venmfireupg1.aud
@@ -1400,13 +1400,13 @@ EnlightenedEmp:
 		TrailImage: smokey
 		TrailPalette: scrinplasma
 	Warhead@1Emp: GrantExternalConditionCA
-		Range: 1c896
+		Range: 0c896
 		Duration: 150
 		Condition: empdisable
 		ValidTargets: Vehicle, Ship, Building
 		InvalidTargets: Cyborg, EmpImmune
 	Warhead@2Emp: GrantExternalConditionCA
-		Range: 1c896
+		Range: 0c896
 		Duration: 100
 		Condition: empdisable
 		ValidTargets: Cyborg, Defense
@@ -1515,7 +1515,7 @@ PointLaser:
 PrisLaser:
 	ValidTargets: Ground, Water
 	ReloadDelay: 3
-	Range: 11c512
+	Range: 12c768
 	Report: prisfire.aud
 	Projectile: LaserZapCA
 		Width: 35
@@ -1567,7 +1567,7 @@ PrisLaserSupport:
 PrisBurst:
 	Inherits: PrisLaser
 	-Report:
-	Range: 5c0
+	Range: 4c512
 	Projectile: LaserZapCA
 		-HitAnim:
 	Warhead@1Dam: SpreadDamage
@@ -1589,7 +1589,7 @@ PrisTLaser:
 	Inherits: PrisLaser
 	Report: ptnkfire.aud
 	ReloadDelay: 50
-	Range: 9c0
+	Range: 9c512
 	Projectile: LaserZapCA
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
@@ -1608,7 +1608,7 @@ PrisTLaser:
 PrisTBurst:
 	Inherits: PrisTLaser
 	-Report:
-	Range: 4c0
+	Range: 3c512
 	Projectile: LaserZapCA
 		-HitAnim:
 	Warhead@1Dam: SpreadDamage
@@ -1628,7 +1628,7 @@ PrisCLaser:
 	Inherits: PrisTLaser
 	Report: pcanfire.aud
 	ReloadDelay: 110
-	Range: 11c0
+	Range: 11c256
 	Projectile: LaserZapCA
 		Width: 70
 		Duration: 15
@@ -1648,7 +1648,7 @@ PrisCLaser:
 
 HopliteGun:
 	ReloadDelay: 70
-	Range: 8c0
+	Range: 8c256
 	Report: hopl-fire1.aud
 	Projectile: LaserZapCA
 		Width: 40
@@ -2824,7 +2824,7 @@ NeutronCannonSound:
 
 SonicPulse:
 	ReloadDelay: 55
-	Range: 11c512
+	Range: 6c256
 	Report: sonicpulse1.aud, sonicpulse2.aud
 	TargetActorCenter: true
 	Projectile: LinearPulse
@@ -2859,7 +2859,7 @@ SonicPulse:
 
 SonicPulse.UPG:
 	Inherits: SonicPulse
-	Range: 10c256
+	Range: 7c0
 	Projectile: LinearPulse
 		ImpactAnimation@1:
 			Sequences: sonicblastupg1, sonicblastupg2
@@ -2950,7 +2950,7 @@ DisruptorPulse.Amp.Seek3:
 
 SonicPulseDelphis:
 	ReloadDelay: 80
-	Range: 6c256
+	Range: 7c0
 	StartBurstReport: delpatk1.aud, delpatk2.aud
 	Burst: 3
 	BurstDelays: 2

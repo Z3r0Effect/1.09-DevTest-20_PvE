@@ -1,6 +1,6 @@
 ^AntiGroundMissile:
 	ReloadDelay: 50
-	Range: 6c0
+	Range: 6c768
 	MinRange: 0c512
 	Report: missile6.aud
 	Projectile: MissileCA
@@ -175,7 +175,7 @@ MaverickSU:
 
 SeismicMissile:
 	ReloadDelay: 70
-	Range: 8c0
+	Range: 8c512
 	MinRange: 0c768
 	Report: rocket1.aud
 	Burst: 2
@@ -547,7 +547,7 @@ WidowAA:
 MammothTusk:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 70
-	Range: 7c512
+	Range: 7c768
 	Burst: 2
 	ValidTargets: Air, AirSmall, Infantry
 	Projectile: MissileCA
@@ -589,7 +589,7 @@ ApocalypseTusk:
 	ValidTargets: Air, AirSmall
 	ReloadDelay: 60
 	Burst: 4
-	Range: 9c0
+	Range: 8c512
 	Projectile: MissileCA
 		RangeLimit: 10c614
 		Speed: 401
@@ -622,7 +622,7 @@ APCTusk:
 Nike:
 	Inherits: ^AntiAirMissile
 	ReloadDelay: 20
-	Range: 9c512
+	Range: 8c768
 	-MinRange:
 	Report: samshot1.aud
 	ValidTargets: Air, AirSmall, ICBM
@@ -647,7 +647,7 @@ Nike:
 
 RedEye:
 	Inherits: ^AntiAirMissile
-	Range: 7c512
+	Range: 7c256
 	ReloadDelay: 50
 	Report: missile1.aud
 	ValidTargets: Air, AirSmall
@@ -682,7 +682,7 @@ RedEye.TibCore:
 
 RedEye.CYB:
 	Inherits: RedEye
-	Range: 7c0
+	Range: 7c512
 	Report: itanweaa.aud, itanweab.aud, itanweac.aud
 	Warhead@1Dam: SpreadDamage
 		Damage: 4600
@@ -691,7 +691,7 @@ RedEye.CYB:
 
 RedEye.CYB.TibCore:
 	Inherits: RedEye.TibCore
-	Range: 7c0
+	Range: 7c768
 	Report: itanweaa.aud, itanweab.aud, itanweac.aud
 	Warhead@1Dam: SpreadDamage
 		Damage: 4600
@@ -728,7 +728,7 @@ RedEyeGI.CRYO:
 Stinger:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 60
-	Range: 10c0
+	Range: 9c768
 	Burst: 2
 	BurstDelays: 6
 	InvalidTargets: Submarine
@@ -786,8 +786,8 @@ StingerAA:
 
 StingerGTWR:
 	Inherits: Stinger
-	ReloadDelay: 50
-	Range: 11c0
+	ReloadDelay: 40
+	Range: 12c0
 	Report: rocket2.aud
 	BurstDelays: 10
 	Projectile: MissileCA
@@ -815,7 +815,7 @@ APTusk:
 	Inherits: ^AntiGroundMissile
 	ValidTargets: Ground, Water, Air, AirSmall
 	ReloadDelay: 75
-	Range: 7c0
+	Range: 7c512
 	Burst: 2
 	BurstDelays: 0
 	-Report:
@@ -850,7 +850,7 @@ TOW:
 	Range: 9c0
 	ValidTargets: Vehicle, Ship, Structure
 	Report: tow1.aud, tow2.aud
-	ReloadDelay: 75
+	ReloadDelay: 50
 	Projectile: MissileCA
 		Speed: 180
 		Inaccuracy: 0
@@ -875,7 +875,7 @@ TOW:
 
 PitbullRockets:
 	Inherits: ^AntiGroundMissile
-	Range: 7c0
+	Range: 7c768
 	Report: pitbull-fire1.aud, pitbull-fire2.aud
 	ReloadDelay: 80
 	Burst: 2
@@ -908,7 +908,7 @@ PitbullRockets:
 
 PitbullRocketsAA:
 	Inherits: RedEye
-	Range: 8c512
+	Range: 8c0
 	Report: pitbull-fire1.aud, pitbull-fire2.aud
 	ReloadDelay: 80
 	Burst: 2
@@ -1166,7 +1166,7 @@ THWeapon:
 KatyushaRockets:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 180
-	Range: 8c768
+	Range: 9c0
 	MinRange: 3c0
 	Report: katyrocket1.aud, katyrocket2.aud, katyrocket3.aud
 	Burst: 3
@@ -1460,7 +1460,7 @@ IFVRockets:
 
 IFVRocketsAA:
 	Inherits: RedEye
-	Range: 8c512
+	Range: 8c0
 	Burst: 2
 	BurstDelays: 5
 	Warhead@1Dam: SpreadDamage
@@ -2269,7 +2269,7 @@ Rocket.P51.L:
 
 Hydra.R:
 	ReloadDelay: 80
-	Range: 8c0
+	Range: 7c256
 	MinRange: 0c256
 	Report: iggiat2a.aud, iggiat2b.aud
 	Burst: 6
@@ -2291,7 +2291,7 @@ Hydra.R:
 		ContrailStartWidth: 0c42
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 480
+		Damage: 550
 		Falloff: 1000, 648, 292, 150, 78, 25, 0
 		Versus:
 			None: 100

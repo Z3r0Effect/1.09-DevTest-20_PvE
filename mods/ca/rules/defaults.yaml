@@ -2409,13 +2409,13 @@
 		Condition: development-policy3
 		Prerequisites: development.policy, influence.level3
 	GainsExperienceMultiplier@DevelopmentPolicy1:
-		Modifier: 140
+		Modifier: 150
 		RequiresCondition: development-policy1
 	GainsExperienceMultiplier@DevelopmentPolicy2:
-		Modifier: 160
+		Modifier: 170
 		RequiresCondition: development-policy2
 	GainsExperienceMultiplier@DevelopmentPolicy3:
-		Modifier: 180
+		Modifier: 185
 		RequiresCondition: development-policy3
 
 ^DevelopmentPolicyDiscount:
@@ -2425,10 +2425,10 @@
 
 ^SovietT4Boost:
 	ProductionTimeMultiplier@IndustrialPlantBoost:
-		Multiplier: 90
+		Multiplier: 94
 		Prerequisites: indp, !indplowpower
 	ProductionCostMultiplier@IndustrialPlantBoost:
-		Multiplier: 90
+		Multiplier: 88
 		Prerequisites: indp, !indplowpower
 	ProductionTimeMultiplier@MunitionsPlantBoost:
 		Multiplier: 85
@@ -3651,7 +3651,6 @@
 		RepairingNotification: Repairing
 		RequiresCondition: !being-warped
 		RepairCondition: being-repaired
-	BuildingRepairBotModuleCA:
 	InstantlyRepairable:
 		RequiresCondition: !tnt && !c4 && !c4seal
 	AcceptsDeliveredCash:

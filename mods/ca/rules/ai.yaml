@@ -2326,11 +2326,11 @@ Player:
 			harv.chrono: 2250
 			rmbo: 5000
 			e7: 5000
-			mast: 5500
-			yuri: 5500
-			bori: 5500
-			u3.squad: 5500
-			gtnk.squad: 5500
+			mast: 4500
+			yuri: 4500
+			bori: 4500
+			u3.squad: 4500
+			gtnk.squad: 4500
 		UnitLimits:
 			e2: 5
 			n2: 8
