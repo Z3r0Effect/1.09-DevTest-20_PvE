@@ -3988,7 +3988,7 @@ BH:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 27500
+		HP: 25500
 	Mobile:
 		Speed: 60
 		Voice: Move

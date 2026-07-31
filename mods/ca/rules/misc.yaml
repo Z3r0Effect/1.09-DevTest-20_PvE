@@ -812,7 +812,7 @@ powerproxy.airborne:
 		Description: A Heavy Transport Plane drops a squad of Guardian GIs\nanywhere on the map.
 		OneShot: true
 		Stacks: 1
-		StackActivationInterval: 250
+		StackActivationInterval: 25
 		DropItems: U3,U3,U3,U3,U3
 		SelectTargetSpeechNotification: SelectTarget
 		EndChargeSpeechNotification: Reinforce
@@ -847,7 +847,7 @@ powerproxy.airborne.tank:
 		Description: A Heavy Transport Plane drops a pair of Grizzly Tanks\nanywhere on the map.
 		OneShot: true
 		Stacks: 1
-		StackActivationInterval: 250
+		StackActivationInterval: 25
 		DropItems: GTNK,GTNK
 		SelectTargetSpeechNotification: SelectTarget
 		EndChargeSpeechNotification: Reinforce

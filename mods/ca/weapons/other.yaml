@@ -381,11 +381,11 @@ BlackHandFlamer:
 			Falloff: 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 80, 25, 0
 			FalloffBasis: DistanceFromSource
 	Warhead@1Dam: SpreadDamage
-		Damage: 800
+		Damage: 700
 		Versus:
-			None: 65
+			None: 45
 			Wood: 70
-			Light: 75
+			Light: 55
 			Heavy: 100
 			Concrete: 45
 			Brick: 25

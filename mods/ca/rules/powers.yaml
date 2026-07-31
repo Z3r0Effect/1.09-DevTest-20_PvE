@@ -99,7 +99,7 @@
 		CameraActor: camera.paradrop
 		CameraRemoveDelay: 150
 		QuantizedFacings: 8
-		SquadSize: 2
+		SquadSize: 3
 		DisplayBeacon: true
 		BeaconPoster: cmineicon
 		Icon: cmines
@@ -432,7 +432,7 @@
 		Prerequisites: botplayer
 		Icon: chrono
 		Cursor: ability
-		ChargeInterval: 5000
+		ChargeInterval: 9000
 		Name: Chronoshift
 		ActivationDelay: 25
 		Description: Teleports up to 9 selected vehicles to a targeted location, returning them to their original location after a short time.\n\n• If killed, units are returned with 20% health\n• Units with larger health pools take additional damage\n• Passengers cannot be unloaded\n• Enemy units are teleported for reduced duration
@@ -1111,7 +1111,7 @@
 		OrderName: dropzoneeagle
 		Icon: orcaca
 		IconPalette: chrometd
-		ChargeInterval: 5500
+		ChargeInterval: 4000
 		Name: Reinforcements
 		Description: An Orca Carryall drops an APC containing an infantry squad at the target location.
 		EndChargeSpeechNotification: Reinforce
