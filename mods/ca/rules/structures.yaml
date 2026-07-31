@@ -81,7 +81,7 @@ GAP:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 6c0
-		Range: 8c0
+		Range: 12c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 6c0
@@ -97,12 +97,12 @@ GAP:
 	WithBuildingBib:
 		HasMinibib: true
 	CreatesShroud:
-		Range: 8c0
+		Range: 10c0
 		RequiresCondition: !disabled && !empdisable && !being-warped
 	RenderShroudCircle:
 	-RenderRangeCircle:
 	Power:
-		Amount: -60
+		Amount: -30
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	FireWarheadsOnDeath:
@@ -479,10 +479,10 @@ TSLA:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 6c0
-		Range: 8c0
+		Range: 12c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
-		Range: 6c0
+		Range: 8c0
 	Targetable@TeslaBoost:
 		TargetTypes: TeslaBoost
 		RequiresCondition: !powerdown
@@ -513,7 +513,7 @@ TSLA:
 		MaxCharges: 3
 		ReloadDelay: 120
 	Power:
-		Amount: -75
+		Amount: -55
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@TeslaCoilOrSovietTechCenter:
 		Prerequisite: tslaorstek
@@ -562,7 +562,7 @@ AGUN:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 6c0
-		Range: 8c0
+		Range: 12c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 6c0
@@ -589,7 +589,7 @@ AGUN:
 	RenderRangeCircle:
 		RangeCircleType: DefenseRangeAA
 	Power:
-		Amount: -40
+		Amount: -30
 	ClassicFacingBodyOrientation:
 	DetectCloaked:
 		Range: 7c0
@@ -721,7 +721,7 @@ DOME:
 
 PBOX:
 	Inherits: ^Defense
-	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGET: ^AutoTargetTroop
 	Tooltip:
 		Name: Pillbox
 	Building:
@@ -744,7 +744,7 @@ PBOX:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 5c0
-		Range: 6c0
+		Range: 9c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 5c0
@@ -773,7 +773,7 @@ PBOX:
 
 HBOX:
 	Inherits: ^Defense
-	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGET: ^AutoTargetTroop
 	Tooltip:
 		Name: Camo Pillbox
 	Building:
@@ -796,7 +796,7 @@ HBOX:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 5c0
-		Range: 6c0
+		Range: 9c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 5c0
@@ -849,12 +849,12 @@ GUN:
 		Name: Turret
 	Building:
 	Health:
-		HP: 46500
+		HP: 55000
 	Armor:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 5c0
-		Range: 7c0
+		Range: 11c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 5c0
@@ -888,7 +888,7 @@ GUN:
 
 FTUR:
 	Inherits: ^Defense
-	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGET: ^AutoTargetTroop
 	Buildable:
 		Queue: DefenseSQ, DefenseMQ
 		BuildPaletteOrder: 60
@@ -911,7 +911,7 @@ FTUR:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 5c0
-		Range: 6c0
+		Range: 10c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 5c0
@@ -976,10 +976,10 @@ SAM:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 5c0
-		Range: 7c0
+		Range: 12c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
-		Range: 5c0
+		Range: 7c0
 	WithBuildingBib:
 		HasMinibib: true
 	Turreted:
@@ -1000,7 +1000,7 @@ SAM:
 	RenderRangeCircle:
 		RangeCircleType: DefenseRangeAA
 	Power:
-		Amount: -40
+		Amount: -30
 	ClassicFacingBodyOrientation:
 	DetectCloaked:
 		Range: 7c0
@@ -1589,7 +1589,7 @@ SILO:
 	WithResourceLevelSpriteBody:
 		Sequence: stages
 	StoresPlayerResourcesCA:
-		Capacity: 3000
+		Capacity: 6000
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -1999,11 +1999,11 @@ TPWR:
 	-ScalePowerWithHealth:
 	ProximityExternalCondition@TeslaBoost:
 		Condition: charged
-		Range: 6c0
+		Range: 8c0
 	WithRangeCircleCA@TeslaBoost:
 		Type: TeslaBoost
 		Color: FFFF00AA
-		Range: 6c0
+		Range: 8c0
 	UpdatesBuildOrder:
 		Limit: 1
 	Encyclopedia:
@@ -2359,7 +2359,7 @@ FIX:
 	RallyPoint:
 	RepairsUnits:
 		ValuePercentage: 0
-		HpPerStep: 1000
+		HpPerStep: 2000
 		Interval: 7
 		StartRepairingNotification: Repairing
 		StartRepairingTextNotification: Repairing.
@@ -2416,7 +2416,7 @@ SBAG:
 	Tooltip:
 		Name: Sandbag Wall
 	Health:
-		HP: 15000
+		HP: 25000
 	Armor:
 		Type: Brick
 	LineBuild:
@@ -2444,7 +2444,7 @@ FENC:
 	Tooltip:
 		Name: Wire Fence
 	Health:
-		HP: 15000
+		HP: 20000
 	Armor:
 		Type: Brick
 	LineBuild:
@@ -2470,7 +2470,7 @@ CHAIN:
 	Tooltip:
 		Name: Chain-link Fence
 	Health:
-		HP: 15000
+		HP: 18000
 	Armor:
 		Type: Brick
 	LineBuild:
@@ -2499,7 +2499,7 @@ BRIK:
 		DamagedSounds: crmble2.aud
 		DestroyedSounds: kaboom30.aud
 	Health:
-		HP: 40000
+		HP: 60000
 	Armor:
 		Type: Brick
 	Crushable:
@@ -3475,7 +3475,7 @@ NSAM:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 5c0
-		Range: 7c0
+		Range: 12c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 5c0
@@ -3496,7 +3496,7 @@ NSAM:
 		MuzzleSequence: muzzle
 	WithMuzzleOverlay:
 	Power:
-		Amount: -40
+		Amount: -30
 	ClassicFacingBodyOrientation:
 	-ActorPreviewPlaceBuildingPreview:
 	SequencePlaceBuildingPreview:
@@ -3512,7 +3512,7 @@ NSAM:
 
 GTWR:
 	Inherits: ^DefenseTD
-	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGET: ^AutoTargetTroop
 	Buildable:
 		Queue: DefenseSQ, DefenseMQ
 		BuildPaletteOrder: 50
@@ -3536,7 +3536,7 @@ GTWR:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 5c0
-		Range: 6c0
+		Range: 10c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 5c0
@@ -3587,7 +3587,7 @@ ATWR:
 		DecorationBounds: 938, 2048, 0, -512
 	RevealsShroud:
 		MinRange: 6c0
-		Range: 8c0
+		Range: 12c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 6c0
@@ -3606,7 +3606,7 @@ ATWR:
 	ClassicFacingBodyOrientation:
 		QuantizedFacings: 8
 	Power:
-		Amount: -75
+		Amount: -45
 	DetectCloaked:
 		RequiresCondition: !(disabled || empdisable || being-warped)
 	Encyclopedia:
@@ -3636,7 +3636,7 @@ STWR:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 6c0
-		Range: 8c0
+		Range: 12c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 6c0
@@ -3660,7 +3660,7 @@ STWR:
 		PauseOnCondition: build-incomplete || disabled || empdisable || being-warped
 	WithMuzzleOverlay:
 	Power:
-		Amount: -85
+		Amount: -45
 	ClassicFacingBodyOrientation:
 	DetectCloaked:
 		RequiresCondition: !(disabled || empdisable || being-warped)
@@ -3695,12 +3695,12 @@ OBLI:
 	Selectable:
 		DecorationBounds: 938, 1792, 0, -341
 	Health:
-		HP: 64000
+		HP: 68000
 	Armor:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 6c0
-		Range: 8c0
+		Range: 12c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 6c0
@@ -3727,7 +3727,7 @@ OBLI:
 	WithMuzzleOverlay:
 	AttackCharges:
 		PauseOnCondition: build-incomplete || disabled || empdisable || being-warped
-		ChargeLevel: 50
+		ChargeLevel: 40
 		ChargingCondition: charging
 	AmbientSound@1:
 		RequiresCondition: charging && !quantum-upgrade
@@ -3738,7 +3738,7 @@ OBLI:
 		SoundFiles: obelpowr2.aud
 		Interval: 20
 	Power:
-		Amount: -90
+		Amount: -40
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@ObeliskOrTemple:
 		Prerequisite: obliortmpl
@@ -4170,7 +4170,7 @@ REP:
 	RallyPoint:
 	RepairsUnits:
 		ValuePercentage: 0
-		HpPerStep: 1000
+		HpPerStep: 2000
 		Interval: 7
 		StartRepairingNotification: Repairing
 		StartRepairingTextNotification: Repairing.
@@ -4743,12 +4743,12 @@ PRIS:
 	Selectable:
 		DecorationBounds: 1024, 1962, 0, -560
 	Health:
-		HP: 44000
+		HP: 45000
 	Armor:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 6c0
-		Range: 8c0
+		Range: 12c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 6c0
@@ -4785,7 +4785,7 @@ PRIS:
 		Weapon: PrisLaserSupport
 		LocalOffset: 0,0,1024
 	Power:
-		Amount: -80
+		Amount: -45
 	ProvidesPrerequisite@buildingname:
 	WithPrismLinkVisualization:
 		Range: 7c512
@@ -4998,19 +4998,19 @@ HTUR:
 		Weaknesses: • Cannot attack Aircraft\n• Cannot hit targets at point-blank range
 		Attributes: • Requires power to operate\n• Detects cloaked units
 	Valued:
-		Cost: 1750
+		Cost: 1500
 	Tooltip:
 		Name: Grand Cannon
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 90000
+		HP: 120000
 	Armor:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 6c0
-		Range: 8c0
+		Range: 15c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 6c0
@@ -5040,7 +5040,7 @@ HTUR:
 		FireDelay: 20
 	WithMuzzleOverlay:
 	Power:
-		Amount: -100
+		Amount: -60
 	ClassicFacingBodyOrientation:
 	FireWarheadsOnDeath:
 		Weapon: BuildingExplode
@@ -5109,13 +5109,13 @@ LTUR:
 	Power:
 		Amount: -15
 	DetectCloaked:
-		Range: 5c0
+		Range: 6c0
 	Encyclopedia:
 		Category: Nod/Defenses
 
 TTUR:
 	Inherits: ^DefenseTD
-	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGET: ^AutoTargetTroop
 	Buildable:
 		Queue: DefenseSQ, DefenseMQ
 		BuildPaletteOrder: 60
@@ -5139,7 +5139,7 @@ TTUR:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 5c0
-		Range: 6c0
+		Range: 11c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 5c0
@@ -5609,7 +5609,7 @@ CVAT:
 	CargoCloner@SQ:
 		Types: Clone
 		OverrideUnitBuildDurationModifier: true
-		BuildDurationModifier: 120
+		BuildDurationModifier: 100
 		ReadyAudio: UnitReady
 		BlockedAudio: NoBuild
 		BlockedTextNotification: Unable to build more.
@@ -5620,7 +5620,7 @@ CVAT:
 	CargoCloner@MQ:
 		Types: Clone
 		OverrideUnitBuildDurationModifier: true
-		BuildDurationModifier: 80
+		BuildDurationModifier: 60
 		ReadyAudio: UnitReady
 		BlockedAudio: NoBuild
 		BlockedTextNotification: Unable to build more.
@@ -5667,7 +5667,7 @@ INDP:
 		Queue: BuildingSQ, BuildingMQ
 		BuildPaletteOrder: 200
 		Prerequisites: ~structures.soviet, stek, playerxp.level3, ~armor.doctrine, ~techlevel.high
-		Description: Vehicles & aircraft are produced 15% faster and cost 10% less.
+		Description: Vehicles & aircraft are produced 18% faster and cost 12% less.
 		BuildLimit: 1
 	TooltipExtras:
 		Attributes: • Maximum 1 can be built\n• Cannot be captured or hacked
@@ -5827,7 +5827,7 @@ OREP:
 		Queue: BuildingSQ, BuildingMQ
 		BuildPaletteOrder: 200
 		Prerequisites: ~structures.allies, alhq, ~techlevel.high
-		Description: Refines ore, gems & Tiberium, increasing income by 10%.
+		Description: Refines ore, gems & Tiberium, increasing income by 12%.
 		BuildLimit: 1
 	TooltipExtras:
 		Attributes: • Maximum 1 can be built\n• Cannot be captured or hacked
@@ -5841,10 +5841,10 @@ OREP:
 	Tooltip:
 		Name: Ore Purifier
 	ResourcePurifierCA@Normal:
-		Modifier: 10
+		Modifier: 20
 		RequiresCondition: !disabled && !being-warped && !tech-locked && !economy-policy3
 	ResourcePurifierCA@EconomyPolicy3:
-		Modifier: 15
+		Modifier: 35
 		RequiresCondition: !disabled && !being-warped && !tech-locked && economy-policy3
 	GrantConditionOnPrerequisite@EconomyPolicy3:
 		Condition: economy-policy3
@@ -5975,7 +5975,7 @@ UPGC:
 		Offset: -1024,768,0
 	PeriodicProducerCA@DROP:
 		Type: Money
-		ChargeDuration: 1500
+		ChargeDuration: 750
 		Actors: truk.drop
 		ShowSelectionBar: true
 		RequiresCondition: tower-drop
@@ -6102,7 +6102,7 @@ UPGC:
 		OrderName: advradarorder
 		InitialOnly: true
 		RequiresCondition: tower-radar
-		Ticks: 75
+		Ticks: 175
 	UpdatesSupportPowerTimer@NaniteShield:
 		OrderName: nshieldorder
 		InitialOnly: true
@@ -6391,21 +6391,21 @@ IOK:
 		DestroyedSounds: kaboom15.aud
 	ProximityExternalCondition@IdolOfKaneBuff:
 		Condition: iokbuff
-		Range: 5c0
+		Range: 12c0
 		ValidRelationships: Ally
 		RequiresCondition: initialized
 	ProximityExternalCondition@IdolOfKaneDebuff:
 		Condition: iokdebuff
-		Range: 5c0
+		Range: 12c0
 		ValidRelationships: Neutral, Enemy
 		RequiresCondition: !rage-active && initialized
 	ProximityExternalCondition@Rage:
 		Condition: berserk
-		Range: 5c0
+		Range: 8c0
 		ValidRelationships: Neutral, Enemy
 		RequiresCondition: rage-active
 	WithRadiatingCircle:
-		EndRadius: 5c0
+		EndRadius: 12c0
 		Interval: 40
 		Duration: 30
 		ValidRelationships: Ally, Enemy, Neutral
@@ -6417,7 +6417,7 @@ IOK:
 		Width: 2
 		RequiresCondition: !rage-active && initialized
 	WithRadiatingCircle@Rage:
-		EndRadius: 5c0
+		EndRadius: 8c0
 		Interval: 5
 		Duration: 50
 		ValidRelationships: Ally, Enemy, Neutral
@@ -6431,8 +6431,8 @@ IOK:
 	GrantTimedConditionOnDeploy@Rage:
 		DeployedCondition: rage-active
 		ShowSelectionBar: true
-		DeployedTicks: 125
-		CooldownTicks: 375
+		DeployedTicks: 110
+		CooldownTicks: 355
 		ShowSelectionBarWhenFull: false
 		ChargingColor: 770000
 		DischargingColor: ff0000

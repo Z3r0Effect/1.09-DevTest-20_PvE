@@ -1,6 +1,6 @@
 ^Cannon:
 	ReloadDelay: 50
-	Range: 4c768
+	Range: 5c768
 	Report: cannon1.aud
 	Projectile: Bullet
 		Speed: 750
@@ -69,13 +69,13 @@
 	Warhead@1Dam: SpreadDamage
 		Damage: 3500
 		Versus:
-			Wood: 52
+			Wood: 58
 			Heavy: 70
-			Concrete: 35
+			Concrete: 40
 
 76mm:
 	Inherits: ^Cannon
-	Range: 5c0
+	Range: 6c0
 	Report: smallcan3.aud
 	Projectile: Bullet
 		LaunchAngle: 62
@@ -112,6 +112,7 @@
 
 120mm:
 	Inherits: 90mm
+	Range: 6c768
 	ReloadDelay: 55
 	Report: tnkfire4.aud
 	Warhead@1Dam: SpreadDamage
@@ -121,18 +122,20 @@
 
 120mm.Drone:
 	Inherits: 120mm
+	Range: 6c768
 	ReloadDelay: 30
 	Warhead@1Dam: SpreadDamage
-		Damage: 1900
+		Damage: 2200
 
 120mmHEAT:
 	Inherits: 25mm
+	Range: 6c768
 	ReloadDelay: 50
 	Report: vmiratta.aud
 	Projectile: Bullet
 		Image: 120MMHEATN
 	Warhead@1Dam: SpreadDamage
-		Damage: 6000
+		Damage: 6600
 		Versus:
 			None: 30
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
@@ -222,11 +225,11 @@
 
 130mm:
 	Inherits: ^Cannon
-	ReloadDelay: 80
+	ReloadDelay: 70
 	Burst: 2
 	InvalidTargets: Infantry
 	Warhead@1Dam: SpreadDamage
-		Damage: 6000
+		Damage: 6200
 		Versus:
 			Concrete: 60
 			Light: 85
@@ -259,11 +262,11 @@
 	Inherits: 130mmTD
 	ReloadDelay: 28
 	Warhead@1Dam: SpreadDamage
-		Damage: 2000
+		Damage: 2600
 
 135mm:
 	Inherits: 130mm
-	Range: 5c768
+	Range: 6c768
 	Report: voveweaa.aud, voveweab.aud, voveweac.aud
 	-InvalidTargets:
 	Warhead@1Dam: SpreadDamage
@@ -277,7 +280,7 @@
 
 135mmAtomic:
 	Inherits: 130mmAtomic
-	Range: 5c768
+	Range: 6c768
 	Report: voveweaa.aud, voveweab.aud, voveweac.aud
 	-InvalidTargets:
 	Warhead@1Dam: SpreadDamage
@@ -287,9 +290,9 @@
 
 152mm:
 	Inherits: ^Cannon
-	ReloadDelay: 135
+	ReloadDelay: 95
 	Report: vapoat1a.aud
-	Range: 5c768
+	Range: 6c768
 	Burst: 2
 	BurstDelays: 8
 	Warhead@1Dam: SpreadDamage
@@ -333,9 +336,9 @@
 
 183mm:
 	Inherits: ^Cannon
-	ReloadDelay: 100
+	ReloadDelay: 85
 	Report: tnkfire6.aud
-	Range: 7c0
+	Range: 8c0
 	Projectile: Bullet
 		Speed: 768
 		Image: 183MM
@@ -352,7 +355,7 @@
 TurretGun:
 	Inherits: ^Cannon
 	ReloadDelay: 30
-	Range: 7c0
+	Range: 11c0
 	Report: turret1.aud
 	Warhead@1Dam: SpreadDamage
 		Damage: 6000
@@ -372,9 +375,9 @@ TurretGunTD:
 
 TitanGun:
 	Inherits: TurretGunTD
-	ReloadDelay: 80
+	ReloadDelay: 75
 	Report: vtadatta.aud, vtadattb.aud, vtadattc.aud
-	Range: 5c0
+	Range: 6c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 14500
 		Versus:
@@ -387,7 +390,7 @@ TitanGun:
 ^Artillery:
 	Inherits: ^Cannon
 	ReloadDelay: 60
-	Range: 8c0
+	Range: 9c0
 	Projectile: Bullet
 		Speed: 224
 		Blockable: false
@@ -416,10 +419,10 @@ TitanGun:
 	ReloadDelay: 85
 	MinRange: 2c0
 	Report: tank5.aud
-	Range: 8c768
+	Range: 9c768
 	TargetActorCenter: true
 	Projectile: Bullet
-		Speed: 195
+		Speed: 205
 		Inaccuracy: 1c138
 	Warhead@1Dam: SpreadDamage
 		Damage: 9750
@@ -439,15 +442,15 @@ TitanGun:
 
 155mmTDM:
 	Inherits: 155mmTD
-	Range: 7c768
+	Range: 8c768
 	Report: howi-fire1.aud, howi-fire2.aud
-	ReloadDelay: 100
+	ReloadDelay: 85
 	Projectile: Bullet
 		Speed: 682
 		LaunchAngle: 50
 		Inaccuracy: 448
 	Warhead@1Dam: SpreadDamage
-		Damage: 11500
+		Damage: 12000
 		Spread: 341
 		Versus:
 			Wood: 65
@@ -458,9 +461,9 @@ TitanGun:
 155mmSpec:
 	Inherits: ^Artillery
 	Report: spec-fire1.aud, spec-fire2.aud
-	ReloadDelay: 200
+	ReloadDelay: 150
 	MinRange: 3c0
-	Range: 13c0
+	Range: 14c0
 	Burst: 3
 	BurstDelays: 7
 	TargetActorCenter: true
@@ -468,17 +471,17 @@ TitanGun:
 		Image: firetrail
 		TrailImage: smokey
 		TrailDelay: 1
-		Speed: 220
+		Speed: 180
 		Inaccuracy: 1c138
 		LaunchAngle: 90
 	Warhead@1Dam: SpreadDamage
-		Damage: 9500
+		Damage: 8500
 		Falloff: 100, 55, 20, 5
 		Versus:
 			None: 100
 			Wood: 95
 			Light: 60
-			Heavy: 35
+			Heavy: 55
 			Concrete: 70
 			Brick: 20
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, FlakVestMitigatedMinor
@@ -508,10 +511,10 @@ TitanGun:
 
 380mm:
 	Inherits: ^Artillery
-	ReloadDelay: 150
+	ReloadDelay: 90
 	Report: bgraatta.aud
 	MinRange: 2c0
-	Range: 6c768
+	Range: 7c768
 	TargetActorCenter: true
 	Projectile: Bullet
 		Speed: 160
@@ -577,16 +580,16 @@ NukeCannonDeployer:
 
 280mmAtomic:
 	Inherits: ^Artillery
-	ReloadDelay: 200
+	ReloadDelay: 140
 	Report: vnukweaa.aud
 	MinRange: 4c0
 	Range: 18c0
 	TargetActorCenter: true
 	Projectile: Bullet
-		Speed: 180
+		Speed: 200
 		Image: 280mma
 		LaunchAngle: 92
-		Inaccuracy: 768
+		Inaccuracy: 554
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c512
 		Damage: 60000
@@ -627,6 +630,11 @@ NukeCannonDeployer:
 		Size: 1
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall, Trees
+	Warhead@Concussion: GrantExternalConditionCA
+		Range: 4c512
+		Duration: 125
+		Condition: concussion
+		ValidTargets: Ground, Infantry, Vehicle, Ship
 	Warhead@18Radio: CreateTintedCells
 		Level: 300
 		Falloff: 100, 55, 32, 5
@@ -659,13 +667,13 @@ NukeCannonDeployer:
 	Projectile: Bullet
 		Image: 280mmn
 	Warhead@1Dam: SpreadDamage
-		Damage: 30000
+		Damage: 3500
 	Warhead@3: ChangeOwnerToNeutral
 		ValidTargets: DriverKill
 		InvalidTargets: DriverKillImmune
 		ValidRelationships: Enemy, Ally
 		CargoEffect: Kill
-		Range: 3c511
+		Range: 5c511
 	Warhead@Flash: FlashTarget
 		Spread: 3c511
 		Color: ffffff
@@ -675,12 +683,36 @@ NukeCannonDeployer:
 	Warhead@3Eff: CreateEffect
 		Explosions: fuelbomb1, fuelbomb2
 		ImpactSounds: gexpneua.aud, gexpneub.aud, gexpneuc.aud, gexpneud.aud
+	Warhead@Concussion: GrantExternalConditionCA
+		Range: 4c512
+		Duration: 150
+		Condition: concussion
+		ValidTargets: Ground, Infantry, Vehicle, Ship
+	Warhead@1Radiation: CreateTintedCells
+		Spread: 4c0
+		Falloff: 65, 30, 5, 0
+		Level: 250
+		MaxLevel: 850
+		LayerName: radioactivity.medium
+		GlowScale: 1.5
+		GlowFadeFrames: 30
+		GlowFadeInFrames: 12
+	Warhead@2irrad: GrantExternalConditionCA
+		Range: 4c256
+		Duration: 250
+		Condition: irradiated
+		ValidTargets: Vehicle, Ship
+	Warhead@3Eff: CreateEffect
+		Explosions: radhit
+		ExplosionPalette: caneon
+	Warhead@4Eff: CreateEffect
+		Explosions: radburst
 
 8Inch:
 	Inherits: ^Artillery
 	MinRange: 3c0
 	ReloadDelay: 120
-	Range: 21c768
+	Range: 26c768
 	Report: tank6.aud
 	TargetActorCenter: true
 	Projectile: Bullet
@@ -709,8 +741,8 @@ NukeCannonDeployer:
 JuggernautGun:
 	Inherits: ^Artillery
 	MinRange: 3c0
-	ReloadDelay: 110
-	Range: 9c0
+	ReloadDelay: 100
+	Range: 10c0
 	Burst: 3
 	StartBurstReport: jugger1.aud
 	TargetActorCenter: true
@@ -718,7 +750,7 @@ JuggernautGun:
 		Inaccuracy: 1c138
 	Warhead@1Dam: SpreadDamage
 		Spread: 348
-		Damage: 1125
+		Damage: 1500
 		Falloff: 800, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 100
@@ -745,7 +777,7 @@ JuggernautGunTargeting:
 2Inch:
 	Inherits: ^Cannon
 	ReloadDelay: 40
-	Range: 5c512
+	Range: 9c512
 	Report: cannon2.aud
 	InvalidTargets: Submarine
 	Projectile: Bullet
@@ -761,7 +793,7 @@ JuggernautGunTargeting:
 
 Grenade:
 	Inherits: ^Artillery
-	Range: 4c725
+	Range: 5c725
 	Report: grenade1.aud
 	Projectile: Bullet
 		Speed: 136
@@ -783,7 +815,7 @@ Grenade:
 
 GrenadeJJ:
 	Inherits: Grenade
-	Range: 7c0
+	Range: 8c0
 	Report: jjgren1.aud, jjgren2.aud
 	Projectile: Bullet
 		ContrailLength: 30
@@ -824,12 +856,12 @@ EMPGrenade:
 
 ShadowOperativeGrenade:
 	Inherits: Grenade
-	ReloadDelay: 50
+	ReloadDelay: 45
 	InvalidTargets: Infantry
 	Projectile: Bullet
 		Image: shadgren
 	Warhead@1Dam: SpreadDamage
-		Damage: 7000
+		Damage: 7400
 		Versus:
 			Concrete: 100
 			Light: 100
@@ -837,16 +869,16 @@ ShadowOperativeGrenade:
 		ValidRelationships: Enemy, Neutral
 
 ShadowGliderGrenade:
-	Range: 1c0
-	ReloadDelay: 100
+	Range: 2c0
+	ReloadDelay: 75
 	Inherits: ShadowOperativeGrenade
 	-InvalidTargets:
 	Projectile:
 		LaunchAngle: 0
 
 ^Mortar:
-	ReloadDelay: 90
-	Range: 7c0
+	ReloadDelay: 80
+	Range: 8c0
 	MinRange: 2c0
 	Report: nade.aud
 	Projectile: Bullet
@@ -968,7 +1000,7 @@ SonicMortar:
 
 HallucinationGrenade:
 	Inherits: ^Mortar
-	ReloadDelay: 130
+	ReloadDelay: 120
 	Projectile: Bullet
 		ContrailStartColor: dc289c
 		ContrailStartColorAlpha: 128
@@ -987,7 +1019,7 @@ HallucinationGrenade:
 DepthCharge:
 	Inherits: ^Artillery
 	-Report:
-	Range: 5c0
+	Range: 6c0
 	ValidTargets: Submarine
 	Projectile: Bullet
 		Speed: 180
@@ -1020,8 +1052,8 @@ DoubleDepthCharge:
 		Inaccuracy: 192
 
 203mm:
-	ReloadDelay: 120
-	Range: 10c0
+	ReloadDelay: 100
+	Range: 15c0
 	MinRange: 2c512
 	Report: hvygun10.aud
 	Projectile: Bullet
@@ -1032,19 +1064,19 @@ DoubleDepthCharge:
 		Image: 120MM
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Falloff: 100, 50, 15, 5, 0
+		Falloff: 100, 100, 50, 25, 0
 		Damage: 15000
 		Versus:
-			None: 35
-			Wood: 30
-			Light: 60
-			Heavy: 70
+			None: 75
+			Wood: 50
+			Light: 70
+			Heavy: 85
 			Concrete: 0
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Dam: SpreadDamage
 		ValidRelationships: Enemy, Neutral
 		Spread: 512
-		Falloff: 100, 50, 15, 5, 0
+		Falloff: 100, 100, 50, 25, 0
 		Damage: 15000
 		Versus:
 			None: 0
@@ -1074,14 +1106,14 @@ DoubleDepthCharge:
 
 GuardianDroneGun:
 	Inherits: 25mm
-	ReloadDelay: 80
+	ReloadDelay: 45
 	Burst: 3
 	BurstDelays: 2
 	Report: gdrn-fire1.aud, gdrn-fire2.aud
 	Projectile: Bullet
 		Speed: 1c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 2600
+		Damage: 3000
 		Versus:
 			Wood: 65
 			Concrete: 35

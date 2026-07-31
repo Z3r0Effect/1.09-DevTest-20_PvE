@@ -54,7 +54,7 @@ FLAK-23-AA:
 FLAK-23-AG:
 	Inherits: ^AACannon
 	Report: flak1.aud, flak2.aud
-	Range: 4c768
+	Range: 5c768
 	ValidTargets: Ground, Water
 	Projectile: Bullet
 		LaunchAngle: 62
@@ -148,7 +148,7 @@ MGatt:
 
 ^HeavyMG:
 	ReloadDelay: 30
-	Range: 6c0
+	Range: 7c0
 	Report: gun13.aud
 	Projectile: Bullet
 		Speed: 2c341
@@ -174,7 +174,7 @@ MGatt:
 ^LightMG:
 	Inherits: ^HeavyMG
 	Warhead@1Dam: SpreadDamage
-		Damage: 1000
+		Damage: 1200
 		Versus:
 			None: 150
 			Wood: 10
@@ -191,6 +191,7 @@ MGatt:
 
 Vulcan:
 	Inherits: ^HeavyMG
+	Range: 8c512
 	-Projectile:
 	Projectile: PlasmaBeam
 		ImpactTicks: 0, 2, 4, 6, 8, 10
@@ -226,7 +227,7 @@ ChainGun:
 	Inherits: ^HeavyMG
 	Report: gun13.aud
 	ReloadDelay: 16
-	Range: 5c512
+	Range: 6c512
 	MinRange: 0c768
 	Projectile: Bullet
 		Blockable: false
@@ -242,7 +243,7 @@ ChainGun:
 
 GAU8:
 	Inherits: ^HeavyMG
-	Range: 6c0
+	Range: 7c0
 	ReloadDelay: 80
 	BurstDelays: 1
 	Burst: 15
@@ -255,7 +256,7 @@ GAU8:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 1900
+		Damage: 3000
 		Versus:
 			None: 200
 			Wood: 0
@@ -281,7 +282,7 @@ GAU8.Building:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 1280
+		Damage: 2280
 		Versus:
 			Wood: 100
 		ValidTargets: Building
@@ -300,7 +301,7 @@ Vulcan2:
 
 Vulcan3:
 	Inherits: ^LightMG
-	Range: 5c0
+	Range: 6c0
 	Burst: 3
 	Report: infgun3.aud
 	Warhead@1Dam: SpreadDamage
@@ -318,7 +319,7 @@ ChainGun.Yak.R:
 	ReloadDelay: 60
 	Burst: 4
 	BurstDelays: 5
-	Range: 6c0
+	Range: 7c0
 	MinRange: 0c768
 	Projectile: InstantHit
 		Blockable: false
@@ -398,7 +399,7 @@ Pistol:
 	Burst: 10
 	BurstDelays: 8
 	ReloadDelay: 80
-	Range: 3c0
+	Range: 4c0
 	Report: gun27.aud
 	Warhead@1Dam: SpreadDamage
 		Damage: 134
@@ -425,7 +426,7 @@ CommissarPistol:
 M1Carbine:
 	Inherits: ^LightMG
 	ReloadDelay: 20
-	Range: 5c0
+	Range: 6c768
 	Report: gun11.aud
 	Warhead@1Dam: SpreadDamage
 		Versus:
@@ -465,7 +466,7 @@ M16Carbine:
 
 M1CarbineBATF:
 	Inherits: M1Carbine
-	Range: 5c768
+	Range: 7c0
 	Burst: 3
 	BurstDelays: 2
 	-Report:
@@ -483,7 +484,7 @@ BATFGun:
 M60mg:
 	Inherits: ^LightMG
 	-Report:
-	Range: 4c0
+	Range: 7c768
 	StartBurstReport: pillbox1.aud
 	Burst: 5
 	BurstDelays: 3
@@ -501,7 +502,7 @@ M60mgTD:
 
 M60mgJJ:
 	Inherits: M60mg
-	Range: 4c768
+	Range: 5c768
 	Projectile: Bullet
 		Blockable: false
 	-StartBurstReport:
@@ -526,7 +527,7 @@ M60mgJJ.ground:
 
 M60mgJJAA:
 	Inherits: M60mgJJ
-	Range: 5c512
+	Range: 6c512
 	ValidTargets: Air, AirSmall
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air, AirSmall
@@ -534,7 +535,7 @@ M60mgJJAA:
 
 M60mgNHAW:
 	Inherits: M60mg
-	Range: 4c768
+	Range: 6c768
 	Projectile: Bullet
 		Blockable: false
 	-StartBurstReport:
@@ -549,7 +550,7 @@ M60mgNHAW:
 
 M60mgIFV:
 	Inherits: M60mg
-	Range: 5c768
+	Range: 7c768
 	StartBurstReport: ifvmg1.aud, ifvmg2.aud
 	Burst: 1
 	ReloadDelay: 44
@@ -577,12 +578,12 @@ M60mgMD:
 	ReloadDelay: 40
 
 M60mgMD.Attached:
-	Range: 5c256
+	Range: 8c0
 	Inherits: M60mgMD
 
 MGattG:
 	Inherits: ^HeavyMG
-	Range: 5c0
+	Range: 6c768
 	ReloadDelay: 5
 	-Report:
 	Warhead@1Dam: SpreadDamage
@@ -611,7 +612,7 @@ MGattG:
 
 ^SnipeWeapon:
 	ReloadDelay: 80
-	Range: 5c512
+	Range: 6c512
 	Report: gun5.aud
 	InvalidTargets: Vehicle, Ship, Water, Structure
 	Projectile: InstantHit
@@ -631,7 +632,7 @@ MGattG:
 
 SilencedPPK:
 	Inherits: ^SnipeWeapon
-	Range: 3c512
+	Range: 5c512
 	Report: silppk.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -658,7 +659,7 @@ Colt45:
 	ReloadDelay: 10
 	Burst: 4
 	BurstDelays: 2,9,2
-	Range: 7c0
+	Range: 8c512
 	Warhead@1Dam: SpreadDamage
 		Damage: 4700
 		Versus:
@@ -673,13 +674,13 @@ Colt45:
 
 Colt45BATF:
 	Inherits: Colt45
-	Range: 5c768
+	Range: 6c768
 
 SMG:
 	Inherits: ^SnipeWeapon
 	Report: silppk.aud
 	ReloadDelay: 16
-	Range: 7c0
+	Range: 8c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 25000
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
@@ -693,20 +694,20 @@ SMG:
 
 SMGBATF:
 	Inherits: SMG
-	Range: 5c768
+	Range: 6c768
 
 MP5:
 	StartBurstReport: iseaatta.aud, iseaattb.aud
 	ReloadDelay: 6
 	Burst: 3
 	BurstDelays: 2
-	Range: 6c0
+	Range: 7c768
 	InvalidTargets: Structure
 	Projectile: InstantHit
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 1570
+		Damage: 1650
 		Versus:
 			None: 100
 			Wood: 15
@@ -727,14 +728,14 @@ MP5:
 
 MP5BATF:
 	Inherits: MP5
-	Range: 5c768
+	Range: 6c768
 
 AKM:
 	StartBurstReport: mg11.aud
 	ReloadDelay: 15
 	Burst: 3
 	BurstDelays: 2
-	Range: 7c0
+	Range: 8c512
 	InvalidTargets: Structure
 	Projectile: InstantHit
 		Blockable: true
@@ -761,11 +762,11 @@ AKM:
 
 AKMBATF:
 	Inherits: AKM
-	Range: 5c768
+	Range: 6c768
 
 SNIPER:
-	ReloadDelay: 120
-	Range: 8c0
+	ReloadDelay: 110
+	Range: 9c0
 	Report: snipe.aud
 	Projectile: InstantHit
 		Blockable: true
@@ -797,7 +798,7 @@ SNIPER:
 
 SNIPER.vehicle:
 	Inherits: SNIPER
-	Range: 7c0
+	Range: 8c0
 	Report: ijarwe1a.aud
 	Warhead@1Dam: SpreadDamage
 		Versus:
@@ -845,17 +846,17 @@ SNIPER.vehicleElite:
 
 SNIPERBATF:
 	Inherits: SNIPER
-	Range: 7c0
+	Range: 8c512
 
 SNIPERBATF.UPG:
 	Inherits: SNIPER.vehicle
-	Range: 6c0
+	Range: 7c512
 
 SNIPER.ASSA:
 	Inherits: SNIPER
 	InvalidTargets: Structure
 	ReloadDelay: 100
-	Range: 8c0
+	Range: 9c768
 	Report: iviratta.aud
 	Warhead@1Dam: SpreadDamage
 		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath
@@ -868,11 +869,11 @@ SNIPER.ASSA:
 
 SNIPERBATF.ASSA:
 	Inherits: SNIPER.ASSA
-	Range: 7c0
+	Range: 8c512
 
 SniperIFVGun.UPG:
 	Inherits: SNIPER.vehicle
-	ReloadDelay: 105
+	ReloadDelay: 90
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			Light: 35
@@ -902,7 +903,7 @@ SealIFVGun:
 
 ShadowOperativeGun:
 	Inherits: ^HeavyMG
-	Range: 6c0
+	Range: 7c0
 	ReloadDelay: 25
 	Burst: 2
 	BurstDelays: 3
@@ -925,7 +926,7 @@ HeliGunAG:
 	Inherits: ^HeavyMG
 	Report: mgbtr1.aud, mgbtr2.aud, mgbtr3.aud
 	ReloadDelay: 14
-	Range: 5c512
+	Range: 6c512
 	MinRange: 0c768
 	Projectile: Bullet
 		Blockable: false
@@ -943,7 +944,7 @@ HeliGunAA:
 	ReloadDelay: 14
 	Burst: 1
 	Report: mgbtr1.aud, mgbtr2.aud, mgbtr3.aud
-	Range: 5c0
+	Range: 6c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 2000
 		Range: 0, 0c64, 0c256, 1c768
@@ -956,7 +957,7 @@ HeliGunAA:
 
 WolverineGun:
 	Inherits: M60mg
-	Range: 4c768
+	Range: 6c768
 	MinRange: 0c128
 	ReloadDelay: 25
 	BurstDelays: 3
@@ -966,8 +967,8 @@ WolverineGun:
 		Damage: 750
 		Versus:
 			Wood: 50
-			Light: 70
-			Heavy: 12
+			Light: 75
+			Heavy: 18
 	-Warhead@2Eff:
 
 WolverineGunLine:
@@ -1013,7 +1014,7 @@ WolverineGunTracer:
 		ValidTargets: Ground, Ship, Air, AirSmall, Trees
 
 EnforcerShotgun:
-	Range: 4c0
+	Range: 6c0
 	Report: enfo-fire1.aud, enfo-fire2.aud
 	ReloadDelay: 55
 	Projectile: LinearPulse
@@ -1092,8 +1093,8 @@ EnforcerShotgun:
 			HitAnimSequence: piff
 			HitAnimPalette: effect-ignore-lighting-alpha50
 		DamageFalloff@1:
-			Spread: 4c0
-			Falloff: 100, 33
+			Spread: 5c0
+			Falloff: 100, 100
 			FalloffBasis: DistanceFromSource
 	Warhead@1Dam: SpreadDamage
 		Damage: 7000
@@ -1114,7 +1115,7 @@ EnforcerIFVShotgun:
 ConfessorGun:
 	Inherits: M1Carbine
 	Report: conf-fire1.aud, conf-fire2.aud
-	Range: 6c0
+	Range: 8c512
 	Warhead@1Dam: SpreadDamage
 		Damage: 3000
 		Versus:

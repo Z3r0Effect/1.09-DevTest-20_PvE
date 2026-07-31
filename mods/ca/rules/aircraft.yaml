@@ -9,7 +9,7 @@ BADR:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 20
-		Speed: 180
+		Speed: 200
 		Repulsable: False
 		MaximumPitch: 56
 	Cargo:
@@ -62,7 +62,7 @@ BADR.Bomber:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 20
-		Speed: 180
+		Speed: 200
 		Repulsable: False
 		MaximumPitch: 56
 	AmmoPool:
@@ -156,7 +156,7 @@ B2B:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 20
-		Speed: 180
+		Speed: 200
 		Repulsable: False
 		MaximumPitch: 56
 	AmmoPool:
@@ -220,13 +220,13 @@ MIG:
 		Strengths: • Strong vs Heavy Armor, Defenses, Aircraft
 		Weaknesses: • Weak vs Infantry
 	Valued:
-		Cost: 1500
+		Cost: 1400
 	Tooltip:
 		Name: MiG Attack Plane
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 20000
+		HP: 24500
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -345,13 +345,13 @@ SUK:
 		Weaknesses: • Weak vs Infantry\n• Cannot attack Aircraft\n• Has difficulty hitting moving targets
 		RequiresCondition: seismic-upgrade
 	Valued:
-		Cost: 2000
+		Cost: 1700
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
 		Name: Sukhoi Attack Plane
 	Health:
-		HP: 18000
+		HP: 22000
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 10c0
@@ -501,7 +501,7 @@ YAK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 13500
+		HP: 18500
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -681,7 +681,7 @@ TRAN:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 34000
+		HP: 36000
 	RevealsShroud:
 		Range: 8c0
 		MinRange: 6c0
@@ -740,7 +740,7 @@ TRAN:
 		RequiresCondition: !airborne
 	Cargo:
 		Types: Infantry, Hacker
-		MaxWeight: 8
+		MaxWeight: 12
 		LoadedCondition: cargo
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
@@ -928,7 +928,7 @@ NHAW:
 		RequiresCondition: !airborne
 	Cargo:
 		Types: Infantry, Hacker
-		MaxWeight: 8
+		MaxWeight: 12
 		LoadedCondition: cargo
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
@@ -1089,7 +1089,7 @@ HELI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 22000
+		HP: 26000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -1212,7 +1212,7 @@ HIND:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 34000
+		HP: 36000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -1523,13 +1523,13 @@ A10:
 		Strengths: • Strong vs Buildings, Infantry, Light Armor
 		Weaknesses: • Weak vs Heavy Armor, Defenses\n• Cannot attack Aircraft
 	Valued:
-		Cost: 2000
+		Cost: 1900
 	Tooltip:
 		Name: Warthog
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 38000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -1820,7 +1820,7 @@ A10.bomber:
 	Tooltip:
 		Name: Warthog
 	Health:
-		HP: 36000
+		HP: 40000
 	Armament:
 		Weapon: NapalmTDBomber
 		LocalOffset: 2,-256,-43, 2,256,-43
@@ -2107,7 +2107,7 @@ APCH:
 		TakeoffSounds: vhelistaa.aud
 		LandingSounds: vhelilana.aud
 	Health:
-		HP: 15000
+		HP: 20000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -2221,7 +2221,7 @@ ORCA:
 		LandingSounds: orcadwn1.aud
 		Speed: 180
 	Health:
-		HP: 19000
+		HP: 24000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -2524,7 +2524,7 @@ UAV:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 28
-		Speed: 113
+		Speed: 135
 		Repulsable: False
 		MaximumPitch: 56
 	AttackBomber:
@@ -2580,13 +2580,13 @@ RAH:
 		Strengths: • Strong vs Infantry, Light Armor, Buildings
 		Weaknesses: • Weak vs Heavy Armor, Defenses\n• Cannot attack Aircraft
 	Valued:
-		Cost: 2000
+		Cost: 1900
 	Tooltip:
 		Name: Comanche
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 16000
+		HP: 22000
 	RevealsShroud:
 		Range: 10c0
 		MinRange: 8c0
@@ -2798,7 +2798,7 @@ KIRO:
 		CruiseAltitude: 2c0
 		InitialFacing: 192
 		TurnSpeed: 12
-		Speed: 49
+		Speed: 58
 		Voice: Move
 		AltitudeVelocity: 0c50
 		CanForceLand: False
@@ -2858,7 +2858,7 @@ KIRO:
 		PercentageStep: 1
 		Delay: 25
 		StartIfBelow: 75
-		DamageCooldown: 150
+		DamageCooldown: 100
 	Voiced:
 		VoiceSet: KirovVoice
 	ExternalCondition@PRODUCED:
@@ -2962,7 +2962,7 @@ OCAR:
 		Modifier: 80
 		RequiresCondition: carrying
 	Health:
-		HP: 30000
+		HP: 35000
 	Armor:
 		Type: Aircraft
 	RevealsShroud:
@@ -3157,14 +3157,14 @@ HARR:
 		Strengths: • Strong vs Aircraft, Buildings, Infantry, Light Armor
 		Weaknesses: • Weak vs Heavy Armor, Defenses
 	Valued:
-		Cost: 2000
+		Cost: 1900
 	Tooltip:
 		Name: Harrier
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 22500
+		HP: 27000
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 10c0
@@ -3282,14 +3282,14 @@ SCRN:
 		Strengths: • Strong vs Heavy Armor, Defenses, Aircraft
 		Weaknesses: • Weak vs Infantry
 	Valued:
-		Cost: 2000
+		Cost: 1800
 	Tooltip:
 		Name: Banshee
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 22500
+		HP: 27000
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 10c0
@@ -3666,7 +3666,7 @@ VENM:
 	Guard:
 		Voice: Move
 	Health:
-		HP: 18000
+		HP: 21500
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -3784,13 +3784,13 @@ AURO:
 		Weaknesses: • Cannot attack Aircraft
 		Attributes: • Uses afterburner on approach to target
 	Valued:
-		Cost: 2300
+		Cost: 2200
 	Tooltip:
 		Name: Aurora
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 18000
+		HP: 20000
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 10c0
@@ -3954,14 +3954,14 @@ PMAK:
 		Strengths: • Strong vs Heavy Armor, Defenses, Light Armor, Buildings
 		Weaknesses: • Weak vs Infantry\n• Cannot attack Aircraft
 	Valued:
-		Cost: 2500
+		Cost: 2300
 	Tooltip:
 		Name: Peacemaker
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 38000
+		HP: 40000
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 10c0
@@ -4102,14 +4102,14 @@ BEAG:
 		Weaknesses: • Weak vs Infantry, Buildings
 		Attributes: • Reduces range and vision of targets
 	Valued:
-		Cost: 2000
+		Cost: 1900
 	Tooltip:
 		Name: Black Eagle
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 18000
+		HP: 26000
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 10c0
@@ -4154,7 +4154,7 @@ BEAG:
 	AmmoPool:
 		Ammo: 3
 		AmmoCondition: ammo
-		ReloadDelay: 70
+		ReloadDelay: 50
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -4236,7 +4236,7 @@ PHAN:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 18000
+		HP: 22000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -4370,7 +4370,7 @@ KAMV:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 34000
+		HP: 46000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -4488,14 +4488,14 @@ SHDE:
 		Strengths: • Strong vs Heavy Armor, Light Armor, Defenses
 		Weaknesses: • Weak vs Infantry, Buildings\n• Cannot attack Aircraft
 	Valued:
-		Cost: 1800
+		Cost: 1700
 	Tooltip:
 		Name: Shade
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 18000
+		HP: 22000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -4620,14 +4620,14 @@ VERT:
 		Weaknesses: • Cannot attack Aircraft
 		Attributes: • Bomb disrupts cloaking in a large area
 	Valued:
-		Cost: 2000
+		Cost: 1900
 	Tooltip:
 		Name: Vertigo
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 20000
+		HP: 24000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -4788,7 +4788,7 @@ MCOR:
 		LandingSounds: dropdwn1.aud
 		Speed: 80
 	Health:
-		HP: 26000
+		HP: 30000
 	RevealsShroud:
 		Range: 10c0
 		MinRange: 8c0
@@ -4919,8 +4919,8 @@ DISC:
 		RevokeDelay: 11
 		ArmamentNames: tertiary
 	CashTrickler@ResourceDrain:
-		Interval: 50
-		Amount: 30
+		Interval: 40
+		Amount: 50
 		RequiresCondition: resourcedraining
 	WithIdleOverlay@Drain:
 		Sequence: drain
@@ -5028,7 +5028,7 @@ JACK:
 	Voiced:
 		VoiceSet: JackknifeVoice
 	Health:
-		HP: 3500
+		HP: 14000
 	RevealsShroud:
 		Range: 10c0
 		MinRange: 8c0
@@ -5055,7 +5055,7 @@ JACK:
 		PersistentTargeting: false
 		PauseOnCondition: empdisable || being-warped
 	DiveOnAttack:
-		Speed: 320
+		Speed: 400
 		DiveCondition: diving
 	AutoTarget:
 		InitialStance: HoldFire
@@ -5092,7 +5092,7 @@ JACK:
 		Type: JackKnifeDive
 		TargetFrozenActors: true
 		DeployCursor: move
-	-AttackMove:
+	AttackMove:
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
 	Encyclopedia:

@@ -1,6 +1,6 @@
 ^AntiGroundMissile:
 	ReloadDelay: 50
-	Range: 5c0
+	Range: 6c768
 	MinRange: 0c512
 	Report: missile6.aud
 	Projectile: MissileCA
@@ -90,7 +90,7 @@
 
 Maverick:
 	Inherits: ^AirToGroundMissile
-	Range: 7c0
+	Range: 8c0
 	MinRange: 0c768
 	Report: missile7.aud
 	Burst: 2
@@ -110,7 +110,7 @@ Maverick:
 
 MaverickAA:
 	Inherits: ^AirToAirMissile
-	Range: 7c0
+	Range: 8c0
 	ReloadDelay: 60
 	Report: missile7.aud
 	Burst: 2
@@ -175,7 +175,7 @@ MaverickSU:
 
 SeismicMissile:
 	ReloadDelay: 70
-	Range: 7c0
+	Range: 8c512
 	MinRange: 0c768
 	Report: rocket1.aud
 	Burst: 2
@@ -301,7 +301,7 @@ Dragon.CYB.TibCore:
 
 DragonGI:
 	Inherits: Dragon
-	Range: 6c0
+	Range: 7c0
 	Report: iggiat2a.aud, iggiat2b.aud
 	ReloadDelay: 40
 	Projectile: MissileCA
@@ -311,7 +311,7 @@ DragonGI:
 
 DragonGI.CRYO:
 	Inherits: Dragon.CRYO
-	Range: 6c0
+	Range: 7c0
 	Report: iggiat2a.aud, iggiat2b.aud
 	ReloadDelay: 40
 	Projectile: MissileCA
@@ -361,7 +361,7 @@ DragonBATF.CYB.TibCore:
 
 HellfireAG:
 	Inherits: ^AirToGroundMissile
-	Range: 6c0
+	Range: 7c0
 	ReloadDelay: 70
 	MinRange: 0c768
 	Burst: 4
@@ -399,7 +399,7 @@ HellfireAG.Cryo:
 
 HindRockets:
 	Inherits: HellfireAG
-	Range: 5c512
+	Range: 7c512
 	ReloadDelay: 70
 	Report: hind-rocket1.aud, hind-rocket2.aud
 	ValidTargets: Ground
@@ -409,15 +409,15 @@ HindRockets:
 		Damage: 3750
 		Versus:
 			None: 100
-			Light: 38
-			Wood: 26
-			Concrete: 26
+			Light: 52
+			Wood: 28
+			Concrete: 28
 			Heavy: 48
 
 HindRockets.Ukraine:
 	Inherits: HindRockets
 	Warhead@Concussion: GrantExternalConditionCA
-		Range: 0c682
+		Range: 2c682
 		Duration: 125
 		Condition: concussion
 
@@ -431,7 +431,7 @@ HindRockets.Ukraine.UPG:
 
 HellfireAG.Harrier:
 	Inherits: ^AirToGroundMissile
-	Range: 7c0
+	Range: 8c0
 	MinRange: 0c768
 	ReloadDelay: 70
 	Report: migmis.aud, migmis2.aud
@@ -468,7 +468,7 @@ HellfireAG.Harrier:
 HellfireAG.Horn:
 	Inherits: HellfireAG.Harrier
 	ReloadDelay: 50
-	Range: 5c0
+	Range: 8c0
 	MinRange: 0c768
 	Burst: 2
 	Projectile: MissileCA
@@ -547,7 +547,7 @@ WidowAA:
 MammothTusk:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 70
-	Range: 6c512
+	Range: 7c768
 	Burst: 2
 	ValidTargets: Air, AirSmall, Infantry
 	Projectile: MissileCA
@@ -589,7 +589,7 @@ ApocalypseTusk:
 	ValidTargets: Air, AirSmall
 	ReloadDelay: 60
 	Burst: 4
-	Range: 8c0
+	Range: 8c512
 	Projectile: MissileCA
 		RangeLimit: 10c614
 		Speed: 401
@@ -622,7 +622,7 @@ APCTusk:
 Nike:
 	Inherits: ^AntiAirMissile
 	ReloadDelay: 20
-	Range: 7c512
+	Range: 8c768
 	-MinRange:
 	Report: samshot1.aud
 	ValidTargets: Air, AirSmall, ICBM
@@ -647,7 +647,7 @@ Nike:
 
 RedEye:
 	Inherits: ^AntiAirMissile
-	Range: 6c512
+	Range: 7c256
 	ReloadDelay: 50
 	Report: missile1.aud
 	ValidTargets: Air, AirSmall
@@ -682,7 +682,7 @@ RedEye.TibCore:
 
 RedEye.CYB:
 	Inherits: RedEye
-	Range: 7c0
+	Range: 7c512
 	Report: itanweaa.aud, itanweab.aud, itanweac.aud
 	Warhead@1Dam: SpreadDamage
 		Damage: 4600
@@ -691,7 +691,7 @@ RedEye.CYB:
 
 RedEye.CYB.TibCore:
 	Inherits: RedEye.TibCore
-	Range: 7c0
+	Range: 7c768
 	Report: itanweaa.aud, itanweab.aud, itanweac.aud
 	Warhead@1Dam: SpreadDamage
 		Damage: 4600
@@ -728,7 +728,7 @@ RedEyeGI.CRYO:
 Stinger:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 60
-	Range: 9c0
+	Range: 9c768
 	Burst: 2
 	BurstDelays: 6
 	InvalidTargets: Submarine
@@ -786,8 +786,8 @@ StingerAA:
 
 StingerGTWR:
 	Inherits: Stinger
-	ReloadDelay: 60
-	Range: 7c0
+	ReloadDelay: 40
+	Range: 12c0
 	Report: rocket2.aud
 	BurstDelays: 10
 	Projectile: MissileCA
@@ -815,7 +815,7 @@ APTusk:
 	Inherits: ^AntiGroundMissile
 	ValidTargets: Ground, Water, Air, AirSmall
 	ReloadDelay: 75
-	Range: 7c0
+	Range: 7c512
 	Burst: 2
 	BurstDelays: 0
 	-Report:
@@ -847,10 +847,10 @@ APTusk:
 
 TOW:
 	Inherits: ^AntiGroundMissile
-	Range: 5c0
+	Range: 9c0
 	ValidTargets: Vehicle, Ship, Structure
 	Report: tow1.aud, tow2.aud
-	ReloadDelay: 200
+	ReloadDelay: 50
 	Projectile: MissileCA
 		Speed: 180
 		Inaccuracy: 0
@@ -875,7 +875,7 @@ TOW:
 
 PitbullRockets:
 	Inherits: ^AntiGroundMissile
-	Range: 6c0
+	Range: 7c768
 	Report: pitbull-fire1.aud, pitbull-fire2.aud
 	ReloadDelay: 80
 	Burst: 2
@@ -908,7 +908,7 @@ PitbullRockets:
 
 PitbullRocketsAA:
 	Inherits: RedEye
-	Range: 7c512
+	Range: 8c0
 	Report: pitbull-fire1.aud, pitbull-fire2.aud
 	ReloadDelay: 80
 	Burst: 2
@@ -978,7 +978,7 @@ TorpTube:
 ^SubMissileDefault:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 90
-	Range: 8c0
+	Range: 12c0
 	Burst: 2
 	Projectile: MissileCA
 		Speed: 234
@@ -1166,7 +1166,7 @@ THWeapon:
 KatyushaRockets:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 180
-	Range: 8c768
+	Range: 9c0
 	MinRange: 3c0
 	Report: katyrocket1.aud, katyrocket2.aud, katyrocket3.aud
 	Burst: 3
@@ -1225,7 +1225,7 @@ GradRocketsWide.UPG:
 	Burst: 5
 
 HonestJohn:
-	ReloadDelay: 130
+	ReloadDelay: 100
 	Burst: 2
 	BurstDelays: 50
 	Range: 12c0
@@ -1242,19 +1242,19 @@ HonestJohn:
 		LaunchAngle: 37
 	Warhead@1Dam: SpreadDamage
 		Spread: 448
-		Damage: 600
+		Damage: 650
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 100
 			Wood: 100
 			Concrete: 80
 			Light: 70
-			Heavy: 35
-			Brick: 5
+			Heavy: 40
+			Brick: 10
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, FlakVestMitigatedMinor
 	Warhead@2Dam: SpreadDamage
 		Spread: 448
-		Damage: 600
+		Damage: 650
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		Delay: 3
 		Versus:
@@ -1262,12 +1262,12 @@ HonestJohn:
 			Wood: 100
 			Concrete: 80
 			Light: 70
-			Heavy: 35
-			Brick: 5
+			Heavy: 55
+			Brick: 10
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, FlakVestMitigatedMinor
 	Warhead@3Dam: SpreadDamage
 		Spread: 448
-		Damage: 600
+		Damage: 650
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		Delay: 6
 		Versus:
@@ -1275,12 +1275,12 @@ HonestJohn:
 			Wood: 100
 			Concrete: 80
 			Light: 70
-			Heavy: 35
-			Brick: 5
+			Heavy: 45
+			Brick: 10
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, FlakVestMitigatedMinor
 	Warhead@4Dam: SpreadDamage
 		Spread: 448
-		Damage: 600
+		Damage: 650
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		Delay: 9
 		Versus:
@@ -1288,8 +1288,8 @@ HonestJohn:
 			Wood: 100
 			Concrete: 80
 			Light: 70
-			Heavy: 35
-			Brick: 5
+			Heavy: 45
+			Brick: 10
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, FlakVestMitigatedMinor
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
@@ -1305,7 +1305,7 @@ HonestJohn:
 
 HonestJohn.UPG:
 	Inherits: HonestJohn
-	ReloadDelay: 145
+	ReloadDelay: 130
 	Warhead@1Dam: SpreadDamage
 		Damage: 1200
 		Versus:
@@ -1328,12 +1328,12 @@ HonestJohn.UPG:
 
 HonestJohnBH:
 	Inherits: HonestJohn
-	ReloadDelay: 165
+	ReloadDelay: 145
 	Burst: 3
 
 HonestJohnBH.UPG:
 	Inherits: HonestJohn.UPG
-	ReloadDelay: 180
+	ReloadDelay: 160
 	Burst: 3
 
 HonestJohnTargeting:
@@ -1354,7 +1354,7 @@ HonestJohnTargeting:
 
 BikeRockets:
 	Inherits: Dragon
-	Range: 5c0
+	Range: 6c0
 	Report: bazook1.aud
 	Burst: 2
 	BurstDelays: 5
@@ -1367,7 +1367,7 @@ BikeRockets:
 
 BikeRocketsAA:
 	Inherits: RedEye
-	Range: 7c512
+	Range: 8c512
 	Report: bazook1.aud
 	Burst: 2
 	BurstDelays: 5
@@ -1379,7 +1379,7 @@ BikeRocketsAA:
 
 BikeRockets.TibCore:
 	Inherits: BikeRockets
-	Range: 5c512
+	Range: 6c512
 	Projectile: MissileCA
 		Speed: 266
 		Image: tibcoremsl
@@ -1444,11 +1444,11 @@ BikeRocketsAA.TibCore:
 
 SBRockets:
 	Inherits: BikeRockets
-	Range: 5c0
+	Range: 6c0
 
 IFVRockets:
 	Inherits: Dragon
-	Range: 4c768
+	Range: 6c768
 	Burst: 2
 	BurstDelays: 5
 	Warhead@1Dam: SpreadDamage
@@ -1460,7 +1460,7 @@ IFVRockets:
 
 IFVRocketsAA:
 	Inherits: RedEye
-	Range: 7c512
+	Range: 8c0
 	Burst: 2
 	BurstDelays: 5
 	Warhead@1Dam: SpreadDamage
@@ -1471,7 +1471,7 @@ IFVRocketsAA:
 IFVRocketsE:
 	Inherits: IFVRockets
 	Report: vifvatta.aud
-	Range: 6c0
+	Range: 7c0
 	Projectile: MissileCA
 		ContrailLength: 10
 	Warhead@1Dam: SpreadDamage
@@ -1529,10 +1529,10 @@ IFVRocketsAAE.TibCore:
 #Artillery Missiles, lock-on but act dumb
 227mm:
 	Inherits: ^AntiGroundMissile
-	ReloadDelay: 130
+	ReloadDelay: 120
 	Burst: 2
 	BurstDelays: 4
-	Range: 9c0
+	Range: 10c0
 	MinRange: 3c0
 	Report: rocket1.aud
 	Projectile: MissileCA
@@ -1546,14 +1546,14 @@ IFVRocketsAAE.TibCore:
 		MinimumLaunchAngle: 64
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 800
+		Damage: 840
 		Falloff: 1000, 448, 192, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Trees
 		Versus:
 			None: 100
 			Wood: 80
 			Light: 72
-			Heavy: 25
+			Heavy: 30
 			Concrete: 80
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigated
 	Warhead@3Eff: CreateEffect
@@ -1565,7 +1565,7 @@ IFVRocketsAAE.TibCore:
 227mmH:
 	Inherits: 227mm
 	Report: hovrmis1.aud
-	Range: 8c512
+	Range: 9c512
 
 227mm.upg:
 	Inherits: 227mm
@@ -1632,22 +1632,22 @@ IFVRocketsAAE.TibCore:
 
 227mmH.Hypersonic:
 	Inherits: 227mm.Hypersonic
-	Range: 8c512
+	Range: 9c512
 
 227mmH.Hammerhead:
 	Inherits: 227mm.Hammerhead
-	Range: 8c512
+	Range: 9c512
 
 227mmH.Hailstorm:
 	Inherits: 227mm.Hailstorm
-	Range: 8c512
+	Range: 9c512
 
 227mmAA:
 	Inherits: ^AntiAirMissile
 	ReloadDelay: 80
 	Burst: 2
 	BurstDelays: 4
-	Range: 6c512
+	Range: 7c512
 	Report: rocket1.aud
 	Projectile: MissileCA
 		Speed: 230
@@ -1671,7 +1671,7 @@ IFVRocketsAAE.TibCore:
 
 227mmAA.upg:
 	Inherits: 227mmAA
-	Range: 6c512
+	Range: 7c512
 	Projectile: MissileCA
 		Speed: 250
 		ContrailLength: 15
@@ -1739,7 +1739,7 @@ StnkMissile:
 StnkMissileAA:
 	Inherits: ^AntiAirMissile
 	ReloadDelay: 70
-	Range: 7c512
+	Range: 8c512
 	Report: rocket1.aud
 	Burst: 2
 	BurstDelays: 4
@@ -1761,7 +1761,7 @@ StnkMissile.TibCore:
 	ReloadDelay: 75
 	Burst: 4
 	BurstDelays: 4, 7, 4
-	Range: 6c0
+	Range: 8c0
 	Projectile: MissileCA
 		Speed: 266
 		Image: tibcoremsl
@@ -1822,7 +1822,7 @@ StnkMissileAA.TibCore:
 
 HstkMissile:
 	Inherits: StnkMissile
-	ReloadDelay: 75
+	ReloadDelay: 70
 	Burst: 4
 	BurstDelays: 4, 7, 4
 	Projectile: MissileCA
@@ -1890,7 +1890,7 @@ HstkMissileAA.TibCore:
 BoatMissile:
 	Inherits: Stinger
 	Report: rocket2.aud
-	Range: 7c0
+	Range: 9c0
 	BurstDelays: 9
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
@@ -1918,7 +1918,7 @@ BoatMissileAA:
 
 Rah66AG:
 	ReloadDelay: 35
-	Range: 6c0
+	Range: 7c0
 	MinRange: 0c768
 	Report: rocket2.aud
 	Burst: 4
@@ -2019,7 +2019,7 @@ ScrinTorp:
 	Burst: 3
 	BurstDelays: 4
 	Report: scrin5b.aud
-	Range: 7c0
+	Range: 8c0
 	TargetActorCenter: true
 	Projectile: Bullet
 		Blockable: false
@@ -2030,7 +2030,7 @@ ScrinTorp:
 		LaunchAngle: 10
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 800
+		Damage: 1100
 		Falloff: 1000, 448, 192, 64, 26, 10, 0
 		Versus:
 			None: 15
@@ -2064,7 +2064,7 @@ ScrinTorp.UPG:
 ScrinTorpAA:
 	Inherits: ^AirToAirMissile
 	ReloadDelay: 40
-	Range: 7c0
+	Range: 8c0
 	Report: scrin5b.aud
 	Burst: 3
 	BurstDelays: 4
@@ -2097,7 +2097,7 @@ ScrinTorpAA.UPG:
 
 SMIGBomb:
 	ReloadDelay: 150
-	Range: 8c0
+	Range: 9c0
 	Report: vmigatta.aud
 	Projectile: Bullet
 		Image: MISSILE
@@ -2134,7 +2134,7 @@ SMIGBomb:
 		InvalidTargets: Ship, Structure
 
 CryoMissile:
-	ReloadDelay: 125
+	ReloadDelay: 100
 	Range: 9c0
 	MinRange: 2c0
 	Report: cryomissile.aud
@@ -2218,7 +2218,7 @@ CryoMissileNHAW:
 		Damage: 1000
 
 Rocket.P51.R:
-	ReloadDelay: 200
+	ReloadDelay: 170
 	Range: 9c0
 	MinRange: 0c768
 	Report: vintatta.aud
@@ -2269,7 +2269,7 @@ Rocket.P51.L:
 
 Hydra.R:
 	ReloadDelay: 80
-	Range: 6c0
+	Range: 7c256
 	MinRange: 0c256
 	Report: iggiat2a.aud, iggiat2b.aud
 	Burst: 6
@@ -2291,8 +2291,8 @@ Hydra.R:
 		ContrailStartWidth: 0c42
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 315
-		Falloff: 1000, 448, 192, 50, 18, 7, 0
+		Damage: 550
+		Falloff: 1000, 648, 292, 150, 78, 25, 0
 		Versus:
 			None: 100
 			Wood: 8
@@ -2327,12 +2327,12 @@ BlackEagleMissiles:
 		Image: MISSILE
 	Warhead@1Dam: SpreadDamage
 		Damage: 24000
-		Spread: 256
+		Spread: 556
 		Versus:
 			Concrete: 75
 	Warhead@VeiledCondition: GrantExternalConditionCA
-		Range: 2c0
-		Duration: 175
+		Range: 4c0
+		Duration: 200
 		Condition: gapveiled
 		ValidTargets: Infantry, Vehicle, Ship
 		ValidRelationships: Enemy, Neutral
@@ -2384,14 +2384,14 @@ PhantomMissiles:
 		Image: nullhit
 		ImpactSounds: null-hit1.aud
 	Warhead@Blind: GrantExternalConditionCA
-		Range: 0c256
+		Range: 3c256
 		Duration: 150
 		Condition: blinded
 		InvalidTargets: BlindImmune
 
 PhantomMissilesAA:
 	Inherits: MaverickAA
-	Range: 9c0
+	Range: 10c0
 	Report: beag-fire1.aud, beag-fire2.aud
 	Projectile: MissileCA
 		Image: MISSILE
@@ -2405,8 +2405,8 @@ PhantomMissilesAA:
 		Image: nullhit
 		ImpactSounds: null-hit1.aud
 	Warhead@Blind: GrantExternalConditionCA
-		Range: 0c341
-		Duration: 150
+		Range: 1c341
+		Duration: 175
 		Condition: blinded
 		ValidTargets: Air, AirSmall
 		InvalidTargets: BlindImmune
@@ -2446,7 +2446,7 @@ CyborgReaperMissiles:
 	ReloadDelay: 65
 	Burst: 2
 	BurstDelays: 10
-	Range: 6c0
+	Range: 7c0
 	Report: reap-fire1.aud, reap-fire2.aud
 	Projectile: MissileCA
 		Speed: 220
@@ -2456,12 +2456,12 @@ CyborgReaperMissiles:
 		ContrailStartWidth: 0c40
 	Warhead@1Dam: SpreadDamage
 		Spread: 448
-		Damage: 5500
+		Damage: 5250
 		Versus:
 			None: 100
 			Wood: 75
 			Light: 75
-			Heavy: 25
+			Heavy: 30
 			Concrete: 50
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigated
 	Warhead@3Eff: CreateEffect
@@ -2473,7 +2473,7 @@ CyborgReaperMissilesAA:
 	ReloadDelay: 65
 	Burst: 2
 	BurstDelays: 10
-	Range: 6c0
+	Range: 8c0
 	Report: reap-fire1.aud, reap-fire2.aud
 	Projectile: MissileCA
 		Speed: 250
@@ -2489,7 +2489,7 @@ CyborgReaperMissilesAA:
 		Damage: 5500
 
 CyborgReaperSnare:
-	ReloadDelay: 375
+	ReloadDelay: 150
 	Range: 9c0
 	Report: reap-snarefire.aud
 	Projectile: Bullet
@@ -2507,7 +2507,7 @@ CyborgReaperSnare:
 	Warhead@Snare: GrantExternalConditionCA
 		Condition: reapersnare
 		Duration: 100
-		Range: 1c0
+		Range: 2c0
 		InvalidTargets: ReaperSnareImmune
 	Warhead@3Eff: CreateEffect
 		Explosions: reap-snarehit
@@ -2516,7 +2516,7 @@ CyborgReaperSnare:
 
 KamovRockets:
 	Inherits: ^AirToGroundMissile
-	ReloadDelay: 100
+	ReloadDelay: 75
 	Range: 9c0
 	MinRange: 3c0
 	Report: hind-rocket1.aud, hind-rocket2.aud
@@ -2534,7 +2534,7 @@ KamovRockets:
 		Blockable: false
 	ValidTargets: Ground, Trees, Water
 	Warhead@1Dam: SpreadDamage
-		Damage: 6500
+		Damage: 7000
 		Spread: 448
 		Versus:
 			None: 10
@@ -2549,7 +2549,7 @@ KamovRockets:
 		ImpactSounds: kaboom15.aud
 		ValidTargets: Ground, Ship, Trees
 	Warhead@Concussion: GrantExternalConditionCA
-		Range: 1c0
+		Range: 2c0
 		Duration: 150
 		Condition: concussion
 		ValidTargets: Ground, Infantry, Vehicle, Ship
@@ -2583,7 +2583,7 @@ KamovRocketsWide:
 TigerGuardMissile:
 	Inherits: ^AntiGroundMissile
 	Inherits@Projectile: ^TigerGuardMissileProjectile
-	ReloadDelay: 125
+	ReloadDelay: 110
 	Range: 12c0
 	MinRange: 3c0
 	Report: tigr-fire1.aud, tigr-fire2.aud
@@ -2605,8 +2605,8 @@ TigerGuardMissile:
 TigerGuardMissileAA:
 	Inherits: ^AntiAirMissile
 	Inherits@Projectile: ^TigerGuardMissileProjectile
-	ReloadDelay: 125
-	Range: 9c0
+	ReloadDelay: 110
+	Range: 10c0
 	Report: tigr-fire1.aud, tigr-fire2.aud
 	Projectile: MissileCA
 		RangeLimit: 12c0

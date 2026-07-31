@@ -130,9 +130,9 @@ VEHICLES.SCRIN:
 
 ^ScrinShields:
 	Shielded:
-		MaxStrength: 10000
+		MaxStrength: 12000
 		RegenDelay: 350
-		RegenAmount: 250
+		RegenAmount: 350
 		RegenInterval: 5
 		ShieldsUpCondition: shields-up
 		RequiresCondition: shields-upgrade && !empdisable
@@ -152,7 +152,7 @@ VEHICLES.SCRIN:
 		Palette: scrinshield-ignore-lighting-alpha50
 		RequiresCondition: shields-upgrade && shields-up
 	SpeedMultiplier@SHIELDWARP:
-		Modifier: 25
+		Modifier: 35
 		RequiresCondition: shield-warped
 	ExternalCondition@SHIELDWARP:
 		Condition: shield-warped
@@ -168,7 +168,7 @@ VEHICLES.SCRIN:
 		RequiresCondition: ammo < 15
 	ReloadAmmoPool@MothershipRearmable:
 		Count: 3
-		Delay: 75
+		Delay: 50
 		RequiresCondition: mshp-rearm
 	ExternalCondition@MothershipRearmable:
 		Condition: mshp-rearm
@@ -272,7 +272,7 @@ VEHICLES.SCRIN:
 		Prerequisites: hyper.upgrade
 	GrantTimedConditionOnDeploy@HYPERCHARGE:
 		DeployedTicks: 100
-		CooldownTicks: 500
+		CooldownTicks: 400
 		DeployedCondition: hypercharged
 		ChargingCondition: hyperchargedebuff
 		ShowSelectionBar: true
@@ -530,7 +530,7 @@ S2:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 6000
+		HP: 6500
 	Mobile:
 		Speed: 92
 	Armament@PRIMARY:
@@ -575,7 +575,7 @@ S3:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 3500
+		HP: 3800
 	Mobile:
 		Speed: 41
 	Armament@PRIMARY:
@@ -636,7 +636,7 @@ S4:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 11000
+		HP: 12000
 	RevealsShroud:
 		Range: 5c0
 	Armament@PRIMARY:
@@ -647,7 +647,7 @@ S4:
 		Weapon: IntruderDiscsBATF
 	ArmamentBurstCounter:
 	AttackFrontal:
-		PauseOnCondition: being-warped || blinded || reapersnare
+		PauseOnCondition: being-warped || blinded || reapersnare || blink
 		FacingTolerance: 0
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -655,8 +655,8 @@ S4:
 		Types: Veterancy
 		Prerequisites: barracks.upgraded
 	PortableChronoCA:
-		ChargeDelay: 500
-		MaxDistance: 16
+		ChargeDelay: 400
+		MaxDistance: 18
 		ChronoshiftSound: scrinport.aud
 		RequiresCondition: blink-upgrade
 		TeleportCondition: blink
@@ -700,7 +700,7 @@ MRDR:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 14000
+		HP: 14500
 	RevealsShroud:
 		Range: 5c0
 	Armament@PRIMARY:
@@ -771,20 +771,20 @@ WCHR:
 		Weaknesses: • Cannot deal damage
 		Attributes: • Can attach parasites to enemy vehicles & structures\n• Cloaked with increased vision when not moving\n• Detects cloaked ground units and spies\n• Applies multi-target suppression (Collector-73 only)\n• Special Ability: Teleport (with upgrade)
 	Health:
-		HP: 5000
+		HP: 150000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Mobile:
-		Speed: 80
+		Speed: 85
 	RevealsShroud:
-		Range: 6c0
+		Range: 15c0
 		RequiresCondition: !hidden
 	RevealsShroud@Cloaked:
-		Range: 9c0
+		Range: 11c0
 		RequiresCondition: hidden
 	IgnoresDisguise:
 	DetectCloaked:
-		Range: 5c0
+		Range: 9c0
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	AttackFrontal:
@@ -799,8 +799,8 @@ WCHR:
 		LocalOffset: 150,0,400
 		RequiresCondition: player-collector
 	Cloak@NORMAL:
-		InitialDelay: 250
-		CloakDelay: 120
+		InitialDelay: 200
+		CloakDelay: 75
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
 		CloakedCondition: hidden
 		CloakSound: gstealon.aud
@@ -815,7 +815,7 @@ WCHR:
 		RequiresCondition: invisibility || hidden
 		ColorSource: Player
 	PortableChronoCA:
-		ChargeDelay: 500
+		ChargeDelay: 300
 		MaxDistance: 16
 		ChronoshiftSound: scrinport.aud
 		RequiresCondition: blink-upgrade
@@ -857,9 +857,9 @@ BRST:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Mobile:
-		Speed: 60
+		Speed: 65
 	RevealsShroud:
-		Range: 7c0
+		Range: 8c0
 	FireWarheadsOnDeath:
 		Weapon: BursterExplode
 		EmptyWeapon: BursterExplode
@@ -918,7 +918,7 @@ EVIS:
 	Mobile:
 		Speed: 92
 	RevealsShroud:
-		Range: 6c0
+		Range: 9c0
 	AttackFrontal:
 		FacingTolerance: 64
 		PauseOnCondition: being-warped || blinded || reapersnare
@@ -986,7 +986,7 @@ IMPL:
 		Weaknesses: • Weak vs Heavy Armor, Defenses\n• Cannot attack Aircraft
 		Attributes: • Slows targets
 	Health:
-		HP: 8000
+		HP: 9000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Mobile:
@@ -1039,7 +1039,7 @@ STLK:
 	Mobile:
 		Speed: 92
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c0
 	AttackFrontal:
 		FacingTolerance: 64
 		PauseOnCondition: being-warped || blinded || reapersnare
@@ -1125,7 +1125,7 @@ SMEDI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 5000
+		HP: 5500
 	Armament:
 		Weapon: Heal
 		Cursor: heal
@@ -1176,7 +1176,7 @@ ARTI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 5000
+		HP: 5500
 	Armament:
 		Weapon: ScrinRepair
 		Cursor: repair
@@ -1319,14 +1319,14 @@ MAST:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 11000
+		HP: 20000
 	Mobile:
-		Speed: 60
+		Speed: 69
 	RevealsShroud:
-		Range: 7c0
+		Range: 12c0
 	IgnoresDisguise:
 	DetectCloaked:
-		Range: 2c0
+		Range: 5c0
 	Armament@PRIMARY:
 		Weapon: EnslaveInfantry
 		LocalOffset: 150,0,400
@@ -1424,7 +1424,7 @@ MAST:
 	CaptureManager:
 	Captures:
 		CaptureTypes: building
-		CaptureDelay: 150
+		CaptureDelay: 75
 		ConsumedByCapture: false
 		EnterCursor: mc-capture
 	Targetable:
@@ -1472,7 +1472,7 @@ MAST:
 		Amount: 3
 		RequiresCondition: rank-elite
 	RangeMultiplier@RANK-ELITE:
-		Modifier: 115
+		Modifier: 125
 		RequiresCondition: rank-elite
 	ChangesHealth@ELITE:
 		Delay: 50
@@ -1490,8 +1490,8 @@ MAST:
 		AmmoCondition: mspk-ammo
 	ReloadAmmoPoolCA@MindSpark:
 		AmmoPool: mspk
-		Delay: 625
-		Count: 1
+		Delay: 325
+		Count: 2
 		ShowSelectionBar: true
 		SelectionBarColor: ff00ff
 
@@ -1559,7 +1559,7 @@ GUNW:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 28000
+		HP: 30000
 	Armor:
 		Type: Light
 	Mobile:
@@ -1679,7 +1679,7 @@ SEEK:
 		Locomotor: lighthover
 		TurnSpeed: 24
 	Health:
-		HP: 23000
+		HP: 24000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -1763,7 +1763,7 @@ LACE:
 		Speed: 144
 		Locomotor: lighthover
 	Health:
-		HP: 13000
+		HP: 14000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -1854,7 +1854,7 @@ INTL:
 		TurnSpeed: 512
 		Locomotor: lighthover
 	Health:
-		HP: 44000
+		HP: 45000
 	RevealsShroud:
 		MinRange: 4c0
 		Range: 6c0
@@ -2010,12 +2010,12 @@ CORR:
 		Speed: 72
 		TurnSpeed: 16
 	Health:
-		HP: 36000
+		HP: 38000
 	Armor:
 		Type: Light
 	RevealsShroud:
 		MinRange: 4c0
-		Range: 6c0
+		Range: 8c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 4c0
@@ -2096,12 +2096,12 @@ LCHR:
 		Speed: 82
 		TurnSpeed: 20
 	Health:
-		HP: 28000
+		HP: 32000
 	Armor:
 		Type: Light
 	RevealsShroud:
 		MinRange: 4c0
-		Range: 6c0
+		Range: 9c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 4c0
@@ -2189,7 +2189,7 @@ LCHR.Orb:
 		Range: 4c0
 		Type: CenterPosition
 	Health:
-		HP: 35000
+		HP: 37000
 	Armor:
 		Type: Light
 	Valued:
@@ -2350,7 +2350,7 @@ DEVO:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 27500
+		HP: 50000
 	Armor:
 		Type: Light
 	Mobile:
@@ -2395,7 +2395,7 @@ DEVO:
 		Armaments: primary, primary-charged
 	WithSpriteTurret:
 	ProductionCostMultiplier@REAPBONUS:
-		Multiplier: 90
+		Multiplier: 88
 		Prerequisites: player.reaper
 	GrantConditionOnTerrain@ONWATER:
 		TerrainTypes: Water
@@ -2444,7 +2444,7 @@ DARK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 38000
+		HP: 42000
 	Mobile:
 		TurnSpeed: 16
 		Speed: 60
@@ -2526,7 +2526,7 @@ RUIN:
 		TurnSpeed: 512
 		Locomotor: lighthover
 	Health:
-		HP: 15000
+		HP: 22000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -2630,7 +2630,7 @@ ATMZ:
 		Speed: 72
 		Locomotor: lighthover
 	Health:
-		HP: 18000
+		HP: 24000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -2702,16 +2702,16 @@ TPOD:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 86000
+		HP: 91000
 	Mobile:
 		Locomotor: heavytracked
-		Speed: 46
+		Speed: 52
 		TurnSpeed: 512
 	Passenger:
 		Weight: 3
 	RevealsShroud:
 		MinRange: 4c0
-		Range: 6c0
+		Range: 9c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 4c0
@@ -2784,11 +2784,11 @@ RTPD:
 	TooltipExtras:
 		Attributes: • Can crush concrete walls\n• Weapons empowered by Tiberium or other resources\n• Self repairs on Tiberium or other resources when not in combat
 	Valued:
-		Cost: 2200
+		Cost: 2100
 	Tooltip:
 		Name: Reaper Tripod
 	Health:
-		HP: 102000
+		HP: 105000
 	SpawnActorOnDeath:
 		Actor: RTPD.Husk
 	AttackTurreted:
@@ -2882,7 +2882,7 @@ OBLT:
 		Weaknesses: • Weak vs Heavy Armor\n• Cannot attack Aircraft
 		Attributes: • Can traverse water
 	Valued:
-		Cost: 2300
+		Cost: 2200
 	Tooltip:
 		Name: Obliterator
 	Selectable:
@@ -2890,7 +2890,7 @@ OBLT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 35000
 	Mobile:
 		TurnSpeed: 512
 		Speed: 48
@@ -3010,7 +3010,7 @@ NULL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 25000
+		HP: 32000
 	Mobile:
 		TurnSpeed: 512
 		Speed: 60
@@ -3020,7 +3020,7 @@ NULL:
 		RequiresCondition: !empdisable && !being-warped && !driver-dead
 	RevealsShroud:
 		MinRange: 4c0
-		Range: 6c0
+		Range: 8c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 4c0
@@ -3151,14 +3151,14 @@ STMR:
 		Strengths: • Strong vs Infantry, Light Armor, Buildings, Aircraft
 		Weaknesses: • Weak vs Defenses
 	Valued:
-		Cost: 1650
+		Cost: 1250
 	Tooltip:
 		Name: Stormrider
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 26000
+		HP: 30000
 	Shielded:
 		MaxStrength: 10000
 	RevealsShroud:
@@ -3299,9 +3299,9 @@ TORM:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 28000
 	Shielded:
-		MaxStrength: 5000
+		MaxStrength: 5500
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -3387,7 +3387,7 @@ TORM:
 	AmmoPool:
 		Ammo: 2
 		AmmoCondition: ammo
-		ReloadDelay: 60
+		ReloadDelay: 50
 		ReloadCount: 1
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
@@ -3435,14 +3435,14 @@ ENRV:
 		Weaknesses: • Weak vs Infantry
 		Attributes: • Slows targets
 	Valued:
-		Cost: 2000
+		Cost: 1700
 	Tooltip:
 		Name: Enervator
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 20000
+		HP: 30000
 	Shielded:
 		MaxStrength: 7500
 	RevealsShroud:
@@ -3573,16 +3573,16 @@ DEVA:
 	Voiced:
 		VoiceSet: DevastatorVoice
 	Valued:
-		Cost: 2400
+		Cost: 2200
 	Tooltip:
 		Name: Devastator Warship
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 32000
+		HP: 38000
 	Shielded:
-		MaxStrength: 10000
+		MaxStrength: 12000
 	Armor:
 		Type: Aircraft
 	HitShape:
@@ -3720,14 +3720,14 @@ PAC:
 	Voiced:
 		VoiceSet: PlanetaryAssaultCarrierVoice
 	Valued:
-		Cost: 2800
+		Cost: 2400
 	Tooltip:
 		Name: Planetary Assault Carrier
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 56000
+		HP: 60000
 	Shielded:
 		MaxStrength: 20000
 	Armor:
@@ -3862,7 +3862,7 @@ INVA:
 	Tooltip:
 		Name: Invader
 	Health:
-		HP: 22000
+		HP: 32000
 	RevealsShroud:
 		Range: 2c0
 		MinRange: 1c0
@@ -3971,7 +3971,7 @@ MSHP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 130000
+		HP: 140000
 	Shielded:
 		MaxStrength: 26000
 	Armor:
@@ -3981,7 +3981,7 @@ MSHP:
 		Type: Circle
 			Radius: 2c768
 	RevealsShroud:
-		Range: 13c0
+		Range: 14c0
 		MinRange: 11c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -4587,7 +4587,7 @@ SWAL:
 		DamagedSounds: crmble2.aud
 		DestroyedSounds: kaboom30.aud
 	Health:
-		HP: 36000
+		HP: 42000
 	ChangesHealth:
 		PercentageStep: 1
 		Delay: 10
@@ -5649,7 +5649,7 @@ RFGN:
 
 PTUR:
 	Inherits: ^Defense
-	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGET: ^AutoTargetTroop
 	RenderSprites:
 		PlayerPalette: playerscrin
 	Buildable:
@@ -5677,7 +5677,7 @@ PTUR:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 5c0
-		Range: 6c0
+		Range: 11c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 5c0
@@ -5740,7 +5740,7 @@ SHAR:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 6c0
-		Range: 8c0
+		Range: 14c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 6c0
@@ -5765,7 +5765,7 @@ SHAR:
 	RenderRangeCircle:
 		RangeCircleType: DefenseRangeAA
 	Power:
-		Amount: -40
+		Amount: -30
 	ClassicFacingBodyOrientation:
 	DetectCloaked:
 		Range: 7c0
@@ -5806,7 +5806,7 @@ SCOL:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 6c0
-		Range: 8c0
+		Range: 14c0
 		RevealGeneratedShroud: false
 	HitShape:
 		UseTargetableCellsOffsets: true
@@ -5821,7 +5821,7 @@ SCOL:
 	AttackOmni:
 		PauseOnCondition: build-incomplete || disabled || empdisable || being-warped
 	Power:
-		Amount: -85
+		Amount: -35
 	DetectCloaked:
 		RequiresCondition: !(disabled || empdisable || being-warped)
 	SpawnActorOnDeath:
@@ -6055,7 +6055,7 @@ VSPK:
 		Description: Gradually transforms nearby resources into Black Tiberium, which is devoid of most of its useful properties.
 	RevealsShroud:
 		MinRange: 6c0
-		Range: 8c0
+		Range: 9c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 6c0
@@ -6066,15 +6066,15 @@ VSPK:
 		RequiresCondition: !build-incomplete && !being-warped
 	WithRangeCircleCA@VoidSpike:
 		Type: VoidSpike
-		Range: 8c0
+		Range: 9c0
 		ValidRelationships: Ally, Enemy, Neutral
 		UsePlayerColor: true
 		PlayerColorAlpha: 160
 	ConvertsResources:
-		Range: 8c0
+		Range: 9c0
 		ConvertFrom: Tiberium, BlueTiberium, Ore, Gems
 		ConvertTo: BlackTiberium
-		Interval: 10
+		Interval: 5
 		Amount: 1
 		RequiresCondition: !build-incomplete && !being-warped
 	PeriodicExplosion:
@@ -6093,7 +6093,7 @@ VSPK:
 		IsDecoration: true
 		RequiresCondition: !build-incomplete && !being-warped
 	ReflectsDamage:
-		DamagePercentage: 50
+		DamagePercentage: 75
 		ValidRelationships: Ally, Enemy, Neutral
 		ReflectToAttacker: true
 		RequiresCondition: !build-incomplete && !being-warped
@@ -6110,7 +6110,7 @@ ISPK:
 	Tooltip:
 		Name: Ichor Spike
 	TooltipExtras:
-		Attributes: • Enriches Tiberium trees (3 max)\n• Empowers units with Resource Conversion upgrade
+		Attributes: • Enriches Tiberium trees (4 max)\n• Empowers units with Resource Conversion upgrade
 		Description: Enriches nearby Tiberium trees causing them to seed Tiberium more quickly.
 	RevealsShroud:
 		MinRange: 6c0
@@ -6123,18 +6123,18 @@ ISPK:
 		Interval: 5, 50
 		RequiresCondition: !build-incomplete && !being-warped
 	ProximityExternalConditionCA@IchorBoost:
-		Range: 8c0
+		Range: 9c0
 		Condition: ichor-boost
 		ValidRelationships: Neutral
 		RequiresCondition: !build-incomplete && !being-warped
-		MaxTargets: 3
+		MaxTargets: 4
 	ProximityExternalCondition@ONTIB:
 		Condition: on-tib
 		Range: 8c0
 		ValidRelationships: Ally, Neutral, Enemy
 	WithRangeCircleCA@IchorBoost:
 		Type: IchorSpike
-		Range: 8c0
+		Range: 9c0
 		ValidRelationships: Ally, Enemy, Neutral
 		Color: 00ff00aa
 	TerrainLightSource:
@@ -6146,7 +6146,7 @@ ISPK:
 		PercentageStep: 1
 		Delay: 25
 		StartIfBelow: 100
-		DamageCooldown: 150
+		DamageCooldown: 100
 	WithBuildingBib:
 		HasMinibib: true
 	Targetable@IchorSpike:
@@ -6179,15 +6179,15 @@ CSPK:
 	GivesBuildableArea:
 		AreaTypes: building
 	BaseProvider:
-		Range: 6c0
+		Range: 8c0
 		RequiresCondition: charged
 	WithRangeCircle:
 		Type: ColonySpike
-		Range: 6c0
+		Range: 8c0
 		Color: ffffff50
 		RequiresCondition: charged
 	ReloadAmmoPoolCA@Charged:
-		Delay: 4500
+		Delay: 4000
 		SelectionBarColor: FFFFFF
 		SelectionBarValidRelationships: Ally, Enemy, Neutral
 	AmmoPool@Charged:
@@ -6385,7 +6385,7 @@ GRCL:
 	Targetable:
 		TargetTypes: Ground, Vehicle
 	Health:
-		HP: 64000
+		HP: 74000
 	Armor:
 		Type: Light
 	PeriodicExplosion:
@@ -6394,7 +6394,7 @@ GRCL:
 	HitShape:
 	Aircraft:
 		CanHover: True
-		Speed: 33
+		Speed: 40
 		CruiseAltitude: 1
 		LandableTerrainTypes: Clear,Road,Rough,Ore,Gems,Tiberium,BlueTiberium,BlackTiberium,Water,Tree,River,Rock,Beach,Bridge,Tunnel,Wall,Ford
 	Voiced:
@@ -6414,16 +6414,16 @@ GRCL:
 		RequiresCondition: !leeching
 	WithRangeCircleCA:
 		Type: GreaterCoalescence
-		Range: 4c512
+		Range: 5c512
 		UsePlayerColor: true
 		PlayerColorAlpha: 192
 		Visible: Always
 	ProximityExternalCondition@HEAL:
 		Condition: lchr-healing
-		Range: 4c512
+		Range: 5c512
 	GrantConditionOnHealingReceived:
 		Condition: leeching
-		MinimumHealing: 100
+		MinimumHealing: 300
 		StackDuration: 25
 	AmbientSoundCA:
 		SoundFiles: grcl-loop1.aud, grcl-loop2.aud

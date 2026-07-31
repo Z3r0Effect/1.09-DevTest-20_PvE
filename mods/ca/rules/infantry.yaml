@@ -24,7 +24,7 @@ DOG:
 	Selectable:
 		Bounds: 512, 725, -42, -170
 	Health:
-		HP: 1800
+		HP: 8500
 	Mobile:
 		Speed: 94
 		Voice: Move
@@ -34,7 +34,7 @@ DOG:
 	Passenger:
 		Voice: Move
 	RevealsShroud:
-		Range: 6c0
+		Range: 9c0
 	Armament:
 		Weapon: DogJaw
 		ReloadingCondition: attack-cooldown
@@ -218,7 +218,7 @@ E2:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 5000
+		HP: 5200
 	Mobile:
 		Speed: 60
 	Armament@PRIMARY:
@@ -382,7 +382,7 @@ U3:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 6500
+		HP: 6700
 	Mobile:
 		Speed: 41
 		Voice: Move
@@ -625,7 +625,7 @@ E4:
 	Health:
 		HP: 9000
 	Mobile:
-		Speed: 46
+		Speed: 48
 	Armament:
 		Weapon: FireballGun
 		LocalOffset: 341,0,256
@@ -706,7 +706,7 @@ E6:
 		RequiresCondition: deployed && !setting-up
 	BaseProvider:
 		RequiresCondition: deployed && !setting-up
-		Range: 5c0
+		Range: 9c0
 	GrantCondition@EDITOR:
 		Condition: editorhack
 	WithInfantryBody@EDITOR:
@@ -716,7 +716,7 @@ E6:
 		Prerequisites: entrench.upgrade
 	WithRangeCircle:
 		Type: EngineerRange
-		Range: 5c0
+		Range: 9c0
 		Color: ffffff50
 		RequiresCondition: entrench-upgrade
 	-ReloadAmmoDelayMultiplier@Inspiration1:
@@ -755,22 +755,24 @@ SPY:
 		GenericName: Soldier
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
+	Health:
+		HP: 150000
 	-Guard:
 	Mobile:
-		Speed: 54
+		Speed: 68
 		Voice: Move
 	RevealsShroud:
-		Range: 7c0
+		Range: 10c0
 		MinRange: 6c0
 		RevealGeneratedShroud: false
 		RequiresCondition: !player-england
 	RevealsShroud@England:
-		Range: 9c0
+		Range: 11c0
 		MinRange: 6c0
 		RevealGeneratedShroud: false
 		RequiresCondition: player-england
 	RevealsShroud@GAPGEN:
-		Range: 6c0
+		Range: 7c0
 	Passenger:
 		CustomPipType: blue
 		Voice: Move
@@ -881,16 +883,16 @@ E7:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 11000
+		HP: 18000
 	Mobile:
-		Speed: 60
+		Speed: 65
 		Voice: Move
 	Guard:
 		Voice: Move
 	AttackMove:
 		Voice: Move
 	RevealsShroud:
-		Range: 6c0
+		Range: 9c0
 	Passenger:
 		CustomPipType: red
 		Voice: Move
@@ -1167,7 +1169,7 @@ CMEC:
 		CaptureTypes: husk
 		PlayerExperience: 5
 		ConsumedByCapture: False
-		CaptureDelay: 75
+		CaptureDelay: 45
 		ValidRelationships: Ally, Enemy, Neutral
 		PlayerExperienceRelationships: Neutral, Enemy
 		EnterCursor: sell2
@@ -1217,12 +1219,12 @@ HACK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 5000
+		HP: 12000
 	Mobile:
-		Speed: 60
+		Speed: 66
 		Voice: Move
 	RevealsShroud:
-		Range: 5c0
+		Range: 7c0
 	Passenger:
 		CustomPipType: blue
 		Voice: Move
@@ -1415,9 +1417,9 @@ THF:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 5000
+		HP: 150000
 	RevealsShroud:
-		Range: 5c0
+		Range: 10c0
 	Passenger:
 		CustomPipType: blue
 	Infiltrates:
@@ -1437,8 +1439,8 @@ THF:
 		Modifier: 160
 		RequiresCondition: hidden
 	Cloak@NORMAL:
-		InitialDelay: 250
-		CloakDelay: 120
+		InitialDelay: 45
+		CloakDelay: 20
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
 		CloakSound: gstealon.aud
 		UncloakSound: gstealof.aud
@@ -1450,7 +1452,7 @@ THF:
 		RequiresCondition: !cloak-force-disabled && !being-warped
 		PauseOnCondition: invisibility
 	Mobile:
-		Speed: 54
+		Speed: 64
 		Voice: Move
 	GrantConditionOnMovement@MOVING:
 		ValidMovementTypes: Horizontal, Vertical, Turn
@@ -1472,6 +1474,7 @@ THF:
 
 SHOK:
 	Inherits: ^Soldier
+	Inherits@Inspirable: ^Inspirable
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	AutoTargetPriority@DEFAULT:
 		InvalidTargets: NoAutoTarget, WaterStructure, AntiAirDefense, TeslaBoost, Disguised
@@ -1501,11 +1504,11 @@ SHOK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 7500
+		HP: 8000
 	Mobile:
 		Voice: Move
 	RevealsShroud:
-		Range: 5c0
+		Range: 7c0
 	Armament@PRIMARY:
 		Weapon: PortaTesla
 		LocalOffset: 427,0,341
@@ -1560,6 +1563,7 @@ SHOK:
 
 TTRP:
 	Inherits: SHOK
+	Inherits@Inspirable: ^Inspirable
 	Inherits@HEALINGCOOLDOWN: ^HealingCooldown
 	Buildable:
 		BuildPaletteOrder: 91
@@ -1849,7 +1853,7 @@ N4:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 7000
+		HP: 11000
 	Mobile:
 		Speed: 60
 	Armament@PRIMARY:
@@ -1919,7 +1923,7 @@ N5:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 18000
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 		AttackSequences:
@@ -1955,7 +1959,7 @@ N5:
 	FireWarheadsOnDeath:
 		Weapon: UnitExplodeChemSmall
 		EmptyWeapon: UnitExplodeChemSmall
-		Chance: 33
+		Chance: 25
 		DamageSource: Killer
 		RequiresCondition: !being-warped
 	ProducibleWithLevel:
@@ -2044,14 +2048,14 @@ RMBO:
 	Guard:
 		Voice: Move
 	Health:
-		HP: 11000
+		HP: 18000
 	Passenger:
 		CustomPipType: red
 		Voice: Move
 	AttackMove:
 		Voice: Move
 	RevealsShroud:
-		Range: 6c0
+		Range: 9c0
 	Armament:
 		Weapon: smg
 	Armament@BATF:
@@ -2173,13 +2177,13 @@ SNIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 4500
+		HP: 6500
 	RevealsShroud:
-		Range: 7c0
+		Range: 13c0
 		MinRange: 6c0
 		RevealGeneratedShroud: false
 	RevealsShroud@GAPGEN:
-		Range: 6c0
+		Range: 8c0
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry
 	AutoTargetPriority@DEFAULTVEH:
@@ -2215,8 +2219,8 @@ SNIP:
 		Speed: 46
 		Voice: Move
 	Cloak@NORMAL:
-		InitialDelay: 200
-		CloakDelay: 200
+		InitialDelay: 150
+		CloakDelay: 150
 		CloakedCondition: hidden
 		CloakSound: gstealon.aud
 		UncloakSound: gstealof.aud
@@ -2294,7 +2298,7 @@ BORI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 11000
+		HP: 18000
 	Mobile:
 		Speed: 60
 		Voice: Move
@@ -2396,7 +2400,7 @@ SAB:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
-		Range: 7c0
+		Range: 10c0
 		MinRange: 6c0
 		RevealGeneratedShroud: false
 	RevealsShroud@GAPGEN:
@@ -2416,7 +2420,7 @@ SAB:
 		StandSequences: stand
 		IdleSequences: idle1
 	Health:
-		HP: 5000
+		HP: 60000
 	Mobile:
 		Speed: 46
 		Voice: Move
@@ -2433,8 +2437,8 @@ SAB:
 		InitialStance: HoldFire
 		InitialStanceAI: Defend
 	Cloak:
-		InitialDelay: 200
-		CloakDelay: 200
+		InitialDelay: 30
+		CloakDelay: 30
 		CloakedCondition: hidden
 		IsPlayerPalette: true
 		DetectionTypes: Cloak
@@ -2454,7 +2458,7 @@ SAB:
 	IgnoresDisguise:
 	DetectCloaked:
 		DetectionTypes: Cloak
-		Range: 5c0
+		Range: 7c0
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	WithProductionIconOverlay:
@@ -2485,12 +2489,12 @@ ASSA:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 4500
+		HP: 11000
 	Mobile:
-		Speed: 54
+		Speed: 64
 		Voice: Move
 	RevealsShroud:
-		Range: 7c0
+		Range: 9c0
 		MinRange: 6c0
 		RevealGeneratedShroud: false
 	RevealsShroud@GAPGEN:
@@ -2522,7 +2526,7 @@ ASSA:
 		Armaments: secondary
 	ReloadAmmoPoolCA@PreparedC4:
 		AmmoPool: prepared-c4
-		Delay: 100
+		Delay: 75
 		RequiresCondition: preparing-c4
 		ShowSelectionBar: false
 	ReloadAmmoPoolCA@CancelC4:
@@ -2536,7 +2540,7 @@ ASSA:
 		ArmamentNames: tertiary
 		RevokeDelay: 27
 	Demolition:
-		DetonationDelay: 45
+		DetonationDelay: 30
 		Voice: Demolish
 		DamageTypes: ExplosionDeath
 	AttackFrontalCharged:
@@ -2593,7 +2597,7 @@ CONF:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 13000
+		HP: 14000
 	Armament@PRIMARY:
 		Weapon: ConfessorGun
 	Armament@BATF:
@@ -2622,13 +2626,13 @@ CONF:
 		Voice: Move
 	SpawnActorAbility:
 		Actors: iok
-		Range: 1c896
+		Range: 4c896
 		SkipMakeAnimations: false
 		CircleColor: ff000077
 		SpawnSounds: iok-place.aud
 		AmmoPool: idol
 		TargetModifiedCursor: ability2
-		ConcurrentLimit: 1
+		ConcurrentLimit: 2
 		KillExcessDamageTypes: SmallExplosionDeath
 		AvoidActors: true
 	WithSpawnedActorIdentifier:
@@ -2637,11 +2641,11 @@ CONF:
 	AmmoPool@IdolOfKane:
 		Name: idol
 		Armaments: none
-		Ammo: 1
+		Ammo: 2
 	ReloadAmmoPoolCA@IdolOfKane:
 		AmmoPool: idol
-		Delay: 750
-		Count: 1
+		Delay: 350
+		Count: 2
 		ShowSelectionBar: true
 		SelectionBarColor: aaaaaa
 	WithAmmoPipsDecoration@IdolOfKane:
@@ -2680,12 +2684,12 @@ ACOL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 9000
+		HP: 14500
 	Mobile:
-		Speed: 60
+		Speed: 62
 		Voice: Move
 	RevealsShroud:
-		Range: 5c0
+		Range: 6c0
 	Armament@PRIMARY:
 		Weapon: PortaLaser
 		LocalOffset: 427,0,341
@@ -2737,7 +2741,7 @@ TPLR:
 	Health:
 		HP: 21000
 	RevealsShroud:
-		Range: 6c0
+		Range: 7c0
 	Buildable:
 		Prerequisites: obliortmpl, anyradar, tmpp, ~infantry.marked, ~techlevel.high
 		BuildPaletteOrder: 112
@@ -2850,7 +2854,7 @@ JJET:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 6000
+		HP: 6500
 	Targetable:
 		RequiresCondition: !airborne && !being-warped
 		TargetTypes: Ground, Infantry
@@ -3052,6 +3056,7 @@ JJET.UPG.Husk:
 
 E8:
 	Inherits: ^Soldier
+	Inherits@Inspirable: ^Inspirable
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: InfantrySQ, InfantryMQ
@@ -3069,9 +3074,9 @@ E8:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 8000
+		HP: 10400
 	RevealsShroud:
-		Range: 5c0
+		Range: 7c0
 	Armament@PRIMARY:
 		Weapon: RadTrooperBeam
 		LocalOffset: 427,0,341
@@ -3143,7 +3148,7 @@ DESO:
 	Valued:
 		Cost: 600
 	Health:
-		HP: 18500
+		HP: 20500
 	Voiced:
 		VoiceSet: DesVoice
 	Mobile:
@@ -3453,8 +3458,8 @@ RMBC:
 	GrantConditionOnHealingReceived@REPAIRCOOLDOWN:
 		Condition: repair-cooldown
 		RequiredHealing: 85000
-		StackDuration: 1000
-		MinimumHealing: 2500
+		StackDuration: 2000
+		MinimumHealing: 3000
 		DamageTypes: DirectRepair
 		ShowSelectionBar: true
 	Encyclopedia:
@@ -3481,9 +3486,9 @@ IVAN:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 12000
+		HP: 15000
 	Mobile:
-		Speed: 72
+		Speed: 75
 		Voice: Move
 	AttackMove:
 		Voice: Move
@@ -3552,16 +3557,16 @@ BRUT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 32000
+		HP: 35000
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 60
+		Speed: 75
 		Voice: Move
 	Passenger:
 		CargoType: Brute
 	RevealsShroud:
-		Range: 5c0
+		Range: 6c0
 	Selectable:
 		DecorationBounds: 640, 896, 0, -341
 	Targetable@MindControlImmune:
@@ -3689,7 +3694,7 @@ SHAD:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
-		Range: 8c0
+		Range: 9c0
 	Passenger:
 		CustomPipType: red
 		Voice: Move
@@ -3708,7 +3713,7 @@ SHAD:
 		MinIdleDelay: 80
 		MaxIdleDelay: 250
 	Health:
-		HP: 5000
+		HP: 7500
 	Mobile:
 		Speed: 72
 		Voice: Move
@@ -3804,7 +3809,7 @@ SGLI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 9000
+		HP: 9500
 	RevealsShroud:
 		Range: 10c0
 		MinRange: 8c0
@@ -3965,7 +3970,7 @@ SGLI.discarded:
 		Categories: Husk
 
 BH:
-	Inherits: ^Soldier
+	Inherits: ^Cyborg
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: InfantrySQ, InfantryMQ
@@ -3977,15 +3982,15 @@ BH:
 		Strengths: • Strong vs Heavy Armor, Light Armor
 		Weaknesses: • Weak vs Buildings, Defenses\n• Cannot attack Aircraft
 	Valued:
-		Cost: 500
+		Cost: 400
 	Tooltip:
 		Name: Black Hand Trooper
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 16000
+		HP: 27500
 	Mobile:
-		Speed: 66
+		Speed: 60
 		Voice: Move
 	RevealsShroud:
 		Range: 5c0
@@ -4008,7 +4013,7 @@ BH:
 	FireWarheadsOnDeath:
 		Weapon: UnitExplodeFlameSmall
 		EmptyWeapon: UnitExplodeFlameSmall
-		Chance: 33
+		Chance: 10
 		DamageSource: Killer
 		RequiresCondition: !being-warped
 	ProducibleWithLevel:
@@ -4062,7 +4067,7 @@ YURI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 11000
+		HP: 19000
 	Mobile:
 		Speed: 60
 		Voice: Move
@@ -4122,7 +4127,7 @@ YURI:
 		RequiresCondition: deployed && !being-warped
 	GrantTimedConditionOnDeploy:
 		DeployedTicks: 25
-		CooldownTicks: 150
+		CooldownTicks: 100
 		DeployedCondition: deployed
 		DeployingCondition: deploying
 		ShowSelectionBar: true
@@ -4138,7 +4143,7 @@ YURI:
 		Armaments: primary, secondary, aidummy
 		FacingTolerance: 0
 	RevealsShroud:
-		Range: 7c0
+		Range: 12c0
 	Passenger:
 		CustomPipType: red
 		Voice: Move
@@ -4207,7 +4212,7 @@ YURI:
 		Count: 1
 	ReloadAmmoPool@Vehicles:
 		AmmoPool: secondary
-		Delay: 100
+		Delay: 75
 		Count: 1
 	MindControllerCapacityModifier@RANK-1:
 		Amount: 1
@@ -4219,10 +4224,10 @@ YURI:
 		Amount: 3
 		RequiresCondition: rank-elite
 	RangeMultiplier@RANK-ELITE:
-		Modifier: 115
+		Modifier: 120
 		RequiresCondition: rank-elite
 	RangedGpsRadarProvider:
-		Range: 13c0
+		Range: 14c0
 		TargetTypes: Infantry, Vehicle, Air, Structure
 	WithRangeCircle:
 		Type: YuriDetection
@@ -4247,7 +4252,7 @@ SEAL:
 	Tooltip:
 		Name: Navy SEAL
 	Health:
-		HP: 16000
+		HP: 17000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Passenger:
@@ -4256,7 +4261,7 @@ SEAL:
 	AttackMove:
 		Voice: Move
 	RevealsShroud:
-		Range: 6c0
+		Range: 9c0
 	Buildable:
 		BuildPaletteOrder: 131
 		Prerequisites: ~infantry.usa, atek, ~techlevel.high
@@ -4271,7 +4276,7 @@ SEAL:
 	Voiced:
 		VoiceSet: SealVoice
 	Mobile:
-		Speed: 60
+		Speed: 67
 		Locomotor: seal
 		Voice: Move
 	Guard:
@@ -4404,7 +4409,7 @@ ENLI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 32500
 	Mobile:
 		Speed: 54
 		Voice: Move
@@ -4455,8 +4460,8 @@ ENLI:
 	GrantConditionOnHealingReceived@REPAIRCOOLDOWN:
 		Condition: repair-cooldown
 		RequiredHealing: 85000
-		StackDuration: 1000
-		MinimumHealing: 2500
+		StackDuration: 3000
+		MinimumHealing: 4000
 		DamageTypes: DirectRepair
 		ShowSelectionBar: true
 	TargetedAttackAbility:
@@ -4496,7 +4501,7 @@ ENLI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 3500
+		HP: 4500
 	Armament@PRIMARY:
 		Weapon: ChemicalMortar
 		LocalOffset: 200,0,155
@@ -4555,7 +4560,7 @@ CDOG:
 	Valued:
 		Cost: 400
 	Mobile:
-		Speed: 100
+		Speed: 105
 	Tooltip:
 		Name: Cyberdog
 	Armor:
@@ -4701,7 +4706,7 @@ CMSR:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 12000
+		HP: 13000
 	Mobile:
 		Voice: Move
 	AttackMove:
@@ -4713,7 +4718,7 @@ CMSR:
 	Voiced:
 		VoiceSet: CommissarVoice
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c0
 	Armament@PRIMARY:
 		Weapon: CommissarPistol
 	Armament@BATF:
@@ -4733,7 +4738,7 @@ CMSR:
 		Types: Veterancy
 		Prerequisites: barracks.upgraded
 	ProximityExternalCondition@Inspiration:
-		Range: 7c0
+		Range: 8c0
 		Condition: cmsr-inspiration
 		ValidRelationships: Ally
 		AffectsParent: true
@@ -4745,7 +4750,7 @@ CMSR:
 		Position: TopLeft
 		ValidRelationships: Ally, Enemy, Neutral
 	WithRadiatingCircle:
-		EndRadius: 7c0
+		EndRadius: 8c0
 		Interval: 75
 		Duration: 50
 		ValidRelationships: Ally
@@ -4753,7 +4758,7 @@ CMSR:
 	IgnoresDisguise:
 	DetectCloaked:
 		DetectionTypes: Cloak, AirCloak
-		Range: 5c0
+		Range: 6c0
 	Encyclopedia:
 		Category: Soviets/Infantry
 
@@ -4834,7 +4839,7 @@ ZTRP:
 		ChargeDelay: 250
 		SelectionBarColor: ffaa00
 		CircleColor: ffaa0077
-		MaxDistance: 7
+		MaxDistance: 14
 		Speed: 175
 		RequiresCondition: !being-warped && !reapersnare
 	Contrail@Jumping:
@@ -4886,7 +4891,7 @@ ZRAI:
 	Mobile:
 		Speed: 60
 	TargetedLeapAbility:
-		MaxDistance: 10
+		MaxDistance: 15
 		Speed: 200
 	EncyclopediaExtras:
 		AdditionalInfo: Requires Seek & Destroy Strategy.
@@ -5042,7 +5047,7 @@ HOPL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 12000
 	Armor:
 		Type: None
 	Mobile:
@@ -5132,7 +5137,7 @@ TIGR:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 8000
+		HP: 10500
 	Armor:
 		Type: None
 	Mobile:
@@ -5298,7 +5303,7 @@ REAP:
 	Health:
 		HP: 30000
 	Mobile:
-		Speed: 60
+		Speed: 65
 		Voice: Move
 		PauseOnCondition: being-warped || reapersnare || empdisable
 	AttackFrontal:
@@ -5355,7 +5360,7 @@ REAP:
 		Condition: repair-cooldown
 		RequiredHealing: 85000
 		StackDuration: 1000
-		MinimumHealing: 2500
+		MinimumHealing: 4000
 		DamageTypes: DirectRepair
 		ShowSelectionBar: true
 	FireWarheadsOnDeath:

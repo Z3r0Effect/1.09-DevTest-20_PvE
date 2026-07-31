@@ -73,7 +73,7 @@ PROXYMINESPAWNWATER:
 CRATE:
 	Inherits: ^Crate
 	GiveCashCrateAction:
-		Amount: 1000
+		Amount: 6000
 		SelectionShares: 50
 		UseCashTick: true
 	LevelUpCrateAction:
@@ -278,7 +278,7 @@ MONEYCRATE:
 	Tooltip:
 		Name: Money Crate
 	GiveCashCrateAction:
-		Amount: 500
+		Amount: 1500
 		SelectionShares: 1
 		Sequence: dollar
 	RenderSprites:
@@ -1270,7 +1270,7 @@ jamming.field:
 		ValidRelationships: Enemy, Neutral
 		Condition: jammed
 	WithDistortionHalo:
-		LineCount: 8
+		LineCount: 10
 		Distortion: 280
 		DistortionAnimation: 150
 		Radius: 6c0

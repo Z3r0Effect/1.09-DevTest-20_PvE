@@ -69,7 +69,7 @@ FCOM:
 		Description: Capture to give buildable area.
 		ValidRelationships: Neutral, Enemy
 	RevealsShroud:
-		Range: 5c0
+		Range: 8c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 4c0
@@ -82,7 +82,7 @@ FCOM:
 	GivesBuildableArea:
 		AreaTypes: building, defense
 	BaseProvider:
-		Range: 8c0
+		Range: 12c0
 	InstantlyRepairable:
 	Power:
 		Amount: 0
@@ -115,9 +115,9 @@ HOSP:
 	Tooltip:
 		Name: Hospital
 	TooltipExtras:
-		Description: Heals nearby infantry and trains two Medics/Rejuvenators every two minutes.
+		Description: Heals nearby infantry and trains four Medics/Rejuvenators every two minutes.
 	TooltipDescription@ally:
-		Description: Heals nearby infantry and trains two Medics/Rejuvenators every two minutes.
+		Description: Heals nearby infantry and trains four Medics/Rejuvenators every two minutes.
 		ValidRelationships: Ally
 	TooltipDescription@other:
 		Description: Capture to heal nearby infantry and train two Medics/Rejuvenators every two minutes.
@@ -146,7 +146,7 @@ HOSP:
 		Type: Hospital
 		ChargeDuration: 3000
 		InitialChargeDuration: 125
-		Actors: medi, medi
+		Actors: medi, medi, medi, medi
 		ShowSelectionBar: true
 		RequiresCondition: !is-neutral && !scrinplayer
 		ResetTraitOnOwnerChange: true
@@ -211,9 +211,9 @@ MACS:
 	Tooltip:
 		Name: Machine Shop
 	TooltipExtras:
-		Description: Repairs nearby vehicles and trains two Mechanics/Artificers every two minutes.
+		Description: Repairs nearby vehicles and trains four Mechanics/Artificers every two minutes.
 	TooltipDescription@ally:
-		Description: Repairs nearby vehicles and trains two Mechanics/Artificers every two minutes.
+		Description: Repairs nearby vehicles and trains four Mechanics/Artificers every two minutes.
 		ValidRelationships: Ally
 	TooltipDescription@other:
 		Description: Capture to repair nearby vehicles and train two Mechanics/Artificers every two minutes.
@@ -240,9 +240,9 @@ MACS:
 	RallyPoint:
 	PeriodicProducerCA@MECHANIC:
 		Type: Macs
-		ChargeDuration: 4500
+		ChargeDuration: 3000
 		InitialChargeDuration: 125
-		Actors: mech, mech
+		Actors: mech, mech, mech, mech
 		ShowSelectionBar: true
 		RequiresCondition: !is-neutral && !scrinplayer
 		ResetTraitOnOwnerChange: true
@@ -250,7 +250,7 @@ MACS:
 		ChargeColor: ffffff
 	PeriodicProducerCA@ARTIFICER:
 		Type: Macs
-		ChargeDuration: 4500
+		ChargeDuration: 3000
 		InitialChargeDuration: 125
 		Actors: arti, arti
 		ShowSelectionBar: true
@@ -500,10 +500,10 @@ MISS:
 	Health:
 		HP: 60000
 	RevealsShroud:
-		Range: 12c0
+		Range: 18c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
-		Range: 6c0
+		Range: 10c0
 	Armor:
 		Type: Wood
 	Tooltip:
@@ -586,7 +586,7 @@ OILB:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 80000
+		HP: 100000
 	RevealsShroud:
 		Range: 4c0
 	CaptureManager:
@@ -597,7 +597,7 @@ OILB:
 	InstantlyRepairable:
 	CashTrickler:
 		Interval: 375
-		Amount: 125
+		Amount: 200
 		RequiresCondition: enabled
 	GrantPeriodicCondition@Tick:
 		ActiveDuration: 1
@@ -614,7 +614,7 @@ OILB:
 		Name: Oil Derrick
 	TooltipExtras:
 		Description: Provides additional funds.
-		Attributes: • Gives $125 every 15 seconds.\n• Gives $400 on first capture.
+		Attributes: • Gives $200 every 15 seconds.\n• Gives $1000 on first capture.
 	TooltipDescription@ally:
 		Description: Provides additional funds.
 		ValidRelationships: Ally
@@ -645,10 +645,10 @@ OILB:
 	GrantConditionIfOwnerIsNeutral:
 		Condition: is-neutral
 	GivesCashOnCapture@defloration:
-		Amount: 400
+		Amount: 1000
 		RequiresCondition: !has-been-captured
 	GivesCashOnCapture@subsequent:
-		Amount: 125
+		Amount: 200
 		RequiresCondition: has-been-captured
 	GrantDelayedCondition:
 		Delay: 1
@@ -683,9 +683,9 @@ OILR:
 	Tooltip:
 		Name: Oil Refinery
 	TooltipExtras:
-		Description: Provides 10% discount on all unit production.
+		Description: Provides 12% discount on all unit production.
 	TooltipDescription@ally:
-		Description: Provides 10% discount on all unit production.
+		Description: Provides 12% discount on all unit production.
 		ValidRelationships: Ally
 	TooltipDescription@other:
 		Description: Capture to receive a 10% discount on all unit production.

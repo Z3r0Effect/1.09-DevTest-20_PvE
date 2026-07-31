@@ -378,21 +378,6 @@ Player:
 					Attractiveness: 1
 					TargetMetric: None
 					CheckRadius: 5c0
-			nukepower:
-				OrderName: NukePowerInfoOrder
-				MinimumAttractiveness: 3000
-				Consideration@1:
-					Against: Enemy
-					Types: Structure, AirHighValue
-					Attractiveness: 1
-					TargetMetric: Value
-					CheckRadius: 5c0
-				Consideration@2:
-					Against: Ally
-					Types: Air, Ground, Water
-					Attractiveness: -10
-					TargetMetric: Value
-					CheckRadius: 7c0
 			chemmissilepower:
 				OrderName: chemmissile
 				MinimumAttractiveness: 3000
@@ -423,21 +408,6 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 5c0
-			ioncannonpower:
-				OrderName: ioncannon
-				MinimumAttractiveness: 3000
-				Consideration@1:
-					Against: Enemy
-					Types: Structure, AirHighValue
-					Attractiveness: 1
-					TargetMetric: Value
-					CheckRadius: 5c0
-				Consideration@2:
-					Against: Ally
-					Types: Air, Ground, Water
-					Attractiveness: -10
-					TargetMetric: Value
-					CheckRadius: 7c0
 			surgicalstrikepower:
 				OrderName: surgicalstrike
 				MinimumAttractiveness: 3000
@@ -460,21 +430,6 @@ Player:
 					Against: Enemy
 					Types: Air
 					Attractiveness: 5
-					TargetMetric: Value
-					CheckRadius: 7c0
-			stormpower:
-				OrderName: storm
-				MinimumAttractiveness: 3000
-				Consideration@1:
-					Against: Enemy
-					Types: Structure, AirHighValue
-					Attractiveness: 1
-					TargetMetric: Value
-					CheckRadius: 5c0
-				Consideration@2:
-					Against: Ally
-					Types: Air, Ground, Water
-					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
 			clusterminepower:
@@ -838,7 +793,7 @@ Player:
 	BridgeRepairBotModule:
 		RequiresCondition: enable-brutal-ai || enable-vhard-ai || enable-hard-ai || enable-normal-ai || enable-easy-ai
 		RepairActorTypes: e6, n6, s6
-		EnemyAvoidanceRadius: 4c0
+		EnemyAvoidanceRadius: 2c0
 	BuildingRepairBotModuleCA:
 		RequiresCondition: enable-brutal-ai || enable-vhard-ai || enable-hard-ai || enable-normal-ai || enable-easy-ai || enable-naval-ai
 	PowerDownBotModuleCA:
@@ -850,7 +805,7 @@ Player:
 		McvFactoryTypes: weap, weap.td, airs, wsph
 		ScanForNewMcvInterval: 80
 		MaxBaseRadius: 25
-		MinimumConstructionYardCount: 3
+		MinimumConstructionYardCount: 4
 	McvManagerBotModuleCA@upper:
 		RequiresCondition: enable-vhard-ai || enable-hard-ai
 		McvTypes: mcv, amcv, smcv
@@ -858,12 +813,15 @@ Player:
 		McvFactoryTypes: weap, weap.td, airs, wsph
 		ScanForNewMcvInterval: 80
 		MaxBaseRadius: 25
-		MinimumConstructionYardCount: 2
+		MinimumConstructionYardCount: 3
 	McvManagerBotModuleCA@lower:
 		RequiresCondition: enable-normal-ai || enable-easy-ai || enable-naval-ai
 		McvTypes: mcv, amcv, smcv
 		ConstructionYardTypes: fact, afac, sfac
 		McvFactoryTypes: weap, weap.td, airs, wsph
+		ScanForNewMcvInterval: 80
+		MaxBaseRadius: 25
+		MinimumConstructionYardCount: 2
 	BaseBuilderBotModuleCA@brutal-vhard:
 		RequiresCondition: enable-brutal-ai || enable-vhard-ai
 		BuildingQueues: BuildingSQ, BuildingMQ, Upgrade
@@ -920,9 +878,6 @@ Player:
 			munp: 8000
 			orep: 8000
 			sign: 8000
-			mslo: 8000
-			mslo.nod: 8000
-			weat: 8000
 			eye: 8000
 			rfgn: 8000
 		BuildingLimits:
@@ -1014,15 +969,12 @@ Player:
 			afld: 10
 			afld.gdi: 10
 			grav: 4
-			mslo: 1
 			iron: 1
 			pdox: 1
 			sgen: 1
 			sgen.shadow: 1
 			mani: 1
 			eye: 1
-			weat: 1
-			mslo.nod: 1
 			rfgn: 1
 			npwr: 1
 			cvat: 1
@@ -1191,9 +1143,6 @@ Player:
 			munp: 8000
 			orep: 8000
 			sign: 8000
-			mslo: 8000
-			mslo.nod: 8000
-			weat: 8000
 			eye: 8000
 			rfgn: 8000
 		BuildingLimits:
@@ -1285,15 +1234,12 @@ Player:
 			afld: 10
 			afld.gdi: 10
 			grav: 4
-			mslo: 1
 			iron: 1
 			pdox: 1
 			sgen: 1
 			sgen.shadow: 1
 			mani: 1
 			eye: 1
-			weat: 1
-			mslo.nod: 1
 			rfgn: 1
 			npwr: 1
 			cvat: 1
@@ -1425,6 +1371,7 @@ Player:
 		SiloTypes: silo,silo.td,silo.scrin
 		AntiAirTypes: sam, nsam, agun, cram, shar
 		DefenseTypes: pbox, hbox, htur, gun, gun.td, gtwr, atwr, ptur, scol, obli, ltur, stwr, tsla, ftur, ttur, pris, sam, nsam, agun, cram, shar
+		MaxBaseRadius: 20
 		BuildingIntervals:
 			proc: 2250
 			proc.td: 2250
@@ -1461,9 +1408,6 @@ Player:
 			munp: 8000
 			orep: 8000
 			sign: 8000
-			mslo: 8000
-			mslo.nod: 8000
-			weat: 8000
 			eye: 8000
 			rfgn: 8000
 		BuildingLimits:
@@ -1555,15 +1499,12 @@ Player:
 			afld: 10
 			afld.gdi: 10
 			grav: 4
-			mslo: 1
 			iron: 1
 			pdox: 1
 			sgen: 1
 			sgen.shadow: 1
 			mani: 1
 			eye: 1
-			weat: 1
-			mslo.nod: 1
 			rfgn: 1
 			npwr: 1
 			cvat: 1
@@ -2219,14 +2160,14 @@ Player:
 			orca: Aircraft, Heavy
 			orcb: Heavy, Light, Concrete
 			a10: None, Wood
-			a10.sw: None, Wood, Aircraft
-			a10.gau: None, Wood, Light
+			a10.sw: Wood, Aircraft
+			a10.gau: Wood, Light
 			auro: Heavy, Concrete, Wood
 			jack: Heavy, Light, Concrete
 			apch: None, Wood, Aircraft, Light
 			venm: None, Aircraft, Light
 			rah: None, Wood, Light
-			harr: None, Wood, Aircraft, Light
+			harr: Wood, Aircraft
 			scrn: Aircraft, Heavy, Concrete
 			stmr: Aircraft, None, Wood, Light
 			torm: Aircraft, Heavy
@@ -2237,6 +2178,7 @@ Player:
 		IdleBaseUnitsMaximum: 150
 		MaxAircraft: 3
 		MaintainAirSuperiority: true
+		MaxAirSuperiority: 2
 		AirToAirUnits: heli, yak, mig, orca, apch, scrn, venm, stmr, torm, enrv, a10.sw, a10.gau, harr, beag
 		AirThreatUnits: heli, harr, pmak, beag, hind, yak, mig, suk, suk.upg, kiro, orca, a10, a10.sw, a10.gau, orcb, auro, apch, venm, rah, scrn, stmr, enrv, mshp, phan, kamv, shde, vert, mcor
 		ProductionMinCashRequirement: 1800
@@ -2250,13 +2192,13 @@ Player:
 			harv.td.upg: 2250
 			harv.scrin: 2250
 			harv.chrono: 2250
-			rmbo: 2250
-			e7: 2250
-			mast: 2250
-			yuri: 2250
-			bori: 2250
-			u3.squad: 3750
-			gtnk.squad: 3750
+			rmbo: 3500
+			e7: 3500
+			mast: 3500
+			yuri: 3500
+			bori: 3500
+			u3.squad: 4250
+			gtnk.squad: 4250
 		UnitLimits:
 			e2: 5
 			n2: 8
@@ -2314,11 +2256,11 @@ Player:
 			harv.chrono: 8
 	SquadManagerBotModuleCA@hard:
 		RequiresCondition: enable-hard-ai
-		MinimumAttackForceDelay: 25
-		SquadValue: 6000
-		SquadValueMaxEarlyBonus: 2500
-		SquadValueMinLateBonus: 4000
-		SquadValueMaxLateBonus: 10000
+		MinimumAttackForceDelay: 250
+		SquadValue: 12000
+		SquadValueMaxEarlyBonus: 5000
+		SquadValueMinLateBonus: 8000
+		SquadValueMaxLateBonus: 20000
 		AirUnitsTypes: heli, harr, pmak, beag, hind, yak, mig, suk, suk.upg, kiro, orca, a10, a10.sw, a10.gau, orcb, auro, jack, apch, venm, rah, scrn, stmr, torm, enrv, mshp, phan, kamv, shde, vert, mcor
 		ExcludeFromSquadsTypes: harv, harv.td, harv.td.upg, harv.scrin, harv.chrono, mcv, amcv, smcv, dog, e6, n6, s6, badr, badr.bomber, badr.cbomber, badr.nbomber, badr.mbomber, b2b, p51, tran.paradrop, halo.paradrop, nhaw.paradrop, u2, smig, a10.bomber, c17, c17.cargo, c17.clustermines, c17.xo, galx, uav, ocar.reinforce, ocar.xo, ocar.pod, horn, yf23.bomber, pod, pod2, pod3, buzz, buzz.ai, mspk
 		NavalUnitsTypes: ss,msub,dd,ca,lst,pt,dd2,pt2,ss2,isub,sb,seas
@@ -2326,12 +2268,12 @@ Player:
 		HarasserTypes: 1tnk, rtnk, bike, gdrn, gdrn.tow, hmmv.tow, stnk.nod, hstk, spec, lace, seek, pbul, n2, e2, ivan, n4, n5, e4
 		ConstructionYardTypes: fact,afac,sfac
 		StaticAntiAirTypes: agun, sam, nsam, cram, shar
-		ProtectionScanRadius: 12
+		ProtectionScanRadius: 16
 		HighValueTargetTypes: fact, afac, sfac, proc, proc.td, proc.scrin, atek, stek, gtek, tmpl, scrt, harv, harv.td, harv.td.upg, harv.scrin, harv.chrono
 		HighValueTargetPriority: 15
 		IgnoredEnemyTargetTypes: Wall
 		IndirectRouteChance: 40
-		AirToAirPriority: 50
+		AirToAirPriority: 20
 		BigAirThreats: pac, deva, kiro, mshp
 		AirSquadTargetArmorTypes:
 			heli: Aircraft, Heavy
@@ -2347,14 +2289,14 @@ Player:
 			orca: Aircraft, Heavy
 			orcb: Heavy, Light, Concrete
 			a10: None, Wood
-			a10.sw: None, Wood, Aircraft
-			a10.gau: None, Wood, Light
+			a10.sw: Wood, Aircraft
+			a10.gau: Wood, Light
 			auro: Heavy, Concrete, Wood
 			jack: Heavy, Light, Concrete
 			apch: None, Wood, Aircraft, Light
 			venm: None, Aircraft, Light
 			rah: None, Wood, Light
-			harr: None, Wood, Aircraft, Light
+			harr: Wood, Aircraft
 			scrn: Aircraft, Heavy, Concrete
 			stmr: Aircraft, None, Wood, Light
 			torm: Aircraft, Heavy
@@ -2363,9 +2305,9 @@ Player:
 	UnitBuilderBotModuleCA@hard:
 		RequiresCondition: enable-hard-ai
 		IdleBaseUnitsMaximum: 150
-		MaxAircraft: 2
-		MaintainAirSuperiority: true
-		MaxAirSuperiority: 8
+		MaxAircraft: 3
+		MaintainAirSuperiority: false
+		MaxAirSuperiority: 2
 		AirToAirUnits: heli, yak, mig, orca, apch, scrn, venm, stmr, torm, enrv, a10.sw, a10.gau, harr, beag
 		AirThreatUnits: heli, harr, pmak, beag, hind, yak, mig, suk, suk.upg, kiro, orca, a10, a10.sw, a10.gau, orcb, auro, apch, venm, rah, scrn, stmr, enrv, mshp, phan, kamv, shde, vert, mcor
 		UnitDelays:
@@ -2382,11 +2324,11 @@ Player:
 			harv.td.upg: 2250
 			harv.scrin: 2250
 			harv.chrono: 2250
-			rmbo: 3000
-			e7: 3000
-			mast: 3000
-			yuri: 3000
-			bori: 3000
+			rmbo: 5000
+			e7: 5000
+			mast: 4500
+			yuri: 4500
+			bori: 4500
 			u3.squad: 4500
 			gtnk.squad: 4500
 		UnitLimits:
@@ -2394,63 +2336,63 @@ Player:
 			n2: 8
 			e4: 5
 			n4: 5
-			dog: 2
-			cmsr: 1
-			mgg: 1
-			mrj: 1
-			cdrn: 1
-			nhaw: 1
-			apc.ai: 2
-			apc2.nodai: 2
-			apc2.gdiai: 2
-			delp.ai: 2
-			vulc.ai: 5
-			btr.ai: 5
-			btr.yuri.ai: 5
-			hmmv: 2
-			bggy: 2
-			rbug: 2
-			jeep: 2
-			sapc.ai: 1
-			sapc.ai2: 1
-			e6: 1
-			n6: 1
-			s6: 1
-			u3.squad: 2
+			dog: 5
+			cmsr: 3
+			mgg: 3
+			mrj: 3
+			cdrn: 3
+			nhaw: 3
+			apc.ai: 3
+			apc2.nodai: 3
+			apc2.gdiai: 3
+			delp.ai: 3
+			vulc.ai: 6
+			btr.ai: 6
+			btr.yuri.ai: 3
+			hmmv: 3
+			bggy: 3
+			rbug: 3
+			jeep: 3
+			sapc.ai: 2
+			sapc.ai2: 2
+			e6: 3
+			n6: 3
+			s6: 3
+			u3.squad: 3
 			seal: 5
-			mech: 3
-			medi: 3
-			msub: 4
-			ca: 4
-			isub: 4
-			cv: 4
+			mech: 4
+			medi: 4
+			msub: 5
+			ca: 5
+			isub: 5
+			cv: 5
 			jjet: 8
 			bjet: 8
 			v3rl: 3
 			nukc: 3
-			thwk: 3
-			zeus: 3
-			oblt: 3
-			kiro: 3
-			disc: 3
-			deva: 3
-			pac: 3
-			ss: 10
-			ss2: 10
-			sb: 10
-			seas: 10
-			harv: 8
-			harv.td: 8
-			harv.td.upg: 8
-			harv.scrin: 8
-			harv.chrono: 8
+			thwk: 5
+			zeus: 4
+			oblt: 5
+			kiro: 4
+			disc: 4
+			deva: 4
+			pac: 4
+			ss: 12
+			ss2: 12
+			sb: 12
+			seas: 12
+			harv: 9
+			harv.td: 9
+			harv.td.upg: 9
+			harv.scrin: 9
+			harv.chrono: 9
 	SquadManagerBotModuleCA@normal:
 		RequiresCondition: enable-normal-ai
 		MinimumAttackForceDelay: 25
-		SquadValue: 5000
+		SquadValue: 6000
 		SquadValueMaxEarlyBonus: 2000
-		SquadValueMinLateBonus: 2000
-		SquadValueMaxLateBonus: 7000
+		SquadValueMinLateBonus: 3500
+		SquadValueMaxLateBonus: 10500
 		AirUnitsTypes: heli, harr, pmak, beag, hind, yak, mig, suk, suk.upg, kiro, orca, a10, a10.sw, a10.gau, orcb, auro, jack, apch, venm, rah, scrn, stmr, torm, enrv, mshp, phan, kamv, shde, vert, mcor
 		ExcludeFromSquadsTypes: harv, harv.td, harv.td.upg, harv.scrin, harv.chrono, mcv, amcv, smcv, dog, e6, n6, s6, badr, badr.bomber, badr.cbomber, badr.nbomber, badr.mbomber, b2b, p51, tran.paradrop, halo.paradrop, nhaw.paradrop, u2, smig, a10.bomber, c17, c17.cargo, c17.clustermines, c17.xo, galx, uav, ocar.reinforce, ocar.xo, ocar.pod, horn, yf23.bomber, pod, pod2, pod3, buzz, buzz.ai, mspk
 		NavalUnitsTypes: ss,msub,dd,ca,lst,pt,pt2,ss2,dd2,isub,sb,seas
@@ -2460,13 +2402,14 @@ Player:
 		NavalProductionTypes: spen,syrd,spen.nod,syrd.gdi
 		IgnoredEnemyTargetTypes: Wall
 		IndirectRouteChance: 30
-		AirToAirPriority: 40
+		AirToAirPriority: 30
 		AirSquadTargetArmorTypes:
 			mshp: Wood
 	UnitBuilderBotModuleCA@normal:
 		RequiresCondition: enable-normal-ai
 		IdleBaseUnitsMaximum: 150
 		MaxAircraft: 4
+		MaintainAirSuperiority: false
 		UnitDelays:
 			arty: 5250
 			arty.nod: 5250
@@ -2480,11 +2423,11 @@ Player:
 			harv.chrono: 2250
 			rmbo: 3750
 			e7: 3750
-			mast: 3750
-			yuri: 3750
-			bori: 3750
-			u3.squad: 4500
-			gtnk.squad: 4500
+			mast: 8750
+			yuri: 8750
+			bori: 8750
+			u3.squad: 8500
+			gtnk.squad: 8500
 		UnitLimits:
 			e2: 5
 			n2: 8
@@ -2519,14 +2462,14 @@ Player:
 			cv: 4
 			jjet: 8
 			bjet: 8
-			v3rl: 2
-			nukc: 2
+			v3rl: 3
+			nukc: 3
 			thwk: 2
 			zeus: 2
-			oblt: 2
+			oblt: 3
 			kiro: 2
 			disc: 2
-			deva: 2
+			deva: 3
 			pac: 2
 			ss: 10
 			ss2: 10
@@ -2734,16 +2677,16 @@ World:
 		Composition@Baseline:
 			IsBaseline: true
 			UnitsToBuild:
-				e1: 65
-				n1: 65
-				s1: 65
-				n1c: 65
-				s2: 15
+				e1: 50
+				n1: 50
+				s1: 50
+				n1c: 50
+				s2: 20
 				e3: 30
 				n3: 30
 				s3: 30
 				n3c: 30
-				n5: 15
+				n5: 20
 				e6: 5
 				n6: 5
 				s6: 5
@@ -2752,24 +2695,24 @@ World:
 				medi: 3
 				mech: 3
 				u3.squad: 30
-				seal: 15
-				dog: 2
+				seal: 10
+				dog: 15
 				shok: 15
 				ttrp: 15
 				e8: 15
 				deso: 15
 				brut: 15
-				snip: 15
+				snip: 5
 				jjet: 15
 				bjet: 15
 				acol: 15
 				tplr: 15
-				bh: 15
-				ztrp: 15
-				zrai: 15
-				zdef: 15
-				enfo: 15
-				hopl: 15
+				bh: 20
+				ztrp: 10
+				zrai: 10
+				zdef: 10
+				enfo: 10
+				hopl: 10
 				tigr: 15
 				cryt: 15
 				evis: 15
@@ -2780,36 +2723,36 @@ World:
 				enli: 10
 				reap: 10
 				e7: 15
-				bori: 15
-				yuri: 15
-				rmbo: 15
-				mast: 15
+				bori: 10
+				yuri: 10
+				rmbo: 10
+				mast: 10
 				apc.ai: 20
 				sapc.ai: 10
 				sapc.ai2: 10
 				cust: 10
 				intl.ai: 70
 				intl.ai2: 20
-				jeep: 30
-				apc2.nodai: 20
-				apc2.gdiai: 20
+				jeep: 40
+				apc2.nodai: 30
+				apc2.gdiai: 30
 				delp.ai: 20
 				vulc.ai: 10
-				hmmv: 30
+				hmmv: 45
 				mdrn: 20
-				xo: 20
+				xo: 10
 				wolv: 20
 				pbul: 20
 				jack: 10
-				btr: 20
-				btr.ai: 10
-				btr.yuri: 20
+				btr: 30
+				btr.ai: 15
+				btr.yuri: 25
 				btr.yuri.ai: 10
 				trpc: 10
-				gunw: 20
-				shrw: 20
-				bggy: 30
-				rbug: 30
+				gunw: 30
+				shrw: 30
+				bggy: 40
+				rbug: 40
 				arty: 20
 				howi: 20
 				ptnk: 20
@@ -2818,25 +2761,25 @@ World:
 				katy: 20
 				grad: 20
 				nukc: 20
-				msam: 25
+				msam: 35
 				mlrs: 20
-				spec: 20
-				hsam: 25
-				ruin: 20
-				atmz: 20
+				spec: 25
+				hsam: 35
+				ruin: 25
+				atmz: 25
 				ifv.ai: 70
-				2tnk: 45
-				gtnk.squad: 20
-				tnkd: 45
+				2tnk: 55
+				gtnk.squad: 30
+				tnkd: 50
 				3tnk: 70
-				3tnk.atomic: 70
-				3tnk.yuri: 70
-				3tnk.atomicyuri: 70
+				3tnk.atomic: 65
+				3tnk.yuri: 50
+				3tnk.atomicyuri: 50
 				3tnk.rhino: 70
 				3tnk.rhino.atomic: 70
 				3tnk.rhino.yuri: 70
 				3tnk.rhino.atomicyuri: 70
-				4tnk: 40
+				4tnk: 50
 				4tnk.atomic: 40
 				4tnk.erad: 40
 				4tnk.erad.atomic: 40
@@ -2848,18 +2791,18 @@ World:
 				ovld.atomic: 30
 				ovld.erad: 30
 				ovld.erad.atomic: 30
-				avtr: 20
+				avtr: 25
 				tpod: 40
 				rtpd: 40
 				ltnk: 40
-				ltnk.laser: 40
+				ltnk.laser: 50
 				mtnk: 70
 				mtnk.drone: 70
 				mtnk.laser: 70
-				devo: 45
-				dark: 45
-				bike: 15
-				htnk: 40
+				devo: 40
+				dark: 40
+				bike: 20
+				htnk: 50
 				htnk.ion: 40
 				htnk.hover: 40
 				htnk.drone: 40
@@ -2904,15 +2847,15 @@ World:
 				harr: 3
 				pmak: 3
 				beag: 3
-				yak: 2
+				yak: 3
 				disr: 10
-				kiro: 2
-				disc: 2
+				kiro: 3
+				disc: 3
 				a10: 5
 				a10.sw: 5
 				a10.gau: 5
-				auro: 5
-				stmr: 5
+				auro: 3
+				stmr: 3
 				enrv: 3
 				deva: 3
 				pac: 3
@@ -2930,7 +2873,7 @@ World:
 				sb: 1
 				seas: 1
 		Composition@InfantryRaid:
-			MaxProducedValue: 1000
+			MaxProducedValue: 1500
 			UnitQueues: InfantrySQ, InfantryMQ
 			UnitsToBuild:
 				e2: 100
@@ -2940,7 +2883,7 @@ World:
 				n5: 100
 				ivan: 100
 		Composition@VehicleRaid:
-			MaxProducedValue: 4000
+			MaxProducedValue: 7000
 			UnitQueues: VehicleSQ, VehicleMQ
 			UnitsToBuild:
 				bike: 100
@@ -2952,7 +2895,7 @@ World:
 				1tnk: 100
 				rtnk: 100
 		Composition@StealthTankAssault:
-			MaxProducedValue: 12000
+			MaxProducedValue: 8000
 			UnitQueues: VehicleSQ, VehicleMQ
 			UnitsToBuild:
 				stnk.nod: 100
@@ -2960,14 +2903,14 @@ World:
 				spec: 100
 		Composition@BlackHandAssault:
 			Prerequisites: player.blackh
-			MaxProducedValue: 12000
+			MaxProducedValue: 9000
 			UnitQueues: InfantrySQ, InfantryMQ, VehicleSQ, VehicleMQ
 			UnitsToBuild:
 				bh: 100
 				hftk: 100
 		Composition@ZocomAssault:
 			Prerequisites: player.zocom
-			MaxProducedValue: 15000
+			MaxProducedValue: 12000
 			UnitQueues: InfantrySQ, InfantryMQ, VehicleSQ, VehicleMQ
 			UnitsToBuild:
 				disr: 50

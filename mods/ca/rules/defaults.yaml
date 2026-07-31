@@ -205,12 +205,12 @@
 		RequiresCondition: owned-by-brutal-ai && !noinsurance
 	CashTrickler@vhardinsurance:
 		Interval: 375
-		Amount: 1300
+		Amount: 1400
 		ShowTicks: False
 		RequiresCondition: owned-by-vhard-ai && !noinsurance
 	CashTrickler@hardinsurance:
 		Interval: 375
-		Amount: 900
+		Amount: 1100
 		ShowTicks: False
 		RequiresCondition: owned-by-hard-ai && !noinsurance
 	CashTrickler@normalinsurance:
@@ -391,7 +391,7 @@
 ^Berserk:
 	SpeedMultiplier@BERSERK:
 		RequiresCondition: berserkactive
-		Modifier: 125
+		Modifier: 130
 	ReloadDelayMultiplier@BERSERK:
 		RequiresCondition: berserkactive
 		Modifier: 50
@@ -399,7 +399,7 @@
 		Condition: berserk
 	Berserkable@BERSERK:
 		RequiresCondition: berserkactive
-		MaxRange: 6c0
+		MaxRange: 7c0
 	WithPalettedOverlay@BERSERK:
 		RequiresCondition: berserkactive
 		Palette: berserk
@@ -442,7 +442,7 @@
 		Modifier: 115
 	SpeedMultiplier@FRENZYDEBUFF:
 		RequiresCondition: !frenzy && frenzyinit
-		Modifier: 85
+		Modifier: 80
 
 ^FrenzyInfantry:
 	Inherits: ^Frenzy
@@ -503,19 +503,19 @@
 	ExternalCondition@HeroOfTheUnion:
 		Condition: herooftheunion
 	FlatHealthDamageMultiplier@HeroOfTheUnion:
-		HP: 28000
+		HP: 5000
 		RequiresCondition: herooftheunion
 	SpeedMultiplier@HeroOfTheUnion:
 		Modifier: 120
 		RequiresCondition: herooftheunion
 	ReloadDelayMultiplier@HeroOfTheUnion:
-		Modifier: 66
+		Modifier: 85
 		RequiresCondition: herooftheunion
 	ReloadAmmoDelayMultiplier@HeroOfTheUnion:
-		Modifier: 66
+		Modifier: 85
 		RequiresCondition: herooftheunion
 	RangeMultiplier@HeroOfTheUnion:
-		Modifier: 150
+		Modifier: 120
 		RequiresCondition: herooftheunion
 	WithIdleOverlay@HeroOfTheUnionLight:
 		Sequence: light
@@ -538,11 +538,11 @@
 ^HeroOfTheUnionTargetableGrenFlamer:
 	Inherits: ^HeroOfTheUnionTargetable
 	FlatHealthDamageMultiplier@HeroOfTheUnion:
-		HP: 5000
+		HP: 2500
 	ReloadDelayMultiplier@HeroOfTheUnion:
 		Modifier: 90
 	RangeMultiplier@HeroOfTheUnion:
-		Modifier: 170
+		Modifier: 125
 
 ^IdolOfKane:
 	ExternalCondition@IdolOfKaneBuff:
@@ -575,7 +575,7 @@
 	DummyConditionGranter@Chronoshifted:
 		Condition: chronoshifted
 	HealthCapDamageMultiplier@CHRONO:
-		MaxHealthEquivalent: 47000
+		MaxHealthEquivalent: 55000
 		RequiresCondition: chronoshifted
 	GrantTimedCondition@TemporalFlux:
 		ForceFullDuration: true
@@ -664,7 +664,7 @@
 ^TemporalReinforcement:
 	GrantTimedCondition@TEMPINC:
 		Condition: warpin
-		Duration: 1000
+		Duration: 1500
 	KillsSelf@TEMPINC:
 		GrantsCondition: warpout
 		RequiresCondition: !warpin
@@ -797,7 +797,7 @@
 		Condition: resourcedrain
 	CashTrickler@ResourceDrain:
 		Interval: 50
-		Amount: -30
+		Amount: -50
 		RequiresCondition: resourcedrain
 	WithColoredOverlay@ResourceDrain:
 		RequiresCondition: resourcedrain
@@ -844,31 +844,31 @@
 		Prerequisites: seek3.strat
 	DamageMultiplier@HOLD:
 		RequiresCondition: hold
-		Modifier: 95
+		Modifier: 92
 	DamageMultiplier@HOLD2:
 		RequiresCondition: hold2
-		Modifier: 95
+		Modifier: 89
 	DamageMultiplier@HOLD3:
 		RequiresCondition: hold3
-		Modifier: 95
+		Modifier: 86
 	FirepowerMultiplier@BOMBARD:
 		RequiresCondition: bombard
-		Modifier: 103
+		Modifier: 108
 	FirepowerMultiplier@BOMBARD2:
 		RequiresCondition: bombard2
-		Modifier: 103
+		Modifier: 112
 	FirepowerMultiplier@BOMBARD3:
 		RequiresCondition: bombard3
-		Modifier: 103
+		Modifier: 117
 	ReloadDelayMultiplier@BOMBARD:
 		RequiresCondition: bombard
-		Modifier: 97
+		Modifier: 95
 	ReloadDelayMultiplier@BOMBARD2:
 		RequiresCondition: bombard2
-		Modifier: 97
+		Modifier: 90
 	ReloadDelayMultiplier@BOMBARD3:
 		RequiresCondition: bombard3
-		Modifier: 97
+		Modifier: 85
 	RangeMultiplier@SEEK:
 		RequiresCondition: seek
 		Modifier: 105
@@ -877,16 +877,16 @@
 		Modifier: 105
 	RangeMultiplier@SEEK2:
 		RequiresCondition: seek2
-		Modifier: 105
+		Modifier: 108
 	SpeedMultiplier@SEEK2:
 		RequiresCondition: seek2
-		Modifier: 105
+		Modifier: 108
 	RangeMultiplier@SEEK3:
 		RequiresCondition: seek3
-		Modifier: 105
+		Modifier: 112
 	SpeedMultiplier@SEEK3:
 		RequiresCondition: seek3
-		Modifier: 105
+		Modifier: 112
 	WithDecoration@HOLD:
 		Image: pips
 		Sequence: pip-armor
@@ -1092,7 +1092,7 @@
 		RequiresCondition: cyborgdmg-upgrade
 		Modifier: 110
 	ProductionTimeMultiplier@CYBORGPROD:
-		Multiplier: 90
+		Multiplier: 80
 		Prerequisites: cyborgprod.upgrade
 	SpeedMultiplier@CYBORGSPEED:
 		RequiresCondition: cyborgspeed-upgrade
@@ -1104,7 +1104,7 @@
 	DamageTypeDamageMultiplier@CYBORGFLAKARMORMINOR:
 		RequiresCondition: cyborgarmor-upgrade
 		DamageTypes: FlakVestMitigatedMinor
-		Modifier: 95
+		Modifier: 92
 
 ^CustodianBuff:
 	ExternalCondition@InspirationCmsr:
@@ -1253,7 +1253,7 @@
 ^TankBusterVulnerability:
 	DamageTypeDamageMultiplier@TANKBUSTERVULN:
 		DamageTypes: TankBuster
-		Modifier: 133
+		Modifier: 140
 
 ^AirToGroundProtection:
 	DamageTypeDamageMultiplier@A2GPROTECTION:
@@ -1269,15 +1269,15 @@
 		Modifier: 133
 	ReloadDelayMultiplier@GYRO:
 		RequiresCondition: gyrostabilizers
-		Modifier: 133
+		Modifier: 115
 	TimedConditionBar@GYRO:
 		Condition: gyrostabilizers
 	ExternalCondition@GYRO:
 		Condition: gyrostabilizers
 	GrantTimedConditionOnDeploy@GYRO:
 		DeployedCondition: gyrostabilizers
-		CooldownTicks: 1500
-		DeployedTicks: 500
+		CooldownTicks: 950
+		DeployedTicks: 550
 		StartsFullyCharged: true
 		ChargingColor: 808000
 		DischargingColor: ffff00
@@ -1377,7 +1377,7 @@
 		TargetTypes: AtomicAmmoTargetable
 	AmmoPool@ATOMICAMMO:
 		Armaments: primary
-		Ammo: 12
+		Ammo: 16
 		InitialAmmo: 0
 		AmmoCondition: has-atomic-ammo
 	WithAmmoPipsDecoration@ATOMICAMMO:
@@ -1389,12 +1389,12 @@
 		RequiresCondition: has-atomic-ammo
 		AmmoPools: primary
 	ReloadAmmoPool@ATOMICAMMO:
-		Count: 12
+		Count: 16
 		Delay: 1
 		RequiresCondition: atomic-ammo && has-atomic-ammo < 12
 	ReloadAmmoPoolCA@ATOMICAMMODECAY:
-		Count: -12
-		Delay: 3000
+		Count: -16
+		Delay: 2800
 		RequiresCondition: has-atomic-ammo
 		ShowSelectionBar: false
 
@@ -1491,7 +1491,7 @@
 		Prerequisites: player.eagle
 	RepairsUnits:
 		ValuePercentage: 0
-		HpPerStep: 1000
+		HpPerStep: 2000
 		Interval: 7
 		StartRepairingNotification: Repairing
 		StartRepairingTextNotification: Repairing.
@@ -1592,8 +1592,8 @@
 
 ^CrateCloak:
 	Cloak@CRATE-CLOAK:
-		InitialDelay: 90
-		CloakDelay: 90
+		InitialDelay: 80
+		CloakDelay: 80
 		CloakSound: trans1.aud
 		UncloakSound: appear1md.aud
 		CloakStyle: Palette
@@ -2251,6 +2251,17 @@
 		StationaryInterval: 18
 		MovingInterval: 6
 
+^AutoTargetTroop:
+	AutoTarget:
+		AttackAnythingCondition: stance-attackanything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Infantry, Water, Underwater, Defense
+		InvalidTargets: NoAutoTarget, WaterStructure, AntiAirDefense, Vehicle
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: stance-attackanything
+		ValidTargets: Vehicle, Structure, AntiAirDefense, Mine
+		InvalidTargets: NoAutoTarget
+
 ^AutoTargetGround:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
@@ -2344,34 +2355,34 @@
 		Prerequisites: global-bounty
 	GivesBountyCA:
 		RequiresCondition: global-bounty
-		Percentage: 15
+		Percentage: 20
 		BountyPoolType: FromLosses
 
 ^EconomyPolicyDiscount:
 	ProductionCostMultiplier@EconomyPolicy1:
-		Multiplier: 85
+		Multiplier: 82
 		Prerequisites: economy.policy, influence.level1, !influence.level2
 	ProductionCostMultiplier@EconomyPolicy2:
-		Multiplier: 80
+		Multiplier: 77
 		Prerequisites: economy.policy, influence.level2, !influence.level3
 	ProductionCostMultiplier@EconomyPolicy3:
-		Multiplier: 75
+		Multiplier: 72
 		Prerequisites: economy.policy, influence.level3
 
 ^EconomyPolicyTimeReduction:
 	ProductionTimeMultiplier@EconomyPolicy1:
-		Multiplier: 85
+		Multiplier: 82
 		Prerequisites: economy.policy, influence.level1, !influence.level2
 	ProductionTimeMultiplier@EconomyPolicy2:
-		Multiplier: 80
+		Multiplier: 77
 		Prerequisites: economy.policy, influence.level2, !influence.level3
 	ProductionTimeMultiplier@EconomyPolicy3:
-		Multiplier: 75
+		Multiplier: 72
 		Prerequisites: economy.policy, influence.level3
 
 ^EconomyPolicyMcvSpeedBonus:
 	SpeedMultiplier@EconomyPolicy2:
-		Modifier: 120
+		Modifier: 125
 		RequiresCondition: economy-policy2
 	GrantConditionOnPrerequisite@EconomyPolicy2:
 		Condition: economy-policy2
@@ -2391,13 +2402,13 @@
 		Modifier: 77
 		RequiresCondition: defense-policy2
 	ChangesHealth@DefensePolicyRepairs:
-		Step: 200
+		Step: 275
 		StartIfBelow: 100
-		Delay: 24
+		Delay: 14
 		DamageCooldown: 0
 		RequiresCondition: defense-policy2 && being-repaired
 	RevealsShroudMultiplier@DefensePolicyVision:
-		Modifier: 150
+		Modifier: 165
 		RequiresCondition: defense-policy2
 
 ^DefensePolicyDefenseRangeBonus:
@@ -2405,7 +2416,7 @@
 		Condition: defense-policy3
 		Prerequisites: defense.policy, influence.level3
 	FirepowerMultiplier@DefensePolicyDamage:
-		Modifier: 115
+		Modifier: 135
 		RequiresCondition: defense-policy3
 
 ^DefensePolicyGapBonus:
@@ -2427,13 +2438,13 @@
 		Condition: development-policy3
 		Prerequisites: development.policy, influence.level3
 	GainsExperienceMultiplier@DevelopmentPolicy1:
-		Modifier: 120
+		Modifier: 150
 		RequiresCondition: development-policy1
 	GainsExperienceMultiplier@DevelopmentPolicy2:
-		Modifier: 140
+		Modifier: 170
 		RequiresCondition: development-policy2
 	GainsExperienceMultiplier@DevelopmentPolicy3:
-		Modifier: 160
+		Modifier: 185
 		RequiresCondition: development-policy3
 
 ^DevelopmentPolicyDiscount:
@@ -2443,10 +2454,10 @@
 
 ^SovietT4Boost:
 	ProductionTimeMultiplier@IndustrialPlantBoost:
-		Multiplier: 95
+		Multiplier: 94
 		Prerequisites: indp, !indplowpower
 	ProductionCostMultiplier@IndustrialPlantBoost:
-		Multiplier: 90
+		Multiplier: 88
 		Prerequisites: indp, !indplowpower
 	ProductionTimeMultiplier@MunitionsPlantBoost:
 		Multiplier: 85
@@ -3053,10 +3064,10 @@
 		Condition: on-bluetib
 	ChangesHealth@THEAL:
 		Step: 0
-		PercentageStep: 1
-		Delay: 15
+		PercentageStep: 3
+		Delay: 10
 		StartIfBelow: 100
-		DamageCooldown: 150
+		DamageCooldown: 100
 		RequiresCondition: on-tib || on-bluetib
 		DamageTypes: ToxinDeath
 	WithDecoration@REDCROSS:
@@ -3667,8 +3678,8 @@
 	GivesBuildableArea:
 		AreaTypes: building, defense, fake
 	RepairableBuilding:
-		RepairStep: 500
-		RepairPercent: 30
+		RepairStep: 450
+		RepairPercent: 40
 		RepairingNotification: Repairing
 		RequiresCondition: !being-warped
 		RepairCondition: being-repaired
@@ -3818,7 +3829,7 @@
 	-SpawnActorsOnSellCA:
 	-InfiltrateToCreateProxyActor@InfiltratorVision:
 	RepairableBuilding:
-		RepairStep: 700
+		RepairStep: 550
 		-RepairPercent:
 	Sellable:
 		RequiresCondition: !build-incomplete && !c4 && !being-warped && !hacked
@@ -4127,10 +4138,10 @@
 		Condition: fast-regrowth
 		Prerequisites: global.fastregrowth
 	SeedsResourceMultiplier@FastRegrowth:
-		Modifier: 50
+		Modifier: 42
 		RequiresCondition: fast-regrowth
 	SeedsResourceMultiplier@IchorBoost:
-		Modifier: 80
+		Modifier: 50
 		RequiresCondition: ichor-boost
 	ExternalCondition@IchorBoost:
 		Condition: ichor-boost
@@ -4144,7 +4155,7 @@
 		Offset: 0,0,300
 	SeedsResource@BlackTiberium:
 		ResourceType: BlackTiberium
-		Interval: 66
+		Interval: 46
 		RequiresCondition: voidspike
 	WithPalettedOverlay@VoidSpike:
 		Palette: voidspike
