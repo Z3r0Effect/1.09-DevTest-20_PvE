@@ -823,7 +823,6 @@ Player:
 			munp: 8000
 			orep: 8000
 			sign: 8000
-			eye: 8000
 		BuildingLimits:
 			barr: 6
 			tent: 6
@@ -918,7 +917,6 @@ Player:
 			sgen: 1
 			sgen.shadow: 1
 			mani: 1
-			eye: 1
 			npwr: 1
 			cvat: 1
 			indp: 1
@@ -1086,7 +1084,6 @@ Player:
 			munp: 8000
 			orep: 8000
 			sign: 8000
-			eye: 8000
 		BuildingLimits:
 			barr: 6
 			tent: 6
@@ -1181,7 +1178,6 @@ Player:
 			sgen: 1
 			sgen.shadow: 1
 			mani: 1
-			eye: 1
 			npwr: 1
 			cvat: 1
 			indp: 1
@@ -2708,22 +2704,22 @@ World:
 				hsam: 35
 				ruin: 25
 				atmz: 25
-				ifv.ai: 70
+				ifv.ai: 60
 				2tnk: 55
 				gtnk.squad: 30
 				tnkd: 50
 				3tnk: 70
 				3tnk.atomic: 65
-				3tnk.yuri: 50
-				3tnk.atomicyuri: 50
+				3tnk.yuri: 55
+				3tnk.atomicyuri: 55
 				3tnk.rhino: 70
 				3tnk.rhino.atomic: 70
 				3tnk.rhino.yuri: 70
 				3tnk.rhino.atomicyuri: 70
-				4tnk: 50
-				4tnk.atomic: 40
-				4tnk.erad: 40
-				4tnk.erad.atomic: 40
+				4tnk: 55
+				4tnk.atomic: 45
+				4tnk.erad: 45
+				4tnk.erad.atomic: 45
 				apoc: 30
 				apoc.atomic: 30
 				apoc.erad: 30
