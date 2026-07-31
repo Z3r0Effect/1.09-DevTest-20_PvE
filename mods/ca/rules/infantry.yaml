@@ -382,7 +382,7 @@ U3:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 6700
+		HP: 9000
 	Mobile:
 		Speed: 41
 		Voice: Move
@@ -577,7 +577,7 @@ U3.squad:
 		Weaknesses: • Weak vs Infantry, Light Armor\n• Weak anti-infantry weapon when not deployed
 		Attributes: • Deploys for personal anti-tank fortification\n• Uncrushable when deployed
 	Valued:
-		Cost: 1750
+		Cost: 2300
 	RenderSprites:
 		Image: squad.airborne
 	ProduceActorPowerCA:
@@ -3990,7 +3990,7 @@ BH:
 	Health:
 		HP: 25500
 	Mobile:
-		Speed: 60
+		Speed: 56
 		Voice: Move
 	RevealsShroud:
 		Range: 5c0

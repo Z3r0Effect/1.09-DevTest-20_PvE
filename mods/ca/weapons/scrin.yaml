@@ -979,12 +979,12 @@ EnervatorBoltsAA:
 
 InvaderLauncher:
 	ReloadDelay: 5
-	Range: 8c0
+	Range: 9c0
 	ValidTargets: Air, AirSmall, Ground, Water
 	Projectile: InstantHit
 	Warhead@1Dam: TargetDamage
 		ValidTargets: Air, AirSmall, Ground, Water
-		Damage: 5000
+		Damage: 10000
 		Versus:
 			None: 0
 			Wood: 0
@@ -1006,7 +1006,7 @@ InvaderZap:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 1000
+		Damage: 3000
 		Versus:
 			None: 80
 			Wood: 30
@@ -1033,14 +1033,14 @@ InvaderZapAA:
 		Speed: 1c768
 	ValidTargets: Air, AirSmall
 	Warhead@1Dam: SpreadDamage
-		Damage: 235
+		Damage: 650
 		Range: 0, 0c64, 0c256, 1c0
 		Falloff: 100, 100, 30, 15
 		ValidTargets: Air
 		ValidRelationships: Enemy, Neutral
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@smallDamage: SpreadDamage
-		Damage: 235
+		Damage: 650
 		Spread: 341
 		Falloff: 100, 50, 14, 0
 		ValidTargets: AirSmall
@@ -1085,7 +1085,7 @@ StormColumnZap:
 	ReloadDelay: 35
 	Burst: 7
 	BurstDelays: 2
-	Range: 11c511
+	Range: 12c511
 	StartBurstReport: stormcolumn-fire1.aud, stormcolumn-fire2.aud
 	Projectile: ElectricBolt
 		Colors: 6042f5E6, B961FDE6, B5A3E8E6, 6D4AD2E6, B289DCE6, FFFFFFE6
@@ -1096,7 +1096,7 @@ StormColumnZap:
 		DistortionAnimation: 96
 		ZOffset: 512
 	Warhead@1Dam: SpreadDamage
-		Damage: 1800
+		Damage: 2400
 		Versus:
 			None: 55
 			Wood: 60
@@ -1113,7 +1113,7 @@ StormColumnZap:
 
 IonCloudZap:
 	Inherits: StormColumnZap
-	ReloadDelay: 175
+	ReloadDelay: 75
 	Burst: 1
 	ValidTargets: Ground, Water
 	Projectile: ElectricBolt
@@ -1130,7 +1130,7 @@ IonCloudMinorZap:
 	Inherits: IonCloudZap
 	Range: 6c512
 	Warhead@1Dam: SpreadDamage
-		Damage: 2500
+		Damage: 3000
 
 IonCloudChargeSource:
 	ReloadDelay: 175
@@ -1606,12 +1606,12 @@ RiftInit:
 
 Rift:
 	ReloadDelay: 5
-	Range: 3c0
+	Range: 5c0
 	ValidTargets: Ground, Water
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c0
-		Damage: 2300
+		Damage: 2600
 		Falloff: 100, 95, 50, 40, 35, 30, 15, 10, 5
 		ValidTargets: Ground, Trees, Underwater, Air, AirSmall
 		Versus:
@@ -1656,15 +1656,15 @@ BuzzerSpawner:
 		Versus:
 			None: 100
 			Wood: 1
-			Light: 30
-			Heavy: 1
+			Light: 45
+			Heavy: 15
 			Concrete: 1
 			Brick: 0
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 		ValidRelationships: Enemy, Neutral
 	Warhead@Spawn: SpawnActor
 		Actors: buzz
-		Range: 1
+		Range: 3
 		ForceGround: false
 		ValidTargets: Ground, Water
 		ImpactActors: false
@@ -1676,13 +1676,13 @@ BuzzerSpawnerAI:
 
 BuzzerVortex:
 	ReloadDelay: 5
-	Range: 4c0
+	Range: 6c0
 	ValidTargets: Ground, Water
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 682
 		Falloff: 100, 70, 40, 0
-		Damage: 150
+		Damage: 650
 		Versus:
 			None: 100
 			Wood: 10
@@ -1693,13 +1693,13 @@ BuzzerVortex:
 		DamageTypes: BulletDeath
 		ValidRelationships: Enemy, Neutral
 	Warhead@2Dam: HealthPercentageDamage
-		Spread: 1c0
-		Damage: 4
+		Spread: 3c0
+		Damage: 12
 		Versus:
 			None: 100
-			Wood: 3
+			Wood: 15
 			Light: 30
-			Heavy: 3
+			Heavy: 12
 			Concrete: 3
 			Brick: 0
 		DamageTypes: BulletDeath
@@ -1707,7 +1707,7 @@ BuzzerVortex:
 
 BuzzerTargeting:
 	ReloadDelay: 50
-	Range: 4c0
+	Range: 7c0
 	ValidTargets: Ground, Water
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
@@ -1797,7 +1797,7 @@ MothershipChargeBeam:
 		ZOffset: 2048
 
 MothershipBeam:
-	ReloadDelay: 125
+	ReloadDelay: 150
 	Range: 1c512
 	TargetActorCenter: true
 	InvalidTargets: Vehicle, Infantry, Ship
@@ -1841,7 +1841,7 @@ MothershipBeam:
 MothershipDiscs:
 	Inherits: DevastatorDiscs
 	Report: mshp-zap1.aud, mshp-zap2.aud
-	Range: 9c0
+	Range: 10c0
 	MinRange: 1c0
 	ReloadDelay: 65
 	Burst: 6
@@ -1856,7 +1856,7 @@ MothershipDiscs:
 		ShadowColor: 00000033
 		Speed: 280
 	Warhead@1Dam: SpreadDamage
-		Damage: 3750
+		Damage: 6550
 		Versus:
 			None: 100
 			Wood: 45
@@ -1871,6 +1871,7 @@ MothershipDiscs:
 PlasmaBomb:
 	Inherits: MothershipDiscs
 	ReloadDelay: 60
+	Range: 9c0
 	Burst: 1
 	-ValidTargets:
 	Projectile: Bullet
@@ -1878,7 +1879,7 @@ PlasmaBomb:
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
 		Falloff: 1000, 448, 192, 64, 26, 10, 0
-		Damage: 400
+		Damage: 700
 		Versus:
 			None: 20
 			Wood: 30
@@ -1996,7 +1997,7 @@ GreaterCoalescenceZap:
 		Colors: ee000006
 	Warhead@1Dam: SpreadDamage
 		Spread: 160
-		Damage: 600
+		Damage: 650
 		Versus:
 			None: 100
 			Light: 100
@@ -2047,7 +2048,7 @@ VoidSpike:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 9c0
-		Damage: 200
+		Damage: 500
 		Falloff: 100, 50
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 		ValidRelationships: Enemy, Neutral
@@ -2236,7 +2237,7 @@ BursterExplode:
 		Size: 1
 
 MindSparkEruption:
-	ReloadDelay: 650
+	ReloadDelay: 450
 	Projectile: InstantExplode
 	Warhead@2Eff: CreateEffect
 		Explosions: reverse
@@ -2271,8 +2272,8 @@ MindSparkZap:
 		Spread: 42
 		Damage: 25000
 		Versus:
-			Light: 15
-			Heavy: 5
+			Light: 25
+			Heavy: 10
 			Concrete: 10
 			Wood: 5
 		DamageTypes: ElectricityDeath

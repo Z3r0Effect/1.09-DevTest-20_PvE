@@ -459,7 +459,7 @@
 		OrderName: storm
 		Icon: storm
 		Cursor: ability
-		ChargeInterval: 8500
+		ChargeInterval: 7500
 		Name: Lightning Storm
 		ActivationDelay: 50
 		Description: Initiate a Lightning Storm which deals heavy damage over a large area.
@@ -657,7 +657,7 @@
 		Prerequisites: ~aircraft.iraq
 		PauseOnCondition: empdisable || being-warped
 		Icon: abombair
-		ChargeInterval: 10000
+		ChargeInterval: 9750
 		Name: Atomic Bomb
 		Description: Calls in a Badger bomber which drops an atom bomb on your target.
 		SelectTargetSpeechNotification: SelectTarget
@@ -686,7 +686,7 @@
 		PauseOnCondition: empdisable || being-warped
 		Icon: mutabomb
 		IconPalette: chromes
-		ChargeInterval: 9500
+		ChargeInterval: 9750
 		Name: Genetic Mutation Bomb
 		Description: Calls in a Badger bomber which drops a genetic mutation bomb on your target, transforming infantry into Brutes under your control.
 		SelectTargetSpeechNotification: SelectTarget
@@ -715,7 +715,7 @@
 		Prerequisites: ~aircraft.yuri
 		PauseOnCondition: empdisable || being-warped
 		Icon: chaosbombs
-		ChargeInterval: 9000
+		ChargeInterval: 9750
 		Name: Chaos Bombs
 		Description: Calls in a Badger bomber which drops parachuted chaos bombs on your target.
 		SelectTargetSpeechNotification: SelectTarget
@@ -963,7 +963,7 @@
 		PauseOnCondition: disabled || empdisable || being-warped
 		Cursor: nuke
 		Icon: abomb
-		ChargeInterval: 13500
+		ChargeInterval: 10500
 		Name: Atom Bomb
 		Description: Launches a devastating atomic bomb at the target location, dealing heavy damage over a large area.
 		BeginChargeSpeechNotification: AbombPrepping
@@ -992,7 +992,7 @@
 		TrailImage: smokey2
 		TrailSequences: idle
 		TrailPalette: tseffect-ignore-lighting-alpha75
-		CircleRanges: 6c512
+		CircleRanges: 7c512
 		CircleColor: BB0000AA
 		CircleBorderColor: 770000AA
 		SupportPowerPaletteOrder: 10
@@ -1548,7 +1548,7 @@
 		Prerequisites: ~radar.blackh
 		Icon: infbomb
 		IconPalette: chrometd
-		ChargeInterval: 6750
+		ChargeInterval: 9000
 		Name: Inferno Bomb
 		Description: A B2 Stealth Bomber drops inferno bombs on your target.
 		SelectTargetSpeechNotification: SelectTarget
@@ -1835,7 +1835,7 @@
 		Icon: chemmissile
 		IconPalette: chrometd
 		Cursor: chemmissile
-		ChargeInterval: 8500
+		ChargeInterval: 10500
 		Name: Chemical Missile
 		Description: Launches an deadly Chemical Missile. Deals heavy damage and creates toxic clouds which are extremely harmful to infantry.\n
 		EndChargeSpeechNotification: ChemMissileReady
@@ -2023,7 +2023,7 @@
 		IconPalette: chromes
 		Prerequisites: radar.harbinger, botplayer
 		Cursor: ability
-		ChargeInterval: 4500
+		ChargeInterval: 8500
 		Name: Buzzer Swarm (AI)
 		ActivationDelay: 1
 		Description: Spawns a controllable swarm which damages anything nearby; particularly harmful to infantry.
@@ -2208,11 +2208,11 @@
 		OrderName: anathema
 		Icon: anathema
 		IconPalette: chromes
-		ChargeInterval: 1500
+		ChargeInterval: 2000
 		Name: Anathema
 		Condition: anathema
-		Range: 4c0
-		MaxTargets: 2
+		Range: 5c0
+		MaxTargets: 3
 		ValidTargets: AnathemaTargetable
 		Duration: 0
 		AllowMultiple: true

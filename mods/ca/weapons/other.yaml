@@ -381,7 +381,7 @@ BlackHandFlamer:
 			Falloff: 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 80, 25, 0
 			FalloffBasis: DistanceFromSource
 	Warhead@1Dam: SpreadDamage
-		Damage: 700
+		Damage: 640
 		Versus:
 			None: 45
 			Wood: 70
@@ -424,7 +424,7 @@ Napalm:
 
 TeslaZap:
 	Inherits: ^TeslaWeapon
-	Range: 11c0
+	Range: 12c0
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			Wood: 60
@@ -432,21 +432,21 @@ TeslaZap:
 
 TeslaZapBoost1:
 	Inherits: TeslaZap
-	Range: 11c512
+	Range: 12c512
 	Warhead@1Dam: SpreadDamage
-		Damage: 12000
+		Damage: 12500
 
 TeslaZapBoost2:
 	Inherits: TeslaZap
-	Range: 12c0
+	Range: 13c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 12000
+		Damage: 13500
 
 TeslaZapBoost3:
 	Inherits: TeslaZap
-	Range: 12c512
+	Range: 15c512
 	Warhead@1Dam: SpreadDamage
-		Damage: 14000
+		Damage: 14500
 
 PortaTesla:
 	Inherits: ^TeslaWeapon
@@ -1066,9 +1066,9 @@ MADTankDetonate:
 		ValidTargets: Ground, Infantry, Vehicle, Ship
 
 Laser:
-	ReloadDelay: 50
+	ReloadDelay: 45
 	ValidTargets: Ground, Water
-	Range: 12c0
+	Range: 12c256
 	Report: oblfire.aud
 	Projectile: LaserZapCA
 		Width: 56
@@ -1097,7 +1097,7 @@ Laser:
 Laser.Adv:
 	Inherits: Laser
 	Report: obelmod2.aud
-	Range: 13c0
+	Range: 13c512
 	-Projectile:
 	Projectile: PlasmaBeam
 		Duration: 21
@@ -2592,7 +2592,7 @@ RadBeamWeaponHeavy:
 		DamageTypes: RadiationDeath
 	Warhead@2Dam: SpreadDamage
 		Spread: 256
-		Damage: 16000
+		Damage: 16400
 		Versus:
 			None: 175
 			Wood: 45
@@ -2824,7 +2824,7 @@ NeutronCannonSound:
 
 SonicPulse:
 	ReloadDelay: 55
-	Range: 6c256
+	Range: 12c256
 	Report: sonicpulse1.aud, sonicpulse2.aud
 	TargetActorCenter: true
 	Projectile: LinearPulse
@@ -2859,7 +2859,7 @@ SonicPulse:
 
 SonicPulse.UPG:
 	Inherits: SonicPulse
-	Range: 7c0
+	Range: 12c512
 	Projectile: LinearPulse
 		ImpactAnimation@1:
 			Sequences: sonicblastupg1, sonicblastupg2

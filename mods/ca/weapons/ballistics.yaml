@@ -31,6 +31,7 @@
 
 25mm:
 	Inherits: ^Cannon
+	Range: 6c0
 	ReloadDelay: 31
 	Report: cannon2.aud
 	Projectile: Bullet
@@ -75,7 +76,7 @@
 
 76mm:
 	Inherits: ^Cannon
-	Range: 6c0
+	Range: 6c256
 	Report: smallcan3.aud
 	Projectile: Bullet
 		LaunchAngle: 62
@@ -104,11 +105,12 @@
 
 105mm:
 	Inherits: 90mm
+	Range: 6c512
 	Report: vgriatta.aud, vgriattb.aud, vgriattc.aud
 	Warhead@1Dam: SpreadDamage
 		Damage: 4300
 		Versus:
-			Light: 95
+			Light: 100
 
 120mm:
 	Inherits: 90mm
@@ -144,6 +146,7 @@
 
 125mm:
 	Inherits: ^Cannon
+	Range: 6c768
 	ReloadDelay: 70
 	Burst: 2
 	Warhead@1Dam: SpreadDamage
@@ -225,6 +228,7 @@
 
 130mm:
 	Inherits: ^Cannon
+	Range: 6c256
 	ReloadDelay: 70
 	Burst: 2
 	InvalidTargets: Infantry
@@ -303,7 +307,7 @@
 			None: 40
 			Tree: 200
 			Light: 92
-			Heavy: 115
+			Heavy: 120
 			Wood: 75
 			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
@@ -377,7 +381,7 @@ TitanGun:
 	Inherits: TurretGunTD
 	ReloadDelay: 75
 	Report: vtadatta.aud, vtadattb.aud, vtadattc.aud
-	Range: 6c0
+	Range: 6c768
 	Warhead@1Dam: SpreadDamage
 		Damage: 14500
 		Versus:
@@ -514,7 +518,7 @@ TitanGun:
 	ReloadDelay: 90
 	Report: bgraatta.aud
 	MinRange: 2c0
-	Range: 7c768
+	Range: 8c0
 	TargetActorCenter: true
 	Projectile: Bullet
 		Speed: 160

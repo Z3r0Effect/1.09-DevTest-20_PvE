@@ -345,7 +345,7 @@ NUKC:
 		AttackMoveCondition: attack-move
 	WithRangeCircle:
 		Type: NukeCannon
-		Range: 20c0
+		Range: 18c0
 		Color: ffdd0050
 		RequiresCondition: (!deployed || deploying) && !veiled && !gapveiled
 	WithRangeCircle@Veiled:
@@ -360,7 +360,7 @@ NUKC:
 		RequiresCondition: (!deployed || deploying) && gapveiled
 	WithRangeCircle@Deployed:
 		Type: NukeCannon
-		Range: 20c0
+		Range: 18c0
 		Color: ff880090
 		RequiresCondition: deployed && !deploying && !veiled && !gapveiled
 	WithRangeCircle@DeployedVeiled:
@@ -547,7 +547,7 @@ GTNK:
 	Passenger:
 		Voice: Move
 	Health:
-		HP: 48250
+		HP: 52000
 	Armament:
 		Weapon: 105mm
 		LocalOffset: 720,0,80
@@ -838,7 +838,7 @@ GTNK.squad:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 65000
+		HP: 67000
 	Mobile:
 		Speed: 60
 	RevealsShroud:
@@ -6909,6 +6909,7 @@ IFV:
 			c8: nochange
 			c9: nochange
 			c10: nochange
+		InitialUnits: E3
 	WithCargoSounds:
 		EnterSounds: vifvtran.aud
 		ExitSounds: vifvtran.aud

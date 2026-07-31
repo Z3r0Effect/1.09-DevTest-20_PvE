@@ -378,21 +378,6 @@ Player:
 					Attractiveness: 1
 					TargetMetric: None
 					CheckRadius: 5c0
-			chemmissilepower:
-				OrderName: chemmissile
-				MinimumAttractiveness: 3000
-				Consideration@1:
-					Against: Enemy
-					Types: Structure, AirHighValue
-					Attractiveness: 1
-					TargetMetric: Value
-					CheckRadius: 5c0
-				Consideration@2:
-					Against: Ally
-					Types: Air, Ground, Water
-					Attractiveness: -10
-					TargetMetric: Value
-					CheckRadius: 7c0
 			clustermissilepower:
 				OrderName: clustermissile
 				MinimumAttractiveness: 3000
@@ -666,16 +651,6 @@ Player:
 					Attractiveness: 1
 					TargetMetric: None
 					CheckRadius: 8c0
-			buzzerswarmpower:
-				OrderName: buzzerswarmai
-				MinimumAttractiveness: 1000
-				FineScanRadius: 2
-				Consideration@3:
-					Against: Enemy
-					Types: Infantry
-					Attractiveness: 1
-					TargetMetric: Value
-					CheckRadius: 2c0
 			ionsurgepower:
 				OrderName: ionsurge
 				MinimumAttractiveness: 2500
@@ -730,21 +705,6 @@ Player:
 					Attractiveness: -5
 					TargetMetric: None
 					CheckRadius: 3c512
-			owrath:
-				OrderName: overlordswrath
-				MinimumAttractiveness: 3000
-				Consideration@1:
-					Against: Enemy
-					Types: Defense
-					Attractiveness: 1
-					TargetMetric: Value
-					CheckRadius: 3c0
-				Consideration@2:
-					Against: Ally
-					Types: Air, Ground, Water
-					Attractiveness: -10
-					TargetMetric: Value
-					CheckRadius: 5c0
 			suppressionpower:
 				OrderName: suppression
 				MinimumAttractiveness: 3000
@@ -765,21 +725,6 @@ Player:
 					Attractiveness: 2
 					TargetMetric: Value
 					CheckRadius: 3c0
-			riftpower:
-				OrderName: rift
-				MinimumAttractiveness: 3000
-				Consideration@1:
-					Against: Enemy
-					Types: Structure, AirHighValue
-					Attractiveness: 1
-					TargetMetric: Value
-					CheckRadius: 5c0
-				Consideration@2:
-					Against: Ally
-					Types: Air, Ground, Water
-					Attractiveness: -10
-					TargetMetric: Value
-					CheckRadius: 7c0
 	HarvesterBotModuleCA:
 		RequiresCondition: enable-brutal-ai || enable-vhard-ai || enable-hard-ai || enable-normal-ai || enable-easy-ai || enable-naval-ai
 		HarvesterTypes: harv,harv.td,harv.td.upg,harv.scrin,harv.chrono
@@ -879,22 +824,21 @@ Player:
 			orep: 8000
 			sign: 8000
 			eye: 8000
-			rfgn: 8000
 		BuildingLimits:
-			barr: 5
-			tent: 5
-			pyle: 5
-			hand: 5
-			port: 5
+			barr: 6
+			tent: 6
+			pyle: 6
+			hand: 6
+			port: 6
 			kenn: 1
 			dome: 1
 			hq: 1
 			hq.upg: 1
 			nerv: 1
-			weap: 4
-			weap.td: 4
-			airs: 4
-			wsph: 4
+			weap: 5
+			weap.td: 5
+			airs: 5
+			wsph: 5
 			hpad: 5
 			hpad.td: 5
 			afld: 5
@@ -975,7 +919,6 @@ Player:
 			sgen.shadow: 1
 			mani: 1
 			eye: 1
-			rfgn: 1
 			npwr: 1
 			cvat: 1
 			indp: 1
@@ -1144,22 +1087,21 @@ Player:
 			orep: 8000
 			sign: 8000
 			eye: 8000
-			rfgn: 8000
 		BuildingLimits:
-			barr: 5
-			tent: 5
-			pyle: 5
-			hand: 5
-			port: 5
+			barr: 6
+			tent: 6
+			pyle: 6
+			hand: 6
+			port: 6
 			kenn: 1
 			dome: 1
 			hq: 1
 			hq.upg: 1
 			nerv: 1
-			weap: 4
-			weap.td: 4
-			airs: 4
-			wsph: 4
+			weap: 5
+			weap.td: 5
+			airs: 5
+			wsph: 5
 			hpad: 5
 			hpad.td: 5
 			afld: 5
@@ -1240,7 +1182,6 @@ Player:
 			sgen.shadow: 1
 			mani: 1
 			eye: 1
-			rfgn: 1
 			npwr: 1
 			cvat: 1
 			indp: 1
@@ -2124,10 +2065,10 @@ Player:
 	SquadManagerBotModuleCA@brutal-vhard:
 		RequiresCondition: enable-brutal-ai || enable-vhard-ai
 		MinimumAttackForceDelay: 25
-		SquadValue: 7000
-		SquadValueMaxEarlyBonus: 3000
-		SquadValueMinLateBonus: 5000
-		SquadValueMaxLateBonus: 13000
+		SquadValue: 15000
+		SquadValueMaxEarlyBonus: 6000
+		SquadValueMinLateBonus: 10000
+		SquadValueMaxLateBonus: 26000
 		AirUnitsTypes: heli, harr, pmak, beag, hind, yak, mig, suk, suk.upg, kiro, orca, a10, a10.sw, a10.gau, orcb, auro, jack, apch, venm, rah, scrn, stmr, torm, enrv, mshp, phan, kamv, shde, vert, mcor
 		ExcludeFromSquadsTypes: harv, harv.td, harv.td.upg, harv.scrin, harv.chrono, mcv, amcv, smcv, dog, e6, n6, s6, badr, badr.bomber, badr.cbomber, badr.nbomber, badr.mbomber, b2b, p51, tran.paradrop, halo.paradrop, nhaw.paradrop, u2, smig, a10.bomber, c17, c17.cargo, c17.clustermines, c17.xo, galx, uav, ocar.reinforce, ocar.xo, ocar.pod, horn, yf23.bomber, pod, pod2, pod3, buzz, buzz.ai, mspk
 		NavalUnitsTypes: ss,msub,dd,ca,lst,pt,dd2,pt2,ss2,isub,sb,seas
@@ -2256,7 +2197,7 @@ Player:
 			harv.chrono: 8
 	SquadManagerBotModuleCA@hard:
 		RequiresCondition: enable-hard-ai
-		MinimumAttackForceDelay: 250
+		MinimumAttackForceDelay: 150
 		SquadValue: 12000
 		SquadValueMaxEarlyBonus: 5000
 		SquadValueMinLateBonus: 8000
@@ -2304,7 +2245,7 @@ Player:
 			mshp: Wood
 	UnitBuilderBotModuleCA@hard:
 		RequiresCondition: enable-hard-ai
-		IdleBaseUnitsMaximum: 150
+		IdleBaseUnitsMaximum: 200
 		MaxAircraft: 3
 		MaintainAirSuperiority: false
 		MaxAirSuperiority: 2

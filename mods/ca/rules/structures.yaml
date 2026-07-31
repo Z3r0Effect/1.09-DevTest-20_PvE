@@ -1589,7 +1589,7 @@ SILO:
 	WithResourceLevelSpriteBody:
 		Sequence: stages
 	StoresPlayerResourcesCA:
-		Capacity: 6000
+		Capacity: 18000
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -4451,7 +4451,7 @@ SILO.TD:
 	WithResourceLevelSpriteBody:
 		Sequence: stages
 	StoresPlayerResourcesCA:
-		Capacity: 6000
+		Capacity: 18000
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3

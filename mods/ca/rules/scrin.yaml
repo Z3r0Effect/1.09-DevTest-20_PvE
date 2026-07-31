@@ -3573,14 +3573,14 @@ DEVA:
 	Voiced:
 		VoiceSet: DevastatorVoice
 	Valued:
-		Cost: 2200
+		Cost: 2400
 	Tooltip:
 		Name: Devastator Warship
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 38000
+		HP: 36000
 	Shielded:
 		MaxStrength: 12000
 	Armor:
@@ -3720,7 +3720,7 @@ PAC:
 	Voiced:
 		VoiceSet: PlanetaryAssaultCarrierVoice
 	Valued:
-		Cost: 2400
+		Cost: 2800
 	Tooltip:
 		Name: Planetary Assault Carrier
 		GenericName: Aircraft
@@ -3786,7 +3786,7 @@ PAC:
 	CarrierMaster@carr1:
 		Actors: inva, inva, invb, inva, inva, invb
 		RearmTicks: 0
-		RespawnTicks: 375
+		RespawnTicks: 275
 		InstantRepair: true
 		SlaveDisposalOnKill: KillSlaves
 		SpawnAllAtOnce: false
@@ -5509,7 +5509,7 @@ SILO.SCRIN:
 	WithResourceLevelSpriteBody:
 		Sequence: stages
 	StoresPlayerResourcesCA:
-		Capacity: 3000
+		Capacity: 12000
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -6258,7 +6258,7 @@ BUZZ:
 	WithSpriteBody:
 	HitShape:
 	KillsSelf:
-		Delay: 450
+		Delay: 850
 	# required for death animation
 	Health:
 		HP: 1
@@ -6336,11 +6336,11 @@ MSPK:
 	Turreted:
 	Aircraft:
 		CanHover: True
-		Speed: 46
+		Speed: 56
 		CruiseAltitude: 1
 		LandableTerrainTypes: Clear,Road,Rough,Ore,Gems,Tiberium,BlueTiberium,BlackTiberium,Water,Tree,River,Rock,Beach,Bridge,Tunnel,Wall,Ford
 	KillsSelf:
-		Delay: 325
+		Delay: 525
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
 		CrushedSequence: die
@@ -6497,7 +6497,7 @@ Rift:
 	PeriodicExplosion:
 		Weapon: Rift
 	KillsSelf:
-		Delay: 360
+		Delay: 480
 	# required for spawning actor on death
 	Health:
 		HP: 1
