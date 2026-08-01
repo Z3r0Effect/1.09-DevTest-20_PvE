@@ -467,22 +467,22 @@
 		Condition: inspiration
 	ReloadDelayMultiplier@Inspiration1:
 		RequiresCondition: inspiration == 1
-		Modifier: 92
+		Modifier: 90
 	ReloadAmmoDelayMultiplier@Inspiration1:
 		RequiresCondition: inspiration == 1
-		Modifier: 92
+		Modifier: 90
 	SpeedMultiplier@Inspiration1:
 		RequiresCondition: inspiration == 1
-		Modifier: 115
+		Modifier: 118
 	ReloadDelayMultiplier@Inspiration2:
 		RequiresCondition: inspiration >= 2
-		Modifier: 84
+		Modifier: 82
 	ReloadAmmoDelayMultiplier@Inspiration2:
 		RequiresCondition: inspiration >= 2
-		Modifier: 84
+		Modifier: 82
 	SpeedMultiplier@Inspiration2:
 		RequiresCondition: inspiration >= 2
-		Modifier: 130
+		Modifier: 134
 	WithIdleOverlay@Inspiration1:
 		Image: ussrstar
 		Sequence: idle-overlay1
@@ -509,13 +509,13 @@
 		Modifier: 120
 		RequiresCondition: herooftheunion
 	ReloadDelayMultiplier@HeroOfTheUnion:
-		Modifier: 85
+		Modifier: 75
 		RequiresCondition: herooftheunion
 	ReloadAmmoDelayMultiplier@HeroOfTheUnion:
-		Modifier: 85
+		Modifier: 75
 		RequiresCondition: herooftheunion
 	RangeMultiplier@HeroOfTheUnion:
-		Modifier: 120
+		Modifier: 140
 		RequiresCondition: herooftheunion
 	WithIdleOverlay@HeroOfTheUnionLight:
 		Sequence: light
@@ -542,17 +542,17 @@
 	ReloadDelayMultiplier@HeroOfTheUnion:
 		Modifier: 90
 	RangeMultiplier@HeroOfTheUnion:
-		Modifier: 125
+		Modifier: 150
 
 ^IdolOfKane:
 	ExternalCondition@IdolOfKaneBuff:
 		Condition: iokbuff
 	SpeedMultiplier@IdolOfKaneBuff:
 		RequiresCondition: iokbuff
-		Modifier: 130
+		Modifier: 150
 	ReloadDelayMultiplier@IdolOfKaneBuff:
 		RequiresCondition: iokbuff
-		Modifier: 85
+		Modifier: 80
 	ExternalCondition@IdolOfKaneDebuff:
 		Condition: iokdebuff
 	SpeedMultiplier@IdolOfKaneDebuff:
@@ -560,7 +560,7 @@
 		Modifier: 80
 	ReloadDelayMultiplier@IdolOfKaneDebuff:
 		RequiresCondition: iokdebuff
-		Modifier: 120
+		Modifier: 130
 
 ^Chronoshiftable:
 	ChronoshiftableCA:
@@ -844,49 +844,49 @@
 		Prerequisites: seek3.strat
 	DamageMultiplier@HOLD:
 		RequiresCondition: hold
-		Modifier: 92
+		Modifier: 94
 	DamageMultiplier@HOLD2:
 		RequiresCondition: hold2
-		Modifier: 89
+		Modifier: 94
 	DamageMultiplier@HOLD3:
 		RequiresCondition: hold3
-		Modifier: 86
+		Modifier: 94
 	FirepowerMultiplier@BOMBARD:
 		RequiresCondition: bombard
-		Modifier: 108
+		Modifier: 104
 	FirepowerMultiplier@BOMBARD2:
 		RequiresCondition: bombard2
-		Modifier: 112
+		Modifier: 104
 	FirepowerMultiplier@BOMBARD3:
 		RequiresCondition: bombard3
-		Modifier: 117
+		Modifier: 104
 	ReloadDelayMultiplier@BOMBARD:
 		RequiresCondition: bombard
-		Modifier: 95
+		Modifier: 96
 	ReloadDelayMultiplier@BOMBARD2:
 		RequiresCondition: bombard2
-		Modifier: 90
+		Modifier: 96
 	ReloadDelayMultiplier@BOMBARD3:
 		RequiresCondition: bombard3
-		Modifier: 85
+		Modifier: 96
 	RangeMultiplier@SEEK:
 		RequiresCondition: seek
-		Modifier: 105
+		Modifier: 106
 	SpeedMultiplier@SEEK:
 		RequiresCondition: seek
-		Modifier: 105
+		Modifier: 106
 	RangeMultiplier@SEEK2:
 		RequiresCondition: seek2
-		Modifier: 108
+		Modifier: 106
 	SpeedMultiplier@SEEK2:
 		RequiresCondition: seek2
-		Modifier: 108
+		Modifier: 106
 	RangeMultiplier@SEEK3:
 		RequiresCondition: seek3
-		Modifier: 112
+		Modifier: 106
 	SpeedMultiplier@SEEK3:
 		RequiresCondition: seek3
-		Modifier: 112
+		Modifier: 106
 	WithDecoration@HOLD:
 		Image: pips
 		Sequence: pip-armor
@@ -2454,11 +2454,17 @@
 
 ^SovietT4Boost:
 	ProductionTimeMultiplier@IndustrialPlantBoost:
-		Multiplier: 94
+		Multiplier: 97
 		Prerequisites: indp, !indplowpower
 	ProductionCostMultiplier@IndustrialPlantBoost:
-		Multiplier: 88
+		Multiplier: 85
 		Prerequisites: indp, !indplowpower
+	GrantConditionOnPrerequisite@IndustrialPlantBoost:
+		Condition: indp-boost
+		Prerequisites: indp, !indplowpower
+	ReloadDelayMultiplier@IndustrialPlantBoost:
+		RequiresCondition: indp-boost
+		Modifier: 90
 	ProductionTimeMultiplier@MunitionsPlantBoost:
 		Multiplier: 85
 		Prerequisites: munp, !munplowpower

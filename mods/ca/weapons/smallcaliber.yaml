@@ -256,7 +256,7 @@ GAU8:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 3000
+		Damage: 2700
 		Versus:
 			None: 200
 			Wood: 0
@@ -282,7 +282,7 @@ GAU8.Building:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 2280
+		Damage: 1300
 		Versus:
 			Wood: 100
 		ValidTargets: Building
@@ -659,11 +659,11 @@ Colt45:
 	ReloadDelay: 10
 	Burst: 4
 	BurstDelays: 2,9,2
-	Range: 8c512
+	Range: 9c512
 	Warhead@1Dam: SpreadDamage
 		Damage: 4700
 		Versus:
-			Light: 25
+			Light: 35
 	Warhead@2Eff: CreateEffect
 		Explosions: piff, piff2
 		ValidTargets: Ground, Ship, Air, AirSmall, Trees
@@ -680,7 +680,7 @@ SMG:
 	Inherits: ^SnipeWeapon
 	Report: silppk.aud
 	ReloadDelay: 16
-	Range: 8c0
+	Range: 9c256
 	Warhead@1Dam: SpreadDamage
 		Damage: 25000
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
@@ -694,7 +694,7 @@ SMG:
 
 SMGBATF:
 	Inherits: SMG
-	Range: 6c768
+	Range: 9c256
 
 MP5:
 	StartBurstReport: iseaatta.aud, iseaattb.aud
@@ -735,7 +735,7 @@ AKM:
 	ReloadDelay: 15
 	Burst: 3
 	BurstDelays: 2
-	Range: 8c512
+	Range: 8c768
 	InvalidTargets: Structure
 	Projectile: InstantHit
 		Blockable: true
@@ -765,8 +765,8 @@ AKMBATF:
 	Range: 6c768
 
 SNIPER:
-	ReloadDelay: 110
-	Range: 9c0
+	ReloadDelay: 100
+	Range: 9c512
 	Report: snipe.aud
 	Projectile: InstantHit
 		Blockable: true
@@ -798,7 +798,7 @@ SNIPER:
 
 SNIPER.vehicle:
 	Inherits: SNIPER
-	Range: 8c0
+	Range: 9c768
 	Report: ijarwe1a.aud
 	Warhead@1Dam: SpreadDamage
 		Versus:
@@ -850,13 +850,13 @@ SNIPERBATF:
 
 SNIPERBATF.UPG:
 	Inherits: SNIPER.vehicle
-	Range: 7c512
+	Range: 9c512
 
 SNIPER.ASSA:
 	Inherits: SNIPER
 	InvalidTargets: Structure
-	ReloadDelay: 100
-	Range: 9c768
+	ReloadDelay: 75
+	Range: 12c0
 	Report: iviratta.aud
 	Warhead@1Dam: SpreadDamage
 		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath

@@ -883,9 +883,9 @@ E7:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 18000
+		HP: 22000
 	Mobile:
-		Speed: 65
+		Speed: 69
 		Voice: Move
 	Guard:
 		Voice: Move
@@ -2043,12 +2043,12 @@ RMBO:
 		Weaknesses: • Cannot attack Aircraft
 		Attributes: • Maximum 1 can be trained\n• Detects cloaked ground units and spies\n• Immune to mind control\n• Plants C4 to destroy structures and vehicles
 	Mobile:
-		Speed: 60
+		Speed: 69
 		Voice: Move
 	Guard:
 		Voice: Move
 	Health:
-		HP: 18000
+		HP: 24000
 	Passenger:
 		CustomPipType: red
 		Voice: Move
@@ -2420,9 +2420,9 @@ SAB:
 		StandSequences: stand
 		IdleSequences: idle1
 	Health:
-		HP: 60000
+		HP: 120000
 	Mobile:
-		Speed: 46
+		Speed: 55
 		Voice: Move
 	Armament:
 		Weapon: SilencedPPK
@@ -2437,8 +2437,8 @@ SAB:
 		InitialStance: HoldFire
 		InitialStanceAI: Defend
 	Cloak:
-		InitialDelay: 30
-		CloakDelay: 30
+		InitialDelay: 20
+		CloakDelay: 20
 		CloakedCondition: hidden
 		IsPlayerPalette: true
 		DetectionTypes: Cloak
@@ -2453,7 +2453,7 @@ SAB:
 		Condition: player-shadow
 		Prerequisites: player.shadow
 	SpeedMultiplier@ShadowCloak:
-		Modifier: 110
+		Modifier: 125
 		RequiresCondition: player-shadow && hidden
 	IgnoresDisguise:
 	DetectCloaked:
@@ -2491,7 +2491,7 @@ ASSA:
 	Health:
 		HP: 11000
 	Mobile:
-		Speed: 64
+		Speed: 62
 		Voice: Move
 	RevealsShroud:
 		Range: 9c0
@@ -2626,13 +2626,13 @@ CONF:
 		Voice: Move
 	SpawnActorAbility:
 		Actors: iok
-		Range: 4c896
+		Range: 5c896
 		SkipMakeAnimations: false
 		CircleColor: ff000077
 		SpawnSounds: iok-place.aud
 		AmmoPool: idol
 		TargetModifiedCursor: ability2
-		ConcurrentLimit: 2
+		ConcurrentLimit: 3
 		KillExcessDamageTypes: SmallExplosionDeath
 		AvoidActors: true
 	WithSpawnedActorIdentifier:
@@ -2644,8 +2644,8 @@ CONF:
 		Ammo: 2
 	ReloadAmmoPoolCA@IdolOfKane:
 		AmmoPool: idol
-		Delay: 350
-		Count: 2
+		Delay: 200
+		Count: 3
 		ShowSelectionBar: true
 		SelectionBarColor: aaaaaa
 	WithAmmoPipsDecoration@IdolOfKane:
@@ -3486,7 +3486,7 @@ IVAN:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 18000
 	Mobile:
 		Speed: 75
 		Voice: Move
@@ -4478,7 +4478,7 @@ ENLI:
 		Armaments: secondary
 		Ammo: 1
 	ReloadAmmoPoolCA:
-		Delay: 500 # equal to reload time of weapon
+		Delay: 200 # equal to reload time of weapon
 		Count: 1
 		ShowSelectionBar: true
 		SelectionBarColor: b8afff
@@ -4738,7 +4738,7 @@ CMSR:
 		Types: Veterancy
 		Prerequisites: barracks.upgraded
 	ProximityExternalCondition@Inspiration:
-		Range: 8c0
+		Range: 6c0
 		Condition: cmsr-inspiration
 		ValidRelationships: Ally
 		AffectsParent: true
@@ -4750,7 +4750,7 @@ CMSR:
 		Position: TopLeft
 		ValidRelationships: Ally, Enemy, Neutral
 	WithRadiatingCircle:
-		EndRadius: 8c0
+		EndRadius: 6c0
 		Interval: 75
 		Duration: 50
 		ValidRelationships: Ally
@@ -4979,7 +4979,7 @@ ENFO:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 25000
+		HP: 27000
 	Armor:
 		Type: Light
 	Mobile:
@@ -5381,7 +5381,7 @@ REAP:
 		Armaments: secondary
 		Ammo: 1
 	ReloadAmmoPoolCA:
-		Delay: 375 # equal to reload time of weapon
+		Delay: 125 # equal to reload time of weapon
 		Count: 1
 		ShowSelectionBar: true
 		SelectionBarColor: 00cc00

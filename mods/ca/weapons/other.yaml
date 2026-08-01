@@ -424,7 +424,7 @@ Napalm:
 
 TeslaZap:
 	Inherits: ^TeslaWeapon
-	Range: 12c0
+	Range: 12c256
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			Wood: 60
@@ -438,7 +438,7 @@ TeslaZapBoost1:
 
 TeslaZapBoost2:
 	Inherits: TeslaZap
-	Range: 13c0
+	Range: 13c768
 	Warhead@1Dam: SpreadDamage
 		Damage: 13500
 
@@ -450,7 +450,7 @@ TeslaZapBoost3:
 
 PortaTesla:
 	Inherits: ^TeslaWeapon
-	ReloadDelay: 65
+	ReloadDelay: 70
 	Range: 7c0
 	Report: shktrop1.aud
 	Warhead@1Dam: SpreadDamage
@@ -466,9 +466,10 @@ PortaTesla.UPG:
 	Inherits: PortaTesla
 	Report: itesatta.aud
 	ReloadDelay: 60
+	Range: 7c768
 	Warhead@1Dam: SpreadDamage
 		Versus:
-			Heavy: 75
+			Heavy: 80
 			Light: 125
 
 PortaTeslaCharge:
@@ -492,10 +493,10 @@ PortaTeslaCharge:
 
 TTrackZap:
 	Inherits: ^TeslaWeapon
-	ReloadDelay: 125
-	Range: 9c0
+	ReloadDelay: 75
+	Range: 8c512
 	Warhead@1Dam: SpreadDamage
-		Damage: 18500
+		Damage: 11500
 		Versus:
 			Wood: 50
 			Concrete: 50
@@ -503,6 +504,7 @@ TTrackZap:
 
 TTrackZap.UPG:
 	Inherits: TTrackZap
+	Range: 8c768
 	Warhead@Arc: FireShrapnel
 		Weapon: TTrackArc1
 		Amount: 1
@@ -519,8 +521,8 @@ TTrackArc1:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Vehicle, Ship
 		Versus:
-			Light: 15
-			Heavy: 15
+			Light: 20
+			Heavy: 20
 	Warhead@Arc: FireShrapnel
 		Weapon: TTrackArc2
 		AimChance: 100
@@ -536,20 +538,20 @@ TTankZap:
 	ReloadDelay: 50
 	Burst: 2
 	BurstDelays: 3
-	Range: 7c512
+	Range: 8c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 3500
 		Versus:
 			None: 380
 			Wood: 55
 			Concrete: 55
-			Heavy: 60
+			Heavy: 65
 
 TTankZap.UPG:
 	Inherits: TTankZap
 	Warhead@Arc: FireShrapnel
 		Weapon: TTankArc
-		Amount: 1
+		Amount: 2
 		AimChance: 100
 		ThrowWithoutTarget: false
 		AimTargetStances: Enemy, Neutral
@@ -800,7 +802,7 @@ PlaceC4Seal:
 	Inherits: PlaceC4
 	InvalidTargets: Vehicle, C4Attached, TNTAttached, C4Immune
 	Warhead@AttachDelayedWeapon: AttachDelayedWeapon
-		TriggerTime: 20
+		TriggerTime: 15
 		Type: c4seal
 		ScaleTriggerTimeWithValue: true
 	Warhead@Flash: FlashTarget
@@ -820,7 +822,7 @@ PrepareC4Seal:
 	Warhead@ProgressBar: GrantExternalConditionCA
 		Range: 1c256
 		Condition: c4seal-preparing
-		Duration: 20
+		Duration: 15
 		ValidTargets: Structure
 
 C4:
@@ -853,8 +855,8 @@ Ivanbomb:
 	Inherits: ^Artillery
 	ValidTargets: Ground, TNTPlantable
 	InvalidTargets: C4Attached, C4Immune
-	ReloadDelay: 70
-	Range: 5c725
+	ReloadDelay: 40
+	Range: 8c0
 	Report: grenade1.aud
 	Projectile: Bullet
 		LaunchAngle: 80
@@ -873,7 +875,7 @@ Ivanbomb:
 	Warhead@AttachDelayedWeapon: AttachDelayedWeapon
 		Weapon: TNT
 		Type: tnt
-		TriggerTime: 120
+		TriggerTime: 50
 		DeathTypes: ExplosionDeath
 		Range: 1
 		AttachSounds: icraatta.aud
@@ -897,8 +899,8 @@ TNT:
 		Damage: 2800
 		Falloff: 1000, 448, 192, 50, 18, 7, 0
 		Versus:
-			Light: 70
-			Heavy: 20
+			Light: 80
+			Heavy: 40
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@AirDam: SpreadDamage
 		Spread: 128
@@ -936,7 +938,7 @@ DelayedTNT:
 
 DefuseKit:
 	ReloadDelay: 50
-	Range: 4c511
+	Range: 5c511
 	Report: gdefuse.aud
 	ValidTargets: C4Attached, TNTAttached
 	Projectile: LaserZapCA
@@ -1279,7 +1281,7 @@ PortaLaser:
 	ReloadDelay: 40
 	Burst: 2
 	BurstDelays: 3
-	Range: 7c512
+	Range: 7c768
 	-Report:
 	StartBurstReport: lasgun.aud, lasgun2.aud
 	Projectile: LaserZapCA
@@ -1293,26 +1295,27 @@ PortaLaser:
 		Versus:
 			None: 155
 			Wood: 55
-			Heavy: 40
-			Concrete: 40
+			Heavy: 50
+			Concrete: 50
 
 PortaLaser.Templar:
 	Inherits: PortaLaser
+	Range: 8c512
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			None: 175
-			Heavy: 50
+			Heavy: 65
 
 PortaLaser.Templar.UPG:
 	Inherits: PortaLaser.Templar
-	Range: 8c0
+	Range: 8c768
 	StartBurstReport: lasgunupg.aud, lasgunupg2.aud
 	Projectile: LaserZapCA
 		Duration: 6
 		SecondaryBeamWidth: 75
 		SecondaryBeamColor: FF00FF60
 	Warhead@1Dam: SpreadDamage
-		Damage: 2000
+		Damage: 2200
 
 IFVLaser:
 	Inherits: PortaLaser
@@ -1328,7 +1331,7 @@ IFVLaser:
 EnlightenedBeam:
 	ReloadDelay: 65
 	ValidTargets: Ground, Water
-	Range: 7c512
+	Range: 7c768
 	Report: enli-fire1.aud, enli-fire2.aud, enli-fire3.aud
 	Projectile: PlasmaBeam
 		Duration: 10
@@ -1353,11 +1356,11 @@ EnlightenedBeam:
 		Damage: 100
 		Versus:
 			Wood: 5
-			None: 10
-			Concrete: 10
-			Brick: 10
-			Light: 30
-			Heavy: 30
+			None: 15
+			Concrete: 15
+			Brick: 15
+			Light: 45
+			Heavy: 35
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 		ValidRelationships: Enemy, Neutral
 	Warhead@friendlyFire: SpreadDamage
@@ -1368,7 +1371,7 @@ EnlightenedBeam:
 			None: 5
 			Wood: 70
 			Concrete: 55
-			Light: 80
+			Light: 85
 		ValidRelationships: Ally
 	Warhead@2Eff: CreateEffect
 		Explosions: enliexplode1, enliexplode2
@@ -1383,8 +1386,8 @@ EnlightenedBeam:
 		ValidTargets: Vehicle, Ship
 
 EnlightenedEmp:
-	ReloadDelay: 400
-	Range: 7c512
+	ReloadDelay: 200
+	Range: 7c768
 	Report: enli-empfire.aud
 	Projectile: MissileCA
 		Blockable: false
@@ -1666,7 +1669,7 @@ HopliteGun:
 			None: 150
 			Wood: 100
 			Light: 100
-			Heavy: 40
+			Heavy: 50
 			Concrete: 50
 			Brick: 30
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
@@ -2406,7 +2409,7 @@ ICBMLauncher:
 
 Flare:
 	ReloadDelay: 1
-	Range: 10c0
+	Range: 12c0
 	MinRange: 3c0
 	ValidTargets: Structure
 	TargetActorCenter: true
@@ -2523,7 +2526,7 @@ MempTargeting:
 	ValidTargets: Structure, Vehicle, Ship
 
 RadTrooperBeam:
-	Range: 7c0
+	Range: 7c768
 	ReloadDelay: 85
 	Report: radbeam1.aud
 	Projectile: RadBeam
@@ -3717,8 +3720,8 @@ FloatingDiscResourceDrainer:
 		ValidTargets: ResourceDrainable
 
 ZoneTrooperRailgun:
-	ReloadDelay: 65
-	Range: 7c0
+	ReloadDelay: 50
+	Range: 7c512
 	Report: ztrp-fire1.aud, ztrp-fire2.aud, ztrp-fire3.aud
 	Projectile: RailgunCA
 		Duration: 10
@@ -3744,8 +3747,8 @@ ZoneTrooperRailgun:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 
 ZoneRaiderGrenade:
-	ReloadDelay: 60
-	Range: 7c0
+	ReloadDelay: 50
+	Range: 7c256
 	Report: zrai-fire1.aud, zrai-fire2.aud
 	Projectile: Bullet
 		Speed: 700
@@ -3790,8 +3793,8 @@ ZoneRaiderGrenade:
 		ExplosionPalette: effect
 
 ZoneDefenderGun:
-	ReloadDelay: 70
-	Range: 7c0
+	ReloadDelay: 50
+	Range: 7c768
 	Report: ionrifle1.aud, ionrifle2.aud
 	Projectile: LaserZap
 		Width: 38

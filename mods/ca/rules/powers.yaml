@@ -2,7 +2,7 @@
 	GrantExternalConditionPowerCA@FSHIELD:
 		OrderName: fshield
 		Icon: forceshield
-		ChargeInterval: 4500
+		ChargeInterval: 6000
 		Condition: forceshield
 		ValidTargets: Structure
 		Duration: 250
@@ -67,7 +67,7 @@
 		Icon: veilofwar
 		IconPalette: chrometd
 		Prerequisites: ~radar.england
-		ChargeInterval: 4500
+		ChargeInterval: 7500
 		LifeTime: -1
 		Name: Veil of War
 		Description: Creates an expanding area of shroud, reducing the vision and weapon range of enemy units and defenses.
@@ -121,7 +121,7 @@
 		Prerequisites: atek.germany
 		Icon: tempinc
 		Cursor: ability
-		ChargeInterval: 5000
+		ChargeInterval: 5500
 		Name: Temporal Incursion
 		ActivationDelay: 25
 		Description: Summons reinforcements from the future. Units return to their origin time after a short time.
@@ -163,7 +163,7 @@
 				TargetOffset: 536,0,0
 		Prerequisites: ~aircraft.usa
 		Icon: strafe
-		ChargeInterval: 5500
+		ChargeInterval: 4500
 		Name: Strafing Run
 		Description: Calls in P51 ground attack planes to perform strafing runs on the target.
 		SelectTargetSpeechNotification: SelectTarget
@@ -218,7 +218,7 @@
 		Icon: gps
 		Actors: camera.satscan, gps.satellite.firstscan
 		Type: SpySatellite
-		ChargeInterval: 3750
+		ChargeInterval: 7500
 		OrderName: InitialSatelliteScanPower
 		AutoFire: True
 		OneShot: True
@@ -232,7 +232,7 @@
 		Icon: gps
 		Actors: camera.satscan
 		Type: SpySatellite
-		ChargeInterval: 3250
+		ChargeInterval: 5250
 		OrderName: SatelliteScanPower
 		AutoFire: True
 		DisplayTimerRelationships: Ally, Neutral, Enemy
@@ -245,7 +245,7 @@
 		Icon: gps
 		Actors: camera.satscan.oneshot
 		Type: SpySatellite
-		ChargeInterval: 6000
+		ChargeInterval: 12000
 		OneShot: True
 		OrderName: SatelliteScanNoFogPower
 		AutoFire: True
@@ -258,7 +258,7 @@
 		Icon: timewarp
 		Prerequisites: pdox.germany
 		Cursor: ability
-		ChargeInterval: 4000
+		ChargeInterval: 4500
 		Name: Time Warp
 		Description: Disrupts time and space at the target location. Affected units & structures are frozen in time, unable to act, but immune to damage.
 		ExplosionWeapon: TimeWarp
@@ -294,7 +294,7 @@
 		OrderName: cryostorm
 		Icon: cryostorm
 		Prerequisites: ~sweden.coalition, ~alhq
-		ChargeInterval: 4250
+		ChargeInterval: 6000
 		LifeTime: -1
 		Name: Cryostorm
 		Description: Creates a turbulent area of extreme cold, reducing movement speed and increasing damage taken.
@@ -329,7 +329,7 @@
 		PauseOnCondition: disabled || empdisable || being-warped
 		Icon: heliosbomb
 		IconPalette: caneon
-		ChargeInterval: 5000
+		ChargeInterval: 8250
 		Name: Helios Bomb
 		Description: Calls in a bomber which drops a Helios bomb, blinding units in a large area.
 		SelectTargetSpeechNotification: SelectTarget
@@ -363,7 +363,7 @@
 		PauseOnCondition: disabled || empdisable || being-warped
 		Icon: bsky
 		IconPalette: chrome
-		ChargeInterval: 6250
+		ChargeInterval: 7500
 		Name: Black Sky Strike
 		Description: Fires long range guided missiles at multiple ground targets prioritized by value. Tracking can be lost if targets move far enough from their initial location.
 		SelectTargetSpeechNotification: SelectTarget
@@ -432,7 +432,7 @@
 		Prerequisites: botplayer
 		Icon: chrono
 		Cursor: ability
-		ChargeInterval: 9000
+		ChargeInterval: 10500
 		Name: Chronoshift
 		ActivationDelay: 25
 		Description: Teleports up to 9 selected vehicles to a targeted location, returning them to their original location after a short time.\n\n• If killed, units are returned with 20% health\n• Units with larger health pools take additional damage\n• Passengers cannot be unloaded\n• Enemy units are teleported for reduced duration
@@ -459,7 +459,7 @@
 		OrderName: storm
 		Icon: storm
 		Cursor: ability
-		ChargeInterval: 7500
+		ChargeInterval: 13500
 		Name: Lightning Storm
 		ActivationDelay: 50
 		Description: Initiate a Lightning Storm which deals heavy damage over a large area.
@@ -629,7 +629,7 @@
 		Prerequisites: ~aircraft.ukraine
 		PauseOnCondition: empdisable || being-warped
 		Icon: carpetbomb
-		ChargeInterval: 7500
+		ChargeInterval: 9000
 		Name: Carpet Bomb
 		Description: Calls in a squad of Badgers which drop bombs on your target.
 		SelectTargetSpeechNotification: SelectTarget
@@ -657,7 +657,7 @@
 		Prerequisites: ~aircraft.iraq
 		PauseOnCondition: empdisable || being-warped
 		Icon: abombair
-		ChargeInterval: 9750
+		ChargeInterval: 10500
 		Name: Atomic Bomb
 		Description: Calls in a Badger bomber which drops an atom bomb on your target.
 		SelectTargetSpeechNotification: SelectTarget
@@ -686,7 +686,7 @@
 		PauseOnCondition: empdisable || being-warped
 		Icon: mutabomb
 		IconPalette: chromes
-		ChargeInterval: 9750
+		ChargeInterval: 6750
 		Name: Genetic Mutation Bomb
 		Description: Calls in a Badger bomber which drops a genetic mutation bomb on your target, transforming infantry into Brutes under your control.
 		SelectTargetSpeechNotification: SelectTarget
@@ -715,7 +715,7 @@
 		Prerequisites: ~aircraft.yuri
 		PauseOnCondition: empdisable || being-warped
 		Icon: chaosbombs
-		ChargeInterval: 9750
+		ChargeInterval: 8250
 		Name: Chaos Bombs
 		Description: Calls in a Badger bomber which drops parachuted chaos bombs on your target.
 		SelectTargetSpeechNotification: SelectTarget
@@ -760,7 +760,7 @@
 		Prerequisites: ~!player.iraq
 		OrderName: atomicammo
 		Icon: atomicammo
-		ChargeInterval: 5500
+		ChargeInterval: 4500
 		Name: Atomic Shells
 		Condition: atomic-ammo
 		Range: 8c0
@@ -791,7 +791,7 @@
 		Prerequisites: ~player.iraq
 		OrderName: atomicammoiraq
 		Icon: atomicammo
-		ChargeInterval: 5500
+		ChargeInterval: 4500
 		Name: Atomic Shells
 		Condition: atomic-ammo
 		Range: 8c0
@@ -856,7 +856,7 @@
 		SquadSize: 3
 		UnitType: anto
 		Icon: tankdrop
-		ChargeInterval: 7500
+		ChargeInterval: 9000
 		Name: Tank Drop
 		Description: Dispatches cargo planes to air drop tanks at the target location.
 		DropItems: 3tnk, 3tnk, 3tnk
@@ -901,7 +901,7 @@
 		OrderName: killzone
 		Prerequisites: ~arty.doctrine, playerxp.level2
 		Icon: killzone
-		ChargeInterval: 5250
+		ChargeInterval: 4500
 		Name: Kill Zone
 		Description: Calls in a Spy Plane which marks a target area. Any enemy units within it take increased damage.
 		SelectTargetSpeechNotification: SelectTarget
@@ -929,11 +929,11 @@
 	GrantExternalConditionPowerCA@IRONCURTAIN:
 		OrderName: ironcurtain
 		Icon: invuln
-		ChargeInterval: 6500
+		ChargeInterval: 4500
 		ExplosionWeapon: IronCurtain
 		Name: supportpower-ironcurtain.name
 		Condition: invulnerability
-		Range: 9c0
+		Range: 6c0
 		MaxTargets: 6
 		MinTargets: 0
 		ShowTargetCount: true
@@ -963,7 +963,7 @@
 		PauseOnCondition: disabled || empdisable || being-warped
 		Cursor: nuke
 		Icon: abomb
-		ChargeInterval: 10500
+		ChargeInterval: 13500
 		Name: Atom Bomb
 		Description: Launches a devastating atomic bomb at the target location, dealing heavy damage over a large area.
 		BeginChargeSpeechNotification: AbombPrepping
@@ -1003,7 +1003,7 @@
 		Prerequisites: ~radar.gdi, ~!player.arc
 		PauseOnCondition: disabled || empdisable || being-warped
 		Icon: uavicon
-		ChargeInterval: 2500
+		ChargeInterval: 3750
 		Name: Recon Drone
 		Description: A drone flies across the map, revealing the area as it passes.\n\nDetects cloaked units.
 		SelectTargetSpeechNotification: SelectTarget
@@ -1053,11 +1053,11 @@
 		Prerequisites: ~radar.talon
 		PauseOnCondition: disabled || empdisable || being-warped
 		Icon: xodrop
-		ChargeInterval: 5750
+		ChargeInterval: 10500
 		Name: X-O Drop
 		UnitType: ocar.xo
 		Description: An Orca transport drops a squad of X-O Powersuits at the target location.
-		SquadSize: 1
+		SquadSize: 2
 		SquadOffset: 0,1792,0
 		DropItems: XO,XO,XO,XO
 		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
@@ -1092,7 +1092,7 @@
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: Select target.
 		DisplayRadarPing: True
-		ChargeInterval: 6500
+		ChargeInterval: 4000
 		Weapon: DropPodArrive
 		UnitTypes: POD, POD, POD, POD, POD2, POD2, POD3
 		ExactUnits: true
@@ -1111,7 +1111,7 @@
 		OrderName: dropzoneeagle
 		Icon: orcaca
 		IconPalette: chrometd
-		ChargeInterval: 4000
+		ChargeInterval: 3750
 		Name: Reinforcements
 		Description: An Orca Carryall drops an APC containing an infantry squad at the target location.
 		EndChargeSpeechNotification: Reinforce
@@ -1137,7 +1137,7 @@
 		Prerequisites: ~aircraft.gdi, techlevel.medium
 		PauseOnCondition: empdisable || being-warped
 		Icon: airsupport
-		ChargeInterval: 7500
+		ChargeInterval: 10500
 		Name: Interceptors
 		Description: A squadron of Interceptors provides air cover over the target area, engaging any enemy aircraft within range.
 		SelectTargetSpeechNotification: SelectTarget
@@ -1167,12 +1167,12 @@
 	GrantExternalConditionPowerCA@NREPAIR:
 		OrderName: nrepair
 		Icon: nrepair
-		ChargeInterval: 4750
+		ChargeInterval: 5250
 		Condition: nrepair
-		Range: 8c512
-		MaxTargets: 15
+		Range: 7c512
+		MaxTargets: 12
 		ShowTargetCount: true
-		Duration: 825
+		Duration: 725
 		Prerequisites: ~gtek.arc
 		ExplosionWeapon: RepairFlash
 		ExplosionDelay: 5
@@ -1202,7 +1202,7 @@
 		Cursor: ability
 		Icon: fstorm
 		IconPalette: chrometd
-		ChargeInterval: 3500
+		ChargeInterval: 7500
 		Name: Firestorm
 		Description: Fires a barrage of rockets at the target area.
 		BeginChargeSpeechNotification: FireStormOffline
@@ -1233,7 +1233,7 @@
 ^AdvancedRadarPower:
 	GrantPrerequisiteChargeDrainPowerCA@RADAR:
 		OrderName: advradarorder
-		DischargeModifier: 700
+		DischargeModifier: 600
 		Prerequisite: scan-active
 		ChargeInterval: 2500
 		Icon: arscan
@@ -1249,7 +1249,7 @@
 		InsufficientPowerSpeechNotification: InsufficientPower
 		EndChargeTextNotification: Advanced Radar Scan ready.
 		Prerequisites: ~techlevel.high
-		EarlyDeactivationPenalty: 500
+		EarlyDeactivationPenalty: 1000
 		SupportPowerPaletteOrder: 30
 
 ^NaniteShieldPower:
@@ -1258,7 +1258,7 @@
 		OrderName: nshieldorder
 		Icon: nshield
 		Prerequisites: ~techlevel.high
-		ChargeInterval: 3500
+		ChargeInterval: 4500
 		LifeTime: 575
 		Name: Nanite Shield
 		Description: Reduces the damage taken by all vehicles in the target area.
@@ -1287,7 +1287,7 @@
 		PauseOnCondition: empdisable || disabled || being-warped
 		Cursor: empmissile
 		Icon: empmissile
-		ChargeInterval: 5500
+		ChargeInterval: 4500
 		Name: E.M. Missile
 		Description: Fires a Tomahawk missile which disables all mechanical units and structures on impact.
 		BeginChargeSpeechNotification: EMMissilePrepping
@@ -1346,7 +1346,7 @@
 		OrderName: ioncannon
 		Icon: ioncannon
 		Cursor: ioncannon
-		ChargeInterval: 8500
+		ChargeInterval: 13500
 		Name: Ion Cannon
 		ActivationDelay: 50
 		Description: Initiate an Ion Cannon strike which deals heavy damage over a large area.
@@ -1384,7 +1384,7 @@
 		SquadSize: 3
 		UnitType: c17
 		Icon: airdropicon
-		ChargeInterval: 6500
+		ChargeInterval: 10500
 		Name: Air Drop
 		Description: Dispatches cargo planes to air drop tanks at the target location.
 		DropItems: ltnk, ftnk, ltnk
@@ -1413,7 +1413,7 @@
 		SquadSize: 2
 		UnitType: c17
 		Icon: airdropicon
-		ChargeInterval: 6500
+		ChargeInterval: 10500
 		Name: Air Drop
 		Description: Dispatches cargo planes to air drop flame tanks at the target location.
 		DropItems: hftk, hftk
@@ -1442,7 +1442,7 @@
 		Icon: substrike
 		Prerequisites: vehicles.marked
 		Cursor: ability
-		ChargeInterval: 6000
+		ChargeInterval: 9750
 		Name: Subterranean Strike
 		ActivationDelay: 250
 		Description: Deploys a squad of Acolytes/Templar via Subterranean APC.
@@ -1468,10 +1468,10 @@
 		CircleSequence: circles
 	ParatroopersPowerCA@shadowairdrop:
 		OrderName: shadowairdrop
-		SquadSize: 2
+		SquadSize: 3
 		UnitType: c17
 		Icon: airdropicon
-		ChargeInterval: 7500
+		ChargeInterval: 10500
 		Name: Air Drop
 		Description: Dispatches cargo planes to air drop stealth tanks at the target location.
 		DropItems: stnk.nod, stnk.nod
@@ -1505,7 +1505,7 @@
 		LifeTime: 120
 		OrderName: sathack
 		Icon: hacksat
-		ChargeInterval: 2500
+		ChargeInterval: 6500
 		Name: Hack Satellite Uplink
 		Description: Reveals the targeted area for a short time.
 		LaunchSound: hacksat.aud
@@ -1643,7 +1643,7 @@
 		SpawnOffset: 1024,80,0
 		DetonationAltitude: 3c0
 		RemoveMissileOnDetonation: True
-		FlightDelay: 225
+		FlightDelay: 150
 		FlightVelocity: 0c624
 		DisplayRadarPing: True
 		CameraRange: 10c0
@@ -1698,7 +1698,7 @@
 		Prerequisites: ~tmpl.legion
 		OrderName: techhack
 		Icon: techhack
-		ChargeInterval: 6500
+		ChargeInterval: 12000
 		Name: Technology Hack
 		Description: Hack the targeted enemy production structure, providing access to a unit developed using enemy technology.\n\nFor infantry, vehicle and air production respectively: \n\n• Allies: Cryo Mortar, Reckoner, Phantom\n• Soviets: Cyberdog, Cyclops, Kamov\n• GDI: Sonic Mortar, Basilisk, Shade\n• Nod: Chem Mortar, Mantis, Vertigo\n• Scrin: Cyberscrin, Viper, Manticore
 		SelectTargetSpeechNotification: SelectTarget
@@ -1720,10 +1720,10 @@
 		Type: ParadropInfantry
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: Select target.
-		ChargeInterval: 4500
+		ChargeInterval: 5250
 		Name: Assassin Squad
 		Description: Deploy a squad of Assassins that can snipe infantry from long range and destroy buildings with C4.\n\nTarget infantry production structure to deploy.
-		Actors: assa, assa, assa, assa
+		Actors: assa, assa, assa, assa, assa
 		LaunchSpeechNotification: ReinforcementsArrived
 		EndChargeSpeechNotification: AssassinSquadReady
 		EndChargeTextNotification: Assassin Squad ready.
@@ -1734,7 +1734,7 @@
 		Icon: assassinsquad
 		IconPalette: chrometd
 		Type: ParadropInfantry
-		ChargeInterval: 5500
+		ChargeInterval: 13500
 		Name: Assassin Squad (AI)
 		Description: Deploy a squad of Assassins that can destroy buildings and salvage technology.
 		Actors: assa, assa, assa, assa
@@ -1748,10 +1748,10 @@
 		Type: ParadropInfantry
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: Select target.
-		ChargeInterval: 4500
+		ChargeInterval: 5250
 		Name: Hacker Cell
 		Description: Deploy a squad of Hackers that can remotely capture buildings and take control of defenses.\n\nTarget infantry production structure to deploy.
-		Actors: hack, hack, hack, hack
+		Actors: hack, hack, hack, hack, hack
 		LaunchSpeechNotification: ReinforcementsArrived
 		EndChargeSpeechNotification: HackerCellReady
 		EndChargeTextNotification: Hacker Cell ready.
@@ -1761,7 +1761,7 @@
 		Prerequisites: unity.covenant, ~botplayer
 		Icon: hackercell
 		Type: ParadropInfantry
-		ChargeInterval: 5500
+		ChargeInterval: 13500
 		Name: Hacker Cell (AI)
 		Description: Deploy a squad of Hackers that can remotely capture buildings and take control of defenses.
 		Actors: hack, hack, hack, hack
@@ -1777,10 +1777,10 @@
 		Type: ParadropInfantry
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: Select target.
-		ChargeInterval: 4500
+		ChargeInterval: 5250
 		Name: Confessor Cabal
 		Description: Deploy a Confessor Cabal which is able to construct Idols of Kane that buffs allies and debuffs enemies.\n\nTarget infantry production structure to deploy.
-		Actors: conf, conf, conf, conf
+		Actors: conf, conf, conf, conf, conf
 		LaunchSound: conf-create.aud
 		EndChargeSpeechNotification: ConfessorCabalReady
 		EndChargeTextNotification: Confessor Cabal ready.
@@ -1791,7 +1791,7 @@
 		Icon: confessorcabal
 		IconPalette: chrometd
 		Type: ParadropInfantry
-		ChargeInterval: 5500
+		ChargeInterval: 13500
 		Name: Confessor Cabal (AI)
 		Description: Deploy a Confessor Cabal which is able to construct Idols of Kane that buffs allies and debuffs enemies.
 		Actors: conf, conf, conf, conf
@@ -1866,7 +1866,7 @@
 		TrailSequences: idle
 		TrailPalette: tseffect-ignore-lighting-alpha75
 		DetonationAltitude: 0
-		CircleRanges: 8c512
+		CircleRanges: 7c512
 		CircleColor: 00BB00AA
 		CircleBorderColor: 007700AA
 		SupportPowerPaletteOrder: 10
@@ -1893,7 +1893,7 @@
 		CameraRemoveDelay: 1
 		DisplayRadarPing: True
 		SupportPowerPaletteOrder: 50
-		TargetCircleRange: 9c0
+		TargetCircleRange: 8c0
 		TargetCircleColor: 00ff00aa
 
 ^ColonySpikePower:
@@ -1920,7 +1920,7 @@
 		DisplayRadarPing: True
 		SupportPowerPaletteOrder: 50
 		TargetMustBeInBuildRadius: true
-		TargetCircleRange: 8c0
+		TargetCircleRange: 7c0
 		TargetCircleColor: ffffffa0
 
 ^VoidSpikePower:
@@ -1945,7 +1945,7 @@
 		CameraRemoveDelay: 1
 		DisplayRadarPing: True
 		SupportPowerPaletteOrder: 50
-		TargetCircleRange: 8c511
+		TargetCircleRange: 7c511
 		TargetCircleColor: 471f8c90
 		IncomingSound: malefic.aud
 
@@ -1956,7 +1956,7 @@
 		LifeTime: 350
 		OrderName: resourcescan
 		Icon: rescanpower
-		ChargeInterval: 3500
+		ChargeInterval: 6000
 		Name: Resource Scan
 		Description: Reveals the area surrounding all resources on the map.
 		LaunchSound: tibscan.aud
@@ -2023,7 +2023,7 @@
 		IconPalette: chromes
 		Prerequisites: radar.harbinger, botplayer
 		Cursor: ability
-		ChargeInterval: 8500
+		ChargeInterval: 13500
 		Name: Buzzer Swarm (AI)
 		ActivationDelay: 1
 		Description: Spawns a controllable swarm which damages anything nearby; particularly harmful to infantry.
@@ -2047,7 +2047,7 @@
 		IconPalette: chromes
 		Prerequisites: radar.traveler
 		Cursor: ability
-		ChargeInterval: 4750
+		ChargeInterval: 6750
 		Name: Ion Surge
 		ActivationDelay: 1
 		Description: Increases the movement speed of all friendly units passing through the target area.
@@ -2072,7 +2072,7 @@
 		Icon: ichorpower
 		Actor: ichorseeder
 		Prerequisites: ~!player.reaper
-		ChargeInterval: 3000
+		ChargeInterval: 7500
 		Name: Ichor Seed
 		LifeTime: -1
 		AllowMultiple: false
@@ -2094,7 +2094,7 @@
 		Icon: ichorpower
 		Actor: ichorseeder
 		Prerequisites: ~player.reaper
-		ChargeInterval: 3800
+		ChargeInterval: 3750
 		Name: Ichor Seed
 		LifeTime: -1
 		AllowMultiple: false
@@ -2145,7 +2145,7 @@
 		IconPalette: chromes
 		Prerequisites: ~loyalist.allegiance, ~techlevel.high
 		Cursor: ability
-		ChargeInterval: 7500
+		ChargeInterval: 9000
 		Name: Overlord's Wrath
 		Description: A Tiberium meteor strikes the target location dealing heavy damage and creating a patch of Tiberium.
 		EndChargeSpeechNotification: OverlordsWrathReady
@@ -2184,7 +2184,7 @@
 		IconPalette: chromes
 		Prerequisites: ~rebel.allegiance, ~techlevel.high
 		Cursor: ability
-		ChargeInterval: 4000
+		ChargeInterval: 4500
 		Name: Gateway
 		ActivationDelay: 1
 		Description: Creates a Gateway at the target location. Acts as the exit for any\n   targeted infantry or vehicle production structure.\n\nRequires target location to be within vision.
@@ -2208,7 +2208,7 @@
 		OrderName: anathema
 		Icon: anathema
 		IconPalette: chromes
-		ChargeInterval: 2000
+		ChargeInterval: 2500
 		Name: Anathema
 		Condition: anathema
 		Range: 5c0
@@ -2237,7 +2237,7 @@
 		PauseOnCondition: disabled || empdisable || being-warped
 		OrderName: suppression
 		Icon: spresspower
-		ChargeInterval: 4000
+		ChargeInterval: 4500
 		Name: Suppression Field
 		Description: Applies a suppression field to the target area, slowing unit movement and rate of fire.
 		SelectTargetSpeechNotification: SelectTarget
@@ -2247,7 +2247,7 @@
 		EndChargeSpeechNotification: SuppressionReady
 		EndChargeTextNotification: Suppression Field ready.
 		DisplayRadarPing: True
-		Range: 6c0
+		Range: 3c0
 		ShowTargetCircle: true
 		TargetTintColor: ff55ff33
 		TargetCircleColor: ff55ffcc
@@ -2260,7 +2260,7 @@
 		MinTargets: 1
 		ValidTargets: Ground, Air, AirSmall, Ship
 		ValidRelationships: Ally, Enemy, Neutral
-		Duration: 700
+		Duration: 650
 		AllowMultiple: false
 		Cursor: ability
 		ExplosionWeapon: SuppressionField
@@ -2301,7 +2301,7 @@
 		OrderName: rift
 		Icon: riftpower
 		Cursor: ability
-		ChargeInterval: 8500
+		ChargeInterval: 10500
 		Name: Rift
 		ActivationDelay: 75
 		Description: Initiate a Rift which deals heavy damage over time to a large area.

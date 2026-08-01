@@ -229,7 +229,7 @@
 130mm:
 	Inherits: ^Cannon
 	Range: 6c256
-	ReloadDelay: 70
+	ReloadDelay: 75
 	Burst: 2
 	InvalidTargets: Infantry
 	Warhead@1Dam: SpreadDamage
@@ -270,7 +270,7 @@
 
 135mm:
 	Inherits: 130mm
-	Range: 6c768
+	Range: 6c512
 	Report: voveweaa.aud, voveweab.aud, voveweac.aud
 	-InvalidTargets:
 	Warhead@1Dam: SpreadDamage
@@ -797,7 +797,7 @@ JuggernautGunTargeting:
 
 Grenade:
 	Inherits: ^Artillery
-	Range: 5c725
+	Range: 6c256
 	Report: grenade1.aud
 	Projectile: Bullet
 		Speed: 136

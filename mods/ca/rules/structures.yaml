@@ -3943,10 +3943,14 @@ HQ.UPG:
 	Tooltip:
 		Name: Internet Center
 	TooltipExtras:
-		Attributes: • Requires power to operate\n• Detects nearby enemy vehicles, aircraft and structures in fog of war (increases per garrisoned Hacker)\n• $25 delivered every 15 seconds (normal speed)\n• Income increased by $75 per garrisoned Hacker\n• Cannot be hacked
+		Attributes: • Requires power to operate\n• Detects nearby enemy vehicles, aircraft and structures in fog of war (increases per garrisoned Hacker)\n• $100 delivered every 15 seconds (normal speed)\n• Income increased by $100 per garrisoned Hacker\n• Cannot be hacked
+	Valued:
+		Cost: 2200
 	-Targetable@HACKABLE:
 	-TransformOnCondition@UPG:
 	-GrantConditionOnPrerequisite@UPG:
+	Power:
+		Amount: -100
 	Cargo:
 		Types: Hacker
 		MaxWeight: 5
@@ -3957,27 +3961,27 @@ HQ.UPG:
 		RequiresSelection: true
 	CashTrickler@Hacker0:
 		Interval: 375
-		Amount: 25
+		Amount: 100
 		RequiresCondition: cargo == 0
 	CashTrickler@Hacker1:
 		Interval: 375
-		Amount: 100
+		Amount: 200
 		RequiresCondition: cargo == 1
 	CashTrickler@Hacker2:
 		Interval: 375
-		Amount: 175
+		Amount: 300
 		RequiresCondition: cargo == 2
 	CashTrickler@Hacker3:
 		Interval: 375
-		Amount: 250
+		Amount: 400
 		RequiresCondition: cargo == 3
 	CashTrickler@Hacker4:
 		Interval: 375
-		Amount: 325
+		Amount: 500
 		RequiresCondition: cargo == 4
 	CashTrickler@Hacker5:
 		Interval: 375
-		Amount: 400
+		Amount: 600
 		RequiresCondition: cargo == 5
 	RevealsShroud:
 		Range: 7c0
@@ -5620,7 +5624,7 @@ CVAT:
 	CargoCloner@MQ:
 		Types: Clone
 		OverrideUnitBuildDurationModifier: true
-		BuildDurationModifier: 60
+		BuildDurationModifier: 50
 		ReadyAudio: UnitReady
 		BlockedAudio: NoBuild
 		BlockedTextNotification: Unable to build more.
@@ -5667,7 +5671,7 @@ INDP:
 		Queue: BuildingSQ, BuildingMQ
 		BuildPaletteOrder: 200
 		Prerequisites: ~structures.soviet, stek, playerxp.level3, ~armor.doctrine, ~techlevel.high
-		Description: Vehicles & aircraft are produced 18% faster and cost 12% less.
+		Description: Vehicles & aircraft are produced 18% faster and cost 15% less. Vehicles have 10% reduced reload time.
 		BuildLimit: 1
 	TooltipExtras:
 		Attributes: • Maximum 1 can be built\n• Cannot be captured or hacked
@@ -5975,7 +5979,7 @@ UPGC:
 		Offset: -1024,768,0
 	PeriodicProducerCA@DROP:
 		Type: Money
-		ChargeDuration: 750
+		ChargeDuration: 500
 		Actors: truk.drop
 		ShowSelectionBar: true
 		RequiresCondition: tower-drop
@@ -6391,21 +6395,21 @@ IOK:
 		DestroyedSounds: kaboom15.aud
 	ProximityExternalCondition@IdolOfKaneBuff:
 		Condition: iokbuff
-		Range: 12c0
+		Range: 14c0
 		ValidRelationships: Ally
 		RequiresCondition: initialized
 	ProximityExternalCondition@IdolOfKaneDebuff:
 		Condition: iokdebuff
-		Range: 12c0
+		Range: 14c0
 		ValidRelationships: Neutral, Enemy
 		RequiresCondition: !rage-active && initialized
 	ProximityExternalCondition@Rage:
 		Condition: berserk
-		Range: 8c0
+		Range: 14c0
 		ValidRelationships: Neutral, Enemy
 		RequiresCondition: rage-active
 	WithRadiatingCircle:
-		EndRadius: 12c0
+		EndRadius: 14c0
 		Interval: 40
 		Duration: 30
 		ValidRelationships: Ally, Enemy, Neutral
@@ -6417,7 +6421,7 @@ IOK:
 		Width: 2
 		RequiresCondition: !rage-active && initialized
 	WithRadiatingCircle@Rage:
-		EndRadius: 8c0
+		EndRadius: 14c0
 		Interval: 5
 		Duration: 50
 		ValidRelationships: Ally, Enemy, Neutral
@@ -6431,8 +6435,8 @@ IOK:
 	GrantTimedConditionOnDeploy@Rage:
 		DeployedCondition: rage-active
 		ShowSelectionBar: true
-		DeployedTicks: 110
-		CooldownTicks: 355
+		DeployedTicks: 125
+		CooldownTicks: 375
 		ShowSelectionBarWhenFull: false
 		ChargingColor: 770000
 		DischargingColor: ff0000

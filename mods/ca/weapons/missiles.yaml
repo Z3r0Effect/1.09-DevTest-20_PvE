@@ -787,7 +787,7 @@ StingerAA:
 StingerGTWR:
 	Inherits: Stinger
 	ReloadDelay: 40
-	Range: 12c0
+	Range: 13c0
 	Report: rocket2.aud
 	BurstDelays: 10
 	Projectile: MissileCA
@@ -2291,7 +2291,7 @@ Hydra.R:
 		ContrailStartWidth: 0c42
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 550
+		Damage: 470
 		Falloff: 1000, 648, 292, 150, 78, 25, 0
 		Versus:
 			None: 100
@@ -2443,10 +2443,10 @@ RocketShells:
 
 CyborgReaperMissiles:
 	Inherits: ^AntiGroundMissile
-	ReloadDelay: 65
+	ReloadDelay: 60
 	Burst: 2
 	BurstDelays: 10
-	Range: 7c0
+	Range: 8c256
 	Report: reap-fire1.aud, reap-fire2.aud
 	Projectile: MissileCA
 		Speed: 220
@@ -2460,8 +2460,8 @@ CyborgReaperMissiles:
 		Versus:
 			None: 100
 			Wood: 75
-			Light: 75
-			Heavy: 30
+			Light: 85
+			Heavy: 40
 			Concrete: 50
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigated
 	Warhead@3Eff: CreateEffect
@@ -2470,10 +2470,10 @@ CyborgReaperMissiles:
 
 CyborgReaperMissilesAA:
 	Inherits: ^AntiAirMissile
-	ReloadDelay: 65
+	ReloadDelay: 60
 	Burst: 2
 	BurstDelays: 10
-	Range: 8c0
+	Range: 8c768
 	Report: reap-fire1.aud, reap-fire2.aud
 	Projectile: MissileCA
 		Speed: 250
@@ -2489,7 +2489,7 @@ CyborgReaperMissilesAA:
 		Damage: 5500
 
 CyborgReaperSnare:
-	ReloadDelay: 150
+	ReloadDelay: 125
 	Range: 9c0
 	Report: reap-snarefire.aud
 	Projectile: Bullet
@@ -2506,7 +2506,7 @@ CyborgReaperSnare:
 		Damage: 1
 	Warhead@Snare: GrantExternalConditionCA
 		Condition: reapersnare
-		Duration: 100
+		Duration: 150
 		Range: 2c0
 		InvalidTargets: ReaperSnareImmune
 	Warhead@3Eff: CreateEffect
@@ -2517,7 +2517,7 @@ CyborgReaperSnare:
 KamovRockets:
 	Inherits: ^AirToGroundMissile
 	ReloadDelay: 75
-	Range: 9c0
+	Range: 9c256
 	MinRange: 3c0
 	Report: hind-rocket1.aud, hind-rocket2.aud
 	Burst: 3
@@ -2583,7 +2583,7 @@ KamovRocketsWide:
 TigerGuardMissile:
 	Inherits: ^AntiGroundMissile
 	Inherits@Projectile: ^TigerGuardMissileProjectile
-	ReloadDelay: 110
+	ReloadDelay: 100
 	Range: 12c0
 	MinRange: 3c0
 	Report: tigr-fire1.aud, tigr-fire2.aud

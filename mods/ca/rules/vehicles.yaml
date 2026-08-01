@@ -205,7 +205,7 @@ NUKC:
 		Weaknesses: • Cannot attack Aircraft\n• Has difficulty hitting moving targets
 		Attributes: • Can crush concrete walls
 	Valued:
-		Cost: 2300
+		Cost: 2400
 	Tooltip:
 		Name: Nuke Cannon
 	UpdatesPlayerStatistics:
@@ -6129,7 +6129,7 @@ TRPC:
 			bori: loaded-cmdo
 			yuri: loaded-cmdo
 			mast: loaded-cmdo
-		InitialUnits: E1,E1,E1,E1,E3,E3,E3,E4,E4,E4
+		InitialUnits: E1,E1,E1,E3,E3,E3,E3,E2,E2,E2
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud
@@ -10132,7 +10132,7 @@ OVLD:
 		Weaknesses: • Cannot attack Aircraft
 		Attributes: • Can crush smaller vehicles and concrete walls\n• Self repairs to 50% out of combat\n• Empowers nearby basic infantry
 	Valued:
-		Cost: 2200
+		Cost: 2300
 	Tooltip:
 		Name: Overlord Tank
 		GenericName: Tank
@@ -10141,7 +10141,7 @@ OVLD:
 	Health:
 		HP: 130000
 	Mobile:
-		Speed: 48
+		Speed: 46
 		TurnSpeed: 12
 		Locomotor: sheavytracked
 		Voice: Move
