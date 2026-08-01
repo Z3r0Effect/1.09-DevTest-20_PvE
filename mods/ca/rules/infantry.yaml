@@ -3557,7 +3557,7 @@ BRUT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 35000
+		HP: 38000
 	Armor:
 		Type: Light
 	Mobile:
@@ -3603,11 +3603,11 @@ BRUT:
 		-CrushedSequence:
 	Armament@PRIMARY:
 		Weapon: BruteAttack
-		FireDelay: 10
+		FireDelay: 5
 	Armament@SECONDARY:
 		Name: secondary
 		Weapon: BruteBuildingAttack
-		FireDelay: 10
+		FireDelay: 5
 	AttackFrontal:
 		PauseOnCondition: being-warped || blinded || reapersnare
 		Voice: Attack
