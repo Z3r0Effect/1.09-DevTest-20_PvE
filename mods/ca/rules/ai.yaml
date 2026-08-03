@@ -2072,11 +2072,11 @@ Player:
 		HarasserTypes: 1tnk, rtnk, bike, gdrn, gdrn.tow, hmmv.tow, stnk.nod, hstk, spec, lace, seek, pbul, n2, e2, ivan, n4, n5, e4
 		ConstructionYardTypes: fact,afac,sfac
 		StaticAntiAirTypes: agun, sam, nsam, cram, shar
-		IdleScanRadius: 18
-		AttackScanRadius: 9
-		MaxBaseRadius: 16
-		ProtectUnitScanRadius: 28
-		ProtectionScanRadius: 16
+		IdleScanRadius: 22
+		AttackScanRadius: 14
+		MaxBaseRadius: 26
+		ProtectUnitScanRadius: 36
+		ProtectionScanRadius: 20
 		HighValueTargetTypes: fact, afac, sfac, proc, proc.td, proc.scrin, atek, stek, gtek, tmpl, scrt, harv, harv.td, harv.td.upg, harv.scrin, harv.chrono
 		HighValueTargetPriority: 30
 		IgnoredEnemyTargetTypes: Wall
@@ -2205,12 +2205,16 @@ Player:
 		HarasserTypes: 1tnk, rtnk, bike, gdrn, gdrn.tow, hmmv.tow, stnk.nod, hstk, spec, lace, seek, pbul, n2, e2, ivan, n4, n5, e4
 		ConstructionYardTypes: fact,afac,sfac
 		StaticAntiAirTypes: agun, sam, nsam, cram, shar
-		ProtectionScanRadius: 16
+		IdleScanRadius: 18
+		AttackScanRadius: 12
+		MaxBaseRadius: 18
+		ProtectUnitScanRadius: 36
+		ProtectionScanRadius: 20
 		HighValueTargetTypes: fact, afac, sfac, proc, proc.td, proc.scrin, atek, stek, gtek, tmpl, scrt, harv, harv.td, harv.td.upg, harv.scrin, harv.chrono
 		HighValueTargetPriority: 15
 		IgnoredEnemyTargetTypes: Wall
-		IndirectRouteChance: 40
-		AirToAirPriority: 20
+		IndirectRouteChance: 50
+		AirToAirPriority: 50
 		BigAirThreats: pac, deva, kiro, mshp
 		AirSquadTargetArmorTypes:
 			heli: Aircraft, Heavy

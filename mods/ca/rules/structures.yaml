@@ -510,10 +510,10 @@ TSLA:
 	AttackTesla:
 		PauseOnCondition: build-incomplete || disabled || empdisable || being-warped
 		ChargeAudio: tslachg2.aud
-		MaxCharges: 3
-		ReloadDelay: 120
+		MaxCharges: 4
+		ReloadDelay: 100
 	Power:
-		Amount: -55
+		Amount: -45
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@TeslaCoilOrSovietTechCenter:
 		Prerequisite: tslaorstek
@@ -1999,11 +1999,11 @@ TPWR:
 	-ScalePowerWithHealth:
 	ProximityExternalCondition@TeslaBoost:
 		Condition: charged
-		Range: 8c0
+		Range: 12c0
 	WithRangeCircleCA@TeslaBoost:
 		Type: TeslaBoost
 		Color: FFFF00AA
-		Range: 8c0
+		Range: 12c0
 	UpdatesBuildOrder:
 		Limit: 1
 	Encyclopedia:
@@ -3579,7 +3579,7 @@ ATWR:
 	Tooltip:
 		Name: Advanced Guard Tower
 	Health:
-		HP: 52000
+		HP: 55000
 	Armor:
 		Type: Concrete
 	Selectable:
@@ -3606,7 +3606,7 @@ ATWR:
 	ClassicFacingBodyOrientation:
 		QuantizedFacings: 8
 	Power:
-		Amount: -45
+		Amount: -30
 	DetectCloaked:
 		RequiresCondition: !(disabled || empdisable || being-warped)
 	Encyclopedia:
@@ -3660,7 +3660,7 @@ STWR:
 		PauseOnCondition: build-incomplete || disabled || empdisable || being-warped
 	WithMuzzleOverlay:
 	Power:
-		Amount: -45
+		Amount: -40
 	ClassicFacingBodyOrientation:
 	DetectCloaked:
 		RequiresCondition: !(disabled || empdisable || being-warped)
@@ -3738,7 +3738,7 @@ OBLI:
 		SoundFiles: obelpowr2.aud
 		Interval: 20
 	Power:
-		Amount: -40
+		Amount: -35
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@ObeliskOrTemple:
 		Prerequisite: obliortmpl
@@ -3945,12 +3945,12 @@ HQ.UPG:
 	TooltipExtras:
 		Attributes: • Requires power to operate\n• Detects nearby enemy vehicles, aircraft and structures in fog of war (increases per garrisoned Hacker)\n• $100 delivered every 15 seconds (normal speed)\n• Income increased by $100 per garrisoned Hacker\n• Cannot be hacked
 	Valued:
-		Cost: 2200
+		Cost: 2000
 	-Targetable@HACKABLE:
 	-TransformOnCondition@UPG:
 	-GrantConditionOnPrerequisite@UPG:
 	Power:
-		Amount: -100
+		Amount: -80
 	Cargo:
 		Types: Hacker
 		MaxWeight: 5
@@ -3961,27 +3961,27 @@ HQ.UPG:
 		RequiresSelection: true
 	CashTrickler@Hacker0:
 		Interval: 375
-		Amount: 100
+		Amount: 150
 		RequiresCondition: cargo == 0
 	CashTrickler@Hacker1:
 		Interval: 375
-		Amount: 200
+		Amount: 250
 		RequiresCondition: cargo == 1
 	CashTrickler@Hacker2:
 		Interval: 375
-		Amount: 300
+		Amount: 350
 		RequiresCondition: cargo == 2
 	CashTrickler@Hacker3:
 		Interval: 375
-		Amount: 400
+		Amount: 450
 		RequiresCondition: cargo == 3
 	CashTrickler@Hacker4:
 		Interval: 375
-		Amount: 500
+		Amount: 550
 		RequiresCondition: cargo == 4
 	CashTrickler@Hacker5:
 		Interval: 375
-		Amount: 600
+		Amount: 650
 		RequiresCondition: cargo == 5
 	RevealsShroud:
 		Range: 7c0
@@ -4789,7 +4789,7 @@ PRIS:
 		Weapon: PrisLaserSupport
 		LocalOffset: 0,0,1024
 	Power:
-		Amount: -45
+		Amount: -35
 	ProvidesPrerequisite@buildingname:
 	WithPrismLinkVisualization:
 		Range: 7c512
@@ -5671,7 +5671,7 @@ INDP:
 		Queue: BuildingSQ, BuildingMQ
 		BuildPaletteOrder: 200
 		Prerequisites: ~structures.soviet, stek, playerxp.level3, ~armor.doctrine, ~techlevel.high
-		Description: Vehicles & aircraft are produced 18% faster and cost 15% less. Vehicles have 10% reduced reload time.
+		Description: Vehicles & aircraft are produced 25% faster and cost 18% less. Vehicles have 15% reduced reload time.
 		BuildLimit: 1
 	TooltipExtras:
 		Attributes: • Maximum 1 can be built\n• Cannot be captured or hacked

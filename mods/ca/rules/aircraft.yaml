@@ -598,7 +598,7 @@ P51:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 34000
+		HP: 56000
 	RevealsShroud@GAPGEN:
 		Range: 9c0
 		Type: GroundPosition
@@ -627,8 +627,8 @@ P51:
 	Aircraft:
 		CruiseAltitude: 2560
 		InitialFacing: 192
-		TurnSpeed: 16
-		Speed: 216
+		TurnSpeed: 24
+		Speed: 270
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 	WithMuzzleOverlay:

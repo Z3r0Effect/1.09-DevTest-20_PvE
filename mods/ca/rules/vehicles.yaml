@@ -547,7 +547,7 @@ GTNK:
 	Passenger:
 		Voice: Move
 	Health:
-		HP: 52000
+		HP: 45000
 	Armament:
 		Weapon: 105mm
 		LocalOffset: 720,0,80
@@ -593,7 +593,7 @@ GTNK.squad:
 		Strengths: • Strong vs Heavy Armor, Light Armor
 		Weaknesses: • Weak vs Infantry, Defenses\n• Cannot attack Aircraft
 	Valued:
-		Cost: 1750
+		Cost: 4200
 	RenderSprites:
 		Image: squad.airborne.tank
 	ProduceActorPowerCA:
@@ -8730,7 +8730,7 @@ BATF:
 	WithMuzzleOverlay:
 	Cargo:
 		Types: Infantry, Hacker
-		MaxWeight: 5
+		MaxWeight: 6
 		LoadingCondition: notmobile
 		LoadedCondition: cargo
 		PassengerConditions:
@@ -9951,8 +9951,8 @@ APOC:
 	ChangesHealth:
 		PercentageStep: 1
 		Delay: 25
-		StartIfBelow: 50
-		DamageCooldown: 150
+		StartIfBelow: 75
+		DamageCooldown: 100
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
 	WithProductionIconOverlay:
@@ -9974,9 +9974,9 @@ APOC:
 	WithAmmoPipsDecoration@ATOMICAMMO:
 		PipCount: 3
 	AmmoPool@ATOMICAMMO:
-		Ammo: 6
+		Ammo: 10
 	ReloadAmmoPool@ATOMICAMMO:
-		Count: 6
+		Count: 10
 		RequiresCondition: atomic-ammo && has-atomic-ammo < 6
 	ReplacedInQueue:
 		Actors: apoc.atomic, apoc.erad
@@ -10116,6 +10116,8 @@ APOC.ERAD.ATOMIC:
 OVLD:
 	Inherits: ^Tank
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@TRANSPORT: ^Transport
+	Inherits@NOUNLOADCHRONO: ^NoUnloadWhenChronoshifted
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@SHRAPNEL: ^ThrowsShrapnel
 	Inherits@ATOMICAMMO: ^AtomicAmmunition
@@ -10164,6 +10166,15 @@ OVLD:
 		MuzzleSequence: muzzle
 		PauseOnCondition: has-atomic-ammo || atomic-reloading
 		ReloadingCondition: reloading
+	Armament@OVLDCOAX:
+		Weapon: OvldCoaxial
+		LocalOffset: 1050,0,420
+		MuzzleSequence: muzzle
+		PauseOnCondition: empdisable || being-warped || blinded
+	WithEjectedCasings:
+		CasingWeapon: BrassDebris
+		CasingSpawnLocalOffset: 0,-125,200
+		CasingTargetOffset: 0, -500, 0
 	Armament@ATOMICAMMO:
 		Weapon: 135mmAtomic
 		Recoil: 171
@@ -10184,7 +10195,7 @@ OVLD:
 	ChangesHealth:
 		PercentageStep: 1
 		Delay: 25
-		StartIfBelow: 50
+		StartIfBelow: 75
 		DamageCooldown: 125
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded

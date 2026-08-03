@@ -6258,7 +6258,7 @@ BUZZ:
 	WithSpriteBody:
 	HitShape:
 	KillsSelf:
-		Delay: 850
+		Delay: 650
 	# required for death animation
 	Health:
 		HP: 1

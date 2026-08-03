@@ -806,14 +806,14 @@ powerproxy.airborne:
 	ParatroopersPowerCA:
 		OrderName: airborne
 		Icon: airborne
-		SquadSize: 2
+		SquadSize: 5
 		UnitType: galx
 		Name: Airdrop: Guardian GIs
 		Description: A Heavy Transport Plane drops a squad of Guardian GIs\nanywhere on the map.
 		OneShot: true
 		Stacks: 1
-		StackActivationInterval: 10
-		DropItems: U3,U3,U3,U3,U3
+		StackActivationInterval: 2625
+		DropItems: U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3
 		SelectTargetSpeechNotification: SelectTarget
 		EndChargeSpeechNotification: Reinforce
 		LaunchSpeechNotification: ReinforcementsArrived
@@ -830,7 +830,7 @@ powerproxy.airborne:
 		DirectionArrowAnimation: paradirection
 		SupportPowerPaletteOrder: 70
 		PrerequisiteDropItems:
-			airborne.upgrade: U3R2, U3R2, U3R2, U3R2, U3R2
+			airborne.upgrade: U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2
 	Buildable:
 		Queue: PowerProxy
 	Tooltip:
@@ -841,14 +841,14 @@ powerproxy.airborne.tank:
 	ParatroopersPowerCA:
 		OrderName: airbornetank
 		Icon: airdropicon
-		SquadSize: 1
+		SquadSize: 3
 		UnitType: galx
 		Name: Airdrop: Grizzly Tanks
 		Description: A Heavy Transport Plane drops a pair of Grizzly Tanks\nanywhere on the map.
 		OneShot: true
 		Stacks: 1
-		StackActivationInterval: 10
-		DropItems: GTNK,GTNK,GTNK,GTNK
+		StackActivationInterval: 3000
+		DropItems: GTNK,GTNK,GTNK,GTNK,GTNK,GTNK
 		SelectTargetSpeechNotification: SelectTarget
 		EndChargeSpeechNotification: Reinforce
 		LaunchSpeechNotification: ReinforcementsArrived
@@ -865,7 +865,7 @@ powerproxy.airborne.tank:
 		DirectionArrowAnimation: paradirection
 		SupportPowerPaletteOrder: 70
 		PrerequisiteDropItems:
-			airborne.upgrade: GTNKR2, GTNKR2, GTNKR2, GTNKR2
+			airborne.upgrade: GTNKR2, GTNKR2, GTNKR2, GTNKR2, GTNKR2, GTNKR2
 	Buildable:
 		Queue: PowerProxy
 	Tooltip:

@@ -577,7 +577,7 @@ U3.squad:
 		Weaknesses: • Weak vs Infantry, Light Armor\n• Weak anti-infantry weapon when not deployed
 		Attributes: • Deploys for personal anti-tank fortification\n• Uncrushable when deployed
 	Valued:
-		Cost: 2300
+		Cost: 4000
 	RenderSprites:
 		Image: squad.airborne
 	ProduceActorPowerCA:

@@ -493,14 +493,15 @@ PortaTeslaCharge:
 
 TTrackZap:
 	Inherits: ^TeslaWeapon
-	ReloadDelay: 75
+	ReloadDelay: 70
 	Range: 8c512
 	Warhead@1Dam: SpreadDamage
 		Damage: 11500
 		Versus:
 			Wood: 50
 			Concrete: 50
-			Light: 75
+			Light: 70
+			Heavy: 85
 
 TTrackZap.UPG:
 	Inherits: TTrackZap
@@ -516,7 +517,7 @@ TTrackZap.UPG:
 TTrackArc1:
 	Inherits: TTrackZap.UPG
 	-Report:
-	Range: 3c512
+	Range: 2c512
 	ValidTargets: Vehicle, Ship
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Vehicle, Ship
@@ -535,7 +536,7 @@ TTrackArc2:
 TTankZap:
 	Inherits: ^TeslaWeapon
 	Report: vtesatta.aud, vtesattb.aud
-	ReloadDelay: 50
+	ReloadDelay: 55
 	Burst: 2
 	BurstDelays: 3
 	Range: 8c0
@@ -545,7 +546,7 @@ TTankZap:
 			None: 380
 			Wood: 55
 			Concrete: 55
-			Heavy: 70
+			Heavy: 50
 
 TTankZap.UPG:
 	Inherits: TTankZap
@@ -559,11 +560,11 @@ TTankZap.UPG:
 TTankArc:
 	Inherits: TTankZap
 	-Report:
-	Range: 3c512
+	Range: 2c512
 	ValidTargets: Infantry, Vehicle, Defense
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Infantry, Vehicle, Defense
-		Damage: 1000
+		Damage: 1750
 		Versus:
 			None: 315
 
@@ -1068,7 +1069,7 @@ MADTankDetonate:
 		ValidTargets: Ground, Infantry, Vehicle, Ship
 
 Laser:
-	ReloadDelay: 45
+	ReloadDelay: 30
 	ValidTargets: Ground, Water
 	Range: 12c256
 	Report: oblfire.aud
@@ -1555,7 +1556,7 @@ PrisLaser:
 PrisLaserSupport:
 	ValidTargets: Ground, Water
 	ReloadDelay: 3
-	Range: 6c0
+	Range: 7c0
 	Report: bpriat1a.aud
 	Projectile: LaserZapCA
 		Width: 35
@@ -1570,7 +1571,7 @@ PrisLaserSupport:
 PrisBurst:
 	Inherits: PrisLaser
 	-Report:
-	Range: 4c512
+	Range: 3c512
 	Projectile: LaserZapCA
 		-HitAnim:
 	Warhead@1Dam: SpreadDamage
@@ -1611,7 +1612,7 @@ PrisTLaser:
 PrisTBurst:
 	Inherits: PrisTLaser
 	-Report:
-	Range: 3c512
+	Range: 2c512
 	Projectile: LaserZapCA
 		-HitAnim:
 	Warhead@1Dam: SpreadDamage
@@ -2826,7 +2827,7 @@ NeutronCannonSound:
 	Projectile: InstantHit
 
 SonicPulse:
-	ReloadDelay: 55
+	ReloadDelay: 60
 	Range: 12c256
 	Report: sonicpulse1.aud, sonicpulse2.aud
 	TargetActorCenter: true
@@ -2862,7 +2863,7 @@ SonicPulse:
 
 SonicPulse.UPG:
 	Inherits: SonicPulse
-	Range: 12c512
+	Range: 12c768
 	Projectile: LinearPulse
 		ImpactAnimation@1:
 			Sequences: sonicblastupg1, sonicblastupg2
@@ -3675,7 +3676,7 @@ FloatingDiscLaser:
 	Inherits: Laser
 	ValidTargets: Ground, Water, Air, AirSmall
 	ReloadDelay: 60
-	Range: 7c0
+	Range: 7c512
 	Report: vfloatta.aud
 	Projectile: LaserZapCA
 		Color: eb39d380

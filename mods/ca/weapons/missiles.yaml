@@ -594,9 +594,9 @@ ApocalypseTusk:
 		RangeLimit: 10c614
 		Speed: 401
 	Warhead@1Dam: SpreadDamage
-		Damage: 4000
+		Damage: 4200
 	Warhead@smallDamage: SpreadDamage
-		Damage: 4000
+		Damage: 4200
 
 TitanTusk:
 	Inherits: MammothTusk
@@ -800,10 +800,10 @@ StingerGTWR:
 		Damage: 8900
 		Spread: 341
 		Versus:
-			None: 40
+			None: 50
 			Wood: 55
 			Light: 70
-			Heavy: 75
+			Heavy: 55
 			Concrete: 55
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@3Eff: CreateEffect
@@ -2218,7 +2218,7 @@ CryoMissileNHAW:
 		Damage: 1000
 
 Rocket.P51.R:
-	ReloadDelay: 170
+	ReloadDelay: 140
 	Range: 9c0
 	MinRange: 0c768
 	Report: vintatta.aud
@@ -2240,7 +2240,7 @@ Rocket.P51.R:
 		ContrailStartWidth: 48
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 500
+		Damage: 850
 		Falloff: 1000, 448, 192, 50, 18, 7, 0
 		Versus:
 			None: 85

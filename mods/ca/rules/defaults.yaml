@@ -483,6 +483,12 @@
 	SpeedMultiplier@Inspiration2:
 		RequiresCondition: inspiration >= 2
 		Modifier: 134
+	FirepowerMultiplier@OVLDINSPIRATION:
+		RequiresCondition: ovld-inspiration
+		Modifier: 110
+	ReloadDelayMultiplier@OVLDINSPIRATION:
+		RequiresCondition: ovld-inspiration
+		Modifier: 90
 	WithIdleOverlay@Inspiration1:
 		Image: ussrstar
 		Sequence: idle-overlay1
@@ -2454,17 +2460,17 @@
 
 ^SovietT4Boost:
 	ProductionTimeMultiplier@IndustrialPlantBoost:
-		Multiplier: 97
+		Multiplier: 93
 		Prerequisites: indp, !indplowpower
 	ProductionCostMultiplier@IndustrialPlantBoost:
-		Multiplier: 85
+		Multiplier: 82
 		Prerequisites: indp, !indplowpower
 	GrantConditionOnPrerequisite@IndustrialPlantBoost:
 		Condition: indp-boost
 		Prerequisites: indp, !indplowpower
 	ReloadDelayMultiplier@IndustrialPlantBoost:
 		RequiresCondition: indp-boost
-		Modifier: 90
+		Modifier: 85
 	ProductionTimeMultiplier@MunitionsPlantBoost:
 		Multiplier: 85
 		Prerequisites: munp, !munplowpower

@@ -382,13 +382,13 @@ ChainGun.P51.R:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 3000
+		Damage: 4500
 		Versus:
 			None: 200
 			Wood: 10
 			Light: 80
-			Heavy: 25
-			Concrete: 25
+			Heavy: 55
+			Concrete: 55
 
 ChainGun.P51.L:
 	Inherits: ChainGun.P51.R
@@ -499,6 +499,17 @@ M60mg:
 M60mgTD:
 	Inherits: M60mg
 	StartBurstReport: m60x5.aud
+
+OvldCoaxial:
+	Inherits: M60mgTD
+	Range: 6c512
+	InvalidTargets: Vehicle, Ship, Water, Structure
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Infantry
+		Damage: 600
+		Versus:
+			Light: 70
+	ReloadDelay: 45
 
 M60mgJJ:
 	Inherits: M60mg

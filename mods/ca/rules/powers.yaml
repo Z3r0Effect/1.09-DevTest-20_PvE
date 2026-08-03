@@ -148,9 +148,9 @@
 		Squad:
 			1:
 				UnitType: p51
-				SpawnDelay: 20
-				SpawnOffset: -1536,1024,0
-				TargetOffset: -536,0,0
+				SpawnDelay: 0
+				SpawnOffset: -768,2560,0
+				TargetOffset: -256,2048,0
 			2:
 				UnitType: p51
 				SpawnDelay: 0
@@ -158,12 +158,12 @@
 				TargetOffset: 0,0,0
 			3:
 				UnitType: p51
-				SpawnDelay: 20
-				SpawnOffset: -1536,-1024,0
-				TargetOffset: 536,0,0
+				SpawnDelay: 0
+				SpawnOffset: -768,-2560,0
+				TargetOffset: 256,-2048,0
 		Prerequisites: ~aircraft.usa
 		Icon: strafe
-		ChargeInterval: 4500
+		ChargeInterval: 3000
 		Name: Strafing Run
 		Description: Calls in P51 ground attack planes to perform strafing runs on the target.
 		SelectTargetSpeechNotification: SelectTarget
@@ -181,7 +181,7 @@
 		UseDirectionalTarget: True
 		DirectionArrowAnimation: paradirection
 		Strikes: 3
-		CircleDelay: 40
+		CircleDelay: 25
 		SupportPowerPaletteOrder: 45
 		TargetCircleRange: 3c512
 		TargetCircleColor: 999999AA
