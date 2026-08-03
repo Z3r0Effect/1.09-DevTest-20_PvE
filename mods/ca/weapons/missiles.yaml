@@ -1,6 +1,6 @@
 ^AntiGroundMissile:
 	ReloadDelay: 50
-	Range: 6c768
+	Range: 7c768
 	MinRange: 0c512
 	Report: missile6.aud
 	Projectile: MissileCA
@@ -241,7 +241,7 @@ Dragon:
 
 DragonTargeter:
 	ReloadDelay: 50
-	Range: 5c0
+	Range: 7c768
 	MinRange: 0c512
 	Projectile: InstantHit
 
@@ -647,7 +647,7 @@ Nike:
 
 RedEye:
 	Inherits: ^AntiAirMissile
-	Range: 7c256
+	Range: 7c768
 	ReloadDelay: 50
 	Report: missile1.aud
 	ValidTargets: Air, AirSmall
@@ -682,7 +682,7 @@ RedEye.TibCore:
 
 RedEye.CYB:
 	Inherits: RedEye
-	Range: 7c512
+	Range: 7c768
 	Report: itanweaa.aud, itanweab.aud, itanweac.aud
 	Warhead@1Dam: SpreadDamage
 		Damage: 4600

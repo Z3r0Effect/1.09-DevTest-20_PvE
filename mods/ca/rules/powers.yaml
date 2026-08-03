@@ -532,7 +532,7 @@
 		ChargeInterval: 6500
 		Name: Paratroopers
 		Description: Dispatches a Halo transport to drop a squad of infantry anywhere on the map.
-		SquadSize: 2
+		SquadSize: 1
 		SquadOffset: 0,1792,0
 		DropItems: E1,E1,E2,E3,E3,E1,E1,E1,E2,E3
 		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
@@ -552,9 +552,9 @@
 		DirectionArrowAnimation: paradirection
 		SupportPowerPaletteOrder: 50
 		PrerequisiteDropItems:
-			imppara.upgrade: E1,E1,E1,E1,E2,E4,E3,E3,E3,E1,E1,E1,E1,E2,E2,E1,E3,E1,E1,E2
+			imppara.upgrade: E1,E1,E1,E1,E2,E4,E3,E3,E3,E1,E1,E1,E1,E2,E2
 		PrerequisiteSquadSizes:
-			imppara.upgrade: 4
+			imppara.upgrade: 3
 
 ^StormTroopersPower:
 	ParatroopersPowerCA@Russianparatroopers:
