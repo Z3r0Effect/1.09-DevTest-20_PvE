@@ -216,7 +216,7 @@ NUKC:
 		HP: 60000
 	Mobile:
 		TurnSpeed: 8
-		Speed: 48
+		Speed: 46
 		Locomotor: heavytracked
 		Voice: Move
 		ImmovableCondition: deployed
@@ -1106,7 +1106,7 @@ GTNK.squad:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 68000
+		HP: 70000
 	Mobile:
 		Speed: 60
 		Voice: Move

@@ -2460,17 +2460,17 @@
 
 ^SovietT4Boost:
 	ProductionTimeMultiplier@IndustrialPlantBoost:
-		Multiplier: 93
+		Multiplier: 95
 		Prerequisites: indp, !indplowpower
 	ProductionCostMultiplier@IndustrialPlantBoost:
-		Multiplier: 82
+		Multiplier: 80
 		Prerequisites: indp, !indplowpower
 	GrantConditionOnPrerequisite@IndustrialPlantBoost:
 		Condition: indp-boost
 		Prerequisites: indp, !indplowpower
 	ReloadDelayMultiplier@IndustrialPlantBoost:
 		RequiresCondition: indp-boost
-		Modifier: 85
+		Modifier: 90
 	ProductionTimeMultiplier@MunitionsPlantBoost:
 		Multiplier: 85
 		Prerequisites: munp, !munplowpower
