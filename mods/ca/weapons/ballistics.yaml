@@ -1058,7 +1058,7 @@ DoubleDepthCharge:
 
 203mm:
 	ReloadDelay: 100
-	Range: 15c0
+	Range: 14c768
 	MinRange: 2c512
 	Report: hvygun10.aud
 	Projectile: Bullet
@@ -1074,7 +1074,7 @@ DoubleDepthCharge:
 		Versus:
 			None: 75
 			Wood: 50
-			Light: 70
+			Light: 75
 			Heavy: 85
 			Concrete: 0
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
@@ -1107,7 +1107,7 @@ DoubleDepthCharge:
 203mm.Inacc:
 	Inherits: 203mm
 	Projectile: Bullet
-		Inaccuracy: 1c382
+		Inaccuracy: 1c256
 
 GuardianDroneGun:
 	Inherits: 25mm

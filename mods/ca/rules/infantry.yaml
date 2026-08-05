@@ -443,7 +443,7 @@ U3:
 		ProneOffset: 384,0,-395
 		RequiresCondition: !deployed
 	DamageMultiplier:
-		Modifier: 50
+		Modifier: 40
 		RequiresCondition: deployed
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -706,7 +706,7 @@ E6:
 		RequiresCondition: deployed && !setting-up
 	BaseProvider:
 		RequiresCondition: deployed && !setting-up
-		Range: 9c0
+		Range: 10c0
 	GrantCondition@EDITOR:
 		Condition: editorhack
 	WithInfantryBody@EDITOR:
@@ -716,7 +716,7 @@ E6:
 		Prerequisites: entrench.upgrade
 	WithRangeCircle:
 		Type: EngineerRange
-		Range: 9c0
+		Range: 10c0
 		Color: ffffff50
 		RequiresCondition: entrench-upgrade
 	-ReloadAmmoDelayMultiplier@Inspiration1:
@@ -3557,7 +3557,7 @@ BRUT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 38000
+		HP: 40000
 	Armor:
 		Type: Light
 	Mobile:
@@ -3617,9 +3617,9 @@ BRUT:
 	DamageTypeDamageMultiplier@FLAKARMORMINOR:
 		Modifier: 95
 	ChangesHealth:
-		PercentageStep: 1
+		PercentageStep: 2
 		Delay: 25
-		StartIfBelow: 50
+		StartIfBelow: 75
 		DamageCooldown: 150
 	GrantConditionOnPrerequisite@Improved:
 		Condition: impmuta-upgrade
@@ -4960,7 +4960,7 @@ ZDEF:
 
 ENFO:
 	Inherits: ^Soldier
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetTroopGroundAssaultMove
 	Inherits@HEALINGCOOLDOWN: ^HealingCooldown
 	Buildable:
 		Queue: InfantrySQ, InfantryMQ
@@ -4979,7 +4979,7 @@ ENFO:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 27000
+		HP: 30000
 	Armor:
 		Type: Light
 	Mobile:
@@ -5047,9 +5047,9 @@ HOPL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 20000
+		HP: 17000
 	Armor:
-		Type: None
+		Type: Concrete
 	Mobile:
 		Voice: Move
 	RevealsShroud:

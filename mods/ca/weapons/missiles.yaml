@@ -241,7 +241,7 @@ Dragon:
 
 DragonTargeter:
 	ReloadDelay: 50
-	Range: 7c768
+	Range: 8c512
 	MinRange: 0c512
 	Projectile: InstantHit
 
@@ -301,7 +301,7 @@ Dragon.CYB.TibCore:
 
 DragonGI:
 	Inherits: Dragon
-	Range: 7c0
+	Range: 7c768
 	Report: iggiat2a.aud, iggiat2b.aud
 	ReloadDelay: 40
 	Projectile: MissileCA
@@ -311,7 +311,7 @@ DragonGI:
 
 DragonGI.CRYO:
 	Inherits: Dragon.CRYO
-	Range: 7c0
+	Range: 7c768
 	Report: iggiat2a.aud, iggiat2b.aud
 	ReloadDelay: 40
 	Projectile: MissileCA
@@ -321,7 +321,7 @@ DragonGI.CRYO:
 
 DragonBATF:
 	Inherits: Dragon
-	Range: 5c768
+	Range: 6c512
 	Projectile: MissileCA
 		RangeLimit: 7c0
 	Warhead@1Dam: SpreadDamage
@@ -339,7 +339,7 @@ DragonBATF.CYB:
 
 DragonBATF.CRYO:
 	Inherits: Dragon.CRYO
-	Range: 5c768
+	Range: 6c512
 	Projectile: MissileCA
 		RangeLimit: 7c0
 	Warhead@1Dam: SpreadDamage
@@ -347,7 +347,7 @@ DragonBATF.CRYO:
 
 DragonBATF.TibCore:
 	Inherits: Dragon.TibCore
-	Range: 5c768
+	Range: 6c512
 	Projectile: MissileCA
 		RangeLimit: 9c0
 	Warhead@1Dam: SpreadDamage
@@ -647,7 +647,7 @@ Nike:
 
 RedEye:
 	Inherits: ^AntiAirMissile
-	Range: 7c256
+	Range: 7c0
 	ReloadDelay: 50
 	Report: missile1.aud
 	ValidTargets: Air, AirSmall
@@ -717,13 +717,13 @@ RedEyeGI:
 	Inherits: RedEye
 	Report: iggiat2a.aud, iggiat2b.aud
 	ReloadDelay: 40
-	Range: 8c0
+	Range: 8c256
 
 RedEyeGI.CRYO:
 	Inherits: RedEye.CRYO
 	Report: iggiat2a.aud, iggiat2b.aud
 	ReloadDelay: 40
-	Range: 8c0
+	Range: 8c256
 
 Stinger:
 	Inherits: ^AntiGroundMissile
@@ -2209,13 +2209,13 @@ CryoMissileNHAW:
 	Report: vrocweaa.aud, vrocweab.aud
 	-Burst:
 	-BurstDelays:
-	Range: 7c0
+	Range: 7c768
 	Projectile: Bullet
 		Image: cmiss
 		Speed: 230
 		LaunchAngle: 3
 	Warhead@1Dam: SpreadDamage
-		Damage: 1000
+		Damage: 1250
 
 Rocket.P51.R:
 	ReloadDelay: 140
@@ -2583,7 +2583,7 @@ KamovRocketsWide:
 TigerGuardMissile:
 	Inherits: ^AntiGroundMissile
 	Inherits@Projectile: ^TigerGuardMissileProjectile
-	ReloadDelay: 100
+	ReloadDelay: 85
 	Range: 12c0
 	MinRange: 3c0
 	Report: tigr-fire1.aud, tigr-fire2.aud

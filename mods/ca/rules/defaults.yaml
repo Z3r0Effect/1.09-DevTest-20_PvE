@@ -176,7 +176,7 @@
 		Multiplier: 75
 		Prerequisites: is-vhard-ai
 	ProductionCostMultiplier@hardbonus:
-		Multiplier: 90
+		Multiplier: 85
 		Prerequisites: is-hard-ai
 	ProductionTimeMultiplier@easybonus:
 		Multiplier: 120
@@ -194,23 +194,23 @@
 ^BotFallbackInsurance:
 	GrantConditionOnPlayerFunds@botinsurance:
 		Condition: noinsurance
-		Threshold: 2500
+		Threshold: 3500
 	GrantTimedCondition@botinsurance:
 		Condition: noinsurance
 		Duration: 3000
 	CashTrickler@brutalinsurance:
 		Interval: 375
-		Amount: 1700
+		Amount: 1800
 		ShowTicks: False
 		RequiresCondition: owned-by-brutal-ai && !noinsurance
 	CashTrickler@vhardinsurance:
 		Interval: 375
-		Amount: 1400
+		Amount: 1500
 		ShowTicks: False
 		RequiresCondition: owned-by-vhard-ai && !noinsurance
 	CashTrickler@hardinsurance:
 		Interval: 375
-		Amount: 1100
+		Amount: 1200
 		ShowTicks: False
 		RequiresCondition: owned-by-hard-ai && !noinsurance
 	CashTrickler@normalinsurance:
@@ -247,7 +247,7 @@
 
 ^InfiltratorStolenTech:
 	ProductionCostMultiplier@LegionBonus:
-		Multiplier: 90
+		Multiplier: 85
 		Prerequisites: player.legion
 
 ^PlayerHandicaps:
@@ -1509,7 +1509,7 @@
 		Prerequisites: player.eagle
 	RepairsUnits:
 		ValuePercentage: 0
-		HpPerStep: 2000
+		HpPerStep: 2500
 		Interval: 7
 		StartRepairingNotification: Repairing
 		StartRepairingTextNotification: Repairing.
@@ -1919,22 +1919,22 @@
 		Color: 00ffff10
 		RequiresCondition: zdef-shield
 	FlatHealthDamageMultiplier@ZoneDefenderShield1:
-		HP: 1250
+		HP: 1750
 		RequiresCondition: zdef-shield == 1
 	FlatHealthDamageMultiplier@ZoneDefenderShield2:
-		HP: 2500
+		HP: 3000
 		RequiresCondition: zdef-shield == 2
 	FlatHealthDamageMultiplier@ZoneDefenderShield3:
-		HP: 3750
+		HP: 4500
 		RequiresCondition: zdef-shield == 3
 	FlatHealthDamageMultiplier@ZoneDefenderShield4:
-		HP: 5000
+		HP: 6000
 		RequiresCondition: zdef-shield == 4
 	FlatHealthDamageMultiplier@ZoneDefenderShield5:
-		HP: 6250
+		HP: 7500
 		RequiresCondition: zdef-shield == 5
 	FlatHealthDamageMultiplier@ZoneDefenderShield6:
-		HP: 7500
+		HP: 9000
 		RequiresCondition: zdef-shield >= 6
 	WithIdleOverlay@ZoneDefenderShield:
 		Sequence: idle
@@ -2187,7 +2187,7 @@
 ^ObserverAttachable:
 	GrantTimedCondition@ObserverIcon:
 		Condition: observer-icon-hidden
-		Duration: 750
+		Duration: 7500
 		RequiresCondition: observer-attached
 	WithDecoration@ObserverIconWatched:
 		Image: watched
@@ -2293,6 +2293,13 @@
 
 ^AutoTargetGroundAssaultMove:
 	Inherits: ^AutoTargetGround
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: stance-attackanything || assault-move
+	AttackMove:
+		AssaultMoveCondition: assault-move
+
+^AutoTargetTroopGroundAssaultMove:
+	Inherits: ^AutoTargetTroop
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything || assault-move
 	AttackMove:
@@ -2467,7 +2474,7 @@
 
 ^DevelopmentPolicyDiscount:
 	ProductionCostMultiplier@DevelopmentPolicy2:
-		Multiplier: 85
+		Multiplier: 80
 		Prerequisites: development.policy, influence.level2
 
 ^SovietT4Boost:
@@ -2796,7 +2803,7 @@
 		RevokeDelay: 200
 	DamagedByTerrainCA@TIBDAMAGE:
 		Terrain: Tiberium, BlueTiberium, BlackTiberium
-		Damage: 125
+		Damage: 175
 		DamageInterval: 16
 		DamageTypes: ToxinDeath
 		RequiresCondition: tibexposed && !(hazmatsuits || hazmatsuits-soviet || being-warped || parachute)
@@ -2808,7 +2815,7 @@
 		Condition: hazmatsuits
 		Prerequisites: bio
 	SpawnActorOnDeath:
-		Probability: 35
+		Probability: 100
 		Actor: vice
 		OwnerType: InternalName
 		InternalOwner: Creeps
@@ -4301,7 +4308,7 @@
 	Inherits@1: ^SpriteActor
 	Interactable:
 	Health:
-		HP: 28000
+		HP: 56000
 	Armor:
 		Type: Heavy
 	HiddenUnderFog:
@@ -4325,9 +4332,9 @@
 		Palette: effect
 		RequiresCondition: !being-captured
 	ChangesHealth:
-		PercentageStep: -10
+		PercentageStep: -5
 		StartIfBelow: 101
-		Delay: 150
+		Delay: 200
 		RequiresCondition: !being-captured
 	OwnerLostAction:
 		Action: ChangeOwner
@@ -4338,7 +4345,7 @@
 	CapturableProgressBar:
 	CapturableProgressBlink:
 	GivesCashOnCaptureCA:
-		Amount: 200
+		Amount: 1000
 		SuffixToRemoveForValueActor: .husk
 		ValueActorPercentage: 30
 	GrantConditionOnCapture:

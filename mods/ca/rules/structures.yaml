@@ -791,7 +791,7 @@ HBOX:
 	CustomSellValue:
 		Value: 220
 	Health:
-		HP: 40000
+		HP: 45000
 	Armor:
 		Type: Concrete
 	RevealsShroud:
@@ -813,7 +813,7 @@ HBOX:
 	RenderRangeCircle:
 		FallbackRange: 6c0
 	Armament:
-		Weapon: vulcan
+		Weapon: vulcan4
 		LocalOffset: 341,0,86
 		MuzzleSequence: muzzle
 	AttackTurreted:
@@ -1410,7 +1410,7 @@ FACT:
 		PauseOnCondition: being-captured
 		RequiresCondition: !defense-policy
 	BaseProvider@DefensePolicy:
-		Range: 20c0
+		Range: 24c0
 		PauseOnCondition: being-captured
 		RequiresCondition: defense-policy
 	GrantConditionOnPrerequisite@DefensePolicy:
@@ -3415,7 +3415,7 @@ AFAC:
 		PauseOnCondition: being-captured
 		RequiresCondition: !defense-policy
 	BaseProvider@DefensePolicy:
-		Range: 20c0
+		Range: 24c0
 		PauseOnCondition: being-captured
 		RequiresCondition: defense-policy
 	GrantConditionOnPrerequisite@DefensePolicy:
@@ -5014,7 +5014,7 @@ HTUR:
 		Type: Concrete
 	RevealsShroud:
 		MinRange: 6c0
-		Range: 15c0
+		Range: 10c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 6c0
@@ -5044,7 +5044,7 @@ HTUR:
 		FireDelay: 20
 	WithMuzzleOverlay:
 	Power:
-		Amount: -60
+		Amount: -75
 	ClassicFacingBodyOrientation:
 	FireWarheadsOnDeath:
 		Weapon: BuildingExplode

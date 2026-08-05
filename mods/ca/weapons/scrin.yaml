@@ -599,12 +599,12 @@ CyberscrinLaser:
 
 CorrupterSpew:
 	StartBurstReport: corrupter-fire1.aud
-	ReloadDelay: 100
+	ReloadDelay: 85
 	Burst: 30
 	BurstDelays: 3
 	Range: 8c0
 	Projectile: Bullet
-		Speed: 110
+		Speed: 120
 		TrailImage: tibspew1
 		Image: tibspew2
 		LaunchAngle: 62
@@ -1905,7 +1905,7 @@ LeecherBeam:
 	ValidTargets: Ground, Water
 	StartBurstReport: leecher-fire1.aud
 	Range: 6c512
-	ReloadDelay: 50
+	ReloadDelay: 55
 	Burst: 9
 	BurstDelays: 5
 	Projectile: PlasmaBeam

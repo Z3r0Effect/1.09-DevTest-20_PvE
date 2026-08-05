@@ -314,6 +314,36 @@ Vulcan3:
 		Explosions: piffs
 		Inaccuracy: 0
 
+Vulcan4:
+	Inherits: ^HeavyMG
+	Range: 8c512
+	-Projectile:
+	Projectile: PlasmaBeam
+		ImpactTicks: 0, 2, 4, 6, 8, 10
+		Radius: 1
+		Duration: 13
+		TrackTarget: true
+		Blockable: true
+		Invisible: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 160
+		Damage: 1500
+		Versus:
+			None: 220
+			Wood: 56
+			Light: 58
+			Heavy: 45
+			Concrete: 35
+			Brick: 20
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: piff, piff2
+		Inaccuracy: 171
+	Warhead@2Eff2: CreateEffect
+		Delay: 2
+		Explosions: piff, piff2
+		Inaccuracy: 171
+
 ChainGun.Yak.R:
 	Inherits: ^HeavyMG
 	ReloadDelay: 60
@@ -547,7 +577,7 @@ M60mgJJAA:
 
 M60mgNHAW:
 	Inherits: M60mg
-	Range: 6c768
+	Range: 7c0
 	Projectile: Bullet
 		Blockable: false
 	-StartBurstReport:
@@ -777,8 +807,8 @@ AKMBATF:
 	Range: 6c768
 
 SNIPER:
-	ReloadDelay: 100
-	Range: 9c512
+	ReloadDelay: 80
+	Range: 9c768
 	Report: snipe.aud
 	Projectile: InstantHit
 		Blockable: true
@@ -789,8 +819,8 @@ SNIPER:
 			Wood: 1
 			Concrete: 1
 			Brick: 1
-			Heavy: 2
-			Light: 2
+			Heavy: 5
+			Light: 5
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 		InvalidTargets: Infantry
 	Warhead@2Dam: HealthPercentageDamage
@@ -810,7 +840,7 @@ SNIPER:
 
 SNIPER.vehicle:
 	Inherits: SNIPER
-	Range: 9c768
+	Range: 10c0
 	Report: ijarwe1a.aud
 	Warhead@1Dam: SpreadDamage
 		Versus:
@@ -858,11 +888,11 @@ SNIPER.vehicleElite:
 
 SNIPERBATF:
 	Inherits: SNIPER
-	Range: 8c512
+	Range: 8c0
 
 SNIPERBATF.UPG:
 	Inherits: SNIPER.vehicle
-	Range: 9c512
+	Range: 8c512
 
 SNIPER.ASSA:
 	Inherits: SNIPER
@@ -1026,7 +1056,7 @@ WolverineGunTracer:
 		ValidTargets: Ground, Ship, Air, AirSmall, Trees
 
 EnforcerShotgun:
-	Range: 6c0
+	Range: 6c768
 	Report: enfo-fire1.aud, enfo-fire2.aud
 	ReloadDelay: 55
 	Projectile: LinearPulse
@@ -1114,7 +1144,7 @@ EnforcerShotgun:
 			None: 100
 			Wood: 40
 			Light: 80
-			Heavy: 15
+			Heavy: 40
 			Concrete: 15
 			Brick: 30
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
