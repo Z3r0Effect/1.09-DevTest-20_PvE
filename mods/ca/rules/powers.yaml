@@ -99,7 +99,7 @@
 		CameraActor: camera.paradrop
 		CameraRemoveDelay: 150
 		QuantizedFacings: 8
-		SquadSize: 3
+		SquadSize: 4
 		DisplayBeacon: true
 		BeaconPoster: cmineicon
 		Icon: cmines

@@ -372,7 +372,7 @@ U3:
 		Queue: GuardianGI
 		Description: Allied specialist paradropped infantry.
 	Valued:
-		Cost: 350
+		Cost: 200
 	Tooltip:
 		Name: Guardian G.I
 	TooltipExtras:
@@ -384,7 +384,7 @@ U3:
 	Health:
 		HP: 9000
 	Mobile:
-		Speed: 41
+		Speed: 50
 		Voice: Move
 		PauseOnCondition: !undeployed || being-warped || reapersnare
 		ImmovableCondition: deployed
@@ -756,18 +756,18 @@ SPY:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 150000
+		HP: 80000
 	-Guard:
 	Mobile:
-		Speed: 68
+		Speed: 60
 		Voice: Move
 	RevealsShroud:
-		Range: 10c0
+		Range: 7c0
 		MinRange: 6c0
 		RevealGeneratedShroud: false
 		RequiresCondition: !player-england
 	RevealsShroud@England:
-		Range: 11c0
+		Range: 10c0
 		MinRange: 6c0
 		RevealGeneratedShroud: false
 		RequiresCondition: player-england
@@ -2400,7 +2400,7 @@ SAB:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
-		Range: 10c0
+		Range: 7c0
 		MinRange: 6c0
 		RevealGeneratedShroud: false
 	RevealsShroud@GAPGEN:
@@ -2420,9 +2420,9 @@ SAB:
 		StandSequences: stand
 		IdleSequences: idle1
 	Health:
-		HP: 120000
+		HP: 60000
 	Mobile:
-		Speed: 55
+		Speed: 60
 		Voice: Move
 	Armament:
 		Weapon: SilencedPPK
@@ -2437,8 +2437,8 @@ SAB:
 		InitialStance: HoldFire
 		InitialStanceAI: Defend
 	Cloak:
-		InitialDelay: 20
-		CloakDelay: 20
+		InitialDelay: 50
+		CloakDelay: 40
 		CloakedCondition: hidden
 		IsPlayerPalette: true
 		DetectionTypes: Cloak
@@ -3759,7 +3759,7 @@ SHAD:
 		Condition: player-shadow
 		Prerequisites: player.shadow
 	SpeedMultiplier@ShadowCloak:
-		Modifier: 110
+		Modifier: 125
 		RequiresCondition: player-shadow && hidden
 	IgnoresDisguise:
 	DetectCloaked:
@@ -5041,13 +5041,13 @@ HOPL:
 		Weaknesses: • Weak vs Heavy Armor, Defenses\n• Cannot attack Aircraft
 		Attributes: • One in every four shots blinds the target
 	Valued:
-		Cost: 650
+		Cost: 800
 	Tooltip:
 		Name: Hoplite
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 12000
+		HP: 20000
 	Armor:
 		Type: None
 	Mobile:
@@ -5210,7 +5210,7 @@ CRYT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 16500
 	Mobile:
 		Speed: 60
 		Voice: Move

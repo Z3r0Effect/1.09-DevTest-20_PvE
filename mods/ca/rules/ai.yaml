@@ -417,21 +417,6 @@ Player:
 					Attractiveness: 5
 					TargetMetric: Value
 					CheckRadius: 7c0
-			clusterminepower:
-				OrderName: clustermine
-				MinimumAttractiveness: 3000
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: Value
-					CheckRadius: 5c0
-				Consideration@2:
-					Against: Ally
-					Types: Air, Ground, Water
-					Attractiveness: -10
-					TargetMetric: Value
-					CheckRadius: 7c0
 			timewarppower:
 				OrderName: TimeWarp
 				MinimumAttractiveness: 1000
@@ -738,7 +723,7 @@ Player:
 	BridgeRepairBotModule:
 		RequiresCondition: enable-brutal-ai || enable-vhard-ai || enable-hard-ai || enable-normal-ai || enable-easy-ai
 		RepairActorTypes: e6, n6, s6
-		EnemyAvoidanceRadius: 2c0
+		EnemyAvoidanceRadius: 4c0
 	BuildingRepairBotModuleCA:
 		RequiresCondition: enable-brutal-ai || enable-vhard-ai || enable-hard-ai || enable-normal-ai || enable-easy-ai || enable-naval-ai
 	PowerDownBotModuleCA:
@@ -750,7 +735,7 @@ Player:
 		McvFactoryTypes: weap, weap.td, airs, wsph
 		ScanForNewMcvInterval: 80
 		MaxBaseRadius: 25
-		MinimumConstructionYardCount: 4
+		MinimumConstructionYardCount: 3
 	McvManagerBotModuleCA@upper:
 		RequiresCondition: enable-vhard-ai || enable-hard-ai
 		McvTypes: mcv, amcv, smcv
@@ -758,7 +743,7 @@ Player:
 		McvFactoryTypes: weap, weap.td, airs, wsph
 		ScanForNewMcvInterval: 80
 		MaxBaseRadius: 25
-		MinimumConstructionYardCount: 3
+		MinimumConstructionYardCount: 2
 	McvManagerBotModuleCA@lower:
 		RequiresCondition: enable-normal-ai || enable-easy-ai || enable-naval-ai
 		McvTypes: mcv, amcv, smcv
@@ -2134,8 +2119,8 @@ Player:
 			mast: 3500
 			yuri: 3500
 			bori: 3500
-			u3.squad: 4250
-			gtnk.squad: 4250
+			u3.squad: 15000
+			gtnk.squad: 15000
 		UnitLimits:
 			e2: 5
 			n2: 8
@@ -2186,14 +2171,14 @@ Player:
 			ss2: 10
 			sb: 10
 			seas: 10
-			harv: 8
-			harv.td: 8
-			harv.td.upg: 8
-			harv.scrin: 8
-			harv.chrono: 8
+			harv: 10
+			harv.td: 10
+			harv.td.upg: 10
+			harv.scrin: 10
+			harv.chrono: 10
 	SquadManagerBotModuleCA@hard:
 		RequiresCondition: enable-hard-ai
-		MinimumAttackForceDelay: 150
+		MinimumAttackForceDelay: 50
 		SquadValue: 12000
 		SquadValueMaxEarlyBonus: 5000
 		SquadValueMinLateBonus: 8000
@@ -2205,15 +2190,14 @@ Player:
 		HarasserTypes: 1tnk, rtnk, bike, gdrn, gdrn.tow, hmmv.tow, stnk.nod, hstk, spec, lace, seek, pbul, n2, e2, ivan, n4, n5, e4
 		ConstructionYardTypes: fact,afac,sfac
 		StaticAntiAirTypes: agun, sam, nsam, cram, shar
-		IdleScanRadius: 18
-		AttackScanRadius: 12
-		MaxBaseRadius: 18
-		ProtectUnitScanRadius: 36
-		ProtectionScanRadius: 20
+		IdleScanRadius: 16
+		AttackScanRadius: 10
+		ProtectUnitScanRadius: 18
+		ProtectionScanRadius: 16
 		HighValueTargetTypes: fact, afac, sfac, proc, proc.td, proc.scrin, atek, stek, gtek, tmpl, scrt, harv, harv.td, harv.td.upg, harv.scrin, harv.chrono
 		HighValueTargetPriority: 15
 		IgnoredEnemyTargetTypes: Wall
-		IndirectRouteChance: 50
+		IndirectRouteChance: 40
 		AirToAirPriority: 50
 		BigAirThreats: pac, deva, kiro, mshp
 		AirSquadTargetArmorTypes:
@@ -2248,7 +2232,7 @@ Player:
 		IdleBaseUnitsMaximum: 200
 		MaxAircraft: 3
 		MaintainAirSuperiority: false
-		MaxAirSuperiority: 2
+		MaxAirSuperiority: 6
 		AirToAirUnits: heli, yak, mig, orca, apch, scrn, venm, stmr, torm, enrv, a10.sw, a10.gau, harr, beag
 		AirThreatUnits: heli, harr, pmak, beag, hind, yak, mig, suk, suk.upg, kiro, orca, a10, a10.sw, a10.gau, orcb, auro, apch, venm, rah, scrn, stmr, enrv, mshp, phan, kamv, shde, vert, mcor
 		UnitDelays:
@@ -2270,8 +2254,8 @@ Player:
 			mast: 4500
 			yuri: 4500
 			bori: 4500
-			u3.squad: 4500
-			gtnk.squad: 4500
+			u3.squad: 18000
+			gtnk.squad: 18000
 		UnitLimits:
 			e2: 5
 			n2: 8
@@ -2814,7 +2798,7 @@ World:
 				sb: 1
 				seas: 1
 		Composition@InfantryRaid:
-			MaxProducedValue: 1500
+			MaxProducedValue: 1200
 			UnitQueues: InfantrySQ, InfantryMQ
 			UnitsToBuild:
 				e2: 100
@@ -2824,7 +2808,7 @@ World:
 				n5: 100
 				ivan: 100
 		Composition@VehicleRaid:
-			MaxProducedValue: 7000
+			MaxProducedValue: 6000
 			UnitQueues: VehicleSQ, VehicleMQ
 			UnitsToBuild:
 				bike: 100
@@ -2836,7 +2820,7 @@ World:
 				1tnk: 100
 				rtnk: 100
 		Composition@StealthTankAssault:
-			MaxProducedValue: 8000
+			MaxProducedValue: 12000
 			UnitQueues: VehicleSQ, VehicleMQ
 			UnitsToBuild:
 				stnk.nod: 100
@@ -2844,14 +2828,14 @@ World:
 				spec: 100
 		Composition@BlackHandAssault:
 			Prerequisites: player.blackh
-			MaxProducedValue: 9000
+			MaxProducedValue: 12000
 			UnitQueues: InfantrySQ, InfantryMQ, VehicleSQ, VehicleMQ
 			UnitsToBuild:
 				bh: 100
 				hftk: 100
 		Composition@ZocomAssault:
 			Prerequisites: player.zocom
-			MaxProducedValue: 12000
+			MaxProducedValue: 15000
 			UnitQueues: InfantrySQ, InfantryMQ, VehicleSQ, VehicleMQ
 			UnitsToBuild:
 				disr: 50

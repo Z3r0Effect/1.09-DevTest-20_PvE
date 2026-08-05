@@ -739,7 +739,7 @@ RuinerCannonCharged:
 
 TripodLaser:
 	Inherits: ^ScrinPlasmaBeam
-	Range: 7c256
+	Range: 7c0
 	Report: tripod-fire1.aud, tripod-fire2.aud, tripod-fire3.aud
 	ReloadDelay: 65
 	Projectile: PlasmaBeam
@@ -763,7 +763,8 @@ TripodLaser:
 
 ReaperLaser:
 	Inherits: TripodLaser
-	ReloadDelay: 50
+	Range: 7c256
+	ReloadDelay: 55
 	Report: rtpd-fire1.aud, rtpd-fire2.aud, rtpd-fire3.aud
 	Projectile: PlasmaBeam
 		InnerLightness: 170
@@ -776,6 +777,7 @@ ReaperLaser:
 
 ReaperLaserCharged:
 	Inherits: ReaperLaser
+	Range: 7c512
 	Report: rtpd-cfire1.aud, rtpd-cfire2.aud
 	Projectile: PlasmaBeam
 		Colors: 33880005, 00880005
@@ -979,12 +981,12 @@ EnervatorBoltsAA:
 
 InvaderLauncher:
 	ReloadDelay: 5
-	Range: 9c0
+	Range: 7c0
 	ValidTargets: Air, AirSmall, Ground, Water
 	Projectile: InstantHit
 	Warhead@1Dam: TargetDamage
 		ValidTargets: Air, AirSmall, Ground, Water
-		Damage: 10000
+		Damage: 5000
 		Versus:
 			None: 0
 			Wood: 0
@@ -1005,8 +1007,9 @@ InvaderZap:
 		Palette: scrin
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 3000
+		Spread: 448
+		Damage: 1200
+		InvalidTargets: Infantry
 		Versus:
 			None: 80
 			Wood: 30
@@ -1014,6 +1017,11 @@ InvaderZap:
 			Light: 80
 			Heavy: 100
 			Brick: 20
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath, AirToGround
+	Warhead@2Dam: SpreadDamage
+		Spread: 128
+		ValidTargets: Infantry
+		Damage: 800
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, AirToGround
 	Warhead@2Eff: CreateEffect
 		Explosions: idle
@@ -1033,14 +1041,14 @@ InvaderZapAA:
 		Speed: 1c768
 	ValidTargets: Air, AirSmall
 	Warhead@1Dam: SpreadDamage
-		Damage: 650
+		Damage: 435
 		Range: 0, 0c64, 0c256, 1c0
 		Falloff: 100, 100, 30, 15
 		ValidTargets: Air
 		ValidRelationships: Enemy, Neutral
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@smallDamage: SpreadDamage
-		Damage: 650
+		Damage: 435
 		Spread: 341
 		Falloff: 100, 50, 14, 0
 		ValidTargets: AirSmall
@@ -1997,7 +2005,7 @@ GreaterCoalescenceZap:
 		Colors: ee000006
 	Warhead@1Dam: SpreadDamage
 		Spread: 160
-		Damage: 650
+		Damage: 325
 		Versus:
 			None: 100
 			Light: 100

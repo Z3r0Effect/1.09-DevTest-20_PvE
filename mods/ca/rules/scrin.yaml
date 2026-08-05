@@ -771,7 +771,7 @@ WCHR:
 		Weaknesses: • Cannot deal damage
 		Attributes: • Can attach parasites to enemy vehicles & structures\n• Cloaked with increased vision when not moving\n• Detects cloaked ground units and spies\n• Applies multi-target suppression (Collector-73 only)\n• Special Ability: Teleport (with upgrade)
 	Health:
-		HP: 150000
+		HP: 35000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Mobile:
@@ -1605,7 +1605,7 @@ GUNW:
 		Factions: traveler
 	SpeedMultiplier@TRAVELERSPEED:
 		RequiresCondition: travelerspeed
-		Modifier: 115
+		Modifier: 120
 	ReplacedInQueue:
 		Actors: shrw
 	Upgradeable@SHRW:
@@ -2047,7 +2047,7 @@ CORR:
 		Factions: traveler
 	SpeedMultiplier@TRAVELERSPEED:
 		RequiresCondition: travelerspeed
-		Modifier: 115
+		Modifier: 120
 	AmmoPool@RESCONV:
 		Ammo: 90
 	ReloadAmmoPool@RESCONV:
@@ -2189,7 +2189,7 @@ LCHR.Orb:
 		Range: 4c0
 		Type: CenterPosition
 	Health:
-		HP: 37000
+		HP: 36000
 	Armor:
 		Type: Light
 	Valued:
@@ -2350,7 +2350,7 @@ DEVO:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 50000
+		HP: 45000
 	Armor:
 		Type: Light
 	Mobile:
@@ -2444,7 +2444,7 @@ DARK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 42000
+		HP: 26000
 	Mobile:
 		TurnSpeed: 16
 		Speed: 60
@@ -2702,10 +2702,10 @@ TPOD:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 91000
+		HP: 90000
 	Mobile:
 		Locomotor: heavytracked
-		Speed: 52
+		Speed: 50
 		TurnSpeed: 512
 	Passenger:
 		Weight: 3
@@ -2753,15 +2753,15 @@ TPOD:
 		Factions: traveler
 	SpeedMultiplier@TRAVELERSPEED:
 		RequiresCondition: travelerspeed
-		Modifier: 115
+		Modifier: 120
 	WithIdleOverlay@MINDCONTROL:
 		Offset: 0,0,1024
 	ChangesHealth@THEAL:
 		Step: 0
-		PercentageStep: 1
+		PercentageStep: 2
 		Delay: 15
 		StartIfBelow: 100
-		DamageCooldown: 150
+		DamageCooldown: 125
 		RequiresCondition: on-resource
 	WithDecoration@TibRepair:
 		Image: select
@@ -2784,7 +2784,7 @@ RTPD:
 	TooltipExtras:
 		Attributes: • Can crush concrete walls\n• Weapons empowered by Tiberium or other resources\n• Self repairs on Tiberium or other resources when not in combat
 	Valued:
-		Cost: 2100
+		Cost: 2200
 	Tooltip:
 		Name: Reaper Tripod
 	Health:
@@ -2882,7 +2882,7 @@ OBLT:
 		Weaknesses: • Weak vs Heavy Armor\n• Cannot attack Aircraft
 		Attributes: • Can traverse water
 	Valued:
-		Cost: 2200
+		Cost: 2300
 	Tooltip:
 		Name: Obliterator
 	Selectable:
@@ -3122,7 +3122,7 @@ SMCV:
 	DamageTypeDamageMultiplier@A2GPROTECTION:
 		Modifier: 60
 	SpeedMultiplier@Traveler:
-		Modifier: 115
+		Modifier: 125
 		RequiresCondition: player-traveler
 	GrantConditionOnPrerequisite@Traveler:
 		Condition: player-traveler
@@ -3151,7 +3151,7 @@ STMR:
 		Strengths: • Strong vs Infantry, Light Armor, Buildings, Aircraft
 		Weaknesses: • Weak vs Defenses
 	Valued:
-		Cost: 1250
+		Cost: 1450
 	Tooltip:
 		Name: Stormrider
 		GenericName: Aircraft
@@ -3435,7 +3435,7 @@ ENRV:
 		Weaknesses: • Weak vs Infantry
 		Attributes: • Slows targets
 	Valued:
-		Cost: 1700
+		Cost: 1900
 	Tooltip:
 		Name: Enervator
 		GenericName: Aircraft
@@ -3580,7 +3580,7 @@ DEVA:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 36000
+		HP: 34000
 	Shielded:
 		MaxStrength: 12000
 	Armor:
@@ -3720,14 +3720,14 @@ PAC:
 	Voiced:
 		VoiceSet: PlanetaryAssaultCarrierVoice
 	Valued:
-		Cost: 2800
+		Cost: 3200
 	Tooltip:
 		Name: Planetary Assault Carrier
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 60000
+		HP: 58000
 	Shielded:
 		MaxStrength: 20000
 	Armor:
@@ -3862,7 +3862,7 @@ INVA:
 	Tooltip:
 		Name: Invader
 	Health:
-		HP: 32000
+		HP: 28000
 	RevealsShroud:
 		Range: 2c0
 		MinRange: 1c0

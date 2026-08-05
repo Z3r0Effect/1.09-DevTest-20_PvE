@@ -375,6 +375,18 @@
 	GrantConditionOnPrerequisite@SCRINRANK:
 		Condition: player-scrin
 		Prerequisites: player.scrin
+	GrantConditionOnPrerequisite@DevelopmentPolicy2:
+		Condition: development-policy2
+		Prerequisites: development.policy, influence.level2
+	DamageMultiplier@VETERAN2DEVELOPMENTPOLICY2:
+		RequiresCondition: rank-veteran == 2 && development-policy2
+		Modifier: 80
+	FirepowerMultiplier@VETERAN2DEVELOPMENTPOLICY2:
+		RequiresCondition: rank-veteran == 2 && development-policy2
+		Modifier: 115
+	ReloadDelayMultiplier@VETERAN2DEVELOPMENTPOLICY2:
+		RequiresCondition: rank-veteran == 2 && development-policy2
+		Modifier: 85
 	GrantConditionOnPrerequisite@DevelopmentPolicy3:
 		Condition: development-policy3
 		Prerequisites: development.policy, influence.level3
@@ -1881,10 +1893,10 @@
 ^WeaponJammable:
 	ReloadDelayMultiplier@WEAPJAMMED:
 		RequiresCondition: weapjammed
-		Modifier: 125
+		Modifier: 130
 	FirepowerMultiplier@WEAPJAMMED:
 		RequiresCondition: weapjammed
-		Modifier: 90
+		Modifier: 85
 	ExternalCondition@WEAPJAMMED:
 		Condition: weapjammed
 	WithIdleOverlay@WEAPJAMMED:
@@ -3863,7 +3875,7 @@
 		RevealGeneratedShroud: True
 		RequiresCondition: revealonfire
 	ProductionCostMultiplier@FranceBonus:
-		Multiplier: 90
+		Multiplier: 85
 		Prerequisites: player.france
 	FireWarheadsOnDeath@TEMPORAL:
 		Weapon: TemporalExplode
@@ -3962,7 +3974,7 @@
 	MapEditorData:
 		Categories: Wall
 	ProductionCostMultiplier@FranceBonus:
-		Multiplier: 70
+		Multiplier: 50
 		Prerequisites: player.france
 	GrantExternalConditionToCrusher@CRUSHATTEMPTSLOW:
 		WarnCrushCondition: crush-attempt-slow

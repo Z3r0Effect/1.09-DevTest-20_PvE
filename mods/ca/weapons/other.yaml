@@ -536,17 +536,17 @@ TTrackArc2:
 TTankZap:
 	Inherits: ^TeslaWeapon
 	Report: vtesatta.aud, vtesattb.aud
-	ReloadDelay: 55
+	ReloadDelay: 50
 	Burst: 2
 	BurstDelays: 3
 	Range: 8c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 3500
+		Damage: 3000
 		Versus:
 			None: 380
 			Wood: 55
 			Concrete: 55
-			Heavy: 50
+			Heavy: 60
 
 TTankZap.UPG:
 	Inherits: TTankZap
@@ -1535,11 +1535,11 @@ PrisLaser:
 		Damage: 14000
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 		Versus:
-			None: 40
+			None: 45
 			Wood: 40
 			Concrete: 95
-			Light: 80
-			Heavy: 80
+			Light: 85
+			Heavy: 85
 			Brick: 50
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch-NoFlame
@@ -1592,19 +1592,19 @@ PrisBurst:
 PrisTLaser:
 	Inherits: PrisLaser
 	Report: ptnkfire.aud
-	ReloadDelay: 50
-	Range: 9c512
+	ReloadDelay: 45
+	Range: 9c0
 	Projectile: LaserZapCA
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
-		Damage: 4400
+		Damage: 4000
 		Spread: 341
 		Versus:
 			None: 150
 			Wood: 100
 			Concrete: 100
 			Light: 100
-			Heavy: 45
+			Heavy: 70
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, FlakVestMitigatedMinor
 	Warhead@Burst: FireCluster
 		Weapon: PrisTBurst
@@ -1612,7 +1612,7 @@ PrisTLaser:
 PrisTBurst:
 	Inherits: PrisTLaser
 	-Report:
-	Range: 2c512
+	Range: 3c256
 	Projectile: LaserZapCA
 		-HitAnim:
 	Warhead@1Dam: SpreadDamage
@@ -1631,8 +1631,8 @@ PrisTBurst:
 PrisCLaser:
 	Inherits: PrisTLaser
 	Report: pcanfire.aud
-	ReloadDelay: 110
-	Range: 11c256
+	ReloadDelay: 100
+	Range: 11c0
 	Projectile: LaserZapCA
 		Width: 70
 		Duration: 15
@@ -1640,19 +1640,19 @@ PrisCLaser:
 		SecondaryBeamWidth: 140
 		SecondaryBeamColor: 4be8d499
 	Warhead@1Dam: SpreadDamage
-		Damage: 18000
+		Damage: 10000
 		Spread: 512
 		Versus:
 			None: 60
 			Wood: 100
 			Concrete: 75
-			Light: 85
-			Heavy: 30
+			Light: 90
+			Heavy: 80
 	-Warhead@Burst:
 
 HopliteGun:
-	ReloadDelay: 70
-	Range: 8c256
+	ReloadDelay: 50
+	Range: 8c0
 	Report: hopl-fire1.aud
 	Projectile: LaserZapCA
 		Width: 40
@@ -1665,12 +1665,12 @@ HopliteGun:
 		SecondaryBeamColor: 75D1FF60
 	Warhead@1Dam: SpreadDamage
 		Spread: 180
-		Damage: 6000
+		Damage: 3500
 		Versus:
-			None: 150
+			None: 90
 			Wood: 100
 			Light: 100
-			Heavy: 50
+			Heavy: 90
 			Concrete: 50
 			Brick: 30
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
@@ -1711,16 +1711,16 @@ HopliteTargeter:
 
 HopliteIFVGun:
 	Inherits: HopliteGun
-	ReloadDelay: 50
+	ReloadDelay: 40
 	Report: ptnkfire.aud
 	Projectile: LaserZapCA
 		HitAnim: plaserfire
 	Warhead@1Dam: SpreadDamage
-		Damage: 7000
+		Damage: 5000
 		Spread: 288
 		Versus:
-			Wood: 80
-			Heavy: 30
+			Wood: 90
+			Heavy: 45
 
 HopliteGunBATF:
 	Inherits: HopliteGunCharged
@@ -1963,7 +1963,7 @@ SonicZapVisual.UPG:
 
 GapBeam:
 	ReloadDelay: 15
-	Range: 11c0
+	Range: 12c0
 	Report: gaploop1.aud, gaploop2.aud, gaploop3.aud
 	ValidTargets: Ground, Water, Air, AirSmall
 	Projectile: ElectricBolt
@@ -3856,8 +3856,8 @@ CryoSprayer:
 		Versus:
 			None: 100
 			Wood: 120
-			Light: 15
-			Heavy: 10
+			Light: 25
+			Heavy: 20
 			Concrete: 30
 			Brick: 0
 		ValidRelationships: Enemy, Neutral

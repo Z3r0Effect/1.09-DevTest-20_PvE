@@ -592,7 +592,7 @@ EMPMissileLauncher:
 		FadeInFrames: 5
 
 FirestormBarrage:
-	ReloadDelay: 75
+	ReloadDelay: 50
 	Range: 300c0
 	Burst: 3
 	BurstDelays: 20
@@ -1111,12 +1111,12 @@ WeatherStormInit:
 		ImpactOffsets: 0,0, -1,-1, 1,-1, -1,1, 1,1, -2,-2, 0,-2, 2,-2, -2,0, 2,0, -2,2, 0,2, 2,2, -3,-3, -1,-3, 1,-3, 3,-3, -3,-1, 3,-1, -3,1, 3,1, -3,3, -1,3, 1,3, 3,3, -5,-1, -5,1, -4,-2, -4,0, -4,2, -1,-5, 1,-5, -2,-4, 0,-4, 2,-4, 4,-2, 4,0, 4,2, 5,-1, 5,1, -2,4, 0,4, 2,4, -1,5, 1,5
 		RandomImpactSequence: true
 		ExcludeFirstImpactFromRandomSequence: true
-		RandomOffset: 512
-		Interval: 5
+		RandomOffset: 256
+		Interval: 3
 	Warhead@DirectDamage: SpreadDamage
 		Damage: 48000
-		Range: 0, 1c0, 2c0
-		Falloff: 100, 50, 0
+		Range: 0, 1c256, 2c512, 3c512
+		Falloff: 150, 100, 50, 0
 		Delay: 78
 	Warhead@4: CreateEffect
 		Delay: 50
@@ -1165,12 +1165,12 @@ WeatherBolt:
 		ValidTargets: Ground, Air, AirSmall, Underwater, Water
 		DamageTypes: TriggerProne, ElectricityDeath
 		Versus:
-			None: 35
-			Wood: 65
-			Concrete: 150
-			Brick: 5
-			Heavy: 85
-			Light: 55
+			None: 90
+			Wood: 40
+			Concrete: 70
+			Brick: 35
+			Heavy: 100
+			Light: 125
 			Aircraft: 175
 	Warhead@4: CreateEffect
 		Explosions: weatherbolt1, weatherbolt2, weatherbolt3, weatherbolt1f, weatherbolt2f, weatherbolt3f

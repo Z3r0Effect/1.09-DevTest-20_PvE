@@ -381,7 +381,7 @@ ChainGun.P51.R:
 	Projectile: Bullet
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Spread: 341
+		Spread: 541
 		Damage: 4500
 		Versus:
 			None: 200
@@ -458,6 +458,7 @@ M1Carbine:
 
 M14:
 	Inherits: M1Carbine
+	Range: 7c256
 	Report: islyat1a.aud, islyat1b.aud
 
 M16Carbine:
@@ -594,7 +595,7 @@ M60mgMD.Attached:
 
 MGattG:
 	Inherits: ^HeavyMG
-	Range: 6c768
+	Range: 7c0
 	ReloadDelay: 5
 	-Report:
 	Warhead@1Dam: SpreadDamage

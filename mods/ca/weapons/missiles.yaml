@@ -1,6 +1,6 @@
 ^AntiGroundMissile:
 	ReloadDelay: 50
-	Range: 7c768
+	Range: 6c768
 	MinRange: 0c512
 	Report: missile6.aud
 	Projectile: MissileCA
@@ -647,7 +647,7 @@ Nike:
 
 RedEye:
 	Inherits: ^AntiAirMissile
-	Range: 7c768
+	Range: 7c256
 	ReloadDelay: 50
 	Report: missile1.aud
 	ValidTargets: Air, AirSmall
@@ -682,7 +682,7 @@ RedEye.TibCore:
 
 RedEye.CYB:
 	Inherits: RedEye
-	Range: 7c768
+	Range: 7c256
 	Report: itanweaa.aud, itanweab.aud, itanweac.aud
 	Warhead@1Dam: SpreadDamage
 		Damage: 4600
@@ -691,7 +691,7 @@ RedEye.CYB:
 
 RedEye.CYB.TibCore:
 	Inherits: RedEye.TibCore
-	Range: 7c768
+	Range: 7c256
 	Report: itanweaa.aud, itanweab.aud, itanweac.aud
 	Warhead@1Dam: SpreadDamage
 		Damage: 4600
@@ -814,8 +814,8 @@ StingerGTWR:
 APTusk:
 	Inherits: ^AntiGroundMissile
 	ValidTargets: Ground, Water, Air, AirSmall
-	ReloadDelay: 75
-	Range: 7c512
+	ReloadDelay: 60
+	Range: 7c768
 	Burst: 2
 	BurstDelays: 0
 	-Report:
@@ -850,7 +850,7 @@ TOW:
 	Range: 9c0
 	ValidTargets: Vehicle, Ship, Structure
 	Report: tow1.aud, tow2.aud
-	ReloadDelay: 50
+	ReloadDelay: 60
 	Projectile: MissileCA
 		Speed: 180
 		Inaccuracy: 0
@@ -2239,7 +2239,7 @@ Rocket.P51.R:
 		ContrailLength: 8
 		ContrailStartWidth: 48
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
+		Spread: 768
 		Damage: 850
 		Falloff: 1000, 448, 192, 50, 18, 7, 0
 		Versus:

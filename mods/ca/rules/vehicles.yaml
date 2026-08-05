@@ -421,7 +421,7 @@ NUKC.Preview:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 27000
+		HP: 30000
 	Mobile:
 		Locomotor: Amphibious
 		Speed: 113
@@ -593,7 +593,7 @@ GTNK.squad:
 		Strengths: • Strong vs Heavy Armor, Light Armor
 		Weaknesses: • Weak vs Infantry, Defenses\n• Cannot attack Aircraft
 	Valued:
-		Cost: 4200
+		Cost: 4000
 	RenderSprites:
 		Image: squad.airborne.tank
 	ProduceActorPowerCA:
@@ -742,7 +742,7 @@ GTNK.squad:
 		Armaments: primary
 	Mirage:
 		RequiresCondition: england && !empdisable && !being-warped && !driver-dead
-		RevealOn: Attack, Move
+		RevealOn: Attack
 		MirageCondition: tree
 		DefaultTargetTypes: v08, v09, v10, v11, v12, v13, v14, v15, v16, v17, v18
 		InitialDelay: 99
@@ -838,7 +838,7 @@ GTNK.squad:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 67000
+		HP: 65000
 	Mobile:
 		Speed: 60
 	RevealsShroud:
@@ -963,7 +963,7 @@ GTNK.squad:
 		Name: Lasher Tank
 		GenericName: Tank
 	Health:
-		HP: 58000
+		HP: 57000
 	Selectable:
 		Class: 3tnk
 	Armament:
@@ -1030,7 +1030,7 @@ GTNK.squad:
 		Name: Atomic Lasher Tank
 		GenericName: Tank
 	Health:
-		HP: 58000
+		HP: 57000
 	Selectable:
 		Class: 3tnk
 	Armament:
@@ -1106,7 +1106,7 @@ GTNK.squad:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 70000
+		HP: 68000
 	Mobile:
 		Speed: 60
 		Voice: Move
@@ -1327,7 +1327,7 @@ GTNK.squad:
 	Health:
 		HP: 95000
 	Mobile:
-		Speed: 46
+		Speed: 45
 		Locomotor: heavytracked
 		Voice: Move
 	Passenger:
@@ -1381,7 +1381,7 @@ GTNK.squad:
 		PercentageStep: 1
 		Delay: 25
 		StartIfBelow: 50
-		DamageCooldown: 150
+		DamageCooldown: 100
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
 	WithProductionIconOverlay:
@@ -1399,9 +1399,9 @@ GTNK.squad:
 	WithAmmoPipsDecoration@ATOMICAMMO:
 		PipCount: 5
 	AmmoPool@ATOMICAMMO:
-		Ammo: 12
+		Ammo: 10
 	ReloadAmmoPool@ATOMICAMMO:
-		Count: 12
+		Count: 10
 		RequiresCondition: atomic-ammo && has-atomic-ammo < 10
 	ReplacedInQueue:
 		Actors: 4tnk.atomic, 4tnk.erad, ovld, apoc
@@ -1583,7 +1583,7 @@ ARTY:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 14000
 	Armor:
 		Type: Light
 	Mobile:
@@ -1665,7 +1665,7 @@ HOWI:
 		Speed: 72
 		TurnSpeed: 18
 	RevealsShroud:
-		Range: 7c0
+		Range: 6c0
 	WithSpriteTurret:
 	-ReplacedInQueue:
 	-Upgradeable@HOWI:
@@ -1780,7 +1780,7 @@ ISU:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 62000
+		HP: 60000
 	Mobile:
 		TurnSpeed: 8
 		Speed: 46
@@ -1916,7 +1916,7 @@ SPEC:
 		Condition: player-shadow
 		Prerequisites: player.shadow
 	SpeedMultiplier@ShadowCloak:
-		Modifier: 110
+		Modifier: 115
 		RequiresCondition: player-shadow && hidden
 	AutoTarget:
 		InitialStance: HoldFire
@@ -1950,17 +1950,17 @@ SAPC:
 		Strengths: • Strong vs Infantry, Light Armor
 		Weaknesses: • Weak vs Heavy Armor, Buildings, Defenses\n• Cannot attack Aircraft
 	Valued:
-		Cost: 1100
+		Cost: 1250
 	Tooltip:
 		Name: Stealth APC
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 20000
+		HP: 24000
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 88
+		Speed: 84
 	RevealsShroud:
 		MinRange: 4c0
 		Range: 6c0
@@ -1984,6 +1984,7 @@ SAPC:
 			bori: loaded-cmdo
 			yuri: loaded-cmdo
 			mast: loaded-cmdo
+		InitialUnits: N1,N1,N1,N3,N3
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud
@@ -2025,7 +2026,7 @@ SAPC:
 		Condition: player-shadow
 		Prerequisites: player.shadow
 	SpeedMultiplier@ShadowCloak:
-		Modifier: 110
+		Modifier: 112
 		RequiresCondition: player-shadow && hidden
 	AutoTarget:
 		InitialStance: HoldFire
@@ -2222,7 +2223,7 @@ JEEP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 18000
 	Armor:
 		Type: Light
 	Mobile:
@@ -2274,7 +2275,7 @@ JEEP:
 		ShowSelectionBar: true
 		StartsFullyCharged: true
 		DeployedTicks: 375
-		CooldownTicks: 1125
+		CooldownTicks: 500
 		ShowSelectionBarWhenFull: false
 		ChargingColor: 808080
 		DischargingColor: ffffff
@@ -2338,13 +2339,13 @@ APC:
 		Strengths: • Strong vs Infantry, Light Armor
 		Weaknesses: • Weak vs Heavy Armor, Buildings, Defenses\n• Cannot attack Aircraft
 	Valued:
-		Cost: 600
+		Cost: 1000
 	Tooltip:
 		Name: Armored Personnel Carrier
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 32000
 	Mobile:
 		Speed: 126
 	RevealsShroud:
@@ -2363,7 +2364,7 @@ APC:
 		FacingTolerance: 0
 	Cargo:
 		Types: Infantry, Hacker
-		MaxWeight: 8
+		MaxWeight: 5
 		LoadingCondition: notmobile
 		LoadedCondition: cargo
 		PassengerConditions:
@@ -2372,6 +2373,7 @@ APC:
 			bori: loaded-cmdo
 			yuri: loaded-cmdo
 			mast: loaded-cmdo
+		InitialUnits: E1,E1,E1,E3,E3
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud
@@ -2493,7 +2495,7 @@ MNLY:
 	Selectable:
 		Priority: 5
 	Health:
-		HP: 30000
+		HP: 35000
 	Mobile:
 		Speed: 126
 	RevealsShroud:
@@ -2619,7 +2621,7 @@ MGG:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 25000
+		HP: 28000
 	Armor:
 		Type: Light
 	Mobile:
@@ -2683,7 +2685,7 @@ MRJ:
 		Weaknesses: • Unarmed
 		Attributes: • Jamming fields reduce rate of fire and accuracy of enemy vehicles, aircraft & defenses
 	Health:
-		HP: 25000
+		HP: 28000
 	Armor:
 		Type: Light
 	Mobile:
@@ -2746,7 +2748,7 @@ MSG:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 20000
+		HP: 22000
 	Armor:
 		Type: Light
 	Mobile:
@@ -2790,13 +2792,13 @@ MSG:
 		Range: 8c512
 		Color: 7681a0
 	ProximityExternalCondition@MSG:
-		Range: 7c512
+		Range: 8c512
 		Condition: sgencloak
 		RequiresCondition: deployed && !cloak-force-disabled
 		MaximumVerticalOffset: 512
 		AffectsParent: true
 	ProximityExternalCondition@MSG2:
-		Range: 2c512
+		Range: 4c512
 		Condition: sgencloak
 		RequiresCondition: deployed && !cloak-force-disabled
 		MaximumVerticalOffset: 3072
@@ -2895,7 +2897,7 @@ TTNK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 38500
+		HP: 38000
 	Mobile:
 		Speed: 60
 		Voice: Move
@@ -3023,7 +3025,7 @@ CTNK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 40000
+		HP: 55000
 	Armor:
 		Type: Light
 	Mobile:
@@ -3045,13 +3047,13 @@ CTNK:
 		FacingTolerance: 0
 	PortableChronoCA:
 		Charges: 1
-		ChargeDelay: 200
+		ChargeDelay: 150
 		Cooldown: 50
 		HasDistanceLimit: true
 		MaxDistance: 48
-		MaxInstantDistance: 12
+		MaxInstantDistance: 18
 		PreChargeTicksPerCell: 7
-		MaxPreChargeTicks: 250
+		MaxPreChargeTicks: 175
 		ResetRechargeOnUse: false
 		RequiresCondition: !empdisable && !being-warped && !chronoshifted
 		ShowSelectionBarWhenFull: false
@@ -3080,7 +3082,7 @@ CTNK:
 	Selectable:
 		DecorationBounds: 1280, 1280
 	PortableChronoModifier@GermanyBonus:
-		ExtraCharges: 1
+		ExtraCharges: 2
 		RequiresCondition: player-germany
 	GrantConditionOnPrerequisite@Germany:
 		Condition: player-germany
@@ -3117,7 +3119,7 @@ QTNK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 220000
+		HP: 200000
 	Mobile:
 		PauseOnCondition: deployed || being-captured || empdisable || being-warped || driver-dead || notmobile
 		Speed: 75
@@ -3273,7 +3275,7 @@ HMMV:
 	WithSpriteTurret:
 	IgnoresDisguise:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c0
 		DetectionTypes: Cloak, AirCloak
 		RequiresCondition: !(empdisable || being-warped)
 	ProducibleWithLevel:
@@ -3323,7 +3325,7 @@ HMMV.TOW:
 		Ammo: 1
 		AmmoCondition: ammo
 	ReloadAmmoPoolCA:
-		Delay: 100 # matches reload time of weapon
+		Delay: 60 # matches reload time of weapon
 		Count: 1
 		ShowSelectionBar: true
 		SelectionBarColor: aaaaaa
@@ -3438,7 +3440,7 @@ GDRN.TOW:
 		Ammo: 1
 		AmmoCondition: ammo
 	ReloadAmmoPoolCA:
-		Delay: 100 # matches reload time of weapon
+		Delay: 60 # matches reload time of weapon
 		Count: 1
 		ShowSelectionBar: true
 		SelectionBarColor: aaaaaa
@@ -3500,7 +3502,7 @@ BGGY:
 	WithSpriteTurret:
 	IgnoresDisguise:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c0
 		DetectionTypes: Cloak, AirCloak
 		RequiresCondition: !(empdisable || being-warped)
 	ProducibleWithLevel:
@@ -3531,7 +3533,7 @@ BGGY:
 		RequiresCondition: decoy-upgrade
 	ReloadAmmoPoolCA@Decoy:
 		AmmoPool: decoyspawner
-		Delay: 1250
+		Delay: 500
 		ShowSelectionBar: true
 		SelectionBarColor: aaaaaa
 	SpawnActorAbility@Decoy:
@@ -3594,7 +3596,7 @@ RBUG:
 	Inherits@selection: ^SelectableSupportUnit
 	GrantTimedCondition@Decoy:
 		Condition: active
-		Duration: 750
+		Duration: 1250
 	WithFlashEffect@Flash:
 		Color: ffffff
 		Interval: 748
@@ -3629,7 +3631,7 @@ FTNK.Decoy:
 	RenderSprites:
 		Image: ftnk
 	Health:
-		HP: 50
+		HP: 5000
 	Mobile:
 		Locomotor: wheeled
 	Armament@PRIMARY:
@@ -3668,7 +3670,7 @@ HFTK.Decoy:
 	Armor:
 		Type: Light
 	Health:
-		HP: 4500
+		HP: 5000
 	Mobile:
 		Locomotor: wheeled
 	Armament@PRIMARY:
@@ -3728,7 +3730,7 @@ APC2:
 		Strengths: • Strong vs Infantry, Light Armor
 		Weaknesses: • Weak vs Heavy Armor, Buildings, Defenses\n• Cannot attack Aircraft
 	Valued:
-		Cost: 600
+		Cost: 950
 	Tooltip:
 		Name: Armored Personnel Carrier
 	UpdatesPlayerStatistics:
@@ -3753,7 +3755,7 @@ APC2:
 	WithMuzzleOverlay:
 	Cargo:
 		Types: Infantry, Hacker
-		MaxWeight: 8
+		MaxWeight: 5
 		LoadingCondition: notmobile
 		LoadedCondition: cargo
 		PassengerConditions:
@@ -3762,6 +3764,7 @@ APC2:
 			bori: loaded-cmdo
 			yuri: loaded-cmdo
 			mast: loaded-cmdo
+		InitialUnits: N1,N1,N1,N3,N4
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud
@@ -3875,7 +3878,7 @@ VULC:
 		Strengths: • Strong vs Aircraft, Infantry, Light Armor
 		Weaknesses: • Weak vs Heavy Armor, Buildings, Defenses
 	Valued:
-		Cost: 800
+		Cost: 1200
 	Tooltip:
 		Name: Vulcan
 	UpdatesPlayerStatistics:
@@ -3990,7 +3993,7 @@ VULC:
 		RequiresCondition: attacking-ground
 	Cargo:
 		Types: Infantry, Hacker
-		MaxWeight: 8
+		MaxWeight: 5
 		LoadingCondition: notmobile
 		LoadedCondition: cargo
 		PassengerConditions:
@@ -3999,6 +4002,7 @@ VULC:
 			bori: loaded-cmdo
 			yuri: loaded-cmdo
 			mast: loaded-cmdo
+		InitialUnits: N1,N1,N1,N2,N3
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud
@@ -4349,7 +4353,7 @@ MTNK.Drone:
 	Valued:
 		Cost: 600
 	Health:
-		HP: 50000
+		HP: 48000
 	Tooltip:
 		Name: Battle Drone
 		-RequiresCondition:
@@ -4380,10 +4384,10 @@ MTNK.Drone:
 	Targetable@ChaosImmune:
 		TargetTypes: ChaosImmune
 	ChangesHealth:
-		PercentageStep: 1
+		PercentageStep: 2
 		Delay: 25
 		StartIfBelow: 50
-		DamageCooldown: 150
+		DamageCooldown: 100
 		RequiresCondition: !mdrn-attached
 	-Armament@UPG:
 	-WithSpriteTurret@LaserTank:
@@ -4497,10 +4501,10 @@ MDRN:
 			Radius: 128
 	DamageTypeDamageMultiplier@FLAKARMOR:
 		DamageTypes: FlakVestMitigated
-		Modifier: 60
+		Modifier: 50
 	DamageTypeDamageMultiplier@FLAKARMORMINOR:
 		DamageTypes: FlakVestMitigatedMinor
-		Modifier: 80
+		Modifier: 70
 	RevealsShroud:
 		MinRange: 4c0
 		Range: 5c0
@@ -4604,12 +4608,12 @@ MDRN.Attached:
 		Weapon: M60mgMD.Attached
 		LocalOffset: -500,0,72
 	DamageMultiplier@ATTACHED:
-		Modifier: 10
+		Modifier: 5
 	Attachable:
 		OnDetachBehavior: Transform
 		OnDetachTransformInto: mdrn
 	ChangesHealth:
-		PercentageStep: 2
+		PercentageStep: 3
 		Delay: 25
 		StartIfBelow: 100
 		DamageCooldown: 50
@@ -4685,7 +4689,7 @@ HTNK:
 	Health:
 		HP: 98000
 	Mobile:
-		Speed: 47
+		Speed: 45
 		Locomotor: heavytracked
 		Voice: Move
 	Passenger:
@@ -4693,7 +4697,7 @@ HTNK:
 		Voice: Move
 	RevealsShroud:
 		MinRange: 4c0
-		Range: 8c0
+		Range: 6c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 4c0
@@ -4728,7 +4732,7 @@ HTNK:
 		PercentageStep: 1
 		Delay: 25
 		StartIfBelow: 50
-		DamageCooldown: 150
+		DamageCooldown: 125
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
 	WithProductionIconOverlay:
@@ -4833,7 +4837,7 @@ HTNK.Hover:
 		RequiresCondition: abur-upgrade
 		ShowSelectionBar: true
 		StartsFullyCharged: true
-		DeployedTicks: 200
+		DeployedTicks: 250
 		CooldownTicks: 750
 		ShowSelectionBarWhenFull: false
 		ChargingColor: 808080
@@ -5278,7 +5282,7 @@ STNK.Nod:
 		Speed: 126
 		Voice: Move
 	Health:
-		HP: 27000
+		HP: 25000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -5511,7 +5515,7 @@ BIKE:
 		TurnSpeed: 40
 		Speed: 170
 	Health:
-		HP: 13000
+		HP: 12500
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -5557,7 +5561,7 @@ BIKE:
 		Condition: zeal-covenant
 		Prerequisites: zeal.covenant
 	SpeedMultiplier@ZealBonus:
-		Modifier: 120
+		Modifier: 115
 		RequiresCondition: zeal-covenant
 	WithFacingSpriteBody:
 		RequiresCondition: !tibcore-upgrade
@@ -5593,7 +5597,7 @@ FTNK:
 	Mobile:
 		Speed: 76
 	Health:
-		HP: 43000
+		HP: 44000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -5816,7 +5820,7 @@ BTR:
 		Strengths: • Strong vs Infantry, Light Armor, Aircraft
 		Weaknesses: • Weak vs Heavy Armor, Buildings, Defenses
 	Valued:
-		Cost: 675
+		Cost: 1000
 	Tooltip:
 		Name: Armored Personnel Carrier (BTR)
 	UpdatesPlayerStatistics:
@@ -5867,7 +5871,7 @@ BTR:
 		RequiresCondition: reactive-upgrade
 	Cargo:
 		Types: Infantry, Hacker
-		MaxWeight: 8
+		MaxWeight: 5
 		LoadingCondition: notmobile
 		LoadedCondition: cargo
 		PassengerConditions:
@@ -5877,6 +5881,7 @@ BTR:
 			yuri: loaded-cmdo
 			mast: loaded-cmdo
 			cmsr: loaded-cmsr
+		InitialUnits: E1,E1,E1,E1,E1
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud
@@ -6097,7 +6102,7 @@ TRPC:
 		Weaknesses: • Unarmed
 		Attributes: • Empowers nearby basic infantry\n• Heals all nearby infantry\n• Detects cloaked units and mines
 	Valued:
-		Cost: 1750
+		Cost: 1800
 	Tooltip:
 		Name: Troop Crawler
 	UpdatesPlayerStatistics:
@@ -6187,7 +6192,7 @@ TRPC:
 		DetectionTypes: Cloak, AirCloak
 		RequiresCondition: !(empdisable || being-warped)
 	DetectCloaked@Mines:
-		Range: 4c0
+		Range: 6c0
 		DetectionTypes: Mine
 		RequiresCondition: !(empdisable || being-warped)
 	GivesBountyCA:
@@ -6201,7 +6206,7 @@ TRPC:
 	ExternalCondition@InspirationTrpc:
 		Condition: trpc-inspiration
 	SpeedMultiplier@InspirationCmsr:
-		Modifier: 112
+		Modifier: 115
 		RequiresCondition: cmsr-inspiration || ovld-inspiration || trpc-inspiration
 	Sellable:
 		RefundPercent: 10
@@ -7501,7 +7506,7 @@ TITN:
 		HP: 110000
 	Mobile:
 		Locomotor: sheavytracked
-		Speed: 58
+		Speed: 50
 		Voice: Move
 	Passenger:
 		CustomPipType: red
@@ -7555,10 +7560,10 @@ TITN:
 	Voiced:
 		VoiceSet: TitnVoice
 	ChangesHealth@DEFAULT:
-		PercentageStep: 1
+		PercentageStep: 2
 		Delay: 25
-		StartIfBelow: 50
-		DamageCooldown: 125
+		StartIfBelow: 60
+		DamageCooldown: 100
 	Carryable:
 		LocalOffset: 0,0,700
 	-Crushable:
@@ -7635,7 +7640,7 @@ JUGG:
 		Attributes: • Can crush smaller vehicles and concrete walls
 	Mobile:
 		Locomotor: sheavytracked
-		Speed: 50
+		Speed: 45
 		Voice: Move
 		PauseOnCondition: aiming || being-captured || empdisable || being-warped || driver-dead || notmobile
 		BlockedCursor: move
@@ -7696,7 +7701,7 @@ JUGG:
 		Offset: -20,0,20
 		TurnSpeed: 12
 	Health:
-		HP: 62000
+		HP: 64000
 	Passenger:
 		Weight: 3
 		Voice: Move
@@ -8027,7 +8032,7 @@ RTNK:
 		Name: Mirage Tank
 	Mirage:
 		RequiresCondition: !cloak-force-disabled && !invisibility && !driver-dead && !empdisable && !being-warped
-		RevealOn: Attack, Dock, Move, Damage, Heal
+		RevealOn: Attack, Dock, Damage, Heal
 		MirageCondition: tree
 		DefaultTargetTypes: v08, v09, v10, v11, v12, v13, v14, v15, v16, v17, v18
 		InitialDelay: 99
@@ -8042,7 +8047,7 @@ RTNK:
 	Health:
 		HP: 45000
 	Mobile:
-		Speed: 113
+		Speed: 105
 		Voice: Move
 	Passenger:
 		Voice: Move
@@ -8074,8 +8079,8 @@ RTNK:
 		Actor: RTNK.Husk
 		RequiresCondition: !being-warped
 	Cloak@NORMAL:
-		InitialDelay: 50
-		CloakDelay: 30
+		InitialDelay: 75
+		CloakDelay: 50
 		CloakSound: vmirat2a.aud
 		CloakedCondition: hidden
 		UncloakSound: appear1md.aud
@@ -8107,7 +8112,7 @@ RTNK:
 		RequiresCondition: invisibility || hidden
 		ColorSource: Player
 	FirepowerMultiplier@Ambush:
-		Modifier: 200
+		Modifier: 175
 		RequiresCondition: hidden
 	GrantConditionToAttached@Cloak:
 		Condition: inherited-cloak
@@ -8256,7 +8261,7 @@ TNKD:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 50000
+		HP: 52000
 	Mobile:
 		Speed: 60
 		TurnSpeed: 16
@@ -8439,7 +8444,7 @@ PTNK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 23500
+		HP: 26000
 	Armor:
 		Type: Light
 	Mobile:
@@ -8520,13 +8525,13 @@ PTNK:
 		Modifier: 75
 		RequiresCondition: !undeployed
 	RangeMultiplier@Deployed:
-		Modifier: 113
+		Modifier: 116
 		RequiresCondition: !undeployed
 	ChangesHealth:
-		PercentageStep: 1
+		PercentageStep: 3
 		Delay: 25
 		StartIfBelow: 100
-		DamageCooldown: 150
+		DamageCooldown: 100
 		RequiresCondition: !undeployed
 	GrantConditionOnPrerequisite@France:
 		Condition: player-france
@@ -8691,7 +8696,7 @@ BATF:
 	TooltipExtras:
 		Attributes: • Can crush smaller vehicles and concrete walls
 	Valued:
-		Cost: 2000
+		Cost: 2200
 	Tooltip:
 		Name: Battle Fortress
 	Health:
@@ -9150,7 +9155,7 @@ CHPR:
 	Health:
 		HP: 76000
 	Mobile:
-		Speed: 46
+		Speed: 45
 		Locomotor: heavytracked
 		Voice: Move
 	Passenger:
@@ -9158,7 +9163,7 @@ CHPR:
 		Voice: Move
 	RevealsShroud:
 		MinRange: 4c0
-		Range: 9c0
+		Range: 6c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 4c0
@@ -9271,7 +9276,7 @@ CRYO:
 	Passenger:
 		Voice: Move
 	Health:
-		HP: 27000
+		HP: 30000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -9419,7 +9424,7 @@ CYCP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 22000
+		HP: 24000
 	Armor:
 		Type: Light
 	Mobile:
@@ -9473,7 +9478,7 @@ BASI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 27000
+		HP: 25000
 	Armor:
 		Type: Light
 	Mobile:
@@ -9695,7 +9700,7 @@ WOLV:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 46000
+		HP: 48000
 	Armor:
 		Type: Light
 	Mobile:
@@ -9744,7 +9749,7 @@ WOLV:
 	RangeMultiplier@GYRO:
 		Modifier: 140
 	ReloadDelayMultiplier@GYRO:
-		Modifier: 140
+		Modifier: 150
 	Encyclopedia:
 		Category: GDI/Vehicles
 	EncyclopediaExtras:
@@ -9778,7 +9783,7 @@ XO:
 		Type: Light
 	Mobile:
 		TurnSpeed: 64
-		Speed: 70
+		Speed: 65
 		Voice: Move
 	Passenger:
 		Voice: Move
@@ -9892,7 +9897,7 @@ APOC:
 		Strengths: • Strong vs Heavy Armor, Light Armor
 		Attributes: • Can crush smaller vehicles and concrete walls\n• Self repairs to 50% out of combat
 	Valued:
-		Cost: 2500
+		Cost: 2600
 	Tooltip:
 		Name: Apocalypse Tank
 		GenericName: Tank
@@ -9951,8 +9956,8 @@ APOC:
 	ChangesHealth:
 		PercentageStep: 1
 		Delay: 25
-		StartIfBelow: 75
-		DamageCooldown: 100
+		StartIfBelow: 100
+		DamageCooldown: 150
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
 	WithProductionIconOverlay:
@@ -9974,9 +9979,9 @@ APOC:
 	WithAmmoPipsDecoration@ATOMICAMMO:
 		PipCount: 3
 	AmmoPool@ATOMICAMMO:
-		Ammo: 10
+		Ammo: 6
 	ReloadAmmoPool@ATOMICAMMO:
-		Count: 10
+		Count: 6
 		RequiresCondition: atomic-ammo && has-atomic-ammo < 6
 	ReplacedInQueue:
 		Actors: apoc.atomic, apoc.erad
@@ -10218,9 +10223,9 @@ OVLD:
 	WithAmmoPipsDecoration@ATOMICAMMO:
 		PipCount: 3
 	AmmoPool@ATOMICAMMO:
-		Ammo: 12
+		Ammo: 6
 	ReloadAmmoPool@ATOMICAMMO:
-		Count: 12
+		Count: 6
 		RequiresCondition: atomic-ammo && has-atomic-ammo < 6
 	ProximityExternalCondition@InspirationOvld:
 		Range: 6c0
@@ -10712,7 +10717,7 @@ AVTR:
 		Weaknesses: • Cannot attack Aircraft
 		Attributes: • Can crush smaller vehicles and concrete walls\n• Self repairs to 50% out of combat
 	Valued:
-		Cost: 1900
+		Cost: 2000
 	Tooltip:
 		Name: Avatar
 	Selectable:
@@ -10720,7 +10725,7 @@ AVTR:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 84000
+		HP: 82000
 	Mobile:
 		TurnSpeed: 18
 		Speed: 58
@@ -10728,7 +10733,7 @@ AVTR:
 		Voice: Move
 	RevealsShroud:
 		MinRange: 4c0
-		Range: 9c0
+		Range: 6c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 4c0
@@ -10826,10 +10831,10 @@ AVTR:
 		Condition: unfolding
 		Duration: 40
 	ChangesHealth:
-		PercentageStep: 1
-		Delay: 25
-		StartIfBelow: 50
-		DamageCooldown: 150
+		PercentageStep: 2
+		Delay: 50
+		StartIfBelow: 75
+		DamageCooldown: 100
 	GrantConditionOnPrerequisite@UPG:
 		Condition: blacknapalm-upgrade
 		Prerequisites: blacknapalm.upgrade
@@ -10886,7 +10891,7 @@ CUST:
 		Range: 6c0
 	Cargo:
 		Types: Infantry, Hacker
-		MaxWeight: 10
+		MaxWeight: 5
 		LoadingCondition: notmobile
 		LoadedCondition: cargo
 		PassengerConditions:

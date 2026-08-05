@@ -31,7 +31,7 @@
 
 25mm:
 	Inherits: ^Cannon
-	Range: 6c0
+	Range: 7c256
 	ReloadDelay: 31
 	Report: cannon2.aud
 	Projectile: Bullet
@@ -48,7 +48,7 @@
 
 25mmFRAG:
 	Inherits: ^Cannon
-	Range: 5c768
+	Range: 6c768
 	Report: tnkfire3.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
@@ -98,6 +98,7 @@
 
 90mm:
 	Inherits: ^Cannon
+	Range: 6c768
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			Concrete: 48
@@ -114,7 +115,7 @@
 
 120mm:
 	Inherits: 90mm
-	Range: 6c768
+	Range: 6c512
 	ReloadDelay: 55
 	Report: tnkfire4.aud
 	Warhead@1Dam: SpreadDamage
@@ -124,7 +125,7 @@
 
 120mm.Drone:
 	Inherits: 120mm
-	Range: 6c768
+	Range: 6c512
 	ReloadDelay: 30
 	Warhead@1Dam: SpreadDamage
 		Damage: 2200
@@ -147,7 +148,7 @@
 125mm:
 	Inherits: ^Cannon
 	Range: 6c768
-	ReloadDelay: 70
+	ReloadDelay: 65
 	Burst: 2
 	Warhead@1Dam: SpreadDamage
 		Versus:
@@ -296,7 +297,7 @@
 	Inherits: ^Cannon
 	ReloadDelay: 95
 	Report: vapoat1a.aud
-	Range: 6c768
+	Range: 6c512
 	Burst: 2
 	BurstDelays: 8
 	Warhead@1Dam: SpreadDamage
