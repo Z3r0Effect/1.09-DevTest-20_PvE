@@ -694,7 +694,7 @@ SilencedPPK:
 
 SilencedPPKBATF:
 	Inherits: SilencedPPK
-	Range: 5c0
+	Range: 6c0
 
 Colt45:
 	Inherits: ^SnipeWeapon
@@ -716,7 +716,7 @@ Colt45:
 
 Colt45BATF:
 	Inherits: Colt45
-	Range: 6c768
+	Range: 8c768
 
 SMG:
 	Inherits: ^SnipeWeapon
@@ -770,7 +770,7 @@ MP5:
 
 MP5BATF:
 	Inherits: MP5
-	Range: 6c768
+	Range: 7c512
 
 AKM:
 	StartBurstReport: mg11.aud
@@ -1056,7 +1056,7 @@ WolverineGunTracer:
 		ValidTargets: Ground, Ship, Air, AirSmall, Trees
 
 EnforcerShotgun:
-	Range: 6c768
+	Range: 5c768
 	Report: enfo-fire1.aud, enfo-fire2.aud
 	ReloadDelay: 55
 	Projectile: LinearPulse
@@ -1135,13 +1135,13 @@ EnforcerShotgun:
 			HitAnimSequence: piff
 			HitAnimPalette: effect-ignore-lighting-alpha50
 		DamageFalloff@1:
-			Spread: 5c0
-			Falloff: 100, 100
+			Spread: 6c0
+			Falloff: 100, 70 
 			FalloffBasis: DistanceFromSource
 	Warhead@1Dam: SpreadDamage
-		Damage: 7000
+		Damage: 5500
 		Versus:
-			None: 100
+			None: 90
 			Wood: 40
 			Light: 80
 			Heavy: 40

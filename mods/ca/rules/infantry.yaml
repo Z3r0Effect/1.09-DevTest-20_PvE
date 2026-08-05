@@ -5047,7 +5047,7 @@ HOPL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 17000
+		HP: 14000
 	Armor:
 		Type: Concrete
 	Mobile:

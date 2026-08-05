@@ -307,7 +307,7 @@ DragonGI:
 	Projectile: MissileCA
 		RangeLimit: 8c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 4500
+		Damage: 4200
 
 DragonGI.CRYO:
 	Inherits: Dragon.CRYO
@@ -317,11 +317,11 @@ DragonGI.CRYO:
 	Projectile: MissileCA
 		RangeLimit: 8c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 4500
+		Damage: 4400
 
 DragonBATF:
 	Inherits: Dragon
-	Range: 6c512
+	Range: 6c768
 	Projectile: MissileCA
 		RangeLimit: 7c0
 	Warhead@1Dam: SpreadDamage

@@ -1592,7 +1592,7 @@ PrisBurst:
 PrisTLaser:
 	Inherits: PrisLaser
 	Report: ptnkfire.aud
-	ReloadDelay: 45
+	ReloadDelay: 50
 	Range: 9c0
 	Projectile: LaserZapCA
 		Blockable: true
@@ -1604,7 +1604,7 @@ PrisTLaser:
 			Wood: 100
 			Concrete: 100
 			Light: 100
-			Heavy: 70
+			Heavy: 60
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, FlakVestMitigatedMinor
 	Warhead@Burst: FireCluster
 		Weapon: PrisTBurst
@@ -1646,13 +1646,13 @@ PrisCLaser:
 			None: 60
 			Wood: 100
 			Concrete: 75
-			Light: 90
-			Heavy: 80
+			Light: 85
+			Heavy: 75
 	-Warhead@Burst:
 
 HopliteGun:
-	ReloadDelay: 50
-	Range: 8c0
+	ReloadDelay: 65
+	Range: 7c512
 	Report: hopl-fire1.aud
 	Projectile: LaserZapCA
 		Width: 40
@@ -1665,12 +1665,12 @@ HopliteGun:
 		SecondaryBeamColor: 75D1FF60
 	Warhead@1Dam: SpreadDamage
 		Spread: 180
-		Damage: 3500
+		Damage: 4800
 		Versus:
 			None: 90
 			Wood: 100
 			Light: 100
-			Heavy: 90
+			Heavy: 50
 			Concrete: 50
 			Brick: 30
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
@@ -1711,20 +1711,20 @@ HopliteTargeter:
 
 HopliteIFVGun:
 	Inherits: HopliteGun
-	ReloadDelay: 40
+	ReloadDelay: 55
 	Report: ptnkfire.aud
 	Projectile: LaserZapCA
 		HitAnim: plaserfire
 	Warhead@1Dam: SpreadDamage
-		Damage: 5000
+		Damage: 4800
 		Spread: 288
 		Versus:
 			Wood: 90
-			Heavy: 45
+			Heavy: 60
 
 HopliteGunBATF:
 	Inherits: HopliteGunCharged
-	Range: 6c0
+	Range: 7c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 288
 
