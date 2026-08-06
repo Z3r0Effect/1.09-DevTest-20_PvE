@@ -5002,7 +5002,7 @@ DISC:
 
 JACK:
 	Inherits: ^PlaneTD
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetVehicleGroundAssaultMove
 	Valued:
 		Cost: 500
 	Tooltip:

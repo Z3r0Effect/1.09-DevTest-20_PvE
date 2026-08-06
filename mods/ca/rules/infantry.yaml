@@ -2778,7 +2778,7 @@ JJET:
 	Inherits@11: ^Suppressable
 	Inherits@bounty: ^GlobalBounty
 	Inherits@selection: ^SelectableCombatUnit
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveInfantry
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@mind: ^MindControllable
 	Inherits@ionsurge: ^IonSurgable
@@ -3102,7 +3102,7 @@ E8:
 		Condition: biofirepower
 	FirepowerMultiplier@BIOLAB:
 		RequiresCondition: biofirepower
-		Modifier: 110
+		Modifier: 115
 	-GrantConditionOnTerrain@ONTIB:
 	-GrantStackingCondition@TIBEXPOSED:
 	-DamagedByTerrainCA@TIBDAMAGE:
@@ -3190,7 +3190,7 @@ DESO:
 		RequiresCondition: deployed && !deployed-initial
 	GrantTimedCondition@InitialDeploy:
 		Condition: deployed-initial
-		Duration: 141
+		Duration: 100
 		RequiresCondition: deployed
 	WithSpriteBody@DEPLOYED:
 		Sequence: deployed
@@ -3199,6 +3199,9 @@ DESO:
 	WithMakeAnimation:
 		Sequence: deploy
 		BodyNames: deployed
+	DamageMultiplier:
+		Modifier: 80
+		RequiresCondition: deployed
 	-ReplacedInQueue:
 	AutoDeployer@AI:
 		RequiresCondition: botowner && !deployed && !parachute

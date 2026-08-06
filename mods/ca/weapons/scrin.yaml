@@ -9,7 +9,7 @@ WarriorGunBATF:
 DisintegratorBeam:
 	Inherits: Laser
 	ReloadDelay: 30
-	Range: 7c0
+	Range: 6c256
 	Report: disintegrator-fire1.aud, disintegrator-fire2.aud, disintegrator-fire3.aud
 	Projectile: LaserZapCA
 		Color: 00FFCCAA
@@ -29,7 +29,7 @@ DisintegratorBeam:
 
 DisintegratorBeamTargeter:
 	ReloadDelay: 30
-	Range: 6c0
+	Range: 7c0
 	Projectile: InstantHit
 
 DisintegratorBeamBATF:
@@ -2245,7 +2245,7 @@ BursterExplode:
 		Size: 1
 
 MindSparkEruption:
-	ReloadDelay: 450
+	ReloadDelay: 200
 	Projectile: InstantExplode
 	Warhead@2Eff: CreateEffect
 		Explosions: reverse
@@ -2263,8 +2263,8 @@ MindSparkEruption:
 		AirThreshold: 512
 
 MindSparkZap:
-	ReloadDelay: 40
-	Range: 6c512
+	ReloadDelay: 50
+	Range: 5c0
 	Report: mindspark-zap1.aud, mindspark-zap2.aud
 	Projectile: PlasmaBeam
 		Duration: 7

@@ -2280,6 +2280,17 @@
 		ValidTargets: Vehicle, Structure, AntiAirDefense, Mine
 		InvalidTargets: NoAutoTarget
 
+^AutoTargetVehicle:
+	AutoTarget:
+		AttackAnythingCondition: stance-attackanything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Vehicle, Water, Underwater, Defense
+		InvalidTargets: NoAutoTarget, WaterStructure, AntiAirDefense, Vehicle
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: stance-attackanything
+		ValidTargets: Infantry, Structure, AntiAirDefense, Mine
+		InvalidTargets: NoAutoTarget
+
 ^AutoTargetGround:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
@@ -2300,6 +2311,13 @@
 
 ^AutoTargetTroopGroundAssaultMove:
 	Inherits: ^AutoTargetTroop
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: stance-attackanything || assault-move
+	AttackMove:
+		AssaultMoveCondition: assault-move
+
+^AutoTargetVehicleGroundAssaultMove:
+	Inherits: ^AutoTargetVehicle
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything || assault-move
 	AttackMove:
@@ -2346,8 +2364,26 @@
 		ValidTargets: Structure, AntiAirDefense, Mine
 		InvalidTargets: NoAutoTarget
 
+^AutoTargetAllInfantry:
+	AutoTarget:
+		AttackAnythingCondition: stance-attackanything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Infantry, Water, Underwater, Air, AirSmall, Defense
+		InvalidTargets: NoAutoTarget, WaterStructure, AntiAirDefense
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: stance-attackanything
+		ValidTargets: Vehicle, Structure, AntiAirDefense, Mine
+		InvalidTargets: NoAutoTarget
+
 ^AutoTargetAllAssaultMove:
 	Inherits: ^AutoTargetAll
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: stance-attackanything || assault-move
+	AttackMove:
+		AssaultMoveCondition: assault-move
+
+^AutoTargetAllAssaultMoveInfantry:
+	Inherits: ^AutoTargetAllInfantry
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything || assault-move
 	AttackMove:
@@ -4169,10 +4205,10 @@
 		Condition: fast-regrowth
 		Prerequisites: global.fastregrowth
 	SeedsResourceMultiplier@FastRegrowth:
-		Modifier: 42
+		Modifier: 50
 		RequiresCondition: fast-regrowth
 	SeedsResourceMultiplier@IchorBoost:
-		Modifier: 50
+		Modifier: 25
 		RequiresCondition: ichor-boost
 	ExternalCondition@IchorBoost:
 		Condition: ichor-boost

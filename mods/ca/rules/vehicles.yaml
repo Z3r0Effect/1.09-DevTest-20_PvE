@@ -8045,7 +8045,7 @@ RTNK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 42000
 	Mobile:
 		Speed: 105
 		Voice: Move
@@ -8084,7 +8084,7 @@ RTNK:
 		CloakSound: vmirat2a.aud
 		CloakedCondition: hidden
 		UncloakSound: appear1md.aud
-		UncloakOn: Attack, Dock, Move, Damage, Heal
+		UncloakOn: Attack, Dock, Damage, Heal
 		CloakStyle: Palette
 		CloakedPalette: player
 		IsPlayerPalette: false

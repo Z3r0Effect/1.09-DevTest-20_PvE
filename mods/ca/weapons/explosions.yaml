@@ -495,7 +495,7 @@ TibExplosion:
 CrateNuke:
 	ValidTargets: Ground, Trees, Water, Air
 	Warhead@1Dam_impact: SpreadDamage
-		Spread: 1c0
+		Spread: 3c0
 		Damage: 5000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Trees, Water, Air
@@ -507,7 +507,7 @@ CrateNuke:
 		ImpactSounds: kaboom1.aud
 		ImpactActors: false
 	Warhead@4Dam_areanuke1: SpreadDamage
-		Spread: 1c0
+		Spread: 3c0
 		Damage: 3000
 		Falloff: 1000, 600, 400, 250, 150, 100, 0
 		Delay: 5
@@ -555,6 +555,7 @@ UnitExplodeIraqTank:
 	Warhead@3Eff_impact: CreateEffect
 		Explosions: nuke3
 	Warhead@1Dam_impact: SpreadDamage
+		Spread: 1c0
 		Damage: 1300
 		Versus:
 			None: 45
@@ -562,6 +563,7 @@ UnitExplodeIraqTank:
 		Falloff: 368, 135, 50, 18, 0
 	-Warhead@2Res_impact:
 	Warhead@4Dam_areanuke1: SpreadDamage
+		Spread: 1c0
 		Damage: 650
 		Versus:
 			None: 45
@@ -587,7 +589,7 @@ UnitExplodeIraqTank:
 MiniNuke:
 	ValidTargets: Ground, Trees, Water, Underwater, Air
 	Warhead@1Dam_impact: SpreadDamage
-		Spread: 1c0
+		Spread: 2c0
 		Damage: 7500
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Trees, Water, Air
@@ -605,7 +607,7 @@ MiniNuke:
 		ImpactSounds: kaboom1.aud
 		ImpactActors: false
 	Warhead@4Dam_areanuke1: SpreadDamage
-		Spread: 2c0
+		Spread: 3c0
 		Damage: 3000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 5
@@ -624,7 +626,7 @@ MiniNuke:
 		Delay: 5
 		ImpactActors: false
 	Warhead@7Dam_areanuke2: SpreadDamage
-		Spread: 3c0
+		Spread: 4c0
 		Damage: 3000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 10
@@ -635,7 +637,7 @@ MiniNuke:
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, Incendiary
 	Warhead@8Dam_areanuke2: SpreadDamage
-		Spread: 3c0
+		Spread: 4c0
 		Damage: 6000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 10
@@ -817,7 +819,7 @@ UnitExplodeVice:
 UnitExplodeToxinTruck:
 	ValidTargets: Ground, Water, Underwater
 	Warhead@1Dam_impact: SpreadDamage
-		Spread: 1c0
+		Spread: 3c0
 		Damage: 5000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water
@@ -831,7 +833,7 @@ UnitExplodeToxinTruck:
 		ExplosionPalette: tdeffect-ignore-lighting-alpha85
 		ImpactSounds: vdemdiea.aud
 	Warhead@4Dam_areanuke1: SpreadDamage
-		Spread: 2c0
+		Spread: 4c0
 		Damage: 2000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 5
@@ -842,7 +844,7 @@ UnitExplodeToxinTruck:
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, ToxinDeath
 	Warhead@7Dam_areanuke2: SpreadDamage
-		Spread: 3c0
+		Spread: 4c0
 		Damage: 2000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 10

@@ -1485,12 +1485,12 @@ MAST:
 		AmmoPool: mspk
 	AmmoPool@MindSpark:
 		Name: mspk
-		Ammo: 1
+		Ammo: 2
 		Armaments: none
 		AmmoCondition: mspk-ammo
 	ReloadAmmoPoolCA@MindSpark:
 		AmmoPool: mspk
-		Delay: 325
+		Delay: 250
 		Count: 2
 		ShowSelectionBar: true
 		SelectionBarColor: ff00ff
@@ -3151,7 +3151,7 @@ STMR:
 		Strengths: • Strong vs Infantry, Light Armor, Buildings, Aircraft
 		Weaknesses: • Weak vs Defenses
 	Valued:
-		Cost: 1450
+		Cost: 1500
 	Tooltip:
 		Name: Stormrider
 		GenericName: Aircraft
@@ -3292,7 +3292,7 @@ TORM:
 		Strengths: • Strong vs Vehicles, Defenses, Aircraft
 		Weaknesses: • Weak vs Infantry
 	Valued:
-		Cost: 900
+		Cost: 1000
 	Tooltip:
 		Name: Tormentor
 		GenericName: Aircraft
@@ -3435,7 +3435,7 @@ ENRV:
 		Weaknesses: • Weak vs Infantry
 		Attributes: • Slows targets
 	Valued:
-		Cost: 1900
+		Cost: 2000
 	Tooltip:
 		Name: Enervator
 		GenericName: Aircraft
@@ -3720,7 +3720,7 @@ PAC:
 	Voiced:
 		VoiceSet: PlanetaryAssaultCarrierVoice
 	Valued:
-		Cost: 3200
+		Cost: 3000
 	Tooltip:
 		Name: Planetary Assault Carrier
 		GenericName: Aircraft
@@ -3862,7 +3862,7 @@ INVA:
 	Tooltip:
 		Name: Invader
 	Health:
-		HP: 28000
+		HP: 9000
 	RevealsShroud:
 		Range: 2c0
 		MinRange: 1c0
@@ -3981,7 +3981,7 @@ MSHP:
 		Type: Circle
 			Radius: 2c768
 	RevealsShroud:
-		Range: 14c0
+		Range: 13c0
 		MinRange: 11c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -4111,7 +4111,7 @@ MSHP:
 	SpawnActorAbility:
 		Actors: wormhole
 		SkipMakeAnimations: false
-		Range: 18c0
+		Range: 20c0
 		CircleColor: 9988ff
 		SpawnSounds: wormhole-open.aud
 		SelectTargetSpeechNotification: SelectTarget
@@ -4122,7 +4122,7 @@ MSHP:
 	AmmoPool@WORMHOLESPAWNER:
 		Name: wormholespawner
 		Armaments: none
-		Ammo: 2
+		Ammo: 4
 	ReloadAmmoPoolCA@WORMHOLESPAWNER:
 		AmmoPool: wormholespawner
 		Delay: 1125
@@ -5961,9 +5961,9 @@ SSPK:
 	-Sellable:
 	-Buildable:
 	Health:
-		HP: 75000
+		HP: 90000
 	KillsSelf:
-		Delay: 750
+		Delay: 1000
 	RevealsShroud:
 		MinRange: 4c0
 		Range: 6c0
@@ -6008,7 +6008,7 @@ SSPK:
 	-Encyclopedia:
 	GrantTimedCondition@Active:
 		Condition: active
-		Duration: 750
+		Duration: 1000
 	TimedConditionBarCA@Active:
 		Condition: active
 		Color: FFFFFF
@@ -6061,21 +6061,21 @@ VSPK:
 		Range: 6c0
 	ProximityExternalCondition@VoidSpike:
 		Condition: voidspike
-		Range: 8c0
+		Range: 10c0
 		ValidRelationships: Enemy, Neutral
 		RequiresCondition: !build-incomplete && !being-warped
 	WithRangeCircleCA@VoidSpike:
 		Type: VoidSpike
-		Range: 9c0
+		Range: 10c0
 		ValidRelationships: Ally, Enemy, Neutral
 		UsePlayerColor: true
 		PlayerColorAlpha: 160
 	ConvertsResources:
-		Range: 9c0
+		Range: 10c0
 		ConvertFrom: Tiberium, BlueTiberium, Ore, Gems
 		ConvertTo: BlackTiberium
 		Interval: 5
-		Amount: 1
+		Amount: 4
 		RequiresCondition: !build-incomplete && !being-warped
 	PeriodicExplosion:
 		Weapon: VoidSpike
@@ -6123,14 +6123,14 @@ ISPK:
 		Interval: 5, 50
 		RequiresCondition: !build-incomplete && !being-warped
 	ProximityExternalConditionCA@IchorBoost:
-		Range: 9c0
+		Range: 10c0
 		Condition: ichor-boost
 		ValidRelationships: Neutral
 		RequiresCondition: !build-incomplete && !being-warped
-		MaxTargets: 4
+		MaxTargets: 5
 	ProximityExternalCondition@ONTIB:
 		Condition: on-tib
-		Range: 8c0
+		Range: 10c0
 		ValidRelationships: Ally, Neutral, Enemy
 	WithRangeCircleCA@IchorBoost:
 		Type: IchorSpike
@@ -6143,7 +6143,7 @@ ISPK:
 		GreenTint: 0.3
 	ChangesHealth:
 		Step: 0
-		PercentageStep: 1
+		PercentageStep: 2
 		Delay: 25
 		StartIfBelow: 100
 		DamageCooldown: 100
@@ -6179,11 +6179,11 @@ CSPK:
 	GivesBuildableArea:
 		AreaTypes: building
 	BaseProvider:
-		Range: 8c0
+		Range: 12c0
 		RequiresCondition: charged
 	WithRangeCircle:
 		Type: ColonySpike
-		Range: 8c0
+		Range: 12c0
 		Color: ffffff50
 		RequiresCondition: charged
 	ReloadAmmoPoolCA@Charged:
@@ -6340,7 +6340,7 @@ MSPK:
 		CruiseAltitude: 1
 		LandableTerrainTypes: Clear,Road,Rough,Ore,Gems,Tiberium,BlueTiberium,BlackTiberium,Water,Tree,River,Rock,Beach,Bridge,Tunnel,Wall,Ford
 	KillsSelf:
-		Delay: 525
+		Delay: 500
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
 		CrushedSequence: die
@@ -6348,7 +6348,7 @@ MSPK:
 		DeathSequencePalette: caneon
 		DeathPaletteIsPlayerPalette: false
 	Health:
-		HP: 1
+		HP: 4000
 	Voiced:
 		VoiceSet: MindSparkVoice
 	WithColoredSelectionBox@PLAYERBOX:
@@ -6385,7 +6385,7 @@ GRCL:
 	Targetable:
 		TargetTypes: Ground, Vehicle
 	Health:
-		HP: 74000
+		HP: 70000
 	Armor:
 		Type: Light
 	PeriodicExplosion:
@@ -6408,7 +6408,7 @@ GRCL:
 	ConvertsDamageToHealth:
 		DamagePercentConverted: 200
 	ChangesHealth:
-		Step: -2000
+		Step: -1000
 		StartIfBelow: 101
 		Delay: 25
 		RequiresCondition: !leeching

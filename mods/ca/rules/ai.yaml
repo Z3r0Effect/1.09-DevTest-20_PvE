@@ -1104,40 +1104,40 @@ Player:
 			spen.nod: 2
 			syrd.gdi: 2
 		BuildingFractions:
-			proc: 30
-			proc.td: 30
-			proc.scrin: 30
+			proc: 25
+			proc.td: 25
+			proc.scrin: 25
 			hand: 15
 			pyle: 15
 			barr: 15
 			tent: 15
 			port: 15
 			kenn: 1
-			weap: 10
-			weap.td: 10
+			weap: 12
+			weap.td: 12
 			airs: 10
 			wsph: 10
-			pbox: 7
-			hbox: 7
-			gtwr: 7
-			gun: 7
-			gun.td: 7
-			ptur: 7
-			scol: 7
-			tsla: 7
-			obli: 6
+			pbox: 12
+			hbox: 12
+			gtwr: 12
+			gun: 12
+			gun.td: 12
+			ptur: 12
+			scol: 12
+			tsla: 12
+			obli: 10
 			ltur: 10
 			ftur: 10
 			ttur: 10
 			htur: 5
 			atwr: 8
 			stwr: 6
-			pris: 6
-			agun: 7
-			cram: 7
-			sam: 7
-			nsam: 7
-			shar: 7
+			pris: 12
+			agun: 8
+			cram: 8
+			sam: 8
+			nsam: 8
+			shar: 8
 			gap: 1
 			atek: 1
 			alhq: 1
@@ -2097,7 +2097,7 @@ Player:
 			mshp: Wood
 	UnitBuilderBotModuleCA@brutal-vhard:
 		RequiresCondition: enable-brutal-ai || enable-vhard-ai
-		IdleBaseUnitsMaximum: 150
+		IdleBaseUnitsMaximum: 50
 		MaxAircraft: 3
 		MaintainAirSuperiority: true
 		MaxAirSuperiority: 2
@@ -2178,7 +2178,7 @@ Player:
 			harv.chrono: 10
 	SquadManagerBotModuleCA@hard:
 		RequiresCondition: enable-hard-ai
-		MinimumAttackForceDelay: 50
+		MinimumAttackForceDelay: 250
 		SquadValue: 12000
 		SquadValueMaxEarlyBonus: 5000
 		SquadValueMinLateBonus: 8000
@@ -2229,7 +2229,7 @@ Player:
 			mshp: Wood
 	UnitBuilderBotModuleCA@hard:
 		RequiresCondition: enable-hard-ai
-		IdleBaseUnitsMaximum: 200
+		IdleBaseUnitsMaximum: 500
 		MaxAircraft: 3
 		MaintainAirSuperiority: false
 		MaxAirSuperiority: 6
