@@ -1448,6 +1448,9 @@ watcher.parasite:
 	Attachable:
 		Type: WatcherParasite
 		TargetTypes: WatcherParasiteAttachable
+	KillsSelf:
+		RemoveInstead: true
+		Delay: 7500
 
 SHAB:
 	Inherits: ^Mine

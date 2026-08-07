@@ -777,10 +777,10 @@ WCHR:
 	Mobile:
 		Speed: 85
 	RevealsShroud:
-		Range: 15c0
+		Range: 12c0
 		RequiresCondition: !hidden
 	RevealsShroud@Cloaked:
-		Range: 11c0
+		Range: 14c0
 		RequiresCondition: hidden
 	IgnoresDisguise:
 	DetectCloaked:
@@ -801,7 +801,7 @@ WCHR:
 	Cloak@NORMAL:
 		InitialDelay: 200
 		CloakDelay: 75
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
+		UncloakOn: Attack, Unload, Infiltrate, Demolish
 		CloakedCondition: hidden
 		CloakSound: gstealon.aud
 		UncloakSound: gstealof.aud
@@ -816,7 +816,7 @@ WCHR:
 		ColorSource: Player
 	PortableChronoCA:
 		ChargeDelay: 300
-		MaxDistance: 16
+		MaxDistance: 18
 		ChronoshiftSound: scrinport.aud
 		RequiresCondition: blink-upgrade
 		TeleportCondition: blink

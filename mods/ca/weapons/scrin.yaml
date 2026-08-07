@@ -1542,7 +1542,7 @@ ImpalerSpikePassenger:
 
 WatcherDart:
 	Range: 14c0
-	ReloadDelay: 100
+	ReloadDelay: 50
 	Report: wchr-fire1.aud
 	ValidTargets: WatcherParasiteAttachable
 	Projectile: MissileCA

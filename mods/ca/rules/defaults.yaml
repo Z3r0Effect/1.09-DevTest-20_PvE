@@ -2111,7 +2111,7 @@
 ^TechLockable:
 	InfiltrateForTimedCondition@TechLock:
 		Condition: tech-locked
-		Duration: 750
+		Duration: 9000
 		Types: TechLockInfiltrate
 		InfiltrationNotification: TechnologyLocked
 		InfiltratedNotification: OurTechnologyLocked
