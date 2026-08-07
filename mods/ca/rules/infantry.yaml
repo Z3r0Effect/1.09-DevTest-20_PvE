@@ -1411,7 +1411,7 @@ THF:
 		Weaknesses: • Unarmed
 		Attributes: • Cloaked with increased vision when not moving
 	Valued:
-		Cost: 500
+		Cost: 550
 	Tooltip:
 		Name: Thief
 	UpdatesPlayerStatistics:
@@ -1441,7 +1441,7 @@ THF:
 	Cloak@NORMAL:
 		InitialDelay: 45
 		CloakDelay: 20
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
+		UncloakOn: Attack, Unload, Infiltrate, Demolish
 		CloakSound: gstealon.aud
 		UncloakSound: gstealof.aud
 		DetectionTypes: Cloak
@@ -3485,13 +3485,13 @@ IVAN:
 		Weaknesses: • Cannot attack Aircraft\n• Has difficulty hitting moving targets
 		Attributes: • Bombs will bounce if they hit the ground
 	Valued:
-		Cost: 600
+		Cost: 700
 	Tooltip:
 		Name: Crazy Ivan
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 18000
+		HP: 19000
 	Mobile:
 		Speed: 75
 		Voice: Move
@@ -3522,7 +3522,7 @@ IVAN:
 	FireWarheadsOnDeath:
 		Weapon: ArtilleryExplode
 		EmptyWeapon: ArtilleryExplode
-		Chance: 100
+		Chance: 30
 		DamageSource: Killer
 		RequiresCondition: !being-warped
 	ProducibleWithLevel:

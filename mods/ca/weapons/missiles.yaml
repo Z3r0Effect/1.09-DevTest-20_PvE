@@ -90,7 +90,7 @@
 
 Maverick:
 	Inherits: ^AirToGroundMissile
-	Range: 8c0
+	Range: 7c768
 	MinRange: 0c768
 	Report: missile7.aud
 	Burst: 2
@@ -149,7 +149,7 @@ MaverickSU:
 		ContrailStartColorAlpha: 128
 	Warhead@1Dam: SpreadDamage
 		Damage: 16000
-		Spread: 448
+		Spread: 1c256
 		Falloff: 100, 55, 35, 8, 0
 		Versus:
 			None: 0
@@ -159,7 +159,7 @@ MaverickSU:
 			Light: 45
 	Warhead@2Dam: SpreadDamage
 		Damage: 1600
-		Spread: 128
+		Spread: 1c128
 		Versus:
 			None: 100
 			Wood: 0
@@ -175,7 +175,7 @@ MaverickSU:
 
 SeismicMissile:
 	ReloadDelay: 70
-	Range: 8c512
+	Range: 8c256
 	MinRange: 0c768
 	Report: rocket1.aud
 	Burst: 2
@@ -197,7 +197,7 @@ SeismicMissile:
 		Speed: 250
 		LaunchAngle: 0
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c0
+		Spread: 2c768
 		Damage: 1850
 		Falloff: 1000, 368, 135, 75, 0
 		ValidTargets: Ground, Water
@@ -448,7 +448,7 @@ HellfireAG.Harrier:
 		HorizontalRateOfTurn: 40
 		VerticalRateOfTurn: 30
 	Warhead@1Dam: SpreadDamage
-		Spread: 448
+		Spread: 768
 		Damage: 2000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Trees
@@ -2327,8 +2327,9 @@ BlackEagleMissiles:
 		Image: MISSILE
 	Warhead@1Dam: SpreadDamage
 		Damage: 24000
-		Spread: 556
+		Spread: 1c768
 		Versus:
+			None: 30
 			Concrete: 75
 	Warhead@VeiledCondition: GrantExternalConditionCA
 		Range: 4c0

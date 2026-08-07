@@ -857,15 +857,15 @@ Ivanbomb:
 	ValidTargets: Ground, TNTPlantable
 	InvalidTargets: C4Attached, C4Immune
 	ReloadDelay: 40
-	Range: 8c0
+	Range: 7c0
 	Report: grenade1.aud
 	Projectile: Bullet
-		LaunchAngle: 80
+		LaunchAngle: 70
 		Speed: 136
 		Inaccuracy: 0
 		Image: TNT
 		BounceCount: 2
-		BounceRangeModifier: 40
+		BounceRangeModifier: 20
 		BounceSound: dud2.aud
 		ValidBounceBlockerRelationships: Ally, Neutral, Enemy
 		ContrailLength: 10
@@ -876,7 +876,7 @@ Ivanbomb:
 	Warhead@AttachDelayedWeapon: AttachDelayedWeapon
 		Weapon: TNT
 		Type: tnt
-		TriggerTime: 50
+		TriggerTime: 35
 		DeathTypes: ExplosionDeath
 		Range: 1
 		AttachSounds: icraatta.aud
@@ -901,7 +901,7 @@ TNT:
 		Falloff: 1000, 448, 192, 50, 18, 7, 0
 		Versus:
 			Light: 80
-			Heavy: 40
+			Heavy: 45
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@AirDam: SpreadDamage
 		Spread: 128
@@ -924,14 +924,14 @@ TNT:
 DelayedTNT:
 	Inherits: TNT
 	Warhead@1Dam: SpreadDamage
-		Delay: 50
+		Delay: 30
 		ValidTargets: Ground, Water
 	Warhead@2Eff: CreateEffect
-		Delay: 50
+		Delay: 30
 	Warhead@Smu: LeaveSmudge
-		Delay: 50
+		Delay: 30
 	Warhead@Flames: FireCluster
-		Delay: 50
+		Delay: 30
 	Warhead@tnt: CreateEffect
 		Image: groundtnt
 		Explosions: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
@@ -1740,7 +1740,7 @@ KirovBomb:
 		Acceleration: 0, 0, 0
 		Shadow: True
 	Warhead@1Dam: SpreadDamage
-		Spread: 2c0
+		Spread: 1c512
 		Falloff: 100, 40, 20, 5
 		Damage: 13000
 		Versus:
@@ -1773,7 +1773,7 @@ KirovTeslaBomb:
 		ImpactSounds: kirbo1.aud, kirbo2.aud
 	Warhead@5Tesla: FireShrapnel
 		Weapon: KirovTeslaArc
-		Amount: 2
+		Amount: 3
 		AimChance: 100
 		AllowDirectHit: true
 		ThrowWithoutTarget: false
@@ -1812,6 +1812,7 @@ KirovClusterBomb:
 KirovNukeBomb:
 	Inherits: KirovBomb
 	Warhead@1Dam: SpreadDamage
+		Spread: 2c512
 		Versus:
 			Light: 100
 			Heavy: 90
@@ -1820,7 +1821,7 @@ KirovNukeBomb:
 		Explosions: nuke3
 		ImpactSounds: kaboom1.aud
 	Warhead@7Radio: CreateTintedCells
-		Spread: 3c0
+		Spread: 2c768
 		Level: 300
 		Falloff: 100, 55, 32, 5
 		MaxLevel: 750
@@ -1845,7 +1846,7 @@ KirovChaosBomb:
 
 KirovTeslaArc:
 	Inherits: TTankZap
-	Range: 5c512
+	Range: 3c128
 	Report: shktrop1.aud
 	ValidTargets: Infantry, Vehicle, Ship
 	Warhead@1Dam: SpreadDamage
@@ -1856,7 +1857,7 @@ KirovTeslaArc:
 
 KirovCluster:
 	ReloadDelay: 35
-	Range: 5c0
+	Range: 1c768
 	Projectile: Bullet
 		Image: BOMB
 		Speed: 96
@@ -1864,7 +1865,7 @@ KirovCluster:
 		Inaccuracy: 1c0
 		BounceCount: 0
 	Warhead@1Dam: SpreadDamage
-		Spread: 256
+		Spread: 2c768
 		Damage: 1100
 		Versus:
 			None: 40

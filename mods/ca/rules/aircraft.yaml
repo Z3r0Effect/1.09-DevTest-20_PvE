@@ -220,7 +220,7 @@ MIG:
 		Strengths: • Strong vs Heavy Armor, Defenses, Aircraft
 		Weaknesses: • Weak vs Infantry
 	Valued:
-		Cost: 1400
+		Cost: 1500
 	Tooltip:
 		Name: MiG Attack Plane
 	UpdatesPlayerStatistics:
@@ -345,7 +345,7 @@ SUK:
 		Weaknesses: • Weak vs Infantry\n• Cannot attack Aircraft\n• Has difficulty hitting moving targets
 		RequiresCondition: seismic-upgrade
 	Valued:
-		Cost: 1700
+		Cost: 2000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:

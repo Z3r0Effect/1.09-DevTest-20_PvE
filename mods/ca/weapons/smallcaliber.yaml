@@ -354,6 +354,7 @@ ChainGun.Yak.R:
 	Projectile: InstantHit
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
+		Spread: 1c128
 		Damage: 3150
 		Versus:
 			None: 100
