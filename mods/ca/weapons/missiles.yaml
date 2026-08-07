@@ -241,7 +241,7 @@ Dragon:
 
 DragonTargeter:
 	ReloadDelay: 50
-	Range: 8c512
+	Range: 6c512
 	MinRange: 0c512
 	Projectile: InstantHit
 

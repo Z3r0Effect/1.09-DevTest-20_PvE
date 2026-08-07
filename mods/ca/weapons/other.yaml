@@ -2527,7 +2527,7 @@ MempTargeting:
 	ValidTargets: Structure, Vehicle, Ship
 
 RadTrooperBeam:
-	Range: 6c768
+	Range: 6c512
 	ReloadDelay: 90
 	Report: radbeam1.aud
 	Projectile: RadBeam
@@ -2553,7 +2553,7 @@ RadTrooperBeam:
 
 DesolatorBeam:
 	Inherits: RadTrooperBeam
-	Range: 7c0
+	Range: 6c768
 	Report: idesat1a.aud
 	Projectile: RadBeam
 		Thickness: 48
@@ -2615,7 +2615,7 @@ RadBeamWeaponHeavy:
 		DamageTypes: RadiationDeath
 	Warhead@1Radiation: CreateTintedCells
 		Spread: 1c0
-		Falloff: 65, 30, 5, 0
+		Falloff: 70, 35, 10, 0
 		Level: 250
 		MaxLevel: 750
 		LayerName: radioactivity.medium
@@ -2643,9 +2643,10 @@ OverlordRadBeamWeapon:
 
 ApocRadBeamWeapon:
 	Inherits: RadBeamWeaponHeavy
+	Range: 6c768
 	Burst: 2
 	BurstDelays: 10
-	ReloadDelay: 110
+	ReloadDelay: 100
 	Warhead@2Dam: SpreadDamage
 		Spread: 256
 		Damage: 23500
@@ -2656,7 +2657,7 @@ RadEruptionWeapon:
 	ReloadDelay: 35
 	Report: idesat2a.aud
 	Warhead@1Radiation: CreateTintedCells
-		Spread: 1c0
+		Spread: 1c768
 		Falloff: 100, 75, 55, 30, 0
 		Level: 250
 		MaxLevel: 750
@@ -2665,7 +2666,7 @@ RadEruptionWeapon:
 		GlowFadeFrames: 30
 		GlowFadeInFrames: 12
 	Warhead@2irrad: GrantExternalConditionCA
-		Range: 2c0
+		Range: 2c256
 		Duration: 250
 		Condition: irradiated
 		ValidTargets: Vehicle, Ship
@@ -2676,7 +2677,7 @@ RadEruptionWeapon:
 RadEruptionWeaponStage2:
 	Inherits: RadEruptionWeapon
 	Warhead@1Radiation: CreateTintedCells
-		Falloff: 100, 80, 60, 40, 20, 0
+		Falloff: 100, 85, 65, 45, 25, 0
 
 PsychicBeamBATF:
 	Inherits: DesolatorBeam

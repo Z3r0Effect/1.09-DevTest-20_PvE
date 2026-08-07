@@ -229,7 +229,7 @@
 
 130mm:
 	Inherits: ^Cannon
-	Range: 6c256
+	Range: 6c512
 	ReloadDelay: 75
 	Burst: 2
 	InvalidTargets: Infantry

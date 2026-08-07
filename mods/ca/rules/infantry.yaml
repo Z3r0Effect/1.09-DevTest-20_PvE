@@ -3146,12 +3146,13 @@ DESO:
 	TooltipExtras:
 		Attributes: • Irradiates vehicles causing them to take more damage, deal less damage, and damage nearby units\n• Special Ability: Desolate Ground
 	Valued:
-		Cost: 600
+		Cost: 800
 	Health:
-		HP: 20500
+		HP: 22500
 	Voiced:
 		VoiceSet: DesVoice
 	Mobile:
+		Speed: 52
 		Voice: Move
 	AttackMove:
 		Voice: Move
@@ -3190,7 +3191,7 @@ DESO:
 		RequiresCondition: deployed && !deployed-initial
 	GrantTimedCondition@InitialDeploy:
 		Condition: deployed-initial
-		Duration: 100
+		Duration: 75
 		RequiresCondition: deployed
 	WithSpriteBody@DEPLOYED:
 		Sequence: deployed
@@ -3200,8 +3201,9 @@ DESO:
 		Sequence: deploy
 		BodyNames: deployed
 	DamageMultiplier:
-		Modifier: 80
+		Modifier: 40
 		RequiresCondition: deployed
+	-TakeCover:
 	-ReplacedInQueue:
 	AutoDeployer@AI:
 		RequiresCondition: botowner && !deployed && !parachute

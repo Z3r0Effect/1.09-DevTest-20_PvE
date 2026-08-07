@@ -501,6 +501,9 @@
 	ReloadDelayMultiplier@OVLDINSPIRATION:
 		RequiresCondition: ovld-inspiration
 		Modifier: 90
+	ReloadAmmoDelayMultiplier@OVLDINSPIRATION:
+		RequiresCondition: ovld-inspiration
+		Modifier: 90
 	WithIdleOverlay@Inspiration1:
 		Image: ussrstar
 		Sequence: idle-overlay1
@@ -533,7 +536,7 @@
 		Modifier: 75
 		RequiresCondition: herooftheunion
 	RangeMultiplier@HeroOfTheUnion:
-		Modifier: 140
+		Modifier: 150
 		RequiresCondition: herooftheunion
 	WithIdleOverlay@HeroOfTheUnionLight:
 		Sequence: light
@@ -2680,7 +2683,7 @@
 		WarnProbability: 0
 		RequiresCondition: !invulnerability && !being-warped
 	DamagedByTintedCells@RADSTRONG:
-		Damage: 100
+		Damage: 115
 		DamageInterval: 16
 		DamageTypes: RadiationDeath
 		LayerName: radioactivity.strong
@@ -2689,7 +2692,7 @@
 		FlashAlpha: 0.25
 		FlashDuration: 3
 	DamagedByTintedCells@RADMED:
-		Damage: 40
+		Damage: 45
 		DamageInterval: 16
 		DamageTypes: RadiationDeath
 		LayerName: radioactivity.medium
