@@ -2300,7 +2300,7 @@ BORI:
 	Health:
 		HP: 18000
 	Mobile:
-		Speed: 60
+		Speed: 65
 		Voice: Move
 	-Crushable:
 	Guard:
@@ -4072,7 +4072,7 @@ YURI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 19000
+		HP: 17000
 	Mobile:
 		Speed: 60
 		Voice: Move
@@ -4257,7 +4257,7 @@ SEAL:
 	Tooltip:
 		Name: Navy SEAL
 	Health:
-		HP: 17000
+		HP: 20000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Passenger:
@@ -4313,7 +4313,7 @@ SEAL:
 		Armaments: secondary
 	ReloadAmmoPoolCA@PreparedC4:
 		AmmoPool: prepared-c4
-		Delay: 100
+		Delay: 75
 		RequiresCondition: preparing-c4
 		ShowSelectionBar: false
 	ReloadAmmoPoolCA@CancelC4:

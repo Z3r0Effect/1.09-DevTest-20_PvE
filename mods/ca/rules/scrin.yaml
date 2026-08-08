@@ -1321,7 +1321,7 @@ MAST:
 	Health:
 		HP: 18000
 	Mobile:
-		Speed: 69
+		Speed: 62
 	RevealsShroud:
 		Range: 12c0
 	IgnoresDisguise:

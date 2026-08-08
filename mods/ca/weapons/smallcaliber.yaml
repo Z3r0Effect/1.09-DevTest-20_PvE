@@ -723,7 +723,7 @@ SMG:
 	Inherits: ^SnipeWeapon
 	Report: silppk.aud
 	ReloadDelay: 16
-	Range: 9c256
+	Range: 9c768
 	Warhead@1Dam: SpreadDamage
 		Damage: 25000
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
@@ -737,14 +737,14 @@ SMG:
 
 SMGBATF:
 	Inherits: SMG
-	Range: 9c256
+	Range: 8c256
 
 MP5:
 	StartBurstReport: iseaatta.aud, iseaattb.aud
 	ReloadDelay: 6
 	Burst: 3
 	BurstDelays: 2
-	Range: 7c768
+	Range: 8c512
 	InvalidTargets: Structure
 	Projectile: InstantHit
 		Blockable: true
@@ -778,7 +778,7 @@ AKM:
 	ReloadDelay: 15
 	Burst: 3
 	BurstDelays: 2
-	Range: 8c768
+	Range: 9c128
 	InvalidTargets: Structure
 	Projectile: InstantHit
 		Blockable: true
@@ -805,10 +805,10 @@ AKM:
 
 AKMBATF:
 	Inherits: AKM
-	Range: 6c768
+	Range: 8c128
 
 SNIPER:
-	ReloadDelay: 80
+	ReloadDelay: 70
 	Range: 9c768
 	Report: snipe.aud
 	Projectile: InstantHit
@@ -841,7 +841,7 @@ SNIPER:
 
 SNIPER.vehicle:
 	Inherits: SNIPER
-	Range: 10c0
+	Range: 10c128
 	Report: ijarwe1a.aud
 	Warhead@1Dam: SpreadDamage
 		Versus:
@@ -889,17 +889,17 @@ SNIPER.vehicleElite:
 
 SNIPERBATF:
 	Inherits: SNIPER
-	Range: 8c0
+	Range: 8c768
 
 SNIPERBATF.UPG:
 	Inherits: SNIPER.vehicle
-	Range: 8c512
+	Range: 9c0
 
 SNIPER.ASSA:
 	Inherits: SNIPER
 	InvalidTargets: Structure
 	ReloadDelay: 75
-	Range: 12c0
+	Range: 12c512
 	Report: iviratta.aud
 	Warhead@1Dam: SpreadDamage
 		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath
@@ -912,7 +912,7 @@ SNIPER.ASSA:
 
 SNIPERBATF.ASSA:
 	Inherits: SNIPER.ASSA
-	Range: 8c512
+	Range: 9c512
 
 SniperIFVGun.UPG:
 	Inherits: SNIPER.vehicle

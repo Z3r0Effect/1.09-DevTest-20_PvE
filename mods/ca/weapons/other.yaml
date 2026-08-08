@@ -857,14 +857,14 @@ Ivanbomb:
 	ValidTargets: Ground, TNTPlantable
 	InvalidTargets: C4Attached, C4Immune
 	ReloadDelay: 40
-	Range: 7c0
+	Range: 7c512
 	Report: grenade1.aud
 	Projectile: Bullet
 		LaunchAngle: 70
-		Speed: 136
+		Speed: 145
 		Inaccuracy: 0
 		Image: TNT
-		BounceCount: 2
+		BounceCount: 1
 		BounceRangeModifier: 20
 		BounceSound: dud2.aud
 		ValidBounceBlockerRelationships: Ally, Neutral, Enemy
@@ -876,7 +876,7 @@ Ivanbomb:
 	Warhead@AttachDelayedWeapon: AttachDelayedWeapon
 		Weapon: TNT
 		Type: tnt
-		TriggerTime: 35
+		TriggerTime: 25
 		DeathTypes: ExplosionDeath
 		Range: 1
 		AttachSounds: icraatta.aud
@@ -901,7 +901,7 @@ TNT:
 		Falloff: 1000, 448, 192, 50, 18, 7, 0
 		Versus:
 			Light: 80
-			Heavy: 45
+			Heavy: 40
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@AirDam: SpreadDamage
 		Spread: 128
