@@ -289,7 +289,7 @@ HeliosBomb:
 Atomic:
 	ValidTargets: Ground, Trees, Water, Underwater, Air, AirSmall
 	Warhead@1Dam_impact: SpreadDamage
-		Spread: 1c0
+		Spread: 1c256
 		Damage: 12200
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Trees, Water, Underwater, Air, AirSmall
@@ -309,7 +309,7 @@ Atomic:
 		ImpactActors: false
 		ValidTargets: Ground, Water, Air
 	Warhead@5Dam_areanuke1: SpreadDamage
-		Spread: 2c0
+		Spread: 2c128
 		Damage: 4200
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 5
@@ -415,28 +415,28 @@ Atomic:
 IonCannon:
 	ValidTargets: Ground, Water, Air
 	Warhead@1Dam: SpreadDamage
-		Range: 0, 0c512, 1c512, 2c512
-		Damage: 10500
-		Falloff: 1000, 400, 100, 50
+		Range: 0, 0c768, 2c0, 4c0
+		Damage: 13500
+		Falloff: 1000, 450, 140, 40
 		ValidTargets: Ground
 		Versus:
 			None: 25
-			Light: 65
+			Light: 80
 			Wood: 15
-			Heavy: 70
+			Heavy: 85
 		DamageTypes: TriggerProne, ExplosionDeath
 	Warhead@2Dam: SpreadDamage
-		Range: 0, 0c512, 1c512, 2c512
-		Damage: 4000
-		Falloff: 1000, 400, 100, 50
+		Range: 0, 0c768, 2c0, 4c0
+		Damage: 5000
+		Falloff: 1000, 400, 120, 40
 		ValidTargets: Cyborg
 		Versus:
 			Heavy: 0
 		DamageTypes: TriggerProne, ExplosionDeath
 	Warhead@3Dam: SpreadDamage
-		Range: 0, 0c682, 1c341, 2c682
-		Damage: 35000
-		Falloff: 100, 100, 35, 10
+		Range: 0, 1c0, 2c0, 3c512
+		Damage: 36000
+		Falloff: 100, 90, 30, 10
 		ValidTargets: Air, AirSmall
 		DamageTypes: TriggerProne, ExplosionDeath
 	Warhead@4Eff: CreateEffect
@@ -614,7 +614,7 @@ FirestormBarrage:
 		ContrailStartColor: cc550080
 		ContrailStartColorAlpha: 128
 	Warhead@1Dam: SpreadDamage
-		Spread: 2c0
+		Spread: 2c512
 		Damage: 30000
 		Versus:
 			None: 80
@@ -637,7 +637,7 @@ FirestormBarrage:
 		Size: 2
 		Delay: 3
 	Warhead@8Dam_areanuke2: SpreadDamage
-		Spread: 3c0
+		Spread: 3c512
 		Damage: 6500
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 10
@@ -963,18 +963,18 @@ IonBolt:
 	Range: 512
 	ValidTargets: Ground, Water, Air, AirSmall
 	Warhead@1Dam_impact: SpreadDamage
-		Range: 0, 1c1, 2c1, 3c1, 4c1
+		Range: 0, 1c256, 2c256, 3c256, 4c256
 		Delay: 1
-		Damage: 3250
-		Falloff: 1000, 1000, 200, 100, 75
+		Damage: 4000
+		Falloff: 1000, 750, 300, 150, 60
 		ValidTargets: Ground, Water, Underwater, Air, AirSmall
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 		Versus:
-			None: 50
+			None: 65
 			Concrete: 300
 			Heavy: 120
-			Light: 75
-			Wood: 105
+			Light: 100
+			Wood: 85
 			Aircraft: 280
 	Warhead@4Effect: CreateEffect
 		Explosions: ionbeam

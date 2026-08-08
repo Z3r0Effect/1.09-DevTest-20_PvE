@@ -1318,7 +1318,7 @@
 		Prerequisites: ~eye.zocom
 		Icon: surgicalstrike
 		IconPalette: chrometd
-		ChargeInterval: 6000
+		ChargeInterval: 4500
 		WeaponDelay: 3
 		Name: Surgical Strike
 		EffectPalette: tdeffect-ignore-lighting-alpha85
