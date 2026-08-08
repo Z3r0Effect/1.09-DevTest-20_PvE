@@ -846,7 +846,7 @@ EMPGrenade:
 			Concrete: 85
 		DamageTypes: Prone50Percent, TriggerProne, ElectricityDeath
 	Warhead@5emp: GrantExternalConditionCA
-		Range: 0c768
+		Range: 1c512
 		Duration: 40
 		Condition: empdisable
 		ValidTargets: Vehicle, Ship, Structure

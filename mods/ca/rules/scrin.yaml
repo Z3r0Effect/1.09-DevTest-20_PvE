@@ -1415,6 +1415,7 @@ MAST:
 	WithProductionIconOverlay:
 		Types: Veterancy
 		Prerequisites: barracks.upgraded
+	-TakeCover:
 	-Crushable:
 	ExternalCondition@PRODUCED:
 		Condition: produced

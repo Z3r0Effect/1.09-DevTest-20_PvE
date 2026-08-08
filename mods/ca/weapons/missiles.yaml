@@ -361,7 +361,7 @@ DragonBATF.CYB.TibCore:
 
 HellfireAG:
 	Inherits: ^AirToGroundMissile
-	Range: 7c0
+	Range: 7c256
 	ReloadDelay: 70
 	MinRange: 0c768
 	Burst: 4
@@ -371,6 +371,7 @@ HellfireAG:
 		HorizontalRateOfTurn: 40
 		RangeLimit: 10c0
 	Warhead@1Dam: SpreadDamage
+		Spread: 512
 		Damage: 5500
 		Versus:
 			None: 20
@@ -400,7 +401,7 @@ HellfireAG.Cryo:
 HindRockets:
 	Inherits: HellfireAG
 	Range: 7c512
-	ReloadDelay: 70
+	ReloadDelay: 55
 	Report: hind-rocket1.aud, hind-rocket2.aud
 	ValidTargets: Ground
 	BurstDelays: 12
@@ -433,7 +434,7 @@ HellfireAG.Harrier:
 	Inherits: ^AirToGroundMissile
 	Range: 8c0
 	MinRange: 0c768
-	ReloadDelay: 70
+	ReloadDelay: 50
 	Report: migmis.aud, migmis2.aud
 	Burst: 2
 	BurstDelays: 10
@@ -448,15 +449,15 @@ HellfireAG.Harrier:
 		HorizontalRateOfTurn: 40
 		VerticalRateOfTurn: 30
 	Warhead@1Dam: SpreadDamage
-		Spread: 768
+		Spread: 1c768
 		Damage: 2000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Trees
 		Versus:
 			None: 100
 			Wood: 50
-			Light: 55
-			Heavy: 28
+			Light: 75
+			Heavy: 50
 			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigatedMinor, AirToGround
 	Warhead@3Eff: CreateEffect
@@ -1918,7 +1919,7 @@ BoatMissileAA:
 
 Rah66AG:
 	ReloadDelay: 35
-	Range: 7c0
+	Range: 7c512
 	MinRange: 0c768
 	Report: rocket2.aud
 	Burst: 4
@@ -1939,15 +1940,15 @@ Rah66AG:
 		ContrailStartColorAlpha: 170
 		ContrailStartWidth: 0c40
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
-		Damage: 800
+		Spread: 768
+		Damage: 1000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 85
 			Wood: 55
 			Concrete: 30
 			Light: 55
-			Heavy: 30
+			Heavy: 65
 			Brick: 5
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigatedMinor, AirToGround
 	Warhead@3Eff: CreateEffect
@@ -2029,7 +2030,7 @@ ScrinTorp:
 		Speed: 682
 		LaunchAngle: 10
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
+		Spread: 1c256
 		Damage: 1100
 		Falloff: 1000, 448, 192, 64, 26, 10, 0
 		Versus:
@@ -2269,7 +2270,7 @@ Rocket.P51.L:
 
 Hydra.R:
 	ReloadDelay: 80
-	Range: 7c256
+	Range: 7c768
 	MinRange: 0c256
 	Report: iggiat2a.aud, iggiat2b.aud
 	Burst: 6
@@ -2290,8 +2291,8 @@ Hydra.R:
 		ContrailLength: 10
 		ContrailStartWidth: 0c42
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
-		Damage: 470
+		Spread: 1c768
+		Damage: 675
 		Falloff: 1000, 648, 292, 150, 78, 25, 0
 		Versus:
 			None: 100
@@ -2376,6 +2377,7 @@ PhantomMissiles:
 		Speed: 550
 		TrailInterval: 1
 	Warhead@1Dam: SpreadDamage
+		Spread: 1c128
 		Damage: 12000
 		Versus:
 			Concrete: 75
@@ -2517,7 +2519,7 @@ CyborgReaperSnare:
 
 KamovRockets:
 	Inherits: ^AirToGroundMissile
-	ReloadDelay: 75
+	ReloadDelay: 50
 	Range: 9c256
 	MinRange: 3c0
 	Report: hind-rocket1.aud, hind-rocket2.aud
@@ -2536,7 +2538,7 @@ KamovRockets:
 	ValidTargets: Ground, Trees, Water
 	Warhead@1Dam: SpreadDamage
 		Damage: 7000
-		Spread: 448
+		Spread: 1c448
 		Versus:
 			None: 10
 			Wood: 20
@@ -2558,7 +2560,7 @@ KamovRockets:
 KamovRocketsWide:
 	Inherits: KamovRockets
 	Projectile: Bullet
-		Inaccuracy: 2c512
+		Inaccuracy: 1c512
 
 ^TigerGuardMissileProjectile:
 	Projectile: MissileCA

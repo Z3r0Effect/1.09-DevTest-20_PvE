@@ -2107,7 +2107,7 @@ APCH:
 		TakeoffSounds: vhelistaa.aud
 		LandingSounds: vhelilana.aud
 	Health:
-		HP: 20000
+		HP: 22000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -2221,7 +2221,7 @@ ORCA:
 		LandingSounds: orcadwn1.aud
 		Speed: 180
 	Health:
-		HP: 24000
+		HP: 22500
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -2300,7 +2300,7 @@ ORCA:
 		ValidMovementTypes: Vertical, Horizontal
 		Condition: moving
 	SpeedMultiplier@AFTERBURNER:
-		Modifier: 133
+		Modifier: 140
 		RequiresCondition: abur-upgrade && afterburner && attacking && moving
 	Contrail@AB1:
 		Offset: -300,-150,-70
@@ -2467,7 +2467,7 @@ ORCB:
 		ValidMovementTypes: Vertical, Horizontal
 		Condition: moving
 	SpeedMultiplier@AFTERBURNER:
-		Modifier: 133
+		Modifier: 140
 		RequiresCondition: abur-upgrade && afterburner && attacking && moving
 	Contrail@AB1:
 		Offset: -300,-350,-70
@@ -2580,7 +2580,7 @@ RAH:
 		Strengths: • Strong vs Infantry, Light Armor, Buildings
 		Weaknesses: • Weak vs Heavy Armor, Defenses\n• Cannot attack Aircraft
 	Valued:
-		Cost: 1900
+		Cost: 2000
 	Tooltip:
 		Name: Comanche
 	UpdatesPlayerStatistics:
@@ -3157,14 +3157,14 @@ HARR:
 		Strengths: • Strong vs Aircraft, Buildings, Infantry, Light Armor
 		Weaknesses: • Weak vs Heavy Armor, Defenses
 	Valued:
-		Cost: 1900
+		Cost: 2000
 	Tooltip:
 		Name: Harrier
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 27000
+		HP: 30000
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 10c0
@@ -3282,14 +3282,14 @@ SCRN:
 		Strengths: • Strong vs Heavy Armor, Defenses, Aircraft
 		Weaknesses: • Weak vs Infantry
 	Valued:
-		Cost: 1800
+		Cost: 2000
 	Tooltip:
 		Name: Banshee
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 27000
+		HP: 28000
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 10c0
@@ -3331,9 +3331,9 @@ SCRN:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 20
-		Speed: 216
+		Speed: 235
 		IdleSpeed: 135
-		IdleTurnSpeed: 15
+		IdleTurnSpeed: 25
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		CanHover: False
@@ -3784,7 +3784,7 @@ AURO:
 		Weaknesses: • Cannot attack Aircraft
 		Attributes: • Uses afterburner on approach to target
 	Valued:
-		Cost: 2200
+		Cost: 2300
 	Tooltip:
 		Name: Aurora
 	UpdatesPlayerStatistics:
@@ -3813,7 +3813,7 @@ AURO:
 		CruiseAltitude: 2560
 		InitialFacing: 192
 		TurnSpeed: 16
-		Speed: 180
+		Speed: 200
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		TakeoffSounds: cjetbana.aud
@@ -3961,7 +3961,7 @@ PMAK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 40000
+		HP: 44000
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 10c0
@@ -4102,7 +4102,7 @@ BEAG:
 		Weaknesses: • Weak vs Infantry, Buildings
 		Attributes: • Reduces range and vision of targets
 	Valued:
-		Cost: 1900
+		Cost: 2000
 	Tooltip:
 		Name: Black Eagle
 		GenericName: Aircraft
@@ -4364,13 +4364,13 @@ KAMV:
 		Strengths: • Strong vs Heavy Armor, Light Armor
 		Weaknesses: • Weak vs Infantry, Buildings\n• Cannot attack Aircraft\n• Has difficulty hitting moving targets
 	Valued:
-		Cost: 1800
+		Cost: 1900
 	Tooltip:
 		Name: Kamov
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 46000
+		HP: 48000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -4488,7 +4488,7 @@ SHDE:
 		Strengths: • Strong vs Heavy Armor, Light Armor, Defenses
 		Weaknesses: • Weak vs Infantry, Buildings\n• Cannot attack Aircraft
 	Valued:
-		Cost: 1700
+		Cost: 1800
 	Tooltip:
 		Name: Shade
 		GenericName: Aircraft
@@ -4620,7 +4620,7 @@ VERT:
 		Weaknesses: • Cannot attack Aircraft
 		Attributes: • Bomb disrupts cloaking in a large area
 	Valued:
-		Cost: 1900
+		Cost: 2000
 	Tooltip:
 		Name: Vertigo
 		GenericName: Aircraft
@@ -4652,7 +4652,7 @@ VERT:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 16
-		Speed: 157
+		Speed: 167
 		IdleSpeed: 135
 		RepulsionSpeed: 40
 		CanHover: False
@@ -4786,7 +4786,7 @@ MCOR:
 		TurnSpeed: 14
 		TakeoffSounds: dropup1.aud
 		LandingSounds: dropdwn1.aud
-		Speed: 80
+		Speed: 120
 	Health:
 		HP: 30000
 	RevealsShroud:
@@ -5055,10 +5055,10 @@ JACK:
 		PersistentTargeting: false
 		PauseOnCondition: empdisable || being-warped
 	DiveOnAttack:
-		Speed: 400
+		Speed: 450
 		DiveCondition: diving
 	AutoTarget:
-		InitialStance: HoldFire
+		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
 	LeavesTrails:
 		Offsets: -427,0,0

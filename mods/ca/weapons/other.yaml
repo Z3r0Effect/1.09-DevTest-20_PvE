@@ -1425,9 +1425,9 @@ EnlightenedEmp:
 		FadeInFrames: 0
 
 VenomLaser:
-	ReloadDelay: 30
+	ReloadDelay: 20
 	ValidTargets: Ground, Water
-	Range: 7c512
+	Range: 7c768
 	Report: venmfire1.aud, venmfire2.aud
 	Projectile: LaserZapCA
 		Width: 35
@@ -1439,7 +1439,7 @@ VenomLaser:
 		SecondaryBeamZOffset: 511
 		SecondaryBeamColor: FF000040
 	Warhead@1Dam: SpreadDamage
-		Spread: 42
+		Spread: 128
 		Damage: 5500
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, AirToGround
 		Versus:
@@ -1447,7 +1447,7 @@ VenomLaser:
 			Wood: 50
 			Concrete: 40
 			Light: 95
-			Heavy: 55
+			Heavy: 65
 			Brick: 50
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch-NoFlame
@@ -1456,7 +1456,7 @@ VenomLaser:
 VenomLaser.UPG:
 	Inherits: VenomLaser
 	Report: venmfireupg1.aud, venmfireupg1.aud
-	Range: 7c512
+	Range: 8c0
 	Projectile: LaserZapCA
 		Duration: 10
 		SecondaryBeamWidth: 75
@@ -1465,7 +1465,7 @@ VenomLaser.UPG:
 		Spread: 42
 		Damage: 6325
 		Versus:
-			Heavy: 60
+			Heavy: 75
 
 VenomLaserAA:
 	Inherits: VenomLaser
@@ -3017,7 +3017,7 @@ JDAM:
 		Acceleration: 0, 0, 0
 		Shadow: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c0
+		Spread: 2c768
 		Damage: 5200
 		Falloff: 1000, 448, 192, 50, 0
 		ValidTargets: Ground, Water
@@ -3029,7 +3029,7 @@ JDAM:
 			Concrete: 80
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, TankBuster, AirToGround
 	Warhead@2Dam: SpreadDamage
-		Spread: 448
+		Spread: 3c0
 		Damage: 10000
 		Falloff: 1000, 200, 45, 20, 0
 		ValidTargets: Ground, Water
@@ -3501,7 +3501,7 @@ AvatarLaser.Adv:
 		Explosions: small_explosion, small_explosion_alt1, small_explosion_alt2, small_explosion_alt3
 
 ShadeEmp:
-	ReloadDelay: 100
+	ReloadDelay: 75
 	Range: 8c0
 	Report: enli-empfire.aud
 	Projectile: Bullet
@@ -3614,7 +3614,7 @@ PeacemakerBombs:
 		Acceleration: 0, 0, 0
 		Shadow: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c0
+		Spread: 1c256
 		Damage: 24000
 		Versus:
 			None: 10
@@ -3624,7 +3624,7 @@ PeacemakerBombs:
 			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, TankBuster, AirToGround, FlakVestMitigated
 	Warhead@2Dam: SpreadDamage
-		Spread: 512
+		Spread: 2c0
 		Damage: 24000
 		Versus:
 			None: 40
@@ -3694,7 +3694,7 @@ FloatingDiscLaser:
 			Heavy: 75
 			Concrete: 75
 			Brick: 25
-			Aircraft: 35
+			Aircraft: 55
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, AirToGround
 
 ^FloatingDiscDrainer:

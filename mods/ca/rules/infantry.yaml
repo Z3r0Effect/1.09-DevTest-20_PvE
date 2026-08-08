@@ -947,6 +947,7 @@ E7:
 		TargetTypes: ChaosImmune
 	Targetable@ReaperSnareImmune:
 		TargetTypes: ReaperSnareImmune
+	-TakeCover:
 	-Crushable:
 	TargetSpecificOrderVoice:
 		Orders: Attack, ForceAttack
@@ -2108,6 +2109,7 @@ RMBO:
 		TargetTypes: ChaosImmune
 	Targetable@ReaperSnareImmune:
 		TargetTypes: ReaperSnareImmune
+	-TakeCover:
 	-Crushable:
 	TargetSpecificOrderVoice:
 		Orders: Attack, ForceAttack
@@ -2302,6 +2304,7 @@ BORI:
 	Mobile:
 		Speed: 65
 		Voice: Move
+	-TakeCover:
 	-Crushable:
 	Guard:
 		Voice: Move
@@ -4154,6 +4157,7 @@ YURI:
 		Voice: Move
 	Voiced:
 		VoiceSet: YuriVoice
+	-TakeCover:
 	-Crushable:
 	WithInfantryBody:
 		IdleSequences: idle
@@ -4341,6 +4345,7 @@ SEAL:
 	WithProductionIconOverlay:
 		Types: Veterancy
 		Prerequisites: barracks.upgraded
+	-TakeCover:
 	IgnoresDisguise:
 	Crushable:
 		CrushClasses: heavyinfantry

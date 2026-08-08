@@ -243,7 +243,7 @@ ChainGun:
 
 GAU8:
 	Inherits: ^HeavyMG
-	Range: 7c0
+	Range: 7c768
 	ReloadDelay: 80
 	BurstDelays: 1
 	Burst: 15
@@ -255,8 +255,8 @@ GAU8:
 	Projectile: Bullet
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Spread: 341
-		Damage: 2700
+		Spread: 1c256
+		Damage: 3000
 		Versus:
 			None: 200
 			Wood: 0
@@ -969,7 +969,7 @@ HeliGunAG:
 	Inherits: ^HeavyMG
 	Report: mgbtr1.aud, mgbtr2.aud, mgbtr3.aud
 	ReloadDelay: 14
-	Range: 6c512
+	Range: 7c256
 	MinRange: 0c768
 	Projectile: Bullet
 		Blockable: false
@@ -978,8 +978,8 @@ HeliGunAG:
 		Versus:
 			None: 144
 			Wood: 35
-			Light: 54
-			Heavy: 25
+			Light: 70
+			Heavy: 75
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath, AirToGround
 
 HeliGunAA:
@@ -987,7 +987,7 @@ HeliGunAA:
 	ReloadDelay: 14
 	Burst: 1
 	Report: mgbtr1.aud, mgbtr2.aud, mgbtr3.aud
-	Range: 6c0
+	Range: 6c768
 	Warhead@1Dam: SpreadDamage
 		Damage: 2000
 		Range: 0, 0c64, 0c256, 1c768
