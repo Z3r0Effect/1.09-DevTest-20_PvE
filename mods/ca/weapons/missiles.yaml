@@ -197,7 +197,7 @@ SeismicMissile:
 		Speed: 250
 		LaunchAngle: 0
 	Warhead@1Dam: SpreadDamage
-		Spread: 2c768
+		Spread: 1c512
 		Damage: 1850
 		Falloff: 1000, 368, 135, 75, 0
 		ValidTargets: Ground, Water
@@ -449,7 +449,7 @@ HellfireAG.Harrier:
 		HorizontalRateOfTurn: 40
 		VerticalRateOfTurn: 30
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c768
+		Spread: 640
 		Damage: 2000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Trees
@@ -1940,15 +1940,15 @@ Rah66AG:
 		ContrailStartColorAlpha: 170
 		ContrailStartWidth: 0c40
 	Warhead@1Dam: SpreadDamage
-		Spread: 768
-		Damage: 1000
+		Spread: 640
+		Damage: 920
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 85
 			Wood: 55
 			Concrete: 30
 			Light: 55
-			Heavy: 65
+			Heavy: 45
 			Brick: 5
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigatedMinor, AirToGround
 	Warhead@3Eff: CreateEffect
@@ -2020,7 +2020,7 @@ ScrinTorp:
 	Burst: 3
 	BurstDelays: 4
 	Report: scrin5b.aud
-	Range: 8c0
+	Range: 8c128
 	TargetActorCenter: true
 	Projectile: Bullet
 		Blockable: false
@@ -2030,9 +2030,9 @@ ScrinTorp:
 		Speed: 682
 		LaunchAngle: 10
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c256
-		Damage: 1100
-		Falloff: 1000, 448, 192, 64, 26, 10, 0
+		Spread: 768
+		Damage: 800
+		Falloff: 1000, 248, 192, 64, 26, 10, 0
 		Versus:
 			None: 15
 			Wood: 35
@@ -2240,9 +2240,9 @@ Rocket.P51.R:
 		ContrailLength: 8
 		ContrailStartWidth: 48
 	Warhead@1Dam: SpreadDamage
-		Spread: 768
+		Spread: 1c512
 		Damage: 850
-		Falloff: 1000, 448, 192, 50, 18, 7, 0
+		Falloff: 1000, 500, 192, 60, 28, 17, 0
 		Versus:
 			None: 85
 			Wood: 25
@@ -2269,7 +2269,7 @@ Rocket.P51.L:
 	FirstBurstTargetOffset: -1024,613,0
 
 Hydra.R:
-	ReloadDelay: 80
+	ReloadDelay: 60
 	Range: 7c768
 	MinRange: 0c256
 	Report: iggiat2a.aud, iggiat2b.aud
@@ -2291,9 +2291,9 @@ Hydra.R:
 		ContrailLength: 10
 		ContrailStartWidth: 0c42
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c768
-		Damage: 675
-		Falloff: 1000, 648, 292, 150, 78, 25, 0
+		Spread: 1c128
+		Damage: 325
+		Falloff: 1000, 500, 220, 100, 70, 45, 0
 		Versus:
 			None: 100
 			Wood: 8
@@ -2328,9 +2328,9 @@ BlackEagleMissiles:
 		Image: MISSILE
 	Warhead@1Dam: SpreadDamage
 		Damage: 24000
-		Spread: 1c768
+		Spread: 1c256
 		Versus:
-			None: 30
+			None: 40
 			Concrete: 75
 	Warhead@VeiledCondition: GrantExternalConditionCA
 		Range: 4c0

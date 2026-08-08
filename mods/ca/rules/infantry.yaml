@@ -2218,18 +2218,18 @@ SNIP:
 		MuzzleSequence: garrison-muzzle
 		RequiresCondition: apb-upgrade
 	Mobile:
-		Speed: 46
+		Speed: 50
 		Voice: Move
 	Cloak@NORMAL:
-		InitialDelay: 150
-		CloakDelay: 150
+		InitialDelay: 75
+		CloakDelay: 75
 		CloakedCondition: hidden
 		CloakSound: gstealon.aud
 		UncloakSound: gstealof.aud
 		DetectionTypes: Cloak
 		RequiresCondition: !cloak-force-disabled && !being-warped
 		PauseOnCondition: invisibility
-		UncloakOn: Move, Unload, Infiltrate, Demolish, Dock, Attack
+		UncloakOn: Unload, Infiltrate, Demolish, Dock, Attack
 	Cloak@CRATE-CLOAK:
 		RequiresCondition: crate-cloak && !(cloak-force-disabled || invisibility || hidden)
 	GrantConditionOnPrerequisite@APB:

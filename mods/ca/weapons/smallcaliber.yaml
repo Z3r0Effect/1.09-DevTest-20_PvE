@@ -255,8 +255,8 @@ GAU8:
 	Projectile: Bullet
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c256
-		Damage: 3000
+		Spread: 768
+		Damage: 2000
 		Versus:
 			None: 200
 			Wood: 0
@@ -578,7 +578,7 @@ M60mgJJAA:
 
 M60mgNHAW:
 	Inherits: M60mg
-	Range: 7c0
+	Range: 8c0
 	Projectile: Bullet
 		Blockable: false
 	-StartBurstReport:
@@ -586,6 +586,7 @@ M60mgNHAW:
 	Burst: 3
 	BurstDelays: 5
 	Warhead@1Dam: SpreadDamage
+		Damage: 1600
 		Versus:
 			None: 165
 			Light: 50
