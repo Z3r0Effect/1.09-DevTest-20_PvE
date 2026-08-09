@@ -969,7 +969,7 @@ SealIFVGun:
 
 ShadowOperativeGun:
 	Inherits: ^HeavyMG
-	Range: 7c0
+	Range: 7c768
 	ReloadDelay: 25
 	Burst: 2
 	BurstDelays: 3

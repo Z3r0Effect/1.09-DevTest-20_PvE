@@ -247,7 +247,7 @@
 
 ^InfiltratorStolenTech:
 	ProductionCostMultiplier@LegionBonus:
-		Multiplier: 85
+		Multiplier: 80
 		Prerequisites: player.legion
 
 ^PlayerHandicaps:

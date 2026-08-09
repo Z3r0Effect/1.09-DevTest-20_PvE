@@ -577,7 +577,7 @@ U3.squad:
 		Weaknesses: • Weak vs Infantry, Light Armor\n• Weak anti-infantry weapon when not deployed
 		Attributes: • Deploys for personal anti-tank fortification\n• Uncrushable when deployed
 	Valued:
-		Cost: 4000
+		Cost: 3000
 	RenderSprites:
 		Image: squad.airborne
 	ProduceActorPowerCA:
@@ -2428,7 +2428,7 @@ SAB:
 	Health:
 		HP: 60000
 	Mobile:
-		Speed: 60
+		Speed: 65
 		Voice: Move
 	Armament:
 		Weapon: SilencedPPK
@@ -2690,7 +2690,7 @@ ACOL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 14500
+		HP: 17500
 	Mobile:
 		Speed: 62
 		Voice: Move
@@ -3724,7 +3724,7 @@ SHAD:
 		MinIdleDelay: 80
 		MaxIdleDelay: 250
 	Health:
-		HP: 7500
+		HP: 9500
 	Mobile:
 		Speed: 72
 		Voice: Move
@@ -3757,7 +3757,7 @@ SHAD:
 		InitialStanceAI: AttackAnything
 	Cloak:
 		InitialDelay: 1
-		CloakDelay: 70
+		CloakDelay: 50
 		CloakedCondition: hidden
 		IsPlayerPalette: true
 		DetectionTypes: Cloak

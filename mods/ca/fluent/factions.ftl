@@ -266,7 +266,7 @@ faction-marked =
 
     Bonuses:
       • Avatar, Cyborg Elite, Enlightened & Cyborg Reaper (+1 veterancy)
-      • Temple Prime (10% discount)
+      • Temple Prime (25% discount)
 
 faction-legion =
     .name = Legion
@@ -284,7 +284,7 @@ faction-legion =
       • Intensified Microwaves
 
     Bonuses:
-      • Stolen Technology Units (10% discount)
+      • Stolen Technology Units (20% discount)
       • Hack Satellite (-33% cooldown)
 
 faction-shadow =
@@ -302,7 +302,7 @@ faction-shadow =
       • Heavy Stealth Tank
 
     Bonuses:
-      • Stealth units move 10% faster while cloaked
+      • Stealth units move 15% faster while cloaked
       • Stealth Generator (+4 passive range)
 
 faction-reaper =
@@ -336,8 +336,8 @@ faction-traveler =
       • Advanced Articulators
 
     Bonuses:
-      • Fast Walkers (+15% speed)
-      • Colony Ship (+15% speed)
+      • Fast Walkers (+25% speed)
+      • Colony Ship (+25% speed)
 
 faction-harbinger =
     .name = Harbinger-31

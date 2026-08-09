@@ -1279,10 +1279,10 @@ XOCoilGun:
 
 PortaLaser:
 	Inherits: Laser
-	ReloadDelay: 40
+	ReloadDelay: 30
 	Burst: 2
 	BurstDelays: 3
-	Range: 7c768
+	Range: 8c0
 	-Report:
 	StartBurstReport: lasgun.aud, lasgun2.aud
 	Projectile: LaserZapCA
@@ -1296,16 +1296,16 @@ PortaLaser:
 		Versus:
 			None: 155
 			Wood: 55
-			Heavy: 50
+			Heavy: 65
 			Concrete: 50
 
 PortaLaser.Templar:
 	Inherits: PortaLaser
-	Range: 8c512
+	Range: 8c768
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			None: 175
-			Heavy: 65
+			Heavy: 75
 
 PortaLaser.Templar.UPG:
 	Inherits: PortaLaser.Templar
@@ -1316,7 +1316,7 @@ PortaLaser.Templar.UPG:
 		SecondaryBeamWidth: 75
 		SecondaryBeamColor: FF00FF60
 	Warhead@1Dam: SpreadDamage
-		Damage: 2200
+		Damage: 2500
 
 IFVLaser:
 	Inherits: PortaLaser
@@ -2265,8 +2265,8 @@ OrcaBombBuilding:
 MicrowaveZap:
 	ValidTargets: Ground, Water
 	TargetActorCenter: true
-	ReloadDelay: 140
-	Range: 8c0
+	ReloadDelay: 100
+	Range: 8c512
 	Report: corefir1.aud
 	Projectile: Railgun
 		Duration: 5
@@ -3150,9 +3150,9 @@ Lasher:
 	ValidTargets: Ground, Water
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-		Range: 0, 512, 1c0
+		Range: 0, 1c128, 1c512
 		Falloff: 100, 100, 0
-		Damage: 600
+		Damage: 950
 		ValidTargets: Infantry
 		DamageTypes: BulletDeath, FlakVestMitigatedMinor
 		ValidRelationships: Enemy, Neutral

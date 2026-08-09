@@ -197,7 +197,7 @@ SeismicMissile:
 		Speed: 250
 		LaunchAngle: 0
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c512
+		Spread: 1c256
 		Damage: 1850
 		Falloff: 1000, 368, 135, 75, 0
 		ValidTargets: Ground, Water
@@ -301,7 +301,7 @@ Dragon.CYB.TibCore:
 
 DragonGI:
 	Inherits: Dragon
-	Range: 7c768
+	Range: 8c128
 	Report: iggiat2a.aud, iggiat2b.aud
 	ReloadDelay: 40
 	Projectile: MissileCA
@@ -311,7 +311,7 @@ DragonGI:
 
 DragonGI.CRYO:
 	Inherits: Dragon.CRYO
-	Range: 7c768
+	Range: 8c128
 	Report: iggiat2a.aud, iggiat2b.aud
 	ReloadDelay: 40
 	Projectile: MissileCA
@@ -718,13 +718,13 @@ RedEyeGI:
 	Inherits: RedEye
 	Report: iggiat2a.aud, iggiat2b.aud
 	ReloadDelay: 40
-	Range: 8c256
+	Range: 9c0
 
 RedEyeGI.CRYO:
 	Inherits: RedEye.CRYO
 	Report: iggiat2a.aud, iggiat2b.aud
 	ReloadDelay: 40
-	Range: 8c256
+	Range: 9c0
 
 Stinger:
 	Inherits: ^AntiGroundMissile
@@ -1226,7 +1226,7 @@ GradRocketsWide.UPG:
 	Burst: 5
 
 HonestJohn:
-	ReloadDelay: 100
+	ReloadDelay: 95
 	Burst: 2
 	BurstDelays: 50
 	Range: 12c0
@@ -1704,7 +1704,8 @@ IFVRocketsAAE.TibCore:
 
 StnkMissile:
 	Inherits: ^AntiGroundMissile
-	ReloadDelay: 70
+	Range: 7c0
+	ReloadDelay: 65
 	Report: rocket1.aud
 	Burst: 2
 	BurstDelays: 4
@@ -1759,7 +1760,7 @@ StnkMissileAA:
 
 StnkMissile.TibCore:
 	Inherits: StnkMissile
-	ReloadDelay: 75
+	ReloadDelay: 70
 	Burst: 4
 	BurstDelays: 4, 7, 4
 	Range: 8c0
@@ -1823,7 +1824,7 @@ StnkMissileAA.TibCore:
 
 HstkMissile:
 	Inherits: StnkMissile
-	ReloadDelay: 70
+	ReloadDelay: 65
 	Burst: 4
 	BurstDelays: 4, 7, 4
 	Projectile: MissileCA

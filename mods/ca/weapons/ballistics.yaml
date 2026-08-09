@@ -76,7 +76,7 @@
 
 76mm:
 	Inherits: ^Cannon
-	Range: 6c256
+	Range: 6c768
 	Report: smallcan3.aud
 	Projectile: Bullet
 		LaunchAngle: 62

@@ -628,7 +628,7 @@ P51:
 		CruiseAltitude: 2560
 		InitialFacing: 192
 		TurnSpeed: 24
-		Speed: 270
+		Speed: 285
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 	WithMuzzleOverlay:

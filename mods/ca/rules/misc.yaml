@@ -812,8 +812,8 @@ powerproxy.airborne:
 		Description: A Heavy Transport Plane drops a squad of Guardian GIs\nanywhere on the map.
 		OneShot: true
 		Stacks: 1
-		StackActivationInterval: 1500
-		DropItems: U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3
+		StackActivationInterval: 1125
+		DropItems: U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3,U3
 		SelectTargetSpeechNotification: SelectTarget
 		EndChargeSpeechNotification: Reinforce
 		LaunchSpeechNotification: ReinforcementsArrived
@@ -830,7 +830,7 @@ powerproxy.airborne:
 		DirectionArrowAnimation: paradirection
 		SupportPowerPaletteOrder: 70
 		PrerequisiteDropItems:
-			airborne.upgrade: U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2
+			airborne.upgrade: U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2, U3R2
 	Buildable:
 		Queue: PowerProxy
 	Tooltip:
@@ -847,7 +847,7 @@ powerproxy.airborne.tank:
 		Description: A Heavy Transport Plane drops a pair of Grizzly Tanks\nanywhere on the map.
 		OneShot: true
 		Stacks: 1
-		StackActivationInterval: 1500
+		StackActivationInterval: 1125
 		DropItems: GTNK,GTNK,GTNK,GTNK,GTNK
 		SelectTargetSpeechNotification: SelectTarget
 		EndChargeSpeechNotification: Reinforce

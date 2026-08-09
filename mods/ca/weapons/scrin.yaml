@@ -266,6 +266,7 @@ IntruderDiscs:
 
 MarauderDiscs:
 	Inherits: IntruderDiscs
+	Range: 7c768
 	Burst: 2
 	BurstDelays: 5
 	Report: mrdr-fire1.aud, mrdr-fire2.aud
@@ -391,7 +392,7 @@ DevastatorTorpedo:
 
 InterloperLaser:
 	Inherits: ^ScrinLaser
-	Range: 5c768
+	Range: 6c512
 	ReloadDelay: 40
 	Burst: 2
 	BurstDelays: 5
@@ -407,6 +408,7 @@ InterloperLaser:
 
 InterloperWave:
 	Inherits: InterloperLaser
+	Range: 6c768
 	Report: mrdr-fire1.aud, mrdr-fire2.aud
 	-Projectile:
 	Projectile: BulletCA
@@ -415,7 +417,7 @@ InterloperWave:
 		Palette: scrin
 	Warhead@1Dam: SpreadDamage
 		Damage: 1800
-		Spread: 426
+		Spread: 512
 	Warhead@3Eff: CreateEffect
 		Explosions: large_explosion
 		ImpactSounds: seeker-hit1.aud, seeker-hit2.aud
@@ -739,7 +741,7 @@ RuinerCannonCharged:
 
 TripodLaser:
 	Inherits: ^ScrinPlasmaBeam
-	Range: 7c0
+	Range: 7c256
 	Report: tripod-fire1.aud, tripod-fire2.aud, tripod-fire3.aud
 	ReloadDelay: 65
 	Projectile: PlasmaBeam
@@ -763,7 +765,7 @@ TripodLaser:
 
 ReaperLaser:
 	Inherits: TripodLaser
-	Range: 7c256
+	Range: 7c768
 	ReloadDelay: 55
 	Report: rtpd-fire1.aud, rtpd-fire2.aud, rtpd-fire3.aud
 	Projectile: PlasmaBeam
@@ -777,7 +779,7 @@ ReaperLaser:
 
 ReaperLaserCharged:
 	Inherits: ReaperLaser
-	Range: 7c512
+	Range: 8c0
 	Report: rtpd-cfire1.aud, rtpd-cfire2.aud
 	Projectile: PlasmaBeam
 		Colors: 33880005, 00880005
@@ -810,7 +812,7 @@ ReaperLaserChargedReversed:
 		FollowingOffset: 50,100,0
 
 StormriderZap:
-	Range: 7c0
+	Range: 8c0
 	Report: stormrider-fire1.aud, stormrider-fire2.aud, stormrider-fire3.aud
 	ReloadDelay: 50
 	Burst: 5
@@ -875,7 +877,7 @@ StormRiderZapAA:
 TormentorZap:
 	ReloadDelay: 50
 	ValidTargets: Ground, Water
-	Range: 8c0
+	Range: 8c512
 	Report: torm-fire1.aud, torm-fire2.aud
 	Projectile: LaserZapCA
 		Width: 70
@@ -906,7 +908,7 @@ TormentorZap:
 
 TormentorZapAA:
 	Inherits: TormentorZap
-	Range: 7c0
+	Range: 9c0
 	ValidTargets: Air, AirSmall
 	Warhead@1Dam: SpreadDamage
 		Damage: 7200
@@ -917,7 +919,7 @@ EnervatorBolts:
 	Inherits: ^AntiGroundMissile
 	Report: enervator-fire1.aud
 	ReloadDelay: 50
-	Range: 7c0
+	Range: 8c128
 	TargetActorCenter: true
 	Projectile: MissileCA
 		Speed: 341
@@ -957,7 +959,7 @@ EnervatorBolts:
 
 EnervatorBoltsAA:
 	Inherits: EnervatorBolts
-	Range: 7c0
+	Range: 9c0
 	ValidTargets: Air, AirSmall
 	Projectile: MissileCA
 		CloseEnough: 341
@@ -1104,6 +1106,7 @@ StormColumnZap:
 		DistortionAnimation: 96
 		ZOffset: 512
 	Warhead@1Dam: SpreadDamage
+		Spread: 1c128
 		Damage: 2400
 		Versus:
 			None: 55
@@ -1177,9 +1180,9 @@ StormcrawlerZap:
 	ReloadDelay: 50
 	Burst: 6
 	BurstDelays: 3
-	Range: 7c512
+	Range: 10c512
 	Warhead@1Dam: SpreadDamage
-		Spread: 42
+		Spread: 64
 		Damage: 2800
 		Versus:
 			None: 15
@@ -1771,7 +1774,7 @@ IonSurge:
 	Projectile: InstantHit
 	Warhead@surge: GrantExternalConditionCA
 		Range: 7c0
-		Duration: 350
+		Duration: 375
 		Condition: ionsurge
 		ValidTargets: IonSurgable
 		ValidRelationships: Ally

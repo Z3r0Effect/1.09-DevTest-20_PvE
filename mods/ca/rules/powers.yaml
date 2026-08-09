@@ -1468,13 +1468,13 @@
 		CircleSequence: circles
 	ParatroopersPowerCA@shadowairdrop:
 		OrderName: shadowairdrop
-		SquadSize: 3
+		SquadSize: 2
 		UnitType: c17
 		Icon: airdropicon
 		ChargeInterval: 10500
 		Name: Air Drop
 		Description: Dispatches cargo planes to air drop stealth tanks at the target location.
-		DropItems: stnk.nod, stnk.nod
+		DropItems: stnk.nod, stnk.nod, stnk.nod, stnk.nod
 		SquadOffset: -1024, 1024, 0
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: Select target.
@@ -1496,7 +1496,7 @@
 		Prerequisites: vehicles.shadow
 		SupportPowerPaletteOrder: 60
 		PrerequisiteDropItems:
-			hstk.upgrade: hstk, hstk
+			hstk.upgrade: hstk, hstk, hstk, hstk
 
 ^SatHackPower:
 	SpawnActorPowerCA@sathack:
@@ -1576,13 +1576,13 @@
 	CashHackPower@Legion:
 		OrderName: cashhack
 		Icon: chack
-		ChargeInterval: 3000
+		ChargeInterval: 5250
 		Minimum: 2000
 		Maximum: 8000
 		Prerequisites: ~radar.legion
 		AllowMultiple: false
 		Name: Cash Hack
-		Description: Steal up to $5000 credits from a targeted enemy Refinery.
+		Description: Steal up to $8000 credits from a targeted enemy Refinery.
 		OnFireSound: scashhac.aud
 		Notification: CreditsStolen
 		SelectTargetSpeechNotification: SelectTarget
@@ -1600,9 +1600,9 @@
 		OrderName: shadowteam
 		Prerequisites: ~radar.shadow
 		Icon: shadteam
-		ChargeInterval: 4750
+		ChargeInterval: 4500
 		Name: Shadow Team
-		Description: Calls for a Shadow Team; three stealth infantry that arrive via glider armed with grenades and a machine pistol.\n\nOperatives can be ordered to land via the deploy command.
+		Description: Calls for a Shadow Team; five stealth infantry that arrive via glider armed with grenades and a machine pistol.\n\nOperatives can be ordered to land via the deploy command.
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: Select target.
 		LaunchSpeechNotification: ReinforcementsArrived

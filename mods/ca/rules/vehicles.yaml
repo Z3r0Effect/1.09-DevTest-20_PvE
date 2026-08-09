@@ -489,7 +489,7 @@ NUKC.Preview:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 47000
+		HP: 48500
 	Mobile:
 		Speed: 72
 	RevealsShroud:
@@ -593,7 +593,7 @@ GTNK.squad:
 		Strengths: • Strong vs Heavy Armor, Light Armor
 		Weaknesses: • Weak vs Infantry, Defenses\n• Cannot attack Aircraft
 	Valued:
-		Cost: 4000
+		Cost: 3500
 	RenderSprites:
 		Image: squad.airborne.tank
 	ProduceActorPowerCA:
@@ -2026,7 +2026,7 @@ SAPC:
 		Condition: player-shadow
 		Prerequisites: player.shadow
 	SpeedMultiplier@ShadowCloak:
-		Modifier: 112
+		Modifier: 115
 		RequiresCondition: player-shadow && hidden
 	AutoTarget:
 		InitialStance: HoldFire
@@ -2748,7 +2748,7 @@ MSG:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 22000
+		HP: 25000
 	Armor:
 		Type: Light
 	Mobile:
@@ -2789,19 +2789,14 @@ MSG:
 	WithRangeCircleCA@MSG:
 		Type: StealthGenerator
 		RequiresCondition: deployed
-		Range: 8c512
+		Range: 10c512
 		Color: 7681a0
 	ProximityExternalCondition@MSG:
-		Range: 8c512
+		Range: 10c512
 		Condition: sgencloak
 		RequiresCondition: deployed && !cloak-force-disabled
 		MaximumVerticalOffset: 512
 		AffectsParent: true
-	ProximityExternalCondition@MSG2:
-		Range: 4c512
-		Condition: sgencloak
-		RequiresCondition: deployed && !cloak-force-disabled
-		MaximumVerticalOffset: 3072
 	Encyclopedia:
 		Category: Nod/Vehicles
 	EncyclopediaExtras:
@@ -3764,7 +3759,7 @@ APC2:
 			bori: loaded-cmdo
 			yuri: loaded-cmdo
 			mast: loaded-cmdo
-		InitialUnits: N1,N1,N1,N3,N4
+		InitialUnits: N1,N1,N1,N3,N3
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud
@@ -5432,7 +5427,7 @@ HSTK:
 		Condition: player-shadow
 		Prerequisites: player.shadow
 	SpeedMultiplier@ShadowCloak:
-		Modifier: 110
+		Modifier: 115
 		RequiresCondition: player-shadow && hidden
 	Armament@PRIMARY:
 		Weapon: HstkMissile
@@ -8029,7 +8024,7 @@ RTNK:
 		Weaknesses: • Weak vs Defenses, Infantry\n• Cannot attack Aircraft
 		Attributes: • Disguised when not moving\n• Deals additional damage firing from disguised state
 	Valued:
-		Cost: 750
+		Cost: 800
 	Tooltip:
 		Name: Mirage Tank
 	Mirage:
@@ -8047,7 +8042,7 @@ RTNK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 42000
+		HP: 50000
 	Mobile:
 		Speed: 105
 		Voice: Move
@@ -8348,7 +8343,7 @@ MSAR:
 		Weaknesses: • Unarmed
 		Attributes: • Detects cloaked units (when deployed)\n• Increases nearby ground unit vision range (when deployed)\n• Special Ability: Activate Sensor Array
 	Health:
-		HP: 30000
+		HP: 45000
 	Armor:
 		Type: Light
 	Mobile:
@@ -8397,16 +8392,16 @@ MSAR:
 		CargoCondition: passenger
 	ProximityExternalCondition@Bino:
 		Condition: bino
-		Range: 12c0
+		Range: 24c0
 		EnableSound: dsaping1.aud
 		AffectsParent: False
 		RequiresCondition: deployed && !(empdisable || being-warped) && !passenger
 	RangedGpsRadarProvider:
-		Range: 28c0
+		Range: 36c0
 		TargetTypes: Vehicle, Air, Structure
 		RequiresCondition: deployed && !(empdisable || being-warped)
 	WithDetectionCircle:
-		Range: 28c0
+		Range: 36c0
 		RequiresCondition: deployed && !(empdisable || being-warped)
 		TrailCount: 3
 	ExternalCondition@JAMMED:
@@ -8619,7 +8614,7 @@ WTNK:
 		Name: Microwave Tank
 		GenericName: Tank
 	Health:
-		HP: 32000
+		HP: 38000
 	Armor:
 		Type: Light
 	Mobile:
@@ -9530,7 +9525,7 @@ BASI:
 		Condition: player-shadow
 		Prerequisites: player.shadow
 	SpeedMultiplier@ShadowCloak:
-		Modifier: 110
+		Modifier: 115
 		RequiresCondition: player-shadow && hidden
 	WithColoredSelectionBox@INVIS:
 		RequiresCondition: invisibility || hidden
@@ -10665,8 +10660,8 @@ MOLE:
 	Targetable@ChaosImmune:
 		TargetTypes: ChaosImmune
 	Cargo:
-		MaxWeight: 8
-		InitialUnits: acol, acol, acol, n3, n3, n3, n4, n4
+		MaxWeight: 12
+		InitialUnits: acol, acol, acol, acol, acol, n3, n3, n3, n3, n3, n4, n4
 		BeforeUnloadDelay: 75
 	WithCargoSounds:
 		ExitSounds: gexit1a.aud
@@ -10699,7 +10694,7 @@ MOLE.UPG:
 	RenderSprites:
 		Image: mole
 	Cargo:
-		InitialUnits: tplr, tplr, tplr, n3c, n3c, n5
+		InitialUnits: tplr, tplr, tplr, tplr, tplr, n3c, n3c, n3c, n3c, n3c, n5, n5
 
 AVTR:
 	Inherits: ^TankTD

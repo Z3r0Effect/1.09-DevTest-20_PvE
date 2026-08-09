@@ -64,7 +64,7 @@ VEHICLES.SCRIN:
 		Armaments: primary-charged
 	ReloadAmmoPool@RESCONV:
 		Count: 1
-		Delay: 25
+		Delay: 20
 		RequiresCondition: charging-on-resource
 	WithAmmoPipsDecoration@RESCONV:
 		PipCount: 5
@@ -212,7 +212,7 @@ VEHICLES.SCRIN:
 		ValidRelationships: Ally, Enemy, Neutral
 	GrantStackingCondition@IONSTORM:
 		Condition: storm-level
-		DelayPerInstance: 120
+		DelayPerInstance: 75
 		MaximumInstances: 3
 		RevokeDelay: 200
 		FirstStackImmediate: true
@@ -221,7 +221,7 @@ VEHICLES.SCRIN:
 		Modifier: 105
 		RequiresCondition: storm-level == 1
 	ReloadDelayMultiplier@IONSTORM1:
-		Modifier: 91
+		Modifier: 90
 		RequiresCondition: storm-level == 1
 	DamageMultiplier@IONSTORM1:
 		Modifier: 95
@@ -230,7 +230,7 @@ VEHICLES.SCRIN:
 		Modifier: 110
 		RequiresCondition: storm-level == 2
 	ReloadDelayMultiplier@IONSTORM2:
-		Modifier: 83
+		Modifier: 80
 		RequiresCondition: storm-level == 2
 	DamageMultiplier@IONSTORM2:
 		Modifier: 90
@@ -239,7 +239,7 @@ VEHICLES.SCRIN:
 		Modifier: 115
 		RequiresCondition: storm-level == 3
 	ReloadDelayMultiplier@IONSTORM3:
-		Modifier: 77
+		Modifier: 75
 		RequiresCondition: storm-level == 3
 	DamageMultiplier@IONSTORM3:
 		Modifier: 85
@@ -437,7 +437,7 @@ VEHICLES.SCRIN:
 		Prerequisites: advart.upgrade
 	SpeedMultiplier@ADVART:
 		RequiresCondition: advart-upgrade
-		Modifier: 115
+		Modifier: 120
 	-DamagedByTintedCells@RADSTRONGHAZMAT:
 	-DamagedByTintedCells@RADSTRONGHAZMATSOVIET:
 	-DamagedByTintedCells@RADMEDHAZMAT:
@@ -700,7 +700,7 @@ MRDR:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 14500
+		HP: 16000
 	RevealsShroud:
 		Range: 5c0
 	Armament@PRIMARY:
@@ -719,8 +719,8 @@ MRDR:
 		Types: Veterancy
 		Prerequisites: barracks.upgraded
 	PortableChronoCA:
-		ChargeDelay: 500
-		MaxDistance: 16
+		ChargeDelay: 150
+		MaxDistance: 20
 		ChronoshiftSound: scrinport.aud
 		RequiresCondition: blink-upgrade
 		TeleportCondition: blink
@@ -1606,7 +1606,7 @@ GUNW:
 		Factions: traveler
 	SpeedMultiplier@TRAVELERSPEED:
 		RequiresCondition: travelerspeed
-		Modifier: 120
+		Modifier: 125
 	ReplacedInQueue:
 		Actors: shrw
 	Upgradeable@SHRW:
@@ -1641,8 +1641,12 @@ SHRW:
 		LocalOffset: 690,92,0, 690,-92,0
 	Selectable:
 		Class: gunw
-	-GrantConditionOnFaction@TRAVELERSPEED:
-	-SpeedMultiplier@TRAVELERSPEED:
+	GrantConditionOnFaction@TRAVELERSPEED:
+		Condition: travelerspeed
+		Factions: traveler
+	SpeedMultiplier@TRAVELERSPEED:
+		RequiresCondition: travelerspeed
+		Modifier: 125
 	-ReplacedInQueue:
 	-Upgradeable@SHRW:
 	EncyclopediaExtras:
@@ -1835,7 +1839,7 @@ INTL:
 	Inherits@COMMANDOSKULL: ^CommandoSkull
 	Inherits@SHIELDS: ^ScrinShields
 	Valued:
-		Cost: 800
+		Cost: 1000
 	Tooltip:
 		Name: Interloper
 	UpdatesPlayerStatistics:
@@ -1897,6 +1901,7 @@ INTL:
 			bori: loaded-cmdo
 			yuri: loaded-cmdo
 			mast: loaded-cmdo
+		InitialUnits: S1,S1,S2,S3,S3
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud
@@ -2048,7 +2053,7 @@ CORR:
 		Factions: traveler
 	SpeedMultiplier@TRAVELERSPEED:
 		RequiresCondition: travelerspeed
-		Modifier: 120
+		Modifier: 125
 	AmmoPool@RESCONV:
 		Ammo: 90
 	ReloadAmmoPool@RESCONV:
@@ -2695,7 +2700,7 @@ TPOD:
 	Voiced:
 		VoiceSet: TripodVoice
 	Valued:
-		Cost: 1800
+		Cost: 1900
 	Selectable:
 		Bounds: 1280, 2218, 0, -426
 	Tooltip:
@@ -2754,7 +2759,7 @@ TPOD:
 		Factions: traveler
 	SpeedMultiplier@TRAVELERSPEED:
 		RequiresCondition: travelerspeed
-		Modifier: 120
+		Modifier: 125
 	WithIdleOverlay@MINDCONTROL:
 		Offset: 0,0,1024
 	ChangesHealth@THEAL:
@@ -2762,7 +2767,7 @@ TPOD:
 		PercentageStep: 2
 		Delay: 15
 		StartIfBelow: 100
-		DamageCooldown: 125
+		DamageCooldown: 150
 		RequiresCondition: on-resource
 	WithDecoration@TibRepair:
 		Image: select
@@ -2943,7 +2948,7 @@ OBLT:
 		AmmoCondition: ammo
 		Armaments: primary
 	ReloadAmmoPoolCA@CHARGE:
-		Delay: 100
+		Delay: 75
 		Count: 1
 		RequiresCondition: charging && !reloading
 		ShowSelectionBar: true
@@ -5921,8 +5926,8 @@ STRM.Live:
 	RenderSprites:
 		Image: strm
 	JamsMissiles@IONSTORM:
-		Chance: 10
-		Range: 5c0
+		Chance: 20
+		Range: 8c0
 	AutoTarget:
 		InitialStance: AttackAnything
 	Armament:
@@ -5962,7 +5967,7 @@ SSPK:
 	-Sellable:
 	-Buildable:
 	Health:
-		HP: 90000
+		HP: 100000
 	KillsSelf:
 		Delay: 1000
 	RevealsShroud:
@@ -6009,7 +6014,7 @@ SSPK:
 	-Encyclopedia:
 	GrantTimedCondition@Active:
 		Condition: active
-		Duration: 1000
+		Duration: 1125
 	TimedConditionBarCA@Active:
 		Condition: active
 		Color: FFFFFF
@@ -6048,7 +6053,7 @@ VSPK:
 		Bounds: 1280, 1792, 0, -512
 		DecorationBounds: 1280, 2560, 0, -768
 	Health:
-		HP: 40000
+		HP: 70000
 	Tooltip:
 		Name: Voidspike
 	TooltipExtras:
@@ -6608,7 +6613,7 @@ IonSurge:
 	PeriodicExplosion:
 		Weapon: IonSurge
 	KillsSelf:
-		Delay: 200
+		Delay: 375
 	# required for spawning actor on death
 	Health:
 		HP: 1
@@ -6617,7 +6622,7 @@ IonSurge:
 		Interval: 50
 	WithRangeCircleCA@IonSurge:
 		Type: IonSurge
-		Range: 5c0
+		Range: 7c0
 		Visible: Always
 		ValidRelationships: Ally
 		UsePlayerColor: true
@@ -6676,7 +6681,7 @@ WORMHOLE:
 	Targetable:
 		TargetTypes: Ground, Structure, Defense, Wormhole
 	Health:
-		HP: 25000
+		HP: 35000
 	Armor:
 		Type: Concrete
 	RevealsShroud:
@@ -6713,7 +6718,7 @@ REBELGATEWAY:
 	Armor:
 		Type: Concrete
 	Health:
-		HP: 50000
+		HP: 60000
 	RallyPoint:
 	LinkedProducerTarget:
 		Mode: Exit
