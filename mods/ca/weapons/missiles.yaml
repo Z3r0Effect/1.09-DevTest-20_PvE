@@ -876,9 +876,9 @@ TOW:
 
 PitbullRockets:
 	Inherits: ^AntiGroundMissile
-	Range: 7c768
+	Range: 8c0
 	Report: pitbull-fire1.aud, pitbull-fire2.aud
-	ReloadDelay: 80
+	ReloadDelay: 75
 	Burst: 2
 	BurstDelays: 4
 	Projectile: MissileCA
@@ -894,7 +894,7 @@ PitbullRockets:
 			Wood: 40
 			Concrete: 30
 			Light: 100
-			Heavy: 50
+			Heavy: 65
 	Warhead@Blind: GrantExternalConditionCA
 		Range: 0c256
 		Duration: 45
@@ -909,7 +909,7 @@ PitbullRockets:
 
 PitbullRocketsAA:
 	Inherits: RedEye
-	Range: 8c0
+	Range: 8c768
 	Report: pitbull-fire1.aud, pitbull-fire2.aud
 	ReloadDelay: 80
 	Burst: 2

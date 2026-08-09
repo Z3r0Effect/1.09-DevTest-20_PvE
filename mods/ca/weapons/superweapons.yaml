@@ -9,8 +9,8 @@ ParaBomb:
 		Acceleration: 0, 0, 0
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c0
-		Damage: 40000
+		Spread: 1c128
+		Damage: 28000
 		Versus:
 			None: 40
 			Wood: 55
@@ -33,6 +33,8 @@ ParaBomb:
 
 ChaosBomb:
 	Inherits: ParaBomb
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c0
 	Warhead@3Eff: CreateEffect
 		Explosions: chaosexplosion
 		ExplosionPalette: caneon
@@ -52,6 +54,7 @@ CarpetBomb:
 		Shadow: true
 		Acceleration: 0, 0, -1
 	Warhead@1Dam: SpreadDamage
+		Spread: 1c0
 		Damage: 30000
 		Versus:
 			Wood: 32
@@ -595,7 +598,7 @@ FirestormBarrage:
 	ReloadDelay: 50
 	Range: 300c0
 	Burst: 3
-	BurstDelays: 20
+	BurstDelays: 10
 	MinRange: 3c0
 	Report: icbm1.aud
 	Projectile: Bullet
@@ -608,13 +611,13 @@ FirestormBarrage:
 		TrailImage: smokey2
 		TrailPalette: tseffect-ignore-lighting-alpha75
 		TrailDelay: 4
-		Speed: 220
-		LaunchAngle: 65
+		Speed: 300
+		LaunchAngle: 55
 		ContrailLength: 30
 		ContrailStartColor: cc550080
 		ContrailStartColorAlpha: 128
 	Warhead@1Dam: SpreadDamage
-		Spread: 2c512
+		Spread: 3c128
 		Damage: 30000
 		Versus:
 			None: 80
@@ -1228,7 +1231,7 @@ TemporalIncursion:
 		ValidTargets: Ground, Air, Water
 		ImpactSounds: chrono2.aud
 	Warhead@teleport: SpawnActor
-		Actors: 2tnk.temp, 2tnk.temp, 2tnk.temp, tnkd.temp, arty.temp, arty.temp, jeep.temp
+		Actors: 2tnk.temp, 2tnk.temp, 2tnk.temp, 2tnk.temp, tnkd.temp, arty.temp, arty.temp, arty.temp, jeep.temp, jeep.temp
 		Range: 5
 		Image: chronoappear
 		Sequence: idle

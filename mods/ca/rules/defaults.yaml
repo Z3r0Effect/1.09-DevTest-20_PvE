@@ -3570,7 +3570,7 @@
 	Targetable@TNTAttached:
 		RequiresCondition: tnt && !airborne
 	ProductionCostMultiplier@EagleBonus:
-		Multiplier: 90
+		Multiplier: 80
 		Prerequisites: player.eagle
 	FireWarheadsOnDeath:
 		RequiresCondition: !airborne && !being-warped
@@ -4118,7 +4118,7 @@
 		RequiresCondition: detonate
 	GrantTimedCondition@DETONATEDELAY:
 		Condition: detonate-disabled
-		Duration: 125
+		Duration: 75
 	-UpdatesCount@NodCovenant:
 	-InfiltrateToCreateProxyActor@InfiltratorVision:
 	-Targetable@InfiltratorVision:

@@ -187,7 +187,7 @@ Chemspray:
 	Warhead@1Dam: SpreadDamage
 		Spread: 288
 		Falloff: 100, 50, 25, 12, 6, 3, 0
-		Damage: 1350
+		Damage: 850
 		Versus:
 			None: 300
 			Wood: 135
@@ -360,7 +360,7 @@ BlackHandFlamer:
 	ReloadDelay: 80
 	BurstDelays: 2
 	Burst: 28
-	Range: 5c512
+	Range: 5c768
 	Projectile: LinearPulse
 		Speed: 512
 		ImpactInterval: 256
@@ -381,7 +381,7 @@ BlackHandFlamer:
 			Falloff: 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 80, 25, 0
 			FalloffBasis: DistanceFromSource
 	Warhead@1Dam: SpreadDamage
-		Damage: 640
+		Damage: 400
 		Versus:
 			None: 45
 			Wood: 70
@@ -2119,7 +2119,7 @@ TitanRailgunImpact:
 
 IonZap:
 	ReloadDelay: 80
-	Range: 7c256
+	Range: 7c512
 	Report: ion1.aud
 	Projectile: Railgun
 		Duration: 7
@@ -2143,7 +2143,7 @@ IonZap:
 		ZOffset: 2045
 	Warhead@1Dam: SpreadDamage
 		Damage: 12500
-		Spread: 448
+		Spread: 512
 		AffectsParent: false
 		Versus:
 			None: 30
@@ -2889,7 +2889,7 @@ SonicPulse.UPG:
 
 DisruptorPulse:
 	ReloadDelay: 80
-	Range: 6c256
+	Range: 6c768
 	StartBurstReport: sonic4.aud
 	Burst: 9
 	BurstDelays: 5
@@ -2934,12 +2934,12 @@ DisruptorPulse:
 
 DisruptorPulse.Amp:
 	Inherits: DisruptorPulse
-	Range: 6c0
+	Range: 7c0
 	Projectile: LinearPulse
 		ImpactAnimation@1:
 			Sequences: sonicwaveupg1, sonicwaveupg2
 	Warhead@1Dam: SpreadDamage
-		Damage: 3300
+		Damage: 3400
 	Warhead@4Conc: GrantExternalConditionCA
 		Range: 0c768
 		Duration: 75
@@ -2949,11 +2949,11 @@ DisruptorPulse.Amp:
 
 DisruptorPulse.Seek3:
 	Inherits: DisruptorPulse
-	Range: 6c640
+	Range: 7c128
 
 DisruptorPulse.Amp.Seek3:
 	Inherits: DisruptorPulse.Amp
-	Range: 7c384
+	Range: 7c768
 
 SonicPulseDelphis:
 	ReloadDelay: 80
@@ -3144,14 +3144,14 @@ DummyWeapon:
 	Warhead@Dummy: Dummy
 
 Lasher:
-	ReloadDelay: 5
+	ReloadDelay: 3
 	Range: 2c0
 	ValidTargets: Ground, Water
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-		Range: 0, 341, 682
+		Range: 0, 512, 1c0
 		Falloff: 100, 100, 0
-		Damage: 500
+		Damage: 600
 		ValidTargets: Infantry
 		DamageTypes: BulletDeath, FlakVestMitigatedMinor
 		ValidRelationships: Enemy, Neutral

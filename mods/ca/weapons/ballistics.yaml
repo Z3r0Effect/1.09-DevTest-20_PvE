@@ -148,7 +148,7 @@
 125mm:
 	Inherits: ^Cannon
 	Range: 6c768
-	ReloadDelay: 65
+	ReloadDelay: 55
 	Burst: 2
 	Warhead@1Dam: SpreadDamage
 		Versus:
@@ -341,9 +341,9 @@
 
 183mm:
 	Inherits: ^Cannon
-	ReloadDelay: 85
+	ReloadDelay: 75
 	Report: tnkfire6.aud
-	Range: 8c0
+	Range: 8c128
 	Projectile: Bullet
 		Speed: 768
 		Image: 183MM
@@ -353,7 +353,7 @@
 			Heavy: 160
 			None: 10
 			Wood: 15
-			Light: 60
+			Light: 65
 			Concrete: 48
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, TankBuster
 

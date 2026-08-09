@@ -308,7 +308,7 @@ SmallBuildingExplode:
 FakeBuildingExplode:
 	Warhead@1Dam: SpreadDamage
 		DamageTypes: DefaultDeath
-		Spread: 1c0
+		Spread: 1c128
 		Falloff: 100, 50, 35, 22, 14, 0
 		Damage: 75000
 		Versus:

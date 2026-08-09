@@ -4779,6 +4779,8 @@ HTNK.Ion:
 	Tooltip:
 		Name: Ion Mammoth Tank
 		GenericName: Tank
+	Mobile:
+		Speed: 48
 	Armament@PRIMARY:
 		Weapon: IonZap
 		LocalOffset: 870,0,360
@@ -8254,7 +8256,7 @@ TNKD:
 		Strengths: • Strong vs Heavy Armor
 		Weaknesses: • Weak vs Infantry, Buildings, Defenses, Light Armor\n• Cannot attack Aircraft
 	Valued:
-		Cost: 1150
+		Cost: 1200
 	Tooltip:
 		Name: Tank Destroyer
 		GenericName: Tank

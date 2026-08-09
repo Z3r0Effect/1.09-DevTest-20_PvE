@@ -90,7 +90,7 @@
 
 ^ClusterMinesPower:
 	AirstrikePowerCA@clustermines:
-		ChargeInterval: 5500
+		ChargeInterval: 6000
 		Prerequisites: ~radar.france
 		Name: Cluster Mines
 		Description: Sends a cargo plane to drop a minefield at the target location.
@@ -99,7 +99,7 @@
 		CameraActor: camera.paradrop
 		CameraRemoveDelay: 150
 		QuantizedFacings: 8
-		SquadSize: 4
+		SquadSize: 5
 		DisplayBeacon: true
 		BeaconPoster: cmineicon
 		Icon: cmines
@@ -121,7 +121,7 @@
 		Prerequisites: atek.germany
 		Icon: tempinc
 		Cursor: ability
-		ChargeInterval: 5500
+		ChargeInterval: 7500
 		Name: Temporal Incursion
 		ActivationDelay: 25
 		Description: Summons reinforcements from the future. Units return to their origin time after a short time.
@@ -263,7 +263,7 @@
 		Description: Disrupts time and space at the target location. Affected units & structures are frozen in time, unable to act, but immune to damage.
 		ExplosionWeapon: TimeWarp
 		Condition: being-warped
-		Duration: 475
+		Duration: 375
 		Range: 4c512
 		ValidRelationships: Ally, Enemy, Neutral
 		AllowMultiple: false
@@ -601,7 +601,7 @@
 		Prerequisites: ~support.parabombs
 		PauseOnCondition: empdisable || being-warped
 		Icon: parabombs
-		ChargeInterval: 6500
+		ChargeInterval: 6000
 		Name: Parabombs
 		Description: Calls in a Badger bomber which drops parachuted bombs on your target.
 		SelectTargetSpeechNotification: SelectTarget
@@ -614,7 +614,7 @@
 		QuantizedFacings: 8
 		DisplayBeacon: true
 		BeaconPoster: pbmbicon
-		SquadSize: 1
+		SquadSize: 2
 		SquadOffset: 0,1792,0
 		ArrowSequence: arrow
 		ClockSequence: clock
@@ -1057,9 +1057,9 @@
 		Name: X-O Drop
 		UnitType: ocar.xo
 		Description: An Orca transport drops a squad of X-O Powersuits at the target location.
-		SquadSize: 2
+		SquadSize: 1
 		SquadOffset: 0,1792,0
-		DropItems: XO,XO,XO,XO
+		DropItems: XO,XO,XO,XO,XO
 		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: Select target.
@@ -1092,9 +1092,9 @@
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: Select target.
 		DisplayRadarPing: True
-		ChargeInterval: 4000
+		ChargeInterval: 5250
 		Weapon: DropPodArrive
-		UnitTypes: POD, POD, POD, POD, POD2, POD2, POD3
+		UnitTypes: POD, POD, POD, POD, POD, POD2, POD2, POD3, POD3, POD3
 		ExactUnits: true
 		PodScatter: 3
 		EntryEffect: explosion
@@ -1444,7 +1444,7 @@
 		Cursor: ability
 		ChargeInterval: 9750
 		Name: Subterranean Strike
-		ActivationDelay: 250
+		ActivationDelay: 75
 		Description: Deploys a squad of Acolytes/Templar via Subterranean APC.
 		LaunchSound: subrumble.aud
 		Weapon: SubterraneanStrikeSpawner

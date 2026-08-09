@@ -1862,7 +1862,6 @@ apb.upgrade:
 		Description: Upgrades Snipers granting them Raufoss armor piercing rounds, which stun and damage vehicles.\n\nUpgrades: Sniper
 	TooltipExtras:
 		Strengths: + Can damage vehicles with AP rounds which slow movement and rate of fire
-		Weaknesses: – Reduced range
 	Valued:
 		Cost: 1000
 	RenderSprites:

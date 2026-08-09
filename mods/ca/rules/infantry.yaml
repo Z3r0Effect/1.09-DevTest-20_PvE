@@ -2173,7 +2173,7 @@ SNIP:
 		Weaknesses: • Weak vs Buildings, Defenses\n• Cannot attack aircraft
 		Attributes: • Camouflaged when not moving\n• When elite, kills crew of vehicles with less than 50% HP
 	Valued:
-		Cost: 550
+		Cost: 1200
 	Tooltip:
 		Name: Sniper
 	UpdatesPlayerStatistics:

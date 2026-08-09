@@ -4632,7 +4632,7 @@ GTEK:
 		RequiresCondition: !tech-locked
 	SupportPowerChargeBar:
 	ProductionCostMultiplier@TALONBONUS:
-		Multiplier: 90
+		Multiplier: 80
 		Prerequisites: player.talon
 	Encyclopedia:
 		Category: GDI/Buildings
@@ -5055,7 +5055,7 @@ HTUR:
 		Bounds: 2048, 2048
 	DetectCloaked:
 		RequiresCondition: !(disabled || empdisable || being-warped)
-	-ProductionCostMultiplier@FranceBonus:
+	ProductionCostMultiplier@FranceBonus:
 	Encyclopedia:
 		Category: Allies/Defenses
 	EncyclopediaExtras:
@@ -6087,7 +6087,7 @@ UPGC:
 		Prerequisites: nshield
 		Condition: nshield-active
 	ProductionCostMultiplier@TALONBONUS:
-		Multiplier: 80
+		Multiplier: 70
 		Prerequisites: player.talon
 	WithDecoration@TechLock:
 		RequiresCondition: tech-locked

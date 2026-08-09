@@ -32,8 +32,8 @@ faction-france =
 
     Bonuses:
       • Prism Tank/Cannon (deploy to fortify)
-      • Defenses (10% discount)
-      • Walls (30% discount)
+      • Defenses (15% discount)
+      • Walls (50% discount)
 
 faction-germany =
     .name = Germany
@@ -166,8 +166,8 @@ faction-talon =
       • Gyro Stabilizers
 
     Bonuses:
-      • Tech Center (10% discount)
-      • Upgrade Center (20% discount)
+      • Tech Center (20% discount)
+      • Upgrade Center (30% discount)
 
 faction-zocom =
     .name = ZOCOM
@@ -205,7 +205,7 @@ faction-eagle =
       • Afterburners
 
     Bonuses:
-      • Aircraft (10% discount)
+      • Aircraft (20% discount)
       • Airfields repair aircraft without requiring Service Depot nearby
 
 faction-arc =

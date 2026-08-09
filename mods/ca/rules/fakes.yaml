@@ -27,9 +27,9 @@ FPWR:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 640,-384,0, 640,512,0, -710,-512,0, -710,512,0
 	Valued:
-		Cost: 150
+		Cost: 100
 	Health:
-		HP: 40000
+		HP: 60000
 	Armor:
 		Type: Wood
 	WithBuildingBib:
@@ -78,9 +78,9 @@ FREF:
 	RenderSprites:
 		Image: proc
 	Valued:
-		Cost: 200
+		Cost: 150
 	Health:
-		HP: 90000
+		HP: 120000
 	Armor:
 		Type: Wood
 	RequiresBuildableArea:
@@ -124,9 +124,9 @@ WEAF:
 		Sequence: build-top
 		RequiresCondition: !build-incomplete
 	Valued:
-		Cost: 225
+		Cost: 200
 	Health:
-		HP: 150000
+		HP: 160000
 	Armor:
 		Type: Wood
 	-ActorPreviewPlaceBuildingPreview:
@@ -163,7 +163,7 @@ DOMF:
 	RenderSprites:
 		Image: dome
 	Valued:
-		Cost: 200
+		Cost: 120
 	Health:
 		HP: 110000
 	Armor:
@@ -208,7 +208,7 @@ FACF:
 	Valued:
 		Cost: 250
 	Health:
-		HP: 150000
+		HP: 180000
 	Armor:
 		Type: Wood
 	RequiresBuildableArea:
