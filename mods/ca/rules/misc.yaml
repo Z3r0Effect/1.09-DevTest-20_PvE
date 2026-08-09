@@ -571,14 +571,9 @@ FLARE.dropzone:
 		Range: 4c0
 	Tooltip:
 		Name: Dropzone Flare
-	FreeActorWithDelivery@1:
-		Actor: vulc.reinforce
-		DeliveryOffset: -1c0,0
-		DeliveringActor: ocar.reinforce
-		Facing: 0
 	FreeActorWithDelivery@2:
 		Actor: vulc.reinforce
-		DeliveryOffset: 1c0,0
+		DeliveryOffset: -0,0
 		DeliveringActor: ocar.reinforce
 		Facing: 0
 	-MapEditorData:
