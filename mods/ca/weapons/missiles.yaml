@@ -614,7 +614,7 @@ TitanTusk:
 TitanTusk.Gyro:
 	Inherits: TitanTusk
 	ReloadDelay: 38
-	Range: 4c901
+	Range: 6c901
 
 APCTusk:
 	Inherits: MammothTusk
@@ -876,9 +876,9 @@ TOW:
 
 PitbullRockets:
 	Inherits: ^AntiGroundMissile
-	Range: 8c0
+	Range: 9c256
 	Report: pitbull-fire1.aud, pitbull-fire2.aud
-	ReloadDelay: 75
+	ReloadDelay: 60
 	Burst: 2
 	BurstDelays: 4
 	Projectile: MissileCA
@@ -909,7 +909,7 @@ PitbullRockets:
 
 PitbullRocketsAA:
 	Inherits: RedEye
-	Range: 8c768
+	Range: 9c512
 	Report: pitbull-fire1.aud, pitbull-fire2.aud
 	ReloadDelay: 80
 	Burst: 2

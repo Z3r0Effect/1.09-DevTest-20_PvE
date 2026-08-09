@@ -806,10 +806,10 @@ AKM:
 
 AKMBATF:
 	Inherits: AKM
-	Range: 8c128
+	Range: 8c256
 
 SNIPER:
-	ReloadDelay: 70
+	ReloadDelay: 60
 	Range: 9c768
 	Report: snipe.aud
 	Projectile: InstantHit
@@ -842,6 +842,7 @@ SNIPER:
 
 SNIPER.vehicle:
 	Inherits: SNIPER
+	ReloadDelay: 85
 	Range: 10c512
 	Report: ijarwe1a.aud
 	Warhead@1Dam: SpreadDamage
@@ -871,9 +872,29 @@ SNIPER.vehicle:
 		Condition: concussion
 		ValidTargets: Vehicle, Ship
 
+SNIPER.vehicleRank2:
+	Inherits: SNIPER.vehicle
+	ReloadDelay: 80
+	Range: 11c256
+	Report: ijarwe2a.aud
+	Warhead@Concussion: GrantExternalConditionCA
+		InvalidTargets: DriverKillLow
+	Warhead@DriverKill: ChangeOwnerToNeutral
+		ValidTargets: DriverKillLow
+		InvalidTargets: DriverKillImmune
+		ValidRelationships: Enemy
+		CargoEffect: Block
+		Range: 0c511
+	Warhead@Flash: FlashTarget
+		Spread: 0c511
+		Color: ffffff
+		ValidTargets: DriverKillLow
+		InvalidTargets: DriverKillImmune
+
 SNIPER.vehicleElite:
 	Inherits: SNIPER.vehicle
-	Range: 12c512
+	ReloadDelay: 85
+	Range: 13c0
 	Report: ijarwe2a.aud
 	Warhead@Concussion: GrantExternalConditionCA
 		InvalidTargets: DriverKillLow
@@ -1013,7 +1034,7 @@ WolverineGun:
 		Versus:
 			Wood: 50
 			Light: 75
-			Heavy: 18
+			Heavy: 25
 	-Warhead@2Eff:
 
 WolverineGunLine:
@@ -1147,7 +1168,7 @@ EnforcerShotgun:
 			None: 90
 			Wood: 40
 			Light: 80
-			Heavy: 40
+			Heavy: 45
 			Concrete: 15
 			Brick: 30
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath

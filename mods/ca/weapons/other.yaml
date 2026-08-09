@@ -1223,7 +1223,7 @@ XOLaser:
 	Inherits: Laser
 	Report: xo-laser.aud
 	ReloadDelay: 70
-	Range: 8c0
+	Range: 8c256
 	Projectile: LaserZapCA
 		Blockable: true
 		Width: 56
@@ -1263,7 +1263,7 @@ XOCoilGun:
 		AllowSnapping: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c128
-		Damage: 2600
+		Damage: 3000
 		Versus:
 			None: 100
 			Wood: 10
@@ -1651,7 +1651,7 @@ PrisCLaser:
 	-Warhead@Burst:
 
 HopliteGun:
-	ReloadDelay: 65
+	ReloadDelay: 55
 	Range: 7c512
 	Report: hopl-fire1.aud
 	Projectile: LaserZapCA
@@ -2087,6 +2087,7 @@ TitanRailgun:
 		PassthroughToMaxRange: true
 		PassthroughMinDistance: 2c0
 	Warhead@1Dam: SpreadDamage
+		Spread: 0c128
 		Damage: 7500
 		Versus:
 			None: 30
@@ -2114,12 +2115,12 @@ TitanRailgunImpact:
 	-Warhead@2Dam:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-		Damage: 11000
+		Damage: 12000
 		ValidRelationships: Enemy, Neutral, Ally
 
 IonZap:
-	ReloadDelay: 80
-	Range: 7c512
+	ReloadDelay: 85
+	Range: 7c768
 	Report: ion1.aud
 	Projectile: Railgun
 		Duration: 7
@@ -2143,14 +2144,14 @@ IonZap:
 		ZOffset: 2045
 	Warhead@1Dam: SpreadDamage
 		Damage: 12500
-		Spread: 512
+		Spread: 768
 		AffectsParent: false
 		Versus:
 			None: 30
 			Wood: 75
 			Light: 85
 			Heavy: 115
-			Concrete: 60
+			Concrete: 65
 			Brick: 75
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@3Eff: CreateEffect

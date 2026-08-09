@@ -274,7 +274,7 @@ HeliosBomb:
 		ExplosionPalette: effect-ignore-lighting
 	Warhead@Blind: GrantExternalConditionCA
 		Range: 8c0
-		Duration: 200
+		Duration: 300
 		Condition: blinded
 		InvalidTargets: BlindImmune
 	Warhead@Flash: FlashEffect

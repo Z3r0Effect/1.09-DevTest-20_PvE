@@ -295,7 +295,7 @@
 		PercentageStep: 5
 		Delay: 100
 		StartIfBelow: 100
-		DamageCooldown: 150
+		DamageCooldown: 100
 		RequiresCondition: rank-elite
 	WithDecoration@RANK-1:
 		Image: rank
@@ -380,10 +380,10 @@
 		Prerequisites: development.policy, influence.level2
 	DamageMultiplier@VETERAN2DEVELOPMENTPOLICY2:
 		RequiresCondition: rank-veteran == 2 && development-policy2
-		Modifier: 80
+		Modifier: 90
 	FirepowerMultiplier@VETERAN2DEVELOPMENTPOLICY2:
 		RequiresCondition: rank-veteran == 2 && development-policy2
-		Modifier: 115
+		Modifier: 110
 	ReloadDelayMultiplier@VETERAN2DEVELOPMENTPOLICY2:
 		RequiresCondition: rank-veteran == 2 && development-policy2
 		Modifier: 85
@@ -2233,7 +2233,7 @@
 	ExternalCondition@PaintedTarget:
 		Condition: painted-target
 	DamageMultiplier@PaintedTarget:
-		Modifier: 110
+		Modifier: 120
 		RequiresCondition: painted-target
 	WithDecoration@PaintedTarget:
 		Image: targetpainter
@@ -2502,13 +2502,13 @@
 		Condition: development-policy3
 		Prerequisites: development.policy, influence.level3
 	GainsExperienceMultiplier@DevelopmentPolicy1:
-		Modifier: 150
+		Modifier: 125
 		RequiresCondition: development-policy1
 	GainsExperienceMultiplier@DevelopmentPolicy2:
-		Modifier: 170
+		Modifier: 150
 		RequiresCondition: development-policy2
 	GainsExperienceMultiplier@DevelopmentPolicy3:
-		Modifier: 185
+		Modifier: 175
 		RequiresCondition: development-policy3
 
 ^DevelopmentPolicyDiscount:
@@ -4070,7 +4070,7 @@
 		PercentageStep: 5
 		Delay: 100
 		StartIfBelow: 100
-		DamageCooldown: 150
+		DamageCooldown: 100
 		RequiresCondition: !rank-elite
 
 ^FakeBuilding:

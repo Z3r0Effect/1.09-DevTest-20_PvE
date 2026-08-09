@@ -9749,7 +9749,7 @@ WOLV:
 		Prerequisites: vehicles.upgraded
 	WithMuzzleOverlay:
 	RangeMultiplier@GYRO:
-		Modifier: 140
+		Modifier: 150
 	ReloadDelayMultiplier@GYRO:
 		Modifier: 150
 	Encyclopedia:
@@ -9780,7 +9780,7 @@ XO:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45500
+		HP: 46000
 	Armor:
 		Type: Light
 	Mobile:
@@ -9855,8 +9855,8 @@ XO:
 		ChargeDelay: 625
 		SelectionBarColor: ffaa00
 		CircleColor: ffaa0077
-		MaxDistance: 14
-		Speed: 140
+		MaxDistance: 18
+		Speed: 165
 	Contrail@Jumping:
 		Offset: -30,0,350
 		StartColorUsePlayerColor: false

@@ -2204,6 +2204,9 @@ SNIP:
 	Armament@PRIMARYUPG:
 		Weapon: sniper.vehicle
 		RequiresCondition: apb-upgrade && rank-veteran < 3
+	Armament@PRIMARYUPGRANK2:
+		Weapon: sniper.vehicleRank2
+		RequiresCondition: apb-upgrade && rank-veteran == 2
 	Armament@PRIMARYUPGELITE:
 		Weapon: sniper.vehicleElite
 		RequiresCondition: apb-upgrade && rank-veteran >= 3
@@ -5057,7 +5060,7 @@ HOPL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 14000
+		HP: 18000
 	Armor:
 		Type: Concrete
 	Mobile:
