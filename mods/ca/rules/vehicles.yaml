@@ -1975,7 +1975,7 @@ SAPC:
 		FacingTolerance: 0
 	Cargo:
 		Types: Infantry, Hacker
-		MaxWeight: 8
+		MaxWeight: 5
 		LoadingCondition: notmobile
 		LoadedCondition: cargo
 		PassengerConditions:
@@ -1984,7 +1984,7 @@ SAPC:
 			bori: loaded-cmdo
 			yuri: loaded-cmdo
 			mast: loaded-cmdo
-		InitialUnits: N1,N1,N1,N3,N3
+		InitialUnits: N1C,N1C,N3C,N3C,N3C
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud
@@ -4284,12 +4284,12 @@ MTNK:
 	PointDefense:
 		Armament: secondary
 		PointDefenseTypes: Missile
-		RequiresCondition: pointdef-upgrade && !gshield && !gshield-charging
+		RequiresCondition: pointdef-upgrade && !gshield
 		ValidRelationships: Enemy
 	GrantTimedConditionOnPointDefenseHit@POINTDEF:
 		Condition: pointlaser-charging
 		RequiresCondition: pointdef-upgrade
-		ScaleChargeTimeWithDamageAmount: 21
+		ScaleChargeTimeWithDamageAmount: 17
 	GrantConditionOnPrerequisite@POINTDEF:
 		Condition: pointdef-upgrade
 		Prerequisites: pointdef.upgrade
@@ -4303,7 +4303,7 @@ MTNK:
 		Modifier: 25
 		Duration: 2
 		ScaleChargeTimeWithDamage: true
-		ScaleChargeTimeWithDamageAmount: 21
+		ScaleChargeTimeWithDamageAmount: 17
 		PauseOnCondition: pointlaser-charging
 		RequiresCondition: pointdef-upgrade
 	GrantTimedCondition@NSHIELDVISUAL:
@@ -4379,7 +4379,7 @@ MTNK.Drone:
 	Targetable@ChaosImmune:
 		TargetTypes: ChaosImmune
 	ChangesHealth:
-		PercentageStep: 2
+		PercentageStep: 4
 		Delay: 25
 		StartIfBelow: 50
 		DamageCooldown: 100
@@ -4802,10 +4802,10 @@ HTNK.Hover:
 	TooltipExtras:
 		Attributes: • Can traverse water\n• Self repairs to 50% out of combat\n• Afterburner ability (with upgrade)
 	Mobile:
-		Speed: 62
+		Speed: 67
 		Locomotor: hover
 	Turreted:
-		TurnSpeed: 25
+		TurnSpeed: 30
 	Hovers:
 		BobDistance: -35
 		RequiresCondition: !empdisable && !being-warped && !driver-dead
@@ -4881,10 +4881,11 @@ HTNK.Drone:
 	Valued:
 		Cost: 1300
 	Health:
-		HP: 90000
+		HP: 92000
 	Tooltip:
 		Name: Mammoth Drone
 	Mobile:
+		Speed: 52
 		PauseOnCondition: !radarenabled || being-captured || empdisable || being-warped || driver-dead || notmobile
 		Voice: Move
 	Passenger:
@@ -5878,7 +5879,7 @@ BTR:
 			yuri: loaded-cmdo
 			mast: loaded-cmdo
 			cmsr: loaded-cmsr
-		InitialUnits: E1,E1,E1,E1,E1
+		InitialUnits: E1,E1,E3,E3,E3
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud
@@ -10699,7 +10700,7 @@ MOLE.UPG:
 AVTR:
 	Inherits: ^TankTD
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@SHRAPNEL: ^ThrowsShrapnel
 	Inherits@HeavyArmor: ^HeavyArmor
 	Inherits@TANKBUSTERVULN: ^TankBusterVulnerability
@@ -10897,6 +10898,7 @@ CUST:
 			bori: loaded-cmdo
 			yuri: loaded-cmdo
 			mast: loaded-cmdo
+		InitialUnits: N1C,N1C,N3C,N3C,N3C
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud

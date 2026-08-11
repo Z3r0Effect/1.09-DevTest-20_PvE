@@ -46,7 +46,7 @@ flakarmor.upgrade:
 		Prerequisites: techcenter.any, infantry.any, ~!player.nod, ~!player.scrin, ~techlevel.high
 		Description: Infantry are equipped with advanced flak armor which provides protection against explosives.\n\nUpgrades: Infantry
 	TooltipExtras:
-		Strengths: + 40% reduced damage from explosives\n+ 20% reduced damage from incendiary explosives
+		Strengths: + 45% reduced damage from explosives\n+ 25% reduced damage from incendiary explosives
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -83,7 +83,7 @@ bombard.strat:
 		IconPalette: chrometd
 		Description: Firepower focused strategy, required for:\n• Zone Trooper\n• Tomahawk Launcher Research\n• Hailstorm Missiles Upgrade\n• Avenger Upgrade\n• Firestorm Missiles Power\n\n
 	TooltipExtras:
-		Strengths: + Increases firepower and rate of fire by vehicles and aircraft by 4%
+		Strengths: + Increases firepower and rate of fire by vehicles and aircraft by 5%
 		Attributes: \n(!) Only ONE Strategy may be chosen.
 	Valued:
 		Cost: 750
@@ -107,7 +107,7 @@ bombard2.strat:
 		Prerequisites: ~player.gdi, gtek, ~bombard.strat, ~techlevel.high
 		Description: Increase Bombardment strategy bonuses.
 	TooltipExtras:
-		Strengths: + Increases firepower and rate of fire of vehicles and aircraft by a further 4%
+		Strengths: + Increases firepower and rate of fire of vehicles and aircraft by a further 5%
 		-Attributes:
 	RenderSprites:
 		Image: bombard2.strat
@@ -128,7 +128,7 @@ bombard3.strat:
 		Description: Provides an napalm rocket barrage.
 		IconPalette: chrometd
 	TooltipExtras:
-		Strengths: + Increases firepower and rate of fire of vehicles and aircraft by a further 4%\n+ Unlocks Firestorm Missile Barrage power
+		Strengths: + Increases firepower and rate of fire of vehicles and aircraft by a further 6%\n+ Unlocks Firestorm Missile Barrage power
 		Attributes: (!) Mutually exclusive with Supply Drop Zone
 	RenderSprites:
 		PlayerPalette: playertd
@@ -192,7 +192,7 @@ seek3.strat:
 		Description: Provides detailed information on enemy locations.
 		IconPalette: chrometd
 	TooltipExtras:
-		Strengths: + Increases speed and weapon range of vehicles and aircraft by a further 6%\n+ Unlocks Advanced Radar Scan power
+		Strengths: + Increases speed and weapon range of vehicles and aircraft by a further 8%\n+ Unlocks Advanced Radar Scan power
 		Attributes: (!) Mutually exclusive with Supply Drop Zone
 	RenderSprites:
 		PlayerPalette: playertd
@@ -256,7 +256,7 @@ hold3.strat:
 		Description: Provides the ability to shield units in an area
 		IconPalette: chrometd
 	TooltipExtras:
-		Strengths: + Increases armor of vehicles and aircraft by a further 6%\n+ Unlocks Nanite Shield power
+		Strengths: + Increases armor of vehicles and aircraft by a further 8%\n+ Unlocks Nanite Shield power
 		Attributes: (!) Mutually exclusive with Supply Drop Zone
 	RenderSprites:
 		PlayerPalette: playertd
@@ -327,11 +327,11 @@ empgren.upgrade:
 		BuildPaletteOrder: 30
 		Prerequisites: ~player.gdi, gtek, ~techlevel.high
 		IconPalette: chrometd
-		Description: Upgrades Grenadier to use EMP Grenades.\n\nUpgrades: Grenadier
+		Description: Upgrades Grenadier and Bombadier Jumpjets to use EMP Grenades.\n\nUpgrades: Grenadier and Bombadier Jumpjets
 	TooltipExtras:
 		Strengths: + Grenades briefly disable vehicles and defenses\n+ Grenadiers no longer explode when killed
 	Valued:
-		Cost: 1000
+		Cost: 1600
 	RenderSprites:
 		Image: empgren.upgrade
 	WithProductionIconOverlay:
@@ -463,7 +463,7 @@ ejjet.upgrade:
 		Prerequisites: ~player.gdi, gtek, ~seek.strat, ~techlevel.high
 		Description: Improves the speed and vision of Jumpjet Troopers and Bombardiers and grants them cloak detection.\n\nUpgrades: Jumpjet Infantry\nUpgrades: Bombardier
 	TooltipExtras:
-		Strengths: + 25% faster movement\n+ Vision range increased by 2\n+ Cloak detection
+		Strengths: + 25% faster movement\n+ Vision range increased by 4\n+ Cloak detection
 	Valued:
 		Cost: 1000
 	RenderSprites:
@@ -1144,7 +1144,7 @@ cyborgprod.upgrade:
 		IconPalette: chrometd
 		Description: Leverage CABAL AI to reclaim components from lost cyborgs to replacements.
 	TooltipExtras:
-		Strengths: + 15% of lost cyborgs value is reclaimed to create new Cyborgs from Temple Prime
+		Strengths: + 20% of lost cyborgs value is reclaimed to create new Cyborgs from Temple Prime
 	Valued:
 		Cost: 1000
 	RenderSprites:

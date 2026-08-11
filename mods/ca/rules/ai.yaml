@@ -1117,22 +1117,22 @@ Player:
 			weap.td: 12
 			airs: 10
 			wsph: 10
-			pbox: 10
-			hbox: 10
-			gtwr: 10
-			gun: 10
-			gun.td: 10
-			ptur: 10
-			scol: 10
-			tsla: 10
-			obli: 10
-			ltur: 10
-			ftur: 10
-			ttur: 10
+			pbox: 9
+			hbox: 9
+			gtwr: 9
+			gun: 9
+			gun.td: 9
+			ptur: 9
+			scol: 9
+			tsla: 9
+			obli: 9
+			ltur: 9
+			ftur: 9
+			ttur: 9
 			htur: 5
 			atwr: 8
 			stwr: 6
-			pris: 10
+			pris: 9
 			agun: 8
 			cram: 8
 			sam: 8

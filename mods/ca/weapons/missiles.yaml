@@ -848,12 +848,12 @@ APTusk:
 
 TOW:
 	Inherits: ^AntiGroundMissile
-	Range: 9c0
+	Range: 9c512
 	ValidTargets: Vehicle, Ship, Structure
 	Report: tow1.aud, tow2.aud
 	ReloadDelay: 60
 	Projectile: MissileCA
-		Speed: 180
+		Speed: 190
 		Inaccuracy: 0
 		HorizontalRateOfTurn: 20
 		RangeLimit: 16c0
@@ -869,7 +869,8 @@ TOW:
 		Versus:
 			Wood: 40
 			Concrete: 30
-			Light: 40
+			Light: 65
+			Heavy: 75
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, TankBuster
 	Warhead@3Eff: CreateEffect
 		ImpactSounds: tow-hit1.aud
@@ -1166,8 +1167,8 @@ THWeapon:
 
 KatyushaRockets:
 	Inherits: ^AntiGroundMissile
-	ReloadDelay: 180
-	Range: 9c0
+	ReloadDelay: 125
+	Range: 9c768
 	MinRange: 3c0
 	Report: katyrocket1.aud, katyrocket2.aud, katyrocket3.aud
 	Burst: 3
@@ -1185,7 +1186,7 @@ KatyushaRockets:
 	ValidTargets: Ground, Trees, Water
 	Warhead@1Dam: SpreadDamage
 		Damage: 4000
-		Spread: 448
+		Spread: 512
 		Versus:
 			None: 100
 			Wood: 85
@@ -1209,13 +1210,13 @@ GradRockets:
 	Range: 13c0
 	Report: grad-fire1.aud, grad-fire2.aud
 	Warhead@1Dam: SpreadDamage
-		Damage: 400
+		Damage: 450
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 
 GradRocketsWide:
 	Inherits: GradRockets
 	Projectile: Bullet
-		Inaccuracy: 2c512
+		Inaccuracy: 1c512
 
 GradRockets.UPG:
 	Inherits: GradRockets
@@ -1530,7 +1531,7 @@ IFVRocketsAAE.TibCore:
 #Artillery Missiles, lock-on but act dumb
 227mm:
 	Inherits: ^AntiGroundMissile
-	ReloadDelay: 120
+	ReloadDelay: 100
 	Burst: 2
 	BurstDelays: 4
 	Range: 10c0
@@ -1606,12 +1607,12 @@ IFVRocketsAAE.TibCore:
 		Speed: 250
 	Warhead@1Dam: SpreadDamage
 		Damage: 860
-		Spread: 426
+		Spread: 512
 	Warhead@4Eff: CreateEffect
 		ImpactSounds: xplobig4.aud
 		Explosions: artillery_explosion
 	Warhead@Concussion: GrantExternalConditionCA
-		Range: 0c768
+		Range: 1c0
 		Duration: 75
 		Condition: concussion
 
@@ -1628,27 +1629,27 @@ IFVRocketsAAE.TibCore:
 		-LockOnBurstCounts:
 		CruiseAltitude: 0
 	Warhead@1Dam: SpreadDamage
-		Spread: 426
-		Damage: 360
+		Spread: 768
+		Damage: 460
 
 227mmH.Hypersonic:
 	Inherits: 227mm.Hypersonic
-	Range: 9c512
+	Range: 9c768
 
 227mmH.Hammerhead:
 	Inherits: 227mm.Hammerhead
-	Range: 9c512
+	Range: 9c768
 
 227mmH.Hailstorm:
 	Inherits: 227mm.Hailstorm
-	Range: 9c512
+	Range: 9c768
 
 227mmAA:
 	Inherits: ^AntiAirMissile
-	ReloadDelay: 80
+	ReloadDelay: 75
 	Burst: 2
 	BurstDelays: 4
-	Range: 7c512
+	Range: 9c512
 	Report: rocket1.aud
 	Projectile: MissileCA
 		Speed: 230
@@ -1672,7 +1673,7 @@ IFVRocketsAAE.TibCore:
 
 227mmAA.upg:
 	Inherits: 227mmAA
-	Range: 7c512
+	Range: 9c512
 	Projectile: MissileCA
 		Speed: 250
 		ContrailLength: 15
@@ -1920,7 +1921,7 @@ BoatMissileAA:
 
 Rah66AG:
 	ReloadDelay: 35
-	Range: 7c512
+	Range: 8c128
 	MinRange: 0c768
 	Report: rocket2.aud
 	Burst: 4

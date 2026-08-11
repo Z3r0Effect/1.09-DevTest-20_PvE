@@ -54,7 +54,7 @@ FLAK-23-AA:
 FLAK-23-AG:
 	Inherits: ^AACannon
 	Report: flak1.aud, flak2.aud
-	Range: 5c768
+	Range: 7c0
 	ValidTargets: Ground, Water
 	Projectile: Bullet
 		LaunchAngle: 62
@@ -545,7 +545,7 @@ OvldCoaxial:
 
 M60mgJJ:
 	Inherits: M60mg
-	Range: 5c768
+	Range: 7c128
 	Projectile: Bullet
 		Blockable: false
 	-StartBurstReport:
@@ -570,7 +570,7 @@ M60mgJJ.ground:
 
 M60mgJJAA:
 	Inherits: M60mgJJ
-	Range: 6c512
+	Range: 7c512
 	ValidTargets: Air, AirSmall
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air, AirSmall
@@ -632,7 +632,7 @@ MGattG:
 	-Report:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 300
+		Damage: 330
 		Versus:
 			None: 160
 			Wood: 35

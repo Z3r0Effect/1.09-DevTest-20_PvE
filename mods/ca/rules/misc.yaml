@@ -1434,7 +1434,7 @@ shadow.beacon.camera:
 		Type: ShadowBeacon
 		TargetTypes: ShadowBeaconAttachable
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c0
 		Type: GroundPosition
 	DetectCloaked:
 		Range: 0c512
@@ -1467,7 +1467,7 @@ SHAB:
 		CloakSound: shad-beaconplace1.aud
 		CloakedAlpha: 1
 	RevealsShroud:
-		Range: 8c0
+		Range: 14c0
 	WithIdleAnimation:
 		Sequences: idle
 		Interval: 25
@@ -1475,7 +1475,7 @@ SHAB:
 		Weapon: AttachShadowBeacon
 	GrantTimedCondition@active:
 		Condition: active
-		Duration: 4500
+		Duration: 12000
 	KillsSelf:
 		RequiresCondition: !active
 

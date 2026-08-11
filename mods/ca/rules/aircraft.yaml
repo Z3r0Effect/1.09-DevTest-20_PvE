@@ -683,7 +683,7 @@ TRAN:
 	Health:
 		HP: 36000
 	RevealsShroud:
-		Range: 8c0
+		Range: 10c0
 		MinRange: 6c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -692,7 +692,7 @@ TRAN:
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 20
-		Speed: 135
+		Speed: 155
 		AltitudeVelocity: 0c58
 		TakeoffSounds: vospstaa.aud
 		LandingSounds: vosplana.aud
@@ -892,7 +892,7 @@ NHAW:
 	Health:
 		HP: 40000
 	RevealsShroud:
-		Range: 8c0
+		Range: 12c0
 		MinRange: 6c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -901,7 +901,7 @@ NHAW:
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 20
-		Speed: 155
+		Speed: 175
 		AltitudeVelocity: 0c58
 		TakeoffSounds: vospstaa.aud
 		LandingSounds: vosplana.aud
@@ -1091,7 +1091,7 @@ HELI:
 	Health:
 		HP: 26000
 	RevealsShroud:
-		Range: 11c0
+		Range: 13c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -1131,7 +1131,7 @@ HELI:
 		PauseOnCondition: empdisable || being-warped || blinded
 	Aircraft:
 		TurnSpeed: 18
-		Speed: 157
+		Speed: 165
 		TakeoffSounds: vhelistaa.aud
 		LandingSounds: vhelilana.aud
 	AutoTarget:
@@ -1214,7 +1214,7 @@ HIND:
 	Health:
 		HP: 36000
 	RevealsShroud:
-		Range: 11c0
+		Range: 14c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -1273,7 +1273,7 @@ HIND:
 		Armaments: primary, secondary, secondary-upg
 	Aircraft:
 		TurnSpeed: 16
-		Speed: 112
+		Speed: 145
 		TakeoffSounds: vhelistaa.aud
 		LandingSounds: vhelilana.aud
 	AutoTarget:
@@ -2105,13 +2105,13 @@ APCH:
 	Aircraft:
 		AltitudeVelocity: 0c100
 		TurnSpeed: 22
-		Speed: 168
+		Speed: 178
 		TakeoffSounds: vhelistaa.aud
 		LandingSounds: vhelilana.aud
 	Health:
 		HP: 22000
 	RevealsShroud:
-		Range: 11c0
+		Range: 13c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -2221,11 +2221,11 @@ ORCA:
 		TurnSpeed: 22
 		TakeoffSounds: orcaup1.aud
 		LandingSounds: orcadwn1.aud
-		Speed: 180
+		Speed: 190
 	Health:
 		HP: 22500
 	RevealsShroud:
-		Range: 11c0
+		Range: 14c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -2372,7 +2372,7 @@ ORCB:
 	Health:
 		HP: 32000
 	RevealsShroud:
-		Range: 11c0
+		Range: 14c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -2402,7 +2402,7 @@ ORCB:
 		CruiseAltitude: 2560
 		AltitudeVelocity: 0c120
 		TurnSpeed: 16
-		Speed: 157
+		Speed: 167
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		TakeoffSounds: orcaup1.aud
@@ -2590,7 +2590,7 @@ RAH:
 	Health:
 		HP: 22000
 	RevealsShroud:
-		Range: 10c0
+		Range: 13c0
 		MinRange: 8c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -2617,7 +2617,7 @@ RAH:
 	Aircraft:
 		AltitudeVelocity: 0c100
 		TurnSpeed: 18
-		Speed: 157
+		Speed: 168
 		TakeoffSounds: vhelistaa.aud
 		LandingSounds: vhelilana.aud
 		Voice: Move
@@ -2744,7 +2744,7 @@ KIRO:
 	Armor:
 		Type: Aircraft
 	RevealsShroud:
-		Range: 10c0
+		Range: 13c0
 		MinRange: 8c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -2800,7 +2800,7 @@ KIRO:
 		CruiseAltitude: 2c0
 		InitialFacing: 192
 		TurnSpeed: 12
-		Speed: 58
+		Speed: 62
 		Voice: Move
 		AltitudeVelocity: 0c50
 		CanForceLand: False
@@ -2857,8 +2857,8 @@ KIRO:
 		Bounds: 1536, 1194, 0, 85
 		DecorationBounds: 1706, 1706, 0, 42
 	ChangesHealth:
-		PercentageStep: 1
-		Delay: 25
+		PercentageStep: 4
+		Delay: 50
 		StartIfBelow: 75
 		DamageCooldown: 100
 	Voiced:
@@ -2947,7 +2947,7 @@ OCAR:
 		AltitudeVelocity: 0c100
 		IdealSeparation: 0c768
 		TurnSpeed: 20
-		Speed: 236
+		Speed: 240
 		TakeoffSounds: dropup1.aud
 		LandingSounds: dropdwn1.aud
 		Repulsable: True
@@ -2961,14 +2961,14 @@ OCAR:
 		AllowDropOff: True
 		CarryCondition: carrying
 	SpeedMultiplier@carrying:
-		Modifier: 80
+		Modifier: 90
 		RequiresCondition: carrying
 	Health:
 		HP: 35000
 	Armor:
 		Type: Aircraft
 	RevealsShroud:
-		Range: 9c0
+		Range: 11c0
 		MinRange: 7c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -3168,7 +3168,7 @@ HARR:
 	Health:
 		HP: 30000
 	RevealsShroud:
-		Range: 12c0
+		Range: 14c0
 		MinRange: 10c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -3192,7 +3192,7 @@ HARR:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 18
-		Speed: 201
+		Speed: 205
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		CanHover: False
@@ -3293,7 +3293,7 @@ SCRN:
 	Health:
 		HP: 27000
 	RevealsShroud:
-		Range: 12c0
+		Range: 14c0
 		MinRange: 10c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -3333,7 +3333,7 @@ SCRN:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 20
-		Speed: 235
+		Speed: 225
 		IdleSpeed: 135
 		IdleTurnSpeed: 30
 		RepulsionSpeed: 40
@@ -3661,7 +3661,7 @@ VENM:
 		TurnSpeed: 24
 		TakeoffSounds: orcaup1.aud
 		LandingSounds: orcadwn1.aud
-		Speed: 180
+		Speed: 186
 		Voice: Move
 	Voiced:
 		VoiceSet: VenomVoice
@@ -3670,7 +3670,7 @@ VENM:
 	Health:
 		HP: 21500
 	RevealsShroud:
-		Range: 11c0
+		Range: 14c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -3965,7 +3965,7 @@ PMAK:
 	Health:
 		HP: 44000
 	RevealsShroud:
-		Range: 12c0
+		Range: 15c0
 		MinRange: 10c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -3991,7 +3991,7 @@ PMAK:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 14
-		Speed: 157
+		Speed: 160
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		CanHover: False
@@ -4113,7 +4113,7 @@ BEAG:
 	Health:
 		HP: 26000
 	RevealsShroud:
-		Range: 12c0
+		Range: 14c0
 		MinRange: 10c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -4138,7 +4138,7 @@ BEAG:
 		CruiseAltitude: 2560
 		TurnSpeed: 20
 		IdleTurnSpeed: 16
-		Speed: 225
+		Speed: 230
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		CanHover: False
@@ -4240,7 +4240,7 @@ PHAN:
 	Health:
 		HP: 22000
 	RevealsShroud:
-		Range: 11c0
+		Range: 14c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -4263,7 +4263,7 @@ PHAN:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 16
-		Speed: 225
+		Speed: 230
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		CanHover: False
@@ -4374,7 +4374,7 @@ KAMV:
 	Health:
 		HP: 48000
 	RevealsShroud:
-		Range: 11c0
+		Range: 14c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -4398,7 +4398,7 @@ KAMV:
 		PauseOnCondition: empdisable || being-warped || blinded
 	Aircraft:
 		TurnSpeed: 16
-		Speed: 112
+		Speed: 130
 		TakeoffSounds: vospstaa.aud
 		LandingSounds: vosplana.aud
 	AutoTarget:
@@ -4499,7 +4499,7 @@ SHDE:
 	Health:
 		HP: 22000
 	RevealsShroud:
-		Range: 11c0
+		Range: 14c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -4518,7 +4518,7 @@ SHDE:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 20
-		Speed: 225
+		Speed: 230
 		IdleSpeed: 135
 		IdleTurnSpeed: 15
 		RepulsionSpeed: 40
@@ -4631,7 +4631,7 @@ VERT:
 	Health:
 		HP: 24000
 	RevealsShroud:
-		Range: 11c0
+		Range: 14c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -4788,11 +4788,11 @@ MCOR:
 		TurnSpeed: 14
 		TakeoffSounds: dropup1.aud
 		LandingSounds: dropdwn1.aud
-		Speed: 120
+		Speed: 135
 	Health:
 		HP: 30000
 	RevealsShroud:
-		Range: 10c0
+		Range: 12c0
 		MinRange: 8c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -4865,7 +4865,7 @@ DISC:
 	Health:
 		HP: 65000
 	RevealsShroud:
-		Range: 11c0
+		Range: 14c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -4879,7 +4879,7 @@ DISC:
 			ResourceDrainable: Steal
 		DefaultVoice: Attack
 	Aircraft:
-		Speed: 60
+		Speed: 67
 		CruiseAltitude: 2560
 		AltitudeVelocity: 0c100
 		TurnSpeed: 512

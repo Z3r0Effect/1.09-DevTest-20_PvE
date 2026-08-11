@@ -3168,7 +3168,7 @@ STMR:
 	Shielded:
 		MaxStrength: 10000
 	RevealsShroud:
-		Range: 11c0
+		Range: 14c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -3196,7 +3196,7 @@ STMR:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 22
-		Speed: 157
+		Speed: 167
 		IdleSpeed: 135
 		IdleTurnSpeed: 15
 		RepulsionSpeed: 40
@@ -3309,7 +3309,7 @@ TORM:
 	Shielded:
 		MaxStrength: 5500
 	RevealsShroud:
-		Range: 11c0
+		Range: 14c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -3337,8 +3337,8 @@ TORM:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 40
-		Speed: 201
-		IdleSpeed: 146
+		Speed: 212
+		IdleSpeed: 136
 		IdleTurnSpeed: 15
 		RepulsionSpeed: 40
 		MaximumPitch: 56
@@ -3452,7 +3452,7 @@ ENRV:
 	Shielded:
 		MaxStrength: 7500
 	RevealsShroud:
-		Range: 12c0
+		Range: 15c0
 		MinRange: 10c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -3474,7 +3474,7 @@ ENRV:
 		PauseOnCondition: empdisable || being-warped || blinded
 	Aircraft:
 		TurnSpeed: 24
-		Speed: 225
+		Speed: 230
 		InitialFacing: 768
 		TakeoffSounds: dropup1.aud
 		LandingSounds: dropdwn1.aud
@@ -3596,7 +3596,7 @@ DEVA:
 		Type: Circle
 			Radius: 1c256
 	RevealsShroud:
-		Range: 10c0
+		Range: 16c0
 		MinRange: 8c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -3661,7 +3661,7 @@ DEVA:
 		CruiseAltitude: 2c768
 		InitialFacing: 768
 		TurnSpeed: 16
-		Speed: 60
+		Speed: 67
 		AltitudeVelocity: 0c50
 		CanForceLand: False
 	Selectable:
@@ -3743,7 +3743,7 @@ PAC:
 		Type: Circle
 			Radius: 1c256
 	RevealsShroud:
-		Range: 11c0
+		Range: 14c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -3757,7 +3757,7 @@ PAC:
 		CruiseAltitude: 2c768
 		InitialFacing: 768
 		TurnSpeed: 16
-		Speed: 60
+		Speed: 67
 		AltitudeVelocity: 0c50
 		CanForceLand: False
 	Selectable:
@@ -3987,7 +3987,7 @@ MSHP:
 		Type: Circle
 			Radius: 2c768
 	RevealsShroud:
-		Range: 13c0
+		Range: 15c0
 		MinRange: 11c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -4020,7 +4020,7 @@ MSHP:
 		CruiseAltitude: 3c512
 		InitialFacing: 768
 		TurnSpeed: 512
-		Speed: 60
+		Speed: 67
 		AltitudeVelocity: 0c50
 		CanForceLand: False
 		Voice: Move

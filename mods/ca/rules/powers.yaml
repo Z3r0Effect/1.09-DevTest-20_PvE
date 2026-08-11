@@ -1233,9 +1233,9 @@
 ^AdvancedRadarPower:
 	GrantPrerequisiteChargeDrainPowerCA@RADAR:
 		OrderName: advradarorder
-		DischargeModifier: 600
+		DischargeModifier: 400
 		Prerequisite: scan-active
-		ChargeInterval: 2500
+		ChargeInterval: 4500
 		Icon: arscan
 		IconPalette: chrometd
 		Name: Advanced Radar Scan
@@ -1249,7 +1249,7 @@
 		InsufficientPowerSpeechNotification: InsufficientPower
 		EndChargeTextNotification: Advanced Radar Scan ready.
 		Prerequisites: ~techlevel.high
-		EarlyDeactivationPenalty: 1000
+		EarlyDeactivationPenalty: 500
 		SupportPowerPaletteOrder: 30
 
 ^NaniteShieldPower:

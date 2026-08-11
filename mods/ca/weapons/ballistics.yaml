@@ -833,9 +833,25 @@ GrenadeJJ:
 			None: 100
 			Wood: 75
 			Concrete: 75
-			Heavy: 15
-			Light: 90
+			Heavy: 20
+			Light: 80
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigated, AirToGround
+
+EMPGrenadeJJ:
+	Inherits: GrenadeJJ
+	Warhead@2emp: GrantExternalConditionCA
+		Range: 512
+		Duration: 40
+		Condition: empdisable
+		ValidTargets: Vehicle, Ship, Structure
+		InvalidTargets: EmpImmune
+	Warhead@3Eff: CreateEffect
+		-ImpactSounds:
+	Warhead@6Eff: CreateEffect
+		Image: sparks_overlay
+		Explosions: idle
+		ExplosionPalette: tseffect-ignore-lighting-alpha75
+		ImpactSounds: expnew16.aud
 
 EMPGrenade:
 	Inherits: Grenade
@@ -846,7 +862,7 @@ EMPGrenade:
 			Concrete: 85
 		DamageTypes: Prone50Percent, TriggerProne, ElectricityDeath
 	Warhead@5emp: GrantExternalConditionCA
-		Range: 1c512
+		Range: 1c128
 		Duration: 40
 		Condition: empdisable
 		ValidTargets: Vehicle, Ship, Structure

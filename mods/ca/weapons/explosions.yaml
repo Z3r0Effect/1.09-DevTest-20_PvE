@@ -923,18 +923,21 @@ MEMP:
 		Range: 5c0
 		Duration: 300
 		Condition: empdisable
+		ValidRelationships: Enemy, Neutral
 		ValidTargets: Vehicle, Ship, Building
 		InvalidTargets: EmpImmune
 	Warhead@empdef: GrantExternalConditionCA
 		Range: 5c0
 		Duration: 600
 		Condition: empdisable
+		ValidRelationships: Enemy, Neutral
 		ValidTargets: Defense
 		InvalidTargets: EmpImmune
 	Warhead@empAir: GrantExternalConditionCA
 		Range: 2c0
 		Duration: 300
 		Condition: empdisable
+		ValidRelationships: Enemy, Neutral
 		ValidTargets: Air
 		InvalidTargets: EmpImmune
 		HitShapeCheck: false

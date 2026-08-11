@@ -871,25 +871,25 @@
 		Modifier: 94
 	DamageMultiplier@HOLD3:
 		RequiresCondition: hold3
-		Modifier: 94
+		Modifier: 92
 	FirepowerMultiplier@BOMBARD:
 		RequiresCondition: bombard
-		Modifier: 104
+		Modifier: 105
 	FirepowerMultiplier@BOMBARD2:
 		RequiresCondition: bombard2
-		Modifier: 104
+		Modifier: 105
 	FirepowerMultiplier@BOMBARD3:
 		RequiresCondition: bombard3
-		Modifier: 104
+		Modifier: 106
 	ReloadDelayMultiplier@BOMBARD:
 		RequiresCondition: bombard
-		Modifier: 96
+		Modifier: 95
 	ReloadDelayMultiplier@BOMBARD2:
 		RequiresCondition: bombard2
-		Modifier: 96
+		Modifier: 95
 	ReloadDelayMultiplier@BOMBARD3:
 		RequiresCondition: bombard3
-		Modifier: 96
+		Modifier: 94
 	RangeMultiplier@SEEK:
 		RequiresCondition: seek
 		Modifier: 106
@@ -904,10 +904,10 @@
 		Modifier: 106
 	RangeMultiplier@SEEK3:
 		RequiresCondition: seek3
-		Modifier: 106
+		Modifier: 108
 	SpeedMultiplier@SEEK3:
 		RequiresCondition: seek3
-		Modifier: 106
+		Modifier: 108
 	WithDecoration@HOLD:
 		Image: pips
 		Sequence: pip-armor
@@ -1181,10 +1181,10 @@
 
 ^AuraHealable:
 	ChangesHealth@HOSPITAL:
-		Step: 500
+		Step: 800
 		Delay: 75
 		StartIfBelow: 100
-		DamageCooldown: 100
+		DamageCooldown: 75
 		RequiresCondition: hospitalheal
 	ExternalCondition@HOSPITAL:
 		Condition: hospitalheal
@@ -1212,10 +1212,10 @@
 
 ^AuraRepairable:
 	ChangesHealth@MACS:
-		Step: 500
+		Step: 800
 		Delay: 75
 		StartIfBelow: 100
-		DamageCooldown: 100
+		DamageCooldown: 75
 		RequiresCondition: macsrepair
 	ExternalCondition@MACS:
 		Condition: macsrepair
@@ -1463,7 +1463,7 @@
 
 ^NaniteRepair:
 	ChangesHealth@NREPAIR:
-		PercentageStep: 5
+		PercentageStep: 10
 		Delay: 25
 		StartIfBelow: 100
 		DamageCooldown: 0
@@ -2480,7 +2480,7 @@
 		Condition: defense-policy3
 		Prerequisites: defense.policy, influence.level3
 	FirepowerMultiplier@DefensePolicyDamage:
-		Modifier: 135
+		Modifier: 130
 		RequiresCondition: defense-policy3
 
 ^DefensePolicyGapBonus:
@@ -2488,7 +2488,7 @@
 		Condition: defense-policy3
 		Prerequisites: defense.policy, influence.level3
 	CreatesShroudMultiplier@DefencePolicyShroud:
-		Modifier: 125
+		Modifier: 135
 		RequiresCondition: defense-policy3
 
 ^DevelopmentPolicyVeterancyBonus:
@@ -2528,7 +2528,7 @@
 		Prerequisites: indp, !indplowpower
 	ReloadDelayMultiplier@IndustrialPlantBoost:
 		RequiresCondition: indp-boost
-		Modifier: 90
+		Modifier: 85
 	ProductionTimeMultiplier@MunitionsPlantBoost:
 		Multiplier: 85
 		Prerequisites: munp, !munplowpower
@@ -2683,7 +2683,7 @@
 		WarnProbability: 0
 		RequiresCondition: !invulnerability && !being-warped
 	DamagedByTintedCells@RADSTRONG:
-		Damage: 115
+		Damage: 120
 		DamageInterval: 16
 		DamageTypes: RadiationDeath
 		LayerName: radioactivity.strong
@@ -2692,7 +2692,7 @@
 		FlashAlpha: 0.25
 		FlashDuration: 3
 	DamagedByTintedCells@RADMED:
-		Damage: 45
+		Damage: 60
 		DamageInterval: 16
 		DamageTypes: RadiationDeath
 		LayerName: radioactivity.medium
@@ -2842,7 +2842,7 @@
 		RevokeDelay: 200
 	DamagedByTerrainCA@TIBDAMAGE:
 		Terrain: Tiberium, BlueTiberium, BlackTiberium
-		Damage: 175
+		Damage: 250
 		DamageInterval: 16
 		DamageTypes: ToxinDeath
 		RequiresCondition: tibexposed && !(hazmatsuits || hazmatsuits-soviet || being-warped || parachute)
@@ -2974,7 +2974,7 @@
 		DetectionTypes: Cloak
 		Range: 1c512
 	DamagedByTintedCells@RADSTRONG:
-		Damage: 750
+		Damage: 800
 		DamageInterval: 16
 		DamageTypes: RadiationDeath
 		LayerName: radioactivity.strong
@@ -2984,7 +2984,7 @@
 		FlashAlpha: 0.25
 		FlashDuration: 3
 	DamagedByTintedCells@RADSTRONGHAZMAT:
-		Damage: 375
+		Damage: 400
 		DamageInterval: 16
 		DamageTypes: RadiationDeath
 		LayerName: radioactivity.strong
@@ -3004,7 +3004,7 @@
 		FlashAlpha: 0.25
 		FlashDuration: 3
 	DamagedByTintedCells@RADMED:
-		Damage: 300
+		Damage: 350
 		DamageInterval: 16
 		DamageTypes: RadiationDeath
 		LayerName: radioactivity.medium
@@ -3014,7 +3014,7 @@
 		FlashAlpha: 0.25
 		FlashDuration: 3
 	DamagedByTintedCells@RADMEDHAZMAT:
-		Damage: 150
+		Damage: 175
 		DamageInterval: 16
 		DamageTypes: RadiationDeath
 		LayerName: radioactivity.medium
@@ -3024,7 +3024,7 @@
 		FlashAlpha: 0.25
 		FlashDuration: 3
 	DamagedByTintedCells@RADWEAK:
-		Damage: 100
+		Damage: 150
 		DamageInterval: 16
 		DamageTypes: RadiationDeath
 		LayerName: radioactivity.weak
@@ -3034,7 +3034,7 @@
 		FlashAlpha: 0.25
 		FlashDuration: 3
 	DamagedByTintedCells@RADWEAKHAZMAT:
-		Damage: 50
+		Damage: 75
 		DamageInterval: 16
 		DamageTypes: RadiationDeath
 		LayerName: radioactivity.weak
@@ -3061,7 +3061,7 @@
 		OnCrushDuration: 50
 	TeleportNetworkTransportable:
 	DamageMultiplier@MINDCONTROL:
-		Modifier: 70
+		Modifier: 65
 		RequiresCondition: mindcontrolled
 	WithIdleOverlay@LCHRHEAL:
 		Sequence: infantry
@@ -3096,11 +3096,11 @@
 		StandSequences: stand,stand2
 	DamageTypeDamageMultiplier@FLAKARMOR:
 		DamageTypes: FlakVestMitigated
-		Modifier: 60
+		Modifier: 45
 		RequiresCondition: flakarmor-upgrade
 	DamageTypeDamageMultiplier@FLAKARMORMINOR:
 		DamageTypes: FlakVestMitigatedMinor
-		Modifier: 80
+		Modifier: 75
 		RequiresCondition: flakarmor-upgrade
 	GrantConditionOnPrerequisite@FLAKARMOR:
 		Condition: flakarmor-upgrade
@@ -3181,7 +3181,7 @@
 		-BlinkPatterns:
 	AddsToReclaimableValue@Cyborg:
 		Type: Cyborg
-		ValuePercentage: 5
+		ValuePercentage: 20
 		RequiresCondition: reclaimed-fabrication
 	GrantConditionOnPrerequisite@ReclaimedFabrication:
 		Condition: reclaimed-fabrication
@@ -4347,7 +4347,7 @@
 	Inherits@1: ^SpriteActor
 	Interactable:
 	Health:
-		HP: 56000
+		HP: 60000
 	Armor:
 		Type: Heavy
 	HiddenUnderFog:
@@ -4371,9 +4371,9 @@
 		Palette: effect
 		RequiresCondition: !being-captured
 	ChangesHealth:
-		PercentageStep: -5
+		PercentageStep: -2
 		StartIfBelow: 101
-		Delay: 200
+		Delay: 250
 		RequiresCondition: !being-captured
 	OwnerLostAction:
 		Action: ChangeOwner
@@ -4384,7 +4384,7 @@
 	CapturableProgressBar:
 	CapturableProgressBlink:
 	GivesCashOnCaptureCA:
-		Amount: 1000
+		Amount: 1200
 		SuffixToRemoveForValueActor: .husk
 		ValueActorPercentage: 30
 	GrantConditionOnCapture:

@@ -653,14 +653,14 @@ Commandeer:
 		ValidTargets: NoCrew
 
 Heal:
-	ReloadDelay: 70
-	Range: 4c768
+	ReloadDelay: 65
+	Range: 6c512
 	ValidTargets: Healable
 	Projectile: InstantHit
 		Blockable: true
 	TargetActorCenter: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 213
+		Spread: 384
 		Damage: -3000
 		Falloff: 100, 52, 20, 7, 0
 		ValidRelationships: Ally
@@ -668,19 +668,19 @@ Heal:
 		DebugOverlayColor: 00FF00
 		DamageTypes: DirectHeal
 	Warhead@2Dam: TargetDamage
-		Damage: -600
+		Damage: -800
 		ValidRelationships: Ally
 		ValidTargets: Healable
 		DamageTypes: DirectHeal
 		Delay: 20
 	Warhead@3Dam: TargetDamage
-		Damage: -600
+		Damage: -800
 		ValidRelationships: Ally
 		ValidTargets: Healable
 		DamageTypes: DirectHeal
 		Delay: 30
 	Warhead@4Dam: TargetDamage
-		Damage: -600
+		Damage: -800
 		ValidRelationships: Ally
 		ValidTargets: Healable
 		DamageTypes: DirectHeal
@@ -720,10 +720,11 @@ CustodianHeal:
 
 Repair:
 	Inherits: Heal
-	Range: 4c512
+	Range: 6c512
 	ValidTargets: Repairable
 	Warhead@1Dam: SpreadDamage
-		Damage: -3800
+		Spread: 512
+		Damage: -4200
 		ValidTargets: Repairable
 		DamageTypes: DirectRepair
 	-Warhead@2Dam:
@@ -1163,7 +1164,7 @@ LightTankLaser:
 			None: 65
 			Wood: 45
 			Light: 100
-			Heavy: 45
+			Heavy: 80
 			Concrete: 35
 			Brick: 25
 		DamageTypes: Prone50Percent, FireDeath
@@ -1181,7 +1182,7 @@ BattleTankLaser:
 
 RaiderBuggyLaser:
 	Inherits: M60mgTD
-	Range: 6c768
+	Range: 7c768
 	ReloadDelay: 25
 	-Burst:
 	-StartBurstReport:
@@ -1200,6 +1201,9 @@ RaiderBuggyLaser:
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 3500
+		Versus:
+			Light: 95
+			Heavy: 85
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	-Warhead@2Eff:
 	Warhead@2Smu: LeaveSmudge
@@ -1499,7 +1503,7 @@ VenomLaserAA.UPG:
 
 PointLaser:
 	Inherits: Laser
-	ReloadDelay: 115
+	ReloadDelay: 85
 	ValidTargets: Ground, Water, Missile
 	InvalidTargets: Infantry, Vehicle, Structure, Wall, Ship, Submarine
 	Range: 1c768
@@ -3152,14 +3156,14 @@ Lasher:
 	Warhead@1Dam: SpreadDamage
 		Range: 0, 1c128, 1c512
 		Falloff: 100, 100, 0
-		Damage: 950
+		Damage: 1000
 		ValidTargets: Infantry
 		DamageTypes: BulletDeath, FlakVestMitigatedMinor
 		ValidRelationships: Enemy, Neutral
 
 ShadowBeaconLauncher:
 	ReloadDelay: 25
-	Range: 6c0
+	Range: 8c0
 	Report: grenade1.aud
 	Projectile: Bullet
 		Blockable: false
@@ -3176,7 +3180,7 @@ ShadowBeaconLauncher:
 
 AttachShadowBeacon:
 	Warhead@AttachCamera: AttachActor
-		Range: 341
+		Range: 128
 		Actor: shadow.beacon.camera
 		AttachSounds: shad-beacontrigger1.aud
 		MissSounds: dud1.aud
@@ -3445,7 +3449,7 @@ ViperLaser:
 
 AvatarLaser:
 	ReloadDelay: 80
-	ValidTargets: Ground, Water
+	ValidTargets: Ground, Water, Air, AirSmall
 	Range: 7c512
 	Report: oblfire.aud
 	Projectile: LaserZapCA
@@ -3461,16 +3465,22 @@ AvatarLaser:
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 26000
+		ValidTargets: Ground, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 		Versus:
 			None: 250
 			Wood: 60
 			Concrete: 55
 			Brick: 50
-	Warhead@2Smu: LeaveSmudge
+	Warhead@2Dam: SpreadDamage
+		Spread: 128
+		Damage: 7000
+		ValidTargets: Air, AirSmall
+		InvalidTargets: Ground, Water
+	Warhead@3Smu: LeaveSmudge
 		SmudgeType: Scorch-NoFlame
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
-	Warhead@3Eff: CreateEffect
+	Warhead@4Eff: CreateEffect
 		Image: laserhit
 		Explosions: idle1, idle2
 		ExplosionPalette: caneon
@@ -3726,7 +3736,7 @@ FloatingDiscResourceDrainer:
 
 ZoneTrooperRailgun:
 	ReloadDelay: 50
-	Range: 7c512
+	Range: 7c768
 	Report: ztrp-fire1.aud, ztrp-fire2.aud, ztrp-fire3.aud
 	Projectile: RailgunCA
 		Duration: 10
@@ -3753,7 +3763,7 @@ ZoneTrooperRailgun:
 
 ZoneRaiderGrenade:
 	ReloadDelay: 50
-	Range: 7c256
+	Range: 7c768
 	Report: zrai-fire1.aud, zrai-fire2.aud
 	Projectile: Bullet
 		Speed: 700
@@ -3789,7 +3799,7 @@ ZoneRaiderGrenade:
 		ValidTargets: Water, Underwater
 		InvalidTargets: Ship, Structure, Bridge
 	Warhead@Concussion: GrantExternalConditionCA
-		Range: 0c512
+		Range: 1c0
 		Duration: 50
 		Condition: concussion
 		ValidTargets: Infantry, Vehicle, Ship
@@ -3977,6 +3987,7 @@ BasiliskPulse:
 		Range: 0c511
 		Duration: 100
 		Condition: empdisable
+		ValidRelationships: Enemy, Neutral
 		ValidTargets: Vehicle, Ship, Structure
 		InvalidTargets: EmpImmune
 
