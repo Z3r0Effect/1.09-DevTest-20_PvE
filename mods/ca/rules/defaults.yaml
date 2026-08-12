@@ -2424,29 +2424,29 @@
 
 ^EconomyPolicyDiscount:
 	ProductionCostMultiplier@EconomyPolicy1:
-		Multiplier: 82
+		Multiplier: 80
 		Prerequisites: economy.policy, influence.level1, !influence.level2
 	ProductionCostMultiplier@EconomyPolicy2:
-		Multiplier: 77
+		Multiplier: 75
 		Prerequisites: economy.policy, influence.level2, !influence.level3
 	ProductionCostMultiplier@EconomyPolicy3:
-		Multiplier: 72
+		Multiplier: 75
 		Prerequisites: economy.policy, influence.level3
 
 ^EconomyPolicyTimeReduction:
 	ProductionTimeMultiplier@EconomyPolicy1:
-		Multiplier: 82
+		Multiplier: 80
 		Prerequisites: economy.policy, influence.level1, !influence.level2
 	ProductionTimeMultiplier@EconomyPolicy2:
-		Multiplier: 77
+		Multiplier: 75
 		Prerequisites: economy.policy, influence.level2, !influence.level3
 	ProductionTimeMultiplier@EconomyPolicy3:
-		Multiplier: 72
+		Multiplier: 75
 		Prerequisites: economy.policy, influence.level3
 
 ^EconomyPolicyMcvSpeedBonus:
 	SpeedMultiplier@EconomyPolicy2:
-		Modifier: 125
+		Modifier: 130
 		RequiresCondition: economy-policy2
 	GrantConditionOnPrerequisite@EconomyPolicy2:
 		Condition: economy-policy2
@@ -2460,15 +2460,15 @@
 		Condition: defense-policy2
 		Prerequisites: defense.policy, influence.level2
 	DamageMultiplier@DefensePolicy1:
-		Modifier: 87
+		Modifier: 83
 		RequiresCondition: defense-policy1 && !defense-policy2
 	DamageMultiplier@DefensePolicy2:
-		Modifier: 77
+		Modifier: 74
 		RequiresCondition: defense-policy2
 	ChangesHealth@DefensePolicyRepairs:
-		Step: 275
+		Step: 260
 		StartIfBelow: 100
-		Delay: 14
+		Delay: 24
 		DamageCooldown: 0
 		RequiresCondition: defense-policy2 && being-repaired
 	RevealsShroudMultiplier@DefensePolicyVision:
@@ -4371,9 +4371,9 @@
 		Palette: effect
 		RequiresCondition: !being-captured
 	ChangesHealth:
-		PercentageStep: -2
+		PercentageStep: -1
 		StartIfBelow: 101
-		Delay: 250
+		Delay: 500
 		RequiresCondition: !being-captured
 	OwnerLostAction:
 		Action: ChangeOwner
@@ -4384,7 +4384,7 @@
 	CapturableProgressBar:
 	CapturableProgressBlink:
 	GivesCashOnCaptureCA:
-		Amount: 1200
+		Amount: 1000
 		SuffixToRemoveForValueActor: .husk
 		ValueActorPercentage: 30
 	GrantConditionOnCapture:

@@ -276,6 +276,7 @@ flags:
 		RandomGDI: 0, 48, 30, 15
 		RandomNOD: 0, 64, 30, 15
 		RandomScrin: 0, 80, 30,15
+		RandomNoScrin: 0, 0, 30,15
 		Random: 0, 0, 30, 15
 		spectator: 0, 0, 30, 15
 

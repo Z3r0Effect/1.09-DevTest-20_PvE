@@ -2269,8 +2269,8 @@ OrcaBombBuilding:
 MicrowaveZap:
 	ValidTargets: Ground, Water
 	TargetActorCenter: true
-	ReloadDelay: 100
-	Range: 8c512
+	ReloadDelay: 125
+	Range: 8c128
 	Report: corefir1.aud
 	Projectile: Railgun
 		Duration: 5
@@ -3150,13 +3150,13 @@ DummyWeapon:
 
 Lasher:
 	ReloadDelay: 3
-	Range: 2c0
+	Range: 3c512
 	ValidTargets: Ground, Water
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-		Range: 0, 1c128, 1c512
+		Range: 1c0, 1c256, 1c512
 		Falloff: 100, 100, 0
-		Damage: 1000
+		Damage: 1500
 		ValidTargets: Infantry
 		DamageTypes: BulletDeath, FlakVestMitigatedMinor
 		ValidRelationships: Enemy, Neutral

@@ -137,9 +137,9 @@ MGatt:
 	-Report:
 	Range: 7c512
 	Warhead@1Dam: SpreadDamage
-		Damage: 665
+		Damage: 680
 	Warhead@smallDamage: SpreadDamage
-		Damage: 665
+		Damage: 680
 	Warhead@2Eff: CreateEffect
 		Explosions: piff, piff2
 		ValidTargets: Air, AirSmall

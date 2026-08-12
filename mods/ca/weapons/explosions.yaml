@@ -495,8 +495,8 @@ TibExplosion:
 CrateNuke:
 	ValidTargets: Ground, Trees, Water, Air
 	Warhead@1Dam_impact: SpreadDamage
-		Spread: 3c0
-		Damage: 5000
+		Spread: 4c128
+		Damage: 10000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Trees, Water, Air
 		AffectsParent: true
@@ -507,8 +507,8 @@ CrateNuke:
 		ImpactSounds: kaboom1.aud
 		ImpactActors: false
 	Warhead@4Dam_areanuke1: SpreadDamage
-		Spread: 3c0
-		Damage: 3000
+		Spread: 4c128
+		Damage: 6000
 		Falloff: 1000, 600, 400, 250, 150, 100, 0
 		Delay: 5
 		ValidTargets: Ground, Trees, Water, Air

@@ -407,6 +407,12 @@
 		RandomFactionMembers: blackh, marked, legion, shadow
 		Side: Random
 		Description: faction-randomnod.description
+	Faction@randomnoscrin:
+		Name: faction-randomnoscrin.name
+		InternalName: RandomNoScrin
+		RandomFactionMembers: RandomAllies, RandomSoviet, RandomGDI, RandomNOD
+		Side: Random
+		Description: faction-randomnoscrin.description
 	Faction@randomscrin:
 		Name: faction-randomscrin.name
 		InternalName: RandomScrin

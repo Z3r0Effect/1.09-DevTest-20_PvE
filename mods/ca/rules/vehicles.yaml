@@ -300,7 +300,7 @@ NUKC:
 	WithSpriteTurret:
 		Sequence: turret
 	Turreted:
-		TurnSpeed: 6
+		TurnSpeed: 12
 		InitialFacing: 0
 		RealignDelay: 3
 		PauseOnCondition: !deployed
@@ -5906,7 +5906,7 @@ BTR:
 		Prerequisites: reactive.upgrade
 		Condition: reactive-upgrade
 	DamageMultiplier@ReactiveArmor:
-		Modifier: 90
+		Modifier: 85
 		RequiresCondition: reactive-upgrade
 	ReplacedInQueue:
 		Actors: btr.yuri
@@ -5988,13 +5988,13 @@ BTR.YURI:
 		CasingSpawnLocalOffset: 0,225,200, 0,-225,200
 		CasingTargetOffset: 0, 600, 0, 0, -600, 0
 	FirepowerMultiplier@GAT1:
-		Modifier: 115
+		Modifier: 120
 		RequiresCondition: (attacking-air && gattling >= 1 && gattling < 3) || (attacking-ground && gattling-ground >= 1 && gattling-ground < 5)
 	FirepowerMultiplier@GAT2:
-		Modifier: 130
+		Modifier: 135
 		RequiresCondition: (attacking-air && gattling >= 3 && gattling < 7) || (attacking-ground && (gattling-ground >= 5 && (gattling-ground < 10 || !rank-elite)))
 	FirepowerMultiplier@GAT3:
-		Modifier: 145
+		Modifier: 150
 		RequiresCondition: (attacking-air && gattling >= 7 || (attacking-ground && (gattling-ground >= 10 && rank-elite)))
 	AmbientSoundCA@ATTACKSOUNDINITIAL:
 		SoundFiles: vgatlo1a.aud
@@ -8615,7 +8615,7 @@ WTNK:
 		Name: Microwave Tank
 		GenericName: Tank
 	Health:
-		HP: 38000
+		HP: 35000
 	Armor:
 		Type: Light
 	Mobile:
@@ -10711,8 +10711,7 @@ AVTR:
 		Description: Heavy mech armed with a powerful laser and a flamethrower.
 		IconPalette: chrometd
 	TooltipExtras:
-		Strengths: • Strong vs Heavy Armor, Light Armor, Infantry
-		Weaknesses: • Cannot attack Aircraft
+		Strengths: • Strong vs Heavy Armor, Light Armor, Infantry; can attack Aircraft
 		Attributes: • Can crush smaller vehicles and concrete walls\n• Self repairs to 50% out of combat
 	Valued:
 		Cost: 2000

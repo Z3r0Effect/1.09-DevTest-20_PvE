@@ -295,14 +295,14 @@
 
 152mm:
 	Inherits: ^Cannon
-	ReloadDelay: 95
+	ReloadDelay: 100
 	Report: vapoat1a.aud
-	Range: 6c512
+	Range: 7c128
 	Burst: 2
 	BurstDelays: 8
 	Warhead@1Dam: SpreadDamage
 		Damage: 4500
-		Spread: 256
+		Spread: 512
 		Falloff: 368, 184, 80, 18, 0
 		Versus:
 			None: 40
@@ -591,7 +591,7 @@ NukeCannonDeployer:
 	Range: 18c0
 	TargetActorCenter: true
 	Projectile: Bullet
-		Speed: 200
+		Speed: 220
 		Image: 280mma
 		LaunchAngle: 92
 		Inaccuracy: 554

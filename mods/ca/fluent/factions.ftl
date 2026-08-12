@@ -404,6 +404,11 @@ faction-random =
     .description = Random Faction
     A random faction will be chosen when the game starts.
 
+faction-randomnoscrin =
+    .name = NoScrin
+    .description = Any Faction Not Scrin
+    Randomly selects an Allied, Soviet, GDI, or Nod faction.
+
 faction-allies =
     .name = Allies
     .description = Allies
