@@ -1287,18 +1287,18 @@
 		Palette: gyro
 	RangeMultiplier@GYRO:
 		RequiresCondition: gyrostabilizers
-		Modifier: 133
+		Modifier: 135
 	ReloadDelayMultiplier@GYRO:
 		RequiresCondition: gyrostabilizers
-		Modifier: 115
+		Modifier: 85
 	TimedConditionBar@GYRO:
 		Condition: gyrostabilizers
 	ExternalCondition@GYRO:
 		Condition: gyrostabilizers
 	GrantTimedConditionOnDeploy@GYRO:
 		DeployedCondition: gyrostabilizers
-		CooldownTicks: 950
-		DeployedTicks: 550
+		CooldownTicks: 750
+		DeployedTicks: 500
 		StartsFullyCharged: true
 		ChargingColor: 808000
 		DischargingColor: ffff00

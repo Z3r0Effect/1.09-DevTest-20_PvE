@@ -883,10 +883,15 @@ E7:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 22000
+		HP: 18000
 	Mobile:
 		Speed: 69
 		Voice: Move
+	GrantConditionOnMovement@TANYAEVASION:
+		Condition: moving
+	DamageMultiplier@TANYAEVASION:
+		Modifier: 10
+		RequiresCondition: moving
 	Guard:
 		Voice: Move
 	AttackMove:
@@ -931,7 +936,7 @@ E7:
 	AnnounceOnKill:
 	IgnoresDisguise:
 	DetectCloaked:
-		Range: 2c0
+		Range: 5c0
 	Voiced:
 		VoiceSet: TanyaVoice
 	ProducibleWithLevel:
@@ -2051,7 +2056,7 @@ RMBO:
 	Guard:
 		Voice: Move
 	Health:
-		HP: 24000
+		HP: 19000
 	Passenger:
 		CustomPipType: red
 		Voice: Move
@@ -2065,8 +2070,8 @@ RMBO:
 		Name: batf
 		Weapon: smgBATF
 		MuzzleSequence: garrison-muzzle
-	Armament@sapper:
-		Weapon: PlaceC4
+	Armament@BOMB:
+		Weapon: Commandobomb
 		Cursor: c4
 		OutsideRangeCursor: c4
 		Name: secondary
@@ -2083,10 +2088,6 @@ RMBO:
 		AttackSequences:
 			primary: shoot
 			secondary: stand
-	Demolition:
-		DetonationDelay: 45
-		Voice: Demolish
-		DamageTypes: ExplosionDeath
 	ExternalCondition@PRODUCED:
 		Condition: produced
 	VoiceAnnouncement:
@@ -2102,7 +2103,7 @@ RMBO:
 		Prerequisites: barracks.upgraded
 	IgnoresDisguise:
 	DetectCloaked:
-		Range: 2c0
+		Range: 5c0
 	Targetable@Hero:
 		TargetTypes: Hero
 	Targetable@MindControlImmune:
@@ -2364,7 +2365,7 @@ BORI:
 	AnnounceOnKill:
 	IgnoresDisguise:
 	DetectCloaked:
-		Range: 2c0
+		Range: 7c0
 	Voiced:
 		VoiceSet: BorisVoice
 	ProducibleWithLevel:

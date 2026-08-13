@@ -7727,7 +7727,7 @@ JUGG:
 	RangeMultiplier@GYRO:
 		Modifier: 135
 	ReloadDelayMultiplier@GYRO:
-		Modifier: 135
+		Modifier: 85
 	Carryable:
 		LocalOffset: 0,0,700
 	-Crushable:
@@ -9698,7 +9698,7 @@ WOLV:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 48000
+		HP: 50000
 	Armor:
 		Type: Light
 	Mobile:
@@ -9747,7 +9747,7 @@ WOLV:
 	RangeMultiplier@GYRO:
 		Modifier: 150
 	ReloadDelayMultiplier@GYRO:
-		Modifier: 150
+		Modifier: 90
 	Encyclopedia:
 		Category: GDI/Vehicles
 	EncyclopediaExtras:

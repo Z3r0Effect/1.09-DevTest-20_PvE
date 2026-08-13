@@ -853,6 +853,70 @@ C4:
 AssassinC4:
 	Inherits: C4
 
+Commandobomb:
+	Inherits: ^Artillery
+	ValidTargets: Vehicle, Structure
+	InvalidTargets: C4Attached, C4Immune
+	ReloadDelay: 180
+	Range: 5c512
+	Report: grenade1.aud
+	Projectile: Bullet
+		LaunchAngle: 70
+		Speed: 180
+		Inaccuracy: 0
+		Image: TNT
+		ContrailLength: 6
+		ContrailStartColor: FF9900
+		ContrailStartColorAlpha: 192
+		ContrailEndColor: FF0000
+		ContrailStartWidth: 0c40
+	Warhead@AttachDelayedWeapon: AttachDelayedWeapon
+		Weapon: CommandoTNT
+		Type: tnt
+		TriggerTime: 200
+		DeathTypes: ExplosionDeath
+		Range: 1
+		AttachSounds: icraatta.aud
+		MissWeapon: CommandoTNT
+	Warhead@TargetValidator: SpreadDamage
+	Warhead@Flash: FlashTarget
+		Spread: 0c256
+		Color: ffffff
+		ValidTargets: Vehicle, Structure
+	-Warhead@1Dam:
+	-Warhead@2Smu:
+	Warhead@3Eff: CreateEffect
+		Explosions: piff
+		ImpactSounds: dud1.aud
+	-Warhead@4EffWater:
+
+CommandoTNT:
+	Projectile: InstantHit
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 18000
+		Falloff: 1000, 600, 250, 75, 0
+		ValidTargets: Ground, Vehicle, Structure
+		Versus:
+			None: 15
+			Wood: 100
+			Light: 110
+			Heavy: 85
+			Concrete: 55
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: building, building2
+		ImpactSounds: expnew06.aud
+		ValidTargets: Ground, Water
+	Warhead@Smu: LeaveSmudge
+		SmudgeType: Crater
+		InvalidTargets: Structure, Wall, Trees
+	Warhead@Flames: FireCluster
+		Weapon: BurnFx
+		RandomClusterCount: 3
+		Dimensions: 3,3
+		Footprint: xxx xxx xxx
+
 Ivanbomb:
 	Inherits: ^Artillery
 	ValidTargets: Ground, TNTPlantable
@@ -2091,7 +2155,7 @@ TitanRailgun:
 		PassthroughToMaxRange: true
 		PassthroughMinDistance: 2c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
+		Spread: 256
 		Damage: 7500
 		Versus:
 			None: 30
@@ -2101,7 +2165,7 @@ TitanRailgun:
 			Concrete: 60
 		ValidRelationships: Enemy, Neutral
 	Warhead@2Dam: SpreadDamage
-		Damage: 1200
+		Damage: 1000
 		Versus:
 			None: 30
 			Wood: 70
@@ -2119,7 +2183,7 @@ TitanRailgunImpact:
 	-Warhead@2Dam:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-		Damage: 12000
+		Damage: 14000
 		ValidRelationships: Enemy, Neutral, Ally
 
 IonZap:
@@ -3736,7 +3800,7 @@ FloatingDiscResourceDrainer:
 
 ZoneTrooperRailgun:
 	ReloadDelay: 50
-	Range: 7c768
+	Range: 7c128
 	Report: ztrp-fire1.aud, ztrp-fire2.aud, ztrp-fire3.aud
 	Projectile: RailgunCA
 		Duration: 10
@@ -3809,7 +3873,7 @@ ZoneRaiderGrenade:
 
 ZoneDefenderGun:
 	ReloadDelay: 50
-	Range: 7c768
+	Range: 7c512
 	Report: ionrifle1.aud, ionrifle2.aud
 	Projectile: LaserZap
 		Width: 38

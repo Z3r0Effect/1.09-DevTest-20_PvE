@@ -747,12 +747,13 @@ JuggernautGun:
 	Inherits: ^Artillery
 	MinRange: 3c0
 	ReloadDelay: 100
-	Range: 10c0
+	Range: 9c512
+	Projectile: Bullet
+		Speed: 235
+		Inaccuracy: 1c128
 	Burst: 3
 	StartBurstReport: jugger1.aud
 	TargetActorCenter: true
-	Projectile: Bullet
-		Inaccuracy: 1c138
 	Warhead@1Dam: SpreadDamage
 		Spread: 348
 		Damage: 1500
@@ -840,7 +841,7 @@ GrenadeJJ:
 EMPGrenadeJJ:
 	Inherits: GrenadeJJ
 	Warhead@2emp: GrantExternalConditionCA
-		Range: 512
+		Range: 256
 		Duration: 40
 		Condition: empdisable
 		ValidTargets: Vehicle, Ship, Structure

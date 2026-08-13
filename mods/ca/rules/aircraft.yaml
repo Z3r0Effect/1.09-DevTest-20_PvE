@@ -1529,7 +1529,7 @@ A10:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 38000
+		HP: 40000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -1559,7 +1559,7 @@ A10:
 		CruiseAltitude: 2560
 		InitialFacing: 192
 		TurnSpeed: 16
-		Speed: 195
+		Speed: 185
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		TakeoffSounds: migtoff1.aud, cjetbanb.aud, cjetbanc.aud
@@ -1664,7 +1664,7 @@ A10:
 	WithDecoration@UpgradeOverlay:
 		RequiresCondition: !airborne && !resupplied-for-upgrade && (sidewinders-upgrade || avenger-upgrade)
 	DamageMultiplier@Ceramic:
-		Modifier: 85
+		Modifier: 80
 		RequiresCondition: ceramic-upgrade
 	Encyclopedia:
 		Category: GDI/Aircraft
@@ -1695,6 +1695,8 @@ A10.SW:
 		Weapon: Sidewinder
 		LocalOffset: 0,500,-85, 0,-500,-85
 		PauseOnCondition: !ammo2 || bombing-run || blinded
+	Aircraft:
+		Speed: 195
 	AttackAircraftCA:
 		Armaments: primary, primarybld, secondary
 		AirFacingTolerance: 80
@@ -1785,6 +1787,8 @@ A10.GAU:
 		Weapon: Hydra.L
 		LocalOffset: 0,613,0
 		PauseOnCondition: !ammo2 || blinded
+	Aircraft:
+		Speed: 205
 	AttackAircraftCA:
 		FacingTolerance: 80
 		Armaments: primary, primarybld, secondary
@@ -1833,7 +1837,7 @@ A10.bomber:
 		CruiseAltitude: 2560
 		InitialFacing: 192
 		TurnSpeed: 16
-		Speed: 180
+		Speed: 220
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		MoveIntoShroud: False

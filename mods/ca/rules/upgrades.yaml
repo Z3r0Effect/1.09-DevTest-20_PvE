@@ -738,7 +738,7 @@ gyro.upgrade:
 		IconPalette: chrometd
 		Description: Allows mech units to activate gyro stabilizers, increasing range but reducing rate of fire.\n\nUpgrades: Wolverine\nUpgrades: Titan\nUpgrades: Railgun Titan\nUpgrades: Juggernaut
 	TooltipExtras:
-		Strengths: + Added Gyro Stabilizers ability (increased range, reduced rate of fire)\n+ Increases Juggernaut range by 50%.
+		Strengths: + Added Gyro Stabilizers ability (increased range, increased rate of fire)\n+ Increases Juggernaut range by 50%.
 	Valued:
 		Cost: 1000
 	RenderSprites:
@@ -760,7 +760,7 @@ upgc.drop:
 		Description: Provides a dropzone for emergency supplies.
 		IconPalette: chrometd
 	TooltipExtras:
-		Strengths: + $1250 delivered every 60 seconds (normal speed)
+		Strengths: + $1250 delivered every 20 seconds (normal speed)
 		Attributes: (!) Mutually exclusive with Firestorm Missile System, Advanced Radar System and Nanoshield Generator
 	RenderSprites:
 		PlayerPalette: playertd

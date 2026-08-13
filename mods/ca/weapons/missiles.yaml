@@ -614,7 +614,7 @@ TitanTusk:
 TitanTusk.Gyro:
 	Inherits: TitanTusk
 	ReloadDelay: 38
-	Range: 6c901
+	Range: 8c512
 
 APCTusk:
 	Inherits: MammothTusk
