@@ -336,8 +336,8 @@ faction-traveler =
       • Advanced Articulators
 
     Bonuses:
-      • Fast Walkers (+25% speed)
-      • Colony Ship (+25% speed)
+      • Fast Walkers (+30% speed)
+      • Colony Ship (+30% speed)
 
 faction-harbinger =
     .name = Harbinger-31

@@ -883,6 +883,7 @@ E7:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
+    
 		HP: 18000
 	Mobile:
 		Speed: 69
@@ -890,7 +891,7 @@ E7:
 	GrantConditionOnMovement@TANYAEVASION:
 		Condition: moving
 	DamageMultiplier@TANYAEVASION:
-		Modifier: 10
+		Modifier: 5
 		RequiresCondition: moving
 	Guard:
 		Voice: Move
@@ -2071,13 +2072,18 @@ RMBO:
 		Weapon: smgBATF
 		MuzzleSequence: garrison-muzzle
 	Armament@BOMB:
-		Weapon: Commandobomb
+		Weapon: Commandobombbuilding
 		Cursor: c4
 		OutsideRangeCursor: c4
 		Name: secondary
+	Armament@BOMB2:
+		Weapon: Commandobombvehicle
+		Cursor: c4
+		OutsideRangeCursor: c4
+		Name: tertiary
 	AttackFrontal:
 		Voice: Attack
-		Armaments: primary, secondary
+		Armaments: primary, secondary, tertiary
 		PauseOnCondition: being-warped || blinded || reapersnare
 		FacingTolerance: 0
 	AutoTarget:
@@ -4017,7 +4023,7 @@ BH:
 	Health:
 		HP: 25500
 	Mobile:
-		Speed: 56
+		Speed: 70
 		Voice: Move
 	RevealsShroud:
 		Range: 5c0

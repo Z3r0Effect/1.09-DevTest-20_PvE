@@ -346,27 +346,27 @@ AvatarFlamer:
 	Burst: 13
 	BurstDelays: 4
 	Warhead@1Dam: SpreadDamage
-		Damage: 1100
+		Damage: 1250
 
 AvatarFlamer.UPG:
 	Inherits: HeavyFlameTankFlamer.UPG
 	Burst: 13
 	BurstDelays: 4
 	Warhead@1Dam: SpreadDamage
-		Damage: 1350
+		Damage: 1500
 
 BlackHandFlamer:
 	Inherits: HeavyFlameTankFlamer
 	ReloadDelay: 80
 	BurstDelays: 2
 	Burst: 28
-	Range: 5c768
+	Range: 6c768
 	Projectile: LinearPulse
 		Speed: 512
 		ImpactInterval: 256
 		RectangleWidth: 1c0
 		Inaccuracy: 140
-		MaximumImpactDistance: 6c512
+		MaximumImpactDistance: 6c768
 		SmudgeChance: 5
 		ProjectileAnimation@1:
 			Speed: 220
@@ -377,11 +377,11 @@ BlackHandFlamer:
 			Spread: 256
 			Falloff: 100, 85, 0
 		DamageFalloff@2:
-			Spread: 256
+			Spread: 384
 			Falloff: 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 80, 25, 0
 			FalloffBasis: DistanceFromSource
 	Warhead@1Dam: SpreadDamage
-		Damage: 400
+		Damage: 525
 		Versus:
 			None: 45
 			Wood: 70
@@ -853,12 +853,12 @@ C4:
 AssassinC4:
 	Inherits: C4
 
-Commandobomb:
+Commandobombbuilding:
 	Inherits: ^Artillery
-	ValidTargets: Vehicle, Structure
+	ValidTargets: Structure
 	InvalidTargets: C4Attached, C4Immune
 	ReloadDelay: 180
-	Range: 5c512
+	Range: 7c512
 	Report: grenade1.aud
 	Projectile: Bullet
 		LaunchAngle: 70
@@ -882,7 +882,44 @@ Commandobomb:
 	Warhead@Flash: FlashTarget
 		Spread: 0c256
 		Color: ffffff
-		ValidTargets: Vehicle, Structure
+		ValidTargets: Structure
+	-Warhead@1Dam:
+	-Warhead@2Smu:
+	Warhead@3Eff: CreateEffect
+		Explosions: piff
+		ImpactSounds: dud1.aud
+	-Warhead@4EffWater:
+
+Commandobombvehicle:
+	Inherits: ^Artillery
+	ValidTargets: Vehicle
+	InvalidTargets: C4Attached, C4Immune
+	ReloadDelay: 150
+	Range: 10c128
+	Report: grenade1.aud
+	Projectile: Bullet
+		LaunchAngle: 45
+		Speed: 225
+		Inaccuracy: 0
+		Image: TNT
+		ContrailLength: 6
+		ContrailStartColor: FF9900
+		ContrailStartColorAlpha: 192
+		ContrailEndColor: FF0000
+		ContrailStartWidth: 0c40
+	Warhead@AttachDelayedWeapon: AttachDelayedWeapon
+		Weapon: CommandoTNTVehicle
+		Type: tnt
+		TriggerTime: 75
+		DeathTypes: ExplosionDeath
+		Range: 1
+		AttachSounds: icraatta.aud
+		MissWeapon: CommandoTNTVehicle
+	Warhead@TargetValidator: SpreadDamage
+	Warhead@Flash: FlashTarget
+		Spread: 0c256
+		Color: ffffff
+		ValidTargets: Vehicle
 	-Warhead@1Dam:
 	-Warhead@2Smu:
 	Warhead@3Eff: CreateEffect
@@ -893,16 +930,39 @@ Commandobomb:
 CommandoTNT:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
+		Spread: 341
 		Damage: 18000
 		Falloff: 1000, 600, 250, 75, 0
-		ValidTargets: Ground, Vehicle, Structure
+		ValidTargets: Structure
 		Versus:
 			None: 15
 			Wood: 100
-			Light: 110
-			Heavy: 85
-			Concrete: 55
+			Concrete: 75
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: building, building2
+		ImpactSounds: expnew06.aud
+		ValidTargets: Ground, Water
+	Warhead@Smu: LeaveSmudge
+		SmudgeType: Crater
+		InvalidTargets: Structure, Wall, Trees
+	Warhead@Flames: FireCluster
+		Weapon: BurnFx
+		RandomClusterCount: 3
+		Dimensions: 3,3
+		Footprint: xxx xxx xxx
+
+CommandoTNTVehicle:
+	Projectile: InstantHit
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c512
+		Damage: 7500
+		Falloff: 1000, 500, 200, 50, 0
+		ValidTargets: Vehicle
+		Versus:
+			None: 25
+			Light: 85
+			Heavy: 65
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: building, building2

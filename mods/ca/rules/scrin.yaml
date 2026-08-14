@@ -853,11 +853,11 @@ BRST:
 		Strengths: • Strong vs Infantry, Buildings, Light Armor
 		Weaknesses: • Cannot attack Aircraft
 	Health:
-		HP: 18000
+		HP: 26000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Mobile:
-		Speed: 65
+		Speed: 75
 	RevealsShroud:
 		Range: 8c0
 	FireWarheadsOnDeath:
@@ -877,7 +877,7 @@ BRST:
 	Targetable@Burster:
 		TargetTypes: Burster
 	AutoTarget:
-		ScanRadius: 4
+		ScanRadius: 5
 	Selectable:
 		DecorationBounds: 640, 896, -32, -256
 	TargetedAttackAbility:
@@ -986,7 +986,7 @@ IMPL:
 		Weaknesses: • Weak vs Heavy Armor, Defenses\n• Cannot attack Aircraft
 		Attributes: • Slows targets
 	Health:
-		HP: 9000
+		HP: 10000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Mobile:
@@ -1061,7 +1061,7 @@ STLK:
 		ShowSelectionBar: true
 		StartsFullyCharged: true
 		DeployedTicks: 1
-		CooldownTicks: 875
+		CooldownTicks: 250
 		ShowSelectionBarWhenFull: false
 		ShowSelectionBarWhenEmpty: false
 		ChargingColor: 808080
@@ -1069,7 +1069,7 @@ STLK:
 		Instant: true
 	Cloak@NORMAL:
 		InitialDelay: 0
-		CloakDelay: 750
+		CloakDelay: 100
 		CloakSound: stlk-cloak.aud
 		UncloakSound: stlk-uncloak.aud
 		CloakedCondition: hidden
@@ -1606,7 +1606,7 @@ GUNW:
 		Factions: traveler
 	SpeedMultiplier@TRAVELERSPEED:
 		RequiresCondition: travelerspeed
-		Modifier: 125
+		Modifier: 130
 	ReplacedInQueue:
 		Actors: shrw
 	Upgradeable@SHRW:
@@ -1646,7 +1646,7 @@ SHRW:
 		Factions: traveler
 	SpeedMultiplier@TRAVELERSPEED:
 		RequiresCondition: travelerspeed
-		Modifier: 125
+		Modifier: 130
 	-ReplacedInQueue:
 	-Upgradeable@SHRW:
 	EncyclopediaExtras:
@@ -1684,7 +1684,7 @@ SEEK:
 		Locomotor: lighthover
 		TurnSpeed: 24
 	Health:
-		HP: 24000
+		HP: 25000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -1717,7 +1717,7 @@ SEEK:
 	WithSpriteTurret:
 	IgnoresDisguise:
 	DetectCloaked:
-		Range: 6c0
+		Range: 7c0
 		DetectionTypes: Cloak, AirCloak, Underwater
 		RequiresCondition: !(empdisable || being-warped)
 	ProducibleWithLevel:
@@ -1768,7 +1768,7 @@ LACE:
 		Speed: 144
 		Locomotor: lighthover
 	Health:
-		HP: 14000
+		HP: 16000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -1901,7 +1901,7 @@ INTL:
 			bori: loaded-cmdo
 			yuri: loaded-cmdo
 			mast: loaded-cmdo
-		InitialUnits: S1,S1,S2,S3,S3
+		InitialUnits: S1,S1,S3,S3,S3
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud
@@ -2102,7 +2102,7 @@ LCHR:
 		Speed: 82
 		TurnSpeed: 20
 	Health:
-		HP: 32000
+		HP: 34000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -2128,7 +2128,7 @@ LCHR:
 	WithMoveAnimation:
 		ValidMovementTypes: Horizontal, Vertical, Turn
 	ConvertsDamageToHealth:
-		DamagePercentConverted: 30
+		DamagePercentConverted: 35
 		RequiresCondition: !coalescence-upgrade
 		InvalidTargetTypes: Husk
 	FireWarheadsOnDeath:
@@ -2195,7 +2195,7 @@ LCHR.Orb:
 		Range: 4c0
 		Type: CenterPosition
 	Health:
-		HP: 36000
+		HP: 40000
 	Armor:
 		Type: Light
 	Valued:
@@ -2238,7 +2238,7 @@ LCHR.Orb:
 		InheritsExperience: true
 	ProximityExternalCondition@LCHRHEAL:
 		Condition: lchr-healing
-		Range: 3c512
+		Range: 5c512
 	AutoTarget:
 	AttackOmni:
 	WithColoredSelectionBox@PLAYERBOX:
@@ -2317,11 +2317,11 @@ STCR:
 		RecreationInterval: 100
 		RequiresCondition: storm-active
 	RangeMultiplier@IONSTORM1:
-		Modifier: 110
+		Modifier: 115
 	RangeMultiplier@IONSTORM2:
-		Modifier: 120
-	RangeMultiplier@IONSTORM3:
 		Modifier: 130
+	RangeMultiplier@IONSTORM3:
+		Modifier: 145
 	Shielded:
 		MaxStrength: 10000
 	Encyclopedia:
@@ -2356,7 +2356,7 @@ DEVO:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 47000
 	Armor:
 		Type: Light
 	Mobile:
@@ -2401,7 +2401,7 @@ DEVO:
 		Armaments: primary, primary-charged
 	WithSpriteTurret:
 	ProductionCostMultiplier@REAPBONUS:
-		Multiplier: 88
+		Multiplier: 85
 		Prerequisites: player.reaper
 	GrantConditionOnTerrain@ONWATER:
 		TerrainTypes: Water
@@ -2450,7 +2450,7 @@ DARK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 26000
+		HP: 38000
 	Mobile:
 		TurnSpeed: 16
 		Speed: 60
@@ -2759,12 +2759,12 @@ TPOD:
 		Factions: traveler
 	SpeedMultiplier@TRAVELERSPEED:
 		RequiresCondition: travelerspeed
-		Modifier: 125
+		Modifier: 130
 	WithIdleOverlay@MINDCONTROL:
 		Offset: 0,0,1024
 	ChangesHealth@THEAL:
 		Step: 0
-		PercentageStep: 2
+		PercentageStep: 3
 		Delay: 15
 		StartIfBelow: 100
 		DamageCooldown: 150
@@ -3128,7 +3128,7 @@ SMCV:
 	DamageTypeDamageMultiplier@A2GPROTECTION:
 		Modifier: 60
 	SpeedMultiplier@Traveler:
-		Modifier: 125
+		Modifier: 130
 		RequiresCondition: player-traveler
 	GrantConditionOnPrerequisite@Traveler:
 		Condition: player-traveler
@@ -3484,7 +3484,7 @@ ENRV:
 		CanSlide: True
 		AltitudeVelocity: 0c100
 	AutoTarget:
-		InitialStance: HoldFire
+		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
 	Contrail@1:
 		Offset: -750,-200,300
@@ -3792,7 +3792,7 @@ PAC:
 	CarrierMaster@carr1:
 		Actors: inva, inva, invb, inva, inva, invb
 		RearmTicks: 0
-		RespawnTicks: 275
+		RespawnTicks: 250
 		InstantRepair: true
 		SlaveDisposalOnKill: KillSlaves
 		SpawnAllAtOnce: false
@@ -3868,7 +3868,7 @@ INVA:
 	Tooltip:
 		Name: Invader
 	Health:
-		HP: 9000
+		HP: 22000
 	RevealsShroud:
 		Range: 2c0
 		MinRange: 1c0
