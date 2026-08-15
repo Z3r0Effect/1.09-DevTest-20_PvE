@@ -227,17 +227,17 @@ ChainGun:
 	Inherits: ^HeavyMG
 	Report: gun13.aud
 	ReloadDelay: 16
-	Range: 6c512
+	Range: 7c512
 	MinRange: 0c768
 	Projectile: Bullet
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Damage: 4400
+		Damage: 4500
 		Versus:
 			None: 100
 			Wood: 26
-			Light: 38
-			Heavy: 48
+			Light: 60
+			Heavy: 50
 			Concrete: 26
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath, AirToGround
 
@@ -355,11 +355,11 @@ ChainGun.Yak.R:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c128
-		Damage: 3150
+		Damage: 3350
 		Versus:
 			None: 100
 			Wood: 35
-			Light: 55
+			Light: 60
 			Heavy: 25
 			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath, AirToGround
@@ -586,7 +586,7 @@ M60mgNHAW:
 	Burst: 3
 	BurstDelays: 5
 	Warhead@1Dam: SpreadDamage
-		Damage: 1600
+		Damage: 1850
 		Versus:
 			None: 165
 			Light: 50
@@ -997,7 +997,8 @@ HeliGunAG:
 	Projectile: Bullet
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Damage: 5000
+		Spread: 64
+		Damage: 7500
 		Versus:
 			None: 144
 			Wood: 35
@@ -1010,7 +1011,7 @@ HeliGunAA:
 	ReloadDelay: 14
 	Burst: 1
 	Report: mgbtr1.aud, mgbtr2.aud, mgbtr3.aud
-	Range: 6c768
+	Range: 7c768
 	Warhead@1Dam: SpreadDamage
 		Damage: 2000
 		Range: 0, 0c64, 0c256, 1c768
@@ -1030,11 +1031,12 @@ WolverineGun:
 	StartBurstReport: wolv-fire1.aud, wolv-fire2.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 750
+		Damage: 1750
 		Versus:
+			None: 100
 			Wood: 50
 			Light: 75
-			Heavy: 25
+			Heavy: 30
 	-Warhead@2Eff:
 
 WolverineGunLine:
@@ -1050,7 +1052,7 @@ WolverineGunLine:
 		BeamWidth: 256
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 750
+		Damage: 1000
 		ValidRelationships: Enemy, Neutral
 	Warhead@2Eff: CreateEffect
 		Explosions: piff, empty
@@ -1160,14 +1162,14 @@ EnforcerShotgun:
 			HitAnimPalette: effect-ignore-lighting-alpha50
 		DamageFalloff@1:
 			Spread: 6c0
-			Falloff: 100, 70 
+			Falloff: 100, 90 
 			FalloffBasis: DistanceFromSource
 	Warhead@1Dam: SpreadDamage
-		Damage: 5500
+		Damage: 6500
 		Versus:
-			None: 90
+			None: 80
 			Wood: 40
-			Light: 80
+			Light: 85
 			Heavy: 45
 			Concrete: 15
 			Brick: 30

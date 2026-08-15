@@ -2050,7 +2050,7 @@ RMBO:
 	TooltipExtras:
 		Strengths: • Strong vs Infantry, Buildings
 		Weaknesses: • Cannot attack Aircraft
-		Attributes: • Maximum 1 can be trained\n• Detects cloaked ground units and spies\n• Immune to mind control\n• Plants C4 to destroy structures and vehicles
+		Attributes: • Maximum 1 can be trained\n• Detects cloaked ground units and spies\n• Immune to mind control\n• Throws explosives on structures and vehicles
 	Mobile:
 		Speed: 69
 		Voice: Move
@@ -2717,7 +2717,7 @@ ACOL:
 		Weapon: PortaLaser
 	TakeCover:
 		ProneOffset: 227,0,-245
-		SpeedModifier: 70
+		SpeedModifier: 75
 	AttackFrontalCharged:
 		Voice: Attack
 		FacingTolerance: 32
@@ -3538,8 +3538,7 @@ IVAN:
 	Armament@BATF:
 		Name: batf
 		Weapon: Ivanbomb
-	TakeCover:
-		ProneOffset: 256,64,-331
+	-TakeCover:
 	AttackFrontal:
 		Voice: Attack
 		PauseOnCondition: being-warped || blinded || reapersnare
@@ -4021,7 +4020,7 @@ BH:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 25500
+		HP: 25000
 	Mobile:
 		Speed: 70
 		Voice: Move
@@ -4033,9 +4032,7 @@ BH:
 	Armament@BATF:
 		Name: batf-bh
 		Weapon: BlackHandFlamer
-	TakeCover:
-		ProneOffset: 160,0,-256
-		SpeedModifier: 70
+	-TakeCover:
 	WithMuzzleOverlay:
 	AttackFrontal:
 		PauseOnCondition: being-warped || blinded || reapersnare
@@ -4925,6 +4922,7 @@ ZRAI:
 		HP: 20000
 	Mobile:
 		Speed: 60
+	-TakeCover:
 	TargetedLeapAbility:
 		MaxDistance: 18
 		Speed: 200
@@ -4956,6 +4954,7 @@ ZDEF:
 	-WithShadow@Jump:
 	-Targetable@Jump:
 	-DamageMultiplier@Jumping:
+	-TakeCover:
 	WithInfantryBody:
 		RequiresCondition: !parachute && !being-warped && !reapersnare
 	-WithInfantryBody@Jump:
@@ -5046,10 +5045,7 @@ ENFO:
 		Types: Veterancy
 		Prerequisites: barracks.upgraded
 	-Crushable:
-	TakeCover:
-		ProneOffset: 0,0,0
-		ProneSequencePrefix:
-		SpeedModifier: 100
+	-TakeCover:
 	WithInfantryBody:
 		IdleSequences: idle, idle2
 		StandSequences: stand, stand2
@@ -5086,6 +5082,7 @@ HOPL:
 	Armor:
 		Type: Concrete
 	Mobile:
+		Speed: 60
 		Voice: Move
 	RevealsShroud:
 		Range: 6c0

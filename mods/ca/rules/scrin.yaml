@@ -167,8 +167,8 @@ VEHICLES.SCRIN:
 		TargetTypes: MothershipRearmable
 		RequiresCondition: ammo < 15
 	ReloadAmmoPool@MothershipRearmable:
-		Count: 3
-		Delay: 50
+		Count: 5
+		Delay: 35
 		RequiresCondition: mshp-rearm
 	ExternalCondition@MothershipRearmable:
 		Condition: mshp-rearm
@@ -3164,7 +3164,7 @@ STMR:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 32000
 	Shielded:
 		MaxStrength: 10000
 	RevealsShroud:
@@ -3195,8 +3195,8 @@ STMR:
 		PauseOnCondition: empdisable || being-warped || blinded
 	Aircraft:
 		CruiseAltitude: 2560
-		TurnSpeed: 22
-		Speed: 167
+		TurnSpeed: 30
+		Speed: 177
 		IdleSpeed: 135
 		IdleTurnSpeed: 15
 		RepulsionSpeed: 40
@@ -3252,7 +3252,7 @@ STMR:
 		Prerequisites: aircraft.upgraded
 	-EjectOnDeath:
 	AmmoPool:
-		Ammo: 15
+		Ammo: 25
 		AmmoCondition: ammo
 		ReloadDelay: 45
 		ReloadCount: 5
@@ -3260,7 +3260,7 @@ STMR:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 3
+		PipCount: 5
 	Rearmable:
 		RearmActors: hpad, hpad.td, afld, afld.gdi, grav
 	GrantConditionOnDamageState@SmokeTrail:
@@ -3305,7 +3305,7 @@ TORM:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 28000
+		HP: 35000
 	Shielded:
 		MaxStrength: 5500
 	RevealsShroud:
@@ -3391,7 +3391,7 @@ TORM:
 		Prerequisites: aircraft.upgraded
 	-EjectOnDeath:
 	AmmoPool:
-		Ammo: 2
+		Ammo: 5
 		AmmoCondition: ammo
 		ReloadDelay: 50
 		ReloadCount: 1
@@ -3399,6 +3399,7 @@ TORM:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
+		PipCount: 5
 	Rearmable:
 		RearmActors: hpad, hpad.td, afld, afld.gdi, grav
 	GrantConditionOnDamageState@SmokeTrail:
@@ -3418,7 +3419,7 @@ TORM:
 	Targetable@MothershipRearmable:
 		RequiresCondition: ammo < 12
 	ReloadAmmoPool@MothershipRearmable:
-		Count: 4
+		Count: 5
 	-SoundOnDamageTransitionCA:
 	Encyclopedia:
 		Category: Scrin/Aircraft
@@ -3448,7 +3449,7 @@ ENRV:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 40000
 	Shielded:
 		MaxStrength: 7500
 	RevealsShroud:
@@ -3473,7 +3474,7 @@ ENRV:
 		OpportunityFire: false
 		PauseOnCondition: empdisable || being-warped || blinded
 	Aircraft:
-		TurnSpeed: 24
+		TurnSpeed: 28
 		Speed: 230
 		InitialFacing: 768
 		TakeoffSounds: dropup1.aud
@@ -3526,7 +3527,7 @@ ENRV:
 		Prerequisites: aircraft.upgraded
 	-EjectOnDeath:
 	AmmoPool:
-		Ammo: 5
+		Ammo: 6
 		AmmoCondition: ammo
 		ReloadDelay: 35
 		ReloadCount: 1
@@ -3534,7 +3535,7 @@ ENRV:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 5
+		PipCount: 6
 	Rearmable:
 		RearmActors: hpad, hpad.td, afld, afld.gdi, grav
 	GrantConditionOnDamageState@SmokeTrail:
@@ -3554,7 +3555,7 @@ ENRV:
 	Targetable@MothershipRearmable:
 		RequiresCondition: ammo < 5
 	ReloadAmmoPool@MothershipRearmable:
-		Count: 1
+		Count: 2
 	-SoundOnDamageTransitionCA:
 	Encyclopedia:
 		Category: Scrin/Aircraft

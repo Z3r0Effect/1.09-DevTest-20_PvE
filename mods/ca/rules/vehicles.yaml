@@ -8733,7 +8733,7 @@ BATF:
 	WithMuzzleOverlay:
 	Cargo:
 		Types: Infantry, Hacker
-		MaxWeight: 6
+		MaxWeight: 8
 		LoadingCondition: notmobile
 		LoadedCondition: cargo
 		PassengerConditions:
@@ -8819,7 +8819,7 @@ BATF:
 	AttackOpenTopped:
 		Voice: Attack
 		Armaments: batf, batf-bh, batf-cryt
-		PortOffsets: 825,0,256, 348,-482,256, -348,-482,256, -448,482,256, 448,482,256
+		PortOffsets: 825,0,256, 500,-482,256, 0,-482,256, -500,-482,256, -500,482,256, 0,482,256, 500,482,256, -825,0,256
 		PauseOnCondition: being-warped || empdisable || blinded
 		RequiresCondition: loaded || loaded-cmdo || loaded-seal || loaded-air
 	Capturable:

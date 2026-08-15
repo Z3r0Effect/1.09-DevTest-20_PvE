@@ -858,7 +858,7 @@ Commandobombbuilding:
 	ValidTargets: Structure
 	InvalidTargets: C4Attached, C4Immune
 	ReloadDelay: 180
-	Range: 7c512
+	Range: 9c512
 	Report: grenade1.aud
 	Projectile: Bullet
 		LaunchAngle: 70
@@ -895,7 +895,7 @@ Commandobombvehicle:
 	ValidTargets: Vehicle
 	InvalidTargets: C4Attached, C4Immune
 	ReloadDelay: 150
-	Range: 10c128
+	Range: 11c128
 	Report: grenade1.aud
 	Projectile: Bullet
 		LaunchAngle: 45
@@ -955,8 +955,8 @@ CommandoTNT:
 CommandoTNTVehicle:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c512
-		Damage: 7500
+		Spread: 2c256
+		Damage: 9000
 		Falloff: 1000, 500, 200, 50, 0
 		ValidTargets: Vehicle
 		Versus:
@@ -1022,7 +1022,7 @@ TNT:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 2800
+		Damage: 2200
 		Falloff: 1000, 448, 192, 50, 18, 7, 0
 		Versus:
 			Light: 80
@@ -1350,7 +1350,7 @@ StealthAPCLaser:
 XOLaser:
 	Inherits: Laser
 	Report: xo-laser.aud
-	ReloadDelay: 70
+	ReloadDelay: 60
 	Range: 8c256
 	Projectile: LaserZapCA
 		Blockable: true
@@ -1361,19 +1361,19 @@ XOLaser:
 		SecondaryBeamWidth: 90
 		SecondaryBeamColor: 79cd0040
 	Warhead@1Dam: SpreadDamage
-		Spread: 42
-		Damage: 11000
+		Spread: 64
+		Damage: 12500
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 		Versus:
 			None: 65
 			Wood: 40
 			Concrete: 75
 			Light: 80
-			Heavy: 100
+			Heavy: 110
 
 XOCoilGun:
 	Range: 8c256
-	ReloadDelay: 40
+	ReloadDelay: 25
 	Report: xo-coil1.aud
 	Burst: 2
 	BurstDelays: 6
@@ -1391,7 +1391,7 @@ XOCoilGun:
 		AllowSnapping: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c128
-		Damage: 3000
+		Damage: 4000
 		Versus:
 			None: 100
 			Wood: 10
@@ -1584,16 +1584,16 @@ VenomLaser:
 VenomLaser.UPG:
 	Inherits: VenomLaser
 	Report: venmfireupg1.aud, venmfireupg1.aud
-	Range: 8c0
+	Range: 8c128
 	Projectile: LaserZapCA
 		Duration: 10
 		SecondaryBeamWidth: 75
 		SecondaryBeamColor: FF00FF60
 	Warhead@1Dam: SpreadDamage
-		Spread: 42
-		Damage: 6325
+		Spread: 106
+		Damage: 6500
 		Versus:
-			Heavy: 75
+			Heavy: 85
 
 VenomLaserAA:
 	Inherits: VenomLaser
@@ -1617,7 +1617,7 @@ VenomLaserAA:
 VenomLaserAA.UPG:
 	Inherits: VenomLaserAA
 	Report: venmfireupg1.aud, venmfireupg1.aud
-	Range: 7c512
+	Range: 8c128
 	Projectile: LaserZapCA
 		Duration: 10
 		SecondaryBeamWidth: 75
@@ -1779,8 +1779,8 @@ PrisCLaser:
 	-Warhead@Burst:
 
 HopliteGun:
-	ReloadDelay: 55
-	Range: 7c512
+	ReloadDelay: 50
+	Range: 7c768
 	Report: hopl-fire1.aud
 	Projectile: LaserZapCA
 		Width: 40
@@ -1792,13 +1792,13 @@ HopliteGun:
 		SecondaryBeamZOffset: 511
 		SecondaryBeamColor: 75D1FF60
 	Warhead@1Dam: SpreadDamage
-		Spread: 180
-		Damage: 4800
+		Spread: 256
+		Damage: 5200
 		Versus:
-			None: 90
+			None: 105
 			Wood: 100
-			Light: 100
-			Heavy: 50
+			Light: 95
+			Heavy: 85
 			Concrete: 50
 			Brick: 30
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
@@ -2198,7 +2198,7 @@ Railgun:
 TitanRailgun:
 	Inherits: Railgun
 	Report: titanrailgun1.aud, titanrailgun2.aud
-	ReloadDelay: 80
+	ReloadDelay: 85
 	Range: 7c768
 	Projectile: RailgunCA
 		DamageActorsInLine: true
@@ -2216,16 +2216,16 @@ TitanRailgun:
 		PassthroughMinDistance: 2c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 7500
+		Damage: 9000
 		Versus:
-			None: 30
+			None: 40
 			Wood: 70
-			Light: 70
+			Light: 75
 			Heavy: 100
 			Concrete: 60
 		ValidRelationships: Enemy, Neutral
 	Warhead@2Dam: SpreadDamage
-		Damage: 1000
+		Damage: 500
 		Versus:
 			None: 30
 			Wood: 70
@@ -2243,6 +2243,7 @@ TitanRailgunImpact:
 	-Warhead@2Dam:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
+		Spread: 256
 		Damage: 14000
 		ValidRelationships: Enemy, Neutral, Ally
 
@@ -3666,13 +3667,13 @@ ShadeEmp:
 			Brick: 5
 		DamageTypes: Prone50Percent, TriggerProne, ElectricityDeath, AirToGround
 	Warhead@1Emp: GrantExternalConditionCA
-		Range: 2c0
+		Range: 1c256
 		Duration: 225
 		Condition: empdisable
 		ValidTargets: Vehicle, Ship, Structure
 		InvalidTargets: Cyborg, EmpImmune
 	Warhead@2Emp: GrantExternalConditionCA
-		Range: 2c0
+		Range: 1c256
 		Duration: 100
 		Condition: empdisable
 		ValidTargets: Cyborg
@@ -3691,7 +3692,7 @@ ManticoreBolts:
 	Range: 14c0
 	MinRange: 3c0
 	Report: mcor-fire1.aud, mcor-fire2.aud
-	ReloadDelay: 150
+	ReloadDelay: 75
 	Burst: 4
 	BurstDelays: 3
 	ValidTargets: Air, AirSmall
@@ -3711,9 +3712,9 @@ ManticoreBolts:
 		CruiseAltitude: 0
 	Warhead@1Dam: SpreadDamage
 		Range: 0, 0c64, 0c256, 1c768
-		Damage: 4000
+		Damage: 4600
 	Warhead@smallDamage: SpreadDamage
-		Damage: 4000
+		Damage: 4600
 
 VertigoBomb:
 	Inherits: JDAM

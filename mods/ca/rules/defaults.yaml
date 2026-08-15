@@ -524,7 +524,7 @@
 	ExternalCondition@HeroOfTheUnion:
 		Condition: herooftheunion
 	FlatHealthDamageMultiplier@HeroOfTheUnion:
-		HP: 9000
+		HP: 10000
 		RequiresCondition: herooftheunion
 	SpeedMultiplier@HeroOfTheUnion:
 		Modifier: 120
@@ -1925,19 +1925,19 @@
 		HP: 1750
 		RequiresCondition: zdef-shield == 1
 	FlatHealthDamageMultiplier@ZoneDefenderShield2:
-		HP: 3000
+		HP: 3500
 		RequiresCondition: zdef-shield == 2
 	FlatHealthDamageMultiplier@ZoneDefenderShield3:
-		HP: 4500
+		HP: 5000
 		RequiresCondition: zdef-shield == 3
 	FlatHealthDamageMultiplier@ZoneDefenderShield4:
-		HP: 6000
+		HP: 7500
 		RequiresCondition: zdef-shield == 4
 	FlatHealthDamageMultiplier@ZoneDefenderShield5:
-		HP: 7500
+		HP: 8000
 		RequiresCondition: zdef-shield == 5
 	FlatHealthDamageMultiplier@ZoneDefenderShield6:
-		HP: 9000
+		HP: 10000
 		RequiresCondition: zdef-shield >= 6
 	WithIdleOverlay@ZoneDefenderShield:
 		Sequence: idle

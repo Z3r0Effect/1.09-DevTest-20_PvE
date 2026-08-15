@@ -226,7 +226,7 @@ MIG:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 24500
+		HP: 28000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -254,7 +254,7 @@ MIG:
 	Aircraft:
 		CruiseAltitude: 2560
 		InitialFacing: 192
-		TurnSpeed: 16
+		TurnSpeed: 24
 		Speed: 201
 		RepulsionSpeed: 40
 		MaximumPitch: 56
@@ -263,13 +263,14 @@ MIG:
 		InitialStance: HoldFire
 		InitialStanceAI: AttackAnything
 	AmmoPool:
-		Ammo: 4
+		Ammo: 6
 		AmmoCondition: ammo
 		ReloadDelay: 35
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
+		PipCount: 6
 	Selectable:
 		Bounds: 1536, 1194, 0, 85
 		DecorationBounds: 1706, 1237, 0, 42
@@ -351,7 +352,7 @@ SUK:
 	Tooltip:
 		Name: Sukhoi Attack Plane
 	Health:
-		HP: 22000
+		HP: 27000
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 10c0
@@ -380,7 +381,7 @@ SUK:
 	Aircraft:
 		CruiseAltitude: 2560
 		InitialFacing: 192
-		TurnSpeed: 16
+		TurnSpeed: 26
 		Speed: 216
 		RepulsionSpeed: 40
 		MaximumPitch: 56
@@ -390,11 +391,11 @@ SUK:
 		InitialStance: HoldFire
 		InitialStanceAI: AttackAnything
 	AmmoPool:
-		Ammo: 8
+		Ammo: 12
 		ReloadDelay: 22
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
-		PipCount: 4
+		PipCount: 6
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
@@ -501,7 +502,7 @@ YAK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 18500
+		HP: 22000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 9c0
@@ -540,7 +541,7 @@ YAK:
 	Aircraft:
 		CruiseAltitude: 2560
 		InitialFacing: 192
-		TurnSpeed: 16
+		TurnSpeed: 18
 		Speed: 180
 		RepulsionSpeed: 40
 		MaximumPitch: 56
@@ -548,14 +549,14 @@ YAK:
 		InitialStance: HoldFire
 		InitialStanceAI: AttackAnything
 	AmmoPool:
-		Ammo: 16
+		Ammo: 24
 		ReloadDelay: 8
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 4
+		PipCount: 6
 	WithMuzzleOverlay:
 	SpawnActorOnDeath:
 		Actor: YAK.Husk
@@ -598,7 +599,7 @@ P51:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 56000
+		HP: 62000
 	RevealsShroud@GAPGEN:
 		Range: 9c0
 		Type: GroundPosition
@@ -628,7 +629,7 @@ P51:
 		CruiseAltitude: 2560
 		InitialFacing: 192
 		TurnSpeed: 24
-		Speed: 285
+		Speed: 300
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 	WithMuzzleOverlay:
@@ -681,7 +682,7 @@ TRAN:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 36000
+		HP: 40000
 	RevealsShroud:
 		Range: 10c0
 		MinRange: 6c0
@@ -890,7 +891,7 @@ NHAW:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 40000
+		HP: 50000
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 6c0
@@ -979,12 +980,12 @@ NHAW:
 	AmmoPool@CRYOMISSILE:
 		Name: cryo
 		Armaments: cryo
-		Ammo: 2
+		Ammo: 4
 		AmmoCondition: ammo
 	ReloadAmmoPool@CRYOMISSILE:
 		AmmoPool: cryo
 		Delay: 50
-		Count: 2
+		Count: 4
 		RequiresCondition: upg-cryw
 	AutoTarget:
 		InitialStance: Defend
@@ -1089,7 +1090,7 @@ HELI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 26000
+		HP: 30000
 	RevealsShroud:
 		Range: 13c0
 		MinRange: 9c0
@@ -1130,7 +1131,7 @@ HELI:
 		OpportunityFire: false
 		PauseOnCondition: empdisable || being-warped || blinded
 	Aircraft:
-		TurnSpeed: 18
+		TurnSpeed: 20
 		Speed: 165
 		TakeoffSounds: vhelistaa.aud
 		LandingSounds: vhelilana.aud
@@ -1148,15 +1149,15 @@ HELI:
 		PauseOnCondition: being-warped
 		RequiresCondition: !airborne
 	AmmoPool:
-		Ammo: 8
-		ReloadCount: 2
+		Ammo: 16
+		ReloadCount: 4
 		AmmoCondition: ammo
 		ReloadDelay: 35
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 4
+		PipCount: 8
 	SpawnActorOnDeath:
 		Actor: HELI.Husk
 		RequiresCondition: ammo && !empdisable && !being-warped
@@ -1212,7 +1213,7 @@ HIND:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 36000
+		HP: 38000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 9c0
@@ -1273,7 +1274,7 @@ HIND:
 		Armaments: primary, secondary, secondary-upg
 	Aircraft:
 		TurnSpeed: 16
-		Speed: 145
+		Speed: 160
 		TakeoffSounds: vhelistaa.aud
 		LandingSounds: vhelilana.aud
 	AutoTarget:
@@ -2113,7 +2114,7 @@ APCH:
 		TakeoffSounds: vhelistaa.aud
 		LandingSounds: vhelilana.aud
 	Health:
-		HP: 22000
+		HP: 30000
 	RevealsShroud:
 		Range: 13c0
 		MinRange: 9c0
@@ -2144,14 +2145,14 @@ APCH:
 		OpportunityFire: false
 		PauseOnCondition: empdisable || being-warped || blinded
 	AmmoPool:
-		Ammo: 12
+		Ammo: 14
 		ReloadDelay: 10
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 6
+		PipCount: 7
 	WithIdleOverlay@ROTORAIR:
 		Offset: 0,0,85
 		Sequence: rotor
@@ -2251,15 +2252,15 @@ ORCA:
 		OpportunityFire: false
 		PauseOnCondition: empdisable || being-warped || blinded
 	AmmoPool:
-		Ammo: 8
-		ReloadCount: 2
+		Ammo: 12
+		ReloadCount: 3
 		AmmoCondition: ammo
 		ReloadDelay: 35
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 4
+		PipCount: 6
 	SpawnActorOnDeath:
 		Actor: ORCA.Husk
 		RequiresCondition: ammo && !empdisable && !being-warped
@@ -2374,7 +2375,7 @@ ORCB:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 32000
+		HP: 34000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 9c0
@@ -2405,7 +2406,7 @@ ORCB:
 	Aircraft:
 		CruiseAltitude: 2560
 		AltitudeVelocity: 0c120
-		TurnSpeed: 16
+		TurnSpeed: 20
 		Speed: 167
 		RepulsionSpeed: 40
 		MaximumPitch: 56
@@ -2592,7 +2593,7 @@ RAH:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 22000
+		HP: 28000
 	RevealsShroud:
 		Range: 13c0
 		MinRange: 8c0
@@ -2627,8 +2628,8 @@ RAH:
 		Voice: Move
 	Cloak@NORMAL:
 		DetectionTypes: AirCloak
-		InitialDelay: 100
-		CloakDelay: 200
+		InitialDelay: 75
+		CloakDelay: 100
 		CloakSound: trans1.aud
 		UncloakSound: appear1md.aud
 		CloakStyle: Palette
@@ -2644,7 +2645,7 @@ RAH:
 		Condition: player-shadow
 		Prerequisites: player.shadow
 	SpeedMultiplier@ShadowCloak:
-		Modifier: 110
+		Modifier: 120
 		RequiresCondition: player-shadow && hidden
 	AutoTarget:
 		InitialStance: HoldFire
@@ -2662,7 +2663,7 @@ RAH:
 		RequiresCondition: !airborne
 		Palette: player
 	AmmoPool:
-		Ammo: 8
+		Ammo: 10
 		AmmoCondition: ammo
 		ReloadCount: 2
 		ReloadDelay: 40
@@ -2670,7 +2671,7 @@ RAH:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 4
+		PipCount: 5
 	SpawnActorOnDeath:
 		Actor: RAH.Husk
 		RequiresCondition: ammo && !empdisable && !being-warped
@@ -3170,7 +3171,7 @@ HARR:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 34000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 10c0
@@ -3195,7 +3196,7 @@ HARR:
 		PauseOnCondition: empdisable || being-warped
 	Aircraft:
 		CruiseAltitude: 2560
-		TurnSpeed: 18
+		TurnSpeed: 22
 		Speed: 205
 		RepulsionSpeed: 40
 		MaximumPitch: 56
@@ -3212,13 +3213,14 @@ HARR:
 		InitialStance: HoldFire
 		InitialStanceAI: AttackAnything
 	AmmoPool:
-		Ammo: 4
-		ReloadDelay: 45
+		Ammo: 6
+		ReloadDelay: 35
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
+		PipCount: 6
 	Contrail@1:
 		Offset: -320,-500,0
 		StartColorUsePlayerColor: false
@@ -3295,7 +3297,7 @@ SCRN:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 27000
+		HP: 35000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 10c0
@@ -3309,25 +3311,25 @@ SCRN:
 		LocalOffset: 0,213,-85, 0,-213,-85
 		PauseOnCondition: !ammo || blinded
 		RequiresCondition: !wrath-covenant
-		AmmoUsage: 4
+		AmmoUsage: 3
 	Armament@SECONDARY:
 		Weapon: ScrinTorpAA
 		LocalOffset: 0,213,-85, 0,-213,-85
 		PauseOnCondition: !ammo || blinded
 		RequiresCondition: !wrath-covenant
-		AmmoUsage: 4
+		AmmoUsage: 2
 	Armament@PRIMARYUPG:
 		Weapon: ScrinTorp.UPG
 		LocalOffset: 0,213,-85, 0,-213,-85
 		PauseOnCondition: !ammo || blinded
 		RequiresCondition: wrath-covenant
-		AmmoUsage: 3
+		AmmoUsage: 2
 	Armament@SECONDARYUPG:
 		Weapon: ScrinTorpAA.UPG
 		LocalOffset: 0,213,-85, 0,-213,-85
 		PauseOnCondition: !ammo || blinded
 		RequiresCondition: wrath-covenant
-		AmmoUsage: 3
+		AmmoUsage: 2
 	AttackAircraft:
 		FacingTolerance: 80
 		Voice: Attack
@@ -3352,20 +3354,20 @@ SCRN:
 		InitialStance: HoldFire
 		InitialStanceAI: AttackAnything
 	AmmoPool:
-		Ammo: 36
+		Ammo: 48
 		ReloadDelay: 5
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 3
+		PipCount: 4
 		RequiresCondition: !wrath-covenant
 	WithAmmoPipsDecoration@UPG:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 4
+		PipCount: 5
 		RequiresCondition: wrath-covenant
 	Contrail@1:
 		Offset: -300,-143,0
@@ -3672,7 +3674,7 @@ VENM:
 	Guard:
 		Voice: Move
 	Health:
-		HP: 21500
+		HP: 28000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 9c0
@@ -3718,14 +3720,14 @@ VENM:
 		PauseOnCondition: empdisable || being-warped || blinded
 		Voice: Attack
 	AmmoPool:
-		Ammo: 8
+		Ammo: 12
 		ReloadDelay: 15
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 4
+		PipCount: 6
 	SpawnActorOnDeath:
 		Actor: VENM.Husk
 		RequiresCondition: airborne && ammo && !empdisable && !being-warped
@@ -3796,7 +3798,7 @@ AURO:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 20000
+		HP: 26000
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 10c0
@@ -4115,7 +4117,7 @@ BEAG:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 26000
+		HP: 32000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 10c0
@@ -4140,8 +4142,8 @@ BEAG:
 		Voice: Attack
 	Aircraft:
 		CruiseAltitude: 2560
-		TurnSpeed: 20
-		IdleTurnSpeed: 16
+		TurnSpeed: 28
+		IdleTurnSpeed: 20
 		Speed: 230
 		RepulsionSpeed: 40
 		MaximumPitch: 56
@@ -4158,13 +4160,14 @@ BEAG:
 		InitialStance: HoldFire
 		InitialStanceAI: AttackAnything
 	AmmoPool:
-		Ammo: 3
+		Ammo: 5
 		AmmoCondition: ammo
-		ReloadDelay: 50
+		ReloadDelay: 45
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
+		PipCount: 5
 	Contrail@1:
 		Offset: -50,-650,20
 		StartColorUsePlayerColor: false
@@ -4242,7 +4245,7 @@ PHAN:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 22000
+		HP: 28000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 9c0
@@ -4266,7 +4269,7 @@ PHAN:
 		PauseOnCondition: empdisable || being-warped
 	Aircraft:
 		CruiseAltitude: 2560
-		TurnSpeed: 16
+		TurnSpeed: 19
 		Speed: 230
 		RepulsionSpeed: 40
 		MaximumPitch: 56
@@ -4282,13 +4285,14 @@ PHAN:
 		InitialStance: HoldFire
 		InitialStanceAI: AttackAnything
 	AmmoPool:
-		Ammo: 4
+		Ammo: 6
 		AmmoCondition: ammo
 		ReloadDelay: 35
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
+		PipCount: 6
 	Contrail@1:
 		Offset: 50,-680,80
 		StartColorUsePlayerColor: false
@@ -4376,7 +4380,7 @@ KAMV:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 48000
+		HP: 50000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 9c0
@@ -4402,7 +4406,7 @@ KAMV:
 		PauseOnCondition: empdisable || being-warped || blinded
 	Aircraft:
 		TurnSpeed: 16
-		Speed: 130
+		Speed: 145
 		TakeoffSounds: vospstaa.aud
 		LandingSounds: vosplana.aud
 	AutoTarget:
@@ -4536,13 +4540,14 @@ SHDE:
 		InitialStance: HoldFire
 		InitialStanceAI: AttackAnything
 	AmmoPool:
-		Ammo: 3
+		Ammo: 5
 		ReloadDelay: 50
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
+		PipCount: 5
 	Contrail@1:
 		Offset: -380,-850,-20
 		StartColorUsePlayerColor: false
@@ -4633,7 +4638,7 @@ VERT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 24000
+		HP: 44000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 9c0
@@ -4658,7 +4663,7 @@ VERT:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 16
-		Speed: 167
+		Speed: 187
 		IdleSpeed: 135
 		RepulsionSpeed: 40
 		CanHover: False
@@ -4670,14 +4675,15 @@ VERT:
 		InitialStance: HoldFire
 		InitialStanceAI: AttackAnything
 	AmmoPool:
-		Ammo: 1
-		ReloadDelay: 180
+		Ammo: 2
+		ReloadDelay: 100
 		AmmoCondition: ammo
 		Armaments: primary
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
+		PipCount: 2
 	Contrail@1:
 		Offset: -100,-850,25
 		StartColorUsePlayerColor: false
@@ -4735,7 +4741,7 @@ VERT:
 	Cloak:
 		DetectionTypes: AirCloak
 		InitialDelay: 100
-		CloakDelay: 200
+		CloakDelay: 100
 		CloakSound: trans1.aud
 		UncloakSound: appear1md.aud
 		CloakStyle: Palette
@@ -4749,7 +4755,7 @@ VERT:
 		Condition: player-shadow
 		Prerequisites: player.shadow
 	SpeedMultiplier@ShadowCloak:
-		Modifier: 110
+		Modifier: 120
 		RequiresCondition: player-shadow && hidden
 	-RangeMultiplier@SEEK:
 	-RangeMultiplier@SEEK2:

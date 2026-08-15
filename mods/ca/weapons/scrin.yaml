@@ -822,14 +822,14 @@ StormriderZap:
 		Palette: scrin
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 5200
+		Spread: 320
+		Damage: 5500
 		Versus:
 			None: 105
 			Wood: 50
 			Concrete: 30
-			Light: 55
-			Heavy: 40
+			Light: 75
+			Heavy: 60
 			Brick: 20
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, AirToGround
 	Warhead@2Smu: LeaveSmudge
@@ -856,14 +856,14 @@ StormRiderZapAA:
 		Speed: 1c768
 	ValidTargets: Air, AirSmall
 	Warhead@1Dam: SpreadDamage
-		Damage: 2000
+		Damage: 4000
 		Range: 0, 0c64, 0c256, 1c768
 		Falloff: 100, 100, 30, 15
 		ValidTargets: Air
 		ValidRelationships: Enemy, Neutral
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@smallDamage: SpreadDamage
-		Damage: 2000
+		Damage: 3500
 		Spread: 341
 		Falloff: 100, 50, 14, 0
 		ValidTargets: AirSmall
@@ -888,7 +888,7 @@ TormentorZap:
 		SecondaryBeamColor: 7d00fe30
 		Duration: 10
 	Warhead@1Dam: SpreadDamage
-		Spread: 42
+		Spread: 128
 		Damage: 14400
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, TankBuster, AirToGround
 		Versus:
@@ -916,11 +916,11 @@ TormentorZapAA:
 EnervatorBolts:
 	Inherits: ^AntiGroundMissile
 	Report: enervator-fire1.aud
-	ReloadDelay: 50
+	ReloadDelay: 35
 	Range: 8c128
 	TargetActorCenter: true
 	Projectile: MissileCA
-		Speed: 341
+		Speed: 450
 		Image: enrvbolt
 		Palette: scrin
 		Inaccuracy: 128
@@ -936,11 +936,11 @@ EnervatorBolts:
 		-PointDefenseType:
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 13000
+		Damage: 14500
 		Versus:
 			None: 30
 			Wood: 30
-			Light: 80
+			Light: 75
 			Heavy: 100
 			Concrete: 100
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, TankBuster, AirToGround
