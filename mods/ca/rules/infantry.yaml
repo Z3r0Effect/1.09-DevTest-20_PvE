@@ -3513,13 +3513,13 @@ IVAN:
 		Weaknesses: • Cannot attack Aircraft\n• Has difficulty hitting moving targets
 		Attributes: • Bombs will bounce if they hit the ground
 	Valued:
-		Cost: 700
+		Cost: 750
 	Tooltip:
 		Name: Crazy Ivan
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 19000
+		HP: 12000
 	Mobile:
 		Speed: 75
 		Voice: Move
@@ -3550,7 +3550,7 @@ IVAN:
 	FireWarheadsOnDeath:
 		Weapon: ArtilleryExplode
 		EmptyWeapon: ArtilleryExplode
-		Chance: 30
+		Chance: 50
 		DamageSource: Killer
 		RequiresCondition: !being-warped
 	ProducibleWithLevel:
