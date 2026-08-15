@@ -8836,10 +8836,10 @@ BATF:
 		Actor: BATF.Husk
 		RequiresCondition: !being-warped
 	ChangesHealth@REPAIR:
-		PercentageStep: 4
-		Delay: 10
+		PercentageStep: 2
+		Delay: 25
 		StartIfBelow: 100
-		DamageCooldown: 25
+		DamageCooldown: 75
 		RequiresCondition: loaded-repair
 	WithDecoration@COMMANDOSKULL:
 		RequiresCondition: loaded-cmdo
