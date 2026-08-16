@@ -90,7 +90,7 @@
 
 Maverick:
 	Inherits: ^AirToGroundMissile
-	Range: 8c128
+	Range: 9c128
 	MinRange: 0c768
 	Report: missile7.aud
 	Burst: 2
@@ -100,13 +100,13 @@ Maverick:
 		CruiseAltitude: 2c0
 		RangeLimit: 14c410
 	Warhead@1Dam: SpreadDamage
-		Spread: 256
+		Spread: 448
 		Damage: 11000
 		Versus:
 			None: 20
 			Wood: 30
 			Concrete: 105
-			Light: 75
+			Light: 85
 			Heavy: 95
 
 MaverickAA:
@@ -239,10 +239,11 @@ SeismicMissile:
 
 Dragon:
 	Inherits: ^AntiGroundMissile
+	Range: 7c512
 
 DragonTargeter:
 	ReloadDelay: 50
-	Range: 6c512
+	Range: 7c512
 	MinRange: 0c512
 	Projectile: InstantHit
 
@@ -302,27 +303,31 @@ Dragon.CYB.TibCore:
 
 DragonGI:
 	Inherits: Dragon
-	Range: 8c128
+	Range: 8c256
 	Report: iggiat2a.aud, iggiat2b.aud
 	ReloadDelay: 40
 	Projectile: MissileCA
 		RangeLimit: 8c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 4200
+		Damage: 5500
+		Versus:
+			None: 40
+			Light: 45
+			Heavy: 105
 
 DragonGI.CRYO:
 	Inherits: Dragon.CRYO
-	Range: 8c128
+	Range: 8c256
 	Report: iggiat2a.aud, iggiat2b.aud
 	ReloadDelay: 40
 	Projectile: MissileCA
 		RangeLimit: 8c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 4400
+		Damage: 5500
 
 DragonBATF:
 	Inherits: Dragon
-	Range: 6c768
+	Range: 7c768
 	Projectile: MissileCA
 		RangeLimit: 7c0
 	Warhead@1Dam: SpreadDamage
@@ -362,7 +367,9 @@ DragonBATF.CYB.TibCore:
 
 HellfireAG:
 	Inherits: ^AirToGroundMissile
-	Range: 7c256
+	Range: 8c256
+	Projectile: MissileCA
+		Speed: 225
 	ReloadDelay: 70
 	MinRange: 0c768
 	Burst: 4
@@ -401,14 +408,15 @@ HellfireAG.Cryo:
 
 HindRockets:
 	Inherits: HellfireAG
-	Range: 7c512
+	Range: 8c128
 	ReloadDelay: 55
 	Report: hind-rocket1.aud, hind-rocket2.aud
 	ValidTargets: Ground
 	BurstDelays: 12
 	Burst: 6
 	Warhead@1Dam: SpreadDamage
-		Damage: 5000
+		Spread: 512
+		Damage: 6500
 		Versus:
 			None: 100
 			Light: 70
@@ -433,7 +441,7 @@ HindRockets.Ukraine.UPG:
 
 HellfireAG.Harrier:
 	Inherits: ^AirToGroundMissile
-	Range: 8c0
+	Range: 8c512
 	MinRange: 0c768
 	ReloadDelay: 50
 	Report: migmis.aud, migmis2.aud
@@ -458,7 +466,7 @@ HellfireAG.Harrier:
 			None: 100
 			Wood: 50
 			Light: 75
-			Heavy: 55
+			Heavy: 65
 			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigatedMinor, AirToGround
 	Warhead@3Eff: CreateEffect
@@ -2057,6 +2065,7 @@ ScrinTorp:
 
 ScrinTorp.UPG:
 	Inherits: ScrinTorp
+	Range: 8c768
 	Projectile: MissileCA
 		Image: scrintorpred
 		Palette: caneon
@@ -2101,7 +2110,7 @@ ScrinTorpAA.UPG:
 
 SMIGBomb:
 	ReloadDelay: 150
-	Range: 9c0
+	Range: 10c0
 	Report: vmigatta.aud
 	Projectile: Bullet
 		Image: MISSILE
@@ -2114,7 +2123,7 @@ SMIGBomb:
 		LaunchAngle: 10
 	ValidTargets: Ground, Trees, Water, Underwater, Air
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c0
+		Spread: 1c64
 		Damage: 60000
 		Falloff: 368, 135, 25
 		Versus:
@@ -2213,14 +2222,22 @@ CryoMissileNHAW:
 	Report: vrocweaa.aud, vrocweab.aud
 	-Burst:
 	-BurstDelays:
-	Range: 8c768
+	Range: 9c0
 	Projectile: Bullet
 		Image: cmiss
 		Speed: 230
 		LaunchAngle: 3
 	Warhead@1Dam: SpreadDamage
-		Spread: 348
-		Damage: 1500
+		Spread: 448
+		Damage: 3500
+		Falloff: 200, 125, 65, 25, 0
+		Versus:
+			None: 50
+			Wood: 40
+			Light: 100
+			Heavy: 75
+			Concrete: 35
+			Brick: 5
 
 Rocket.P51.R:
 	ReloadDelay: 140
@@ -2274,7 +2291,7 @@ Rocket.P51.L:
 
 Hydra.R:
 	ReloadDelay: 60
-	Range: 7c768
+	Range: 8c768
 	MinRange: 0c256
 	Report: iggiat2a.aud, iggiat2b.aud
 	Burst: 6
@@ -2295,7 +2312,7 @@ Hydra.R:
 		ContrailLength: 10
 		ContrailStartWidth: 0c42
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c128
+		Spread: 1c160
 		Damage: 325
 		Falloff: 1000, 500, 220, 100, 70, 45, 0
 		Versus:
@@ -2455,7 +2472,7 @@ CyborgReaperMissiles:
 	ReloadDelay: 60
 	Burst: 2
 	BurstDelays: 10
-	Range: 8c256
+	Range: 8c768
 	Report: reap-fire1.aud, reap-fire2.aud
 	Projectile: MissileCA
 		Speed: 220
@@ -2465,13 +2482,13 @@ CyborgReaperMissiles:
 		ContrailStartWidth: 0c40
 	Warhead@1Dam: SpreadDamage
 		Spread: 448
-		Damage: 5250
+		Damage: 5500
 		Versus:
 			None: 100
 			Wood: 75
 			Light: 85
-			Heavy: 40
-			Concrete: 50
+			Heavy: 45
+			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigated
 	Warhead@3Eff: CreateEffect
 		Explosions: large_explosion
@@ -2482,7 +2499,7 @@ CyborgReaperMissilesAA:
 	ReloadDelay: 60
 	Burst: 2
 	BurstDelays: 10
-	Range: 8c768
+	Range: 9c512
 	Report: reap-fire1.aud, reap-fire2.aud
 	Projectile: MissileCA
 		Speed: 250
@@ -2492,10 +2509,10 @@ CyborgReaperMissilesAA:
 	Warhead@1Dam: SpreadDamage
 		-Falloff:
 		-Range:
-		Damage: 5500
+		Damage: 6500
 		Spread: 448
 	Warhead@smallDamage: SpreadDamage
-		Damage: 5500
+		Damage: 6500
 
 CyborgReaperSnare:
 	ReloadDelay: 125
@@ -2615,7 +2632,7 @@ TigerGuardMissileAA:
 	Inherits: ^AntiAirMissile
 	Inherits@Projectile: ^TigerGuardMissileProjectile
 	ReloadDelay: 110
-	Range: 10c0
+	Range: 11c0
 	Report: tigr-fire1.aud, tigr-fire2.aud
 	Projectile: MissileCA
 		RangeLimit: 12c0

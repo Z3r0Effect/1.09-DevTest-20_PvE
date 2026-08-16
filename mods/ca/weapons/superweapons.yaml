@@ -292,7 +292,7 @@ HeliosBomb:
 Atomic:
 	ValidTargets: Ground, Trees, Water, Underwater, Air, AirSmall
 	Warhead@1Dam_impact: SpreadDamage
-		Spread: 1c256
+		Spread: 1c512
 		Damage: 12200
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Trees, Water, Underwater, Air, AirSmall
@@ -312,7 +312,7 @@ Atomic:
 		ImpactActors: false
 		ValidTargets: Ground, Water, Air
 	Warhead@5Dam_areanuke1: SpreadDamage
-		Spread: 2c128
+		Spread: 2c512
 		Damage: 4200
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 5
@@ -334,8 +334,8 @@ Atomic:
 		Delay: 5
 		ImpactActors: false
 	Warhead@9Dam_areanuke2: SpreadDamage
-		Spread: 3c0
-		Damage: 4200
+		Spread: 4c0
+		Damage: 4500
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 10
 		ValidTargets: Ground, Water, Underwater, Air, AirSmall
@@ -352,7 +352,7 @@ Atomic:
 		Size: 3
 		Delay: 10
 	Warhead@13Dam_areanuke3: SpreadDamage
-		Spread: 4c0
+		Spread: 4c256
 		Damage: 4200
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 15
@@ -423,7 +423,7 @@ IonCannon:
 		Falloff: 1000, 450, 140, 40
 		ValidTargets: Ground
 		Versus:
-			None: 25
+			None: 65
 			Light: 80
 			Wood: 15
 			Heavy: 85
@@ -617,8 +617,8 @@ FirestormBarrage:
 		ContrailStartColor: cc550080
 		ContrailStartColorAlpha: 128
 	Warhead@1Dam: SpreadDamage
-		Spread: 3c128
-		Damage: 30000
+		Spread: 5c128
+		Damage: 50000
 		Versus:
 			None: 80
 			Wood: 40
@@ -805,7 +805,7 @@ StealthBubble:
 Chemicbm:
 	ValidTargets: Ground, Water
 	Warhead@1Dam: SpreadDamage
-		Spread: 3c0
+		Spread: 4c0
 		Damage: 6500
 		Falloff: 1000, 368, 135, 50, 18
 		ValidTargets: Ground, Underwater, Air, AirSmall
@@ -824,7 +824,7 @@ Chemicbm:
 		ExplosionPalette: tseffect-ignore-lighting-alpha75
 		ImpactSounds: chembomb.aud
 	Warhead@2Dam_chem: SpreadDamage
-		Spread: 3c0
+		Spread: 4c0
 		Damage: 6000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 20
@@ -841,7 +841,7 @@ Chemicbm:
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, ToxinDeath
 	Warhead@3Dam_chem2: SpreadDamage
-		Spread: 4c0
+		Spread: 4c256
 		Damage: 3250
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 40
@@ -944,13 +944,13 @@ IonStormInit:
 		ValidTargets: Ground, Air, Water
 		Weapon: IonCloud
 		ImpactActors: false
-		ImpactOffsets: 0,0, 0,0, -4,0, 4,0, 0,-4, 0,4, -2,-2, 2,2, -2,2, 2,-2
+		ImpactOffsets: 0,0, 0,0, -2,0, 2,0, 0,-2, 0,2, -1,-1, 1,1, -1,1, 1,-1
 		RandomImpactSequence: true
 		ExcludeFirstImpactFromRandomSequence: true
 
 IonCloud:
 	ReloadDelay: 25
-	Range: 5c0
+	Range: 7c0
 	Projectile: AthenaProjectile
 		Altitude: 5c768
 	Warhead@1: FireFragment
@@ -968,8 +968,8 @@ IonBolt:
 	Warhead@1Dam_impact: SpreadDamage
 		Range: 0, 1c256, 2c256, 3c256, 4c256
 		Delay: 1
-		Damage: 4000
-		Falloff: 1000, 750, 300, 150, 60
+		Damage: 4500
+		Falloff: 1000, 850, 500, 225, 75
 		ValidTargets: Ground, Water, Underwater, Air, AirSmall
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 		Versus:
@@ -1118,7 +1118,7 @@ WeatherStormInit:
 		Interval: 3
 	Warhead@DirectDamage: SpreadDamage
 		Damage: 48000
-		Range: 0, 1c256, 2c512, 3c512
+		Range: 0, 1c512, 2c768, 4c0
 		Falloff: 150, 100, 50, 0
 		Delay: 78
 	Warhead@4: CreateEffect
@@ -1128,7 +1128,7 @@ WeatherStormInit:
 
 WeatherCloud:
 	ReloadDelay: 8
-	Range: 6c512
+	Range: 7c0
 	Projectile: AthenaProjectile
 		Altitude: 5c768
 	Warhead@1: FireFragment
@@ -1154,7 +1154,7 @@ WeatherCloudShadow:
 	Warhead@Shadow: CreateEffect
 		Explosions: weathercloudshadow
 		ValidTargets: Ground, Air, Water
-		Inaccuracy: 341
+		Inaccuracy: 256
 
 WeatherBolt:
 	Projectile: InstantHit
@@ -1163,7 +1163,7 @@ WeatherBolt:
 	Warhead@1Dam: SpreadDamage
 		Range: 0, 1c1, 2c1, 3c1
 		Falloff: 1000, 700, 450, 0
-		Damage: 1250
+		Damage: 3000
 		AffectsParent: true
 		ValidTargets: Ground, Air, AirSmall, Underwater, Water
 		DamageTypes: TriggerProne, ElectricityDeath

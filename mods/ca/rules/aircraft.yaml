@@ -220,15 +220,15 @@ MIG:
 		Strengths: • Strong vs Heavy Armor, Defenses, Aircraft
 		Weaknesses: • Weak vs Infantry
 	Valued:
-		Cost: 1500
+		Cost: 1400
 	Tooltip:
 		Name: MiG Attack Plane
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 28000
+		HP: 36000
 	RevealsShroud:
-		Range: 11c0
+		Range: 14c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -254,8 +254,8 @@ MIG:
 	Aircraft:
 		CruiseAltitude: 2560
 		InitialFacing: 192
-		TurnSpeed: 24
-		Speed: 201
+		TurnSpeed: 20
+		Speed: 185
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		TakeoffSounds: migtoff1.aud, cjetbanb.aud, cjetbanc.aud
@@ -346,15 +346,15 @@ SUK:
 		Weaknesses: • Weak vs Infantry\n• Cannot attack Aircraft\n• Has difficulty hitting moving targets
 		RequiresCondition: seismic-upgrade
 	Valued:
-		Cost: 2000
+		Cost: 1600
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
 		Name: Sukhoi Attack Plane
 	Health:
-		HP: 27000
+		HP: 34000
 	RevealsShroud:
-		Range: 12c0
+		Range: 14c0
 		MinRange: 10c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -381,8 +381,8 @@ SUK:
 	Aircraft:
 		CruiseAltitude: 2560
 		InitialFacing: 192
-		TurnSpeed: 26
-		Speed: 216
+		TurnSpeed: 20
+		Speed: 195
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		TakeoffSounds: migtoff1.aud, cjetbanb.aud, cjetbanc.aud
@@ -496,15 +496,15 @@ YAK:
 		Strengths: • Strong vs Infantry, Light Armor, Buildings, Aircraft
 		Weaknesses: • Weak vs Heavy Armor, Defenses
 	Valued:
-		Cost: 1200
+		Cost: 1000
 	Tooltip:
 		Name: Yak Attack Plane
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 22000
+		HP: 32000
 	RevealsShroud:
-		Range: 11c0
+		Range: 14c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -629,7 +629,7 @@ P51:
 		CruiseAltitude: 2560
 		InitialFacing: 192
 		TurnSpeed: 24
-		Speed: 300
+		Speed: 400
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 	WithMuzzleOverlay:
@@ -891,9 +891,9 @@ NHAW:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 50000
+		HP: 44000
 	RevealsShroud:
-		Range: 12c0
+		Range: 15c0
 		MinRange: 6c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -1090,9 +1090,9 @@ HELI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 34000
 	RevealsShroud:
-		Range: 13c0
+		Range: 15c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -1207,15 +1207,15 @@ HIND:
 		Weaknesses: • Weak vs Defenses\n• Cannot attack Aircraft
 		Attributes: • Reduces enemy speed and rare of fire (Ukraine only)
 	Valued:
-		Cost: 1600
+		Cost: 1200
 	Tooltip:
 		Name: Hind
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 38000
+		HP: 40000
 	RevealsShroud:
-		Range: 14c0
+		Range: 15c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -1532,7 +1532,7 @@ A10:
 	Health:
 		HP: 40000
 	RevealsShroud:
-		Range: 11c0
+		Range: 13c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -2092,7 +2092,7 @@ APCH:
 	Inherits: ^HelicopterTD
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMovePrioritizeAir
 	Valued:
-		Cost: 1400
+		Cost: 1200
 	Tooltip:
 		Name: Apache
 	UpdatesPlayerStatistics:
@@ -2114,9 +2114,9 @@ APCH:
 		TakeoffSounds: vhelistaa.aud
 		LandingSounds: vhelilana.aud
 	Health:
-		HP: 30000
+		HP: 36000
 	RevealsShroud:
-		Range: 13c0
+		Range: 15c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -2206,7 +2206,7 @@ ORCA:
 	Inherits: ^HelicopterTD
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMovePrioritizeAir
 	Valued:
-		Cost: 1500
+		Cost: 1200
 	Tooltip:
 		Name: Orca
 	UpdatesPlayerStatistics:
@@ -2230,7 +2230,7 @@ ORCA:
 	Health:
 		HP: 22500
 	RevealsShroud:
-		Range: 14c0
+		Range: 15c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -2587,15 +2587,15 @@ RAH:
 		Strengths: • Strong vs Infantry, Light Armor, Buildings
 		Weaknesses: • Weak vs Heavy Armor, Defenses\n• Cannot attack Aircraft
 	Valued:
-		Cost: 2000
+		Cost: 1800
 	Tooltip:
 		Name: Comanche
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 28000
+		HP: 32000
 	RevealsShroud:
-		Range: 13c0
+		Range: 15c0
 		MinRange: 8c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -2738,7 +2738,7 @@ KIRO:
 		Weaknesses: • Cannot attack Aircraft\n• Has difficulty hitting moving targets\n• Takes +50% damage when dropping bombs
 		Attributes: • Self repairs to 75% out of combat
 	Valued:
-		Cost: 2000
+		Cost: 1800
 	Tooltip:
 		Name: Kirov Airship
 		GenericName: Airship
@@ -2749,7 +2749,7 @@ KIRO:
 	Armor:
 		Type: Aircraft
 	RevealsShroud:
-		Range: 13c0
+		Range: 14c0
 		MinRange: 8c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -2969,11 +2969,11 @@ OCAR:
 		Modifier: 90
 		RequiresCondition: carrying
 	Health:
-		HP: 35000
+		HP: 40000
 	Armor:
 		Type: Aircraft
 	RevealsShroud:
-		Range: 11c0
+		Range: 13c0
 		MinRange: 7c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -3164,21 +3164,21 @@ HARR:
 		Strengths: • Strong vs Aircraft, Buildings, Infantry, Light Armor
 		Weaknesses: • Weak vs Heavy Armor, Defenses
 	Valued:
-		Cost: 2000
+		Cost: 1400
 	Tooltip:
 		Name: Harrier
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 34000
+		HP: 38000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 10c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
-		Range: 10c0
+		Range: 14c0
 		Type: GroundPosition
 	Armament@PRIMARY:
 		Weapon: HellfireAA.Harrier
@@ -3290,7 +3290,7 @@ SCRN:
 		Strengths: • Strong vs Heavy Armor, Defenses, Aircraft
 		Weaknesses: • Weak vs Infantry
 	Valued:
-		Cost: 2000
+		Cost: 1600
 	Tooltip:
 		Name: Banshee
 		GenericName: Aircraft
@@ -3647,7 +3647,7 @@ VENM:
 	Inherits: ^HelicopterTD
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMovePrioritizeAir
 	Valued:
-		Cost: 1500
+		Cost: 1200
 	Tooltip:
 		Name: Venom
 	UpdatesPlayerStatistics:
@@ -3674,9 +3674,9 @@ VENM:
 	Guard:
 		Voice: Move
 	Health:
-		HP: 28000
+		HP: 30000
 	RevealsShroud:
-		Range: 14c0
+		Range: 15c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -3800,7 +3800,7 @@ AURO:
 	Health:
 		HP: 26000
 	RevealsShroud:
-		Range: 12c0
+		Range: 14c0
 		MinRange: 10c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -3971,7 +3971,7 @@ PMAK:
 	Health:
 		HP: 44000
 	RevealsShroud:
-		Range: 15c0
+		Range: 14c0
 		MinRange: 10c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -4110,7 +4110,7 @@ BEAG:
 		Weaknesses: • Weak vs Infantry, Buildings
 		Attributes: • Reduces range and vision of targets
 	Valued:
-		Cost: 2000
+		Cost: 1700
 	Tooltip:
 		Name: Black Eagle
 		GenericName: Aircraft
@@ -4238,7 +4238,7 @@ PHAN:
 		Weaknesses: • Weak vs Infantry, Buildings
 		Attributes: • Disables weapons and vision of enemy vehicles and aircraft
 	Valued:
-		Cost: 1800
+		Cost: 1600
 	Tooltip:
 		Name: Phantom
 		GenericName: Aircraft
@@ -4374,7 +4374,7 @@ KAMV:
 		Strengths: • Strong vs Heavy Armor, Light Armor
 		Weaknesses: • Weak vs Infantry, Buildings\n• Cannot attack Aircraft\n• Has difficulty hitting moving targets
 	Valued:
-		Cost: 1900
+		Cost: 1600
 	Tooltip:
 		Name: Kamov
 	UpdatesPlayerStatistics:
@@ -4382,7 +4382,7 @@ KAMV:
 	Health:
 		HP: 50000
 	RevealsShroud:
-		Range: 14c0
+		Range: 15c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -4498,14 +4498,14 @@ SHDE:
 		Strengths: • Strong vs Heavy Armor, Light Armor, Defenses
 		Weaknesses: • Weak vs Infantry, Buildings\n• Cannot attack Aircraft
 	Valued:
-		Cost: 1800
+		Cost: 1700
 	Tooltip:
 		Name: Shade
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 22000
+		HP: 28000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 9c0
@@ -4631,7 +4631,7 @@ VERT:
 		Weaknesses: • Cannot attack Aircraft
 		Attributes: • Bomb disrupts cloaking in a large area
 	Valued:
-		Cost: 2000
+		Cost: 1700
 	Tooltip:
 		Name: Vertigo
 		GenericName: Aircraft
@@ -4800,9 +4800,9 @@ MCOR:
 		LandingSounds: dropdwn1.aud
 		Speed: 135
 	Health:
-		HP: 30000
+		HP: 35000
 	RevealsShroud:
-		Range: 12c0
+		Range: 15c0
 		MinRange: 8c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -4858,7 +4858,7 @@ DISC:
 	Inherits: ^Helicopter
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Valued:
-		Cost: 2000
+		Cost: 1900
 	Tooltip:
 		Name: Floating Disc
 	UpdatesPlayerStatistics:
@@ -4875,7 +4875,7 @@ DISC:
 	Health:
 		HP: 65000
 	RevealsShroud:
-		Range: 14c0
+		Range: 15c0
 		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
@@ -5040,9 +5040,9 @@ JACK:
 	Voiced:
 		VoiceSet: JackknifeVoice
 	Health:
-		HP: 14000
+		HP: 22000
 	RevealsShroud:
-		Range: 10c0
+		Range: 15c0
 		MinRange: 8c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False

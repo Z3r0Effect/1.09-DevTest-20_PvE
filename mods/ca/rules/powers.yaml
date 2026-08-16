@@ -154,9 +154,14 @@
 			2:
 				UnitType: p51
 				SpawnDelay: 0
-				SpawnOffset: 0,0,0
-				TargetOffset: 0,0,0
+				SpawnOffset: -256,768,0
+				TargetOffset: -85,640,0
 			3:
+				UnitType: p51
+				SpawnDelay: 0
+				SpawnOffset: 256,-768,0
+				TargetOffset: -85,-640,0
+			4:
 				UnitType: p51
 				SpawnDelay: 0
 				SpawnOffset: -768,-2560,0

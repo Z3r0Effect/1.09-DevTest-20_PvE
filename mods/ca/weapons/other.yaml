@@ -1194,7 +1194,7 @@ MADTankDetonate:
 		ValidTargets: Ground, Infantry, Vehicle, Ship
 
 Laser:
-	ReloadDelay: 30
+	ReloadDelay: 55
 	ValidTargets: Ground, Water
 	Range: 12c256
 	Report: oblfire.aud
@@ -1350,8 +1350,8 @@ StealthAPCLaser:
 XOLaser:
 	Inherits: Laser
 	Report: xo-laser.aud
-	ReloadDelay: 60
-	Range: 8c256
+	ReloadDelay: 75
+	Range: 8c128
 	Projectile: LaserZapCA
 		Blockable: true
 		Width: 56
@@ -1372,10 +1372,10 @@ XOLaser:
 			Heavy: 110
 
 XOCoilGun:
-	Range: 8c256
-	ReloadDelay: 25
+	Range: 8c128
+	ReloadDelay: 45
 	Report: xo-coil1.aud
-	Burst: 2
+	Burst: 3
 	BurstDelays: 6
 	Projectile: MissileCA
 		Image: flakball
@@ -1555,7 +1555,7 @@ EnlightenedEmp:
 VenomLaser:
 	ReloadDelay: 20
 	ValidTargets: Ground, Water
-	Range: 7c768
+	Range: 8c640
 	Report: venmfire1.aud, venmfire2.aud
 	Projectile: LaserZapCA
 		Width: 35
@@ -1567,7 +1567,7 @@ VenomLaser:
 		SecondaryBeamZOffset: 511
 		SecondaryBeamColor: FF000040
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
+		Spread: 256
 		Damage: 5500
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, AirToGround
 		Versus:
@@ -1584,13 +1584,13 @@ VenomLaser:
 VenomLaser.UPG:
 	Inherits: VenomLaser
 	Report: venmfireupg1.aud, venmfireupg1.aud
-	Range: 8c128
+	Range: 9c0
 	Projectile: LaserZapCA
 		Duration: 10
 		SecondaryBeamWidth: 75
 		SecondaryBeamColor: FF00FF60
 	Warhead@1Dam: SpreadDamage
-		Spread: 106
+		Spread: 160
 		Damage: 6500
 		Versus:
 			Heavy: 85
@@ -2272,11 +2272,11 @@ IonZap:
 		Inaccuracy: 64
 		ZOffset: 2045
 	Warhead@1Dam: SpreadDamage
-		Damage: 12500
+		Damage: 18500
 		Spread: 768
 		AffectsParent: false
 		Versus:
-			None: 30
+			None: 50
 			Wood: 75
 			Light: 85
 			Heavy: 115
@@ -3573,8 +3573,8 @@ ViperLaser:
 		Damage: 1550
 
 AvatarLaser:
-	ReloadDelay: 80
-	ValidTargets: Ground, Water, Air, AirSmall
+	ReloadDelay: 90
+	ValidTargets: Ground, Water
 	Range: 7c512
 	Report: oblfire.aud
 	Projectile: LaserZapCA
@@ -3597,22 +3597,30 @@ AvatarLaser:
 			Wood: 60
 			Concrete: 55
 			Brick: 50
-	Warhead@2Dam: SpreadDamage
-		Spread: 128
-		Damage: 7000
-		ValidTargets: Air, AirSmall
-		InvalidTargets: Ground, Water
-	Warhead@3Smu: LeaveSmudge
+	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch-NoFlame
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
-	Warhead@4Eff: CreateEffect
+	Warhead@3Eff: CreateEffect
 		Image: laserhit
 		Explosions: idle1, idle2
 		ExplosionPalette: caneon
 		ValidTargets: Ground, Ship, Trees
 
+AvatarLaserAA:
+	Inherits: Laser
+	ReloadDelay: 65
+	ValidTargets: Air, Airsmall
+	Range: 8c512
+	Report: oblfire.aud
+	Warhead@2Dam: SpreadDamage
+		Spread: 256
+		Damage: 12000
+		ValidTargets: Air, AirSmall
+		InvalidTargets: Ground, Water
+
 AvatarLaser.Adv:
 	Inherits: Laser
+	ReloadDelay: 85
 	Report: obelmod2.aud
 	Range: 7c768
 	-Projectile:
@@ -3632,7 +3640,7 @@ AvatarLaser.Adv:
 		ImpactTicks: 0, 2, 4, 6, 8
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 5500
+		Damage: 6000
 	Warhead@3Eff: CreateEffect
 		Explosions: small_explosion, small_explosion_alt1, small_explosion_alt2, small_explosion_alt3
 
@@ -3815,7 +3823,7 @@ FloatingDiscLaser:
 	Inherits: Laser
 	ValidTargets: Ground, Water, Air, AirSmall
 	ReloadDelay: 60
-	Range: 7c512
+	Range: 7c768
 	Report: vfloatta.aud
 	Projectile: LaserZapCA
 		Color: eb39d380
@@ -3830,7 +3838,7 @@ FloatingDiscLaser:
 			Heavy: 75
 			Concrete: 75
 			Brick: 25
-			Aircraft: 55
+			Aircraft: 75
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, AirToGround
 
 ^FloatingDiscDrainer:
@@ -3894,19 +3902,19 @@ ZoneRaiderGrenade:
 		Speed: 700
 		Image: BOMB
 		Shadow: true
-		Inaccuracy: 554
+		Inaccuracy: 256
 		LaunchAngle: 75
 		Blockable: false
 		ContrailLength: 30
 		ContrailStartColor: 5bd8c3
 		ContrailStartColorAlpha: 128
 	Warhead@1Dam: SpreadDamage
-		Spread: 384
-		Damage: 8500
+		Spread: 448
+		Damage: 9000
 		Versus:
-			None: 35
+			None: 40
 			Wood: 90
-			Light: 100
+			Light: 110
 			Heavy: 45
 			Concrete: 50
 			Brick: 80
@@ -3924,7 +3932,7 @@ ZoneRaiderGrenade:
 		ValidTargets: Water, Underwater
 		InvalidTargets: Ship, Structure, Bridge
 	Warhead@Concussion: GrantExternalConditionCA
-		Range: 1c0
+		Range: 1c256
 		Duration: 50
 		Condition: concussion
 		ValidTargets: Infantry, Vehicle, Ship

@@ -227,7 +227,7 @@ ChainGun:
 	Inherits: ^HeavyMG
 	Report: gun13.aud
 	ReloadDelay: 16
-	Range: 7c512
+	Range: 8c128
 	MinRange: 0c768
 	Projectile: Bullet
 		Blockable: false
@@ -236,7 +236,7 @@ ChainGun:
 		Versus:
 			None: 100
 			Wood: 26
-			Light: 60
+			Light: 75
 			Heavy: 50
 			Concrete: 26
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath, AirToGround
@@ -349,12 +349,12 @@ ChainGun.Yak.R:
 	ReloadDelay: 60
 	Burst: 4
 	BurstDelays: 5
-	Range: 7c0
+	Range: 8c256
 	MinRange: 0c768
 	Projectile: InstantHit
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c128
+		Spread: 1c256
 		Damage: 3350
 		Versus:
 			None: 100
@@ -489,8 +489,14 @@ M1Carbine:
 
 M14:
 	Inherits: M1Carbine
-	Range: 7c256
+	Range: 8c0
 	Report: islyat1a.aud, islyat1b.aud
+	Warhead@1Dam: SpreadDamage
+		Damage: 2000
+		Versus:
+			None: 150
+			Light: 50
+			Heavy: 10
 
 M16Carbine:
 	Inherits: M1Carbine
@@ -528,6 +534,22 @@ M60mg:
 		Explosions: piff, piff2
 		Inaccuracy: 64
 
+GrizzM60mg:
+	Inherits: ^LightMG
+	-Report:
+	Range: 6c768
+	StartBurstReport: pillbox1.aud
+	Burst: 5
+	BurstDelays: 3
+	ReloadDelay: 38
+	Warhead@1Dam: SpreadDamage
+		Damage: 1400
+		Versus:
+			Light: 75
+	Warhead@2Eff: CreateEffect
+		Explosions: piff, piff2
+		Inaccuracy: 64
+
 M60mgTD:
 	Inherits: M60mg
 	StartBurstReport: m60x5.aud
@@ -538,7 +560,7 @@ OvldCoaxial:
 	InvalidTargets: Vehicle, Ship, Water, Structure
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Infantry
-		Damage: 600
+		Damage: 1400
 		Versus:
 			Light: 70
 	ReloadDelay: 45
@@ -578,7 +600,7 @@ M60mgJJAA:
 
 M60mgNHAW:
 	Inherits: M60mg
-	Range: 8c0
+	Range: 8c128
 	Projectile: Bullet
 		Blockable: false
 	-StartBurstReport:
@@ -586,10 +608,11 @@ M60mgNHAW:
 	Burst: 3
 	BurstDelays: 5
 	Warhead@1Dam: SpreadDamage
-		Damage: 1850
+		Spread: 512
+		Damage: 2400
 		Versus:
 			None: 165
-			Light: 50
+			Light: 70
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, AirToGround
 
 M60mgIFV:
@@ -992,12 +1015,12 @@ HeliGunAG:
 	Inherits: ^HeavyMG
 	Report: mgbtr1.aud, mgbtr2.aud, mgbtr3.aud
 	ReloadDelay: 14
-	Range: 7c256
+	Range: 8c256
 	MinRange: 0c768
 	Projectile: Bullet
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Spread: 64
+		Spread: 160
 		Damage: 7500
 		Versus:
 			None: 144

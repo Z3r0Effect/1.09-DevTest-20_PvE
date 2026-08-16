@@ -547,14 +547,24 @@ GTNK:
 	Passenger:
 		Voice: Move
 	Health:
-		HP: 45000
+		HP: 55000
 	Armament:
+		Name: primary
 		Weapon: 105mm
 		LocalOffset: 720,0,80
+	Armament@MG:
+		Name: GrizzMG
+		Weapon: GrizzM60mg
+		LocalOffset: 128,0,43
+	WithEjectedCasings@MG:
+		CasingWeapon: BrassDebris
+		CasingSpawnLocalOffset: 0,-125,200
+		CasingTargetOffset: 0, -500, 0
 	Turreted:
 		TurnSpeed: 20
 		Offset: 80,0,0
 	AttackTurreted:
+		Armaments: primary, GrizzMG
 		Voice: Attack
 		PauseOnCondition: empdisable || being-warped || blinded || parachute
 	AttackMove:
@@ -593,7 +603,7 @@ GTNK.squad:
 		Strengths: • Strong vs Heavy Armor, Light Armor
 		Weaknesses: • Weak vs Infantry, Defenses\n• Cannot attack Aircraft
 	Valued:
-		Cost: 3500
+		Cost: 2500
 	RenderSprites:
 		Image: squad.airborne.tank
 	ProduceActorPowerCA:
@@ -9822,7 +9832,7 @@ XO:
 		Prerequisites: vehicles.upgraded
 	WithMuzzleOverlay:
 	Parachutable:
-		FallRate: 130
+		FallRate: 165
 	WithIdleAnimation@DESCENDING:
 		RequiresCondition: parachute
 		Interval: 3
@@ -9848,11 +9858,11 @@ XO:
 		LandingSounds: xo-land1.aud
 		LeapCondition: jumping
 		ShowSelectionBarWhenFull: false
-		ChargeDelay: 625
+		ChargeDelay: 250
 		SelectionBarColor: ffaa00
 		CircleColor: ffaa0077
 		MaxDistance: 18
-		Speed: 165
+		Speed: 175
 	Contrail@Jumping:
 		Offset: -30,0,350
 		StartColorUsePlayerColor: false
@@ -10722,7 +10732,7 @@ AVTR:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 82000
+		HP: 80000
 	Mobile:
 		TurnSpeed: 18
 		Speed: 58
@@ -10747,6 +10757,12 @@ AVTR:
 		MuzzleSequence: muzzle
 		MuzzlePalette: caneon
 		RequiresCondition: quantum-upgrade
+	Armament@AALASER:
+		Name: aalaser
+		Weapon: AvatarLaserAA
+		LocalOffset: 850,400,350
+		MuzzleSequence: muzzle
+		MuzzlePalette: caneon
 	Armament@SECONDARY:
 		Name: secondary
 		Weapon: AvatarFlamer
@@ -10772,7 +10788,7 @@ AVTR:
 		Condition: flaming
 		RevokeDelay: 10
 	AttackFollowFrontal:
-		Armaments: primary, primary-upg, secondary
+		Armaments: primary, primary-upg, aalaser, secondary
 		TargetFrozenActors: True
 		PauseOnCondition: empdisable || being-warped || blinded
 		FacingTolerance: 64

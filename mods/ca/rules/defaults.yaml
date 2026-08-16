@@ -707,6 +707,9 @@
 	RevealsShroudMultiplier@Blinded:
 		RequiresCondition: blinded
 		Modifier: 0
+	SpeedMultiplier@Blinded:
+		RequiresCondition: blinded
+		Modifier: 75
 	TimedConditionBar@Blinded:
 		Condition: blinded
 		Color: ffee00

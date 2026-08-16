@@ -382,9 +382,9 @@ U3:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 9000
+		HP: 12000
 	Mobile:
-		Speed: 50
+		Speed: 58
 		Voice: Move
 		PauseOnCondition: !undeployed || being-warped || reapersnare
 		ImmovableCondition: deployed
@@ -577,7 +577,7 @@ U3.squad:
 		Weaknesses: • Weak vs Infantry, Light Armor\n• Weak anti-infantry weapon when not deployed
 		Attributes: • Deploys for personal anti-tank fortification\n• Uncrushable when deployed
 	Valued:
-		Cost: 3000
+		Cost: 2500
 	RenderSprites:
 		Image: squad.airborne
 	ProduceActorPowerCA:
@@ -3519,7 +3519,7 @@ IVAN:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 12000
+		HP: 17000
 	Mobile:
 		Speed: 75
 		Voice: Move
@@ -3549,7 +3549,7 @@ IVAN:
 	FireWarheadsOnDeath:
 		Weapon: ArtilleryExplode
 		EmptyWeapon: ArtilleryExplode
-		Chance: 50
+		Chance: 15
 		DamageSource: Killer
 		RequiresCondition: !being-warped
 	ProducibleWithLevel:
@@ -4949,6 +4949,8 @@ ZDEF:
 		VoiceSet: ZoneDefenderVoice
 	Health:
 		HP: 28000
+	Mobile:
+		Speed: 65
 	-TargetedLeapAbility:
 	-Contrail@Jumping:
 	-WithShadow@Jump:
@@ -5072,13 +5074,13 @@ HOPL:
 		Weaknesses: • Weak vs Heavy Armor, Defenses\n• Cannot attack Aircraft
 		Attributes: • One in every four shots blinds the target
 	Valued:
-		Cost: 800
+		Cost: 1000
 	Tooltip:
 		Name: Hoplite
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 18000
+		HP: 21000
 	Armor:
 		Type: Concrete
 	Mobile:
@@ -5136,7 +5138,7 @@ HOPL:
 		Condition: recharge
 		ArmamentNames: primary, secondary
 		RevokeDelay: 225
-		MaximumInstances: 3
+		MaximumInstances: 2
 		IsCyclic: true
 		RevokeAll: true
 	GrantConditionOnAttack@ChargedFired:
