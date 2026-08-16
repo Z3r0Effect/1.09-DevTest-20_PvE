@@ -2249,7 +2249,7 @@ TitanRailgunImpact:
 
 IonZap:
 	ReloadDelay: 85
-	Range: 7c768
+	Range: 6c512
 	Report: ion1.aud
 	Projectile: Railgun
 		Duration: 7
@@ -2272,7 +2272,7 @@ IonZap:
 		Inaccuracy: 64
 		ZOffset: 2045
 	Warhead@1Dam: SpreadDamage
-		Damage: 18500
+		Damage: 18000
 		Spread: 768
 		AffectsParent: false
 		Versus:
@@ -2711,7 +2711,7 @@ DesolatorBeam:
 		ValidTargets: Vehicle, Ship
 
 RadBeamWeaponHeavy:
-	Range: 6c512
+	Range: 6c768
 	ReloadDelay: 80
 	Report: eradcan1.aud
 	Projectile: RadBeam
@@ -2728,7 +2728,7 @@ RadBeamWeaponHeavy:
 		DamageTypes: RadiationDeath
 	Warhead@2Dam: SpreadDamage
 		Spread: 256
-		Damage: 16400
+		Damage: 16500
 		Versus:
 			None: 175
 			Wood: 45

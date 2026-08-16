@@ -760,7 +760,7 @@ upgc.drop:
 		Description: Provides a dropzone for emergency supplies.
 		IconPalette: chrometd
 	TooltipExtras:
-		Strengths: + $1250 delivered every 20 seconds (normal speed)
+		Strengths: + $1500 delivered every 20 seconds (normal speed)
 		Attributes: (!) Mutually exclusive with Firestorm Missile System, Advanced Radar System and Nanoshield Generator
 	RenderSprites:
 		PlayerPalette: playertd
