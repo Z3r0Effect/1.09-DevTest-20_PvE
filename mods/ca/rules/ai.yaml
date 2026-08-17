@@ -2047,7 +2047,7 @@ Player:
 		SquadValueMaxEarlyBonus: 6000
 		SquadValueMinLateBonus: 10000
 		SquadValueMaxLateBonus: 26000
-		AirUnitsTypes: heli, harr, pmak, beag, hind, yak, mig, suk, suk.upg, kiro, orca, a10, a10.sw, a10.gau, orcb, auro, jack, apch, venm, rah, scrn, stmr, torm, enrv, mshp, phan, kamv, shde, vert, mcor
+		AirUnitsTypes: heli, harr, pmak, beag, hind, yak, mig, suk, suk.upg, kiro, orca, a10, a10.sw, a10.gau, orcb, auro, jack, apch, venm, rah, scrn, stmr, torm, enrv, mshp, phan, kamv, shde, vert, mcor, cv
 		ExcludeFromSquadsTypes: harv, harv.td, harv.td.upg, harv.scrin, harv.chrono, mcv, amcv, smcv, e6, n6, s6, badr, badr.bomber, badr.cbomber, badr.nbomber, badr.mbomber, b2b, p51, tran.paradrop, halo.paradrop, nhaw.paradrop, u2, smig, a10.bomber, c17, c17.cargo, c17.clustermines, c17.xo, galx, uav, ocar.reinforce, ocar.xo, ocar.pod, horn, yf23.bomber, pod, pod2, pod3, buzz, buzz.ai, mspk
 		NavalUnitsTypes: ss,msub,dd,ca,lst,pt,dd2,pt2,ss2,isub,sb,seas
 		NavalProductionTypes: syrd, spen, syrd.gdi, spen.nod
@@ -2092,6 +2092,7 @@ Player:
 			torm: Aircraft, Heavy
 			enrv: Aircraft, Heavy, Concrete
 			mshp: Wood
+			cv: Wood
 	UnitBuilderBotModuleCA@brutal-vhard:
 		RequiresCondition: enable-brutal-ai || enable-vhard-ai
 		IdleBaseUnitsMaximum: 150
@@ -2099,7 +2100,7 @@ Player:
 		MaintainAirSuperiority: true
 		MaxAirSuperiority: 2
 		AirToAirUnits: heli, yak, mig, orca, apch, scrn, venm, stmr, torm, enrv, a10.sw, a10.gau, harr, beag
-		AirThreatUnits: heli, harr, pmak, beag, hind, yak, mig, suk, suk.upg, kiro, orca, a10, a10.sw, a10.gau, orcb, auro, apch, venm, rah, scrn, stmr, enrv, mshp, phan, kamv, shde, vert, mcor
+		AirThreatUnits: heli, harr, pmak, beag, hind, yak, mig, suk, suk.upg, kiro, orca, a10, a10.sw, a10.gau, orcb, auro, apch, venm, rah, scrn, stmr, enrv, mshp, phan, kamv, shde, vert, mcor, cv
 		ProductionMinCashRequirement: 1800
 		UnitIntervals:
 			mshp: 7500
@@ -2224,6 +2225,7 @@ Player:
 			torm: Aircraft, Heavy
 			enrv: Aircraft, Heavy, Concrete
 			mshp: Wood
+			cv: Wood
 	UnitBuilderBotModuleCA@hard:
 		RequiresCondition: enable-hard-ai
 		IdleBaseUnitsMaximum: 300
@@ -2231,7 +2233,7 @@ Player:
 		MaintainAirSuperiority: false
 		MaxAirSuperiority: 6
 		AirToAirUnits: heli, yak, mig, orca, apch, scrn, venm, stmr, torm, enrv, a10.sw, a10.gau, harr, beag
-		AirThreatUnits: heli, harr, pmak, beag, hind, yak, mig, suk, suk.upg, kiro, orca, a10, a10.sw, a10.gau, orcb, auro, apch, venm, rah, scrn, stmr, enrv, mshp, phan, kamv, shde, vert, mcor
+		AirThreatUnits: heli, harr, pmak, beag, hind, yak, mig, suk, suk.upg, kiro, orca, a10, a10.sw, a10.gau, orcb, auro, apch, venm, rah, scrn, stmr, enrv, mshp, phan, kamv, shde, vert, mcor, cv
 		UnitDelays:
 			arty: 4500
 			arty.nod: 4500
@@ -2315,7 +2317,7 @@ Player:
 		SquadValueMaxEarlyBonus: 4000
 		SquadValueMinLateBonus: 5000
 		SquadValueMaxLateBonus: 10000
-		AirUnitsTypes: heli, harr, pmak, beag, hind, yak, mig, suk, suk.upg, kiro, orca, a10, a10.sw, a10.gau, orcb, auro, jack, apch, venm, rah, scrn, stmr, torm, enrv, mshp, phan, kamv, shde, vert, mcor
+		AirUnitsTypes: heli, harr, pmak, beag, hind, yak, mig, suk, suk.upg, kiro, orca, a10, a10.sw, a10.gau, orcb, auro, jack, apch, venm, rah, scrn, stmr, torm, enrv, mshp, phan, kamv, shde, vert, mcor, cv
 		ExcludeFromSquadsTypes: harv, harv.td, harv.td.upg, harv.scrin, harv.chrono, mcv, amcv, smcv, dog, e6, n6, s6, badr, badr.bomber, badr.cbomber, badr.nbomber, badr.mbomber, b2b, p51, tran.paradrop, halo.paradrop, nhaw.paradrop, u2, smig, a10.bomber, c17, c17.cargo, c17.clustermines, c17.xo, galx, uav, ocar.reinforce, ocar.xo, ocar.pod, horn, yf23.bomber, pod, pod2, pod3, buzz, buzz.ai, mspk
 		NavalUnitsTypes: ss,msub,dd,ca,lst,pt,pt2,ss2,dd2,isub,sb,seas
 		HarasserTypes: n2, e2, ivan, n4, n5, e4
@@ -2337,6 +2339,7 @@ Player:
 			suk.upg: Heavy, Wood
 			kiro: Heavy, Wood
 			mshp: Wood
+			cv: Wood
 	UnitBuilderBotModuleCA@normal:
 		RequiresCondition: enable-normal-ai
 		IdleBaseUnitsMaximum: 150
