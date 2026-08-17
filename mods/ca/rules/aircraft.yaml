@@ -2811,9 +2811,9 @@ KIRO:
 		CanForceLand: False
 		IdealSeparation: 0c768
 	AutoTarget:
-		InitialStance: HoldFire
+		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
-		ScanRadius: 2
+		ScanRadius: 6
 	SpawnActorOnDeath:
 		Actor: KIRO.Husk
 		RequiresCondition: !empdisable && !being-warped
@@ -3427,6 +3427,102 @@ SCRN:
 	Encyclopedia:
 		Category: Nod/Aircraft
 
+CV:
+	Inherits: ^HelicopterTD
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@BERSERK: ^Berserk
+	Buildable:
+		Queue: AircraftSQ, AircraftMQ
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 60
+		Prerequisites: afld.gdi, ~aircraft.gdi, ~techlevel.high
+		Description: Carrier that launches a squadron of Hornet drone aircraft.
+	TooltipExtras:
+		Strengths: • Strong vs Ground Units, Buildings
+		Weaknesses: • Cannot attack Aircraft
+		Attributes: • Hornets only targetable by static anti-air defenses
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Triskelion
+		GenericName: Aircraft
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 80000
+	-SpawnActorOnDeath:
+	Armor:
+		Type: Aircraft
+	HitShape:
+		TargetableOffsets: 0,0,0, 1024,0,0, -1024,0,0
+		Type: Circle
+			Radius: 1c256
+	RevealsShroud:
+		MinRange: 5c0
+		Range: 15c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 8c0
+	Armament@PRIMARY:
+		Weapon: HornetLauncher
+		LocalOffset: 0,0,0
+	AttackTurreted:
+		PauseOnCondition: empdisable || being-warped || blinded
+	Turreted:
+		TurnSpeed: 512
+		RealignDelay: 0
+	Aircraft:
+		CruiseAltitude: 2c768
+		InitialFacing: 192
+		TurnSpeed: 15
+		Speed: 55
+		Voice: Move
+		AltitudeVelocity: 0c50
+		CanForceLand: False
+		IdealSeparation: 0c768
+	WithIdleOverlay@SPINNER:
+		Sequence: spinner
+		Offset: 30,70,600
+		PauseOnCondition: empdisable || being-warped
+	CarrierMaster:
+		Actors: horn, horn, horn, horn
+		RearmTicks: 75
+		RespawnTicks: 250
+		InstantRepair: true
+		SlaveDisposalOnKill: KillSlaves
+		SpawnAllAtOnce: true
+		RequiresCondition: !empdisable && !being-warped
+		BeingEnteredCondition: drone-landing
+		RearmAsGroup: false
+		MaxSlaveDistance: 12c0
+	WithSpawnerMasterPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+	-Hovers@CRUISING:
+	Exit:
+	ChangesHealth:
+		PercentageStep: 2
+		Delay: 75
+		StartIfBelow: 100
+		DamageCooldown: 125
+	Selectable:
+		DecorationBounds: 1877, 1877
+	GpsRadarDot:
+		Sequence: Plane
+	Voiced:
+		VoiceSet: DroneCarrVoice
+	RenderRangeCircle@Attack:
+		RangeCircleType: CarrierRange
+		Color: 0000FF60
+	ProductionCostMultiplier@arcBonus:
+		Multiplier: 85
+		Prerequisites: player.arc
+	Targetable@AirHighValue:
+		TargetTypes: AirHighValue
+	Encyclopedia:
+		Category: GDI/Aircraft
+
 HORN:
 	Inherits: ^NeutralPlane
 	Inherits@3: ^Cloakable
@@ -3457,6 +3553,8 @@ HORN:
 		PersistentTargeting: false
 		OpportunityFire: false
 		PauseOnCondition: empdisable
+		AttackType: Strafe
+		StrafeRunLength: 3c0
 	Aircraft:
 		CruiseAltitude: 1c513
 		InitialFacing: 192
@@ -3464,9 +3562,9 @@ HORN:
 		Speed: 201
 		AltitudeVelocity: 120
 		MaximumPitch: 56
-		CanHover: False
+		CanHover: True
 		CanSlide: False
-		Repulsable: False
+		RepulsionSpeed: 40
 		VTOL: true
 		TakeoffSounds: mtoff1.aud, mtoff2.aud
 		LandingSounds: mland1.aud, mland2.aud

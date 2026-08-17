@@ -2469,7 +2469,7 @@ MicrowaveZap.UPG:
 
 HornetLauncher:
 	ReloadDelay: 15
-	Range: 25c0
+	Range: 10c0
 	ValidTargets: Ground, Water
 	Projectile: InstantHit
 	Warhead@1Dam: TargetDamage

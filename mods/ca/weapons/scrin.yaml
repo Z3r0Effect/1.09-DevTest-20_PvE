@@ -981,7 +981,7 @@ EnervatorBoltsAA:
 
 InvaderLauncher:
 	ReloadDelay: 5
-	Range: 7c0
+	Range: 9c0
 	ValidTargets: Air, AirSmall, Ground, Water
 	Projectile: InstantHit
 	Warhead@1Dam: TargetDamage
@@ -996,7 +996,7 @@ InvaderLauncher:
 			Brick: 0
 
 InvaderZap:
-	Range: 6c768
+	Range: 8c512
 	Report: gunwalker-fire1.aud, gunwalker-fire2.aud
 	ReloadDelay: 50
 	Burst: 3

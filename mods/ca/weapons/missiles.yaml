@@ -307,7 +307,7 @@ DragonGI:
 	Report: iggiat2a.aud, iggiat2b.aud
 	ReloadDelay: 40
 	Projectile: MissileCA
-		RangeLimit: 8c0
+		RangeLimit: 10c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 5500
 		Versus:
@@ -325,6 +325,18 @@ DragonGI.CRYO:
 	Warhead@1Dam: SpreadDamage
 		Damage: 5500
 
+DragonGISeal:
+	Inherits: DragonGI
+	Range: 10c0
+	ReloadDelay: 100
+	Projectile: MissileCA
+		RangeLimit: 12c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 12500
+		Versus:
+			None: 40
+			Light: 45
+			Heavy: 105
 DragonBATF:
 	Inherits: Dragon
 	Range: 7c768
@@ -477,18 +489,21 @@ HellfireAG.Harrier:
 
 HellfireAG.Horn:
 	Inherits: HellfireAG.Harrier
-	ReloadDelay: 50
-	Range: 8c0
+	ReloadDelay: 75
+	Range: 8c512
 	MinRange: 0c768
 	Burst: 2
 	Projectile: MissileCA
-		RangeLimit: 7c512
+		RangeLimit: 9c0
 		ContrailLength: 0
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
 		Damage: 500
 		Versus:
+			None: 90
 			Wood: 85
+			Light: 60
+			Heavy: 50
 			Concrete: 45
 
 HellfireAA:

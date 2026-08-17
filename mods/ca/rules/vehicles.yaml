@@ -5889,7 +5889,7 @@ BTR:
 			yuri: loaded-cmdo
 			mast: loaded-cmdo
 			cmsr: loaded-cmsr
-		InitialUnits: E1,E1,E3,E3,E3
+		InitialUnits: E1,E4,E4,E3,E3
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud
@@ -10172,6 +10172,7 @@ OVLD:
 	Turreted:
 		TurnSpeed: 10
 	Armament@PRIMARY:
+		Name: primary
 		Weapon: 135mm
 		Recoil: 171
 		RecoilRecovery: 30
@@ -10180,6 +10181,7 @@ OVLD:
 		PauseOnCondition: has-atomic-ammo || atomic-reloading
 		ReloadingCondition: reloading
 	Armament@OVLDCOAX:
+		Name: ovldcoax
 		Weapon: OvldCoaxial
 		LocalOffset: 1050,0,420
 		MuzzleSequence: muzzle
@@ -10197,6 +10199,7 @@ OVLD:
 		PauseOnCondition: !has-atomic-ammo || reloading
 		ReloadingCondition: atomic-reloading
 	AttackTurreted:
+		Armaments: primary, ovldcoax
 		PauseOnCondition: empdisable || being-warped || blinded
 		Voice: Attack
 	WithFacingSpriteBody:

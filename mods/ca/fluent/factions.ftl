@@ -226,7 +226,7 @@ faction-arc =
     Bonuses:
       • Recon Drone (-20% cooldown)
       • Mobile Sensor Array (20% discount)
-      • Drone Carrier (10% discount)
+      • Drone Carrier (15% discount)
       • Additional Comms. Centers (50% discount)
       • Comms. Center emergency backup power
       • Newly produced drones reclaim XP of those destroyed

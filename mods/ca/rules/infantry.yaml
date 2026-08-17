@@ -443,7 +443,7 @@ U3:
 		ProneOffset: 384,0,-395
 		RequiresCondition: !deployed
 	DamageMultiplier:
-		Modifier: 40
+		Modifier: 30
 		RequiresCondition: deployed
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -2464,6 +2464,7 @@ SAB:
 		UncloakSound: gstealof.aud
 	Cloak@CRATE-CLOAK:
 		RequiresCondition: crate-cloak && !(cloak-force-disabled || invisibility || hidden)
+	-TakeCover:
 	GrantConditionOnPrerequisite@Shadow:
 		Condition: player-shadow
 		Prerequisites: player.shadow
@@ -2581,6 +2582,7 @@ ASSA:
 		Voice: Move
 	Voiced:
 		VoiceSet: AssassinVoice
+	-TakeCover:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	WithProductionIconOverlay:
@@ -2672,6 +2674,7 @@ CONF:
 		RequiresSelection: true
 		Position: BottomLeft
 		Margin: 4, 3
+	-TakeCover:
 	Targetable@MindControlImmune:
 		TargetTypes: MindControlImmune
 	Targetable@ChaosImmune:
@@ -4313,12 +4316,18 @@ SEAL:
 	Guard:
 		Voice: Move
 	Armament:
+		Name: primary
 		Weapon: mp5
 		PauseOnCondition: onwater
 	Armament@BATF:
 		Name: batf
 		Weapon: mp5BATF
 		MuzzleSequence: garrison-muzzle
+	Armament@DragonGISeal:
+		Name: missile
+		Weapon: DragonGISeal
+		LocalOffset: 0,0,500
+		PauseOnCondition: !ammo || onwater
 	Armament@C4Place:
 		Weapon: PlaceC4Seal
 		Cursor: c4
@@ -4352,9 +4361,15 @@ SEAL:
 		Condition: preparing-c4
 		ArmamentNames: tertiary
 		RevokeDelay: 26
+	AmmoPool:
+		Ammo: 1
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		Delay: 85
+		Count: 1
 	AttackFrontal:
 		Voice: Attack
-		Armaments: primary, secondary, tertiary
+		Armaments: primary, secondary, missile, tertiary
 		PauseOnCondition: being-warped || blinded || reapersnare
 		FacingTolerance: 0
 	Demolition:
