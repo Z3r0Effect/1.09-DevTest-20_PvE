@@ -129,11 +129,14 @@
 		Prerequisite: is-naval-ai
 		RequiresCondition: owned-by-naval-ai
 	ProductionCostMultiplier@brutalbonus:
-		Multiplier: 90
+		Multiplier: 85
 		Prerequisites: is-brutal-ai
 	ProductionCostMultiplier@vhardbonus:
-		Multiplier: 95
+		Multiplier: 90
 		Prerequisites: is-vhard-ai
+	ProductionCostMultiplier@hardbonus:
+		Multiplier: 95
+		Prerequisites: is-hard-ai
 	ProductionTimeMultiplier@easybonus:
 		Multiplier: 115
 		Prerequisites: is-easy-ai
@@ -146,11 +149,14 @@
 		LossType: RefineryLost
 		UpdateOn: Killed
 	ProductionTimeMultiplier@brutalbonus:
-		Multiplier: 90
+		Multiplier: 85
 		Prerequisites: is-brutal-ai
 	ProductionTimeMultiplier@vhardbonus:
-		Multiplier: 95
+		Multiplier: 90
 		Prerequisites: is-vhard-ai
+	ProductionTimeMultiplier@hardbonus:
+		Multiplier: 95
+		Prerequisites: is-hard-ai
 	ProvidesPrerequisiteIfAlliesExist:
 		Prerequisite: sendcash.enabled
 
@@ -178,6 +184,9 @@
 	ProductionCostMultiplier@hardbonus:
 		Multiplier: 85
 		Prerequisites: is-hard-ai
+	ProductionCostMultiplier@normalbonus:
+		Multiplier: 90
+		Prerequisites: is-normal-ai
 	ProductionTimeMultiplier@easybonus:
 		Multiplier: 120
 		Prerequisites: is-easy-ai

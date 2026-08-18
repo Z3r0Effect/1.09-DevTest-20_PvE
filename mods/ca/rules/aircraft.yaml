@@ -9,7 +9,7 @@ BADR:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 20
-		Speed: 220
+		Speed: 240
 		Repulsable: False
 		MaximumPitch: 56
 	Cargo:
@@ -62,7 +62,7 @@ BADR.Bomber:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 20
-		Speed: 220
+		Speed: 280
 		Repulsable: False
 		MaximumPitch: 56
 	AmmoPool:
@@ -156,7 +156,7 @@ B2B:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 20
-		Speed: 200
+		Speed: 280
 		Repulsable: False
 		MaximumPitch: 56
 	AmmoPool:
@@ -260,7 +260,7 @@ MIG:
 		MaximumPitch: 56
 		TakeoffSounds: migtoff1.aud, cjetbanb.aud, cjetbanc.aud
 	AutoTarget:
-		InitialStance: HoldFire
+		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
 	AmmoPool:
 		Ammo: 6
@@ -388,7 +388,7 @@ SUK:
 		TakeoffSounds: migtoff1.aud, cjetbanb.aud, cjetbanc.aud
 		Voice: Move
 	AutoTarget:
-		InitialStance: HoldFire
+		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
 	AmmoPool:
 		Ammo: 12
@@ -546,7 +546,7 @@ YAK:
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 	AutoTarget:
-		InitialStance: HoldFire
+		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
 	AmmoPool:
 		Ammo: 24
@@ -1136,7 +1136,7 @@ HELI:
 		TakeoffSounds: vhelistaa.aud
 		LandingSounds: vhelilana.aud
 	AutoTarget:
-		InitialStance: HoldFire
+		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
 	WithIdleOverlay@ROTORAIR:
 		Offset: 0,0,85
@@ -1278,7 +1278,7 @@ HIND:
 		TakeoffSounds: vhelistaa.aud
 		LandingSounds: vhelilana.aud
 	AutoTarget:
-		InitialStance: HoldFire
+		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
 	WithIdleOverlay@ROTORAIR:
 		Sequence: rotor
@@ -1838,7 +1838,7 @@ A10.bomber:
 		CruiseAltitude: 2560
 		InitialFacing: 192
 		TurnSpeed: 16
-		Speed: 220
+		Speed: 320
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		MoveIntoShroud: False
@@ -2165,7 +2165,7 @@ APCH:
 		RequiresCondition: !airborne
 	WithMuzzleOverlay:
 	AutoTarget:
-		InitialStance: HoldFire
+		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
 	SpawnActorOnDeath:
 		Actor: APCH.Husk
@@ -2274,7 +2274,7 @@ ORCA:
 		Actor: ORCA.Husk.empty.EMP
 		RequiresCondition: !ammo && empdisable && !being-warped
 	AutoTarget:
-		InitialStance: HoldFire
+		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
 	LeavesTrails:
 		Offsets: -427,0,0
@@ -3210,7 +3210,7 @@ HARR:
 		DestroyedSounds: vintdiea.aud, vintdieb.aud
 		RequiresCondition: airborne
 	AutoTarget:
-		InitialStance: HoldFire
+		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
 	AmmoPool:
 		Ammo: 6
@@ -3351,7 +3351,7 @@ SCRN:
 		CanSlide: False
 		AltitudeVelocity: 0c200
 	AutoTarget:
-		InitialStance: HoldFire
+		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
 	AmmoPool:
 		Ammo: 48
@@ -3840,7 +3840,7 @@ VENM:
 		Actor: VENM.Husk.empty.EMP
 		RequiresCondition: airborne && !ammo && empdisable && !being-warped
 	AutoTarget:
-		InitialStance: HoldFire
+		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
 	LeavesTrails:
 		Offsets: -427,0,0
@@ -4256,7 +4256,7 @@ BEAG:
 		DestroyedSounds: vblediea.aud, vbledieb.aud
 		RequiresCondition: airborne
 	AutoTarget:
-		InitialStance: HoldFire
+		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
 	AmmoPool:
 		Ammo: 5
@@ -4381,7 +4381,7 @@ PHAN:
 		DestroyedSounds: vblediea.aud, vbledieb.aud
 		RequiresCondition: airborne
 	AutoTarget:
-		InitialStance: HoldFire
+		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
 	AmmoPool:
 		Ammo: 6
@@ -4509,7 +4509,7 @@ KAMV:
 		TakeoffSounds: vospstaa.aud
 		LandingSounds: vosplana.aud
 	AutoTarget:
-		InitialStance: HoldFire
+		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
 	WithIdleOverlay@ROTORAIR:
 		Sequence: rotor

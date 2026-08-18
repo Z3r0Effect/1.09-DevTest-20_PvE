@@ -2092,7 +2092,7 @@ Player:
 			torm: Aircraft, Heavy
 			enrv: Aircraft, Heavy, Concrete
 			mshp: Wood
-			cv: Wood
+			cv: Heavy, Wood
 	UnitBuilderBotModuleCA@brutal-vhard:
 		RequiresCondition: enable-brutal-ai || enable-vhard-ai
 		IdleBaseUnitsMaximum: 150
@@ -2225,7 +2225,7 @@ Player:
 			torm: Aircraft, Heavy
 			enrv: Aircraft, Heavy, Concrete
 			mshp: Wood
-			cv: Wood
+			cv: Heavy, Wood
 	UnitBuilderBotModuleCA@hard:
 		RequiresCondition: enable-hard-ai
 		IdleBaseUnitsMaximum: 300
@@ -2312,10 +2312,10 @@ Player:
 			harv.chrono: 9
 	SquadManagerBotModuleCA@normal:
 		RequiresCondition: enable-normal-ai
-		MinimumAttackForceDelay: 25
+		MinimumAttackForceDelay: 75
 		SquadValue: 6000
-		SquadValueMaxEarlyBonus: 4000
-		SquadValueMinLateBonus: 5000
+		SquadValueMaxEarlyBonus: 5000
+		SquadValueMinLateBonus: 6000
 		SquadValueMaxLateBonus: 10000
 		AirUnitsTypes: heli, harr, pmak, beag, hind, yak, mig, suk, suk.upg, kiro, orca, a10, a10.sw, a10.gau, orcb, auro, jack, apch, venm, rah, scrn, stmr, torm, enrv, mshp, phan, kamv, shde, vert, mcor, cv
 		ExcludeFromSquadsTypes: harv, harv.td, harv.td.upg, harv.scrin, harv.chrono, mcv, amcv, smcv, dog, e6, n6, s6, badr, badr.bomber, badr.cbomber, badr.nbomber, badr.mbomber, b2b, p51, tran.paradrop, halo.paradrop, nhaw.paradrop, u2, smig, a10.bomber, c17, c17.cargo, c17.clustermines, c17.xo, galx, uav, ocar.reinforce, ocar.xo, ocar.pod, horn, yf23.bomber, pod, pod2, pod3, buzz, buzz.ai, mspk
@@ -2828,7 +2828,7 @@ World:
 				n5: 100
 				ivan: 100
 		Composition@VehicleRaid:
-			MaxProducedValue: 6000
+			MaxProducedValue: 7000
 			UnitQueues: VehicleSQ, VehicleMQ
 			UnitsToBuild:
 				bike: 100
@@ -2848,7 +2848,7 @@ World:
 				spec: 100
 		Composition@BlackHandAssault:
 			Prerequisites: player.blackh
-			MaxProducedValue: 12000
+			MaxProducedValue: 6000
 			UnitQueues: InfantrySQ, InfantryMQ, VehicleSQ, VehicleMQ
 			UnitsToBuild:
 				bh: 100

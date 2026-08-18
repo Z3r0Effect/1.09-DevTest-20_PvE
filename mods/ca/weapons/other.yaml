@@ -1280,7 +1280,7 @@ LaserTur.Adv:
 LightTankLaser:
 	Inherits: LaserTur
 	Range: 7c256
-	ReloadDelay: 50
+	ReloadDelay: 45
 	Report: tnklaser.aud
 	Warhead@1Dam: SpreadDamage
 		Damage: 5800
@@ -1303,6 +1303,8 @@ LightTankLaser:
 BattleTankLaser:
 	Inherits: LightTankLaser
 	ReloadDelay: 35
+		Versus:
+			Heavy: 95
 
 RaiderBuggyLaser:
 	Inherits: M60mgTD
@@ -1780,7 +1782,7 @@ PrisCLaser:
 
 HopliteGun:
 	ReloadDelay: 50
-	Range: 7c768
+	Range: 8c0
 	Report: hopl-fire1.aud
 	Projectile: LaserZapCA
 		Width: 40
@@ -1793,12 +1795,12 @@ HopliteGun:
 		SecondaryBeamColor: 75D1FF60
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 5200
+		Damage: 6000
 		Versus:
-			None: 105
+			None: 150
 			Wood: 100
-			Light: 95
-			Heavy: 85
+			Light: 100
+			Heavy: 80
 			Concrete: 50
 			Brick: 30
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
@@ -3915,7 +3917,7 @@ ZoneRaiderGrenade:
 			None: 40
 			Wood: 90
 			Light: 110
-			Heavy: 45
+			Heavy: 60
 			Concrete: 50
 			Brick: 80
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigated
@@ -3933,7 +3935,7 @@ ZoneRaiderGrenade:
 		InvalidTargets: Ship, Structure, Bridge
 	Warhead@Concussion: GrantExternalConditionCA
 		Range: 1c256
-		Duration: 50
+		Duration: 75
 		Condition: concussion
 		ValidTargets: Infantry, Vehicle, Ship
 	Warhead@5Eff: CreateEffect

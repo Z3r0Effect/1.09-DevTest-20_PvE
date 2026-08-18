@@ -489,7 +489,7 @@ NUKC.Preview:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 48500
+		HP: 50500
 	Mobile:
 		Speed: 72
 	RevealsShroud:
@@ -547,7 +547,7 @@ GTNK:
 	Passenger:
 		Voice: Move
 	Health:
-		HP: 55000
+		HP: 60000
 	Armament:
 		Name: primary
 		Weapon: 105mm
@@ -2603,7 +2603,7 @@ TRUK.DROP:
 	-DeliversCash:
 	CashTrickler:
 		Interval: 50
-		Amount: 1500
+		Amount: 1250
 	KillsSelf:
 		Delay: 50
 		RemoveInstead: true
@@ -3362,7 +3362,7 @@ GDRN:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 32000
+		HP: 38000
 	Armor:
 		Type: Light
 	Mobile:
@@ -4100,7 +4100,7 @@ LTNK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 39000
+		HP: 44000
 	Mobile:
 		Locomotor: Amphibious
 		Speed: 76
@@ -4230,7 +4230,7 @@ MTNK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 58000
+		HP: 61000
 	Mobile:
 		Speed: 72
 	RevealsShroud:
@@ -8035,7 +8035,7 @@ RTNK:
 		Weaknesses: • Weak vs Defenses, Infantry\n• Cannot attack Aircraft
 		Attributes: • Disguised when not moving\n• Deals additional damage firing from disguised state
 	Valued:
-		Cost: 800
+		Cost: 850
 	Tooltip:
 		Name: Mirage Tank
 	Mirage:
@@ -8053,7 +8053,7 @@ RTNK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 50000
+		HP: 56000
 	Mobile:
 		Speed: 105
 		Voice: Move
@@ -9432,7 +9432,7 @@ CYCP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 24000
+		HP: 28000
 	Armor:
 		Type: Light
 	Mobile:

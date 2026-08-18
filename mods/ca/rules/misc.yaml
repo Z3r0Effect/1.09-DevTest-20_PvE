@@ -314,7 +314,7 @@ SCRATE:
 	Immobile:
 		OccupiesSpace: false
 	RevealsShroud:
-		Range: 10c0
+		Range: 12c0
 		Type: CenterPosition
 	BodyOrientation:
 		QuantizedFacings: 1
@@ -337,7 +337,7 @@ camera.infiltrator:
 	Inherits: ^CameraBase
 	KillsSelf:
 		RemoveInstead: true
-		Delay: 3000
+		Delay: 15000
 
 camera.paradrop:
 	Inherits: ^CameraBase
@@ -351,11 +351,11 @@ camera.psychic:
 	Inherits@1: ^CameraBase
 	-RevealsShroud:
 	RangedGpsRadarProvider:
-		Range: 10c0
+		Range: 14c0
 		TargetTypes: Infantry, Vehicle, Air, Structure
 	WithRangeCircle:
 		Type: PsychicDetection
-		Range: 10c0
+		Range: 14c0
 		Color: cc00ff77
 		BorderColor: 00000044
 		Visible: Always
@@ -387,7 +387,7 @@ camera.satscan:
 		ValidRelationships: Ally
 	KillsSelf:
 		RemoveInstead: true
-		Delay: 375
+		Delay: 750
 		GrantsCondition: killsself
 	GrantConditionOnPrerequisite@UPLINK:
 		Condition: uplinkavailable
@@ -406,11 +406,11 @@ camera.satscan.oneshot:
 	VoiceAnnouncement@Die:
 		Voice: Build
 	KillsSelf:
-		Delay: 380
+		Delay: 750
 	RevealsMap:
 		RequiresCondition: animation-complete
 	GrantDelayedCondition:
-		Delay: 375
+		Delay: 750
 		Condition: animation-complete
 	-GrantConditionOnPrerequisite@UPLINK:
 
@@ -425,7 +425,7 @@ camera.hacker:
 camera.decoy:
 	Inherits: ^CameraBase
 	RevealsShroud:
-		Range: 5c0
+		Range: 10c0
 	KillsSelf:
 		RemoveInstead: true
 		Delay: 100
@@ -479,13 +479,13 @@ ToxicCloud:
 		CruiseAltitude: 1
 		LandableTerrainTypes: Clear,Road,Rough,Ore,Gems,Tiberium,BlueTiberium,BlackTiberium,Water,Tree,River,Rock,Beach,Bridge,Tunnel,Wall,Ford
 	Wanders:
-		WanderMoveRadius: 5
+		WanderMoveRadius: 8
 		ReduceMoveRadiusDelay: 3
 	RevealsShroud:
 		Range: 2c0
 		Type: CenterPosition
 	KillsSelf:
-		Delay: 300
+		Delay: 500
 		DamageTypes: ToxinDeath
 	Hovers:
 	WithDeathAnimation:
@@ -502,7 +502,7 @@ ToxicCloud2:
 	RenderSprites:
 		Image: cloud2
 	KillsSelf:
-		Delay: 500
+		Delay: 750
 
 VirusCloud:
 	Inherits: ToxicCloud
@@ -513,7 +513,7 @@ VirusCloud:
 	Aircraft:
 		Speed: 1
 	KillsSelf:
-		Delay: 125
+		Delay: 250
 	-WithDeathAnimation:
 
 ChaosCloud:
@@ -885,6 +885,11 @@ powerproxy.airstrike:
 				SpawnDelay: 0
 				SpawnOffset: 0,0,0
 				TargetOffset: 0,0,0
+			3:
+				UnitType: a10.bomber
+				SpawnDelay: 20
+				SpawnOffset: 1536,-1024,0
+				TargetOffset: 536,0,0
 		Icon: airstrike
 		Name: Air Strike (Single Use)
 		Description: A10 strike planes drop napalm\nbombs on your target.

@@ -328,11 +328,13 @@ DragonGI.CRYO:
 DragonGISeal:
 	Inherits: DragonGI
 	Range: 10c0
-	ReloadDelay: 100
+	ReloadDelay: 75
 	Projectile: MissileCA
 		RangeLimit: 12c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 12500
+		ValidTargets: Vehicle, Structure, Wall
+		InvalidTargets: Infantry
 		Versus:
 			None: 40
 			Light: 45
@@ -2575,7 +2577,7 @@ KamovRockets:
 		Blockable: false
 	ValidTargets: Ground, Trees, Water
 	Warhead@1Dam: SpreadDamage
-		Damage: 7500
+		Damage: 9500
 		Spread: 1c448
 		Versus:
 			None: 10

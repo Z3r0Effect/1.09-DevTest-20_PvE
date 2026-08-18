@@ -540,10 +540,10 @@ GrizzM60mg:
 	Range: 6c768
 	StartBurstReport: pillbox1.aud
 	Burst: 5
-	BurstDelays: 3
-	ReloadDelay: 38
+	BurstDelays: 2
+	ReloadDelay: 25
 	Warhead@1Dam: SpreadDamage
-		Damage: 1400
+		Damage: 1550
 		Versus:
 			Light: 75
 	Warhead@2Eff: CreateEffect

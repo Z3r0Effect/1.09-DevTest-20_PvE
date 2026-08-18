@@ -106,10 +106,11 @@
 
 105mm:
 	Inherits: 90mm
+	ReloadDelay: 40
 	Range: 6c768
 	Report: vgriatta.aud, vgriattb.aud, vgriattc.aud
 	Warhead@1Dam: SpreadDamage
-		Damage: 4300
+		Damage: 5000
 		Versus:
 			Light: 100
 
@@ -128,7 +129,7 @@
 	Range: 6c512
 	ReloadDelay: 30
 	Warhead@1Dam: SpreadDamage
-		Damage: 2200
+		Damage: 3200
 
 120mmHEAT:
 	Inherits: 25mm
@@ -141,6 +142,7 @@
 		Damage: 6600
 		Versus:
 			None: 30
+			Heavy: 95
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@3Eff: CreateEffect
 		ImpactSounds: firetrt1.aud

@@ -382,7 +382,7 @@ U3:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 12000
+		HP: 15000
 	Mobile:
 		Speed: 58
 		Voice: Move
@@ -4365,7 +4365,7 @@ SEAL:
 		Ammo: 1
 		AmmoCondition: ammo
 	ReloadAmmoPool:
-		Delay: 85
+		Delay: 75
 		Count: 1
 	AttackFrontal:
 		Voice: Attack
@@ -4376,6 +4376,9 @@ SEAL:
 		DetonationDelay: 45
 		Voice: Demolish
 		DamageTypes: ExplosionDeath
+	DamageTypeDamageMultiplier@A2GPROTECTION:
+		DamageTypes: AirToGround
+		Modifier: 50
 	AnnounceOnKill:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
