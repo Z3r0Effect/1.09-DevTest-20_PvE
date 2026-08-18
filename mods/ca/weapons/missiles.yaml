@@ -502,11 +502,11 @@ HellfireAG.Horn:
 		Spread: 341
 		Damage: 500
 		Versus:
-			None: 90
+			None: 95
 			Wood: 85
-			Light: 60
-			Heavy: 50
-			Concrete: 45
+			Light: 80
+			Heavy: 75
+			Concrete: 50
 
 HellfireAA:
 	Inherits: ^AirToAirMissile
