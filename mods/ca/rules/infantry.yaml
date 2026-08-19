@@ -24,7 +24,7 @@ DOG:
 	Selectable:
 		Bounds: 512, 725, -42, -170
 	Health:
-		HP: 8500
+		HP: 11000
 	Mobile:
 		Speed: 94
 		Voice: Move
@@ -45,7 +45,7 @@ DOG:
 		Voice: Move
 	GrantConditionOnAttack:
 		Condition: eating
-		RevokeDelay: 45
+		RevokeDelay: 25
 	GrantConditionWhileAiming:
 		Condition: run
 	AutoTarget:
@@ -77,11 +77,11 @@ DOG:
 		DetectionTypes: Mine
 		Range: 5c0
 	RangedGpsRadarProvider:
-		Range: 10c0
+		Range: 18c0
 		TargetTypes: Infantry
 	WithRangeCircle:
 		Type: DogDetection
-		Range: 10c0
+		Range: 18c0
 		Color: ffffff50
 	Voiced:
 		VoiceSet: DogVoice
@@ -130,15 +130,15 @@ TDOG:
 	Targetable@TerrorDog:
 		TargetTypes: TerrorDog
 	AutoTarget:
-		ScanRadius: 4
+		ScanRadius: 12
 	ProductionCostMultiplier@UkraineBonus:
 		Multiplier: 80
 		Prerequisites: player.ukraine
 	RangedGpsRadarProvider:
-		Range: 9c0
+		Range: 18c0
 		TargetTypes: Vehicle
 	WithRangeCircle:
-		Range: 9c0
+		Range: 18c0
 	-AutoGuard:
 	-KeepsDistance:
 
@@ -884,7 +884,7 @@ E7:
 		AddToArmyValue: true
 	Health:
     
-		HP: 18000
+		HP: 22000
 	Mobile:
 		Speed: 69
 		Voice: Move
@@ -2876,7 +2876,7 @@ JJET:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 8000
+		HP: 10000
 	Targetable:
 		RequiresCondition: !airborne && !being-warped
 		TargetTypes: Ground, Infantry
@@ -2974,6 +2974,8 @@ JJET:
 	Selectable:
 		Bounds: 768, 768, 0, -256
 		DecorationBounds: 512, 725, 0, -256
+	AutoTarget:
+		ScanRadius: 9
 	KillsSelf@Emp:
 		RequiresCondition: empdisable && cruising
 	GrantConditionOnPrerequisite@Enhanced:
@@ -3596,7 +3598,7 @@ BRUT:
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 75
+		Speed: 70
 		Voice: Move
 	Passenger:
 		CargoType: Brute
@@ -3651,6 +3653,11 @@ BRUT:
 		Modifier: 80
 	DamageTypeDamageMultiplier@FLAKARMORMINOR:
 		Modifier: 85
+	GrantConditionOnMovement@BRUTEEVASION:
+		Condition: moving
+	DamageMultiplier@BRUTEEVASION:
+		Modifier: 70
+		RequiresCondition: moving
 	ChangesHealth:
 		PercentageStep: 6
 		Delay: 25
@@ -3896,7 +3903,7 @@ SGLI:
 		TargetTypes: AirSmall
 	GrantTimedCondition@GLIDING:
 		Condition: gliding
-		Duration: 1500
+		Duration: 6000
 	TimedConditionBar@GLIDING:
 		Condition: gliding
 		Color: 8A8A8A
@@ -4551,7 +4558,7 @@ ENLI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 4500
+		HP: 6500
 	Armament@PRIMARY:
 		Weapon: ChemicalMortar
 		LocalOffset: 200,0,155
@@ -4834,7 +4841,7 @@ ZTRP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 22000
+		HP: 26000
 	Armor:
 		Type: None
 	Mobile:
@@ -4937,7 +4944,7 @@ ZRAI:
 	Voiced:
 		VoiceSet: ZoneRaiderVoice
 	Health:
-		HP: 20000
+		HP: 24000
 	Mobile:
 		Speed: 60
 	-TakeCover:
@@ -5092,13 +5099,13 @@ HOPL:
 		Weaknesses: • Weak vs Heavy Armor, Defenses\n• Cannot attack Aircraft
 		Attributes: • One in every four shots blinds the target
 	Valued:
-		Cost: 1000
+		Cost: 750
 	Tooltip:
 		Name: Hoplite
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 21000
+		HP: 25000
 	Armor:
 		Type: Concrete
 	Mobile:
@@ -5189,7 +5196,7 @@ TIGR:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10500
+		HP: 12500
 	Armor:
 		Type: None
 	Mobile:

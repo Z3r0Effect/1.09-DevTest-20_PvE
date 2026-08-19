@@ -365,12 +365,13 @@ TurretGun:
 	Range: 11c0
 	Report: turret1.aud
 	Warhead@1Dam: SpreadDamage
-		Damage: 6000
+		Damage: 8000
 		Versus:
 			None: 20
 			Wood: 58
 			Concrete: 40
-			Light: 75
+			Light: 80
+			Heavy: 85
 	Warhead@3EffGround: CreateEffect
 		Explosions: large_explosion
 		ImpactSounds: kaboom12.aud
@@ -828,23 +829,23 @@ GrenadeJJ:
 	Projectile: Bullet
 		ContrailLength: 30
 		ContrailStartColorAlpha: 100
-		Speed: 200
-		Inaccuracy: 128
+		Speed: 240
+		Inaccuracy: 64
 	Warhead@1Dam: SpreadDamage
-		Damage: 7000
+		Damage: 8000
 		Versus:
 			None: 100
 			Wood: 75
 			Concrete: 75
-			Heavy: 20
+			Heavy: 40
 			Light: 80
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigated, AirToGround
 
 EMPGrenadeJJ:
 	Inherits: GrenadeJJ
 	Warhead@2emp: GrantExternalConditionCA
-		Range: 256
-		Duration: 40
+		Range: 320
+		Duration: 50
 		Condition: empdisable
 		ValidTargets: Vehicle, Ship, Structure
 		InvalidTargets: EmpImmune
@@ -901,12 +902,12 @@ ShadowGliderGrenade:
 		LaunchAngle: 0
 
 ^Mortar:
-	ReloadDelay: 80
-	Range: 8c0
+	ReloadDelay: 70
+	Range: 9c128
 	MinRange: 2c0
 	Report: nade.aud
 	Projectile: Bullet
-		Speed: 150
+		Speed: 180
 		LaunchAngle: 140
 		Inaccuracy: 768
 		Image: flakball
@@ -941,9 +942,11 @@ ChemicalMortar:
 		DamageTypes: Prone50Percent, TriggerProne, RadiationDeath
 	Warhead@2Dam: SpreadDamage
 		Damage: 8000
-		Spread: 426
-		Falloff: 100, 50, 25, 0
+		Spread: 768
+		Falloff: 100, 75, 50, 0
 		ValidTargets: Cyborg
+		Versus:
+			Heavy: 65
 		DamageTypes: Prone50Percent, TriggerProne, RadiationDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch-NoFlame
@@ -967,7 +970,7 @@ CryoMortar:
 		Image: cryoball
 		ContrailStartColor: 8fc6ffaa
 	Warhead@1Dam: SpreadDamage
-		Damage: 2500
+		Damage: 3500
 		Versus:
 			None: 90
 			Brick: 5
@@ -979,7 +982,7 @@ CryoMortar:
 	Warhead@chill1: GrantExternalConditionCA
 		Condition: chilled
 		Duration: 125
-		Range: 0c682
+		Range: 0c768
 		ValidRelationships: Enemy, Neutral
 	Warhead@chill2: GrantExternalConditionCA
 		Condition: chilled
@@ -989,7 +992,7 @@ CryoMortar:
 	Warhead@chillally: GrantExternalConditionCA
 		Condition: chilled
 		Duration: 50
-		Range: 0c682
+		Range: 0c256
 		ValidRelationships: Ally
 	Warhead@cryoresidue: CreateTintedCells
 		LayerName: cryoresidue
@@ -1024,12 +1027,12 @@ SonicMortar:
 
 HallucinationGrenade:
 	Inherits: ^Mortar
-	ReloadDelay: 120
+	ReloadDelay: 95
 	Projectile: Bullet
 		ContrailStartColor: dc289c
 		ContrailStartColorAlpha: 128
 	Warhead@1Dam: SpreadDamage
-		Damage: 2500
+		Damage: 4500
 	Warhead@chaos: GrantExternalConditionCA
 		Range: 0c768
 		Duration: 75

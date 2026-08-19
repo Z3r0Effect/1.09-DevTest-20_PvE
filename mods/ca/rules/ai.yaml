@@ -2042,7 +2042,7 @@ Player:
 			zeal.covenant: 1
 	SquadManagerBotModuleCA@brutal-vhard:
 		RequiresCondition: enable-brutal-ai || enable-vhard-ai
-		MinimumAttackForceDelay: 25
+		MinimumAttackForceDelay: 75
 		SquadValue: 15000
 		SquadValueMaxEarlyBonus: 6000
 		SquadValueMinLateBonus: 10000
@@ -2095,7 +2095,7 @@ Player:
 			cv: Heavy, Wood
 	UnitBuilderBotModuleCA@brutal-vhard:
 		RequiresCondition: enable-brutal-ai || enable-vhard-ai
-		IdleBaseUnitsMaximum: 150
+		IdleBaseUnitsMaximum: 200
 		MaxAircraft: 3
 		MaintainAirSuperiority: true
 		MaxAirSuperiority: 2
@@ -2114,9 +2114,9 @@ Player:
 			harv.chrono: 2250
 			rmbo: 5500
 			e7: 5500
-			mast: 5500
-			yuri: 5500
-			bori: 5500
+			mast: 6500
+			yuri: 6500
+			bori: 6500
 			u3.squad: 15000
 			gtnk.squad: 15000
 		UnitLimits:
@@ -2228,7 +2228,7 @@ Player:
 			cv: Heavy, Wood
 	UnitBuilderBotModuleCA@hard:
 		RequiresCondition: enable-hard-ai
-		IdleBaseUnitsMaximum: 300
+		IdleBaseUnitsMaximum: 350
 		MaxAircraft: 3
 		MaintainAirSuperiority: false
 		MaxAirSuperiority: 6
@@ -2312,7 +2312,7 @@ Player:
 			harv.chrono: 9
 	SquadManagerBotModuleCA@normal:
 		RequiresCondition: enable-normal-ai
-		MinimumAttackForceDelay: 75
+		MinimumAttackForceDelay: 350
 		SquadValue: 6000
 		SquadValueMaxEarlyBonus: 5000
 		SquadValueMinLateBonus: 6000
@@ -2342,7 +2342,7 @@ Player:
 			cv: Wood
 	UnitBuilderBotModuleCA@normal:
 		RequiresCondition: enable-normal-ai
-		IdleBaseUnitsMaximum: 150
+		IdleBaseUnitsMaximum: 300
 		MaxAircraft: 4
 		MaintainAirSuperiority: false
 		UnitDelays:

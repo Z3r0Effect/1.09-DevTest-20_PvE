@@ -824,13 +824,13 @@ StingerGTWR:
 		Speed: 400
 		LockOnBurstCounts: 1
 	Warhead@1Dam: SpreadDamage
-		Damage: 8900
-		Spread: 341
+		Damage: 9000
+		Spread: 512
 		Versus:
 			None: 50
 			Wood: 55
-			Light: 70
-			Heavy: 55
+			Light: 80
+			Heavy: 90
 			Concrete: 55
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@3Eff: CreateEffect
@@ -1476,7 +1476,7 @@ SBRockets:
 
 IFVRockets:
 	Inherits: Dragon
-	Range: 6c768
+	Range: 7c0
 	Burst: 2
 	BurstDelays: 5
 	Warhead@1Dam: SpreadDamage
@@ -1488,7 +1488,7 @@ IFVRockets:
 
 IFVRocketsAA:
 	Inherits: RedEye
-	Range: 8c0
+	Range: 8c768
 	Burst: 2
 	BurstDelays: 5
 	Warhead@1Dam: SpreadDamage
@@ -1499,11 +1499,11 @@ IFVRocketsAA:
 IFVRocketsE:
 	Inherits: IFVRockets
 	Report: vifvatta.aud
-	Range: 7c0
+	Range: 7c256
 	Projectile: MissileCA
 		ContrailLength: 10
 	Warhead@1Dam: SpreadDamage
-		Damage: 3750
+		Damage: 3850
 
 IFVRocketsE.CRYO:
 	Inherits: IFVRocketsE
@@ -2626,12 +2626,12 @@ KamovRocketsWide:
 TigerGuardMissile:
 	Inherits: ^AntiGroundMissile
 	Inherits@Projectile: ^TigerGuardMissileProjectile
-	ReloadDelay: 70
+	ReloadDelay: 75
 	Range: 12c0
 	MinRange: 3c0
 	Report: tigr-fire1.aud, tigr-fire2.aud
 	Warhead@1Dam: SpreadDamage
-		Damage: 8750
+		Damage: 12000
 		Versus:
 			None: 10
 			Wood: 40

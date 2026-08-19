@@ -203,7 +203,7 @@ Chemspray:
 
 FlamerTD:
 	ReloadDelay: 55
-	Range: 6c512
+	Range: 7c128
 	MinRange: 0c512
 	Report: flamer2.aud
 	TargetActorCenter: true
@@ -214,8 +214,8 @@ FlamerTD:
 		RectangleWidth: 2c0
 		SingleHitPerActor: true
 		MinimumImpactDistance: 256
-		MaximumImpactDistance: 7c512
-		MinimumFriendlyFireRange: 1c768
+		MaximumImpactDistance: 7c128
+		MinimumFriendlyFireRange: 1c128
 		ForceGround: DamageOnly
 		SmudgeType: Scorch
 		DamageFalloff@1:
@@ -622,7 +622,7 @@ BruteAttack:
 	TargetActorCenter: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 10000
+		Damage: 12000
 		DamageTypes: DefaultDeath
 		InvalidTargets: Structure
 		Versus:
@@ -910,7 +910,7 @@ Commandobombvehicle:
 	Warhead@AttachDelayedWeapon: AttachDelayedWeapon
 		Weapon: CommandoTNTVehicle
 		Type: tnt
-		TriggerTime: 75
+		TriggerTime: 35
 		DeathTypes: ExplosionDeath
 		Range: 1
 		AttachSounds: icraatta.aud
@@ -1686,7 +1686,7 @@ PrisLaser:
 PrisLaserSupport:
 	ValidTargets: Ground, Water
 	ReloadDelay: 3
-	Range: 7c0
+	Range: 8c0
 	Report: bpriat1a.aud
 	Projectile: LaserZapCA
 		Width: 35
@@ -1761,7 +1761,7 @@ PrisTBurst:
 PrisCLaser:
 	Inherits: PrisTLaser
 	Report: pcanfire.aud
-	ReloadDelay: 100
+	ReloadDelay: 80
 	Range: 11c0
 	Projectile: LaserZapCA
 		Width: 70
@@ -1771,7 +1771,7 @@ PrisCLaser:
 		SecondaryBeamColor: 4be8d499
 	Warhead@1Dam: SpreadDamage
 		Damage: 10000
-		Spread: 512
+		Spread: 256
 		Versus:
 			None: 60
 			Wood: 100
@@ -1795,7 +1795,7 @@ HopliteGun:
 		SecondaryBeamColor: 75D1FF60
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 6000
+		Damage: 8500
 		Versus:
 			None: 150
 			Wood: 100
@@ -3898,7 +3898,7 @@ ZoneTrooperRailgun:
 
 ZoneRaiderGrenade:
 	ReloadDelay: 50
-	Range: 7c768
+	Range: 8c0
 	Report: zrai-fire1.aud, zrai-fire2.aud
 	Projectile: Bullet
 		Speed: 700
@@ -3934,7 +3934,7 @@ ZoneRaiderGrenade:
 		ValidTargets: Water, Underwater
 		InvalidTargets: Ship, Structure, Bridge
 	Warhead@Concussion: GrantExternalConditionCA
-		Range: 1c256
+		Range: 1c128
 		Duration: 75
 		Condition: concussion
 		ValidTargets: Infantry, Vehicle, Ship

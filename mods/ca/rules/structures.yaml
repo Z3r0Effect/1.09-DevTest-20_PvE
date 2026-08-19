@@ -510,10 +510,10 @@ TSLA:
 	AttackTesla:
 		PauseOnCondition: build-incomplete || disabled || empdisable || being-warped
 		ChargeAudio: tslachg2.aud
-		MaxCharges: 4
-		ReloadDelay: 100
+		MaxCharges: 5
+		ReloadDelay: 65
 	Power:
-		Amount: -45
+		Amount: -40
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@TeslaCoilOrSovietTechCenter:
 		Prerequisite: tslaorstek
@@ -849,7 +849,7 @@ GUN:
 		Name: Turret
 	Building:
 	Health:
-		HP: 55000
+		HP: 65000
 	Armor:
 		Type: Concrete
 	RevealsShroud:
@@ -879,7 +879,7 @@ GUN:
 		PauseOnCondition: build-incomplete || empdisable || being-warped
 	WithMuzzleOverlay:
 	Power:
-		Amount: -25
+		Amount: -20
 	ClassicFacingBodyOrientation:
 	DetectCloaked:
 		Range: 5c0
@@ -3606,7 +3606,7 @@ ATWR:
 	ClassicFacingBodyOrientation:
 		QuantizedFacings: 8
 	Power:
-		Amount: -30
+		Amount: -20
 	DetectCloaked:
 		RequiresCondition: !(disabled || empdisable || being-warped)
 	Encyclopedia:
@@ -4792,7 +4792,7 @@ PRIS:
 		Amount: -35
 	ProvidesPrerequisite@buildingname:
 	WithPrismLinkVisualization:
-		Range: 7c512
+		Range: 8c0
 		SelectedColor: 00FFFF77
 		PlacementColor: 00FFFFFF
 		RangeCircleColor: 00FFFF77

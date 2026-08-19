@@ -389,13 +389,13 @@
 		Prerequisites: development.policy, influence.level2
 	DamageMultiplier@VETERAN2DEVELOPMENTPOLICY2:
 		RequiresCondition: rank-veteran == 2 && development-policy2
-		Modifier: 90
+		Modifier: 95
 	FirepowerMultiplier@VETERAN2DEVELOPMENTPOLICY2:
 		RequiresCondition: rank-veteran == 2 && development-policy2
-		Modifier: 110
+		Modifier: 105
 	ReloadDelayMultiplier@VETERAN2DEVELOPMENTPOLICY2:
 		RequiresCondition: rank-veteran == 2 && development-policy2
-		Modifier: 85
+		Modifier: 90
 	GrantConditionOnPrerequisite@DevelopmentPolicy3:
 		Condition: development-policy3
 		Prerequisites: development.policy, influence.level3
@@ -1103,7 +1103,7 @@
 		Condition: onrough
 	SpeedMultiplier@HAZMATSOVIET:
 		RequiresCondition: hazmatsuits-soviet && onrough
-		Modifier: 66
+		Modifier: 75
 	Targetable@HAZMAT:
 		TargetTypes: Hazmat
 		RequiresCondition: hazmatsuits-soviet || hazmatsuits
@@ -2854,7 +2854,7 @@
 		RevokeDelay: 200
 	DamagedByTerrainCA@TIBDAMAGE:
 		Terrain: Tiberium, BlueTiberium, BlackTiberium
-		Damage: 250
+		Damage: 550
 		DamageInterval: 16
 		DamageTypes: ToxinDeath
 		RequiresCondition: tibexposed && !(hazmatsuits || hazmatsuits-soviet || being-warped || parachute)
@@ -3096,7 +3096,7 @@
 	RevealsShroud:
 		Range: 5c0
 	TakeCover:
-		SpeedModifier: 60
+		SpeedModifier: 75
 		Duration: 75
 		DamageModifiers:
 			Prone50Percent: 50

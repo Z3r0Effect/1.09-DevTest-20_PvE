@@ -575,11 +575,11 @@ M60mgJJ:
 	Burst: 3
 	BurstDelays: 5
 	Warhead@1Dam: SpreadDamage
-		Damage: 3250
+		Damage: 3400
 		Versus:
 			None: 100
-			Light: 40
-			Heavy: 4
+			Light: 45
+			Heavy: 10
 			Concrete: 4
 			Wood: 4
 			Brick: 4
@@ -592,15 +592,15 @@ M60mgJJ.ground:
 
 M60mgJJAA:
 	Inherits: M60mgJJ
-	Range: 7c512
+	Range: 8c768
 	ValidTargets: Air, AirSmall
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air, AirSmall
-		Damage: 600
+		Damage: 1500
 
 M60mgNHAW:
 	Inherits: M60mg
-	Range: 8c128
+	Range: 8c256
 	Projectile: Bullet
 		Blockable: false
 	-StartBurstReport:
