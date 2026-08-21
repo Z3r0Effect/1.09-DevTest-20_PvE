@@ -48,8 +48,13 @@ DOG:
 		RevokeDelay: 25
 	GrantConditionWhileAiming:
 		Condition: run
+	GrantConditionOnMovement@DOGEVASION:
+		Condition: moving
+	DamageMultiplier@DOGEVASION:
+		Modifier: 80
+		RequiresCondition: moving
 	AutoTarget:
-		AllowMovement: False
+		AllowMovement: True
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry
 	Targetable@ChaosImmune:
@@ -97,7 +102,6 @@ DOG:
 		DeployCursor: move
 	KeepsDistance:
 	AutoGuard:
-		ValidOrders: KeepDistance
 		ValidTargets: Infantry, Vehicle
 	Encyclopedia:
 		Category: Soviets/Infantry
@@ -538,7 +542,7 @@ U3:
 		RequiresCondition: !invulnerability && !being-warped && undeployed
 	AutoDeployer@AI:
 		RequiresCondition: botowner && !deployed && !parachute
-		DeployChance: 100
+		DeployChance: 50
 		DeployTrigger: Attack
 		DeployTicks: 5
 		UndeployTicks: 50
@@ -847,6 +851,7 @@ SPY:
 		VoiceSet: SpyVoice
 	Targetable:
 		TargetTypes: Ground, Infantry
+	-TakeCover:
 	Targetable@Disguised:
 		TargetTypes: Disguised
 		RequiresCondition: disguise
@@ -1280,7 +1285,7 @@ HACK:
 		ControlType: Hack
 		ArmamentNames: primary
 		Capacity: -1
-		TicksToControl: 150
+		TicksToControl: 85
 		TicksToRevoke: 25
 		InitSounds: hacker-init.aud
 		InitSoundControllerOnly: true
@@ -1309,6 +1314,9 @@ HACK:
 	RenderRangeCircle:
 		RangeCircleType: HackRange
 		Color: 00cc00cc
+	WithDecoration@COMMANDOSKULL:
+		Image: pips
+		Sequence: pip-assa
 	RejectsOrders@AIHACKER:
 		RequiresCondition: bothacking
 	GrantCondition@AIHACKER:
@@ -1582,7 +1590,7 @@ TTRP:
 	Valued:
 		Cost: 600
 	Health:
-		HP: 18000
+		HP: 22000
 	Voiced:
 		VoiceSet: TeslaTrooperVoice
 	TakeCover:
@@ -2469,7 +2477,7 @@ SAB:
 		Condition: player-shadow
 		Prerequisites: player.shadow
 	SpeedMultiplier@ShadowCloak:
-		Modifier: 125
+		Modifier: 135
 		RequiresCondition: player-shadow && hidden
 	IgnoresDisguise:
 	DetectCloaked:
@@ -2675,6 +2683,9 @@ CONF:
 		Position: BottomLeft
 		Margin: 4, 3
 	-TakeCover:
+	WithDecoration@COMMANDOSKULL:
+		Image: pips
+		Sequence: pip-assa
 	Targetable@MindControlImmune:
 		TargetTypes: MindControlImmune
 	Targetable@ChaosImmune:
@@ -2706,7 +2717,7 @@ ACOL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 17500
+		HP: 22500
 	Mobile:
 		Speed: 62
 		Voice: Move
@@ -2761,7 +2772,7 @@ TPLR:
 	Valued:
 		Cost: 550
 	Health:
-		HP: 21000
+		HP: 26000
 	RevealsShroud:
 		Range: 7c0
 	Buildable:
@@ -4334,13 +4345,13 @@ SEAL:
 		Name: missile
 		Weapon: DragonGISeal
 		LocalOffset: 0,0,500
-		PauseOnCondition: !ammo || onwater
+		PauseOnCondition: !missile-ammo || onwater
 	Armament@C4Place:
 		Weapon: PlaceC4Seal
 		Cursor: c4
 		OutsideRangeCursor: c4
 		Name: secondary
-		PauseOnCondition: !prepared && !onwater
+		PauseOnCondition: !prepared && onwater
 	Armament@C4Prepare:
 		Weapon: PrepareC4Seal
 		Cursor: c4
@@ -4368,15 +4379,29 @@ SEAL:
 		Condition: preparing-c4
 		ArmamentNames: tertiary
 		RevokeDelay: 26
-	AmmoPool:
+	AmmoPool@MISSILE:
+		Name: missile-ammo
+		Armaments: missile
 		Ammo: 1
-		AmmoCondition: ammo
-	ReloadAmmoPool:
+		AmmoCondition: missile-ammo
+	ReloadAmmoPool@MISSILE:
+		AmmoPool: missile-ammo
 		Delay: 75
 		Count: 1
 	AttackFrontal:
 		Voice: Attack
-		Armaments: primary, secondary, missile, tertiary
+		Armaments: primary, secondary, tertiary
+		PauseOnCondition: being-warped || blinded || reapersnare
+		FacingTolerance: 0
+	AttackFrontal@MISSILE:
+		Voice: Attack
+		Armaments: missile
+		AbortOnResupply: false
+		PauseOnCondition: being-warped || blinded || reapersnare
+		FacingTolerance: 0
+	AttackFrontal@C4:
+		Voice: Attack
+		Armaments: secondary, tertiary
 		PauseOnCondition: being-warped || blinded || reapersnare
 		FacingTolerance: 0
 	Demolition:

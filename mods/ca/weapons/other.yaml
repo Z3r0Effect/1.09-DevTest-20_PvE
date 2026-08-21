@@ -857,7 +857,7 @@ Commandobombbuilding:
 	Inherits: ^Artillery
 	ValidTargets: Structure
 	InvalidTargets: C4Attached, C4Immune
-	ReloadDelay: 180
+	ReloadDelay: 150
 	Range: 9c512
 	Report: grenade1.aud
 	Projectile: Bullet
@@ -895,7 +895,7 @@ Commandobombvehicle:
 	ValidTargets: Vehicle
 	InvalidTargets: C4Attached, C4Immune
 	ReloadDelay: 150
-	Range: 11c128
+	Range: 11c256
 	Report: grenade1.aud
 	Projectile: Bullet
 		LaunchAngle: 45
@@ -955,7 +955,7 @@ CommandoTNT:
 CommandoTNTVehicle:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-		Spread: 2c256
+		Spread: 1c768
 		Damage: 9000
 		Falloff: 1000, 500, 200, 50, 0
 		ValidTargets: Vehicle
@@ -1094,7 +1094,7 @@ IvanIFVTargeting:
 	Inherits: DemoTruckTargeting
 
 Hack:
-	Range: 11c0
+	Range: 13c0
 	ReloadDelay: 5
 	ValidTargets: Hackable
 	TargetActorCenter: true
@@ -1800,7 +1800,7 @@ HopliteGun:
 			None: 150
 			Wood: 100
 			Light: 100
-			Heavy: 80
+			Heavy: 95
 			Concrete: 50
 			Brick: 30
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath

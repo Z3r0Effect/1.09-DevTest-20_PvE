@@ -533,7 +533,7 @@
 	ExternalCondition@HeroOfTheUnion:
 		Condition: herooftheunion
 	FlatHealthDamageMultiplier@HeroOfTheUnion:
-		HP: 10000
+		HP: 20000
 		RequiresCondition: herooftheunion
 	SpeedMultiplier@HeroOfTheUnion:
 		Modifier: 120
@@ -2288,8 +2288,8 @@
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Infantry, Water, Underwater, Defense
-		InvalidTargets: NoAutoTarget, WaterStructure, AntiAirDefense, Vehicle
+		ValidTargets: Infantry, Light, Water, Underwater, Defense
+		InvalidTargets: NoAutoTarget, WaterStructure, AntiAirDefense
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Vehicle, Structure, AntiAirDefense, Mine
@@ -2383,7 +2383,7 @@
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Infantry, Water, Underwater, Air, AirSmall, Defense
+		ValidTargets: Infantry, Light, Water, Underwater, Air, AirSmall, Defense
 		InvalidTargets: NoAutoTarget, WaterStructure, AntiAirDefense
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
@@ -2544,12 +2544,15 @@
 	ProductionTimeMultiplier@MunitionsPlantBoost:
 		Multiplier: 85
 		Prerequisites: munp, !munplowpower
+	ProductionCostMultiplier@MunitionsPlantBoost:
+		Multiplier: 90
+		Prerequisites: munp, !munplowpower
 	GrantConditionOnPrerequisite@MunitionsPlantBoost:
 		Condition: munp-boost
 		Prerequisites: munp, !munplowpower
 	ReloadDelayMultiplier@MunitionsPlantBoost:
 		RequiresCondition: munp-boost
-		Modifier: 85
+		Modifier: 75
 
 ^OilRefCostReduction:
 	ProductionCostMultiplier@OilRef:
@@ -2765,6 +2768,10 @@
 	Inherits: ^VehicleTD
 	Mobile:
 		Locomotor: tracked
+
+^TargetableLightArmor:
+	Targetable@LightArmor:
+		TargetTypes: Light
 
 ^HeavyArmor:
 	Armor:
@@ -3840,7 +3847,7 @@
 	InfiltrateForTimedCondition@InfiltratorVisionIcon:
 		Condition: observer-attached
 		Types: VisionInfiltrate
-		Duration: 3000
+		Duration: 15000
 	Targetable@InfiltratorVision:
 		TargetTypes: VisionInfiltrate
 		RequiresCondition: !being-warped

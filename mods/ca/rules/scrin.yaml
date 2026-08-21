@@ -811,6 +811,7 @@ WCHR:
 		IsPlayerPalette: false
 		RequiresCondition: !cloak-force-disabled && !being-warped
 		PauseOnCondition: invisibility
+	-TakeCover:
 	WithColoredSelectionBox@INVIS:
 		RequiresCondition: invisibility || hidden
 		ColorSource: Player
@@ -1536,6 +1537,7 @@ HARV.Scrin:
 
 GUNW:
 	Inherits: ^Tank
+	Inherits@LIGHTARMOR: ^TargetableLightArmor
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMovePrioritizeAir
 	Inherits@BERSERK: ^Berserk
@@ -1619,6 +1621,7 @@ GUNW:
 
 SHRW:
 	Inherits: GUNW
+	Inherits@LIGHTARMOR: ^TargetableLightArmor
 	Inherits@ScrinUnitPalette: ^ScrinUnitPalette
 	Tooltip:
 		Name: Shard Walker
@@ -1654,6 +1657,7 @@ SHRW:
 
 SEEK:
 	Inherits: ^Vehicle
+	Inherits@LIGHTARMOR: ^TargetableLightArmor
 	Inherits@ScrinUnitPalette: ^ScrinUnitPalette
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -1738,6 +1742,7 @@ SEEK:
 
 LACE:
 	Inherits: ^Vehicle
+	Inherits@LIGHTARMOR: ^TargetableLightArmor
 	Inherits@ScrinUnitPalette: ^ScrinUnitPalette
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -1988,6 +1993,7 @@ INTL.AI2:
 
 CORR:
 	Inherits: ^Tank
+	Inherits@LIGHTARMOR: ^TargetableLightArmor
 	Inherits@ScrinUnitPalette: ^ScrinUnitPalette
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -2074,6 +2080,7 @@ CORR:
 
 LCHR:
 	Inherits: ^Tank
+	Inherits@LIGHTARMOR: ^TargetableLightArmor
 	Inherits@ScrinUnitPalette: ^ScrinUnitPalette
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -2166,6 +2173,7 @@ LCHR:
 LCHR.Orb:
 	Inherits@1: ^1x1Shape
 	Inherits@2: ^SelectableSupportUnit
+	Inherits@LIGHTARMOR: ^TargetableLightArmor
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@bounty: ^GlobalBounty
 	Inherits@Warpable: ^Warpable
@@ -2356,7 +2364,7 @@ DEVO:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 47000
+		HP: 52000
 	Armor:
 		Type: Light
 	Mobile:
@@ -2502,6 +2510,7 @@ DARK:
 
 RUIN:
 	Inherits: ^Vehicle
+	Inherits@LIGHTARMOR: ^TargetableLightArmor
 	Inherits@ScrinUnitPalette: ^ScrinUnitPalette
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -2532,7 +2541,7 @@ RUIN:
 		TurnSpeed: 512
 		Locomotor: lighthover
 	Health:
-		HP: 22000
+		HP: 26000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -2608,6 +2617,7 @@ RUIN:
 
 ATMZ:
 	Inherits: ^Vehicle
+	Inherits@LIGHTARMOR: ^TargetableLightArmor
 	Inherits@ScrinUnitPalette: ^ScrinUnitPalette
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -2636,7 +2646,7 @@ ATMZ:
 		Speed: 72
 		Locomotor: lighthover
 	Health:
-		HP: 24000
+		HP: 26000
 	Armor:
 		Type: Light
 	RevealsShroud:

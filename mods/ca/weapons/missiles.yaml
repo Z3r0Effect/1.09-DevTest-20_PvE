@@ -329,6 +329,7 @@ DragonGISeal:
 	Inherits: DragonGI
 	Range: 10c0
 	ReloadDelay: 75
+	ValidTargets: Vehicle, Structure, Wall
 	Projectile: MissileCA
 		RangeLimit: 12c0
 	Warhead@1Dam: SpreadDamage
@@ -339,6 +340,7 @@ DragonGISeal:
 			None: 40
 			Light: 45
 			Heavy: 105
+
 DragonBATF:
 	Inherits: Dragon
 	Range: 7c768
@@ -1193,7 +1195,7 @@ THWeapon:
 
 KatyushaRockets:
 	Inherits: ^AntiGroundMissile
-	ReloadDelay: 125
+	ReloadDelay: 80
 	Range: 9c768
 	MinRange: 3c0
 	Report: katyrocket1.aud, katyrocket2.aud, katyrocket3.aud
@@ -1236,7 +1238,7 @@ GradRockets:
 	Range: 13c0
 	Report: grad-fire1.aud, grad-fire2.aud
 	Warhead@1Dam: SpreadDamage
-		Damage: 450
+		Damage: 550
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 
 GradRocketsWide:

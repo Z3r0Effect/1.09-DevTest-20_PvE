@@ -5613,7 +5613,7 @@ CVAT:
 	CargoCloner@SQ:
 		Types: Clone
 		OverrideUnitBuildDurationModifier: true
-		BuildDurationModifier: 100
+		BuildDurationModifier: 25
 		ReadyAudio: UnitReady
 		BlockedAudio: NoBuild
 		BlockedTextNotification: Unable to build more.
@@ -5624,7 +5624,7 @@ CVAT:
 	CargoCloner@MQ:
 		Types: Clone
 		OverrideUnitBuildDurationModifier: true
-		BuildDurationModifier: 50
+		BuildDurationModifier: 25
 		ReadyAudio: UnitReady
 		BlockedAudio: NoBuild
 		BlockedTextNotification: Unable to build more.
