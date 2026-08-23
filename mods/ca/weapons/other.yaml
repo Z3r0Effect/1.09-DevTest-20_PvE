@@ -180,7 +180,7 @@ Chemspray:
 	BurstDelays: 5
 	Projectile: Bullet
 		Speed: 90
-		Inaccuracy: 484
+		Inaccuracy: 256
 		Image: chemall
 		Palette: ra2effect-ignore-lighting-alpha50
 		LaunchAngle: 5
@@ -196,7 +196,7 @@ Chemspray:
 			Concrete: 45
 			Light: 85
 			Heavy: 50
-		DamageTypes: Prone50Percent, TriggerProne, RadiationDeath
+		DamageTypes: Prone50Percent, TriggerProne, ToxinDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch-NoFlame
 		InvalidTargets: Vehicle, Building, Wall
@@ -862,7 +862,7 @@ Commandobombbuilding:
 	Report: grenade1.aud
 	Projectile: Bullet
 		LaunchAngle: 70
-		Speed: 180
+		Speed: 240
 		Inaccuracy: 0
 		Image: TNT
 		ContrailLength: 6
@@ -873,7 +873,7 @@ Commandobombbuilding:
 	Warhead@AttachDelayedWeapon: AttachDelayedWeapon
 		Weapon: CommandoTNT
 		Type: tnt
-		TriggerTime: 200
+		TriggerTime: 100
 		DeathTypes: ExplosionDeath
 		Range: 1
 		AttachSounds: icraatta.aud
@@ -894,12 +894,12 @@ Commandobombvehicle:
 	Inherits: ^Artillery
 	ValidTargets: Vehicle
 	InvalidTargets: C4Attached, C4Immune
-	ReloadDelay: 150
-	Range: 11c256
+	ReloadDelay: 100
+	Range: 13c0
 	Report: grenade1.aud
 	Projectile: Bullet
 		LaunchAngle: 45
-		Speed: 225
+		Speed: 240
 		Inaccuracy: 0
 		Image: TNT
 		ContrailLength: 6
@@ -910,7 +910,7 @@ Commandobombvehicle:
 	Warhead@AttachDelayedWeapon: AttachDelayedWeapon
 		Weapon: CommandoTNTVehicle
 		Type: tnt
-		TriggerTime: 35
+		TriggerTime: 20
 		DeathTypes: ExplosionDeath
 		Range: 1
 		AttachSounds: icraatta.aud
@@ -930,7 +930,7 @@ Commandobombvehicle:
 CommandoTNT:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-		Spread: 341
+		Spread: 1c0
 		Damage: 18000
 		Falloff: 1000, 600, 250, 75, 0
 		ValidTargets: Structure
@@ -955,12 +955,12 @@ CommandoTNT:
 CommandoTNTVehicle:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c768
+		Spread: 2c128
 		Damage: 9000
 		Falloff: 1000, 500, 200, 50, 0
 		ValidTargets: Vehicle
 		Versus:
-			None: 25
+			None: 65
 			Light: 85
 			Heavy: 65
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
@@ -1326,7 +1326,7 @@ RaiderBuggyLaser:
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 3500
+		Damage: 5500
 		Versus:
 			Light: 95
 			Heavy: 85
@@ -2771,7 +2771,7 @@ OverlordRadBeamWeapon:
 	Burst: 2
 	BurstDelays: 20
 	Warhead@2Dam: SpreadDamage
-		Spread: 256
+		Spread: 384
 		Damage: 13500
 
 ApocRadBeamWeapon:
@@ -2790,7 +2790,7 @@ RadEruptionWeapon:
 	ReloadDelay: 35
 	Report: idesat2a.aud
 	Warhead@1Radiation: CreateTintedCells
-		Spread: 1c768
+		Spread: 1c512
 		Falloff: 100, 75, 55, 30, 0
 		Level: 250
 		MaxLevel: 750
@@ -2810,7 +2810,7 @@ RadEruptionWeapon:
 RadEruptionWeaponStage2:
 	Inherits: RadEruptionWeapon
 	Warhead@1Radiation: CreateTintedCells
-		Falloff: 100, 85, 65, 45, 25, 0
+		Falloff: 100, 100, 75, 55, 35, 0
 
 PsychicBeamBATF:
 	Inherits: DesolatorBeam
@@ -3904,8 +3904,8 @@ ZoneRaiderGrenade:
 		Speed: 700
 		Image: BOMB
 		Shadow: true
-		Inaccuracy: 256
-		LaunchAngle: 75
+		Inaccuracy: 64
+		LaunchAngle: 50
 		Blockable: false
 		ContrailLength: 30
 		ContrailStartColor: 5bd8c3
@@ -3917,8 +3917,8 @@ ZoneRaiderGrenade:
 			None: 40
 			Wood: 90
 			Light: 110
-			Heavy: 60
-			Concrete: 50
+			Heavy: 85
+			Concrete: 70
 			Brick: 80
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigated
 	Warhead@2Smu: LeaveSmudge
@@ -3934,7 +3934,7 @@ ZoneRaiderGrenade:
 		ValidTargets: Water, Underwater
 		InvalidTargets: Ship, Structure, Bridge
 	Warhead@Concussion: GrantExternalConditionCA
-		Range: 1c128
+		Range: 1c512
 		Duration: 75
 		Condition: concussion
 		ValidTargets: Infantry, Vehicle, Ship

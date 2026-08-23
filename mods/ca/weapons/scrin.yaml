@@ -438,8 +438,8 @@ InterloperWave:
 DevourerLaser:
 	Inherits: ^ScrinPlasmaBeam
 	Report: devourer-fire1.aud, devourer-fire2.aud
-	Range: 8c0
-	ReloadDelay: 85
+	Range: 8c128
+	ReloadDelay: 55
 	Projectile: PlasmaBeam
 		StartOffset: 0,360,0
 		FollowingOffset: 0,-36,0
@@ -447,7 +447,7 @@ DevourerLaser:
 		GlowColor: ee00ff
 	Warhead@1Dam: SpreadDamage
 		Spread: 405
-		Damage: 1300
+		Damage: 1400
 		Versus:
 			None: 20
 			Light: 70
@@ -473,7 +473,7 @@ DevourerLaserCharged:
 		FollowingOffset: 0,-24,0
 		RecalculateDistortionInterval: 2
 	Warhead@1Dam: SpreadDamage
-		Damage: 1750
+		Damage: 2200
 		Versus:
 			None: 30
 			Light: 85
@@ -753,7 +753,7 @@ TripodLaser:
 		GlowColor: ee00ff
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 1450
+		Damage: 1600
 		Versus:
 			None: 85
 			Light: 75
@@ -789,7 +789,7 @@ ReaperLaserCharged:
 		SegmentLength: 196
 		RecalculateDistortionInterval: 2
 	Warhead@1Dam: SpreadDamage
-		Damage: 1900
+		Damage: 2000
 
 TripodLaserReversed:
 	Inherits: TripodLaser

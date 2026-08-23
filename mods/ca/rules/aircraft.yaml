@@ -1717,6 +1717,8 @@ A10.SW:
 		RequiresSelection: true
 		AmmoPools: secondary
 		FullSequence: pip-red
+	AutoTarget:
+		InitialStance: AttackAnything
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: ammo && ammo2
 	AutoTargetPriority@ATTACKANYTHING:
@@ -3442,7 +3444,7 @@ CV:
 		Weaknesses: • Cannot attack Aircraft
 		Attributes: • Hornets only targetable by static anti-air defenses
 	Valued:
-		Cost: 2000
+		Cost: 2200
 	Tooltip:
 		Name: Triskelion
 		GenericName: Aircraft
@@ -3480,7 +3482,7 @@ CV:
 		Voice: Move
 		AltitudeVelocity: 0c50
 		CanForceLand: False
-		IdealSeparation: 0c768
+		IdealSeparation: 2c0
 	WithIdleOverlay@SPINNER:
 		Sequence: spinner
 		Offset: 30,70,600

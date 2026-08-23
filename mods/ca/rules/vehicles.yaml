@@ -2513,7 +2513,7 @@ MNLY:
 	Health:
 		HP: 35000
 	Mobile:
-		Speed: 126
+		Speed: 140
 	RevealsShroud:
 		MinRange: 4c0
 		Range: 5c0
@@ -2523,9 +2523,13 @@ MNLY:
 	Minelayer:
 		Mine: MINV
 		TileUnknownName: build-valid
+		PreLayDelay: 5
+		AfterLayingDelay: 10
 	MineImmune:
 	AmmoPool:
-		Ammo: 5
+		Ammo: 20
+		ReloadCount: 5
+		ReloadDelay: 15
 		RearmSound: minelay1.aud
 		Armaments: none
 	WithAmmoPipsDecoration:
@@ -2609,7 +2613,7 @@ TRUK.DROP:
 	-DeliversCash:
 	CashTrickler:
 		Interval: 50
-		Amount: 1250
+		Amount: 850
 	KillsSelf:
 		Delay: 50
 		RemoveInstead: true
@@ -10243,10 +10247,10 @@ OVLD:
 		Actor: OVLD.Husk
 		RequiresCondition: !being-warped
 	ChangesHealth:
-		PercentageStep: 1
+		PercentageStep: 2
 		Delay: 25
-		StartIfBelow: 75
-		DamageCooldown: 125
+		StartIfBelow: 100
+		DamageCooldown: 75
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
 	WithProductionIconOverlay:
@@ -10278,7 +10282,7 @@ OVLD:
 		ValidRelationships: Ally
 		AffectsParent: true
 	WithRadiatingCircle:
-		EndRadius: 6c0
+		EndRadius: 8c0
 		Interval: 75
 		Duration: 50
 		ValidRelationships: Ally

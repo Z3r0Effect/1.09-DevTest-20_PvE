@@ -556,11 +556,12 @@ M60mgTD:
 
 OvldCoaxial:
 	Inherits: M60mgTD
-	Range: 6c512
+	Range: 7c512
 	InvalidTargets: Vehicle, Ship, Water, Structure
+	ReloadDelay: 30
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Infantry
-		Damage: 1400
+		Damage: 1600
 		Versus:
 			Light: 70
 	ReloadDelay: 45
@@ -726,7 +727,7 @@ Colt45:
 	ReloadDelay: 10
 	Burst: 4
 	BurstDelays: 2,9,2
-	Range: 9c512
+	Range: 10c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 4700
 		Versus:
@@ -802,7 +803,7 @@ AKM:
 	ReloadDelay: 15
 	Burst: 3
 	BurstDelays: 2
-	Range: 9c128
+	Range: 9c512
 	InvalidTargets: Structure
 	Projectile: InstantHit
 		Blockable: true
@@ -812,8 +813,8 @@ AKM:
 		Versus:
 			None: 100
 			Wood: 10
-			Light: 30
-			Heavy: 10
+			Light: 60
+			Heavy: 30
 			Concrete: 10
 			Brick: 10
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
@@ -829,7 +830,7 @@ AKM:
 
 AKMBATF:
 	Inherits: AKM
-	Range: 8c256
+	Range: 8c512
 
 SNIPER:
 	ReloadDelay: 60
@@ -1020,7 +1021,7 @@ HeliGunAG:
 	Projectile: Bullet
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Spread: 160
+		Spread: 1c256
 		Damage: 7500
 		Versus:
 			None: 144
@@ -1036,10 +1037,10 @@ HeliGunAA:
 	Report: mgbtr1.aud, mgbtr2.aud, mgbtr3.aud
 	Range: 7c768
 	Warhead@1Dam: SpreadDamage
-		Damage: 2000
+		Damage: 2200
 		Range: 0, 0c64, 0c256, 1c768
 	Warhead@smallDamage: SpreadDamage
-		Damage: 2000
+		Damage: 2200
 		Spread: 341
 	Warhead@2Eff: CreateEffect
 		-ImpactSounds: flakhit1.aud, flakhit2.aud, flakhit3.aud

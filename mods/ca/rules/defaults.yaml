@@ -539,10 +539,10 @@
 		Modifier: 120
 		RequiresCondition: herooftheunion
 	ReloadDelayMultiplier@HeroOfTheUnion:
-		Modifier: 75
+		Modifier: 70
 		RequiresCondition: herooftheunion
 	ReloadAmmoDelayMultiplier@HeroOfTheUnion:
-		Modifier: 75
+		Modifier: 70
 		RequiresCondition: herooftheunion
 	RangeMultiplier@HeroOfTheUnion:
 		Modifier: 150
@@ -573,6 +573,15 @@
 		Modifier: 90
 	RangeMultiplier@HeroOfTheUnion:
 		Modifier: 150
+
+^HeroOfTheUnionTargetableDesoTesla:
+	Inherits: ^HeroOfTheUnionTargetable
+	FlatHealthDamageMultiplier@HeroOfTheUnion:
+		HP: 6000
+	ReloadDelayMultiplier@HeroOfTheUnion:
+		Modifier: 85
+	RangeMultiplier@HeroOfTheUnion:
+		Modifier: 110
 
 ^IdolOfKane:
 	ExternalCondition@IdolOfKaneBuff:
@@ -1934,22 +1943,22 @@
 		Color: 00ffff10
 		RequiresCondition: zdef-shield
 	FlatHealthDamageMultiplier@ZoneDefenderShield1:
-		HP: 1750
+		HP: 2000
 		RequiresCondition: zdef-shield == 1
 	FlatHealthDamageMultiplier@ZoneDefenderShield2:
-		HP: 3500
+		HP: 4000
 		RequiresCondition: zdef-shield == 2
 	FlatHealthDamageMultiplier@ZoneDefenderShield3:
-		HP: 5000
+		HP: 6000
 		RequiresCondition: zdef-shield == 3
 	FlatHealthDamageMultiplier@ZoneDefenderShield4:
-		HP: 7500
+		HP: 8000
 		RequiresCondition: zdef-shield == 4
 	FlatHealthDamageMultiplier@ZoneDefenderShield5:
-		HP: 8000
+		HP: 10000
 		RequiresCondition: zdef-shield == 5
 	FlatHealthDamageMultiplier@ZoneDefenderShield6:
-		HP: 10000
+		HP: 12000
 		RequiresCondition: zdef-shield >= 6
 	WithIdleOverlay@ZoneDefenderShield:
 		Sequence: idle
@@ -2698,7 +2707,7 @@
 		WarnProbability: 0
 		RequiresCondition: !invulnerability && !being-warped
 	DamagedByTintedCells@RADSTRONG:
-		Damage: 120
+		Damage: 200
 		DamageInterval: 16
 		DamageTypes: RadiationDeath
 		LayerName: radioactivity.strong
@@ -2857,11 +2866,11 @@
 	GrantStackingCondition@TIBEXPOSED:
 		Condition: tibexposed
 		RequiresCondition: on-tib
-		DelayPerInstance: 250
-		RevokeDelay: 200
+		DelayPerInstance: 95
+		RevokeDelay: 100
 	DamagedByTerrainCA@TIBDAMAGE:
 		Terrain: Tiberium, BlueTiberium, BlackTiberium
-		Damage: 550
+		Damage: 600
 		DamageInterval: 16
 		DamageTypes: ToxinDeath
 		RequiresCondition: tibexposed && !(hazmatsuits || hazmatsuits-soviet || being-warped || parachute)
@@ -4917,14 +4926,14 @@
 	Inherits@TDPAL: ^TDPalette
 	Huntable:
 	Health:
-		HP: 10000
+		HP: 30000
 	Armor:
 		Type: Light
 	RevealsShroud:
-		Range: 6c0
+		Range: 7c0
 	Mobile:
 		Voice: Move
-		Speed: 60
+		Speed: 70
 		Locomotor: foot
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
@@ -4933,7 +4942,7 @@
 	Targetable:
 		TargetTypes: Ground, Infantry, Creep
 	AutoTarget:
-		ScanRadius: 5
+		ScanRadius: 10
 	AttackMove:
 		Voice: Attack
 	DrawLineToTarget:
@@ -4958,8 +4967,8 @@
 		Voice: Move
 	Guardable:
 	DamagedByTerrain:
-		Damage: -300
-		DamageInterval: 50
+		Damage: -500
+		DamageInterval: 40
 		DamageTypes: ToxinDeath
 		Terrain: Tiberium, BlueTiberium
 	Voiced:

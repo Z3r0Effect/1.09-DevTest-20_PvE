@@ -34,7 +34,7 @@ DOG:
 	Passenger:
 		Voice: Move
 	RevealsShroud:
-		Range: 9c0
+		Range: 12c0
 	Armament:
 		Weapon: DogJaw
 		ReloadingCondition: attack-cooldown
@@ -55,6 +55,8 @@ DOG:
 		RequiresCondition: moving
 	AutoTarget:
 		AllowMovement: True
+		InitialStance: AttackAnything
+		ScanRadius: 12
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry
 	Targetable@ChaosImmune:
@@ -1428,7 +1430,7 @@ THF:
 		Weaknesses: • Unarmed
 		Attributes: • Cloaked with increased vision when not moving
 	Valued:
-		Cost: 550
+		Cost: 400
 	Tooltip:
 		Name: Thief
 	UpdatesPlayerStatistics:
@@ -1469,7 +1471,7 @@ THF:
 		RequiresCondition: !cloak-force-disabled && !being-warped
 		PauseOnCondition: invisibility
 	Mobile:
-		Speed: 64
+		Speed: 70
 		Voice: Move
 	GrantConditionOnMovement@MOVING:
 		ValidMovementTypes: Horizontal, Vertical, Turn
@@ -1582,6 +1584,7 @@ TTRP:
 	Inherits: SHOK
 	Inherits@Inspirable: ^Inspirable
 	Inherits@HEALINGCOOLDOWN: ^HealingCooldown
+	Inherits@HeroOfTheUnionTargetable: ^HeroOfTheUnionTargetableDesoTesla
 	Buildable:
 		BuildPaletteOrder: 91
 		Prerequisites: tslaorstek, anyradar, ~infantry.shok, ~ttrp.upgrade, ~techlevel.medium
@@ -3181,7 +3184,9 @@ E8:
 
 DESO:
 	Inherits: E8
+	Inherits@Inspirable: ^Inspirable
 	Inherits@HEALINGCOOLDOWN: ^HealingCooldown
+	Inherits@HeroOfTheUnionTargetable: ^HeroOfTheUnionTargetableDesoTesla
 	Buildable:
 		BuildPaletteOrder: 93
 		Prerequisites: ~infantry.iraq, tturorstek, anyradar, ~deso.upgrade, ~techlevel.medium
@@ -3235,7 +3240,7 @@ DESO:
 		RequiresCondition: deployed && !deployed-initial
 	GrantTimedCondition@InitialDeploy:
 		Condition: deployed-initial
-		Duration: 75
+		Duration: 50
 		RequiresCondition: deployed
 	WithSpriteBody@DEPLOYED:
 		Sequence: deployed
@@ -3245,13 +3250,13 @@ DESO:
 		Sequence: deploy
 		BodyNames: deployed
 	DamageMultiplier:
-		Modifier: 40
+		Modifier: 20
 		RequiresCondition: deployed
 	-TakeCover:
 	-ReplacedInQueue:
 	AutoDeployer@AI:
 		RequiresCondition: botowner && !deployed && !parachute
-		DeployChance: 20
+		DeployChance: 10
 		DeployTrigger: Attack
 		DeployTicks: 5
 		UndeployTicks: 50
