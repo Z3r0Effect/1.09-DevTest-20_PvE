@@ -2390,13 +2390,18 @@ FIX:
 		TargetableOffsets: 840,0,0, 598,-640,0, 598,640,0, -1060,0,0, -768,-640,0, -768,640,0
 		Type: Polygon
 			Points: -1536,-300, -640,-811, 640,-811, 1536,-300, 1536,555, 640,1110, -640,1110, -1536,555
+	ProximityExternalCondition@REPAIRAURA:
+		Condition: macsrepair
+		Range: 12c0
+		ValidRelationships: Ally
+		RequiresCondition: !forceshield && !invulnerability && !being-warped
 	ProximityExternalCondition@AIRCRAFTREPAIR:
 		Condition: aircraft-repair
-		Range: 10c0
+		Range: 12c0
 	WithRangeCircleCA@AIRCRAFTREPAIR:
 		Type: AircraftRepair
 		Color: FFD000AA
-		Range: 10c0
+		Range: 12c0
 	Encyclopedia:
 		Category: Allies/Buildings; Soviets/Buildings
 
@@ -3821,12 +3826,12 @@ HQ:
 	ProvidesRadar:
 		RequiresCondition: !jammed && (!disabled || backup-power) && !being-warped && !build-incomplete
 	RangedGpsRadarProvider:
-		Range: 12c0
+		Range: 18c0
 		TargetTypes: Vehicle, Air, Structure
 		RequiresCondition: !jammed && (!disabled || backup-power) && !being-warped && !build-incomplete
 	WithRangeCircle:
 		Type: RadarDetection
-		Range: 12c0
+		Range: 18c0
 		RequiresCondition: !jammed && (!disabled || backup-power) && !being-warped && !build-incomplete
 	WithBuildingBib:
 	SupportPowerChargeBar:
@@ -4199,13 +4204,18 @@ REP:
 		Prerequisite: radarorrepair
 	ProvidesPrerequisite@allowsmcv:
 		Prerequisite: vehicles.mcv
+	ProximityExternalCondition@REPAIRAURA:
+		Condition: macsrepair
+		Range: 12c0
+		ValidRelationships: Ally
+		RequiresCondition: !forceshield && !invulnerability && !being-warped
 	ProximityExternalCondition@AIRCRAFTREPAIR:
 		Condition: aircraft-repair
-		Range: 10c0
+		Range: 12c0
 	WithRangeCircleCA@AIRCRAFTREPAIR:
 		Type: AircraftRepair
 		Color: FFD000AA
-		Range: 10c0
+		Range: 12c0
 	Encyclopedia:
 		Category: GDI/Buildings; Nod/Buildings
 

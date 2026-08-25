@@ -450,18 +450,20 @@ TitanGun:
 
 155mmTDM:
 	Inherits: 155mmTD
-	Range: 8c768
+	Range: 9c512
 	Report: howi-fire1.aud, howi-fire2.aud
-	ReloadDelay: 85
+	ReloadDelay: 55
 	Projectile: Bullet
 		Speed: 682
 		LaunchAngle: 50
-		Inaccuracy: 448
+		Inaccuracy: 128
 	Warhead@1Dam: SpreadDamage
 		Damage: 12000
-		Spread: 341
+		Spread: 512
 		Versus:
-			Wood: 65
+			Wood: 75
+			Light: 90
+			Heavy: 85
 	Warhead@3Eff: CreateEffect
 		Explosions: large_explosion
 		ImpactSounds: kaboom12.aud
@@ -1027,15 +1029,20 @@ SonicMortar:
 
 HallucinationGrenade:
 	Inherits: ^Mortar
-	ReloadDelay: 95
+	ReloadDelay: 100
+	Range: 11c0
 	Projectile: Bullet
+	Projectile: Bullet
+		Speed: 240
+		LaunchAngle: 100
+		Inaccuracy: 256
 		ContrailStartColor: dc289c
 		ContrailStartColorAlpha: 128
 	Warhead@1Dam: SpreadDamage
-		Damage: 4500
+		Damage: 4000
 	Warhead@chaos: GrantExternalConditionCA
-		Range: 0c768
-		Duration: 75
+		Range: 1c768
+		Duration: 125
 		Condition: berserk
 		InvalidTargets: ChaosImmune
 	Warhead@3Eff: CreateEffect

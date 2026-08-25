@@ -833,7 +833,7 @@ zeal.covenant:
 	Buildable:
 		BuildPaletteOrder: 15
 		Prerequisites: ~player.nod, covenant.level1, !unity.covenant, !wrath.covenant, ~techlevel.medium
-		Description: Adopt the Covenant of Zeal.\n\n• Level 1: Confessor Cabal & Fast Harrassers (+15% Bike/Buggy/Howitzer speed)\n• Level 2: Cyborg Armor & Raider Buggy Upgrades\n• Level 3: Enlightened, Cyborg Elite & Cyborg Speed Upgrade
+		Description: Adopt the Covenant of Zeal.\n\n• Level 1: Confessor Cabal & Fast Harrassers (+40% Bike/Buggy/Howitzer speed)\n• Level 2: Cyborg Armor & Raider Buggy Upgrades\n• Level 3: Enlightened, Cyborg Elite & Cyborg Speed Upgrade
 		IconPalette: chrometd
 	TooltipExtras:
 		Attributes: (!) Only ONE Covenant may be chosen.

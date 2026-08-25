@@ -1132,13 +1132,13 @@
 		Modifier: 80
 	FirepowerMultiplier@CYBORGDAMAGE:
 		RequiresCondition: cyborgdmg-upgrade
-		Modifier: 110
+		Modifier: 115
 	ProductionTimeMultiplier@CYBORGPROD:
-		Multiplier: 80
+		Multiplier: 75
 		Prerequisites: cyborgprod.upgrade
 	SpeedMultiplier@CYBORGSPEED:
 		RequiresCondition: cyborgspeed-upgrade
-		Modifier: 120
+		Modifier: 130
 	DamageTypeDamageMultiplier@CYBORGFLAKARMOR:
 		RequiresCondition: cyborgarmor-upgrade
 		DamageTypes: FlakVestMitigated
@@ -1233,8 +1233,8 @@
 
 ^AuraRepairable:
 	ChangesHealth@MACS:
-		Step: 800
-		Delay: 75
+		Step: 600
+		Delay: 50
 		StartIfBelow: 100
 		DamageCooldown: 75
 		RequiresCondition: macsrepair
@@ -1943,22 +1943,22 @@
 		Color: 00ffff10
 		RequiresCondition: zdef-shield
 	FlatHealthDamageMultiplier@ZoneDefenderShield1:
-		HP: 2000
+		HP: 5000
 		RequiresCondition: zdef-shield == 1
 	FlatHealthDamageMultiplier@ZoneDefenderShield2:
-		HP: 4000
+		HP: 8000
 		RequiresCondition: zdef-shield == 2
 	FlatHealthDamageMultiplier@ZoneDefenderShield3:
-		HP: 6000
+		HP: 12000
 		RequiresCondition: zdef-shield == 3
 	FlatHealthDamageMultiplier@ZoneDefenderShield4:
-		HP: 8000
+		HP: 15000
 		RequiresCondition: zdef-shield == 4
 	FlatHealthDamageMultiplier@ZoneDefenderShield5:
-		HP: 10000
+		HP: 180000
 		RequiresCondition: zdef-shield == 5
 	FlatHealthDamageMultiplier@ZoneDefenderShield6:
-		HP: 12000
+		HP: 20000
 		RequiresCondition: zdef-shield >= 6
 	WithIdleOverlay@ZoneDefenderShield:
 		Sequence: idle
@@ -3194,7 +3194,7 @@
 	-DamagedByTerrainCA@TIBDAMAGE:
 	-GrantStackingCondition@TIBEXPOSED:
 	DamagedByTintedCells@RADSTRONG:
-		Damage: 375
+		Damage: 200
 		RequiresCondition: !being-warped
 	-DamagedByTintedCells@RADSTRONGHAZMAT:
 	-DamagedByTintedCells@RADSTRONGHAZMATSOVIET:
@@ -3209,7 +3209,7 @@
 		-BlinkPatterns:
 	AddsToReclaimableValue@Cyborg:
 		Type: Cyborg
-		ValuePercentage: 20
+		ValuePercentage: 40
 		RequiresCondition: reclaimed-fabrication
 	GrantConditionOnPrerequisite@ReclaimedFabrication:
 		Condition: reclaimed-fabrication
@@ -4926,7 +4926,7 @@
 	Inherits@TDPAL: ^TDPalette
 	Huntable:
 	Health:
-		HP: 30000
+		HP: 40000
 	Armor:
 		Type: Light
 	RevealsShroud:

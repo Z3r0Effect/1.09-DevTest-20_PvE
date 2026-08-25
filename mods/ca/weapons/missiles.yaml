@@ -407,6 +407,11 @@ HellfireAG.Orca:
 	Inherits: HellfireAG
 	Report: orcamis1.aud
 	BurstDelays: 6
+	Warhead@1Dam: SpreadDamage
+		Spread: 768
+		Damage: 7000
+		Versus:
+			Heavy: 110
 
 HellfireAG.Cryo:
 	Inherits: HellfireAG
@@ -1255,7 +1260,7 @@ GradRocketsWide.UPG:
 	Burst: 5
 
 HonestJohn:
-	ReloadDelay: 95
+	ReloadDelay: 65
 	Burst: 2
 	BurstDelays: 50
 	Range: 12c0
@@ -1271,7 +1276,7 @@ HonestJohn:
 		Speed: 210
 		LaunchAngle: 37
 	Warhead@1Dam: SpreadDamage
-		Spread: 448
+		Spread: 512
 		Damage: 650
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		Versus:
@@ -1283,7 +1288,7 @@ HonestJohn:
 			Brick: 10
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, FlakVestMitigatedMinor
 	Warhead@2Dam: SpreadDamage
-		Spread: 448
+		Spread: 512
 		Damage: 650
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		Delay: 3
@@ -1296,7 +1301,7 @@ HonestJohn:
 			Brick: 10
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, FlakVestMitigatedMinor
 	Warhead@3Dam: SpreadDamage
-		Spread: 448
+		Spread: 512
 		Damage: 650
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		Delay: 6
@@ -1309,7 +1314,7 @@ HonestJohn:
 			Brick: 10
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, FlakVestMitigatedMinor
 	Warhead@4Dam: SpreadDamage
-		Spread: 448
+		Spread: 512
 		Damage: 650
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		Delay: 9
@@ -1335,17 +1340,17 @@ HonestJohn:
 
 HonestJohn.UPG:
 	Inherits: HonestJohn
-	ReloadDelay: 130
+	ReloadDelay: 75
 	Warhead@1Dam: SpreadDamage
-		Damage: 1200
+		Damage: 1400
 		Versus:
 			Light: 100
-			Heavy: 70
+			Heavy: 75
 	Warhead@2Dam: SpreadDamage
-		Damage: 1200
+		Damage: 1400
 		Versus:
 			Light: 100
-			Heavy: 70
+			Heavy: 75
 	-Warhead@3Dam:
 	-Warhead@4Dam:
 	Warhead@2Smu: LeaveSmudge
@@ -1358,12 +1363,12 @@ HonestJohn.UPG:
 
 HonestJohnBH:
 	Inherits: HonestJohn
-	ReloadDelay: 145
+	ReloadDelay: 80
 	Burst: 3
 
 HonestJohnBH.UPG:
 	Inherits: HonestJohn.UPG
-	ReloadDelay: 160
+	ReloadDelay: 80
 	Burst: 3
 
 HonestJohnTargeting:
@@ -1559,7 +1564,7 @@ IFVRocketsAAE.TibCore:
 #Artillery Missiles, lock-on but act dumb
 227mm:
 	Inherits: ^AntiGroundMissile
-	ReloadDelay: 100
+	ReloadDelay: 85
 	Burst: 2
 	BurstDelays: 4
 	Range: 10c0
@@ -1575,15 +1580,15 @@ IFVRocketsAAE.TibCore:
 		RangeLimit: 13c0
 		MinimumLaunchAngle: 64
 	Warhead@1Dam: SpreadDamage
-		Spread: 341
-		Damage: 840
+		Spread: 512
+		Damage: 880
 		Falloff: 1000, 448, 192, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Trees
 		Versus:
 			None: 100
 			Wood: 80
 			Light: 72
-			Heavy: 30
+			Heavy: 40
 			Concrete: 80
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigated
 	Warhead@3Eff: CreateEffect
@@ -1622,7 +1627,7 @@ IFVRocketsAAE.TibCore:
 		LaunchAngle: 40
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Damage: 880
+		Damage: 1000
 
 227mm.Hammerhead:
 	Inherits: 227mm.upg
@@ -1634,14 +1639,14 @@ IFVRocketsAAE.TibCore:
 		-LockOnBurstCounts:
 		Speed: 250
 	Warhead@1Dam: SpreadDamage
-		Damage: 860
-		Spread: 512
+		Damage: 900
+		Spread: 768
 	Warhead@4Eff: CreateEffect
 		ImpactSounds: xplobig4.aud
 		Explosions: artillery_explosion
 	Warhead@Concussion: GrantExternalConditionCA
-		Range: 1c0
-		Duration: 75
+		Range: 1c128
+		Duration: 100
 		Condition: concussion
 
 227mm.Hailstorm:
@@ -1657,8 +1662,8 @@ IFVRocketsAAE.TibCore:
 		-LockOnBurstCounts:
 		CruiseAltitude: 0
 	Warhead@1Dam: SpreadDamage
-		Spread: 768
-		Damage: 460
+		Spread: 1c0
+		Damage: 750
 
 227mmH.Hypersonic:
 	Inherits: 227mm.Hypersonic
@@ -1733,7 +1738,7 @@ IFVRocketsAAE.TibCore:
 
 StnkMissile:
 	Inherits: ^AntiGroundMissile
-	Range: 7c0
+	Range: 7c512
 	ReloadDelay: 65
 	Report: rocket1.aud
 	Burst: 2
@@ -1897,9 +1902,9 @@ HstkMissile.TibCore:
 		Speed: 266
 		DirectFireMaxRange: 2c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 4450
+		Damage: 4500
 	Warhead@tankbuster: SpreadDamage
-		Damage: 4450
+		Damage: 4500
 	Warhead@3Eff: CreateEffect
 		Explosions: large_explosion
 		ImpactSounds: expnew16.aud, expnew17.aud
@@ -1949,7 +1954,7 @@ BoatMissileAA:
 
 Rah66AG:
 	ReloadDelay: 35
-	Range: 8c128
+	Range: 8c256
 	MinRange: 0c768
 	Report: rocket2.aud
 	Burst: 4
@@ -1959,11 +1964,11 @@ Rah66AG:
 	Projectile: Bullet
 		Blockable: false
 		Shadow: true
-		Inaccuracy: 1c0
+		Inaccuracy: 512
 		Image: tibcoremsl
 		TrailImage: smokey
 		TrailDelay: 3
-		Speed: 250
+		Speed: 260
 		LaunchAngle: 10
 		ContrailLength: 15
 		ContrailStartColor: 33aa00aa
@@ -1971,14 +1976,14 @@ Rah66AG:
 		ContrailStartWidth: 0c40
 	Warhead@1Dam: SpreadDamage
 		Spread: 640
-		Damage: 920
+		Damage: 1200
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 85
 			Wood: 55
 			Concrete: 30
-			Light: 55
-			Heavy: 45
+			Light: 80
+			Heavy: 70
 			Brick: 5
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigatedMinor, AirToGround
 	Warhead@3Eff: CreateEffect
@@ -2002,6 +2007,11 @@ Rah66AG.BlackHand:
 		-ContrailStartColorAlpha:
 		-ContrailStartWidth:
 	Warhead@1Dam: SpreadDamage
+		Spread: 768
+		Versus:
+			Wood: 80
+			Light: 80
+			Heavy: 80
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
@@ -2488,7 +2498,7 @@ RocketShells:
 
 CyborgReaperMissiles:
 	Inherits: ^AntiGroundMissile
-	ReloadDelay: 60
+	ReloadDelay: 50
 	Burst: 2
 	BurstDelays: 10
 	Range: 8c768
@@ -2500,13 +2510,13 @@ CyborgReaperMissiles:
 		ContrailStartColorAlpha: 200
 		ContrailStartWidth: 0c40
 	Warhead@1Dam: SpreadDamage
-		Spread: 448
-		Damage: 5500
+		Spread: 512
+		Damage: 6500
 		Versus:
 			None: 100
-			Wood: 75
+			Wood: 60
 			Light: 85
-			Heavy: 45
+			Heavy: 85
 			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigated
 	Warhead@3Eff: CreateEffect
@@ -2534,8 +2544,8 @@ CyborgReaperMissilesAA:
 		Damage: 6500
 
 CyborgReaperSnare:
-	ReloadDelay: 125
-	Range: 9c0
+	ReloadDelay: 100
+	Range: 10c0
 	Report: reap-snarefire.aud
 	Projectile: Bullet
 		Blockable: false
@@ -2551,7 +2561,7 @@ CyborgReaperSnare:
 		Damage: 1
 	Warhead@Snare: GrantExternalConditionCA
 		Condition: reapersnare
-		Duration: 150
+		Duration: 175
 		Range: 2c0
 		InvalidTargets: ReaperSnareImmune
 	Warhead@3Eff: CreateEffect

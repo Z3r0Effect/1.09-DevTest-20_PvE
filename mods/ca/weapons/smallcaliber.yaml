@@ -561,9 +561,9 @@ OvldCoaxial:
 	ReloadDelay: 30
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Infantry
-		Damage: 1600
+		Damage: 2200
 		Versus:
-			Light: 70
+			Light: 90
 	ReloadDelay: 45
 
 M60mgJJ:
@@ -1022,12 +1022,12 @@ HeliGunAG:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c256
-		Damage: 7500
+		Damage: 5500
 		Versus:
 			None: 144
 			Wood: 35
-			Light: 75
-			Heavy: 65
+			Light: 50
+			Heavy: 40
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath, AirToGround
 
 HeliGunAA:
@@ -1207,8 +1207,8 @@ EnforcerIFVShotgun:
 ConfessorGun:
 	Inherits: M1Carbine
 	Report: conf-fire1.aud, conf-fire2.aud
-	Range: 8c512
+	Range: 9c512
 	Warhead@1Dam: SpreadDamage
-		Damage: 3000
+		Damage: 3500
 		Versus:
-			Light: 50
+			Light: 80

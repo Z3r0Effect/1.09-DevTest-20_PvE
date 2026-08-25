@@ -1641,6 +1641,8 @@ ARTY.nod:
 		BuildPaletteOrder: 151
 		IconPalette: chrometd
 		Prerequisites: ~vehicles.nod, ~!howi.upgrade, ~techlevel.low
+	Health:
+		HP: 16000
 	Armament:
 		Weapon: 155mmTD
 	Selectable:
@@ -1672,6 +1674,8 @@ HOWI:
 		PauseOnCondition: empdisable || being-warped || blinded
 	Turreted:
 		TurnSpeed: 18
+	Health:
+		HP: 22000
 	Armament:
 		Weapon: 155mmTDM
 	Mobile:
@@ -1688,7 +1692,7 @@ HOWI:
 		Condition: zeal-covenant
 		Prerequisites: zeal.covenant
 	SpeedMultiplier@ZealBonus:
-		Modifier: 120
+		Modifier: 140
 		RequiresCondition: zeal-covenant
 
 ARTY.Chrono:
@@ -3497,7 +3501,7 @@ BGGY:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 18500
+		HP: 28000
 	Armor:
 		Type: Light
 	Mobile:
@@ -3538,7 +3542,7 @@ BGGY:
 		Condition: zeal-covenant
 		Prerequisites: zeal.covenant
 	SpeedMultiplier@ZealBonus:
-		Modifier: 120
+		Modifier: 140
 		RequiresCondition: zeal-covenant
 	GrantConditionOnPrerequisite@BlackHandPlayer:
 		Condition: player-blackh
@@ -3557,7 +3561,7 @@ BGGY:
 		RequiresCondition: decoy-upgrade
 	ReloadAmmoPoolCA@Decoy:
 		AmmoPool: decoyspawner
-		Delay: 500
+		Delay: 100
 		ShowSelectionBar: true
 		SelectionBarColor: aaaaaa
 	SpawnActorAbility@Decoy:
@@ -3598,6 +3602,8 @@ RBUG:
 		Name: Raider Buggy
 	Valued:
 		Cost: 400
+	Health:
+		HP: 40000
 	Armament:
 		Weapon: RaiderBuggyLaser
 		MuzzleSequence: muzzle
@@ -4712,7 +4718,7 @@ HTNK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 98000
+		HP: 110000
 	Mobile:
 		Speed: 45
 		Locomotor: heavytracked
@@ -4911,7 +4917,7 @@ HTNK.Drone:
 	Valued:
 		Cost: 1300
 	Health:
-		HP: 92000
+		HP: 96000
 	Tooltip:
 		Name: Mammoth Drone
 	Mobile:
@@ -5119,7 +5125,7 @@ MLRS:
 			marked: mlrs
 			shadow: mlrs
 	Valued:
-		Cost: 1350
+		Cost: 1200
 	Tooltip:
 		Name: SSM Launcher
 		RequiresCondition: !player-blackh
@@ -5142,7 +5148,7 @@ MLRS:
 		PauseOnCondition: aiming || being-captured || empdisable || being-warped || driver-dead || notmobile
 		BlockedCursor: move
 	Health:
-		HP: 17000
+		HP: 24000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -5246,12 +5252,12 @@ MLRS:
 	FireWarheadsOnDeath:
 		Weapon: UnitExplodeFlame
 	ReloadAmmoPool@1:
-		Delay: 120
+		Delay: 75
 		Count: 2
 		RequiresCondition: !player-blackh
 	ReloadAmmoPool@BH:
 		AmmoPool: primarybh
-		Delay: 170
+		Delay: 75
 		Count: 3
 		RequiresCondition: player-blackh
 	ProducibleWithLevel:
@@ -5313,7 +5319,7 @@ STNK.Nod:
 		Speed: 126
 		Voice: Move
 	Health:
-		HP: 25000
+		HP: 30000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -5340,7 +5346,7 @@ STNK.Nod:
 		Condition: player-shadow
 		Prerequisites: player.shadow
 	SpeedMultiplier@ShadowCloak:
-		Modifier: 115
+		Modifier: 120
 		RequiresCondition: player-shadow && hidden
 	Armament@PRIMARY:
 		Weapon: StnkMissile
@@ -5593,7 +5599,7 @@ BIKE:
 		Condition: zeal-covenant
 		Prerequisites: zeal.covenant
 	SpeedMultiplier@ZealBonus:
-		Modifier: 115
+		Modifier: 140
 		RequiresCondition: zeal-covenant
 	WithFacingSpriteBody:
 		RequiresCondition: !tibcore-upgrade
@@ -5683,7 +5689,7 @@ HFTK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 56000
+		HP: 66000
 	Mobile:
 		Speed: 60
 		Voice: Move
@@ -6121,6 +6127,7 @@ TRPC:
 	Inherits: ^Tank
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@TRANSPORT: ^Transport
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@NOUNLOADCHRONO: ^NoUnloadWhenChronoshifted
 	Inherits@SLOWCRUSH: ^SlowedByCrushing
 	Inherits@COMMANDOSKULL: ^CommandoSkull
@@ -6132,7 +6139,7 @@ TRPC:
 		Prerequisites: ~vehicles.soviet, ~infantry.doctrine, ~techlevel.medium
 		Description: Tough infantry transport pre-loaded with infantry.
 	TooltipExtras:
-		Weaknesses: • Unarmed
+		Weaknesses: • Limited anti-infantry firepower
 		Attributes: • Empowers nearby basic infantry\n• Heals all nearby infantry\n• Detects cloaked units and mines
 	Valued:
 		Cost: 1800
@@ -6195,12 +6202,29 @@ TRPC:
 		TargetTypes: MindControlImmune
 		RequiresCondition: loaded-cmdo
 	KeepsDistance:
-	AutoGuard:
+	Armament@OVLDCOAX:
+		Name: ovldcoax
+		Weapon: OvldCoaxial
+		LocalOffset: 800,0,350
+		MuzzleSequence: muzzle
+		PauseOnCondition: empdisable || being-warped || blinded
+	WithEjectedCasings@OVLDCOAX:
+		CasingWeapon: BrassDebris
+		CasingSpawnLocalOffset: 0,-125,200
+		CasingTargetOffset: 0,-500,0
+	AutoTarget:
+		AllowMovement: true
+		AllowTurning: true
+	AutoTargetPriority@OVLDCOAX:
 		ValidTargets: Infantry, Vehicle
+		ValidRelationships: Enemy
+	AutoGuard:
+		ValidTargets: Infantry
 	AttackFrontal:
+		Armaments: ovldcoax
 	AttackMove:
 	ProximityExternalCondition@InspirationTrpc:
-		Range: 4c0
+		Range: 6c0
 		Condition: trpc-inspiration
 		ValidRelationships: Ally
 		RequiresCondition: !passenger && !inspiration-delay
@@ -6208,14 +6232,14 @@ TRPC:
 		Duration: 10
 		Condition: inspiration-delay
 	WithRadiatingCircle:
-		EndRadius: 4c0
+		EndRadius: 6c0
 		Interval: 75
 		Duration: 50
 		ValidRelationships: Ally
 		AlwaysShowMaxRange: true
 	ProximityExternalCondition@HealAura:
 		Condition: hospitalheal
-		Range: 4c0
+		Range: 7c0
 		RequiresCondition: !passenger
 	GivesExperienceCA:
 		ActorExperienceModifier: 2000
@@ -6239,7 +6263,7 @@ TRPC:
 	ExternalCondition@InspirationTrpc:
 		Condition: trpc-inspiration
 	SpeedMultiplier@InspirationCmsr:
-		Modifier: 115
+		Modifier: 125
 		RequiresCondition: cmsr-inspiration || ovld-inspiration || trpc-inspiration
 	Sellable:
 		RefundPercent: 10
@@ -8655,7 +8679,7 @@ WTNK:
 		Name: Microwave Tank
 		GenericName: Tank
 	Health:
-		HP: 35000
+		HP: 50000
 	Armor:
 		Type: Light
 	Mobile:
@@ -9521,7 +9545,7 @@ BASI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 25000
+		HP: 28000
 	Armor:
 		Type: Light
 	Mobile:
@@ -9824,7 +9848,7 @@ XO:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 46000
+		HP: 50000
 	Armor:
 		Type: Light
 	Mobile:
@@ -9950,7 +9974,7 @@ APOC:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 130000
+		HP: 145000
 	Mobile:
 		Speed: 45
 		TurnSpeed: 8
@@ -10192,7 +10216,7 @@ OVLD:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 130000
+		HP: 145000
 	Mobile:
 		Speed: 46
 		TurnSpeed: 12
@@ -10946,7 +10970,7 @@ CUST:
 		Range: 6c0
 	Cargo:
 		Types: Infantry, Hacker
-		MaxWeight: 5
+		MaxWeight: 8
 		LoadingCondition: notmobile
 		LoadedCondition: cargo
 		PassengerConditions:
@@ -10955,7 +10979,7 @@ CUST:
 			bori: loaded-cmdo
 			yuri: loaded-cmdo
 			mast: loaded-cmdo
-		InitialUnits: N1C,N1C,N3C,N3C,N3C
+		InitialUnits: TPLR,TPLR,TPLR,TPLR,TPLR,TPLR,TPLR,TPLR
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud

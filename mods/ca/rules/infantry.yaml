@@ -1235,7 +1235,7 @@ HACK:
 	Health:
 		HP: 12000
 	Mobile:
-		Speed: 66
+		Speed: 67
 		Voice: Move
 	Armor:
 		Type: Concrete
@@ -2629,14 +2629,25 @@ CONF:
 	Health:
 		HP: 14000
 	Armament@PRIMARY:
+		Name: primary
 		Weapon: ConfessorGun
 	Armament@BATF:
 		Name: batf
 		Weapon: ConfessorGun
 		MuzzleSequence: garrison-muzzle
-	AttackFrontal:
+	Armament@CONFMORTAR:
+		Name: ConfMortar
+		Weapon: HallucinationGrenade
+		LocalOffset: 200,0,155
+		FireDelay: 10
+	AttackFrontal@PRIMARY:
+		Armaments: primary
 		PauseOnCondition: being-warped || blinded || reapersnare
 		FacingTolerance: 0
+	AttackFrontal@CONFMORTAR:
+		Armaments: ConfMortar
+		PauseOnCondition: being-warped || blinded || reapersnare
+		FacingTolerance: 32
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	ProducibleWithLevel:
@@ -2646,6 +2657,7 @@ CONF:
 		Prerequisites: barracks.upgraded
 	Mobile:
 		Voice: Move
+		Speed: 62
 	Armor:
 		Type: Concrete
 	Voiced:
@@ -2720,7 +2732,7 @@ ACOL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 22500
+		HP: 26000
 	Mobile:
 		Speed: 62
 		Voice: Move
@@ -2775,7 +2787,7 @@ TPLR:
 	Valued:
 		Cost: 550
 	Health:
-		HP: 26000
+		HP: 28000
 	RevealsShroud:
 		Range: 7c0
 	Buildable:
@@ -3451,7 +3463,7 @@ RMBC:
 	Health:
 		HP: 40000
 	Mobile:
-		Speed: 54
+		Speed: 57
 		Voice: Move
 		PauseOnCondition: being-warped || reapersnare || empdisable
 	RevealsShroud:
@@ -3477,7 +3489,7 @@ RMBC:
 	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
-		Chance: 100
+		Chance: 25
 		RequiresCondition: !being-warped
 	-TakeCover:
 	-Crushable:
@@ -3509,6 +3521,9 @@ RMBC:
 	WithProductionIconOverlay@MarkedBonus:
 		Types: MarkedVeterancy
 		Prerequisites: player.marked
+	ProductionTimeMultiplier:
+		Multiplier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnHealingReceived@REPAIRCOOLDOWN:
 		Condition: repair-cooldown
 		RequiredHealing: 85000
@@ -4498,7 +4513,7 @@ ENLI:
 	Health:
 		HP: 32500
 	Mobile:
-		Speed: 54
+		Speed: 58
 		Voice: Move
 		PauseOnCondition: being-warped || empdisable
 	AttackFrontal:
@@ -4565,10 +4580,13 @@ ENLI:
 		Armaments: secondary
 		Ammo: 1
 	ReloadAmmoPoolCA:
-		Delay: 200 # equal to reload time of weapon
+		Delay: 100 # equal to reload time of weapon
 		Count: 1
 		ShowSelectionBar: true
 		SelectionBarColor: b8afff
+	ProductionTimeMultiplier:
+		Multiplier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Infantry
 	EncyclopediaExtras:
@@ -4592,11 +4610,11 @@ ENLI:
 	Armament@PRIMARY:
 		Weapon: ChemicalMortar
 		LocalOffset: 200,0,155
-		FireDelay: 15
+		FireDelay: 10
 	Armament@BATF:
 		Name: batf
 		Weapon: ChemicalMortar
-		FireDelay: 15
+		FireDelay: 10
 	AttackFrontal:
 		TargetFrozenActors: True
 		PauseOnCondition: being-warped || blinded || reapersnare
@@ -5392,13 +5410,13 @@ REAP:
 	Health:
 		HP: 30000
 	Mobile:
-		Speed: 65
+		Speed: 62
 		Voice: Move
 		PauseOnCondition: being-warped || reapersnare || empdisable
 	AttackFrontal:
 		Voice: Attack
 		PauseOnCondition: being-warped || reapersnare || empdisable
-		FacingTolerance: 0
+		FacingTolerance: 32
 	AttackMove:
 		Voice: Move
 	Passenger:
@@ -5421,7 +5439,7 @@ REAP:
 		Name: secondary
 		Weapon: CyborgReaperSnare
 		LocalOffset: 0,150,700
-		PauseOnCondition: !snare-attack
+		RequiresCondition: snare-attack
 		MuzzleSequence: muzzle
 	WithMuzzleOverlay:
 	ProducibleWithLevel:
@@ -5470,10 +5488,13 @@ REAP:
 		Armaments: secondary
 		Ammo: 1
 	ReloadAmmoPoolCA:
-		Delay: 125 # equal to reload time of weapon
+		Delay: 100 # equal to reload time of weapon
 		Count: 1
 		ShowSelectionBar: true
 		SelectionBarColor: 00cc00
+	ProductionTimeMultiplier:
+		Multiplier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Infantry
 	EncyclopediaExtras:
