@@ -592,6 +592,12 @@
 	ReloadDelayMultiplier@IdolOfKaneBuff:
 		RequiresCondition: iokbuff
 		Modifier: 80
+	RangeMultiplier@IdolOfKaneBuff:
+		RequiresCondition: iokbuff
+		Modifier: 115
+	DamageMultiplier@IdolOfKaneBuff:
+		RequiresCondition: iokbuff
+		Modifier: 120
 	ExternalCondition@IdolOfKaneDebuff:
 		Condition: iokdebuff
 	SpeedMultiplier@IdolOfKaneDebuff:
@@ -600,6 +606,9 @@
 	ReloadDelayMultiplier@IdolOfKaneDebuff:
 		RequiresCondition: iokdebuff
 		Modifier: 130
+	RangeMultiplier@IdolOfKaneDebuff:
+		RequiresCondition: iokdebuff
+		Modifier: 90
 
 ^Chronoshiftable:
 	ChronoshiftableCA:
@@ -615,15 +624,21 @@
 		Condition: chronoshifted
 	HealthCapDamageMultiplier@CHRONO:
 		MaxHealthEquivalent: 55000
-		RequiresCondition: chronoshifted
+		RequiresCondition: chronoshifted && !player.germany
+	HealthCapDamageMultiplier@CHRONOGERMANY:
+		MaxHealthEquivalent: 220000
+		RequiresCondition: chronoshifted && player.germany
 	GrantTimedCondition@TemporalFlux:
 		ForceFullDuration: true
 		Condition: temporal-flux
-		Duration: 200
+		Duration: 1500
 		RequiresCondition: chronoshifted && tflx-upgrade
 	GrantConditionOnPrerequisite@TemporalFlux:
 		Condition: tflx-upgrade
 		Prerequisites: tflx.upgrade
+	GrantConditionOnPrerequisite@Germany:
+		Condition: player-germany
+		Prerequisites: player.germany
 	WithColoredOverlay@TemporalFlux:
 		RequiresCondition: temporal-flux
 		Color: 00eeff22
@@ -635,10 +650,22 @@
 		IsDecoration: True
 	ReloadDelayMultiplier@CHRONO:
 		Modifier: 75
-		RequiresCondition: temporal-flux
+		RequiresCondition: temporal-flux && !player-germany
 	SpeedMultiplier@CHRONO:
 		Modifier: 133
-		RequiresCondition: temporal-flux
+		RequiresCondition: temporal-flux && !player-germany
+	ReloadDelayMultiplier@CHRONOGERMANY:
+		Modifier: 65
+		RequiresCondition: temporal-flux && player-germany
+	SpeedMultiplier@CHRONOGERMANY:
+		Modifier: 150
+		RequiresCondition: temporal-flux && player-germany
+	DamageMultiplier@CHRONOGERMANY:
+		Modifier: 75
+		RequiresCondition: temporal-flux && player-germany
+	FirepowerMultiplier@CHRONOGERMANY:
+		Modifier: 110
+		RequiresCondition: temporal-flux && player-germany
 	WithDecoration@Chronoshifted:
 		Image: chronoshifted
 		Sequence: idle
@@ -1152,10 +1179,10 @@
 	ExternalCondition@InspirationCmsr:
 		Condition: machine-learning
 	GainsExperienceMultiplier@MachineLearning1:
-		Modifier: 125
+		Modifier: 150
 		RequiresCondition: machine-learning == 1
 	GainsExperienceMultiplier@MachineLearning2:
-		Modifier: 150
+		Modifier: 175
 		RequiresCondition: machine-learning >= 2
 	WithIdleOverlay@MachineLearning1:
 		Image: custbuff
@@ -1202,10 +1229,10 @@
 
 ^AuraHealable:
 	ChangesHealth@HOSPITAL:
-		Step: 800
-		Delay: 75
+		Step: 1500
+		Delay: 50
 		StartIfBelow: 100
-		DamageCooldown: 75
+		DamageCooldown: 50
 		RequiresCondition: hospitalheal
 	ExternalCondition@HOSPITAL:
 		Condition: hospitalheal
@@ -1233,7 +1260,7 @@
 
 ^AuraRepairable:
 	ChangesHealth@MACS:
-		Step: 600
+		Step: 2000
 		Delay: 50
 		StartIfBelow: 100
 		DamageCooldown: 75
@@ -1295,7 +1322,15 @@
 ^TankBusterVulnerability:
 	DamageTypeDamageMultiplier@TANKBUSTERVULN:
 		DamageTypes: TankBuster
-		Modifier: 140
+		Modifier: 160
+
+^HumanAircraftRearmBonus:
+	GrantConditionOnPrerequisite@OwnedByAi:
+		Condition: owned-by-ai
+		Prerequisites: botplayer
+	ReloadAmmoDelayMultiplier@HUMAN:
+		Modifier: 75
+		RequiresCondition: !owned-by-ai
 
 ^AirToGroundProtection:
 	DamageTypeDamageMultiplier@A2GPROTECTION:
@@ -3558,6 +3593,7 @@
 	Inherits@ionsurge: ^IonSurgable
 	Inherits@atomize: ^Atomizable
 	Inherits@Blindable: ^Blindable
+	Inherits@HUMANREARM: ^HumanAircraftRearmBonus
 	Inherits@WeaponJammable: ^WeaponJammable
 	Inherits@DevelopmentPolicyVeterancyBonus: ^DevelopmentPolicyVeterancyBonus
 	-GrantConditionOnPrerequisite@MunitionsPlantBoost:

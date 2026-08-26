@@ -1231,7 +1231,7 @@ TemporalIncursion:
 		ValidTargets: Ground, Air, Water
 		ImpactSounds: chrono2.aud
 	Warhead@teleport: SpawnActor
-		Actors: 2tnk.temp, 2tnk.temp, 2tnk.temp, 2tnk.temp, tnkd.temp, arty.temp, arty.temp, arty.temp, jeep.temp, jeep.temp
+		Actors: 2tnk.chrono, 2tnk.chrono, 2tnk.chrono, 2tnk.chrono, 2tnk.chrono, arty.chrono, arty.chrono, arty.chrono, arty.chrono, arty.chrono, jeep.temp, jeep.temp, jeep.temp, jeep.temp
 		Range: 5
 		Image: chronoappear
 		Sequence: idle

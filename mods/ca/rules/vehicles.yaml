@@ -1958,7 +1958,6 @@ SAPC:
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@TRANSPORT: ^Transport
-	Inherits@NOUNLOADCHRONO: ^NoUnloadWhenChronoshifted
 	Inherits@COMMANDOSKULL: ^CommandoSkull
 	Buildable:
 		Queue: VehicleSQ, VehicleMQ
@@ -2345,7 +2344,6 @@ APC:
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@TRANSPORT: ^Transport
-	Inherits@NOUNLOADCHRONO: ^NoUnloadWhenChronoshifted
 	Inherits@HeavyArmor: ^HeavyArmor
 	Inherits@SLOWCRUSH: ^SlowedByCrushing
 	Inherits@UpgradeOverlay: ^UpgradeOverlay
@@ -3738,7 +3736,6 @@ APC2:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@TRANSPORT: ^Transport
-	Inherits@NOUNLOADCHRONO: ^NoUnloadWhenChronoshifted
 	Inherits@SLOWCRUSH: ^SlowedByCrushing
 	Inherits@UpgradeOverlay: ^UpgradeOverlay
 	Inherits@COMMANDOSKULL: ^CommandoSkull
@@ -3893,7 +3890,6 @@ VULC:
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMovePrioritizeAir
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@TRANSPORT: ^Transport
-	Inherits@NOUNLOADCHRONO: ^NoUnloadWhenChronoshifted
 	Inherits@HeavyArmor: ^HeavyArmor
 	Inherits@SLOWCRUSH: ^SlowedByCrushing
 	Inherits@A2GPROTECTION: ^AirToGroundProtection
@@ -5442,7 +5438,7 @@ HSTK:
 		Speed: 100
 		Voice: Move
 	Health:
-		HP: 36000
+		HP: 48000
 	RevealsShroud:
 		MinRange: 5c0
 		Range: 8c0
@@ -5844,7 +5840,6 @@ BTR:
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMovePrioritizeAir
 	Inherits@TRANSPORT: ^Transport
-	Inherits@NOUNLOADCHRONO: ^NoUnloadWhenChronoshifted
 	Inherits@SLOWCRUSH: ^SlowedByCrushing
 	Inherits@HeavyArmor: ^HeavyArmor
 	Inherits@A2GPROTECTION: ^AirToGroundProtection
@@ -6128,7 +6123,6 @@ TRPC:
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@TRANSPORT: ^Transport
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@NOUNLOADCHRONO: ^NoUnloadWhenChronoshifted
 	Inherits@SLOWCRUSH: ^SlowedByCrushing
 	Inherits@COMMANDOSKULL: ^CommandoSkull
 	Inherits@AIUNLOAD: ^AIUNLOAD
@@ -10192,7 +10186,6 @@ OVLD:
 	Inherits: ^Tank
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@TRANSPORT: ^Transport
-	Inherits@NOUNLOADCHRONO: ^NoUnloadWhenChronoshifted
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@SHRAPNEL: ^ThrowsShrapnel
 	Inherits@ATOMICAMMO: ^AtomicAmmunition
@@ -10929,7 +10922,6 @@ CUST:
 	Inherits: ^Tank
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@TRANSPORT: ^Transport
-	Inherits@NOUNLOADCHRONO: ^NoUnloadWhenChronoshifted
 	Inherits@SLOWCRUSH: ^SlowedByCrushing
 	Inherits@COMMANDOSKULL: ^CommandoSkull
 	Inherits@AIUNLOAD: ^AIUNLOAD

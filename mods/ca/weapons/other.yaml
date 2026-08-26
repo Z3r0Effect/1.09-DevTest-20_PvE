@@ -1342,10 +1342,10 @@ RaiderBuggyLaser:
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
-		Damage: 8500
+		Damage: 9500
 		Versus:
 			Light: 110
-			Heavy: 150
+			Heavy: 140
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	-Warhead@2Eff:
 	Warhead@2Smu: LeaveSmudge
@@ -1502,15 +1502,15 @@ EnlightenedBeam:
 		GlowScale: 0.3
 	Warhead@1Dam: HealthPercentageSpreadDamage
 		Spread: 448
-		Falloff: 100, 75, 55, 35, 0
+		Falloff: 100, 65, 55, 35, 0
 		Damage: 100
 		Versus:
 			Wood: 5
 			None: 25
-			Concrete: 15
-			Brick: 15
-			Light: 65
-			Heavy: 50
+			Concrete: 12
+			Brick: 12
+			Light: 45
+			Heavy: 35
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 		ValidRelationships: Enemy, Neutral
 	Warhead@friendlyFire: SpreadDamage
@@ -1800,7 +1800,7 @@ PrisCLaser:
 	-Warhead@Burst:
 
 HopliteGun:
-	ReloadDelay: 50
+	ReloadDelay: 60
 	Range: 8c0
 	Report: hopl-fire1.aud
 	Projectile: LaserZapCA

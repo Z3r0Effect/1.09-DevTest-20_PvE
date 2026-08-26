@@ -90,7 +90,7 @@
 
 ^ClusterMinesPower:
 	AirstrikePowerCA@clustermines:
-		ChargeInterval: 6000
+		ChargeInterval: 4500
 		Prerequisites: ~radar.france
 		Name: Cluster Mines
 		Description: Sends a cargo plane to drop a minefield at the target location.
@@ -121,7 +121,7 @@
 		Prerequisites: atek.germany
 		Icon: tempinc
 		Cursor: ability
-		ChargeInterval: 7500
+		ChargeInterval: 6000
 		Name: Temporal Incursion
 		ActivationDelay: 25
 		Description: Summons reinforcements from the future. Units return to their origin time after a short time.
@@ -984,7 +984,7 @@
 		MissileWeapon: atomic
 		MissileImage: atomic
 		MissileDelay: 4
-		FlightDelay: 150
+		FlightDelay: 100
 		SpawnOffset: 1c0,427,0
 		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayBeacon: True
@@ -1649,7 +1649,7 @@
 		SpawnOffset: 1024,80,0
 		DetonationAltitude: 3c0
 		RemoveMissileOnDetonation: True
-		FlightDelay: 150
+		FlightDelay: 100
 		FlightVelocity: 0c624
 		DisplayRadarPing: True
 		CameraRange: 10c0
@@ -1861,7 +1861,7 @@
 		DisplayBeacon: True
 		DisplayRadarPing: True
 		BeaconPoster: cmissile
-		FlightDelay: 150
+		FlightDelay: 100
 		SpawnOffset: 1000, 0, 0
 		CameraRange: 10c0
 		CameraRemoveDelay: 50
@@ -2167,7 +2167,7 @@
 		MeteorPalette: scrin
 		LaunchSound: owrath-launch.aud
 		IncomingSound: owrath-launch.aud
-		FlightDelay: 150
+		FlightDelay: 100
 		FlightVelocity: 0c624
 		DisplayRadarPing: True
 		CameraRange: 10c0

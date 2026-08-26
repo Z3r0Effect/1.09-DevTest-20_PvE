@@ -990,7 +990,7 @@ MEDI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 5000
+		HP: 8000
 	RevealsShroud:
 		Range: 3c0
 	Passenger:
@@ -1021,6 +1021,10 @@ MEDI:
 		ValidRelationships: Ally
 	Mobile:
 		Voice: Move
+		Speed: 58
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	WithProductionIconOverlay:
@@ -1051,9 +1055,10 @@ MECH:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 5000
+		HP: 8000
 	Mobile:
 		Voice: Move
+		Speed: 58
 	RevealsShroud:
 		Range: 3c0
 	Passenger:
@@ -1105,6 +1110,9 @@ MECH:
 		RequiresCondition: salvaging
 	Voiced:
 		VoiceSet: MechanicVoice
+	DamageMultiplier@HUMAN:
+		Modifier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	AutoTarget:
 		ScanRadius: 7
 	AutoTargetPriority@DEFAULT:
@@ -1143,9 +1151,9 @@ CMEC:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 17000
+		HP: 20000
 	Mobile:
-		Speed: 46
+		Speed: 65
 		Voice: Move
 	RevealsShroud:
 		Range: 5c0
@@ -1203,6 +1211,9 @@ CMEC:
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Repairable
 		ValidRelationships: Ally
+	DamageMultiplier@CYBORGARMORHUMAN:
+		Modifier: 90
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	WithProductionIconOverlay:
@@ -1982,6 +1993,9 @@ N5:
 		Chance: 25
 		DamageSource: Killer
 		RequiresCondition: !being-warped
+	DamageMultiplier@CYBORGARMORHUMAN:
+		Modifier: 90
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	WithProductionIconOverlay:
@@ -2768,6 +2782,9 @@ ACOL:
 	WithProductionIconOverlay:
 		Types: Veterancy
 		Prerequisites: barracks.upgraded
+	DamageMultiplier@CYBORGARMORHUMAN:
+		Modifier: 92
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Convertible:
 		SpawnActors: TPLR
 	ReplacedInQueue:
@@ -3334,6 +3351,9 @@ N1C:
 		Name: batf
 		Weapon: Vulcan3
 		MuzzleSequence: garrison-muzzle
+	DamageMultiplier@CYBORGARMORHUMAN:
+		Modifier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	WithProductionIconOverlay:
@@ -3430,6 +3450,9 @@ N3C:
 		MaximumScanTimeInterval: 5
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
+	DamageMultiplier@CYBORGARMORHUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithProductionIconOverlay:
 		Types: Veterancy
 		Prerequisites: barracks.upgraded
@@ -3489,8 +3512,8 @@ RMBC:
 	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
-		Chance: 25
-		RequiresCondition: !being-warped
+		Chance: 100
+		RequiresCondition: !being-warped && (owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	-TakeCover:
 	-Crushable:
 	-KillsSelf@Immolate:
@@ -3511,6 +3534,9 @@ RMBC:
 		RequiresCondition: being-warped || empdisable
 	DamageMultiplier@CYBORGARMOR:
 		Modifier: 85
+	DamageMultiplier@CYBORGARMORHUMAN:
+		Modifier: 82
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	WithProductionIconOverlay:
@@ -3523,6 +3549,9 @@ RMBC:
 		Prerequisites: player.marked
 	ProductionTimeMultiplier:
 		Multiplier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ProductionCostMultiplier:
+		Multiplier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnHealingReceived@REPAIRCOOLDOWN:
 		Condition: repair-cooldown
@@ -4587,6 +4616,9 @@ ENLI:
 	ProductionTimeMultiplier:
 		Multiplier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	DamageMultiplier@CYBORGARMORHUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Infantry
 	EncyclopediaExtras:
@@ -5494,6 +5526,9 @@ REAP:
 		SelectionBarColor: 00cc00
 	ProductionTimeMultiplier:
 		Multiplier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	DamageMultiplier@CYBORGARMORHUMAN:
+		Modifier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Infantry

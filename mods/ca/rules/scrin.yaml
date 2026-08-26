@@ -1836,7 +1836,6 @@ INTL:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@BERSERK: ^Berserk
 	Inherits@TRANSPORT: ^Transport
-	Inherits@NOUNLOADCHRONO: ^NoUnloadWhenChronoshifted
 	Inherits@HOVERTRAIL: ^HoverTrail
 	Inherits@HeavyArmor: ^HeavyArmor
 	Inherits@TANKBUSTERVULN: ^TankBusterVulnerability
@@ -3401,15 +3400,15 @@ TORM:
 		Prerequisites: aircraft.upgraded
 	-EjectOnDeath:
 	AmmoPool:
-		Ammo: 5
+		Ammo: 6
 		AmmoCondition: ammo
 		ReloadDelay: 50
-		ReloadCount: 1
+		ReloadCount: 2
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 5
+		PipCount: 6
 	Rearmable:
 		RearmActors: hpad, hpad.td, afld, afld.gdi, grav
 	GrantConditionOnDamageState@SmokeTrail:
@@ -3540,7 +3539,7 @@ ENRV:
 		Ammo: 6
 		AmmoCondition: ammo
 		ReloadDelay: 35
-		ReloadCount: 1
+		ReloadCount: 2
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -5468,7 +5467,7 @@ SREP:
 	RallyPoint:
 	RepairsUnits:
 		ValuePercentage: 0
-		HpPerStep: 2500
+		HpPerStep: 4000
 		Interval: 7
 		StartRepairingNotification: Repairing
 		StartRepairingTextNotification: Repairing.

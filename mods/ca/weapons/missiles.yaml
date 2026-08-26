@@ -1260,25 +1260,25 @@ GradRocketsWide.UPG:
 	Burst: 5
 
 HonestJohn:
-	ReloadDelay: 65
+	ReloadDelay: 70
 	Burst: 2
-	BurstDelays: 50
+	BurstDelays: 25
 	Range: 12c0
 	MinRange: 3c0
 	Report: rocket2.aud
 	Projectile: Bullet
 		Blockable: false
 		Shadow: true
-		Inaccuracy: 0c511
+		Inaccuracy: 0c192
 		Image: ssmmsl
 		TrailImage: smokey
 		TrailDelay: 3
-		Speed: 210
+		Speed: 270
 		LaunchAngle: 37
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
+		Spread: 1c0
 		Damage: 650
-		Falloff: 500, 368, 135, 50, 18, 7, 0
+		Falloff: 400, 320, 175, 90, 40, 15, 0
 		Versus:
 			None: 100
 			Wood: 100
@@ -1288,9 +1288,9 @@ HonestJohn:
 			Brick: 10
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, FlakVestMitigatedMinor
 	Warhead@2Dam: SpreadDamage
-		Spread: 512
+		Spread: 1c0
 		Damage: 650
-		Falloff: 500, 368, 135, 50, 18, 7, 0
+		Falloff: 400, 320, 175, 90, 40, 15, 0
 		Delay: 3
 		Versus:
 			None: 100
@@ -1301,9 +1301,9 @@ HonestJohn:
 			Brick: 10
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, FlakVestMitigatedMinor
 	Warhead@3Dam: SpreadDamage
-		Spread: 512
+		Spread: 1c0
 		Damage: 650
-		Falloff: 500, 368, 135, 50, 18, 7, 0
+		Falloff: 400, 320, 175, 90, 40, 15, 0
 		Delay: 6
 		Versus:
 			None: 100
@@ -1314,9 +1314,9 @@ HonestJohn:
 			Brick: 10
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, FlakVestMitigatedMinor
 	Warhead@4Dam: SpreadDamage
-		Spread: 512
+		Spread: 1c0
 		Damage: 650
-		Falloff: 500, 368, 135, 50, 18, 7, 0
+		Falloff: 400, 320, 175, 90, 40, 15, 0
 		Delay: 9
 		Versus:
 			None: 100
@@ -1363,13 +1363,15 @@ HonestJohn.UPG:
 
 HonestJohnBH:
 	Inherits: HonestJohn
-	ReloadDelay: 80
+	ReloadDelay: 85
 	Burst: 3
+	BurstDelays: 20
 
 HonestJohnBH.UPG:
 	Inherits: HonestJohn.UPG
-	ReloadDelay: 80
+	ReloadDelay: 85
 	Burst: 3
+	BurstDelays: 20
 
 HonestJohnTargeting:
 	Inherits: HonestJohn
@@ -2579,7 +2581,7 @@ KamovRockets:
 	BurstDelays: 12
 	-Projectile:
 	Projectile: Bullet
-		Inaccuracy: 1c128
+		Inaccuracy: 0c256
 		InaccuracyType: Absolute
 		Image: dragon
 		Speed: 240
@@ -2592,10 +2594,10 @@ KamovRockets:
 		Damage: 9500
 		Spread: 1c448
 		Versus:
-			None: 10
-			Wood: 20
-			Concrete: 40
-			Light: 65
+			None: 70
+			Wood: 40
+			Concrete: 70
+			Light: 85
 			Heavy: 100
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, AirToGround, TankBuster, FlakVestMitigated
 	Warhead@3Eff: CreateEffect
@@ -2612,7 +2614,7 @@ KamovRockets:
 KamovRocketsWide:
 	Inherits: KamovRockets
 	Projectile: Bullet
-		Inaccuracy: 1c512
+		Inaccuracy: 0c512
 
 ^TigerGuardMissileProjectile:
 	Projectile: MissileCA

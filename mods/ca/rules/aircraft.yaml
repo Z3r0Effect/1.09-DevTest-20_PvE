@@ -9,7 +9,7 @@ BADR:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 20
-		Speed: 240
+		Speed: 260
 		Repulsable: False
 		MaximumPitch: 56
 	Cargo:
@@ -266,6 +266,7 @@ MIG:
 		Ammo: 6
 		AmmoCondition: ammo
 		ReloadDelay: 35
+		ReloadCount: 2
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -394,6 +395,7 @@ SUK:
 		Ammo: 12
 		ReloadDelay: 22
 		AmmoCondition: ammo
+		ReloadCount: 3
 	WithAmmoPipsDecoration:
 		PipCount: 6
 		Position: BottomLeft
@@ -551,6 +553,7 @@ YAK:
 	AmmoPool:
 		Ammo: 24
 		ReloadDelay: 8
+		ReloadCount: 4
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
@@ -1292,6 +1295,7 @@ HIND:
 		Name: primary
 		Ammo: 10
 		ReloadDelay: 14
+		ReloadCount: 2
 		AmmoCondition: ammo
 		Armaments: primary
 	AmmoPool@SECONDARY:
@@ -1900,7 +1904,7 @@ C17:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 20
-		Speed: 236
+		Speed: 260
 		LandingSounds: vc130diva.aud, vc130divb.aud
 		Repulsable: False
 		MaximumPitch: 36
@@ -1972,7 +1976,7 @@ C17.Cargo:
 	RenderSprites:
 		Image: c17
 	Aircraft:
-		Speed: 266
+		Speed: 275
 		TurnSpeed: 26
 		IdleTurnSpeed: 6
 		Crushes: wall
@@ -2149,6 +2153,7 @@ APCH:
 	AmmoPool:
 		Ammo: 14
 		ReloadDelay: 10
+		ReloadCount: 4
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
@@ -2668,7 +2673,7 @@ RAH:
 		Ammo: 10
 		AmmoCondition: ammo
 		ReloadCount: 2
-		ReloadDelay: 40
+		ReloadDelay: 35
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -3217,6 +3222,7 @@ HARR:
 	AmmoPool:
 		Ammo: 6
 		ReloadDelay: 35
+		ReloadCount: 2
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
@@ -3358,6 +3364,7 @@ SCRN:
 	AmmoPool:
 		Ammo: 48
 		ReloadDelay: 5
+		ReloadCount: 6
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
@@ -3822,6 +3829,7 @@ VENM:
 	AmmoPool:
 		Ammo: 12
 		ReloadDelay: 15
+		ReloadCount: 3
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
@@ -3931,7 +3939,7 @@ AURO:
 		InitialStanceAI: AttackAnything
 	AmmoPool:
 		Ammo: 1
-		ReloadDelay: 125
+		ReloadDelay: 95
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
@@ -4260,14 +4268,15 @@ BEAG:
 		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
 	AmmoPool:
-		Ammo: 5
+		Ammo: 6
 		AmmoCondition: ammo
 		ReloadDelay: 45
+		ReloadCount: 2
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 5
+		PipCount: 6
 	Contrail@1:
 		Offset: -50,-650,20
 		StartColorUsePlayerColor: false
@@ -4388,6 +4397,7 @@ PHAN:
 		Ammo: 6
 		AmmoCondition: ammo
 		ReloadDelay: 35
+		ReloadCount: 2
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -4536,6 +4546,7 @@ KAMV:
 		Name: primary
 		Ammo: 12
 		ReloadDelay: 14
+		ReloadCount: 3
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration@PRIMARY:
 		Position: BottomLeft
@@ -4640,14 +4651,15 @@ SHDE:
 		InitialStance: HoldFire
 		InitialStanceAI: AttackAnything
 	AmmoPool:
-		Ammo: 5
+		Ammo: 6
 		ReloadDelay: 50
+		ReloadCount: 2
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 5
+		PipCount: 6
 	Contrail@1:
 		Offset: -380,-850,-20
 		StartColorUsePlayerColor: false
@@ -4776,7 +4788,7 @@ VERT:
 		InitialStanceAI: AttackAnything
 	AmmoPool:
 		Ammo: 2
-		ReloadDelay: 100
+		ReloadDelay: 65
 		AmmoCondition: ammo
 		Armaments: primary
 	WithAmmoPipsDecoration:

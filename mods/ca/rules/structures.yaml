@@ -2359,7 +2359,7 @@ FIX:
 	RallyPoint:
 	RepairsUnits:
 		ValuePercentage: 0
-		HpPerStep: 2000
+		HpPerStep: 4000
 		Interval: 7
 		StartRepairingNotification: Repairing
 		StartRepairingTextNotification: Repairing.
@@ -4179,7 +4179,7 @@ REP:
 	RallyPoint:
 	RepairsUnits:
 		ValuePercentage: 0
-		HpPerStep: 2000
+		HpPerStep: 4000
 		Interval: 7
 		StartRepairingNotification: Repairing
 		StartRepairingTextNotification: Repairing.
