@@ -2505,7 +2505,7 @@ HornetLauncher:
 			Brick: 0
 
 V3Launcher:
-	ReloadDelay: 300
+	ReloadDelay: 240
 	Range: 21c511
 	MinRange: 6c0
 	Report: vv3latta.aud, vv3lattb.aud
@@ -2674,7 +2674,7 @@ ChaosDroneTargeting:
 	InvalidTargets: ChaosImmune
 
 MempTargeting:
-	Range: 5c0
+	Range: 6c0
 	Projectile: InstantHit
 	ValidTargets: Structure, Vehicle, Ship
 
@@ -3041,7 +3041,7 @@ SonicPulse.UPG:
 
 DisruptorPulse:
 	ReloadDelay: 80
-	Range: 6c768
+	Range: 9c768
 	StartBurstReport: sonic4.aud
 	Burst: 9
 	BurstDelays: 5
@@ -3049,7 +3049,7 @@ DisruptorPulse:
 	Projectile: LinearPulse
 		Speed: 384
 		MinimumImpactDistance: 768
-		MinimumFriendlyFireRange: 1c768
+		MinimumFriendlyFireRange: 4c768
 		ImpactType: Rectangle
 		RectangleLength: 768
 		RectangleWidth: 2c256
@@ -3063,7 +3063,7 @@ DisruptorPulse:
 			Sequences: sonicwave1, sonicwave2
 			Palette: effect
 	Warhead@1Dam: SpreadDamage
-		Damage: 3000
+		Damage: 6500
 		Versus:
 			None: 75
 			Wood: 100
@@ -3086,15 +3086,15 @@ DisruptorPulse:
 
 DisruptorPulse.Amp:
 	Inherits: DisruptorPulse
-	Range: 7c0
+	Range: 10c0
 	Projectile: LinearPulse
 		ImpactAnimation@1:
 			Sequences: sonicwaveupg1, sonicwaveupg2
 	Warhead@1Dam: SpreadDamage
-		Damage: 3400
+		Damage: 7000
 	Warhead@4Conc: GrantExternalConditionCA
 		Range: 0c768
-		Duration: 75
+		Duration: 100
 		Condition: concussion
 		ValidTargets: Ground, Infantry, Vehicle, Ship
 		ValidRelationships: Enemy, Neutral
@@ -3954,8 +3954,8 @@ ZoneRaiderGrenade:
 		ValidTargets: Water, Underwater
 		InvalidTargets: Ship, Structure, Bridge
 	Warhead@Concussion: GrantExternalConditionCA
-		Range: 1c512
-		Duration: 75
+		Range: 1c768
+		Duration: 100
 		Condition: concussion
 		ValidTargets: Infantry, Vehicle, Ship
 	Warhead@5Eff: CreateEffect
@@ -3977,11 +3977,11 @@ ZoneDefenderGun:
 		SecondaryBeamColor: FFFFFF66
 	Warhead@1Dam: SpreadDamage
 		Spread: 288
-		Damage: 8250
+		Damage: 8500
 		Versus:
-			None: 18
+			None: 35
 			Wood: 50
-			Light: 85
+			Light: 95
 			Heavy: 100
 			Concrete: 75
 			Brick: 75
@@ -4107,10 +4107,10 @@ ZeusBolt:
 		FadeInFrames: 0
 
 BasiliskPulse:
-	ReloadDelay: 60
+	ReloadDelay: 70
 	Burst: 3
 	BurstDelays: 5
-	Range: 9c0
+	Range: 9c768
 	StartBurstReport: basiwave.aud
 	TargetActorCenter: true
 	Projectile: LinearPulse
@@ -4151,7 +4151,7 @@ CyclopsZap:
 	Range: 10c0
 
 JackknifeTargeter:
-	Range: 8c0
+	Range: 9c256
 	ValidTargets: Ground, Water
 	MinRange: 0c768
 	ReloadDelay: 25

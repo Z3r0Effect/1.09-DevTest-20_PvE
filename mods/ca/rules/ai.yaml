@@ -310,22 +310,13 @@ Player:
 					Types: Structure
 					Attractiveness: 1
 					TargetMetric: None
-					CheckRadius: 8c0
+					CheckRadius: 3c0
 				Consideration@2:
 					Against: Enemy
 					Types: Water
 					Attractiveness: -5
 					TargetMetric: None
-					CheckRadius: 8c0
-			strafe:
-				OrderName: strafe
-				MinimumAttractiveness: 1
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: Value
-					CheckRadius: 4c0
+					CheckRadius: 3c0
 			carpetbomb:
 				OrderName: carpetbomb
 				MinimumAttractiveness: 1
@@ -380,13 +371,13 @@ Player:
 					CheckRadius: 5c0
 			clustermissilepower:
 				OrderName: clustermissile
-				MinimumAttractiveness: 3000
+				MinimumAttractiveness: 6000
 				Consideration@1:
 					Against: Enemy
-					Types: Defense
+					Types: Ground
 					Attractiveness: 1
 					TargetMetric: Value
-					CheckRadius: 3c0
+					CheckRadius: 4c0
 				Consideration@2:
 					Against: Ally
 					Types: Air, Ground, Water

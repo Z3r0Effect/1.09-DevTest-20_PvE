@@ -31,7 +31,7 @@
 
 25mm:
 	Inherits: ^Cannon
-	Range: 7c256
+	Range: 7c768
 	ReloadDelay: 31
 	Report: cannon2.aud
 	Projectile: Bullet
@@ -48,7 +48,7 @@
 
 25mmFRAG:
 	Inherits: ^Cannon
-	Range: 6c768
+	Range: 7c0
 	Report: tnkfire3.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
@@ -76,7 +76,7 @@
 
 76mm:
 	Inherits: ^Cannon
-	Range: 6c768
+	Range: 7c0
 	Report: smallcan3.aud
 	Projectile: Bullet
 		LaunchAngle: 62
@@ -98,7 +98,7 @@
 
 90mm:
 	Inherits: ^Cannon
-	Range: 6c768
+	Range: 7c0
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			Concrete: 48
@@ -107,7 +107,7 @@
 105mm:
 	Inherits: 90mm
 	ReloadDelay: 40
-	Range: 6c768
+	Range: 7c0
 	Report: vgriatta.aud, vgriattb.aud, vgriattc.aud
 	Warhead@1Dam: SpreadDamage
 		Damage: 5000
@@ -450,7 +450,7 @@ TitanGun:
 
 155mmTDM:
 	Inherits: 155mmTD
-	Range: 9c512
+	Range: 10c512
 	Report: howi-fire1.aud, howi-fire2.aud
 	ReloadDelay: 55
 	Projectile: Bullet
@@ -596,7 +596,7 @@ NukeCannonDeployer:
 	Range: 18c0
 	TargetActorCenter: true
 	Projectile: Bullet
-		Speed: 220
+		Speed: 245
 		Image: 280mma
 		LaunchAngle: 92
 		Inaccuracy: 554
@@ -906,13 +906,13 @@ ShadowGliderGrenade:
 
 ^Mortar:
 	ReloadDelay: 70
-	Range: 9c128
+	Range: 12c0
 	MinRange: 2c0
 	Report: nade.aud
 	Projectile: Bullet
 		Speed: 180
 		LaunchAngle: 140
-		Inaccuracy: 768
+		Inaccuracy: 512
 		Image: flakball
 		ContrailLength: 9
 		ContrailStartColor: ccccccaa
@@ -921,8 +921,8 @@ ShadowGliderGrenade:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 5250
-		Falloff: 100, 50, 25, 0
+		Damage: 5500
+		Falloff: 100, 80, 55, 25, 0
 		Versus:
 			None: 100
 			Wood: 90
@@ -949,7 +949,7 @@ ChemicalMortar:
 		Falloff: 100, 75, 50, 0
 		ValidTargets: Cyborg
 		Versus:
-			Heavy: 65
+			Heavy: 85
 		DamageTypes: Prone50Percent, TriggerProne, RadiationDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch-NoFlame
@@ -973,7 +973,7 @@ CryoMortar:
 		Image: cryoball
 		ContrailStartColor: 8fc6ffaa
 	Warhead@1Dam: SpreadDamage
-		Damage: 3500
+		Damage: 4500
 		Versus:
 			None: 90
 			Brick: 5
@@ -1011,11 +1011,12 @@ CryoMortar:
 SonicMortar:
 	Inherits: ^Mortar
 	Warhead@1Dam: SpreadDamage
+		Damage: 6000
 		Versus:
 			None: 75
 			Wood: 100
-			Light: 60
-			Heavy: 30
+			Light: 70
+			Heavy: 50
 			Concrete: 100
 	Warhead@concussion: GrantExternalConditionCA
 		Condition: concussion
@@ -1031,7 +1032,7 @@ SonicMortar:
 HallucinationGrenade:
 	Inherits: ^Mortar
 	ReloadDelay: 100
-	Range: 11c0
+	Range: 13c0
 	Projectile: Bullet
 	Projectile: Bullet
 		Speed: 240
@@ -1040,9 +1041,9 @@ HallucinationGrenade:
 		ContrailStartColor: dc289c
 		ContrailStartColorAlpha: 128
 	Warhead@1Dam: SpreadDamage
-		Damage: 4000
+		Damage: 5250
 	Warhead@chaos: GrantExternalConditionCA
-		Range: 1c768
+		Range: 2c0
 		Duration: 125
 		Condition: berserk
 		InvalidTargets: ChaosImmune

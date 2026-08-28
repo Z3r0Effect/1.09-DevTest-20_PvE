@@ -9004,7 +9004,7 @@ MEMP:
 	GrantTimedConditionOnDeploy:
 		DeploySound: mobempcharge1.aud
 		DeployedCondition: triggered
-		CooldownTicks: 250
+		CooldownTicks: 150
 		DeployedTicks: 25
 		RequiresCondition: radarenabled && !(empdisable || being-warped)
 		ChargingColor: 0277bd
@@ -9037,7 +9037,7 @@ MEMP:
 		FullSequence: pip-red
 	ReloadAmmoPool:
 		AmmoPool: explosion
-		Delay: 250
+		Delay: 150
 		Count: 1
 	ChronoshiftableCA:
 		RequiresCondition: !being-warped && !triggered

@@ -5349,7 +5349,7 @@ CRYT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 16500
+		HP: 18500
 	Mobile:
 		Speed: 60
 		Voice: Move

@@ -12,7 +12,7 @@
 		TrailImage: smokey
 		Shadow: True
 		HorizontalRateOfTurn: 20
-		RangeLimit: 11c0
+		RangeLimit: 13c0
 		PointDefenseType: Missile
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -437,10 +437,10 @@ HindRockets:
 	Burst: 6
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 6500
+		Damage: 8500
 		Versus:
 			None: 100
-			Light: 70
+			Light: 90
 			Wood: 28
 			Concrete: 28
 			Heavy: 85
@@ -1098,13 +1098,13 @@ HonestJohnSub:
 
 SCUD:
 	Inherits: ^AntiGroundMissile
-	ReloadDelay: 240
+	ReloadDelay: 175
 	Range: 12c0
 	MinRange: 3c0
 	Report: missile1.aud
 	-Projectile:
 	Projectile: Bullet
-		Speed: 190
+		Speed: 210
 		Blockable: false
 		TrailImage: smokey
 		TrailDelay: 5
@@ -1130,9 +1130,11 @@ SCUD:
 
 SCUD.Iraq:
 	Inherits: SCUD
+	ReloadDelay: 225
 	Projectile: Bullet
 		Image: V2A
 	Warhead@1Dam: SpreadDamage
+		Damage: 4000
 		DamageTypes: Prone50Percent, TriggerProne, RadiationDeath, FlakVestMitigatedMinor
 	Warhead@4Eff: CreateEffect
 		Explosions: med_chem
@@ -1141,8 +1143,8 @@ SCUD.Iraq:
 	Warhead@18Radio: CreateTintedCells
 		Spread: 2c0
 		Level: 200
-		Falloff: 100, 32
-		LayerName: radioactivity.weak
+		Falloff: 100, 40
+		LayerName: radioactivity.medium
 		GlowScale: 1.5
 		GlowFadeFrames: 30
 		GlowFadeInFrames: 12
@@ -2594,11 +2596,11 @@ KamovRockets:
 		Damage: 9500
 		Spread: 1c448
 		Versus:
-			None: 70
+			None: 80
 			Wood: 40
 			Concrete: 70
-			Light: 85
-			Heavy: 100
+			Light: 100
+			Heavy: 115
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, AirToGround, TankBuster, FlakVestMitigated
 	Warhead@3Eff: CreateEffect
 		Explosions: frag_3

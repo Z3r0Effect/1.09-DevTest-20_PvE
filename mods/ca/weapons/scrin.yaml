@@ -739,7 +739,7 @@ RuinerCannonCharged:
 
 TripodLaser:
 	Inherits: ^ScrinPlasmaBeam
-	Range: 7c512
+	Range: 7c832
 	Report: tripod-fire1.aud, tripod-fire2.aud, tripod-fire3.aud
 	ReloadDelay: 65
 	Projectile: PlasmaBeam
@@ -753,7 +753,7 @@ TripodLaser:
 		GlowColor: ee00ff
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 1600
+		Damage: 2200
 		Versus:
 			None: 85
 			Light: 75
@@ -763,7 +763,7 @@ TripodLaser:
 
 ReaperLaser:
 	Inherits: TripodLaser
-	Range: 7c768
+	Range: 8c512
 	ReloadDelay: 50
 	Report: rtpd-fire1.aud, rtpd-fire2.aud, rtpd-fire3.aud
 	Projectile: PlasmaBeam
@@ -774,10 +774,13 @@ ReaperLaser:
 		CenterBeamWidth: 45
 		CenterBeamColor: eeffeeff
 		GlowColor: 00ff00
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 2400
 
 ReaperLaserCharged:
 	Inherits: ReaperLaser
-	Range: 8c128
+	Range: 8c768
 	Report: rtpd-cfire1.aud, rtpd-cfire2.aud
 	Projectile: PlasmaBeam
 		Colors: 33880005, 00880005
@@ -789,7 +792,7 @@ ReaperLaserCharged:
 		SegmentLength: 196
 		RecalculateDistortionInterval: 2
 	Warhead@1Dam: SpreadDamage
-		Damage: 2000
+		Damage: 2600
 
 TripodLaserReversed:
 	Inherits: TripodLaser

@@ -232,6 +232,7 @@ ChainGun:
 	Projectile: Bullet
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
+		Spread: 512
 		Damage: 4500
 		Versus:
 			None: 100

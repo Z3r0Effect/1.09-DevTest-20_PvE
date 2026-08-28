@@ -611,7 +611,7 @@ FirestormBarrage:
 		TrailImage: smokey2
 		TrailPalette: tseffect-ignore-lighting-alpha75
 		TrailDelay: 4
-		Speed: 300
+		Speed: 600
 		LaunchAngle: 55
 		ContrailLength: 30
 		ContrailStartColor: cc550080

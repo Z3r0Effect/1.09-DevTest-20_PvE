@@ -2392,16 +2392,16 @@ FIX:
 			Points: -1536,-300, -640,-811, 640,-811, 1536,-300, 1536,555, 640,1110, -640,1110, -1536,555
 	ProximityExternalCondition@REPAIRAURA:
 		Condition: macsrepair
-		Range: 12c0
+		Range: 16c0
 		ValidRelationships: Ally
 		RequiresCondition: !forceshield && !invulnerability && !being-warped
 	ProximityExternalCondition@AIRCRAFTREPAIR:
 		Condition: aircraft-repair
-		Range: 12c0
+		Range: 16c0
 	WithRangeCircleCA@AIRCRAFTREPAIR:
 		Type: AircraftRepair
 		Color: FFD000AA
-		Range: 12c0
+		Range: 16c0
 	Encyclopedia:
 		Category: Allies/Buildings; Soviets/Buildings
 
@@ -4206,16 +4206,16 @@ REP:
 		Prerequisite: vehicles.mcv
 	ProximityExternalCondition@REPAIRAURA:
 		Condition: macsrepair
-		Range: 12c0
+		Range: 16c0
 		ValidRelationships: Ally
 		RequiresCondition: !forceshield && !invulnerability && !being-warped
 	ProximityExternalCondition@AIRCRAFTREPAIR:
 		Condition: aircraft-repair
-		Range: 12c0
+		Range: 16c0
 	WithRangeCircleCA@AIRCRAFTREPAIR:
 		Type: AircraftRepair
 		Color: FFD000AA
-		Range: 12c0
+		Range: 16c0
 	Encyclopedia:
 		Category: GDI/Buildings; Nod/Buildings
 
