@@ -915,6 +915,9 @@ E7:
 		Weapon: Colt45BATF
 		Name: batf
 		MuzzleSequence: garrison-muzzle
+	Armament@RAILGUN:
+		Weapon: TanyaRailgun
+		Name: railgun
 	Armament@sapper:
 		Weapon: PlaceC4
 		Cursor: c4
@@ -922,7 +925,7 @@ E7:
 		Name: secondary
 	AttackFrontal:
 		PauseOnCondition: being-warped || blinded || reapersnare
-		Armaments: primary, secondary
+		Armaments: primary, railgun
 		FacingTolerance: 0
 	AutoTarget:
 		AllowMovement: false
@@ -932,6 +935,7 @@ E7:
 		AttackSequences:
 			primary: shoot
 			secondary: stand
+			railgun: shoot
 	Demolition:
 		DetonationDelay: 45
 		Voice: Demolish
@@ -3352,7 +3356,7 @@ N1C:
 		Weapon: Vulcan3
 		MuzzleSequence: garrison-muzzle
 	DamageMultiplier@CYBORGARMORHUMAN:
-		Modifier: 85
+		Modifier: 75
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -3385,7 +3389,7 @@ N3C:
 		AddToArmyValue: true
 	-TakeCover:
 	Health:
-		HP: 11000
+		HP: 14000
 	Mobile:
 		Speed: 46
 		Voice: Move

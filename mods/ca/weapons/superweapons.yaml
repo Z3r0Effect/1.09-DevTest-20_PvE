@@ -524,7 +524,7 @@ EMPMissileLauncher:
 		ContrailStartColorAlpha: 128
 		ContrailLength: 25
 		ContrailDelay: 3
-		Speed: 300
+		Speed: 600
 		LaunchAngle: 55
 	Warhead@2Dam_impact: SpreadDamage
 		Range: 1c0
@@ -604,15 +604,15 @@ FirestormBarrage:
 	Projectile: Bullet
 		Blockable: false
 		Shadow: true
-		Inaccuracy: 12c0
+		Inaccuracy: 5c0
 		Image: red-missile
 		Palette: temptd
 		IsPlayerPalette: false
 		TrailImage: smokey2
 		TrailPalette: tseffect-ignore-lighting-alpha75
 		TrailDelay: 4
-		Speed: 600
-		LaunchAngle: 55
+		Speed: 700
+		LaunchAngle: 40
 		ContrailLength: 30
 		ContrailStartColor: cc550080
 		ContrailStartColorAlpha: 128

@@ -5499,8 +5499,8 @@ PATR:
 	AttackTurretedCharged:
 		PauseOnCondition: build-incomplete || disabled || empdisable || being-warped
 		RequiresCondition: loaded-rocket > 0
-		ChargeLevel: 35
-		DischargeRate: 35
+		ChargeLevel: 15
+		DischargeRate: 15
 		ShowSelectionBar: true
 		SelectionBarColor: FFFFFF
 		ChargeWhileTurning: true
@@ -5998,7 +5998,7 @@ UPGC:
 		SpawnOffset: 511,511,0
 		ExitCell: 1,1
 	Turreted:
-		TurnSpeed: 12
+		TurnSpeed: 24
 		InitialFacing: 384
 		RealignDelay: -1
 		Offset: -768,468,0
@@ -6007,8 +6007,8 @@ UPGC:
 	AttackTurretedCharged:
 		PauseOnCondition: build-incomplete || disabled || empdisable || being-warped
 		RequiresCondition: tower-rocket && loaded-rocket > 0
-		ChargeLevel: 45
-		DischargeRate: 45
+		ChargeLevel: 15
+		DischargeRate: 15
 		ShotsPerCharge: 3
 		ShowSelectionBar: true
 		SelectionBarColor: FF4400
@@ -6111,7 +6111,7 @@ UPGC:
 		OrderName: rocketbarrage
 		InitialOnly: true
 		RequiresCondition: tower-rocket
-		Ticks: 3000
+		Ticks: 1500
 	UpdatesSupportPowerTimer@AdvancedRadar:
 		OrderName: advradarorder
 		InitialOnly: true
@@ -6121,7 +6121,7 @@ UPGC:
 		OrderName: nshieldorder
 		InitialOnly: true
 		RequiresCondition: tower-shield
-		Ticks: 1500
+		Ticks: 750
 	Encyclopedia:
 		Category: GDI/Buildings
 

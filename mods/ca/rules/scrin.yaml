@@ -511,7 +511,7 @@ S1:
 
 S2:
 	Inherits@SCRININFANTRY: ^ScrinInfantry
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetTroopGroundAssaultMove
 	Inherits@BERSERK: ^Berserk
 	Buildable:
 		Queue: InfantrySQ, InfantryMQ
@@ -530,7 +530,7 @@ S2:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 6500
+		HP: 15500
 	Mobile:
 		Speed: 92
 	Armament@PRIMARY:
@@ -628,7 +628,7 @@ S4:
 		Weaknesses: • Weak vs Infantry\n• Cannot attack Aircraft
 		Attributes: • Special Ability: Teleport (with upgrade)
 	Mobile:
-		Speed: 54
+		Speed: 58
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -636,7 +636,7 @@ S4:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 12000
+		HP: 22000
 	RevealsShroud:
 		Range: 5c0
 	Armament@PRIMARY:
@@ -655,7 +655,7 @@ S4:
 		Types: Veterancy
 		Prerequisites: barracks.upgraded
 	PortableChronoCA:
-		ChargeDelay: 400
+		ChargeDelay: 125
 		MaxDistance: 18
 		ChronoshiftSound: scrinport.aud
 		RequiresCondition: blink-upgrade
@@ -692,7 +692,7 @@ MRDR:
 		Weaknesses: • Weak vs Infantry\n• Cannot attack Aircraft
 		Attributes: • Damage against vehicles scales with the max health of the target\n• Special Ability: Teleport (with upgrade)
 	Mobile:
-		Speed: 46
+		Speed: 50
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -700,7 +700,7 @@ MRDR:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 16000
+		HP: 25000
 	RevealsShroud:
 		Range: 5c0
 	Armament@PRIMARY:
@@ -719,7 +719,7 @@ MRDR:
 		Types: Veterancy
 		Prerequisites: barracks.upgraded
 	PortableChronoCA:
-		ChargeDelay: 150
+		ChargeDelay: 100
 		MaxDistance: 20
 		ChronoshiftSound: scrinport.aud
 		RequiresCondition: blink-upgrade
@@ -854,11 +854,11 @@ BRST:
 		Strengths: • Strong vs Infantry, Buildings, Light Armor
 		Weaknesses: • Cannot attack Aircraft
 	Health:
-		HP: 26000
+		HP: 30000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Mobile:
-		Speed: 75
+		Speed: 85
 	RevealsShroud:
 		Range: 8c0
 	FireWarheadsOnDeath:
@@ -892,7 +892,7 @@ BRST:
 
 EVIS:
 	Inherits@SCRININFANTRY: ^ScrinInfantry
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetTroopGroundAssaultMove
 	Inherits@BERSERK: ^Berserk
 	Inherits@RESCONV: ^ResourceConversion
 	Buildable:
@@ -913,7 +913,7 @@ EVIS:
 		Weaknesses: • Weak vs Heavy Armor, Defenses\n• Cannot attack Aircraft
 		Attributes: • Charges a more powerful attack while on resources (with upgrade)
 	Health:
-		HP: 16000
+		HP: 18000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Mobile:
@@ -967,7 +967,7 @@ EVIS:
 
 IMPL:
 	Inherits@SCRININFANTRY: ^ScrinInfantry
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetTroopGroundAssaultMove
 	Inherits@BERSERK: ^Berserk
 	Buildable:
 		Queue: InfantrySQ, InfantryMQ
@@ -987,7 +987,7 @@ IMPL:
 		Weaknesses: • Weak vs Heavy Armor, Defenses\n• Cannot attack Aircraft
 		Attributes: • Slows targets
 	Health:
-		HP: 10000
+		HP: 20000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Mobile:
@@ -1014,7 +1014,7 @@ IMPL:
 
 STLK:
 	Inherits@SCRININFANTRY: ^ScrinInfantry
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetTroopGroundAssaultMove
 	Inherits@BERSERK: ^Berserk
 	Buildable:
 		Queue: InfantrySQ, InfantryMQ
@@ -1034,7 +1034,7 @@ STLK:
 		Weaknesses: • Weak vs Heavy Armor, Defenses\n• Cannot attack Aircraft
 		Attributes: • Special Ability: Cloak\n• Moves faster while cloaked\n• Briefly takes greatly reduced damage after decloaking
 	Health:
-		HP: 10000
+		HP: 17500
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Mobile:
@@ -1062,7 +1062,7 @@ STLK:
 		ShowSelectionBar: true
 		StartsFullyCharged: true
 		DeployedTicks: 1
-		CooldownTicks: 250
+		CooldownTicks: 100
 		ShowSelectionBarWhenFull: false
 		ShowSelectionBarWhenEmpty: false
 		ChargingColor: 808080
@@ -1070,7 +1070,7 @@ STLK:
 		Instant: true
 	Cloak@NORMAL:
 		InitialDelay: 0
-		CloakDelay: 100
+		CloakDelay: 75
 		CloakSound: stlk-cloak.aud
 		UncloakSound: stlk-uncloak.aud
 		CloakedCondition: hidden
@@ -1688,7 +1688,7 @@ SEEK:
 		Locomotor: lighthover
 		TurnSpeed: 24
 	Health:
-		HP: 25000
+		HP: 30000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -1773,7 +1773,7 @@ LACE:
 		Speed: 144
 		Locomotor: lighthover
 	Health:
-		HP: 16000
+		HP: 24000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -2108,7 +2108,7 @@ LCHR:
 		Speed: 82
 		TurnSpeed: 20
 	Health:
-		HP: 34000
+		HP: 36000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -2363,7 +2363,7 @@ DEVO:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 52000
+		HP: 60000
 	Armor:
 		Type: Light
 	Mobile:
@@ -2540,7 +2540,7 @@ RUIN:
 		TurnSpeed: 512
 		Locomotor: lighthover
 	Health:
-		HP: 26000
+		HP: 28000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -2640,7 +2640,7 @@ ATMZ:
 	TooltipExtras:
 		Strengths: • Strong vs Heavy Armor, Light Armor, Defenses
 		Weaknesses: • Weak vs Infantry, Buildings\n• Cannot attack Aircraft
-		Attributes: • Atomizes up to 4 targets\n• Affected targets take damage over time\n• Affected targets have reduced speed and firepower\n• Can traverse water
+		Attributes: • Atomizes up to 5 targets\n• Affected targets take damage over time\n• Affected targets have reduced speed and firepower\n• Can traverse water
 	Mobile:
 		Speed: 72
 		Locomotor: lighthover
@@ -2717,10 +2717,10 @@ TPOD:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 90000
+		HP: 98000
 	Mobile:
 		Locomotor: heavytracked
-		Speed: 50
+		Speed: 55
 		TurnSpeed: 512
 	Passenger:
 		Weight: 3
@@ -2773,10 +2773,10 @@ TPOD:
 		Offset: 0,0,1024
 	ChangesHealth@THEAL:
 		Step: 0
-		PercentageStep: 3
+		PercentageStep: 6
 		Delay: 15
 		StartIfBelow: 100
-		DamageCooldown: 150
+		DamageCooldown: 100
 		RequiresCondition: on-resource
 	WithDecoration@TibRepair:
 		Image: select
@@ -2803,7 +2803,7 @@ RTPD:
 	Tooltip:
 		Name: Reaper Tripod
 	Health:
-		HP: 105000
+		HP: 115000
 	SpawnActorOnDeath:
 		Actor: RTPD.Husk
 	AttackTurreted:
@@ -2905,7 +2905,7 @@ OBLT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 35000
+		HP: 40000
 	Mobile:
 		TurnSpeed: 512
 		Speed: 48
@@ -2957,7 +2957,7 @@ OBLT:
 		AmmoCondition: ammo
 		Armaments: primary
 	ReloadAmmoPoolCA@CHARGE:
-		Delay: 75
+		Delay: 50
 		Count: 1
 		RequiresCondition: charging && !reloading
 		ShowSelectionBar: true
@@ -3025,7 +3025,7 @@ NULL:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 32000
+		HP: 34000
 	Mobile:
 		TurnSpeed: 512
 		Speed: 60
@@ -5982,9 +5982,9 @@ SSPK:
 	-Sellable:
 	-Buildable:
 	Health:
-		HP: 100000
+		HP: 140000
 	KillsSelf:
-		Delay: 1000
+		Delay: 6000
 	RevealsShroud:
 		MinRange: 4c0
 		Range: 6c0
@@ -6013,7 +6013,7 @@ SSPK:
 	-DummyConditionConsumer@PowerDown:
 	-Armament:
 	Armament:
-		Weapon: StormColumnZap
+		Weapon: StormSpikeColumnZap
 		LocalOffset: 0,0,900, 0,0,1100, 0,0,700, 0,0,1300, 0,0,500
 	AttackOmni:
 		PauseOnCondition: build-incomplete || empdisable || being-warped

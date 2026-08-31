@@ -1208,7 +1208,7 @@
 		Cursor: ability
 		Icon: fstorm
 		IconPalette: chrometd
-		ChargeInterval: 7500
+		ChargeInterval: 5250
 		Name: Firestorm
 		Description: Fires a barrage of rockets at the target area.
 		BeginChargeSpeechNotification: FireStormOffline
@@ -1224,9 +1224,9 @@
 		TargetCircleColor: ff660088
 		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayBeacon: True
-		BeaconAssumedLaunchDelay: 25
-		BeaconRemoveAdvance: 25
-		BeaconAssumedProjectileSpeed: 280
+		BeaconAssumedLaunchDelay: 15
+		BeaconRemoveAdvance: 15
+		BeaconAssumedProjectileSpeed: 580
 		BeaconPoster: firestorm
 		BeaconPosterPalette: temptd
 		ArrowSequence: arrow
@@ -1265,7 +1265,7 @@
 		Icon: nshield
 		Prerequisites: ~techlevel.high
 		ChargeInterval: 4500
-		LifeTime: 575
+		LifeTime: 500
 		Name: Nanite Shield
 		Description: Reduces the damage taken by all vehicles in the target area.
 		LaunchSound: srepaira.aud
@@ -1307,9 +1307,9 @@
 		TargetCircleRadius: 5c512
 		TargetCircleColor: b2b2e888
 		DisplayBeacon: True
-		BeaconAssumedLaunchDelay: 35
-		BeaconRemoveAdvance: 25
-		BeaconAssumedProjectileSpeed: 300
+		BeaconAssumedLaunchDelay: 15
+		BeaconRemoveAdvance: 15
+		BeaconAssumedProjectileSpeed: 600
 		BeaconPoster: emp
 		ArrowSequence: arrow
 		ClockSequence: clock

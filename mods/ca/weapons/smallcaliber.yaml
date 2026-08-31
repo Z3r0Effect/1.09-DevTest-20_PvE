@@ -802,20 +802,20 @@ MP5BATF:
 AKM:
 	StartBurstReport: mg11.aud
 	ReloadDelay: 15
-	Burst: 3
+	Burst: 4
 	BurstDelays: 2
-	Range: 9c512
+	Range: 13c512
 	InvalidTargets: Structure
 	Projectile: InstantHit
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 4700
+		Damage: 5000
 		Versus:
 			None: 100
 			Wood: 10
-			Light: 60
-			Heavy: 30
+			Light: 65
+			Heavy: 45
 			Concrete: 10
 			Brick: 10
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath

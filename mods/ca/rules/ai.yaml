@@ -365,7 +365,7 @@ Player:
 				MinimumAttractiveness: 1
 				Consideration@1:
 					Against: Enemy
-					Types: Structure
+					Types: Vehicle, Infantry
 					Attractiveness: 1
 					TargetMetric: None
 					CheckRadius: 5c0
@@ -374,7 +374,7 @@ Player:
 				MinimumAttractiveness: 6000
 				Consideration@1:
 					Against: Enemy
-					Types: Ground
+					Types: Vehicle, Infantry
 					Attractiveness: 1
 					TargetMetric: Value
 					CheckRadius: 4c0
@@ -389,7 +389,7 @@ Player:
 				MinimumAttractiveness: 3000
 				Consideration@1:
 					Against: Enemy
-					Types: Structure
+					Types: Vehicle
 					Attractiveness: 1
 					TargetMetric: Value
 					CheckRadius: 5c0
@@ -2103,11 +2103,11 @@ Player:
 			harv.td.upg: 2250
 			harv.scrin: 2250
 			harv.chrono: 2250
-			rmbo: 5500
-			e7: 5500
-			mast: 6500
-			yuri: 6500
-			bori: 6500
+			rmbo: 10500
+			e7: 10500
+			mast: 10500
+			yuri: 10500
+			bori: 10500
 			u3.squad: 15000
 			gtnk.squad: 15000
 		UnitLimits:
@@ -2239,11 +2239,11 @@ Player:
 			harv.td.upg: 2250
 			harv.scrin: 2250
 			harv.chrono: 2250
-			rmbo: 7500
-			e7: 7500
-			mast: 7500
-			yuri: 7500
-			bori: 7500
+			rmbo: 9000
+			e7: 9000
+			mast: 9000
+			yuri: 9000
+			bori: 9000
 			u3.squad: 18000
 			gtnk.squad: 18000
 		UnitLimits:
@@ -2355,7 +2355,7 @@ Player:
 			u3.squad: 22000
 			gtnk.squad: 22000
 		UnitLimits:
-			e1: 50
+			e1: 40
 			e2: 25
 			e3: 40
 			e4: 20
@@ -2380,10 +2380,10 @@ Player:
 			apc2: 10
 			delp: 10
 			vulc: 10
-			hmmv: 10
-			bggy: 10
-			rbug: 10
-			jeep: 10
+			hmmv: 15
+			bggy: 15
+			rbug: 15
+			jeep: 15
 			sapc: 5
 			cust: 1
 			e6: 1

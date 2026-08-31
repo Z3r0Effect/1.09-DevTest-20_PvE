@@ -907,12 +907,12 @@ Commandobombvehicle:
 	Inherits: ^Artillery
 	ValidTargets: Vehicle
 	InvalidTargets: C4Attached, C4Immune
-	ReloadDelay: 100
+	ReloadDelay: 85
 	Range: 13c0
 	Report: grenade1.aud
 	Projectile: Bullet
-		LaunchAngle: 45
-		Speed: 240
+		LaunchAngle: 25
+		Speed: 260
 		Inaccuracy: 0
 		Image: TNT
 		ContrailLength: 6
@@ -968,14 +968,14 @@ CommandoTNT:
 CommandoTNTVehicle:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-		Spread: 2c128
-		Damage: 9000
-		Falloff: 1000, 500, 200, 50, 0
+		Spread: 1c256
+		Damage: 7000
+		Falloff: 700, 350, 175, 60, 0
 		ValidTargets: Vehicle
 		Versus:
 			None: 65
 			Light: 85
-			Heavy: 65
+			Heavy: 75
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: building, building2
@@ -2241,8 +2241,8 @@ TitanRailgun:
 		Versus:
 			None: 40
 			Wood: 70
-			Light: 75
-			Heavy: 100
+			Light: 95
+			Heavy: 110
 			Concrete: 60
 		ValidRelationships: Enemy, Neutral
 	Warhead@2Dam: SpreadDamage
@@ -2265,12 +2265,45 @@ TitanRailgunImpact:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 14000
+		Damage: 15000
 		ValidRelationships: Enemy, Neutral, Ally
 
+TanyaRailgun:
+	ReloadDelay: 70
+	Range: 13c0
+	Report: titanrailgun1.aud, titanrailgun2.aud
+	ValidTargets: Vehicle
+	Projectile: RailgunCA
+		DamageActorsInLine: true
+		BeamColor: EEFFFFBB
+		BeamWidth: 48
+		HelixThickness: 20
+		HelixRadius: 42
+		HelixColor: 66FFEEBB
+		Duration: 22
+		HelixAlphaDeltaPerTick: -8
+		BeamAlphaDeltaPerTick: -8
+		HelixPitch: 682
+		ZOffset: 4096
+		PassthroughToMaxRange: true
+		PassthroughMinDistance: 2c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 24000
+		Versus:
+			None: 0
+			Wood: 0
+			Light: 110
+			Heavy: 100
+			Concrete: 0
+			Brick: 0
+		ValidTargets: Vehicle
+		ValidRelationships: Enemy, Neutral
+		DamageTypes: ExplosionDeath
+
 IonZap:
-	ReloadDelay: 85
-	Range: 6c512
+	ReloadDelay: 80
+	Range: 6c768
 	Report: ion1.aud
 	Projectile: Railgun
 		Duration: 7
@@ -2562,7 +2595,7 @@ ICBMLauncher:
 
 Flare:
 	ReloadDelay: 1
-	Range: 12c0
+	Range: 13c0
 	MinRange: 3c0
 	ValidTargets: Structure
 	TargetActorCenter: true
@@ -3921,11 +3954,11 @@ ZoneRaiderGrenade:
 	Range: 8c0
 	Report: zrai-fire1.aud, zrai-fire2.aud
 	Projectile: Bullet
-		Speed: 700
+		Speed: 1000
 		Image: BOMB
 		Shadow: true
-		Inaccuracy: 64
-		LaunchAngle: 50
+		Inaccuracy: 16
+		LaunchAngle: 4
 		Blockable: false
 		ContrailLength: 30
 		ContrailStartColor: 5bd8c3

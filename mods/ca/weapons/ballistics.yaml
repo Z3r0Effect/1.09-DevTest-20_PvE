@@ -752,23 +752,24 @@ JuggernautGun:
 	Inherits: ^Artillery
 	MinRange: 3c0
 	ReloadDelay: 100
-	Range: 9c768
+	Range: 10c0
 	Projectile: Bullet
 		Speed: 250
-		Inaccuracy: 0c896
+		LaunchAngle: 45
+		Inaccuracy: 0c512
 	Burst: 3
 	BurstDelays: 6
 	StartBurstReport: jugger1.aud
 	TargetActorCenter: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 348
+		Spread: 384
 		Damage: 1750
 		Falloff: 1000, 500, 250, 100, 40, 15, 0
 		Versus:
 			None: 100
 			Wood: 80
-			Heavy: 35
-			Light: 70
+			Heavy: 50
+			Light: 80
 			Concrete: 55
 	Warhead@4EffWater: CreateEffect
 		Explosions: large_splash
@@ -809,7 +810,7 @@ Grenade:
 	Report: grenade1.aud
 	Projectile: Bullet
 		Speed: 136
-		Inaccuracy: 554
+		Inaccuracy: 384
 		Image: BOMB
 	Warhead@1Dam: SpreadDamage
 		Spread: 256

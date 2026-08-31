@@ -2615,7 +2615,7 @@ TRUK.DROP:
 	-DeliversCash:
 	CashTrickler:
 		Interval: 50
-		Amount: 850
+		Amount: 1250
 	KillsSelf:
 		Delay: 50
 		RemoveInstead: true
@@ -2986,7 +2986,7 @@ DTRK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 16000
+		HP: 20000
 	Armor:
 		Type: Light
 	Mobile:
@@ -4320,7 +4320,7 @@ MTNK:
 	GrantTimedConditionOnPointDefenseHit@POINTDEF:
 		Condition: pointlaser-charging
 		RequiresCondition: pointdef-upgrade
-		ScaleChargeTimeWithDamageAmount: 17
+		ScaleChargeTimeWithDamageAmount: 27
 	GrantConditionOnPrerequisite@POINTDEF:
 		Condition: pointdef-upgrade
 		Prerequisites: pointdef.upgrade
@@ -4330,11 +4330,11 @@ MTNK:
 	TimedDamageMultiplier@GSHIELD:
 		ActiveCondition: gshield
 		ChargingCondition: gshield-charging
-		ShowSelectionBar: false
+		ShowSelectionBar: true
 		Modifier: 25
 		Duration: 2
 		ScaleChargeTimeWithDamage: true
-		ScaleChargeTimeWithDamageAmount: 17
+		ScaleChargeTimeWithDamageAmount: 27
 		PauseOnCondition: pointlaser-charging
 		RequiresCondition: pointdef-upgrade
 	GrantTimedCondition@NSHIELDVISUAL:
@@ -4867,7 +4867,7 @@ HTNK.Hover:
 		ShowSelectionBar: true
 		StartsFullyCharged: true
 		DeployedTicks: 250
-		CooldownTicks: 750
+		CooldownTicks: 100
 		ShowSelectionBarWhenFull: false
 		ChargingColor: 808080
 		DischargingColor: ff6600
@@ -4879,6 +4879,9 @@ HTNK.Hover:
 	SpeedMultiplier@Afterburner:
 		RequiresCondition: abur-active
 		Modifier: 150
+	DamageMultiplier@Afterburner:
+		RequiresCondition: abur-active
+		Modifier: 80
 	Contrail@AB1:
 		Offset: -600,-100,200
 		StartColorUsePlayerColor: false
@@ -7557,7 +7560,7 @@ TITN:
 		HP: 110000
 	Mobile:
 		Locomotor: sheavytracked
-		Speed: 50
+		Speed: 57
 		Voice: Move
 	Passenger:
 		CustomPipType: red
@@ -7599,7 +7602,7 @@ TITN:
 		MuzzleSequence: muzzle
 		PauseOnCondition: !gyrostabilizers
 	Turreted:
-		TurnSpeed: 10
+		TurnSpeed: 18
 		Offset: 0,0,0
 	AttackTurreted:
 		PauseOnCondition: empdisable || being-warped || blinded
@@ -7691,7 +7694,7 @@ JUGG:
 		Attributes: • Can crush smaller vehicles and concrete walls
 	Mobile:
 		Locomotor: sheavytracked
-		Speed: 45
+		Speed: 54
 		Voice: Move
 		PauseOnCondition: aiming || being-captured || empdisable || being-warped || driver-dead || notmobile
 		BlockedCursor: move
@@ -7750,7 +7753,7 @@ JUGG:
 		Range: 4c0
 	Turreted:
 		Offset: -20,0,20
-		TurnSpeed: 12
+		TurnSpeed: 16
 	Health:
 		HP: 64000
 	Passenger:

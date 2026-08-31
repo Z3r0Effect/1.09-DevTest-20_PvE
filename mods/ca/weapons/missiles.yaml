@@ -123,10 +123,16 @@ MaverickAA:
 
 Sidewinder:
 	Inherits: MaverickAA
+	Range: 9c0
+	ReloadDelay: 50
 	Report: sidewinder.aud
 	Projectile: MissileCA
 		ContrailLength: 10
 		ContrailStartWidth: 42
+	Warhead@1Dam: SpreadDamage
+		Damage: 10000
+	Warhead@smallDamage: SpreadDamage
+		Damage: 10000
 
 MaverickSU:
 	Inherits: Maverick
@@ -386,7 +392,7 @@ HellfireAG:
 	Range: 8c256
 	Projectile: MissileCA
 		Speed: 225
-	ReloadDelay: 70
+	ReloadDelay: 65
 	MinRange: 0c768
 	Burst: 4
 	BurstDelays: 10
@@ -398,9 +404,9 @@ HellfireAG:
 		Spread: 512
 		Damage: 7500
 		Versus:
-			None: 20
+			None: 60
 			Wood: 30
-			Light: 55
+			Light: 80
 			Concrete: 105
 
 HellfireAG.Orca:
@@ -498,7 +504,7 @@ HellfireAG.Harrier:
 
 HellfireAG.Horn:
 	Inherits: HellfireAG.Harrier
-	ReloadDelay: 75
+	ReloadDelay: 60
 	Range: 8c512
 	MinRange: 0c768
 	Burst: 2
@@ -507,7 +513,7 @@ HellfireAG.Horn:
 		ContrailLength: 0
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 500
+		Damage: 700
 		Versus:
 			None: 95
 			Wood: 85
@@ -1632,6 +1638,12 @@ IFVRocketsAAE.TibCore:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Damage: 1000
+		Versus:
+			None: 100
+			Wood: 80
+			Light: 80
+			Heavy: 50
+			Concrete: 80
 
 227mm.Hammerhead:
 	Inherits: 227mm.upg
@@ -1643,20 +1655,21 @@ IFVRocketsAAE.TibCore:
 		-LockOnBurstCounts:
 		Speed: 250
 	Warhead@1Dam: SpreadDamage
-		Damage: 900
-		Spread: 768
+		Damage: 950
+		Spread: 896
+		Falloff: 1000, 525, 260, 90, 30, 10, 0
 	Warhead@4Eff: CreateEffect
 		ImpactSounds: xplobig4.aud
 		Explosions: artillery_explosion
 	Warhead@Concussion: GrantExternalConditionCA
-		Range: 1c128
+		Range: 1c256
 		Duration: 100
 		Condition: concussion
 
 227mm.Hailstorm:
 	Inherits: 227mm.upg
 	Report: hailstormmissile1.aud, hailstormmissile2.aud
-	Burst: 6
+	Burst: 8
 	BurstDelays: 6
 	Projectile:
 		ContrailStartColor: FF4400E6
@@ -1666,7 +1679,7 @@ IFVRocketsAAE.TibCore:
 		-LockOnBurstCounts:
 		CruiseAltitude: 0
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c0
+		Spread: 1c128
 		Damage: 750
 
 227mmH.Hypersonic:
@@ -1968,18 +1981,18 @@ Rah66AG:
 	Projectile: Bullet
 		Blockable: false
 		Shadow: true
-		Inaccuracy: 512
+		Inaccuracy: 128
 		Image: tibcoremsl
 		TrailImage: smokey
 		TrailDelay: 3
-		Speed: 260
+		Speed: 280
 		LaunchAngle: 10
 		ContrailLength: 15
 		ContrailStartColor: 33aa00aa
 		ContrailStartColorAlpha: 170
 		ContrailStartWidth: 0c40
 	Warhead@1Dam: SpreadDamage
-		Spread: 640
+		Spread: 512
 		Damage: 1200
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
@@ -2014,7 +2027,7 @@ Rah66AG.BlackHand:
 		Spread: 768
 		Versus:
 			Wood: 80
-			Light: 80
+			Light: 85
 			Heavy: 80
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
