@@ -461,6 +461,9 @@ VEHICLES.SCRIN:
 		Prerequisites: carapace.upgrade
 	SpawnActorOnDeath@GMUT:
 		Actor: gscr.mutating
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Infantry
 
@@ -630,13 +633,15 @@ S4:
 	Mobile:
 		Speed: 58
 	Valued:
-		Cost: 500
+		Cost: 550
 	Tooltip:
 		Name: Intruder
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
 		HP: 22000
+	Armor:
+		Type: Concrete
 	RevealsShroud:
 		Range: 5c0
 	Armament@PRIMARY:
@@ -655,7 +660,7 @@ S4:
 		Types: Veterancy
 		Prerequisites: barracks.upgraded
 	PortableChronoCA:
-		ChargeDelay: 125
+		ChargeDelay: 100
 		MaxDistance: 18
 		ChronoshiftSound: scrinport.aud
 		RequiresCondition: blink-upgrade
@@ -701,6 +706,8 @@ MRDR:
 		AddToArmyValue: true
 	Health:
 		HP: 25000
+	Armor:
+		Type: Concrete
 	RevealsShroud:
 		Range: 5c0
 	Armament@PRIMARY:
@@ -858,7 +865,7 @@ BRST:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Mobile:
-		Speed: 85
+		Speed: 90
 	RevealsShroud:
 		Range: 8c0
 	FireWarheadsOnDeath:
@@ -881,6 +888,9 @@ BRST:
 		ScanRadius: 5
 	Selectable:
 		DecorationBounds: 640, 896, -32, -256
+	DamageMultiplier@HUMAN:
+		Modifier: 50
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	TargetedAttackAbility:
 		TargetCursor: attack
 		ArmamentNames: primary
@@ -1320,14 +1330,18 @@ MAST:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 18000
+		HP: 19000
 	Mobile:
 		Speed: 62
 	RevealsShroud:
-		Range: 12c0
+		Range: 14c0
 	IgnoresDisguise:
 	DetectCloaked:
-		Range: 5c0
+		Range: 10c0
+	DamageTypeDamageMultiplier@A2GPROTECTION:
+		DamageTypes: AirToGround
+		Modifier: 50
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Armament@PRIMARY:
 		Weapon: EnslaveInfantry
 		LocalOffset: 150,0,400
@@ -1458,11 +1472,11 @@ MAST:
 		Ammo: 1
 		AmmoCondition: vs-vehicle-ammo
 	ReloadAmmoPool:
-		Delay: 35 # matches EnslaveInfantry ReloadDelay
+		Delay: 40 # matches EnslaveInfantry ReloadDelay
 		Count: 1
 	ReloadAmmoPool@Vehicles:
 		AmmoPool: secondary
-		Delay: 100
+		Delay: 75
 		Count: 1
 	MindControllerCapacityModifier@RANK-1:
 		Amount: 1
@@ -1487,13 +1501,13 @@ MAST:
 		AmmoPool: mspk
 	AmmoPool@MindSpark:
 		Name: mspk
-		Ammo: 2
+		Ammo: 1
 		Armaments: none
 		AmmoCondition: mspk-ammo
 	ReloadAmmoPoolCA@MindSpark:
 		AmmoPool: mspk
-		Delay: 250
-		Count: 2
+		Delay: 100
+		Count: 1
 		ShowSelectionBar: true
 		SelectionBarColor: ff00ff
 
@@ -1616,6 +1630,9 @@ GUNW:
 		Actor: shrw
 		UpgradeAtActors: fix, rep, srep
 		BuildDuration: 100
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
 
@@ -1737,6 +1754,9 @@ SEEK:
 	Targetable@ONWATER:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
 
@@ -1824,6 +1844,9 @@ LACE:
 	Targetable@ONWATER:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
 	EncyclopediaExtras:
@@ -1880,6 +1903,9 @@ INTL:
 		Weapon: InterloperWave
 		LocalOffset: 470,0,30
 		RequiresCondition: player-harbinger
+	DamageMultiplier@HUMAN:
+		Modifier: 90
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithMuzzleOverlay:
 	GrantConditionOnPrerequisite@Harbinger:
 		Condition: player-harbinger
@@ -1965,6 +1991,9 @@ INTL:
 		RequiresCondition: shields-upgrade
 	Shielded:
 		MaxStrength: 6000
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
 
@@ -2051,6 +2080,9 @@ CORR:
 	WithProductionIconOverlay:
 		Types: Veterancy
 		Prerequisites: vehicles.upgraded
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithMoveAnimation:
 		ValidMovementTypes: Horizontal, Vertical, Turn
 	GrantConditionOnFaction@TRAVELERSPEED:
@@ -2164,6 +2196,9 @@ LCHR:
 		RequiresCondition: coalescence-upgrade && !being-warped
 	GivesBountyCA:
 		RequiresCondition: global-bounty && !coalescence-upgrade
+	DamageMultiplier@HUMAN:
+		Modifier: 75
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
 	EncyclopediaExtras:
@@ -2202,7 +2237,7 @@ LCHR.Orb:
 		Range: 4c0
 		Type: CenterPosition
 	Health:
-		HP: 40000
+		HP: 60000
 	Armor:
 		Type: Light
 	Valued:
@@ -2246,6 +2281,9 @@ LCHR.Orb:
 	ProximityExternalCondition@LCHRHEAL:
 		Condition: lchr-healing
 		Range: 5c512
+	DamageMultiplier@HUMAN:
+		Modifier: 50
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	AutoTarget:
 	AttackOmni:
 	WithColoredSelectionBox@PLAYERBOX:
@@ -2309,6 +2347,9 @@ STCR:
 	WithProductionIconOverlay:
 		Types: Veterancy
 		Prerequisites: vehicles.upgraded
+	DamageMultiplier@HUMAN:
+		Modifier: 75
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithShadow:
 		Offset: 80, 80, 0
 		ZOffset: -81
@@ -2392,6 +2433,9 @@ DEVO:
 		LocalOffset: 850,0,160
 		MuzzleSequence: muzzle
 		MuzzlePalette: scrin
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithMuzzleOverlay:
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
@@ -2499,6 +2543,9 @@ DARK:
 		Condition: onwater
 	KillsSelf@SINK:
 		RequiresCondition: onwater && (empdisable || driver-dead)
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Targetable@ONWATER:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
@@ -2609,6 +2656,9 @@ RUIN:
 	Targetable@ONWATER:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
 	EncyclopediaExtras:
@@ -2683,6 +2733,9 @@ ATMZ:
 	Targetable@ONWATER:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
 	EncyclopediaExtras:
@@ -2773,11 +2826,14 @@ TPOD:
 		Offset: 0,0,1024
 	ChangesHealth@THEAL:
 		Step: 0
-		PercentageStep: 6
+		PercentageStep: 7
 		Delay: 15
 		StartIfBelow: 100
 		DamageCooldown: 100
 		RequiresCondition: on-resource
+	DamageMultiplier@HUMAN:
+		Modifier: 75
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithDecoration@TibRepair:
 		Image: select
 		Palette: chrome
@@ -2957,7 +3013,7 @@ OBLT:
 		AmmoCondition: ammo
 		Armaments: primary
 	ReloadAmmoPoolCA@CHARGE:
-		Delay: 50
+		Delay: 30
 		Count: 1
 		RequiresCondition: charging && !reloading
 		ShowSelectionBar: true
@@ -2992,6 +3048,9 @@ OBLT:
 		RequiresCondition: !being-warped
 	Targetable@Obliterator:
 		TargetTypes: Obliterator
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
 	EncyclopediaExtras:
@@ -3067,6 +3126,9 @@ NULL:
 	SpawnActorOnDeath:
 		Actor: NULL.Husk
 		RequiresCondition: !being-warped
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
 	EncyclopediaExtras:
@@ -6068,7 +6130,7 @@ VSPK:
 		Bounds: 1280, 1792, 0, -512
 		DecorationBounds: 1280, 2560, 0, -768
 	Health:
-		HP: 70000
+		HP: 200000
 	Tooltip:
 		Name: Voidspike
 	TooltipExtras:
@@ -6096,7 +6158,7 @@ VSPK:
 		ConvertFrom: Tiberium, BlueTiberium, Ore, Gems
 		ConvertTo: BlackTiberium
 		Interval: 5
-		Amount: 4
+		Amount: 8
 		RequiresCondition: !build-incomplete && !being-warped
 	PeriodicExplosion:
 		Weapon: VoidSpike
@@ -6114,7 +6176,7 @@ VSPK:
 		IsDecoration: true
 		RequiresCondition: !build-incomplete && !being-warped
 	ReflectsDamage:
-		DamagePercentage: 75
+		DamagePercentage: 100
 		ValidRelationships: Ally, Enemy, Neutral
 		ReflectToAttacker: true
 		RequiresCondition: !build-incomplete && !being-warped
@@ -6127,7 +6189,7 @@ ISPK:
 		Bounds: 1280, 2304, 0, -576
 		DecorationBounds: 1280, 2816, 0, -832
 	Health:
-		HP: 40000
+		HP: 60000
 	Tooltip:
 		Name: Ichor Spike
 	TooltipExtras:
@@ -6180,7 +6242,7 @@ CSPK:
 		Bounds: 1280, 2304, 0, -576
 		DecorationBounds: 1280, 2816, 0, -832
 	Health:
-		HP: 40000
+		HP: 80000
 	Tooltip:
 		Name: Colony Spike
 	TooltipExtras:
@@ -6198,13 +6260,13 @@ CSPK:
 		TerrainTypes: Clear,Road
 		AllowPlacementOnResources: false
 	GivesBuildableArea:
-		AreaTypes: building
+		AreaTypes: building, defense
 	BaseProvider:
-		Range: 12c0
+		Range: 14c0
 		RequiresCondition: charged
 	WithRangeCircle:
 		Type: ColonySpike
-		Range: 12c0
+		Range: 14c0
 		Color: ffffff50
 		RequiresCondition: charged
 	ReloadAmmoPoolCA@Charged:
@@ -6285,7 +6347,7 @@ BUZZ:
 		HP: 1
 	Aircraft:
 		CanHover: True
-		Speed: 33
+		Speed: 50
 		CruiseAltitude: 1
 		LandableTerrainTypes: Clear,Road,Rough,Ore,Gems,Tiberium,BlueTiberium,BlackTiberium,Water,Tree,River,Rock,Beach,Bridge,Tunnel,Wall,Ford
 	AmbientSound:
@@ -6309,7 +6371,7 @@ BUZZ:
 		DeathSequencePalette: scrin
 		DeathPaletteIsPlayerPalette: false
 	GrantTimedCondition:
-		Duration: 450
+		Duration: 650
 		Condition: alive
 	TimedConditionBar@ALIVE:
 		Condition: alive
@@ -6357,7 +6419,7 @@ MSPK:
 	Turreted:
 	Aircraft:
 		CanHover: True
-		Speed: 56
+		Speed: 60
 		CruiseAltitude: 1
 		LandableTerrainTypes: Clear,Road,Rough,Ore,Gems,Tiberium,BlueTiberium,BlackTiberium,Water,Tree,River,Rock,Beach,Bridge,Tunnel,Wall,Ford
 	KillsSelf:

@@ -2269,7 +2269,7 @@ TitanRailgunImpact:
 		ValidRelationships: Enemy, Neutral, Ally
 
 TanyaRailgun:
-	ReloadDelay: 70
+	ReloadDelay: 60
 	Range: 13c0
 	Report: titanrailgun1.aud, titanrailgun2.aud
 	ValidTargets: Vehicle
@@ -2294,7 +2294,7 @@ TanyaRailgun:
 			None: 0
 			Wood: 0
 			Light: 110
-			Heavy: 100
+			Heavy: 120
 			Concrete: 0
 			Brick: 0
 		ValidTargets: Vehicle

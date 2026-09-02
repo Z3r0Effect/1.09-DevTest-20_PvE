@@ -111,19 +111,19 @@ Maverick:
 
 MaverickAA:
 	Inherits: ^AirToAirMissile
-	Range: 8c0
+	Range: 8c128
 	ReloadDelay: 60
 	Report: missile7.aud
 	Burst: 2
 	BurstDelays: 10
 	Warhead@1Dam: SpreadDamage
-		Damage: 6000
+		Damage: 7500
 	Warhead@smallDamage: SpreadDamage
-		Damage: 6000
+		Damage: 7500
 
 Sidewinder:
 	Inherits: MaverickAA
-	Range: 9c0
+	Range: 9c256
 	ReloadDelay: 50
 	Report: sidewinder.aud
 	Projectile: MissileCA
@@ -527,9 +527,9 @@ HellfireAA:
 	Burst: 4
 	BurstDelays: 10
 	Warhead@1Dam: SpreadDamage
-		Damage: 3400
+		Damage: 4000
 	Warhead@smallDamage: SpreadDamage
-		Damage: 3400
+		Damage: 4000
 
 HellfireAA.Orca:
 	Inherits: HellfireAA
@@ -580,18 +580,18 @@ WidowAA:
 		ContrailLength: 6
 		ContrailStartColor: dddddd
 	Warhead@1Dam: SpreadDamage
-		Damage: 6000
+		Damage: 8000
 	Warhead@smallDamage: SpreadDamage
-		Damage: 6000
+		Damage: 8000
 
 MammothTusk:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 70
-	Range: 7c768
+	Range: 8c768
 	Burst: 2
 	ValidTargets: Air, AirSmall, Infantry
 	Projectile: MissileCA
-		Speed: 230
+		Speed: 245
 		HorizontalRateOfTurn: 60
 		RangeLimit: 9c614
 	Warhead@1Dam: SpreadDamage
@@ -604,7 +604,7 @@ MammothTusk:
 			Aircraft: 50
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigated
 	Warhead@smallDamage: SpreadDamage
-		Damage: 2000
+		Damage: 2400
 		Spread: 128
 		Falloff: 100, 50, 14, 0
 		ValidTargets: AirSmall
@@ -621,22 +621,22 @@ MammothTusk:
 MammothTusk.Drone:
 	Inherits: MammothTusk
 	Warhead@1Dam: SpreadDamage
-		Damage: 3750
+		Damage: 4000
 
 ApocalypseTusk:
 	Inherits: MammothTusk
 	Report: vapoat2a.aud, vapoat2b.aud, vapoat2c.aud
 	ValidTargets: Air, AirSmall
-	ReloadDelay: 60
+	ReloadDelay: 50
 	Burst: 4
 	Range: 8c512
 	Projectile: MissileCA
 		RangeLimit: 10c614
 		Speed: 401
 	Warhead@1Dam: SpreadDamage
-		Damage: 4200
+		Damage: 4500
 	Warhead@smallDamage: SpreadDamage
-		Damage: 4200
+		Damage: 4500
 
 TitanTusk:
 	Inherits: MammothTusk
@@ -648,12 +648,12 @@ TitanTusk:
 	Warhead@1Dam: SpreadDamage
 		Damage: 10000
 	Warhead@smallDamage: SpreadDamage
-		Damage: 4000
+		Damage: 4500
 
 TitanTusk.Gyro:
 	Inherits: TitanTusk
 	ReloadDelay: 38
-	Range: 8c512
+	Range: 9c0
 
 APCTusk:
 	Inherits: MammothTusk
@@ -802,7 +802,7 @@ StingerAA:
 		CloseEnough: 298
 		LockOnProbability: 95
 	Warhead@1Dam: SpreadDamage
-		Damage: 3375
+		Damage: 3500
 		Range: 0, 0c64, 0c256, 3c0
 		Falloff: 100, 100, 30, 15
 		ValidTargets: Air
@@ -814,7 +814,7 @@ StingerAA:
 			Concrete: 100
 			Brick: 100
 	Warhead@smallDamage: SpreadDamage
-		Damage: 3375
+		Damage: 3500
 		Spread: 128
 		Falloff: 100, 50, 14, 0
 		ValidTargets: AirSmall
@@ -826,7 +826,7 @@ StingerAA:
 
 StingerGTWR:
 	Inherits: Stinger
-	ReloadDelay: 40
+	ReloadDelay: 35
 	Range: 13c0
 	Report: rocket2.aud
 	BurstDelays: 10
@@ -842,7 +842,7 @@ StingerGTWR:
 		Versus:
 			None: 50
 			Wood: 55
-			Light: 80
+			Light: 95
 			Heavy: 90
 			Concrete: 55
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
@@ -854,8 +854,8 @@ StingerGTWR:
 APTusk:
 	Inherits: ^AntiGroundMissile
 	ValidTargets: Ground, Water, Air, AirSmall
-	ReloadDelay: 60
-	Range: 7c768
+	ReloadDelay: 55
+	Range: 8c128
 	Burst: 2
 	BurstDelays: 0
 	-Report:
@@ -887,12 +887,12 @@ APTusk:
 
 TOW:
 	Inherits: ^AntiGroundMissile
-	Range: 9c512
+	Range: 9c768
 	ValidTargets: Vehicle, Ship, Structure
 	Report: tow1.aud, tow2.aud
 	ReloadDelay: 60
 	Projectile: MissileCA
-		Speed: 190
+		Speed: 200
 		Inaccuracy: 0
 		HorizontalRateOfTurn: 20
 		RangeLimit: 16c0
@@ -908,7 +908,7 @@ TOW:
 		Versus:
 			Wood: 40
 			Concrete: 30
-			Light: 65
+			Light: 85
 			Heavy: 75
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, TankBuster
 	Warhead@3Eff: CreateEffect
@@ -929,15 +929,15 @@ PitbullRockets:
 		ContrailStartWidth: 0c48
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 7000
+		Damage: 7200
 		Versus:
 			Wood: 40
 			Concrete: 30
 			Light: 100
 			Heavy: 65
 	Warhead@Blind: GrantExternalConditionCA
-		Range: 0c256
-		Duration: 45
+		Range: 0c288
+		Duration: 50
 		Condition: blinded
 		ValidTargets: Vehicle
 		InvalidTargets: BlindImmune

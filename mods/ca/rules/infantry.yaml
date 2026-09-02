@@ -102,6 +102,9 @@ DOG:
 		CircleWidth: 0
 		Type: DogAttack
 		DeployCursor: move
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	KeepsDistance:
 	AutoGuard:
 		ValidTargets: Infantry, Vehicle
@@ -183,6 +186,9 @@ E1:
 	AttackFrontal:
 		PauseOnCondition: being-warped || blinded || reapersnare
 		FacingTolerance: 0
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	WithProductionIconOverlay:
@@ -249,6 +255,9 @@ E2:
 		Chance: 100
 		DamageSource: Killer
 		RequiresCondition: !being-warped
+	DamageMultiplier@HUMAN:
+		Modifier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	WithProductionIconOverlay:
@@ -365,6 +374,9 @@ E3:
 			RadiationDeath: 10
 			FrozenDeath: 11
 		CrushedSequence: die-crushed
+	DamageMultiplier@HUMAN:
+		Modifier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Convertible:
 		SpawnActors: N3C
 	Encyclopedia:
@@ -448,6 +460,9 @@ U3:
 	TakeCover:
 		ProneOffset: 384,0,-395
 		RequiresCondition: !deployed
+	DamageMultiplier@HUMAN:
+		Modifier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageMultiplier:
 		Modifier: 30
 		RequiresCondition: deployed
@@ -652,6 +667,9 @@ E4:
 		Chance: 100
 		DamageSource: Killer
 		RequiresCondition: !being-warped
+	DamageMultiplier@HUMAN:
+		Modifier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	WithProductionIconOverlay:
@@ -720,6 +738,9 @@ E6:
 	GrantConditionOnPrerequisite@ENTRENCH:
 		Condition: entrench-upgrade
 		Prerequisites: entrench.upgrade
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithRangeCircle:
 		Type: EngineerRange
 		Range: 10c0
@@ -857,6 +878,9 @@ SPY:
 	Targetable@Disguised:
 		TargetTypes: Disguised
 		RequiresCondition: disguise
+	DamageMultiplier@HUMAN:
+		Modifier: 50
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithColoredSelectionBox@Disguised:
 		RequiresCondition: disguise
 		ColorSource: Player
@@ -951,6 +975,10 @@ E7:
 		Range: 5c0
 	Voiced:
 		VoiceSet: TanyaVoice
+	DamageTypeDamageMultiplier@A2GPROTECTION:
+		DamageTypes: AirToGround
+		Modifier: 50
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	WithProductionIconOverlay:
@@ -1027,7 +1055,7 @@ MEDI:
 		Voice: Move
 		Speed: 58
 	DamageMultiplier@HUMAN:
-		Modifier: 80
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -1115,7 +1143,7 @@ MECH:
 	Voiced:
 		VoiceSet: MechanicVoice
 	DamageMultiplier@HUMAN:
-		Modifier: 85
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	AutoTarget:
 		ScanRadius: 7
@@ -1216,7 +1244,7 @@ CMEC:
 		ValidTargets: Repairable
 		ValidRelationships: Ally
 	DamageMultiplier@CYBORGARMORHUMAN:
-		Modifier: 90
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -1302,7 +1330,7 @@ HACK:
 		ControlType: Hack
 		ArmamentNames: primary
 		Capacity: -1
-		TicksToControl: 85
+		TicksToControl: 65
 		TicksToRevoke: 25
 		InitSounds: hacker-init.aud
 		InitSoundControllerOnly: true
@@ -1310,7 +1338,7 @@ HACK:
 		ControllingCondition: hacked-in
 		AutoUndeploy: true
 		TargetTypeTicksToControl:
-			Structure: 300
+			Structure: 100
 	WithDecoration@HACKEDIN:
 		Image: hacking
 		Sequence: hacking
@@ -1342,6 +1370,13 @@ HACK:
 	GrantConditionOnBotOwner@AIHACKER:
 		Condition: botowner
 		Bots: brutal, vhard, hard, normal, easy, naval
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	DamageTypeDamageMultiplier@A2GPROTECTION:
+		DamageTypes: AirToGround
+		Modifier: 50
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Infantry
 		HideBuildable: True
@@ -1453,7 +1488,7 @@ THF:
 	Health:
 		HP: 150000
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c0
 	Passenger:
 		CustomPipType: blue
 	Infiltrates:
@@ -1486,7 +1521,7 @@ THF:
 		RequiresCondition: !cloak-force-disabled && !being-warped
 		PauseOnCondition: invisibility
 	Mobile:
-		Speed: 70
+		Speed: 78
 		Voice: Move
 	GrantConditionOnMovement@MOVING:
 		ValidMovementTypes: Horizontal, Vertical, Turn
@@ -1498,6 +1533,9 @@ THF:
 	WithColoredSelectionBox@INVIS:
 		RequiresCondition: invisibility || hidden
 		ColorSource: Player
+	DamageMultiplier@HUMAN:
+		Modifier: 50
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	TargetSpecificOrderVoice:
 		Orders: CaptureActor
 		TargetTypeVoices:
@@ -1585,6 +1623,9 @@ SHOK:
 		Voice: Move
 	Voiced:
 		VoiceSet: ShokVoice
+	DamageMultiplier@HUMAN:
+		Modifier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	WithProductionIconOverlay:
@@ -1617,6 +1658,9 @@ TTRP:
 	Crushable:
 		CrushClasses: heavyinfantry
 	-ReplacedInQueue:
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Armament@PRIMARY:
 		Weapon: PortaTesla.UPG
 		LocalOffset: 300,0,300
@@ -1656,6 +1700,9 @@ N1:
 	AttackFrontal:
 		PauseOnCondition: being-warped || blinded || reapersnare
 		FacingTolerance: 0
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 		IdleSequences: idle1,idle2,idle3,idle4
@@ -1736,6 +1783,9 @@ N2:
 		Chance: 100
 		DamageSource: Killer
 		RequiresCondition: !being-warped && !empgren-upgrade
+	DamageMultiplier@HUMAN:
+		Modifier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	WithProductionIconOverlay:
@@ -1845,6 +1895,9 @@ N3:
 		Prerequisites: barracks.upgraded
 	AutoTarget:
 		MaximumScanTimeInterval: 5
+	DamageMultiplier@HUMAN:
+		Modifier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Selectable:
 		Class: e3
 	Convertible:
@@ -1924,6 +1977,9 @@ N4:
 	ReplacedInQueue:
 		Actors: n5
 	-RangeMultiplier@HeroOfTheUnion:
+	DamageMultiplier@HUMAN:
+		Modifier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HeroOfTheUnion:
 		RequiresCondition: herooftheunion
 		Modifier: 120
@@ -1998,7 +2054,7 @@ N5:
 		DamageSource: Killer
 		RequiresCondition: !being-warped
 	DamageMultiplier@CYBORGARMORHUMAN:
-		Modifier: 90
+		Modifier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -2147,6 +2203,10 @@ RMBO:
 		TargetTypes: ChaosImmune
 	Targetable@ReaperSnareImmune:
 		TargetTypes: ReaperSnareImmune
+	DamageTypeDamageMultiplier@A2GPROTECTION:
+		DamageTypes: AirToGround
+		Modifier: 50
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	-TakeCover:
 	-Crushable:
 	TargetSpecificOrderVoice:
@@ -2217,7 +2277,7 @@ SNIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 6500
+		HP: 10000
 	RevealsShroud:
 		Range: 13c0
 		MinRange: 6c0
@@ -2310,6 +2370,9 @@ SNIP:
 	WithColoredSelectionBox@INVIS:
 		RequiresCondition: invisibility || hidden
 		ColorSource: Player
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Allies/Infantry
 	EncyclopediaExtras:
@@ -2401,6 +2464,10 @@ BORI:
 	IgnoresDisguise:
 	DetectCloaked:
 		Range: 7c0
+	DamageTypeDamageMultiplier@A2GPROTECTION:
+		DamageTypes: AirToGround
+		Modifier: 50
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Voiced:
 		VoiceSet: BorisVoice
 	ProducibleWithLevel:
@@ -2504,6 +2571,9 @@ SAB:
 	DetectCloaked:
 		DetectionTypes: Cloak
 		Range: 7c0
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	WithProductionIconOverlay:
@@ -2621,6 +2691,13 @@ ASSA:
 		Sequence: pip-assa
 	Targetable@MindControlResistant:
 		TargetTypes: MindControlResistant
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	DamageTypeDamageMultiplier@A2GPROTECTION:
+		DamageTypes: AirToGround
+		Modifier: 50
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Infantry
 		HideBuildable: True
@@ -2719,6 +2796,13 @@ CONF:
 	WithDecoration@COMMANDOSKULL:
 		Image: pips
 		Sequence: pip-assa
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	DamageTypeDamageMultiplier@A2GPROTECTION:
+		DamageTypes: AirToGround
+		Modifier: 50
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Targetable@MindControlImmune:
 		TargetTypes: MindControlImmune
 	Targetable@ChaosImmune:
@@ -2787,7 +2871,7 @@ ACOL:
 		Types: Veterancy
 		Prerequisites: barracks.upgraded
 	DamageMultiplier@CYBORGARMORHUMAN:
-		Modifier: 92
+		Modifier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Convertible:
 		SpawnActors: TPLR
@@ -2832,6 +2916,9 @@ TPLR:
 		Weapon: PortaLaser.Templar.UPG
 		LocalOffset: 427,0,341
 		RequiresCondition: quantum-upgrade
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnPrerequisite@QUANTUM:
 		Condition: quantum-upgrade
 		Prerequisites: quantum.upgrade
@@ -3031,6 +3118,9 @@ JJET:
 	SpeedMultiplier@Enhanced:
 		Modifier: 125
 		RequiresCondition: ejjet-upgrade
+	DamageMultiplier@HUMAN:
+		Modifier: 90
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnDamageState@DAMAGED:
 		Condition: damaged
 		ValidDamageStates: Light, Medium, Heavy, Critical
@@ -3210,6 +3300,9 @@ E8:
 		-BlinkPatterns:
 	ReplacedInQueue:
 		Actors: deso
+	DamageMultiplier@HUMAN:
+		Modifier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Soviets/Infantry
 	EncyclopediaExtras:
@@ -3282,7 +3375,10 @@ DESO:
 	WithMakeAnimation:
 		Sequence: deploy
 		BodyNames: deployed
-	DamageMultiplier:
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	DamageMultiplier@DEPLOYED:
 		Modifier: 20
 		RequiresCondition: deployed
 	-TakeCover:
@@ -3356,7 +3452,7 @@ N1C:
 		Weapon: Vulcan3
 		MuzzleSequence: garrison-muzzle
 	DamageMultiplier@CYBORGARMORHUMAN:
-		Modifier: 75
+		Modifier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -3455,7 +3551,7 @@ N3C:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	DamageMultiplier@CYBORGARMORHUMAN:
-		Modifier: 80
+		Modifier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithProductionIconOverlay:
 		Types: Veterancy
@@ -3539,7 +3635,7 @@ RMBC:
 	DamageMultiplier@CYBORGARMOR:
 		Modifier: 85
 	DamageMultiplier@CYBORGARMORHUMAN:
-		Modifier: 82
+		Modifier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -3621,6 +3717,9 @@ IVAN:
 		Chance: 15
 		DamageSource: Killer
 		RequiresCondition: !being-warped
+	DamageMultiplier@HUMAN:
+		Modifier: 90
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	WithProductionIconOverlay:
@@ -3720,7 +3819,7 @@ BRUT:
 	GrantConditionOnMovement@BRUTEEVASION:
 		Condition: moving
 	DamageMultiplier@BRUTEEVASION:
-		Modifier: 70
+		Modifier: 60
 		RequiresCondition: moving
 	ChangesHealth:
 		PercentageStep: 6
@@ -3742,6 +3841,9 @@ BRUT:
 	-SpawnActorOnDeath@GMUT:
 	-Targetable@GMUT:
 	-Targetable@SpyDisguise:
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Soviets/Infantry
 	EncyclopediaExtras:
@@ -3896,6 +3998,9 @@ SHAD:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Infantry
 		HideBuildable: True
@@ -4117,7 +4222,7 @@ BH:
 	FireWarheadsOnDeath:
 		Weapon: UnitExplodeFlameSmall
 		EmptyWeapon: UnitExplodeFlameSmall
-		Chance: 10
+		Chance: 5
 		DamageSource: Killer
 		RequiresCondition: !being-warped
 	ProducibleWithLevel:
@@ -4138,6 +4243,9 @@ BH:
 		VoiceSet: BlackHandVoice
 	Targetable@STEALTHBUBBLEIMMUNE:
 		TargetTypes: StealthBubbleImmune
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Infantry
 	EncyclopediaExtras:
@@ -4171,7 +4279,7 @@ YURI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 17000
+		HP: 19000
 	Mobile:
 		Speed: 60
 		Voice: Move
@@ -4207,6 +4315,10 @@ YURI:
 		ExperienceFromControl: 100
 		TargetTypeTicksToControl:
 			MindControlResistant: 105
+	DamageTypeDamageMultiplier@A2GPROTECTION:
+		DamageTypes: AirToGround
+		Modifier: 50
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithMindControlArc@MC:
 		ControlType: MindControl
 		Color: c71585
@@ -4222,12 +4334,12 @@ YURI:
 	PeriodicExplosion:
 		Weapon: Mindblast
 		LocalOffset: 0,0,128
-		InitialDelay: 18
+		InitialDelay: 15
 		RequiresCondition: deployed && !being-warped
 	PeriodicExplosionOnSlaves:
 		ControlType: MindControl
 		Weapon: MindblastSlave
-		InitialDelay: 18
+		InitialDelay: 15
 		RequiresCondition: deployed && !being-warped
 	GrantTimedConditionOnDeploy:
 		DeployedTicks: 25
@@ -4247,7 +4359,7 @@ YURI:
 		Armaments: primary, secondary, aidummy
 		FacingTolerance: 0
 	RevealsShroud:
-		Range: 12c0
+		Range: 14c0
 	Passenger:
 		CustomPipType: red
 		Voice: Move
@@ -4272,7 +4384,7 @@ YURI:
 	IgnoresDisguise:
 	DetectCloaked:
 		DetectionTypes: Cloak
-		Range: 5c0
+		Range: 10c0
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	WithProductionIconOverlay:
@@ -4295,7 +4407,7 @@ YURI:
 		RequiresCondition: aiattack && botowner && !deployed && !parachute
 		DeployChance: 100
 		DeployTrigger: Attack
-		DeployTicks: 100
+		DeployTicks: 200
 	GrantConditionOnBotOwner@IAMBOT:
 		Condition: botowner
 		Bots: brutal, vhard, hard, normal, easy, naval, campaign
@@ -4313,7 +4425,7 @@ YURI:
 		Ammo: 1
 		AmmoCondition: vs-vehicle-ammo
 	ReloadAmmoPool:
-		Delay: 35 # matches EnslaveInfantry ReloadDelay
+		Delay: 40 # matches EnslaveInfantry ReloadDelay
 		Count: 1
 	ReloadAmmoPool@Vehicles:
 		AmmoPool: secondary
@@ -4329,14 +4441,14 @@ YURI:
 		Amount: 3
 		RequiresCondition: rank-elite
 	RangeMultiplier@RANK-ELITE:
-		Modifier: 120
+		Modifier: 125
 		RequiresCondition: rank-elite
 	RangedGpsRadarProvider:
-		Range: 14c0
+		Range: 18c0
 		TargetTypes: Infantry, Vehicle, Air, Structure
 	WithRangeCircle:
 		Type: YuriDetection
-		Range: 13c0
+		Range: 18c0
 		Color: cc00ff77
 		BorderColor: 00000044
 	KeepsDistance:
@@ -4357,7 +4469,7 @@ SEAL:
 	Tooltip:
 		Name: Navy SEAL
 	Health:
-		HP: 20000
+		HP: 24000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Passenger:
@@ -4464,6 +4576,10 @@ SEAL:
 	DamageTypeDamageMultiplier@A2GPROTECTION:
 		DamageTypes: AirToGround
 		Modifier: 50
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	AnnounceOnKill:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -4655,6 +4771,9 @@ ENLI:
 		TargetFrozenActors: True
 		PauseOnCondition: being-warped || blinded || reapersnare
 		FacingTolerance: 0
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithInfantryBody:
 		DefaultAttackSequence: throw
 	ProducibleWithLevel:
@@ -4847,7 +4966,7 @@ CMSR:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 13000
+		HP: 15000
 	Mobile:
 		Voice: Move
 	AttackMove:
@@ -4897,6 +5016,13 @@ CMSR:
 		ValidRelationships: Ally
 		AlwaysShowMaxRange: true
 	IgnoresDisguise:
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	DamageTypeDamageMultiplier@A2GPROTECTION:
+		DamageTypes: AirToGround
+		Modifier: 50
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DetectCloaked:
 		DetectionTypes: Cloak, AirCloak
 		Range: 6c0
@@ -4927,8 +5053,9 @@ ZTRP:
 	Health:
 		HP: 26000
 	Armor:
-		Type: None
+		Type: Concrete
 	Mobile:
+		Speed: 62
 		Voice: Move
 	RevealsShroud:
 		Range: 6c0
@@ -5002,6 +5129,9 @@ ZTRP:
 	DamageMultiplier@Jumping:
 		Modifier: 50
 		RequiresCondition: jumping
+	DamageMultiplier@HUMAN:
+		Modifier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: GDI/Infantry
 	EncyclopediaExtras:
@@ -5030,7 +5160,10 @@ ZRAI:
 	Health:
 		HP: 24000
 	Mobile:
-		Speed: 60
+		Speed: 64
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	-TakeCover:
 	TargetedLeapAbility:
 		MaxDistance: 18
@@ -5060,6 +5193,9 @@ ZDEF:
 		HP: 28000
 	Mobile:
 		Speed: 65
+	DamageMultiplier@HUMAN:
+		Modifier: 75
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	-TargetedLeapAbility:
 	-Contrail@Jumping:
 	-WithShadow@Jump:
@@ -5075,8 +5211,8 @@ ZDEF:
 		DeployedCondition: shield-active
 		ShowSelectionBar: true
 		StartsFullyCharged: true
-		DeployedTicks: 375
-		CooldownTicks: 250
+		DeployedTicks: 400
+		CooldownTicks: 200
 		ShowSelectionBarWhenFull: false
 		ChargingColor: 808080
 		DischargingColor: 00eecc
@@ -5085,7 +5221,7 @@ ZDEF:
 		Voice: Shield
 		Instant: true
 	WithRadiatingCircle@ZoneDefenderShield:
-		EndRadius: 5c512
+		EndRadius: 7c0
 		Color: 00eecc10
 		MaxRadiusColor: 00eecc66
 		MaxRadiusFlashColor: 00eecc66
@@ -5095,7 +5231,7 @@ ZDEF:
 		AlwaysShowMaxRange: true
 		RequiresCondition: shield-active
 	ProximityExternalCondition@ZoneDefenderShield:
-		Range: 5c512
+		Range: 7c0
 		Condition: zdef-shield
 		ValidRelationships: Ally
 		RequiresCondition: shield-active && !passenger
@@ -5126,7 +5262,7 @@ ENFO:
 	Health:
 		HP: 30000
 	Armor:
-		Type: Light
+		Type: Concrete
 	Mobile:
 		Voice: Move
 	RevealsShroud:
@@ -5161,6 +5297,9 @@ ENFO:
 		IdleSequences: idle, idle2
 		StandSequences: stand, stand2
 		DefaultAttackSequence: shoot
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReplacedInQueue:
 		Actors: hopl
 	GrantConditionOnHealingReceived@HEALINGCOOLDOWN:
@@ -5254,6 +5393,9 @@ HOPL:
 		Condition: charged-fired
 		ArmamentNames: primary
 		RevokeDelay: 1
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Allies/Infantry
 	EncyclopediaExtras:
@@ -5282,8 +5424,9 @@ TIGR:
 	Health:
 		HP: 12500
 	Armor:
-		Type: None
+		Type: Concrete
 	Mobile:
+		Speed: 55
 		Voice: Move
 	RevealsShroud:
 		Range: 6c0
@@ -5327,6 +5470,9 @@ TIGR:
 		IdleSequences: idle, idle2
 		StandSequences: stand, stand2
 		DefaultAttackSequence: shoot
+	DamageMultiplier@HUMAN:
+		Modifier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Allies/Infantry
 	EncyclopediaExtras:
@@ -5354,6 +5500,8 @@ CRYT:
 		AddToArmyValue: true
 	Health:
 		HP: 18500
+	Armor:
+		Type: Concrete
 	Mobile:
 		Speed: 60
 		Voice: Move
@@ -5402,6 +5550,9 @@ CRYT:
 	GrantConditionOnAttackCA:
 		Condition: attacking
 		RevokeDelay: 6
+	DamageMultiplier@HUMAN:
+		Modifier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Allies/Infantry
 	EncyclopediaExtras:
@@ -5532,7 +5683,7 @@ REAP:
 		Multiplier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageMultiplier@CYBORGARMORHUMAN:
-		Modifier: 90
+		Modifier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Infantry

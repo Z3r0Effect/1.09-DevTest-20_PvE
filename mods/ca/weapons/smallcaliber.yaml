@@ -644,7 +644,7 @@ M60mgIFV:
 
 M60mgMD:
 	Inherits: M60mgTD
-	ReloadDelay: 40
+	ReloadDelay: 25
 
 M60mgMD.Attached:
 	Range: 8c0

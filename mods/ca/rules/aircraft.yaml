@@ -1448,7 +1448,7 @@ SMIG:
 	Aircraft:
 		CruiseAltitude: 2260
 		TurnSpeed: 12
-		Speed: 473
+		Speed: 500
 		Repulsable: False
 		MaximumPitch: 56
 	-Selectable:

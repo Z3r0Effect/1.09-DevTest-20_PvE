@@ -9,7 +9,7 @@ WarriorGunBATF:
 DisintegratorBeam:
 	Inherits: Laser
 	ReloadDelay: 30
-	Range: 6c256
+	Range: 7c512
 	Report: disintegrator-fire1.aud, disintegrator-fire2.aud, disintegrator-fire3.aud
 	Projectile: LaserZapCA
 		Color: 00FFCCAA
@@ -19,7 +19,7 @@ DisintegratorBeam:
 		SecondaryBeamColor: 00FFCC30
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
-		Damage: 3000
+		Damage: 3500
 		Versus:
 			None: 10
 			Wood: 74
@@ -40,7 +40,7 @@ DisintegratorBeamBATF:
 
 DisintegratorBeamAA:
 	Inherits: DisintegratorBeam
-	Range: 7c0
+	Range: 9c256
 	ValidTargets: Air, AirSmall
 	Projectile: LaserZapCA
 		Blockable: false
@@ -72,8 +72,8 @@ DisintegratorIFVBeamAA:
 		Damage: 6800
 
 EnslaveInfantry:
-	Range: 12c0
-	ReloadDelay: 50
+	Range: 13c0
+	ReloadDelay: 40
 	Projectile: InstantHit
 	ValidTargets: MindControllable
 	InvalidTargets: Vehicle, Ship, MindControlImmune
@@ -102,7 +102,7 @@ DetonateSlave:
 	ReloadDelay: 1
 	Projectile: InstantHit
 	Warhead@1Dam: HealthPercentageDamage
-		Spread: 42
+		Spread: 128
 		Damage: 400
 		ValidTargets: Infantry, Vehicle, Ship, Air, AirSmall
 		DamageTypes: BulletDeath
@@ -246,7 +246,7 @@ PlasmaDiscs.Hypercharged:
 IntruderDiscs:
 	Inherits: PlasmaDiscs
 	-MinRange:
-	Range: 7c768
+	Range: 8c0
 	ReloadDelay: 60
 	Burst: 3
 	Projectile: MissileCA
@@ -483,7 +483,7 @@ DevourerLaserCharged:
 RiftCannon:
 	Inherits: ^ScrinLaser
 	Report: darkener-fire1.aud, darkener-fire2.aud
-	ReloadDelay: 90
+	ReloadDelay: 70
 	Range: 10c512
 	Projectile: LaserZapCA
 		Duration: 20
@@ -492,18 +492,18 @@ RiftCannon:
 		SecondaryBeamColor: 00000099
 		SecondaryBeamWidth: 90
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
-		Falloff: 100, 37, 23, 10, 0
-		Damage: 3500
+		Spread: 768
+		Falloff: 100, 65, 40, 25, 0
+		Damage: 6500
 		Versus:
-			None: 15
+			None: 75
 			Wood: 45
 			Light: 100
 			Brick: 75
 		DamageTypes: BulletDeath
 	Warhead@2Dam: HealthPercentageSpreadDamage
-		Spread: 426
-		Falloff: 100, 37, 23, 10, 0
+		Spread: 512
+		Falloff: 100, 65, 40, 25, 0
 		Damage: 100
 		Versus:
 			Wood: 4
@@ -534,13 +534,13 @@ MiniRift:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 692
-		Damage: 840
-		Falloff: 100, 70, 0
+		Damage: 1200
+		Falloff: 100, 80, 30, 0
 		Versus:
-			None: 3
+			None: 30
 			Wood: 45
-			Light: 90
-			Heavy: 100
+			Light: 110
+			Heavy: 130
 			Concrete: 95
 			Brick: 20
 		DamageTypes: BulletDeath
@@ -564,7 +564,7 @@ MiniRift:
 		Condition: slowed
 		ValidTargets: Vehicle, Ship, Cyborg
 	Warhead@4Slow: GrantExternalConditionCA
-		Range: 2c0
+		Range: 3c0
 		Duration: 10
 		Condition: slowed
 		ValidTargets: Vehicle, Ship
@@ -1657,11 +1657,11 @@ Rift:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c0
-		Damage: 5000
-		Falloff: 100, 95, 50, 40, 35, 30, 15, 10, 5
+		Damage: 4000
+		Falloff: 200, 195, 150, 140, 135, 75, 50, 20, 5
 		ValidTargets: Ground, Trees, Underwater, Air, AirSmall
 		Versus:
-			None: 30
+			None: 100
 			Wood: 115
 			Light: 70
 			Heavy: 90
@@ -1697,13 +1697,13 @@ BuzzerSpawner:
 	ReloadDelay: 1
 	Projectile: InstantExplode
 	Warhead@1Dam: HealthPercentageDamage
-		Spread: 341
+		Spread: 512
 		Damage: 75
 		Versus:
 			None: 100
 			Wood: 1
-			Light: 45
-			Heavy: 15
+			Light: 65
+			Heavy: 40
 			Concrete: 1
 			Brick: 0
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
@@ -1739,13 +1739,13 @@ BuzzerVortex:
 		DamageTypes: BulletDeath
 		ValidRelationships: Enemy, Neutral
 	Warhead@2Dam: HealthPercentageDamage
-		Spread: 3c0
-		Damage: 12
+		Spread: 5c0
+		Damage: 15
 		Versus:
 			None: 100
 			Wood: 15
-			Light: 30
-			Heavy: 12
+			Light: 70
+			Heavy: 45
 			Concrete: 3
 			Brick: 0
 		DamageTypes: BulletDeath
@@ -2301,7 +2301,7 @@ MindSparkEruption:
 		AirThreshold: 512
 
 MindSparkZap:
-	ReloadDelay: 35
+	ReloadDelay: 15
 	Range: 6c512
 	Report: mindspark-zap1.aud, mindspark-zap2.aud
 	Projectile: PlasmaBeam
@@ -2315,15 +2315,16 @@ MindSparkZap:
 		SegmentLength: 350
 		ZOffset: 512
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
+		Spread: 256
 		Damage: 25000
 		Versus:
-			None: 50
+			None: 70
 			Light: 85
 			Heavy: 75
 			Concrete: 10
 			Wood: 5
 		DamageTypes: ElectricityDeath
+		ValidRelationships: Enemy, Neutral
 	Warhead@3Eff: CreateEffect
 		Explosions: small_explosion
 
@@ -2344,7 +2345,7 @@ ObliteratorCharge:
 ObliteratorBolt:
 	Range: 15c0
 	MinRange: 1c0
-	ReloadDelay: 65
+	ReloadDelay: 60
 	Report: oblt-fire1.aud
 	TargetActorCenter: true
 	Projectile: LinearPulse
@@ -2372,6 +2373,7 @@ ObliteratorBolt:
 			Palette: scrin
 			Inaccuracy: 110
 	Warhead@1Dam: SpreadDamage
+		Spread: 256
 		Damage: 16000
 		Versus:
 			None: 60

@@ -604,7 +604,7 @@ FirestormBarrage:
 	Projectile: Bullet
 		Blockable: false
 		Shadow: true
-		Inaccuracy: 5c0
+		Inaccuracy: 8c512
 		Image: red-missile
 		Palette: temptd
 		IsPlayerPalette: false
