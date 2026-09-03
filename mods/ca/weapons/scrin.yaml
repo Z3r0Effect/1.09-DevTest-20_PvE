@@ -1889,7 +1889,7 @@ MothershipDiscs:
 	Report: mshp-zap1.aud, mshp-zap2.aud
 	Range: 10c0
 	MinRange: 1c0
-	ReloadDelay: 65
+	ReloadDelay: 55
 	Burst: 6
 	BurstDelays: 4
 	ValidTargets: Infantry, Vehicle, Ship
@@ -1902,7 +1902,8 @@ MothershipDiscs:
 		ShadowColor: 00000033
 		Speed: 280
 	Warhead@1Dam: SpreadDamage
-		Damage: 6550
+		Spread: 512
+		Damage: 12000
 		Versus:
 			None: 100
 			Wood: 45

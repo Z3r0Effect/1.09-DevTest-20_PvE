@@ -2301,6 +2301,10 @@ TanyaRailgun:
 		ValidRelationships: Enemy, Neutral
 		DamageTypes: ExplosionDeath
 
+TanyaRailgunBATF:
+	Inherits: TanyaRailgun
+	Range: 12c0
+
 IonZap:
 	ReloadDelay: 80
 	Range: 6c768
