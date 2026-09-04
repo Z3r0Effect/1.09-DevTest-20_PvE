@@ -813,6 +813,10 @@ PlaceC4:
 		Color: ffffff
 		ValidTargets: Structure, Vehicle
 
+TanyaPlaceC4:
+	Inherits: PlaceC4
+	ValidTargets: Structure
+
 PlaceC4Seal:
 	Inherits: PlaceC4
 	InvalidTargets: Vehicle, C4Attached, TNTAttached, C4Immune
@@ -871,7 +875,7 @@ Commandobombbuilding:
 	ValidTargets: Structure
 	InvalidTargets: C4Attached, C4Immune
 	ReloadDelay: 150
-	Range: 9c512
+	Range: 10c512
 	Report: grenade1.aud
 	Projectile: Bullet
 		LaunchAngle: 70
@@ -911,8 +915,8 @@ Commandobombvehicle:
 	Range: 13c0
 	Report: grenade1.aud
 	Projectile: Bullet
-		LaunchAngle: 25
-		Speed: 260
+		LaunchAngle: 15
+		Speed: 280
 		Inaccuracy: 0
 		Image: TNT
 		ContrailLength: 6
@@ -969,13 +973,13 @@ CommandoTNTVehicle:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c256
-		Damage: 7000
-		Falloff: 700, 350, 175, 60, 0
+		Damage: 9000
+		Falloff: 800, 300, 150, 75, 0
 		ValidTargets: Vehicle
 		Versus:
 			None: 65
 			Light: 85
-			Heavy: 75
+			Heavy: 90
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: building, building2
@@ -998,7 +1002,7 @@ Ivanbomb:
 	Range: 7c512
 	Report: grenade1.aud
 	Projectile: Bullet
-		LaunchAngle: 70
+		LaunchAngle: 50
 		Speed: 145
 		Inaccuracy: 0
 		Image: TNT
@@ -1368,8 +1372,8 @@ StealthAPCLaser:
 XOLaser:
 	Inherits: Laser
 	Report: xo-laser.aud
-	ReloadDelay: 65
-	Range: 8c128
+	ReloadDelay: 55
+	Range: 8c256
 	Projectile: LaserZapCA
 		Blockable: true
 		Width: 56
@@ -1386,12 +1390,12 @@ XOLaser:
 			None: 65
 			Wood: 40
 			Concrete: 75
-			Light: 80
+			Light: 85
 			Heavy: 110
 
 XOCoilGun:
-	Range: 8c128
-	ReloadDelay: 45
+	Range: 8c256
+	ReloadDelay: 35
 	Report: xo-coil1.aud
 	Burst: 3
 	BurstDelays: 6
@@ -1413,8 +1417,8 @@ XOCoilGun:
 		Versus:
 			None: 100
 			Wood: 10
-			Light: 70
-			Heavy: 35
+			Light: 90
+			Heavy: 65
 			Concrete: 10
 			Brick: 10
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
@@ -2289,12 +2293,12 @@ TanyaRailgun:
 		PassthroughMinDistance: 2c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 24000
+		Damage: 20000
 		Versus:
 			None: 0
 			Wood: 0
-			Light: 110
-			Heavy: 120
+			Light: 95
+			Heavy: 105
 			Concrete: 0
 			Brick: 0
 		ValidTargets: Vehicle
@@ -2303,7 +2307,9 @@ TanyaRailgun:
 
 TanyaRailgunBATF:
 	Inherits: TanyaRailgun
-	Range: 12c0
+	Range: 11c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 16000
 
 IonZap:
 	ReloadDelay: 80
@@ -3334,13 +3340,13 @@ DummyWeapon:
 
 Lasher:
 	ReloadDelay: 3
-	Range: 3c512
+	Range: 4c512
 	ValidTargets: Ground, Water
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-		Range: 1c0, 1c256, 1c512
+		Range: 1c512, 2c0, 2c512
 		Falloff: 100, 100, 0
-		Damage: 1500
+		Damage: 2500
 		ValidTargets: Infantry
 		DamageTypes: BulletDeath, FlakVestMitigatedMinor
 		ValidRelationships: Enemy, Neutral

@@ -2302,7 +2302,7 @@ MindSparkEruption:
 		AirThreshold: 512
 
 MindSparkZap:
-	ReloadDelay: 15
+	ReloadDelay: 25
 	Range: 6c512
 	Report: mindspark-zap1.aud, mindspark-zap2.aud
 	Projectile: PlasmaBeam
@@ -2317,12 +2317,12 @@ MindSparkZap:
 		ZOffset: 512
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 25000
+		Damage: 10000
 		Versus:
 			None: 70
 			Light: 85
 			Heavy: 75
-			Concrete: 10
+			Concrete: 60
 			Wood: 5
 		DamageTypes: ElectricityDeath
 		ValidRelationships: Enemy, Neutral

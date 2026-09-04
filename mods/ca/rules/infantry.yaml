@@ -939,17 +939,21 @@ E7:
 		Weapon: Colt45BATF
 		Name: batf
 		MuzzleSequence: garrison-muzzle
+	Armament@RAILGUNBATF:
+		Weapon: TanyaRailgunBATF
+		Name: batf
+		MuzzleSequence: garrison-muzzle
 	Armament@RAILGUN:
 		Weapon: TanyaRailgun
 		Name: railgun
 	Armament@sapper:
-		Weapon: PlaceC4
+		Weapon: TanyaPlaceC4
 		Cursor: c4
 		OutsideRangeCursor: c4
 		Name: secondary
 	AttackFrontal:
 		PauseOnCondition: being-warped || blinded || reapersnare
-		Armaments: primary, railgun
+		Armaments: primary, secondary, railgun
 		FacingTolerance: 0
 	AutoTarget:
 		AllowMovement: false
@@ -1280,6 +1284,11 @@ HACK:
 	Mobile:
 		Speed: 67
 		Voice: Move
+	GrantConditionOnMovement@HACKEVASION:
+		Condition: moving
+	DamageMultiplier@HACKEVASION:
+		Modifier: 70
+		RequiresCondition: moving
 	Armor:
 		Type: Concrete
 	RevealsShroud:
@@ -2396,7 +2405,7 @@ BORI:
 	TooltipExtras:
 		Strengths: • Strong vs Infantry, Buildings, Defenses
 		Weaknesses: • Cannot attack Aircraft
-		Attributes: • Maximum 1 can be trained\n• Detects cloaked ground units and spies\n• Immune to mind control\n• Calls airstrike on targeted structures
+		Attributes: • Special Ability: Scorched Earth\n• Maximum 1 can be trained\n• Detects cloaked ground units and spies\n• Immune to mind control\n• Calls airstrike on targeted structures
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -2464,10 +2473,34 @@ BORI:
 	IgnoresDisguise:
 	DetectCloaked:
 		Range: 7c0
+	SpawnActorAbility@SCORCHED:
+		Actors: scorchedmissile
+		SpawnSounds: rocket2.aud
+		TargetCursor: ability
+		TargetModifiedCursor: ability2
+		Behavior: SpawnAtSelfAndMoveToTarget
+		FaceTarget: true
+		RequiresCondition: !being-warped && scorched-ammo
+		AmmoPool: scorched
+		TargetCircleRange: 3c0
+	AmmoPool@ScorchedEarth:
+		Name: scorched
+		Ammo: 1
+		Armaments: none
+		AmmoCondition: scorched-ammo
+	ReloadAmmoPoolCA@ScorchedEarth:
+		AmmoPool: scorched
+		Delay: 250
+		Count: 1
+		ShowSelectionBar: true
+		SelectionBarColor: ff6600
 	DamageTypeDamageMultiplier@A2GPROTECTION:
 		DamageTypes: AirToGround
 		Modifier: 50
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	RenderRangeCircle@SCORCHED:
+		Range: 32
+		Color: ff660080
 	Voiced:
 		VoiceSet: BorisVoice
 	ProducibleWithLevel:
@@ -2608,6 +2641,11 @@ ASSA:
 	Mobile:
 		Speed: 62
 		Voice: Move
+	GrantConditionOnMovement@ASSAEVASION:
+		Condition: moving
+	DamageMultiplier@ASSAEVASION:
+		Modifier: 70
+		RequiresCondition: moving
 	Armor:
 		Type: Concrete
 	RevealsShroud:
@@ -2753,6 +2791,11 @@ CONF:
 	Mobile:
 		Voice: Move
 		Speed: 62
+	GrantConditionOnMovement@CONFEVASION:
+		Condition: moving
+	DamageMultiplier@CONFEVASION:
+		Modifier: 70
+		RequiresCondition: moving
 	Armor:
 		Type: Concrete
 	Voiced:

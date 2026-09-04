@@ -728,11 +728,11 @@ Colt45:
 	ReloadDelay: 10
 	Burst: 4
 	BurstDelays: 2,9,2
-	Range: 10c0
+	Range: 10c256
 	Warhead@1Dam: SpreadDamage
 		Damage: 4700
 		Versus:
-			Light: 35
+			Light: 75
 	Warhead@2Eff: CreateEffect
 		Explosions: piff, piff2
 		ValidTargets: Ground, Ship, Air, AirSmall, Trees
@@ -743,7 +743,7 @@ Colt45:
 
 Colt45BATF:
 	Inherits: Colt45
-	Range: 8c768
+	Range: 9c768
 
 SMG:
 	Inherits: ^SnipeWeapon
@@ -1049,19 +1049,19 @@ HeliGunAA:
 
 WolverineGun:
 	Inherits: M60mg
-	Range: 6c768
+	Range: 7c768
 	MinRange: 0c128
 	ReloadDelay: 25
 	BurstDelays: 3
 	StartBurstReport: wolv-fire1.aud, wolv-fire2.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 1750
+		Damage: 3500
 		Versus:
 			None: 100
 			Wood: 50
-			Light: 75
-			Heavy: 30
+			Light: 95
+			Heavy: 50
 	-Warhead@2Eff:
 
 WolverineGunLine:
@@ -1077,7 +1077,7 @@ WolverineGunLine:
 		BeamWidth: 256
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 1000
+		Damage: 2500
 		ValidRelationships: Enemy, Neutral
 	Warhead@2Eff: CreateEffect
 		Explosions: piff, empty

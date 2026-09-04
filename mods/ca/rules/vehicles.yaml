@@ -1821,7 +1821,7 @@ ISU:
 		HP: 60000
 	Mobile:
 		TurnSpeed: 8
-		Speed: 46
+		Speed: 50
 		Locomotor: heavytracked
 		Voice: Move
 	RevealsShroud:
@@ -10790,6 +10790,35 @@ BSKY:
 		Image: smigboom
 		EnterSequence: enter
 		Palette: effect
+
+SCORCHEDMISSILE:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	RenderSprites:
+		Image: bsky
+	WithFacingSpriteBody:
+	HiddenUnderFog:
+		Type: CenterPosition
+	HitShape:
+	Health:
+		HP: 5000
+	Aircraft:
+		CanHover: True
+		Speed: 300
+		CruiseAltitude: 1
+		LandableTerrainTypes: Clear,Road,Rough,Ore,Gems,Tiberium,BlueTiberium,BlackTiberium,Water,Tree,River,Rock,Beach,Bridge,Tunnel,Wall,Ford
+	LeavesTrailsCA:
+		Image: icbmsmoke
+		Sequences: idle, idle2, idle3, idle4
+		MovingInterval: 1
+		Type: CenterPosition
+		Offsets: -200, 0, -50
+	Targetable:
+		TargetTypes: ICBM
+	KillsSelf:
+		Delay: 55
+	FireWarheadsOnDeath:
+		Weapon: BorisScorchedEarth
 
 ZEUS:
 	Inherits: ^Vehicle
