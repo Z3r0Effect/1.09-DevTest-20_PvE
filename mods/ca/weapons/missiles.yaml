@@ -517,7 +517,7 @@ HellfireAG.Horn:
 		Versus:
 			None: 95
 			Wood: 85
-			Light: 80
+			Light: 85
 			Heavy: 75
 			Concrete: 50
 
@@ -1268,69 +1268,42 @@ GradRocketsWide.UPG:
 	Burst: 5
 
 BorisScorchedEarth:
+	ReloadDelay: 1
 	Projectile: InstantExplode
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c768
-		Damage: 3500
-		Falloff: 1000, 750, 500, 300, 150, 75, 0
+		Spread: 1c256
+		Damage: 4000
+		Falloff: 1000, 700, 425, 225, 100, 0
 		Versus:
-			None: 150
-			Wood: 20
-			Concrete: 25
-			Light: 60
-			Heavy: 35
-			Brick: 20
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath, FlakVestMitigatedMinor
-	Warhead@2Dam: SpreadDamage
-		Spread: 2c0
-		Damage: 2000
-		Falloff: 1000, 750, 500, 300, 150, 75, 0
-		Delay: 5
-		Versus:
-			None: 75
-			Wood: 10
-			Concrete: 15
-			Light: 50
-			Heavy: 25
-			Brick: 10
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath, FlakVestMitigatedMinor
-	Warhead@3Dam: SpreadDamage
-		Spread: 2c256
-		Damage: 1200
-		Falloff: 900, 750, 450, 300, 150, 75, 0
-		Delay: 10
-		Versus:
-			None: 30
-			Wood: 10
-			Concrete: 15
-			Light: 40
-			Heavy: 25
-			Brick: 10
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath, FlakVestMitigatedMinor
-	Warhead@4Dam: SpreadDamage
-		Spread: 3c0
-		Damage: 800
-		Falloff: 500, 350, 200, 100, 50, 25, 0
-		Delay: 15
-		Versus:
-			None: 10
-			Wood: 10
-			Concrete: 15
-			Light: 30
-			Heavy: 20
-			Brick: 10
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath, FlakVestMitigatedMinor
-	Warhead@Smu: LeaveSmudge
-		SmudgeType: Scorch
+			None: 160
+			Wood: 30
+			Concrete: 20
+			Light: 70
+			Heavy: 60
+			Brick: 15
+		DamageTypes: Prone50Percent, TriggerProne, RadiationDeath
 	Warhead@Eff: CreateEffect
-		Explosions: large_napalm
-		ImpactSounds: firebl3.aud
+		Explosions: radhitsm
+		ExplosionPalette: caneon
 		ImpactActors: false
-	Warhead@Flames: FireCluster
-		Weapon: BurnFx
-		RandomClusterCount: 8
-		Dimensions: 7,7
-		Footprint: xxxxxxx xxxxxxx xxxxxxx xxxxxxx xxxxxxx xxxxxxx xxxxxxx
+	Warhead@2Eff: CreateEffect
+		Explosions: radburst
+	Warhead@Smu: LeaveSmudge
+		SmudgeType: Scorch-NoFlame
+	Warhead@1Radiation: CreateTintedCells
+		Spread: 1c512
+		Falloff: 100, 65, 30, 5, 0
+		Level: 200
+		MaxLevel: 200
+		LayerName: radioactivity.strong
+		GlowScale: 1.5
+		GlowFadeFrames: 30
+		GlowFadeInFrames: 12
+	Warhead@2irrad: GrantExternalConditionCA
+		Range: 2c0
+		Duration: 75
+		Condition: irradiated
+		ValidTargets: Vehicle, Ship
         
 HonestJohn:
 	ReloadDelay: 70

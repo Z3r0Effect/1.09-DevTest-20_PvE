@@ -2293,11 +2293,11 @@ TanyaRailgun:
 		PassthroughMinDistance: 2c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 20000
+		Damage: 24000
 		Versus:
 			None: 0
 			Wood: 0
-			Light: 95
+			Light: 90
 			Heavy: 105
 			Concrete: 0
 			Brick: 0
@@ -2307,9 +2307,9 @@ TanyaRailgun:
 
 TanyaRailgunBATF:
 	Inherits: TanyaRailgun
-	Range: 11c0
+	Range: 11c256
 	Warhead@1Dam: SpreadDamage
-		Damage: 16000
+		Damage: 18000
 
 IonZap:
 	ReloadDelay: 80
@@ -2722,8 +2722,8 @@ MempTargeting:
 	ValidTargets: Structure, Vehicle, Ship
 
 RadTrooperBeam:
-	Range: 6c512
-	ReloadDelay: 90
+	Range: 6c768
+	ReloadDelay: 75
 	Report: radbeam1.aud
 	Projectile: RadBeam
 		Amplitude: 176
@@ -2737,7 +2737,7 @@ RadTrooperBeam:
 		Versus:
 			None: 240
 			Light: 100
-			Heavy: 40
+			Heavy: 60
 			Wood: 50
 			Concrete: 50
 			Brick: 12
@@ -2748,7 +2748,8 @@ RadTrooperBeam:
 
 DesolatorBeam:
 	Inherits: RadTrooperBeam
-	Range: 6c768
+	Range: 7c128
+	ReloadDelay: 65
 	Report: idesat1a.aud
 	Projectile: RadBeam
 		Thickness: 48
@@ -2757,6 +2758,7 @@ DesolatorBeam:
 		Spread: 180
 		Versus:
 			Light: 120
+			Heavy: 75
 			Wood: 60
 			Concrete: 70
 	Warhead@2Dam: HealthPercentageDamage
@@ -2797,8 +2799,8 @@ RadBeamWeaponHeavy:
 			None: 175
 			Wood: 45
 			Concrete: 45
-			Light: 75
-			Heavy: 60
+			Light: 85
+			Heavy: 75
 			Brick: 12
 		DamageTypes: Prone50Percent, TriggerProne, RadiationDeath
 		InvalidTargets: Infantry
@@ -2852,17 +2854,17 @@ RadEruptionWeapon:
 	ReloadDelay: 35
 	Report: idesat2a.aud
 	Warhead@1Radiation: CreateTintedCells
-		Spread: 1c512
-		Falloff: 100, 75, 55, 30, 0
-		Level: 250
-		MaxLevel: 750
+		Spread: 1c341
+		Falloff: 100, 85, 60, 35, 0
+		Level: 300
+		MaxLevel: 900
 		LayerName: radioactivity.strong
 		GlowScale: 1.5
 		GlowFadeFrames: 30
 		GlowFadeInFrames: 12
 	Warhead@2irrad: GrantExternalConditionCA
-		Range: 2c256
-		Duration: 250
+		Range: 2c128
+		Duration: 300
 		Condition: irradiated
 		ValidTargets: Vehicle, Ship
 	Warhead@3Eff: CreateEffect
@@ -2872,7 +2874,11 @@ RadEruptionWeapon:
 RadEruptionWeaponStage2:
 	Inherits: RadEruptionWeapon
 	Warhead@1Radiation: CreateTintedCells
-		Falloff: 100, 100, 75, 55, 35, 0
+		Spread: 2c0
+		Falloff: 100, 100, 95, 75, 45, 25, 0
+	Warhead@2irrad: GrantExternalConditionCA
+		Range: 2c512
+		Duration: 375
 
 PsychicBeamBATF:
 	Inherits: DesolatorBeam
@@ -4194,7 +4200,7 @@ CyclopsZap:
 	Range: 10c0
 
 JackknifeTargeter:
-	Range: 9c256
+	Range: 8c0
 	ValidTargets: Ground, Water
 	MinRange: 0c768
 	ReloadDelay: 25

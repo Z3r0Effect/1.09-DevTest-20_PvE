@@ -397,6 +397,45 @@ KirovExplode:
 		FadeFrames: 180
 		FadeInFrames: 15
 
+AnathemaExplosion1:
+	Projectile: InstantExplode
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c768
+		Damage: 4000
+		Falloff: 1000, 500, 150, 0
+		Versus:
+			None: 100
+			Wood: 70
+			Light: 75
+			Heavy: 50
+			Concrete: 40
+			Brick: 50
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+ 	Warhead@2Eff: CreateEffect
+		Explosions: building
+		ImpactSounds: expnew06.aud
+       
+AnathemaExplosion2:
+	Inherits: AnathemaExplosion1
+	Warhead@1Dam:
+		Spread: 1c0
+		Damage: 5500
+		Falloff: 1000, 550, 200, 50, 0
+
+AnathemaExplosion3:
+	Inherits: AnathemaExplosion1
+	Warhead@1Dam:
+		Spread: 1c256
+		Damage: 7500
+		Falloff: 1000, 600, 250, 75, 0
+
+AnathemaExplosion4:
+	Inherits: AnathemaExplosion1
+	Warhead@1Dam:
+		Spread: 1c512
+		Damage: 9500
+		Falloff: 1000, 650, 300, 100, 25, 0
+        
 MothershipExplode:
 	Inherits: KirovExplode
 	Warhead@3Eff: CreateEffect
@@ -1114,8 +1153,9 @@ JackknifeExplosion:
 	ValidTargets: Ground, Water, Air, AirSmall
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-		Damage: 38000
-		Spread: 768
+		Damage: 45000
+		Spread: 640
+		Falloff: 100, 90, 70, 40, 15, 0
 		Versus:
 			None: 50
 			Wood: 20

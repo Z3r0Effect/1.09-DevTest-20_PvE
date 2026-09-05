@@ -498,13 +498,13 @@ YAK:
 		Strengths: • Strong vs Infantry, Light Armor, Buildings, Aircraft
 		Weaknesses: • Weak vs Heavy Armor, Defenses
 	Valued:
-		Cost: 1000
+		Cost: 1200
 	Tooltip:
 		Name: Yak Attack Plane
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 32000
+		HP: 26000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 9c0
@@ -3458,7 +3458,7 @@ CV:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 80000
+		HP: 60000
 	-SpawnActorOnDeath:
 	Armor:
 		Type: Aircraft
@@ -5145,14 +5145,14 @@ JACK:
 	Aircraft:
 		AltitudeVelocity: 0c100
 		TurnSpeed: 20
-		Speed: 135
+		Speed: 140
 		IdleSpeed: 72
 		Repulsable: false
 		Voice: Move
 	Voiced:
 		VoiceSet: JackknifeVoice
 	Health:
-		HP: 22000
+		HP: 7500
 	RevealsShroud:
 		Range: 15c0
 		MinRange: 8c0
@@ -5204,6 +5204,24 @@ JACK:
 	-SpawnActorOnDeath:
 	-Contrail@2:
 	-SoundOnDamageTransitionCA:
+	GrantConditionOnBotOwner@BrutalAI:
+		Condition: owned-by-brutal-ai
+		Bots: brutal
+	GrantConditionOnBotOwner@VeryHardAI:
+		Condition: owned-by-vhard-ai
+		Bots: vhard
+	GrantConditionOnBotOwner@HardAI:
+		Condition: owned-by-hard-ai
+		Bots: hard
+	GrantConditionOnBotOwner@NormalAI:
+		Condition: owned-by-normal-ai
+		Bots: normal
+	GrantConditionOnBotOwner@EasyAI:
+		Condition: owned-by-easy-ai
+		Bots: easy
+	DamageMultiplier@HUMAN:
+		Modifier: 5
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ActorLostNotification:
 		RequiresCondition: !diving
 	ReclaimsExperience:

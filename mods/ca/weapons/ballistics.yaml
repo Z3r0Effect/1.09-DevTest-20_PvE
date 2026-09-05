@@ -521,24 +521,24 @@ TitanGun:
 
 380mm:
 	Inherits: ^Artillery
-	ReloadDelay: 75
+	ReloadDelay: 65
 	Report: bgraatta.aud
 	MinRange: 2c0
-	Range: 9c768
+	Range: 10c128
 	TargetActorCenter: true
 	Projectile: Bullet
 		Speed: 200
 		Image: 380mm
-		Inaccuracy: 0c512
+		Inaccuracy: 0c256
 	Warhead@1Dam: SpreadDamage
 		Damage: 30000
-		Falloff: 100, 85, 50, 25, 0
+		Falloff: 100, 95, 75, 50, 25, 0
 		Versus:
 			None: 55
 			Wood: 100
 			Concrete: 100
 			Light: 90
-			Heavy: 65
+			Heavy: 85
 	Warhead@2Dam: SpreadDamage
 		Damage: 70000
 		Spread: 341
@@ -598,7 +598,7 @@ NukeCannonDeployer:
 	Projectile: Bullet
 		Speed: 245
 		Image: 280mma
-		LaunchAngle: 92
+		LaunchAngle: 75
 		Inaccuracy: 554
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c512

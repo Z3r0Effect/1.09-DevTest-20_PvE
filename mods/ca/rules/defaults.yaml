@@ -1404,9 +1404,9 @@
 		RequiresCondition: irradiated
 	FirepowerMultiplier@IRRADIATED:
 		RequiresCondition: irradiated
-		Modifier: 85
+		Modifier: 80
 	DamageMultiplier@IRRADIATED:
-		Modifier: 110
+		Modifier: 115
 		RequiresCondition: irradiated
 
 ^ConditionIcons:
@@ -2370,7 +2370,7 @@
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Vehicle, Water, Underwater, Defense
-		InvalidTargets: NoAutoTarget, WaterStructure, AntiAirDefense, Vehicle
+		InvalidTargets: NoAutoTarget, WaterStructure, AntiAirDefense
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Infantry, Structure, AntiAirDefense, Mine
@@ -2769,8 +2769,8 @@
 		WarnProbability: 0
 		RequiresCondition: !invulnerability && !being-warped
 	DamagedByTintedCells@RADSTRONG:
-		Damage: 200
-		DamageInterval: 16
+		Damage: 400
+		DamageInterval: 12
 		DamageTypes: RadiationDeath
 		LayerName: radioactivity.strong
 		Condition: rad-damage
@@ -2779,7 +2779,7 @@
 		FlashDuration: 3
 	DamagedByTintedCells@RADMED:
 		Damage: 60
-		DamageInterval: 16
+		DamageInterval: 12
 		DamageTypes: RadiationDeath
 		LayerName: radioactivity.medium
 		Condition: rad-damage
@@ -3065,7 +3065,7 @@
 		DetectionTypes: Cloak
 		Range: 1c512
 	DamagedByTintedCells@RADSTRONG:
-		Damage: 800
+		Damage: 750
 		DamageInterval: 16
 		DamageTypes: RadiationDeath
 		LayerName: radioactivity.strong
@@ -3075,7 +3075,7 @@
 		FlashAlpha: 0.25
 		FlashDuration: 3
 	DamagedByTintedCells@RADSTRONGHAZMAT:
-		Damage: 400
+		Damage: 375
 		DamageInterval: 16
 		DamageTypes: RadiationDeath
 		LayerName: radioactivity.strong

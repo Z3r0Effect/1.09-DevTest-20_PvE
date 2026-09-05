@@ -2215,11 +2215,11 @@
 		OrderName: anathema
 		Icon: anathema
 		IconPalette: chromes
-		ChargeInterval: 2500
+		ChargeInterval: 5250
 		Name: Anathema
 		Condition: anathema
 		Range: 5c0
-		MaxTargets: 3
+		MaxTargets: 4
 		ValidTargets: AnathemaTargetable
 		Duration: 0
 		AllowMultiple: true
@@ -2254,7 +2254,7 @@
 		EndChargeSpeechNotification: SuppressionReady
 		EndChargeTextNotification: Suppression Field ready.
 		DisplayRadarPing: True
-		Range: 3c0
+		Range: 5c0
 		ShowTargetCircle: true
 		TargetTintColor: ff55ff33
 		TargetCircleColor: ff55ffcc
@@ -2267,7 +2267,7 @@
 		MinTargets: 1
 		ValidTargets: Ground, Air, AirSmall, Ship
 		ValidRelationships: Ally, Enemy, Neutral
-		Duration: 650
+		Duration: 500
 		AllowMultiple: false
 		Cursor: ability
 		ExplosionWeapon: SuppressionField
@@ -2275,7 +2275,7 @@
 		PauseOnCondition: disabled || empdisable || being-warped
 		OrderName: suppressionsiphon
 		Icon: spresspower
-		ChargeInterval: 3000
+		ChargeInterval: 3750
 		Name: Suppression Field
 		Description: Applies a suppression field to the target area, slowing unit movement and rate of fire.
 		SelectTargetSpeechNotification: SelectTarget
@@ -2285,7 +2285,7 @@
 		EndChargeSpeechNotification: SuppressionReady
 		EndChargeTextNotification: Suppression Field ready.
 		DisplayRadarPing: True
-		Range: 6c0
+		Range: 7c0
 		ShowTargetCircle: true
 		TargetTintColor: ff55ff33
 		TargetCircleColor: ff55ffcc
@@ -2298,7 +2298,7 @@
 		MinTargets: 1
 		ValidTargets: Ground, Air, AirSmall, Ship
 		ValidRelationships: Ally, Enemy, Neutral
-		Duration: 760
+		Duration: 750
 		AllowMultiple: false
 		Cursor: ability
 		ExplosionWeapon: SuppressionField
@@ -2358,7 +2358,7 @@
 		IncomingSound: fleetrecall.aud
 		KillCargo: false
 		DisplayRadarPing: True
-		Range: 14c0
+		Range: 16c0
 		ValidTargetTypes: FleetRecallable
 		InvalidTargetTypes: Husk
 		SupportPowerPaletteOrder: 30

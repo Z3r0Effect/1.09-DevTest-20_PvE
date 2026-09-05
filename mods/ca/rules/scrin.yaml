@@ -58,16 +58,16 @@ VEHICLES.SCRIN:
 ^ResourceConversion:
 	Inherits: ^OnResourceConditions
 	AmmoPool@RESCONV:
-		Ammo: 5
+		Ammo: 8
 		InitialAmmo: 0
 		AmmoCondition: ammo
 		Armaments: primary-charged
 	ReloadAmmoPool@RESCONV:
-		Count: 1
+		Count: 2
 		Delay: 20
 		RequiresCondition: charging-on-resource
 	WithAmmoPipsDecoration@RESCONV:
-		PipCount: 5
+		PipCount: 8
 		RequiresCondition: ammo
 		RequiresSelection: true
 		Position: BottomLeft
@@ -119,13 +119,13 @@ VEHICLES.SCRIN:
 		Step: 400
 		Delay: 25
 		StartIfBelow: 66
-		DamageCooldown: 250
+		DamageCooldown: 150
 		RequiresCondition: regen-upgrade
 	ChangesHealth@REGEN2:
 		Step: 200
 		Delay: 25
 		StartIfBelow: 100
-		DamageCooldown: 250
+		DamageCooldown: 150
 		RequiresCondition: regen-upgrade
 
 ^ScrinShields:
@@ -172,7 +172,12 @@ VEHICLES.SCRIN:
 		RequiresCondition: mshp-rearm
 	ExternalCondition@MothershipRearmable:
 		Condition: mshp-rearm
-
+	ChangesHealth@MothershipRepair:
+		Step: 1500
+		Delay: 25
+		StartIfBelow: 100
+		RequiresCondition: mshp-rearm
+        
 ^FleetRecallable:
 	Targetable@FleetRecallable:
 		TargetTypes: FleetRecallable
@@ -271,8 +276,8 @@ VEHICLES.SCRIN:
 		Condition: hyper-upgrade
 		Prerequisites: hyper.upgrade
 	GrantTimedConditionOnDeploy@HYPERCHARGE:
-		DeployedTicks: 100
-		CooldownTicks: 400
+		DeployedTicks: 200
+		CooldownTicks: 100
 		DeployedCondition: hypercharged
 		ChargingCondition: hyperchargedebuff
 		ShowSelectionBar: true
@@ -304,13 +309,13 @@ VEHICLES.SCRIN:
 		Modifier: 75
 		RequiresCondition: hyperchargedebuff
 	FirepowerMultiplier@HYPERCHARGEDEBUFF:
-		Modifier: 80
+		Modifier: 85
 		RequiresCondition: hyperchargedebuff
 	ReloadDelayMultiplier@HYPERCHARGEDEBUFF:
-		Modifier: 150
+		Modifier: 120
 		RequiresCondition: hyperchargedebuff
 	FirepowerMultiplier@HyperAnathema:
-		Modifier: 35
+		Modifier: 75
 		RequiresCondition: hypercharged && anathema > 1
 
 ^Anathema:
@@ -340,6 +345,18 @@ VEHICLES.SCRIN:
 	ReloadDelayMultiplier@Anathema4:
 		Modifier: 50
 		RequiresCondition: anathema >= 4
+	DamageMultiplier@Anathema1:
+		Modifier: 80
+		RequiresCondition: anathema == 1
+	DamageMultiplier@Anathema2:
+		Modifier: 70
+		RequiresCondition: anathema == 2
+	DamageMultiplier@Anathema3:
+		Modifier: 60
+		RequiresCondition: anathema == 3
+	DamageMultiplier@Anathema4:
+		Modifier: 50
+		RequiresCondition: anathema >= 4
 	ValueScalingFirepowerMultiplier@Anathema1:
 		MinValue: 600
 		MaxValue: 2000
@@ -365,10 +382,10 @@ VEHICLES.SCRIN:
 		MaxValueModifier: 200
 		RequiresCondition: anathema >= 4
 	SpeedMultiplier@Anathema2:
-		Modifier: 110
+		Modifier: 120
 		RequiresCondition: anathema >= 2 && anathema < 4
 	SpeedMultiplier@Anathema4:
-		Modifier: 120
+		Modifier: 130
 		RequiresCondition: anathema >= 4
 	GrantTimedCondition@Anathema:
 		Condition: anathema-alive
@@ -381,10 +398,22 @@ VEHICLES.SCRIN:
 		TargetTypes: AnathemaTargetable
 	KillsSelf@Anathema:
 		RequiresCondition: anathema && !anathema-alive
-	FireWarheadsOnDeath@Anathema:
-		Weapon: KirovExplode
-		EmptyWeapon: KirovExplode
-		RequiresCondition: anathema && !anathema-alive
+	FireWarheadsOnDeath@Anathema1:
+		Weapon: AnathemaExplosion1
+		EmptyWeapon: AnathemaExplosion1
+		RequiresCondition: anathema == 1
+	FireWarheadsOnDeath@Anathema2:
+		Weapon: AnathemaExplosion2
+		EmptyWeapon: AnathemaExplosion2
+		RequiresCondition: anathema == 2
+	FireWarheadsOnDeath@Anathema3:
+		Weapon: AnathemaExplosion3
+		EmptyWeapon: AnathemaExplosion3
+		RequiresCondition: anathema == 3
+	FireWarheadsOnDeath@Anathema4:
+		Weapon: AnathemaExplosion4
+		EmptyWeapon: AnathemaExplosion4
+		RequiresCondition: anathema >= 4
 	WithPalettedOverlay@Anathema:
 		RequiresCondition: anathema
 		Palette: anathema
@@ -437,7 +466,13 @@ VEHICLES.SCRIN:
 		Prerequisites: advart.upgrade
 	SpeedMultiplier@ADVART:
 		RequiresCondition: advart-upgrade
-		Modifier: 120
+		Modifier: 130
+	ReloadDelayMultiplier@ADVART:
+		Modifier: 85
+		RequiresCondition: advart-upgrade
+	ReloadAmmoDelayMultiplier@ADVART:
+		Modifier: 85
+		RequiresCondition: advart-upgrade
 	-DamagedByTintedCells@RADSTRONGHAZMAT:
 	-DamagedByTintedCells@RADSTRONGHAZMATSOVIET:
 	-DamagedByTintedCells@RADMEDHAZMAT:
@@ -865,7 +900,7 @@ BRST:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Mobile:
-		Speed: 90
+		Speed: 110
 	RevealsShroud:
 		Range: 8c0
 	FireWarheadsOnDeath:
@@ -889,7 +924,7 @@ BRST:
 	Selectable:
 		DecorationBounds: 640, 896, -32, -256
 	DamageMultiplier@HUMAN:
-		Modifier: 40
+		Modifier: 30
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	TargetedAttackAbility:
 		TargetCursor: attack
@@ -1340,7 +1375,7 @@ MAST:
 		Range: 10c0
 	DamageTypeDamageMultiplier@A2GPROTECTION:
 		DamageTypes: AirToGround
-		Modifier: 50
+		Modifier: 30
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Armament@PRIMARY:
 		Weapon: EnslaveInfantry
@@ -1631,7 +1666,7 @@ GUNW:
 		UpgradeAtActors: fix, rep, srep
 		BuildDuration: 100
 	DamageMultiplier@HUMAN:
-		Modifier: 65
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -2452,7 +2487,7 @@ DEVO:
 		Armaments: primary, primary-charged
 	WithSpriteTurret:
 	ProductionCostMultiplier@REAPBONUS:
-		Multiplier: 85
+		Multiplier: 80
 		Prerequisites: player.reaper
 	GrantConditionOnTerrain@ONWATER:
 		TerrainTypes: Water
@@ -2826,7 +2861,7 @@ TPOD:
 		Offset: 0,0,1024
 	ChangesHealth@THEAL:
 		Step: 0
-		PercentageStep: 7
+		PercentageStep: 5
 		Delay: 15
 		StartIfBelow: 100
 		DamageCooldown: 100
@@ -3228,7 +3263,7 @@ STMR:
 		Strengths: • Strong vs Infantry, Light Armor, Buildings, Aircraft
 		Weaknesses: • Weak vs Defenses
 	Valued:
-		Cost: 1500
+		Cost: 1200
 	Tooltip:
 		Name: Stormrider
 		GenericName: Aircraft
@@ -3267,7 +3302,7 @@ STMR:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 30
-		Speed: 177
+		Speed: 185
 		IdleSpeed: 135
 		IdleTurnSpeed: 15
 		RepulsionSpeed: 40
@@ -3369,16 +3404,16 @@ TORM:
 		Strengths: • Strong vs Vehicles, Defenses, Aircraft
 		Weaknesses: • Weak vs Infantry
 	Valued:
-		Cost: 1000
+		Cost: 1200
 	Tooltip:
 		Name: Tormentor
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 35000
+		HP: 30000
 	Shielded:
-		MaxStrength: 5500
+		MaxStrength: 6000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 9c0
@@ -3409,14 +3444,12 @@ TORM:
 		CruiseAltitude: 2560
 		TurnSpeed: 40
 		Speed: 212
-		IdleSpeed: 136
-		IdleTurnSpeed: 15
 		RepulsionSpeed: 40
 		MaximumPitch: 56
-		CanHover: False
+		CanHover: True
 		TakeoffSounds: dropup1.aud
 		LandingSounds: dropdwn1.aud
-		CanSlide: False
+		CanSlide: True
 		AltitudeVelocity: 0c120
 		IdealSeparation: 1c256
 	AutoTarget:
@@ -3462,15 +3495,15 @@ TORM:
 		Prerequisites: aircraft.upgraded
 	-EjectOnDeath:
 	AmmoPool:
-		Ammo: 6
+		Ammo: 8
 		AmmoCondition: ammo
-		ReloadDelay: 50
+		ReloadDelay: 40
 		ReloadCount: 2
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 6
+		PipCount: 8
 	Rearmable:
 		RearmActors: hpad, hpad.td, afld, afld.gdi, grav
 	GrantConditionOnDamageState@SmokeTrail:
@@ -3513,7 +3546,7 @@ ENRV:
 		Weaknesses: • Weak vs Infantry
 		Attributes: • Slows targets
 	Valued:
-		Cost: 2000
+		Cost: 1600
 	Tooltip:
 		Name: Enervator
 		GenericName: Aircraft
@@ -3751,7 +3784,7 @@ DEVA:
 	-Hovers@CRUISING:
 	-EjectOnDeath:
 	RangeMultiplier@Harbinger:
-		Modifier: 113
+		Modifier: 120
 		RequiresCondition: player-harbinger
 	GrantConditionOnPrerequisite@Harbinger:
 		Condition: player-harbinger
@@ -4085,6 +4118,11 @@ MSHP:
 		LocalOffset: 400,0,-200, 400,0,50, 400,0,300
 		MuzzleSequence: muzzle
 		MuzzlePalette: scrin
+	ProximityExternalCondition@MOTHERSHIPREARM:
+		Condition: mshp-rearm
+		Range: 12c0
+		ValidRelationships: Ally
+		RequiresCondition: !empdisable && !being-warped
 	WithMuzzleOverlay:
 	WithShadow:
 		ZOffset: -3072
@@ -4200,11 +4238,11 @@ MSHP:
 	AmmoPool@WORMHOLESPAWNER:
 		Name: wormholespawner
 		Armaments: none
-		Ammo: 4
+		Ammo: 2
 	ReloadAmmoPoolCA@WORMHOLESPAWNER:
 		AmmoPool: wormholespawner
-		Delay: 1125
-		Count: 2
+		Delay: 750
+		Count: 1
 		ShowSelectionBar: true
 		SelectionBarColor: 9988ff
 		ReloadWhenAmmoReaches: 0
@@ -4220,7 +4258,7 @@ MSHP:
 		RequiresCondition: !attacking
 	-SoundOnDamageTransitionCA:
 	ProductionCostMultiplier@HarbingerBonus:
-		Multiplier: 90
+		Multiplier: 80
 		Prerequisites: player.harbinger
 	Encyclopedia:
 		Category: Scrin/Aircraft
@@ -6477,7 +6515,7 @@ GRCL:
 	HitShape:
 	Aircraft:
 		CanHover: True
-		Speed: 40
+		Speed: 45
 		CruiseAltitude: 1
 		LandableTerrainTypes: Clear,Road,Rough,Ore,Gems,Tiberium,BlueTiberium,BlackTiberium,Water,Tree,River,Rock,Beach,Bridge,Tunnel,Wall,Ford
 	Voiced:
@@ -6641,7 +6679,7 @@ RiftMinorFade:
 camera.resourcescan:
 	Inherits: ^CameraBase
 	RevealsShroud:
-		Range: 5c0
+		Range: 7c0
 
 IchorSeeder:
 	Interactable:

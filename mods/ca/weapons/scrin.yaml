@@ -206,7 +206,7 @@ PlasmaDiscs:
 		Blockable: false
 		Jammable: true
 		HorizontalRateOfTurn: 30
-		RangeLimit: 6c512
+		RangeLimit: 9c512
 		LockOnBurstCounts: 1,3,5
 		MinimumLaunchAngle: 80
 		MaximumLaunchAngle: 112
@@ -309,7 +309,7 @@ DevastatorDiscs:
 	Inherits: PlasmaDiscs
 	Range: 16c0
 	MinRange: 3c0
-	ReloadDelay: 150
+	ReloadDelay: 85
 	Report: devastator-fire1.aud, devastator-fire2.aud, devastator-fire3.aud
 	Burst: 7
 	BurstDelays: 3
@@ -320,17 +320,17 @@ DevastatorDiscs:
 		TrailPalette: scrinplasma
 		Blockable: false
 		Image: plasdisclg
-		Inaccuracy: 1c768
+		Inaccuracy: 1c256
 		Speed: 260
 		LaunchAngle: 50
 	Warhead@1Dam: SpreadDamage
 		Spread: 416
-		Damage: 4675
+		Damage: 4800
 		Versus:
 			None: 100
 			Wood: 90
 			Light: 65
-			Heavy: 20
+			Heavy: 30
 			Concrete: 100
 			Brick: 100
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigatedMinor, AirToGround
@@ -347,13 +347,15 @@ DevastatorTorpedo:
 		Image: plasmatorp3
 		Palette: scrin
 		LaunchAngle: 25
-		Inaccuracy: 1c0
+		Inaccuracy: 0c768
 		Shadow: true
 		ShadowColor: 00000033
 		Speed: 400
 	Warhead@1Dam: SpreadDamage
 		Damage: 14000
 		Spread: 512
+		Versus:
+			Heavy: 50
 	Warhead@4Eff: CreateEffect
 		Explosions: large_artillery_explosion
 		ImpactSounds: xplobig4.aud
@@ -484,7 +486,7 @@ RiftCannon:
 	Inherits: ^ScrinLaser
 	Report: darkener-fire1.aud, darkener-fire2.aud
 	ReloadDelay: 70
-	Range: 10c512
+	Range: 11c0
 	Projectile: LaserZapCA
 		Duration: 20
 		Color: 000000FF
@@ -606,17 +608,17 @@ CorrupterSpew:
 	BurstDelays: 3
 	Range: 8c0
 	Projectile: Bullet
-		Speed: 170
+		Speed: 190
 		TrailImage: tibspew1
 		Image: tibspew2
-		LaunchAngle: 62
+		LaunchAngle: 45
 		Inaccuracy: 256
 		Blockable: false
 		Palette: scrin-ignore-lighting-alpha85
 		TrailPalette: scrin-ignore-lighting-alpha85
 	Warhead@1Dam: SpreadDamage
 		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath, FlakVestMitigatedMinor
-		Spread: 512
+		Spread: 384
 		Falloff: 100, 45, 20, 7, 0
 		Damage: 1000
 		Versus:
@@ -638,7 +640,7 @@ CorrupterSpewCharged:
 	Inherits: CorrupterSpew
 	StartBurstReport: corrupter-cfire1.aud
 	Projectile: Bullet
-		Speed: 200
+		Speed: 210
 		TrailImage: tibspew1lg
 		Image: tibspew2lg
 		LaunchAngle: 40
@@ -694,24 +696,24 @@ LeecherCoalesce:
 RuinerCannon:
 	Inherits: 155mm
 	Report: ruiner-fire1.aud
-	ReloadDelay: 75
+	ReloadDelay: 70
 	Burst: 5
 	BurstDelays: 15
 	Range: 11c0
 	Projectile: Bullet
-		Speed: 185
+		Speed: 195
 		Image: tibglob
 		Palette: scrin
-		Inaccuracy: 448
+		Inaccuracy: 384
 	Warhead@1Dam: SpreadDamage
-		Spread: 384
+		Spread: 512
 		Damage: 5000
 		Versus:
 			None: 120
 			Wood: 100
 			Concrete: 80
 			Light: 110
-			Heavy: 60
+			Heavy: 75
 			Brick: 20
 		DamageTypes: Prone50Percent, TriggerProne, RadiationDeath, FlakVestMitigatedMinor
 	Warhead@2Smu: LeaveSmudge
@@ -731,7 +733,7 @@ RuinerCannonCharged:
 		Speed: 224
 	Warhead@1Dam: SpreadDamage
 		Damage: 8200
-		Spread: 512
+		Spread: 768
 	Warhead@Shrap: FireShrapnel
 		Weapon: ChemDebrisSmall
 		Amount: 2
@@ -815,7 +817,7 @@ ReaperLaserChargedReversed:
 		FollowingOffset: 50,100,0
 
 StormriderZap:
-	Range: 8c0
+	Range: 8c256
 	Report: stormrider-fire1.aud, stormrider-fire2.aud, stormrider-fire3.aud
 	ReloadDelay: 50
 	Burst: 5
@@ -827,7 +829,7 @@ StormriderZap:
 		Palette: scrin
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Spread: 320
+		Spread: 768
 		Damage: 5500
 		Versus:
 			None: 105
@@ -861,14 +863,14 @@ StormRiderZapAA:
 		Speed: 1c768
 	ValidTargets: Air, AirSmall
 	Warhead@1Dam: SpreadDamage
-		Damage: 4000
+		Damage: 6500
 		Range: 0, 0c64, 0c256, 1c768
 		Falloff: 100, 100, 30, 15
 		ValidTargets: Air
 		ValidRelationships: Enemy, Neutral
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@smallDamage: SpreadDamage
-		Damage: 3500
+		Damage: 4500
 		Spread: 341
 		Falloff: 100, 50, 14, 0
 		ValidTargets: AirSmall
@@ -878,7 +880,7 @@ StormRiderZapAA:
 		ImpactSounds: irocataa.aud, irocatab.aud, irocatac.aud, irocatad.aud
 
 TormentorZap:
-	ReloadDelay: 50
+	ReloadDelay: 45
 	ValidTargets: Ground, Water
 	Range: 8c512
 	Report: torm-fire1.aud, torm-fire2.aud
@@ -893,11 +895,11 @@ TormentorZap:
 		SecondaryBeamColor: 7d00fe30
 		Duration: 10
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
+		Spread: 256
 		Damage: 14400
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, TankBuster, AirToGround
 		Versus:
-			None: 20
+			None: 25
 			Light: 65
 			Wood: 30
 			Heavy: 100
@@ -911,10 +913,10 @@ TormentorZap:
 
 TormentorZapAA:
 	Inherits: TormentorZap
-	Range: 9c0
+	Range: 9c128
 	ValidTargets: Air, AirSmall
 	Warhead@1Dam: SpreadDamage
-		Damage: 7200
+		Damage: 6000
 		ValidTargets: Air, AirSmall
 	-Warhead@2Smu:
 
@@ -928,7 +930,7 @@ EnervatorBolts:
 		Speed: 450
 		Image: enrvbolt
 		Palette: scrin
-		Inaccuracy: 128
+		Inaccuracy: 64
 		ContrailLength: 20
 		ContrailStartColor: FF00FF77
 		ContrailStartColorAlpha: 119
@@ -940,7 +942,7 @@ EnervatorBolts:
 		TrailPalette: scrinplasma
 		-PointDefenseType:
 	Warhead@1Dam: SpreadDamage
-		Spread: 256
+		Spread: 512
 		Damage: 14500
 		Versus:
 			None: 30
@@ -950,7 +952,7 @@ EnervatorBolts:
 			Concrete: 100
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, TankBuster, AirToGround
 	Warhead@2Sup: GrantExternalConditionCA
-		Range: 0c768
+		Range: 1c0
 		Duration: 75
 		Condition: suppression
 		ValidTargets: Vehicle, Ship, Structure
@@ -962,7 +964,7 @@ EnervatorBolts:
 
 EnervatorBoltsAA:
 	Inherits: EnervatorBolts
-	Range: 9c0
+	Range: 9c512
 	ValidTargets: Air, AirSmall
 	Projectile: MissileCA
 		CloseEnough: 341
@@ -1013,7 +1015,7 @@ InvaderZap:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 1600
+		Damage: 4000
 		InvalidTargets: Infantry
 		Versus:
 			None: 80
@@ -1026,14 +1028,14 @@ InvaderZap:
 	Warhead@2Dam: SpreadDamage
 		Spread: 256
 		ValidTargets: Infantry
-		Damage: 750
+		Damage: 1050
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, AirToGround
 	Warhead@2Eff: CreateEffect
 		Explosions: idle
 		ExplosionPalette: scrin
 		Image: scrinzaphitsm
 		ValidTargets: Ground, Ship, Air, AirSmall, Trees
-		Inaccuracy: 341
+		Inaccuracy: 256
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piffs
 		ValidTargets: Water, Underwater
@@ -1046,14 +1048,14 @@ InvaderZapAA:
 		Speed: 1c768
 	ValidTargets: Air, AirSmall
 	Warhead@1Dam: SpreadDamage
-		Damage: 475
+		Damage: 950
 		Range: 0, 0c64, 0c256, 1c0
 		Falloff: 100, 100, 30, 15
 		ValidTargets: Air
 		ValidRelationships: Enemy, Neutral
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@smallDamage: SpreadDamage
-		Damage: 435
+		Damage: 950
 		Spread: 512
 		Falloff: 100, 50, 14, 0
 		ValidTargets: AirSmall
@@ -1167,7 +1169,7 @@ IonCloudZap:
 		DistortionAnimation: 160
 		Duration: 10
 	Warhead@1Dam: SpreadDamage
-		Damage: 4000
+		Damage: 4500
 		Spread: 512
 		ValidRelationships: Enemy, Neutral
 
@@ -1175,10 +1177,10 @@ IonCloudMinorZap:
 	Inherits: IonCloudZap
 	Range: 6c512
 	Warhead@1Dam: SpreadDamage
-		Damage: 3400
+		Damage: 4000
 
 IonCloudChargeSource:
-	ReloadDelay: 85
+	ReloadDelay: 70
 	Range: 1c512
 	Projectile: InstantHit
 	Warhead@Charge: FireShrapnel
@@ -1192,8 +1194,8 @@ IonCloudChargeSource:
 IonCloudChargeZap:
 	Inherits: StormColumnZap
 	Burst: 1
-	ReloadDelay: 85
-	Range: 4c768
+	ReloadDelay: 70
+	Range: 5c768
 	ValidTargets: StormBoost
 	-StartBurstReport:
 	Report: stormcrawler-fire1.aud, stormcrawler-fire2.aud
@@ -1511,7 +1513,7 @@ LaceratorShards.Hypercharged:
 		ContrailStartWidth: 0c48
 		ContrailStartColor: 7e00ff
 	Warhead@1Dam: SpreadDamage
-		Damage: 7000
+		Damage: 7500
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath, TankBuster
 		Versus:
 			None: 10
@@ -1542,7 +1544,7 @@ ImpalerSpike:
 		ImpactSoundChance: 100
 	Warhead@Slow: GrantExternalConditionCA
 		Range: 0c512
-		Duration: 75
+		Duration: 100
 		Condition: slowed
 		ValidTargets: Vehicle, Infantry
 
@@ -1926,7 +1928,7 @@ PlasmaBomb:
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
 		Falloff: 1000, 448, 192, 64, 26, 10, 0
-		Damage: 700
+		Damage: 900
 		Versus:
 			None: 20
 			Wood: 30
@@ -2018,7 +2020,7 @@ GreaterCoalescence:
 	Warhead@heal: SpreadDamage
 		Range: 0, 4c512
 		Falloff: 100, 100
-		Damage: -600
+		Damage: -800
 		ValidTargets: Healable, Repairable
 		Versus:
 			None: 40
@@ -2044,7 +2046,7 @@ GreaterCoalescenceZap:
 		Colors: ee000006
 	Warhead@1Dam: SpreadDamage
 		Spread: 160
-		Damage: 325
+		Damage: 950
 		Versus:
 			None: 100
 			Light: 100
@@ -2122,7 +2124,7 @@ AtomizerBolts:
 		ContrailStartColorAlpha: 170
 	Warhead@1Dam: SpreadDamage
 		Spread: 405
-		Damage: 4000
+		Damage: 6500
 		ValidTargets: Ground, Water
 		Versus:
 			None: 15
@@ -2190,7 +2192,7 @@ AtomizerArc:
 		ValidTargets: Vehicle, Ship, Defense, Infantry
 	Warhead@2Dam: TargetDamage
 		DamageTypes: Prone50Percent, AtomizedDeath
-		Damage: 2000
+		Damage: 3000
 		Delay: 25
 		Versus:
 			None: 15
@@ -2198,7 +2200,7 @@ AtomizerArc:
 			Concrete: 90
 	Warhead@3Dam: TargetDamage
 		DamageTypes: Prone50Percent, AtomizedDeath
-		Damage: 4000
+		Damage: 5000
 		Delay: 50
 		Versus:
 			None: 15
@@ -2206,7 +2208,7 @@ AtomizerArc:
 			Concrete: 90
 	Warhead@4Dam: TargetDamage
 		DamageTypes: Prone50Percent, AtomizedDeath
-		Damage: 4000
+		Damage: 5000
 		Delay: 70
 		Versus:
 			None: 15
@@ -2214,7 +2216,7 @@ AtomizerArc:
 			Concrete: 90
 	Warhead@5Dam: TargetDamage
 		DamageTypes: Prone50Percent, AtomizedDeath
-		Damage: 4000
+		Damage: 5000
 		Delay: 100
 		Versus:
 			None: 15
@@ -2316,8 +2318,8 @@ MindSparkZap:
 		SegmentLength: 350
 		ZOffset: 512
 	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 10000
+		Spread: 320
+		Damage: 14000
 		Versus:
 			None: 70
 			Light: 85
@@ -2334,7 +2336,7 @@ ObliteratorCharge:
 	MinRange: 1c0
 	ReloadDelay: 5
 	Projectile: LinearPulse
-		Speed: 2c0
+		Speed: 3c0
 		ImpactInterval: 448
 	Warhead@2Eff: CreateEffect
 		Explosions: idle, idle2, idle3, idle4, idle5, idle6, idle7, idle8
@@ -2374,13 +2376,13 @@ ObliteratorBolt:
 			Palette: scrin
 			Inaccuracy: 110
 	Warhead@1Dam: SpreadDamage
-		Spread: 256
+		Spread: 320
 		Damage: 16000
 		Versus:
 			None: 60
 			Wood: 115
 			Concrete: 100
-			Heavy: 95
+			Heavy: 120
 			Light: 100
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 		ValidRelationships: Enemy, Neutral

@@ -2124,10 +2124,10 @@ advart.upgrade:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~player.traveler, anyradar, ~techlevel.medium
-		Description: Enable Scrin infantry to move faster.\n\nUpgrades: Scrin Infantry
+		Description: Enable Scrin infantry to move faster and increased reload speed.\n\nUpgrades: Scrin Infantry
 		IconPalette: chromes
 	TooltipExtras:
-		Strengths: + 20% faster movement
+		Strengths: + 20% faster movement\n\n + 15% faster reload
 	Valued:
 		Cost: 1250
 	RenderSprites:

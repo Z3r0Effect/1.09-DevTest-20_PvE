@@ -1418,7 +1418,7 @@ OverlordsWrath:
 	Warhead@1Dam: SpreadDamage
 		Spread: 5c0
 		Damage: 75000
-		Falloff: 100, 0
+		Falloff: 100, 85, 0
 		Versus:
 			None: 20
 			Light: 65
@@ -1436,10 +1436,10 @@ OverlordsWrath:
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees
 	Warhead@3Res: CreateResource
 		AddsResourceType: Tiberium
-		Size: 1
+		Size: 3
 	Warhead@4Res: CreateResource
 		AddsResourceType: Tiberium
-		Size: 2
+		Size: 5
 		Delay: 5
 	Warhead@Shrap: FireShrapnel
 		Weapon: ChemDebris

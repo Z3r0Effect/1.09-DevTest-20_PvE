@@ -355,7 +355,7 @@ ChainGun.Yak.R:
 	Projectile: InstantHit
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c256
+		Spread: 1c0
 		Damage: 3350
 		Versus:
 			None: 100
@@ -835,7 +835,7 @@ AKMBATF:
 
 SNIPER:
 	ReloadDelay: 60
-	Range: 9c768
+	Range: 10c256
 	Report: snipe.aud
 	Projectile: InstantHit
 		Blockable: true
@@ -946,8 +946,8 @@ SNIPERBATF.UPG:
 SNIPER.ASSA:
 	Inherits: SNIPER
 	InvalidTargets: Structure
-	ReloadDelay: 75
-	Range: 12c512
+	ReloadDelay: 60
+	Range: 13c0
 	Report: iviratta.aud
 	Warhead@1Dam: SpreadDamage
 		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath
@@ -960,7 +960,7 @@ SNIPER.ASSA:
 
 SNIPERBATF.ASSA:
 	Inherits: SNIPER.ASSA
-	Range: 9c512
+	Range: 11c768
 
 SniperIFVGun.UPG:
 	Inherits: SNIPER.vehicle
@@ -994,8 +994,8 @@ SealIFVGun:
 
 ShadowOperativeGun:
 	Inherits: ^HeavyMG
-	Range: 7c768
-	ReloadDelay: 25
+	Range: 8c0
+	ReloadDelay: 20
 	Burst: 2
 	BurstDelays: 3
 	Report: shad-fire1.aud, shad-fire2.aud, shad-fire3.aud
@@ -1003,7 +1003,7 @@ ShadowOperativeGun:
 	ValidTargets: Infantry
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 2800
+		Damage: 3600
 		Versus:
 			None: 100
 			Wood: 40
@@ -1022,7 +1022,7 @@ HeliGunAG:
 	Projectile: Bullet
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c256
+		Spread: 1c128
 		Damage: 5500
 		Versus:
 			None: 144

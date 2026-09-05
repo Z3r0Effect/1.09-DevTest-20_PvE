@@ -1384,7 +1384,7 @@ HACK:
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageTypeDamageMultiplier@A2GPROTECTION:
 		DamageTypes: AirToGround
-		Modifier: 50
+		Modifier: 40
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Infantry
@@ -2328,7 +2328,7 @@ SNIP:
 		MuzzleSequence: garrison-muzzle
 		RequiresCondition: apb-upgrade
 	Mobile:
-		Speed: 50
+		Speed: 55
 		Voice: Move
 	Cloak@NORMAL:
 		InitialDelay: 75
@@ -2380,7 +2380,7 @@ SNIP:
 		RequiresCondition: invisibility || hidden
 		ColorSource: Player
 	DamageMultiplier@HUMAN:
-		Modifier: 75
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Allies/Infantry
@@ -2498,8 +2498,9 @@ BORI:
 		DamageTypes: AirToGround
 		Modifier: 50
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
-	RenderRangeCircle@SCORCHED:
-		Range: 32
+	WithRangeCircle@SCORCHED:
+		Type: ScorchedEarth
+		Range: 18c0
 		Color: ff660080
 	Voiced:
 		VoiceSet: BorisVoice
@@ -2720,6 +2721,16 @@ ASSA:
 	Voiced:
 		VoiceSet: AssassinVoice
 	-TakeCover:
+	Cloak@NORMAL:
+		InitialDelay: 50
+		CloakDelay: 40
+		CloakedCondition: hidden
+		CloakSound: gstealon.aud
+		UncloakSound: gstealof.aud
+		DetectionTypes: Cloak
+		RequiresCondition: !cloak-force-disabled && !being-warped && !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+		PauseOnCondition: invisibility
+		UncloakOn: Unload, Infiltrate, Demolish, Dock, Attack
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	WithProductionIconOverlay:
@@ -2734,7 +2745,7 @@ ASSA:
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageTypeDamageMultiplier@A2GPROTECTION:
 		DamageTypes: AirToGround
-		Modifier: 50
+		Modifier: 30
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Infantry
@@ -2844,7 +2855,7 @@ CONF:
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageTypeDamageMultiplier@A2GPROTECTION:
 		DamageTypes: AirToGround
-		Modifier: 50
+		Modifier: 30
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Targetable@MindControlImmune:
 		TargetTypes: MindControlImmune
@@ -3053,7 +3064,7 @@ JJET:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 9000
 	Targetable:
 		RequiresCondition: !airborne && !being-warped
 		TargetTypes: Ground, Infantry
@@ -3162,7 +3173,7 @@ JJET:
 		Modifier: 125
 		RequiresCondition: ejjet-upgrade
 	DamageMultiplier@HUMAN:
-		Modifier: 75
+		Modifier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnDamageState@DAMAGED:
 		Condition: damaged
@@ -3422,7 +3433,7 @@ DESO:
 		Modifier: 75
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageMultiplier@DEPLOYED:
-		Modifier: 20
+		Modifier: 10
 		RequiresCondition: deployed
 	-TakeCover:
 	-ReplacedInQueue:
@@ -4618,7 +4629,7 @@ SEAL:
 		DamageTypes: ExplosionDeath
 	DamageTypeDamageMultiplier@A2GPROTECTION:
 		DamageTypes: AirToGround
-		Modifier: 50
+		Modifier: 40
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageMultiplier@HUMAN:
 		Modifier: 70
