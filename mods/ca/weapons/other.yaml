@@ -1346,10 +1346,10 @@ RaiderBuggyLaser:
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
-		Damage: 9500
+		Damage: 8500
 		Versus:
-			Light: 110
-			Heavy: 140
+			Light: 80
+			Heavy: 75
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	-Warhead@2Eff:
 	Warhead@2Smu: LeaveSmudge

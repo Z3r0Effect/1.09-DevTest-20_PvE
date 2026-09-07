@@ -461,7 +461,7 @@ U3:
 		ProneOffset: 384,0,-395
 		RequiresCondition: !deployed
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageMultiplier:
 		Modifier: 30
@@ -1668,7 +1668,7 @@ TTRP:
 		CrushClasses: heavyinfantry
 	-ReplacedInQueue:
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Armament@PRIMARY:
 		Weapon: PortaTesla.UPG
@@ -2742,7 +2742,7 @@ ASSA:
 	Targetable@MindControlResistant:
 		TargetTypes: MindControlResistant
 	DamageMultiplier@HUMAN:
-		Modifier: 40
+		Modifier: 50
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageTypeDamageMultiplier@A2GPROTECTION:
 		DamageTypes: AirToGround
@@ -2852,7 +2852,7 @@ CONF:
 		Image: pips
 		Sequence: pip-assa
 	DamageMultiplier@HUMAN:
-		Modifier: 40
+		Modifier: 50
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageTypeDamageMultiplier@A2GPROTECTION:
 		DamageTypes: AirToGround
@@ -3507,7 +3507,7 @@ N1C:
 		Weapon: Vulcan3
 		MuzzleSequence: garrison-muzzle
 	DamageMultiplier@CYBORGARMORHUMAN:
-		Modifier: 40
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -5072,7 +5072,7 @@ CMSR:
 		AlwaysShowMaxRange: true
 	IgnoresDisguise:
 	DamageMultiplier@HUMAN:
-		Modifier: 40
+		Modifier: 50
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageTypeDamageMultiplier@A2GPROTECTION:
 		DamageTypes: AirToGround
@@ -5182,7 +5182,7 @@ ZTRP:
 		TargetTypes: Temporal
 		RequiresCondition: !jumping
 	DamageMultiplier@Jumping:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: jumping
 	DamageMultiplier@HUMAN:
 		Modifier: 60
@@ -5215,7 +5215,7 @@ ZRAI:
 	Health:
 		HP: 24000
 	Mobile:
-		Speed: 50
+		Speed: 55
 	DamageMultiplier@HUMAN:
 		Modifier: 65
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
