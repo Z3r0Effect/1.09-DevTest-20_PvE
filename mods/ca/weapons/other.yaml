@@ -1003,7 +1003,7 @@ Ivanbomb:
 	Report: grenade1.aud
 	Projectile: Bullet
 		LaunchAngle: 50
-		Speed: 145
+		Speed: 160
 		Inaccuracy: 0
 		Image: TNT
 		BounceCount: 1
@@ -1685,14 +1685,14 @@ PrisLaser:
 		SecondaryBeamColor: 75D1FF
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 14000
+		Damage: 18000
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 		Versus:
 			None: 45
 			Wood: 40
 			Concrete: 95
-			Light: 85
-			Heavy: 85
+			Light: 95
+			Heavy: 95
 			Brick: 50
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch-NoFlame
@@ -1751,7 +1751,7 @@ PrisTLaser:
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Damage: 4000
-		Spread: 341
+		Spread: 405
 		Versus:
 			None: 150
 			Wood: 100
@@ -1765,14 +1765,14 @@ PrisTLaser:
 PrisTBurst:
 	Inherits: PrisTLaser
 	-Report:
-	Range: 3c256
+	Range: 3c512
 	Projectile: LaserZapCA
 		-HitAnim:
 	Warhead@1Dam: SpreadDamage
-		Damage: 2100
+		Damage: 2800
 		Spread: 160
 		Versus:
-			Heavy: 20
+			Heavy: 50
 			Wood: 35
 			Concrete: 100
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, FlakVestMitigated
@@ -1784,7 +1784,7 @@ PrisTBurst:
 PrisCLaser:
 	Inherits: PrisTLaser
 	Report: pcanfire.aud
-	ReloadDelay: 80
+	ReloadDelay: 65
 	Range: 11c0
 	Projectile: LaserZapCA
 		Width: 70
@@ -1793,14 +1793,14 @@ PrisCLaser:
 		SecondaryBeamWidth: 140
 		SecondaryBeamColor: 4be8d499
 	Warhead@1Dam: SpreadDamage
-		Damage: 10000
-		Spread: 256
+		Damage: 14000
+		Spread: 385
 		Versus:
-			None: 60
+			None: 85
 			Wood: 100
-			Concrete: 75
-			Light: 85
-			Heavy: 75
+			Concrete: 85
+			Light: 100
+			Heavy: 105
 	-Warhead@Burst:
 
 HopliteGun:
@@ -2395,7 +2395,7 @@ OrcaBomb:
 		Shadow: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 1600
+		Damage: 2400
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water
 		Versus:
@@ -2442,7 +2442,7 @@ OrcaBombBuilding:
 		Delay: 35
 		Versus:
 			None: 0
-			Wood: 40
+			Wood: 50
 			Light: 0
 			Heavy: 0
 			Concrete: 0
@@ -2667,15 +2667,15 @@ VirusCloud:
 	Inherits: Cloud
 	-Warhead@18Radio:
 	Warhead@1Dam: SpreadDamage
-		Damage: 850
-		Spread: 256
-		Falloff: 100, 37, 14, 0
+		Damage: 4000
+		Spread: 512
+		Falloff: 200, 150, 75, 25, 0
 		DamageTypes: PoisonDeath
 		Versus:
-			Light: 35
+			Light: 65
+			Heavy: 50
 			Wood: 10
-			Concrete: 10
-			Brick: 0
+			Concrete: 80
 
 IrradiatedUnit:
 	Inherits: Cloud
@@ -3209,7 +3209,7 @@ JDAM:
 	ValidTargets: Ground, Water, Trees
 	ReloadDelay: 50
 	Report: bwhis.aud
-	Range: 3c0
+	Range: 4c0
 	MinRange: 2c0
 	TargetActorCenter: true
 	Projectile: GravityBomb
@@ -3716,8 +3716,8 @@ AvatarLaser.Adv:
 		Explosions: small_explosion, small_explosion_alt1, small_explosion_alt2, small_explosion_alt3
 
 ShadeEmp:
-	ReloadDelay: 75
-	Range: 8c0
+	ReloadDelay: 60
+	Range: 8c128
 	Report: enli-empfire.aud
 	Projectile: Bullet
 		Inaccuracy: 64
@@ -3734,8 +3734,8 @@ ShadeEmp:
 		ContrailStartColorAlpha: 170
 		ContrailStartWidth: 0c48
 	Warhead@1Dam: SpreadDamage
-		Spread: 341
-		Damage: 17000
+		Spread: 512
+		Damage: 18000
 		ValidTargets: Ground, Water
 		Versus:
 			None: 75
@@ -3746,14 +3746,14 @@ ShadeEmp:
 			Brick: 5
 		DamageTypes: Prone50Percent, TriggerProne, ElectricityDeath, AirToGround
 	Warhead@1Emp: GrantExternalConditionCA
-		Range: 1c256
+		Range: 1c128
 		Duration: 225
 		Condition: empdisable
 		ValidTargets: Vehicle, Ship, Structure
 		InvalidTargets: Cyborg, EmpImmune
 	Warhead@2Emp: GrantExternalConditionCA
-		Range: 1c256
-		Duration: 100
+		Range: 1c512
+		Duration: 175
 		Condition: empdisable
 		ValidTargets: Cyborg
 		InvalidTargets: EmpImmune
@@ -3771,7 +3771,7 @@ ManticoreBolts:
 	Range: 14c0
 	MinRange: 3c0
 	Report: mcor-fire1.aud, mcor-fire2.aud
-	ReloadDelay: 75
+	ReloadDelay: 60
 	Burst: 4
 	BurstDelays: 3
 	ValidTargets: Air, AirSmall
@@ -3791,9 +3791,9 @@ ManticoreBolts:
 		CruiseAltitude: 0
 	Warhead@1Dam: SpreadDamage
 		Range: 0, 0c64, 0c256, 1c768
-		Damage: 4600
+		Damage: 6500
 	Warhead@smallDamage: SpreadDamage
-		Damage: 4600
+		Damage: 6500
 
 VertigoBomb:
 	Inherits: JDAM

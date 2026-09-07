@@ -317,7 +317,8 @@ Vulcan3:
 
 Vulcan4:
 	Inherits: ^HeavyMG
-	Range: 8c512
+	ReloadDelay: 25
+	Range: 9c128
 	-Projectile:
 	Projectile: PlasmaBeam
 		ImpactTicks: 0, 2, 4, 6, 8, 10
@@ -328,13 +329,13 @@ Vulcan4:
 		Invisible: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 160
-		Damage: 1500
+		Damage: 5500
 		Versus:
-			None: 220
+			None: 100
 			Wood: 56
-			Light: 58
-			Heavy: 45
-			Concrete: 35
+			Light: 60
+			Heavy: 70
+			Concrete: 75
 			Brick: 20
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
@@ -611,7 +612,7 @@ M60mgNHAW:
 	BurstDelays: 5
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 2400
+		Damage: 3000
 		Versus:
 			None: 165
 			Light: 70
@@ -701,7 +702,7 @@ MGattG:
 
 SilencedPPK:
 	Inherits: ^SnipeWeapon
-	Range: 5c512
+	Range: 8c512
 	Report: silppk.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -721,7 +722,7 @@ SilencedPPK:
 
 SilencedPPKBATF:
 	Inherits: SilencedPPK
-	Range: 6c0
+	Range: 8c0
 
 Colt45:
 	Inherits: ^SnipeWeapon
@@ -835,7 +836,7 @@ AKMBATF:
 
 SNIPER:
 	ReloadDelay: 60
-	Range: 10c256
+	Range: 11c512
 	Report: snipe.aud
 	Projectile: InstantHit
 		Blockable: true
@@ -867,13 +868,13 @@ SNIPER:
 
 SNIPER.vehicle:
 	Inherits: SNIPER
-	ReloadDelay: 85
-	Range: 10c512
+	ReloadDelay: 70
+	Range: 11c512
 	Report: ijarwe1a.aud
 	Warhead@1Dam: SpreadDamage
 		Versus:
-			Light: 28
-			Heavy: 28
+			Light: 30
+			Heavy: 40
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, TankBuster
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
@@ -899,8 +900,8 @@ SNIPER.vehicle:
 
 SNIPER.vehicleRank2:
 	Inherits: SNIPER.vehicle
-	ReloadDelay: 80
-	Range: 11c256
+	ReloadDelay: 75
+	Range: 11c768
 	Report: ijarwe2a.aud
 	Warhead@Concussion: GrantExternalConditionCA
 		InvalidTargets: DriverKillLow
@@ -918,8 +919,8 @@ SNIPER.vehicleRank2:
 
 SNIPER.vehicleElite:
 	Inherits: SNIPER.vehicle
-	ReloadDelay: 85
-	Range: 13c0
+	ReloadDelay: 75
+	Range: 13c128
 	Report: ijarwe2a.aud
 	Warhead@Concussion: GrantExternalConditionCA
 		InvalidTargets: DriverKillLow
@@ -946,8 +947,8 @@ SNIPERBATF.UPG:
 SNIPER.ASSA:
 	Inherits: SNIPER
 	InvalidTargets: Structure
-	ReloadDelay: 60
-	Range: 13c0
+	ReloadDelay: 35
+	Range: 13c512
 	Report: iviratta.aud
 	Warhead@1Dam: SpreadDamage
 		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath
@@ -994,7 +995,7 @@ SealIFVGun:
 
 ShadowOperativeGun:
 	Inherits: ^HeavyMG
-	Range: 8c0
+	Range: 10c0
 	ReloadDelay: 20
 	Burst: 2
 	BurstDelays: 3
@@ -1003,7 +1004,7 @@ ShadowOperativeGun:
 	ValidTargets: Infantry
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 3600
+		Damage: 4000
 		Versus:
 			None: 100
 			Wood: 40
@@ -1022,8 +1023,8 @@ HeliGunAG:
 	Projectile: Bullet
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c128
-		Damage: 5500
+		Spread: 1c0
+		Damage: 5000
 		Versus:
 			None: 144
 			Wood: 35

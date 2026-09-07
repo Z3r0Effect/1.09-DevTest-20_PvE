@@ -32,7 +32,7 @@
 25mm:
 	Inherits: ^Cannon
 	Range: 7c768
-	ReloadDelay: 31
+	ReloadDelay: 30
 	Report: cannon2.aud
 	Projectile: Bullet
 		Speed: 853
@@ -49,6 +49,7 @@
 25mmFRAG:
 	Inherits: ^Cannon
 	Range: 7c0
+	ReloadDelay: 45
 	Report: tnkfire3.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
@@ -129,17 +130,17 @@
 	Range: 6c512
 	ReloadDelay: 30
 	Warhead@1Dam: SpreadDamage
-		Damage: 3200
+		Damage: 3600
 
 120mmHEAT:
 	Inherits: 25mm
 	Range: 6c768
-	ReloadDelay: 50
+	ReloadDelay: 45
 	Report: vmiratta.aud
 	Projectile: Bullet
 		Image: 120MMHEATN
 	Warhead@1Dam: SpreadDamage
-		Damage: 6600
+		Damage: 9500
 		Versus:
 			None: 30
 			Heavy: 95
@@ -155,15 +156,15 @@
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			Concrete: 48
-			Heavy: 115
+			Heavy: 125
 
 125mmRhino:
 	Inherits: 125mm
 	Report: vrhiatta.aud, vrhiattb.aud, vrhiattc.aud, vrhiattd.aud
 	Burst: 1
-	ReloadDelay: 75
+	ReloadDelay: 65
 	Warhead@1Dam: SpreadDamage
-		Damage: 8350
+		Damage: 8500
 
 125mmLasher:
 	Inherits: 125mm
@@ -232,7 +233,7 @@
 130mm:
 	Inherits: ^Cannon
 	Range: 6c512
-	ReloadDelay: 75
+	ReloadDelay: 65
 	Burst: 2
 	InvalidTargets: Infantry
 	Warhead@1Dam: SpreadDamage
@@ -269,7 +270,7 @@
 	Inherits: 130mmTD
 	ReloadDelay: 28
 	Warhead@1Dam: SpreadDamage
-		Damage: 2600
+		Damage: 3400
 
 135mm:
 	Inherits: 130mm
@@ -297,15 +298,15 @@
 
 152mm:
 	Inherits: ^Cannon
-	ReloadDelay: 100
+	ReloadDelay: 80
 	Report: vapoat1a.aud
-	Range: 7c128
+	Range: 7c256
 	Burst: 2
 	BurstDelays: 8
 	Warhead@1Dam: SpreadDamage
 		Damage: 4500
 		Spread: 512
-		Falloff: 368, 184, 80, 18, 0
+		Falloff: 375, 190, 85, 25, 0
 		Versus:
 			None: 40
 			Tree: 200
@@ -336,26 +337,26 @@
 		Image: radball
 	Warhead@1Dam: SpreadDamage
 		Versus:
-			None: 60
+			None: 90
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@18Radio: CreateTintedCells
 		Level: 250
 
 183mm:
 	Inherits: ^Cannon
-	ReloadDelay: 75
+	ReloadDelay: 70
 	Report: tnkfire6.aud
 	Range: 8c128
 	Projectile: Bullet
 		Speed: 768
 		Image: 183MM
 	Warhead@1Dam: SpreadDamage
-		Damage: 12000
+		Damage: 14000
 		Versus:
-			Heavy: 160
+			Heavy: 180
 			None: 10
 			Wood: 15
-			Light: 65
+			Light: 75
 			Concrete: 48
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, TankBuster
 
@@ -369,7 +370,7 @@ TurretGun:
 		Versus:
 			None: 20
 			Wood: 58
-			Concrete: 40
+			Concrete: 90
 			Light: 80
 			Heavy: 85
 	Warhead@3EffGround: CreateEffect
@@ -383,7 +384,7 @@ TurretGunTD:
 
 TitanGun:
 	Inherits: TurretGunTD
-	ReloadDelay: 75
+	ReloadDelay: 70
 	Report: vtadatta.aud, vtadattb.aud, vtadattc.aud
 	Range: 6c768
 	Warhead@1Dam: SpreadDamage
@@ -398,11 +399,11 @@ TitanGun:
 ^Artillery:
 	Inherits: ^Cannon
 	ReloadDelay: 60
-	Range: 9c0
+	Range: 9c512
 	Projectile: Bullet
 		Speed: 224
 		Blockable: false
-		LaunchAngle: 62
+		LaunchAngle: 60
 		Inaccuracy: 1c938
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
@@ -424,23 +425,23 @@ TitanGun:
 
 155mm:
 	Inherits: ^Artillery
-	ReloadDelay: 85
+	ReloadDelay: 70
 	MinRange: 2c0
 	Report: tank5.aud
-	Range: 9c768
+	Range: 10c128
 	TargetActorCenter: true
 	Projectile: Bullet
-		Speed: 205
+		Speed: 210
 		Inaccuracy: 1c138
 	Warhead@1Dam: SpreadDamage
-		Damage: 9750
+		Damage: 12000
 		Falloff: 100, 55, 20, 5
 		Versus:
-			None: 70
+			None: 90
 			Wood: 100
-			Concrete: 70
-			Light: 80
-			Heavy: 35
+			Concrete: 110
+			Light: 90
+			Heavy: 65
 
 155mmTD:
 	Inherits: 155mm
@@ -451,6 +452,7 @@ TitanGun:
 155mmTDM:
 	Inherits: 155mmTD
 	Range: 10c512
+	ReloadDelay: 65
 	Report: howi-fire1.aud, howi-fire2.aud
 	ReloadDelay: 55
 	Projectile: Bullet
@@ -463,7 +465,7 @@ TitanGun:
 		Versus:
 			Wood: 75
 			Light: 90
-			Heavy: 85
+			Heavy: 65
 	Warhead@3Eff: CreateEffect
 		Explosions: large_explosion
 		ImpactSounds: kaboom12.aud
@@ -485,14 +487,15 @@ TitanGun:
 		Inaccuracy: 1c138
 		LaunchAngle: 90
 	Warhead@1Dam: SpreadDamage
+		Spread: 384
 		Damage: 8500
 		Falloff: 100, 55, 20, 5
 		Versus:
 			None: 100
 			Wood: 95
-			Light: 60
-			Heavy: 55
-			Concrete: 70
+			Light: 80
+			Heavy: 75
+			Concrete: 75
 			Brick: 20
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, FlakVestMitigatedMinor
 	Warhead@2Smu: LeaveSmudge
@@ -596,7 +599,7 @@ NukeCannonDeployer:
 	Range: 18c0
 	TargetActorCenter: true
 	Projectile: Bullet
-		Speed: 245
+		Speed: 255
 		Image: 280mma
 		LaunchAngle: 75
 		Inaccuracy: 554
@@ -751,24 +754,24 @@ NukeCannonDeployer:
 JuggernautGun:
 	Inherits: ^Artillery
 	MinRange: 3c0
-	ReloadDelay: 90
-	Range: 10c0
+	ReloadDelay: 80
+	Range: 11c0
 	Projectile: Bullet
-		Speed: 250
+		Speed: 260
 		LaunchAngle: 45
-		Inaccuracy: 0c512
+		Inaccuracy: 0c384
 	Burst: 3
 	BurstDelays: 6
 	StartBurstReport: jugger1.aud
 	TargetActorCenter: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 384
-		Damage: 2600
+		Damage: 3000
 		Falloff: 1000, 500, 250, 100, 40, 15, 0
 		Versus:
 			None: 100
 			Wood: 80
-			Heavy: 50
+			Heavy: 55
 			Light: 80
 			Concrete: 55
 	Warhead@4EffWater: CreateEffect
@@ -806,7 +809,7 @@ JuggernautGunTargeting:
 
 Grenade:
 	Inherits: ^Artillery
-	Range: 6c256
+	Range: 6c768
 	Report: grenade1.aud
 	Projectile: Bullet
 		Speed: 136
@@ -847,9 +850,10 @@ GrenadeJJ:
 
 EMPGrenadeJJ:
 	Inherits: GrenadeJJ
+	ReloadDelay: 75
 	Warhead@2emp: GrantExternalConditionCA
 		Range: 320
-		Duration: 50
+		Duration: 40
 		Condition: empdisable
 		ValidTargets: Vehicle, Ship, Structure
 		InvalidTargets: EmpImmune
@@ -871,7 +875,7 @@ EMPGrenade:
 		DamageTypes: Prone50Percent, TriggerProne, ElectricityDeath
 	Warhead@5emp: GrantExternalConditionCA
 		Range: 1c128
-		Duration: 40
+		Duration: 50
 		Condition: empdisable
 		ValidTargets: Vehicle, Ship, Structure
 		InvalidTargets: EmpImmune
@@ -885,12 +889,12 @@ EMPGrenade:
 
 ShadowOperativeGrenade:
 	Inherits: Grenade
-	ReloadDelay: 45
+	ReloadDelay: 35
 	InvalidTargets: Infantry
 	Projectile: Bullet
 		Image: shadgren
 	Warhead@1Dam: SpreadDamage
-		Damage: 7400
+		Damage: 7500
 		Versus:
 			Concrete: 100
 			Light: 100
@@ -899,7 +903,7 @@ ShadowOperativeGrenade:
 
 ShadowGliderGrenade:
 	Range: 2c0
-	ReloadDelay: 75
+	ReloadDelay: 55
 	Inherits: ShadowOperativeGrenade
 	-InvalidTargets:
 	Projectile:
@@ -922,13 +926,13 @@ ShadowGliderGrenade:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 5500
+		Damage: 6500
 		Falloff: 100, 80, 55, 25, 0
 		Versus:
 			None: 100
 			Wood: 90
-			Light: 45
-			Heavy: 45
+			Light: 60
+			Heavy: 75
 			Concrete: 40
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigated
 	Warhead@4EffWater: CreateEffect
@@ -945,9 +949,9 @@ ChemicalMortar:
 	Warhead@1Dam: SpreadDamage
 		DamageTypes: Prone50Percent, TriggerProne, RadiationDeath
 	Warhead@2Dam: SpreadDamage
-		Damage: 8000
+		Damage: 8500
 		Spread: 768
-		Falloff: 100, 75, 50, 0
+		Falloff: 100, 85, 65, 25, 0
 		ValidTargets: Cyborg
 		Versus:
 			Heavy: 85
@@ -974,9 +978,10 @@ CryoMortar:
 		Image: cryoball
 		ContrailStartColor: 8fc6ffaa
 	Warhead@1Dam: SpreadDamage
-		Damage: 4500
+		Spread: 1c128
+		Damage: 6500
 		Versus:
-			None: 90
+			None: 95
 			Brick: 5
 		DamageTypes: Prone50Percent, TriggerProne, FrozenDeath
 	Warhead@3Eff: CreateEffect
@@ -1012,12 +1017,13 @@ CryoMortar:
 SonicMortar:
 	Inherits: ^Mortar
 	Warhead@1Dam: SpreadDamage
-		Damage: 6000
+		Spread: 1c426
+		Damage: 7500
 		Versus:
-			None: 75
+			None: 100
 			Wood: 100
-			Light: 70
-			Heavy: 50
+			Light: 80
+			Heavy: 70
 			Concrete: 100
 	Warhead@concussion: GrantExternalConditionCA
 		Condition: concussion
@@ -1032,20 +1038,20 @@ SonicMortar:
 
 HallucinationGrenade:
 	Inherits: ^Mortar
-	ReloadDelay: 100
-	Range: 13c0
+	ReloadDelay: 80
+	Range: 13c128
 	Projectile: Bullet
 	Projectile: Bullet
-		Speed: 240
-		LaunchAngle: 100
+		Speed: 260
+		LaunchAngle: 40
 		Inaccuracy: 256
 		ContrailStartColor: dc289c
 		ContrailStartColorAlpha: 128
 	Warhead@1Dam: SpreadDamage
-		Damage: 5250
+		Damage: 6000
 	Warhead@chaos: GrantExternalConditionCA
 		Range: 2c0
-		Duration: 125
+		Duration: 150
 		Condition: berserk
 		InvalidTargets: ChaosImmune
 	Warhead@3Eff: CreateEffect
@@ -1143,18 +1149,18 @@ DoubleDepthCharge:
 
 GuardianDroneGun:
 	Inherits: 25mm
-	ReloadDelay: 45
+	ReloadDelay: 35
 	Burst: 3
 	BurstDelays: 2
 	Report: gdrn-fire1.aud, gdrn-fire2.aud
 	Projectile: Bullet
 		Speed: 1c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 3000
+		Damage: 3800
 		Versus:
 			Wood: 65
 			Concrete: 35
-			Light: 70
+			Light: 80
 			Heavy: 100
 	Warhead@3Eff: CreateEffect
 		ImpactSounds: kaboom12s.aud

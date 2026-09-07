@@ -261,7 +261,7 @@ VisualExplodeSmall:
 ArtilleryExplode:
 	Inherits: ^Explosion
 	Warhead@1Dam: SpreadDamage
-		Damage: 15000
+		Damage: 8000
 
 V3ExplodeAirborne:
 	Inherits: ^Explosion
@@ -469,8 +469,8 @@ MothershipExplodeCluster:
 
 ATMine:
 	Warhead@1Dam: SpreadDamage
-		Spread: 448
-		Damage: 37000
+		Spread: 512
+		Damage: 48000
 		AffectsParent: true
 		ValidTargets: Ground, Water, Underwater
 		InvalidTargets: Mine
@@ -1109,7 +1109,7 @@ BSKY:
 		ImpactSounds: bsky-hit1.aud, bsky-hit2.aud
 
 Mindblast:
-	ReloadDelay: 200
+	ReloadDelay: 100
 	ValidTargets: Ground, Water, Underwater
 	Report: iyurat2a.aud
 	Warhead@Eff: CreateEffect
@@ -1117,13 +1117,13 @@ Mindblast:
 		ExplosionPalette: ra2effect-ignore-lighting-alpha75
 		ValidTargets: Ground, Trees, Water, Underwater, Air, AirSmall
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c0
+		Spread: 1c128
 		Damage: 20000
 		Falloff: 1000, 500, 300, 150, 60, 17, 5, 5
 		ValidTargets: Infantry, Vehicle, Structure, Ship
 		ValidRelationships: Enemy, Neutral
 		Versus:
-			None: 10
+			None: 40
 			Wood: 100
 			Concrete: 75
 			Brick: 75
@@ -1136,11 +1136,11 @@ MindblastSlave:
 	Warhead@Eff: CreateEffect
 		Explosions: mindblastsm
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c512
+		Spread: 0c768
 		Damage: 40000
-		Falloff: 100, 50, 25, 7, 0
+		Falloff: 100, 65, 35, 15, 5, 0
 		Versus:
-			None: 25
+			None: 50
 	Warhead@2Dam: SpreadDamage
 		Damage: 50000
 		Range: 0, 1c0, 1c512, 2c512

@@ -220,7 +220,7 @@ MIG:
 		Strengths: • Strong vs Heavy Armor, Defenses, Aircraft
 		Weaknesses: • Weak vs Infantry
 	Valued:
-		Cost: 1400
+		Cost: 1500
 	Tooltip:
 		Name: MiG Attack Plane
 	UpdatesPlayerStatistics:
@@ -347,7 +347,7 @@ SUK:
 		Weaknesses: • Weak vs Infantry\n• Cannot attack Aircraft\n• Has difficulty hitting moving targets
 		RequiresCondition: seismic-upgrade
 	Valued:
-		Cost: 1600
+		Cost: 1700
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
@@ -504,7 +504,7 @@ YAK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 26000
+		HP: 18000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 9c0
@@ -894,7 +894,7 @@ NHAW:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 44000
+		HP: 42000
 	RevealsShroud:
 		Range: 15c0
 		MinRange: 6c0
@@ -987,7 +987,7 @@ NHAW:
 		AmmoCondition: ammo
 	ReloadAmmoPool@CRYOMISSILE:
 		AmmoPool: cryo
-		Delay: 50
+		Delay: 40
 		Count: 4
 		RequiresCondition: upg-cryw
 	AutoTarget:
@@ -1093,7 +1093,7 @@ HELI:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 34000
+		HP: 30000
 	RevealsShroud:
 		Range: 15c0
 		MinRange: 9c0
@@ -1210,13 +1210,13 @@ HIND:
 		Weaknesses: • Weak vs Defenses\n• Cannot attack Aircraft
 		Attributes: • Reduces enemy speed and rare of fire (Ukraine only)
 	Valued:
-		Cost: 1200
+		Cost: 1600
 	Tooltip:
 		Name: Hind
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 40000
+		HP: 36000
 	RevealsShroud:
 		Range: 15c0
 		MinRange: 9c0
@@ -2098,7 +2098,7 @@ APCH:
 	Inherits: ^HelicopterTD
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMovePrioritizeAir
 	Valued:
-		Cost: 1200
+		Cost: 1400
 	Tooltip:
 		Name: Apache
 	UpdatesPlayerStatistics:
@@ -2120,7 +2120,7 @@ APCH:
 		TakeoffSounds: vhelistaa.aud
 		LandingSounds: vhelilana.aud
 	Health:
-		HP: 36000
+		HP: 21000
 	RevealsShroud:
 		Range: 15c0
 		MinRange: 9c0
@@ -2213,7 +2213,7 @@ ORCA:
 	Inherits: ^HelicopterTD
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMovePrioritizeAir
 	Valued:
-		Cost: 1200
+		Cost: 1500
 	Tooltip:
 		Name: Orca
 	UpdatesPlayerStatistics:
@@ -2235,7 +2235,7 @@ ORCA:
 		LandingSounds: orcadwn1.aud
 		Speed: 190
 	Health:
-		HP: 22500
+		HP: 22000
 	RevealsShroud:
 		Range: 15c0
 		MinRange: 9c0
@@ -2382,7 +2382,7 @@ ORCB:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 34000
+		HP: 36000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 9c0
@@ -2600,7 +2600,7 @@ RAH:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 32000
+		HP: 22000
 	RevealsShroud:
 		Range: 15c0
 		MinRange: 8c0
@@ -2745,7 +2745,7 @@ KIRO:
 		Weaknesses: • Cannot attack Aircraft\n• Has difficulty hitting moving targets\n• Takes +50% damage when dropping bombs
 		Attributes: • Self repairs to 75% out of combat
 	Valued:
-		Cost: 1800
+		Cost: 2000
 	Tooltip:
 		Name: Kirov Airship
 		GenericName: Airship
@@ -2812,7 +2812,7 @@ KIRO:
 		CruiseAltitude: 2c0
 		InitialFacing: 192
 		TurnSpeed: 12
-		Speed: 62
+		Speed: 58
 		Voice: Move
 		AltitudeVelocity: 0c50
 		CanForceLand: False
@@ -3171,14 +3171,14 @@ HARR:
 		Strengths: • Strong vs Aircraft, Buildings, Infantry, Light Armor
 		Weaknesses: • Weak vs Heavy Armor, Defenses
 	Valued:
-		Cost: 1400
+		Cost: 2000
 	Tooltip:
 		Name: Harrier
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 38000
+		HP: 30500
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 10c0
@@ -3298,14 +3298,14 @@ SCRN:
 		Strengths: • Strong vs Heavy Armor, Defenses, Aircraft
 		Weaknesses: • Weak vs Infantry
 	Valued:
-		Cost: 1600
+		Cost: 2000
 	Tooltip:
 		Name: Banshee
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 35000
+		HP: 30000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 10c0
@@ -3346,18 +3346,16 @@ SCRN:
 		PauseOnCondition: empdisable || being-warped
 	Aircraft:
 		CruiseAltitude: 2560
-		TurnSpeed: 20
+		TurnSpeed: 40
 		Speed: 225
-		IdleSpeed: 135
-		IdleTurnSpeed: 30
 		RepulsionSpeed: 40
 		MaximumPitch: 56
-		CanHover: False
+		CanHover: True
 		TakeoffSounds: dropup1.aud
 		LandingSounds: dropdwn1.aud
-		Voice: Move
-		CanSlide: False
+		CanSlide: True
 		AltitudeVelocity: 0c200
+		IdealSeparation: 1c256
 	AutoTarget:
 		InitialStance: AttackAnything
 		InitialStanceAI: AttackAnything
@@ -3451,7 +3449,7 @@ CV:
 		Weaknesses: • Cannot attack Aircraft
 		Attributes: • Hornets only targetable by static anti-air defenses
 	Valued:
-		Cost: 2200
+		Cost: 2800
 	Tooltip:
 		Name: Triskelion
 		GenericName: Aircraft
@@ -3484,7 +3482,7 @@ CV:
 		CruiseAltitude: 2c768
 		InitialFacing: 192
 		TurnSpeed: 15
-		Speed: 55
+		Speed: 48
 		Voice: Move
 		AltitudeVelocity: 0c50
 		CanForceLand: False
@@ -3496,7 +3494,7 @@ CV:
 	CarrierMaster:
 		Actors: horn, horn, horn
 		RearmTicks: 75
-		RespawnTicks: 250
+		RespawnTicks: 500
 		InstantRepair: true
 		SlaveDisposalOnKill: KillSlaves
 		SpawnAllAtOnce: true
@@ -3511,10 +3509,10 @@ CV:
 	-Hovers@CRUISING:
 	Exit:
 	ChangesHealth:
-		PercentageStep: 2
-		Delay: 75
+		PercentageStep: 1
+		Delay: 100
 		StartIfBelow: 100
-		DamageCooldown: 125
+		DamageCooldown: 150
 	Selectable:
 		DecorationBounds: 1877, 1877
 	GpsRadarDot:
@@ -3525,7 +3523,7 @@ CV:
 		RangeCircleType: CarrierRange
 		Color: 0000FF60
 	ProductionCostMultiplier@arcBonus:
-		Multiplier: 85
+		Multiplier: 80
 		Prerequisites: player.arc
 	Targetable@AirHighValue:
 		TargetTypes: AirHighValue
@@ -3545,7 +3543,7 @@ HORN:
 	Tooltip:
 		Name: Hornet
 	Health:
-		HP: 22000
+		HP: 16000
 	RevealsShroud:
 		Range: 4c0
 		MinRange: 3c0
@@ -3571,7 +3569,7 @@ HORN:
 		Speed: 201
 		AltitudeVelocity: 120
 		MaximumPitch: 56
-		CanHover: True
+		CanHover: False
 		CanSlide: False
 		RepulsionSpeed: 40
 		VTOL: true
@@ -3754,7 +3752,7 @@ VENM:
 	Inherits: ^HelicopterTD
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMovePrioritizeAir
 	Valued:
-		Cost: 1200
+		Cost: 1600
 	Tooltip:
 		Name: Venom
 	UpdatesPlayerStatistics:
@@ -3781,7 +3779,7 @@ VENM:
 	Guard:
 		Voice: Move
 	Health:
-		HP: 30000
+		HP: 24000
 	RevealsShroud:
 		Range: 15c0
 		MinRange: 9c0
@@ -3939,7 +3937,7 @@ AURO:
 		InitialStanceAI: AttackAnything
 	AmmoPool:
 		Ammo: 1
-		ReloadDelay: 95
+		ReloadDelay: 75
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
@@ -3956,13 +3954,13 @@ AURO:
 		Modifier: 170
 		RequiresCondition: afterburner
 	DamageMultiplier@AFTERBURNER:
-		Modifier: 90
+		Modifier: 70
 		RequiresCondition: afterburner
 	GrantConditionOnAttack@AFTERBURNERFINAL:
 		Condition: afterburner-final
-		RevokeDelay: 40
+		RevokeDelay: 75
 	SpeedMultiplier@AFTERBURNERFINAL:
-		Modifier: 135
+		Modifier: 150
 		RequiresCondition: afterburner-final
 	Selectable:
 		Bounds: 1536, 1194, 0, 85
@@ -4070,7 +4068,7 @@ PMAK:
 		Strengths: • Strong vs Heavy Armor, Defenses, Light Armor, Buildings
 		Weaknesses: • Weak vs Infantry\n• Cannot attack Aircraft
 	Valued:
-		Cost: 2300
+		Cost: 2500
 	Tooltip:
 		Name: Peacemaker
 		GenericName: Aircraft
@@ -4218,14 +4216,14 @@ BEAG:
 		Weaknesses: • Weak vs Infantry, Buildings
 		Attributes: • Reduces range and vision of targets
 	Valued:
-		Cost: 1700
+		Cost: 2000
 	Tooltip:
 		Name: Black Eagle
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 32000
+		HP: 26000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 10c0
@@ -4347,14 +4345,14 @@ PHAN:
 		Weaknesses: • Weak vs Infantry, Buildings
 		Attributes: • Disables weapons and vision of enemy vehicles and aircraft
 	Valued:
-		Cost: 1600
+		Cost: 1800
 	Tooltip:
 		Name: Phantom
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 28000
+		HP: 26000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 9c0
@@ -4484,7 +4482,7 @@ KAMV:
 		Strengths: • Strong vs Heavy Armor, Light Armor
 		Weaknesses: • Weak vs Infantry, Buildings\n• Cannot attack Aircraft\n• Has difficulty hitting moving targets
 	Valued:
-		Cost: 1600
+		Cost: 1800
 	Tooltip:
 		Name: Kamov
 	UpdatesPlayerStatistics:
@@ -4609,14 +4607,14 @@ SHDE:
 		Strengths: • Strong vs Heavy Armor, Light Armor, Defenses
 		Weaknesses: • Weak vs Infantry, Buildings\n• Cannot attack Aircraft
 	Valued:
-		Cost: 1700
+		Cost: 1800
 	Tooltip:
 		Name: Shade
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 28000
+		HP: 26000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 9c0
@@ -4743,14 +4741,14 @@ VERT:
 		Weaknesses: • Cannot attack Aircraft
 		Attributes: • Bomb disrupts cloaking in a large area
 	Valued:
-		Cost: 1700
+		Cost: 2000
 	Tooltip:
 		Name: Vertigo
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 44000
+		HP: 40000
 	RevealsShroud:
 		Range: 14c0
 		MinRange: 9c0
@@ -4774,8 +4772,8 @@ VERT:
 		PauseOnCondition: empdisable || being-warped
 	Aircraft:
 		CruiseAltitude: 2560
-		TurnSpeed: 16
-		Speed: 187
+		TurnSpeed: 18
+		Speed: 170
 		IdleSpeed: 135
 		RepulsionSpeed: 40
 		CanHover: False
@@ -4852,8 +4850,8 @@ VERT:
 		RequiresCondition: invisibility || hidden
 	Cloak:
 		DetectionTypes: AirCloak
-		InitialDelay: 100
-		CloakDelay: 100
+		InitialDelay: 75
+		CloakDelay: 50
 		CloakSound: trans1.aud
 		UncloakSound: appear1md.aud
 		CloakStyle: Palette
@@ -4867,7 +4865,7 @@ VERT:
 		Condition: player-shadow
 		Prerequisites: player.shadow
 	SpeedMultiplier@ShadowCloak:
-		Modifier: 120
+		Modifier: 125
 		RequiresCondition: player-shadow && hidden
 	-RangeMultiplier@SEEK:
 	-RangeMultiplier@SEEK2:
@@ -4970,7 +4968,7 @@ DISC:
 	Inherits: ^Helicopter
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Valued:
-		Cost: 1900
+		Cost: 2000
 	Tooltip:
 		Name: Floating Disc
 	UpdatesPlayerStatistics:
@@ -5001,7 +4999,7 @@ DISC:
 			ResourceDrainable: Steal
 		DefaultVoice: Attack
 	Aircraft:
-		Speed: 67
+		Speed: 65
 		CruiseAltitude: 2560
 		AltitudeVelocity: 0c100
 		TurnSpeed: 512
@@ -5043,8 +5041,8 @@ DISC:
 		RevokeDelay: 11
 		ArmamentNames: tertiary
 	CashTrickler@ResourceDrain:
-		Interval: 40
-		Amount: 50
+		Interval: 25
+		Amount: 200
 		RequiresCondition: resourcedraining
 	WithIdleOverlay@Drain:
 		Sequence: drain

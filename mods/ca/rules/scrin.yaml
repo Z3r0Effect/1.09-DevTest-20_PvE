@@ -116,13 +116,13 @@ VEHICLES.SCRIN:
 		Condition: regen-upgrade
 		Prerequisites: regen.upgrade
 	ChangesHealth@REGEN1:
-		Step: 400
+		Step: 600
 		Delay: 25
-		StartIfBelow: 66
+		StartIfBelow: 70
 		DamageCooldown: 150
 		RequiresCondition: regen-upgrade
 	ChangesHealth@REGEN2:
-		Step: 200
+		Step: 400
 		Delay: 25
 		StartIfBelow: 100
 		DamageCooldown: 150
@@ -131,7 +131,7 @@ VEHICLES.SCRIN:
 ^ScrinShields:
 	Shielded:
 		MaxStrength: 12000
-		RegenDelay: 350
+		RegenDelay: 250
 		RegenAmount: 350
 		RegenInterval: 5
 		ShieldsUpCondition: shields-up
@@ -173,7 +173,7 @@ VEHICLES.SCRIN:
 	ExternalCondition@MothershipRearmable:
 		Condition: mshp-rearm
 	ChangesHealth@MothershipRepair:
-		Step: 1500
+		Step: 500
 		Delay: 25
 		StartIfBelow: 100
 		RequiresCondition: mshp-rearm
@@ -497,7 +497,7 @@ VEHICLES.SCRIN:
 	SpawnActorOnDeath@GMUT:
 		Actor: gscr.mutating
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 30
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Infantry
@@ -841,7 +841,7 @@ WCHR:
 		LocalOffset: 150,0,400
 		RequiresCondition: player-collector
 	Cloak@NORMAL:
-		InitialDelay: 200
+		InitialDelay: 100
 		CloakDelay: 75
 		UncloakOn: Attack, Unload, Infiltrate, Demolish
 		CloakedCondition: hidden
@@ -866,6 +866,8 @@ WCHR:
 		ConditionDuration: 3
 		ShowSelectionBarWhenFull: false
 		CircleColor: c8b8ed66
+	AutoTarget:
+		InitialStance: HoldFire
 	GrantConditionOnPrerequisite@BLINKPACKS:
 		Condition: blink-upgrade
 		Prerequisites: blink.upgrade
@@ -924,7 +926,7 @@ BRST:
 	Selectable:
 		DecorationBounds: 640, 896, -32, -256
 	DamageMultiplier@HUMAN:
-		Modifier: 30
+		Modifier: 20
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	TargetedAttackAbility:
 		TargetCursor: attack
@@ -1375,7 +1377,7 @@ MAST:
 		Range: 10c0
 	DamageTypeDamageMultiplier@A2GPROTECTION:
 		DamageTypes: AirToGround
-		Modifier: 30
+		Modifier: 50
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Armament@PRIMARY:
 		Weapon: EnslaveInfantry
@@ -1541,7 +1543,7 @@ MAST:
 		AmmoCondition: mspk-ammo
 	ReloadAmmoPoolCA@MindSpark:
 		AmmoPool: mspk
-		Delay: 100
+		Delay: 150
 		Count: 1
 		ShowSelectionBar: true
 		SelectionBarColor: ff00ff
@@ -1666,7 +1668,7 @@ GUNW:
 		UpgradeAtActors: fix, rep, srep
 		BuildDuration: 100
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 50
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -1703,7 +1705,7 @@ SHRW:
 		RequiresCondition: travelerspeed
 		Modifier: 130
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 40
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	-ReplacedInQueue:
 	-Upgradeable@SHRW:
@@ -1793,7 +1795,7 @@ SEEK:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 50
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -1883,7 +1885,7 @@ LACE:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 50
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -1942,7 +1944,7 @@ INTL:
 		LocalOffset: 470,0,30
 		RequiresCondition: player-harbinger
 	DamageMultiplier@HUMAN:
-		Modifier: 70
+		Modifier: 40
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithMuzzleOverlay:
 	GrantConditionOnPrerequisite@Harbinger:
@@ -2116,7 +2118,7 @@ CORR:
 		Types: Veterancy
 		Prerequisites: vehicles.upgraded
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 50
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithMoveAnimation:
 		ValidMovementTypes: Horizontal, Vertical, Turn
@@ -2232,7 +2234,7 @@ LCHR:
 	GivesBountyCA:
 		RequiresCondition: global-bounty && !coalescence-upgrade
 	DamageMultiplier@HUMAN:
-		Modifier: 70
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -2317,7 +2319,7 @@ LCHR.Orb:
 		Condition: lchr-healing
 		Range: 5c512
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 40
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	AutoTarget:
 	AttackOmni:
@@ -2383,7 +2385,7 @@ STCR:
 		Types: Veterancy
 		Prerequisites: vehicles.upgraded
 	DamageMultiplier@HUMAN:
-		Modifier: 70
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithShadow:
 		Offset: 80, 80, 0
@@ -2469,7 +2471,7 @@ DEVO:
 		MuzzleSequence: muzzle
 		MuzzlePalette: scrin
 	DamageMultiplier@HUMAN:
-		Modifier: 65
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithMuzzleOverlay:
 	ProducibleWithLevel:
@@ -2579,7 +2581,7 @@ DARK:
 	KillsSelf@SINK:
 		RequiresCondition: onwater && (empdisable || driver-dead)
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 40
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Targetable@ONWATER:
 		TargetTypes: Water, Ship
@@ -2692,7 +2694,7 @@ RUIN:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 40
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -2769,7 +2771,7 @@ ATMZ:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 40
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -3084,7 +3086,7 @@ OBLT:
 	Targetable@Obliterator:
 		TargetTypes: Obliterator
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 40
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -3162,7 +3164,7 @@ NULL:
 		Actor: NULL.Husk
 		RequiresCondition: !being-warped
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 40
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -3263,14 +3265,14 @@ STMR:
 		Strengths: • Strong vs Infantry, Light Armor, Buildings, Aircraft
 		Weaknesses: • Weak vs Defenses
 	Valued:
-		Cost: 1200
+		Cost: 1600
 	Tooltip:
 		Name: Stormrider
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 32000
+		HP: 28000
 	Shielded:
 		MaxStrength: 10000
 	RevealsShroud:
@@ -3302,7 +3304,7 @@ STMR:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 30
-		Speed: 185
+		Speed: 167
 		IdleSpeed: 135
 		IdleTurnSpeed: 15
 		RepulsionSpeed: 40
@@ -3404,14 +3406,14 @@ TORM:
 		Strengths: • Strong vs Vehicles, Defenses, Aircraft
 		Weaknesses: • Weak vs Infantry
 	Valued:
-		Cost: 1200
+		Cost: 1000
 	Tooltip:
 		Name: Tormentor
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 15000
 	Shielded:
 		MaxStrength: 6000
 	RevealsShroud:
@@ -3443,7 +3445,7 @@ TORM:
 	Aircraft:
 		CruiseAltitude: 2560
 		TurnSpeed: 40
-		Speed: 212
+		Speed: 205
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		CanHover: True
@@ -3495,7 +3497,7 @@ TORM:
 		Prerequisites: aircraft.upgraded
 	-EjectOnDeath:
 	AmmoPool:
-		Ammo: 8
+		Ammo: 6
 		AmmoCondition: ammo
 		ReloadDelay: 40
 		ReloadCount: 2
@@ -3503,7 +3505,7 @@ TORM:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 8
+		PipCount: 6
 	Rearmable:
 		RearmActors: hpad, hpad.td, afld, afld.gdi, grav
 	GrantConditionOnDamageState@SmokeTrail:
@@ -3546,14 +3548,14 @@ ENRV:
 		Weaknesses: • Weak vs Infantry
 		Attributes: • Slows targets
 	Valued:
-		Cost: 1600
+		Cost: 1800
 	Tooltip:
 		Name: Enervator
 		GenericName: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 40000
+		HP: 28000
 	Shielded:
 		MaxStrength: 7500
 	RevealsShroud:
@@ -4082,7 +4084,7 @@ MSHP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 140000
+		HP: 130000
 	Shielded:
 		MaxStrength: 26000
 	Armor:
@@ -4120,7 +4122,7 @@ MSHP:
 		MuzzlePalette: scrin
 	ProximityExternalCondition@MOTHERSHIPREARM:
 		Condition: mshp-rearm
-		Range: 12c0
+		Range: 8c0
 		ValidRelationships: Ally
 		RequiresCondition: !empdisable && !being-warped
 	WithMuzzleOverlay:
@@ -6196,7 +6198,7 @@ VSPK:
 		ConvertFrom: Tiberium, BlueTiberium, Ore, Gems
 		ConvertTo: BlackTiberium
 		Interval: 5
-		Amount: 8
+		Amount: 3
 		RequiresCondition: !build-incomplete && !being-warped
 	PeriodicExplosion:
 		Weapon: VoidSpike
@@ -6461,7 +6463,7 @@ MSPK:
 		CruiseAltitude: 1
 		LandableTerrainTypes: Clear,Road,Rough,Ore,Gems,Tiberium,BlueTiberium,BlackTiberium,Water,Tree,River,Rock,Beach,Bridge,Tunnel,Wall,Ford
 	KillsSelf:
-		Delay: 500
+		Delay: 300
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
 		CrushedSequence: die

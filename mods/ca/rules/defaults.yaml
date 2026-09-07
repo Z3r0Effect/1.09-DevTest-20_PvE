@@ -1491,7 +1491,7 @@
 		RequiresCondition: atomic-ammo && has-atomic-ammo < 12
 	ReloadAmmoPoolCA@ATOMICAMMODECAY:
 		Count: -16
-		Delay: 2800
+		Delay: 1500
 		RequiresCondition: has-atomic-ammo
 		ShowSelectionBar: false
 
@@ -1819,7 +1819,7 @@
 		Condition: concussion
 	FirepowerMultiplier@concussion:
 		RequiresCondition: concussion
-		Modifier: 85
+		Modifier: 80
 	SpeedMultiplier@concussion:
 		Modifier: 75
 		RequiresCondition: concussion
@@ -2136,7 +2136,7 @@
 		RequiresCondition: mindcontrolled
 	DamageMultiplier@MINDCONTROL:
 		RequiresCondition: mindcontrolled
-		Modifier: 60
+		Modifier: 50
 
 ^Hackable:
 	MindControllable@HACKABLE:
@@ -2542,13 +2542,13 @@
 		Condition: defense-policy2
 		Prerequisites: defense.policy, influence.level2
 	DamageMultiplier@DefensePolicy1:
-		Modifier: 83
+		Modifier: 80
 		RequiresCondition: defense-policy1 && !defense-policy2
 	DamageMultiplier@DefensePolicy2:
-		Modifier: 74
+		Modifier: 70
 		RequiresCondition: defense-policy2
 	ChangesHealth@DefensePolicyRepairs:
-		Step: 260
+		Step: 700
 		StartIfBelow: 100
 		Delay: 24
 		DamageCooldown: 0
@@ -2929,11 +2929,11 @@
 	GrantStackingCondition@TIBEXPOSED:
 		Condition: tibexposed
 		RequiresCondition: on-tib
-		DelayPerInstance: 95
-		RevokeDelay: 100
+		DelayPerInstance: 125
+		RevokeDelay: 125
 	DamagedByTerrainCA@TIBDAMAGE:
 		Terrain: Tiberium, BlueTiberium, BlackTiberium
-		Damage: 600
+		Damage: 400
 		DamageInterval: 16
 		DamageTypes: ToxinDeath
 		RequiresCondition: tibexposed && !(hazmatsuits || hazmatsuits-soviet || being-warped || parachute)
@@ -2945,7 +2945,7 @@
 		Condition: hazmatsuits
 		Prerequisites: bio
 	SpawnActorOnDeath:
-		Probability: 100
+		Probability: 75
 		Actor: vice
 		OwnerType: InternalName
 		InternalOwner: Creeps
@@ -3957,6 +3957,7 @@
 ^Defense:
 	Inherits: ^Building
 	Inherits@botbonus: ^BotDefenseProductionBonus
+	Inherits@BOT: ^BotOwned
 	Inherits@Concussion: ^Concussion
 	Inherits@selection: ^SelectableCombatBuilding
 	Inherits@veilable: ^Veilable
@@ -4013,8 +4014,11 @@
 		RevealGeneratedShroud: True
 		RequiresCondition: revealonfire
 	ProductionCostMultiplier@FranceBonus:
-		Multiplier: 85
+		Multiplier: 80
 		Prerequisites: player.france
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FireWarheadsOnDeath@TEMPORAL:
 		Weapon: TemporalExplode
 		EmptyWeapon: TemporalExplode

@@ -5059,6 +5059,7 @@ HTUR:
 	FireWarheadsOnDeath:
 		Weapon: BuildingExplode
 		EmptyWeapon: BuildingExplode
+	-DamageMultiplier@HUMAN:
 	WithBuildingBib:
 		HasMinibib: true
 	Selectable:
@@ -5855,10 +5856,10 @@ OREP:
 	Tooltip:
 		Name: Ore Purifier
 	ResourcePurifierCA@Normal:
-		Modifier: 25
+		Modifier: 50
 		RequiresCondition: !disabled && !being-warped && !tech-locked && !economy-policy3
 	ResourcePurifierCA@EconomyPolicy3:
-		Modifier: 40
+		Modifier: 75
 		RequiresCondition: !disabled && !being-warped && !tech-locked && economy-policy3
 	GrantConditionOnPrerequisite@EconomyPolicy3:
 		Condition: economy-policy3

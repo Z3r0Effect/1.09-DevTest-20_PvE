@@ -934,7 +934,7 @@
 	GrantExternalConditionPowerCA@IRONCURTAIN:
 		OrderName: ironcurtain
 		Icon: invuln
-		ChargeInterval: 4500
+		ChargeInterval: 9000
 		ExplosionWeapon: IronCurtain
 		Name: supportpower-ironcurtain.name
 		Condition: invulnerability

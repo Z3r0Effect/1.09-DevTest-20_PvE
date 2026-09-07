@@ -253,7 +253,7 @@ IntruderDiscs:
 		Inaccuracy: 0c128
 		LockOnProbability: 66
 	Warhead@1Dam: SpreadDamage
-		Damage: 8000
+		Damage: 4000
 		Spread: 385
 		Versus:
 			None: 15
@@ -309,7 +309,7 @@ DevastatorDiscs:
 	Inherits: PlasmaDiscs
 	Range: 16c0
 	MinRange: 3c0
-	ReloadDelay: 85
+	ReloadDelay: 150
 	Report: devastator-fire1.aud, devastator-fire2.aud, devastator-fire3.aud
 	Burst: 7
 	BurstDelays: 3
@@ -325,7 +325,7 @@ DevastatorDiscs:
 		LaunchAngle: 50
 	Warhead@1Dam: SpreadDamage
 		Spread: 416
-		Damage: 4800
+		Damage: 4600
 		Versus:
 			None: 100
 			Wood: 90
@@ -400,7 +400,7 @@ InterloperLaser:
 	Report: interloper-fire1.aud, interloper-fire2.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 5500
+		Damage: 3500
 		Versus:
 			None: 30
 			Light: 116
@@ -418,7 +418,7 @@ InterloperWave:
 		Speed: 750
 		Palette: scrin
 	Warhead@1Dam: SpreadDamage
-		Damage: 6500
+		Damage: 4500
 		Spread: 512
 	Warhead@3Eff: CreateEffect
 		Explosions: large_explosion
@@ -451,7 +451,7 @@ DevourerLaser:
 		GlowColor: ee00ff
 	Warhead@1Dam: SpreadDamage
 		Spread: 405
-		Damage: 1800
+		Damage: 1600
 		Versus:
 			None: 20
 			Light: 85
@@ -477,7 +477,7 @@ DevourerLaserCharged:
 		FollowingOffset: 0,-24,0
 		RecalculateDistortionInterval: 2
 	Warhead@1Dam: SpreadDamage
-		Damage: 2200
+		Damage: 1950
 		Versus:
 			None: 30
 			Light: 85
@@ -496,7 +496,7 @@ RiftCannon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 768
 		Falloff: 100, 65, 40, 25, 0
-		Damage: 6500
+		Damage: 5500
 		Versus:
 			None: 75
 			Wood: 45
@@ -757,7 +757,7 @@ TripodLaser:
 		GlowColor: ee00ff
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 2000
+		Damage: 1800
 		Versus:
 			None: 85
 			Light: 75
@@ -780,7 +780,7 @@ ReaperLaser:
 		GlowColor: 00ff00
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 2200
+		Damage: 2000
 
 ReaperLaserCharged:
 	Inherits: ReaperLaser
@@ -796,7 +796,7 @@ ReaperLaserCharged:
 		SegmentLength: 196
 		RecalculateDistortionInterval: 2
 	Warhead@1Dam: SpreadDamage
-		Damage: 2500
+		Damage: 2200
 
 TripodLaserReversed:
 	Inherits: TripodLaser
@@ -817,7 +817,7 @@ ReaperLaserChargedReversed:
 		FollowingOffset: 50,100,0
 
 StormriderZap:
-	Range: 8c256
+	Range: 8c0
 	Report: stormrider-fire1.aud, stormrider-fire2.aud, stormrider-fire3.aud
 	ReloadDelay: 50
 	Burst: 5
@@ -829,14 +829,14 @@ StormriderZap:
 		Palette: scrin
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Spread: 768
-		Damage: 5500
+		Spread: 512
+		Damage: 4800
 		Versus:
 			None: 105
 			Wood: 50
 			Concrete: 30
-			Light: 75
-			Heavy: 60
+			Light: 60
+			Heavy: 50
 			Brick: 20
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, AirToGround
 	Warhead@2Smu: LeaveSmudge
@@ -863,14 +863,14 @@ StormRiderZapAA:
 		Speed: 1c768
 	ValidTargets: Air, AirSmall
 	Warhead@1Dam: SpreadDamage
-		Damage: 6500
+		Damage: 2000
 		Range: 0, 0c64, 0c256, 1c768
 		Falloff: 100, 100, 30, 15
 		ValidTargets: Air
 		ValidRelationships: Enemy, Neutral
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@smallDamage: SpreadDamage
-		Damage: 4500
+		Damage: 1800
 		Spread: 341
 		Falloff: 100, 50, 14, 0
 		ValidTargets: AirSmall
@@ -880,9 +880,9 @@ StormRiderZapAA:
 		ImpactSounds: irocataa.aud, irocatab.aud, irocatac.aud, irocatad.aud
 
 TormentorZap:
-	ReloadDelay: 45
+	ReloadDelay: 50
 	ValidTargets: Ground, Water
-	Range: 8c512
+	Range: 8c0
 	Report: torm-fire1.aud, torm-fire2.aud
 	Projectile: LaserZapCA
 		Width: 70
@@ -895,11 +895,11 @@ TormentorZap:
 		SecondaryBeamColor: 7d00fe30
 		Duration: 10
 	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 14400
+		Spread: 96
+		Damage: 13800
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, TankBuster, AirToGround
 		Versus:
-			None: 25
+			None: 20
 			Light: 65
 			Wood: 30
 			Heavy: 100
@@ -913,7 +913,7 @@ TormentorZap:
 
 TormentorZapAA:
 	Inherits: TormentorZap
-	Range: 9c128
+	Range: 9c0
 	ValidTargets: Air, AirSmall
 	Warhead@1Dam: SpreadDamage
 		Damage: 6000
@@ -942,8 +942,8 @@ EnervatorBolts:
 		TrailPalette: scrinplasma
 		-PointDefenseType:
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
-		Damage: 14500
+		Spread: 256
+		Damage: 13000
 		Versus:
 			None: 30
 			Wood: 30
@@ -952,7 +952,7 @@ EnervatorBolts:
 			Concrete: 100
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, TankBuster, AirToGround
 	Warhead@2Sup: GrantExternalConditionCA
-		Range: 1c0
+		Range: 0c768
 		Duration: 75
 		Condition: suppression
 		ValidTargets: Vehicle, Ship, Structure
@@ -1015,10 +1015,10 @@ InvaderZap:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 4000
+		Damage: 1400
 		InvalidTargets: Infantry
 		Versus:
-			None: 80
+			None: 60
 			Wood: 30
 			Concrete: 15
 			Light: 80
@@ -1028,14 +1028,14 @@ InvaderZap:
 	Warhead@2Dam: SpreadDamage
 		Spread: 256
 		ValidTargets: Infantry
-		Damage: 1050
+		Damage: 750
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, AirToGround
 	Warhead@2Eff: CreateEffect
 		Explosions: idle
 		ExplosionPalette: scrin
 		Image: scrinzaphitsm
 		ValidTargets: Ground, Ship, Air, AirSmall, Trees
-		Inaccuracy: 256
+		Inaccuracy: 341
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piffs
 		ValidTargets: Water, Underwater
@@ -1048,15 +1048,15 @@ InvaderZapAA:
 		Speed: 1c768
 	ValidTargets: Air, AirSmall
 	Warhead@1Dam: SpreadDamage
-		Damage: 950
+		Damage: 420
 		Range: 0, 0c64, 0c256, 1c0
 		Falloff: 100, 100, 30, 15
 		ValidTargets: Air
 		ValidRelationships: Enemy, Neutral
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@smallDamage: SpreadDamage
-		Damage: 950
-		Spread: 512
+		Damage: 420
+		Spread: 341
 		Falloff: 100, 50, 14, 0
 		ValidTargets: AirSmall
 		ValidRelationships: Enemy, Neutral
@@ -1097,7 +1097,7 @@ PlasmaTurretGun:
 		InvalidTargets: Ship, Structure, Bridge
 
 StormColumnZap:
-	ReloadDelay: 30
+	ReloadDelay: 35
 	Burst: 7
 	BurstDelays: 2
 	Range: 13c0
@@ -1111,8 +1111,8 @@ StormColumnZap:
 		DistortionAnimation: 96
 		ZOffset: 512
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c256
-		Damage: 4500
+		Spread: 0c768
+		Damage: 3600
 		Versus:
 			None: 55
 			Wood: 60
@@ -1128,7 +1128,7 @@ StormColumnZap:
 		Image: fire
 
 StormSpikeColumnZap:
-	ReloadDelay: 25
+	ReloadDelay: 30
 	Burst: 8
 	BurstDelays: 2
 	Range: 13c0
@@ -1142,8 +1142,8 @@ StormSpikeColumnZap:
 		DistortionAnimation: 96
 		ZOffset: 512
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c256
-		Damage: 6500
+		Spread: 1c0
+		Damage: 4200
 		Versus:
 			None: 65
 			Wood: 60
@@ -1349,7 +1349,7 @@ RavagerShards:
 		-Range:
 		-Falloff:
 		Spread: 512
-		Damage: 4000
+		Damage: 3800
 		Versus:
 			None: 100
 			Wood: 15
@@ -1368,7 +1368,7 @@ EvisceratorShards:
 	Projectile: MissileCA
 		Speed: 350
 	Warhead@1Dam: SpreadDamage
-		Damage: 5000
+		Damage: 4200
 
 EvisceratorShardsCharged:
 	Inherits: EvisceratorShards
@@ -1489,7 +1489,7 @@ LaceratorShards:
 		ContrailStartColorAlpha: 170
 		Jammable: true
 	Warhead@1Dam: SpreadDamage
-		Damage: 5500
+		Damage: 4500
 		Spread: 192
 		ValidTargets: Ground, Water, Underwater
 		Versus:
@@ -1513,7 +1513,7 @@ LaceratorShards.Hypercharged:
 		ContrailStartWidth: 0c48
 		ContrailStartColor: 7e00ff
 	Warhead@1Dam: SpreadDamage
-		Damage: 7500
+		Damage: 5500
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath, TankBuster
 		Versus:
 			None: 10
@@ -1527,7 +1527,7 @@ ImpalerSpike:
 	Projectile: InstantHit
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Damage: 12500
+		Damage: 8500
 		Spread: 128
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 		Versus:
@@ -1905,7 +1905,7 @@ MothershipDiscs:
 		Speed: 280
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 12000
+		Damage: 9500
 		Versus:
 			None: 100
 			Wood: 45
@@ -1928,13 +1928,13 @@ PlasmaBomb:
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
 		Falloff: 1000, 448, 192, 64, 26, 10, 0
-		Damage: 900
+		Damage: 700
 		Versus:
 			None: 20
 			Wood: 30
 			Concrete: 15
-			Light: 80
-			Heavy: 100
+			Light: 75
+			Heavy: 95
 			Brick: 20
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, AirToGround
 	Warhead@3Eff: CreateEffect
@@ -2318,12 +2318,12 @@ MindSparkZap:
 		SegmentLength: 350
 		ZOffset: 512
 	Warhead@1Dam: SpreadDamage
-		Spread: 320
+		Spread: 256
 		Damage: 14000
 		Versus:
 			None: 70
-			Light: 85
-			Heavy: 75
+			Light: 80
+			Heavy: 70
 			Concrete: 60
 			Wood: 5
 		DamageTypes: ElectricityDeath
