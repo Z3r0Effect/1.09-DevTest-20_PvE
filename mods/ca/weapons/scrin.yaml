@@ -830,7 +830,7 @@ StormriderZap:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 4800
+		Damage: 4500
 		Versus:
 			None: 105
 			Wood: 50
@@ -896,14 +896,14 @@ TormentorZap:
 		Duration: 10
 	Warhead@1Dam: SpreadDamage
 		Spread: 96
-		Damage: 13800
+		Damage: 10000
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, TankBuster, AirToGround
 		Versus:
 			None: 20
 			Light: 65
 			Wood: 30
-			Heavy: 100
-			Concrete: 105
+			Heavy: 75
+			Concrete: 9
 			Brick: 50
 	Warhead@1Flash: FlashTarget
 		Color: ac89e7
@@ -916,7 +916,7 @@ TormentorZapAA:
 	Range: 9c0
 	ValidTargets: Air, AirSmall
 	Warhead@1Dam: SpreadDamage
-		Damage: 6000
+		Damage: 4500
 		ValidTargets: Air, AirSmall
 	-Warhead@2Smu:
 
@@ -943,7 +943,7 @@ EnervatorBolts:
 		-PointDefenseType:
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 13000
+		Damage: 13500
 		Versus:
 			None: 30
 			Wood: 30

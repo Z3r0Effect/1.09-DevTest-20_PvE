@@ -3690,7 +3690,7 @@ RMBC:
 	DamageMultiplier@CYBORGARMOR:
 		Modifier: 85
 	DamageMultiplier@CYBORGARMORHUMAN:
-		Modifier: 70
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -4792,7 +4792,7 @@ ENLI:
 		Multiplier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageMultiplier@CYBORGARMORHUMAN:
-		Modifier: 70
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Infantry
@@ -5249,7 +5249,7 @@ ZDEF:
 	Mobile:
 		Speed: 65
 	DamageMultiplier@HUMAN:
-		Modifier: 75
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	-TargetedLeapAbility:
 	-Contrail@Jumping:
@@ -5353,7 +5353,7 @@ ENFO:
 		StandSequences: stand, stand2
 		DefaultAttackSequence: shoot
 	DamageMultiplier@HUMAN:
-		Modifier: 45
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReplacedInQueue:
 		Actors: hopl
@@ -5449,7 +5449,7 @@ HOPL:
 		ArmamentNames: primary
 		RevokeDelay: 1
 	DamageMultiplier@HUMAN:
-		Modifier: 75
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Allies/Infantry
@@ -5526,7 +5526,7 @@ TIGR:
 		StandSequences: stand, stand2
 		DefaultAttackSequence: shoot
 	DamageMultiplier@HUMAN:
-		Modifier: 75
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Allies/Infantry
@@ -5606,7 +5606,7 @@ CRYT:
 		Condition: attacking
 		RevokeDelay: 6
 	DamageMultiplier@HUMAN:
-		Modifier: 75
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Allies/Infantry
@@ -5738,7 +5738,7 @@ REAP:
 		Multiplier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageMultiplier@CYBORGARMORHUMAN:
-		Modifier: 70
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Infantry
