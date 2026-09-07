@@ -1668,7 +1668,7 @@ GUNW:
 		UpgradeAtActors: fix, rep, srep
 		BuildDuration: 100
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -1795,7 +1795,7 @@ SEEK:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -1885,7 +1885,7 @@ LACE:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -2118,7 +2118,7 @@ CORR:
 		Types: Veterancy
 		Prerequisites: vehicles.upgraded
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithMoveAnimation:
 		ValidMovementTypes: Horizontal, Vertical, Turn

@@ -1297,10 +1297,10 @@ LaserTur.Adv:
 LightTankLaser:
 	Inherits: LaserTur
 	Range: 7c256
-	ReloadDelay: 45
+	ReloadDelay: 40
 	Report: tnklaser.aud
 	Warhead@1Dam: SpreadDamage
-		Damage: 5800
+		Damage: 7000
 		Versus:
 			None: 65
 			Wood: 45
