@@ -187,7 +187,7 @@ E1:
 		PauseOnCondition: being-warped || blinded || reapersnare
 		FacingTolerance: 0
 	DamageMultiplier@HUMAN:
-		Modifier: 40
+		Modifier: 50
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -256,7 +256,7 @@ E2:
 		DamageSource: Killer
 		RequiresCondition: !being-warped
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -375,7 +375,7 @@ E3:
 			FrozenDeath: 11
 		CrushedSequence: die-crushed
 	DamageMultiplier@HUMAN:
-		Modifier: 40
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Convertible:
 		SpawnActors: N3C
@@ -461,7 +461,7 @@ U3:
 		ProneOffset: 384,0,-395
 		RequiresCondition: !deployed
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageMultiplier:
 		Modifier: 30
@@ -668,7 +668,7 @@ E4:
 		DamageSource: Killer
 		RequiresCondition: !being-warped
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -1147,7 +1147,7 @@ MECH:
 	Voiced:
 		VoiceSet: MechanicVoice
 	DamageMultiplier@HUMAN:
-		Modifier: 20
+		Modifier: 30
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	AutoTarget:
 		ScanRadius: 7
@@ -1248,7 +1248,7 @@ CMEC:
 		ValidTargets: Repairable
 		ValidRelationships: Ally
 	DamageMultiplier@CYBORGARMORHUMAN:
-		Modifier: 30
+		Modifier: 40
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -1633,7 +1633,7 @@ SHOK:
 	Voiced:
 		VoiceSet: ShokVoice
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -1668,7 +1668,7 @@ TTRP:
 		CrushClasses: heavyinfantry
 	-ReplacedInQueue:
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Armament@PRIMARY:
 		Weapon: PortaTesla.UPG
@@ -1710,7 +1710,7 @@ N1:
 		PauseOnCondition: being-warped || blinded || reapersnare
 		FacingTolerance: 0
 	DamageMultiplier@HUMAN:
-		Modifier: 40
+		Modifier: 50
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
@@ -1793,7 +1793,7 @@ N2:
 		DamageSource: Killer
 		RequiresCondition: !being-warped && !empgren-upgrade
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -1905,7 +1905,7 @@ N3:
 	AutoTarget:
 		MaximumScanTimeInterval: 5
 	DamageMultiplier@HUMAN:
-		Modifier: 40
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Selectable:
 		Class: e3
@@ -1987,7 +1987,7 @@ N4:
 		Actors: n5
 	-RangeMultiplier@HeroOfTheUnion:
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HeroOfTheUnion:
 		RequiresCondition: herooftheunion
@@ -2063,7 +2063,7 @@ N5:
 		DamageSource: Killer
 		RequiresCondition: !being-warped
 	DamageMultiplier@CYBORGARMORHUMAN:
-		Modifier: 60
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -2381,7 +2381,7 @@ SNIP:
 		RequiresCondition: invisibility || hidden
 		ColorSource: Player
 	DamageMultiplier@HUMAN:
-		Modifier: 30
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Allies/Infantry
@@ -2742,7 +2742,7 @@ ASSA:
 	Targetable@MindControlResistant:
 		TargetTypes: MindControlResistant
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageTypeDamageMultiplier@A2GPROTECTION:
 		DamageTypes: AirToGround
@@ -2926,7 +2926,7 @@ ACOL:
 		Types: Veterancy
 		Prerequisites: barracks.upgraded
 	DamageMultiplier@CYBORGARMORHUMAN:
-		Modifier: 60
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Convertible:
 		SpawnActors: TPLR
@@ -2972,7 +2972,7 @@ TPLR:
 		LocalOffset: 427,0,341
 		RequiresCondition: quantum-upgrade
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnPrerequisite@QUANTUM:
 		Condition: quantum-upgrade
@@ -3431,7 +3431,7 @@ DESO:
 		Sequence: deploy
 		BodyNames: deployed
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageMultiplier@DEPLOYED:
 		Modifier: 10
@@ -3507,7 +3507,7 @@ N1C:
 		Weapon: Vulcan3
 		MuzzleSequence: garrison-muzzle
 	DamageMultiplier@CYBORGARMORHUMAN:
-		Modifier: 60
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -3773,7 +3773,7 @@ IVAN:
 		DamageSource: Killer
 		RequiresCondition: !being-warped
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 75
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -4633,7 +4633,7 @@ SEAL:
 		Modifier: 40
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	AnnounceOnKill:
 	ProducibleWithLevel:
@@ -5182,10 +5182,10 @@ ZTRP:
 		TargetTypes: Temporal
 		RequiresCondition: !jumping
 	DamageMultiplier@Jumping:
-		Modifier: 60
+		Modifier: 50
 		RequiresCondition: jumping
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: GDI/Infantry
@@ -5217,7 +5217,7 @@ ZRAI:
 	Mobile:
 		Speed: 55
 	DamageMultiplier@HUMAN:
-		Modifier: 65
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	-TakeCover:
 	TargetedLeapAbility:
@@ -5249,7 +5249,7 @@ ZDEF:
 	Mobile:
 		Speed: 65
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 75
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	-TargetedLeapAbility:
 	-Contrail@Jumping:
@@ -5449,7 +5449,7 @@ HOPL:
 		ArmamentNames: primary
 		RevokeDelay: 1
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 75
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Allies/Infantry
@@ -5526,7 +5526,7 @@ TIGR:
 		StandSequences: stand, stand2
 		DefaultAttackSequence: shoot
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 75
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Allies/Infantry
@@ -5606,7 +5606,7 @@ CRYT:
 		Condition: attacking
 		RevokeDelay: 6
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 75
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Allies/Infantry

@@ -497,7 +497,7 @@ VEHICLES.SCRIN:
 	SpawnActorOnDeath@GMUT:
 		Actor: gscr.mutating
 	DamageMultiplier@HUMAN:
-		Modifier: 30
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Infantry
@@ -706,6 +706,9 @@ S4:
 	GrantConditionOnPrerequisite@BLINKPACKS:
 		Condition: blink-upgrade
 		Prerequisites: blink.upgrade
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantTimedCondition@BlinkFlash:
 		Condition: blinkflash
 		Duration: 3
@@ -769,6 +772,9 @@ MRDR:
 		ConditionDuration: 15
 		ShowSelectionBarWhenFull: false
 		CircleColor: c8b8ed66
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnPrerequisite@BLINKPACKS:
 		Condition: blink-upgrade
 		Prerequisites: blink.upgrade
@@ -868,6 +874,9 @@ WCHR:
 		CircleColor: c8b8ed66
 	AutoTarget:
 		InitialStance: HoldFire
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnPrerequisite@BLINKPACKS:
 		Condition: blink-upgrade
 		Prerequisites: blink.upgrade
@@ -1004,6 +1013,9 @@ EVIS:
 	WithIdleOverlay@RESCONVBLUETIB:
 		Offset: 0,0,150
 		Sequence: bluesm
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithIdleOverlay@RESCONVGEMS:
 		Offset: 0,0,150
 		Sequence: redsm
@@ -1054,6 +1066,9 @@ IMPL:
 	Armament@BATF:
 		Name: batf
 		Weapon: ImpalerSpikePassenger
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	EncyclopediaExtras:
@@ -1151,6 +1166,9 @@ STLK:
 	WithColoredSelectionBox@INVIS:
 		RequiresCondition: invisibility || hidden
 		ColorSource: Player
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	TakeCover:
 		PauseOnCondition: being-warped || phaseshield
 	EncyclopediaExtras:
@@ -1668,7 +1686,7 @@ GUNW:
 		UpgradeAtActors: fix, rep, srep
 		BuildDuration: 100
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -1705,7 +1723,7 @@ SHRW:
 		RequiresCondition: travelerspeed
 		Modifier: 130
 	DamageMultiplier@HUMAN:
-		Modifier: 40
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	-ReplacedInQueue:
 	-Upgradeable@SHRW:
@@ -1795,7 +1813,7 @@ SEEK:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -1885,7 +1903,7 @@ LACE:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -1944,7 +1962,7 @@ INTL:
 		LocalOffset: 470,0,30
 		RequiresCondition: player-harbinger
 	DamageMultiplier@HUMAN:
-		Modifier: 40
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithMuzzleOverlay:
 	GrantConditionOnPrerequisite@Harbinger:
@@ -2118,7 +2136,7 @@ CORR:
 		Types: Veterancy
 		Prerequisites: vehicles.upgraded
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithMoveAnimation:
 		ValidMovementTypes: Horizontal, Vertical, Turn
@@ -2234,7 +2252,7 @@ LCHR:
 	GivesBountyCA:
 		RequiresCondition: global-bounty && !coalescence-upgrade
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -2319,7 +2337,7 @@ LCHR.Orb:
 		Condition: lchr-healing
 		Range: 5c512
 	DamageMultiplier@HUMAN:
-		Modifier: 40
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	AutoTarget:
 	AttackOmni:
@@ -2385,7 +2403,7 @@ STCR:
 		Types: Veterancy
 		Prerequisites: vehicles.upgraded
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithShadow:
 		Offset: 80, 80, 0
@@ -2471,7 +2489,7 @@ DEVO:
 		MuzzleSequence: muzzle
 		MuzzlePalette: scrin
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithMuzzleOverlay:
 	ProducibleWithLevel:
@@ -2581,7 +2599,7 @@ DARK:
 	KillsSelf@SINK:
 		RequiresCondition: onwater && (empdisable || driver-dead)
 	DamageMultiplier@HUMAN:
-		Modifier: 40
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Targetable@ONWATER:
 		TargetTypes: Water, Ship
@@ -2694,7 +2712,7 @@ RUIN:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
 	DamageMultiplier@HUMAN:
-		Modifier: 40
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -2771,7 +2789,7 @@ ATMZ:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
 	DamageMultiplier@HUMAN:
-		Modifier: 40
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -2869,7 +2887,7 @@ TPOD:
 		DamageCooldown: 100
 		RequiresCondition: on-resource
 	DamageMultiplier@HUMAN:
-		Modifier: 70
+		Modifier: 75
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithDecoration@TibRepair:
 		Image: select
@@ -3086,7 +3104,7 @@ OBLT:
 	Targetable@Obliterator:
 		TargetTypes: Obliterator
 	DamageMultiplier@HUMAN:
-		Modifier: 40
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -3164,7 +3182,7 @@ NULL:
 		Actor: NULL.Husk
 		RequiresCondition: !being-warped
 	DamageMultiplier@HUMAN:
-		Modifier: 40
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -3234,7 +3252,7 @@ SMCV:
 		BobDistance: -25
 		RequiresCondition: !empdisable && !being-warped && !driver-dead
 	DamageTypeDamageMultiplier@A2GPROTECTION:
-		Modifier: 60
+		Modifier: 50
 	SpeedMultiplier@Traveler:
 		Modifier: 130
 		RequiresCondition: player-traveler

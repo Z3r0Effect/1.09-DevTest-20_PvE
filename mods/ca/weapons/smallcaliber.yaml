@@ -946,6 +946,7 @@ SNIPERBATF.UPG:
 
 SNIPER.ASSA:
 	Inherits: SNIPER
+	ValidTargets: Infantry, Vehicle
 	InvalidTargets: Structure
 	ReloadDelay: 35
 	Range: 13c512

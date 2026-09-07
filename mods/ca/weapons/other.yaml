@@ -2672,8 +2672,8 @@ VirusCloud:
 		Falloff: 200, 150, 75, 25, 0
 		DamageTypes: PoisonDeath
 		Versus:
-			Light: 65
-			Heavy: 50
+			Light: 50
+			Heavy: 40
 			Wood: 10
 			Concrete: 80
 
