@@ -3423,6 +3423,7 @@ HMMV.TOW:
 GDRN:
 	Inherits: ^Vehicle
 	Inherits@LIGHTARMOR: ^TargetableLightArmor
+	Inherits@ZoneDefenderShieldable: ^ZoneDefenderShieldable
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@HACKABLE: ^Hackable
 	Inherits@UpgradeOverlay: ^UpgradeOverlay
@@ -3499,6 +3500,9 @@ GDRN:
 		MaximumReclaimableValuePercentage: 600
 	DamageMultiplier@HUMAN:
 		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ProductionTimeMultiplier:
+		Multiplier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Sellable:
 		RequiresCondition: unit-sellable && !c4 && !being-warped
@@ -4676,6 +4680,9 @@ MDRN:
 		EmptyWeapon: VisualExplodeSmall
 	DamageMultiplier@HUMAN:
 		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ProductionTimeMultiplier:
+		Multiplier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReclaimsExperience:
 		Type: Drone
@@ -9931,6 +9938,7 @@ WOLV:
 	Inherits: ^VehicleTD
 	Inherits@LIGHTARMOR: ^TargetableLightArmor
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@ZoneDefenderShieldable: ^ZoneDefenderShieldable
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@GYRO: ^GyroStabilizers
 	Buildable:
@@ -10013,6 +10021,7 @@ WOLV:
 XO:
 	Inherits: ^VehicleTD
 	Inherits@LIGHTARMOR: ^TargetableLightArmor
+	Inherits@ZoneDefenderShieldable: ^ZoneDefenderShieldable
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Buildable:

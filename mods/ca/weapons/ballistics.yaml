@@ -1156,7 +1156,7 @@ GuardianDroneGun:
 	Projectile: Bullet
 		Speed: 1c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 3800
+		Damage: 4600
 		Versus:
 			Wood: 65
 			Concrete: 35

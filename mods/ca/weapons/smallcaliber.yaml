@@ -44,7 +44,7 @@ ZSU-23:
 
 FLAK-23-AA:
 	Inherits: ^AACannon
-	Range: 7c512
+	Range: 8c256
 	Report: flak1.aud, flak2.aud
 	Warhead@1Dam: SpreadDamage
 		Damage: 1500
@@ -54,7 +54,7 @@ FLAK-23-AA:
 FLAK-23-AG:
 	Inherits: ^AACannon
 	Report: flak1.aud, flak2.aud
-	Range: 7c0
+	Range: 7c128
 	ValidTargets: Ground, Water
 	Projectile: Bullet
 		LaunchAngle: 62
@@ -65,8 +65,8 @@ FLAK-23-AG:
 	Warhead@1Dam: SpreadDamage
 		ValidRelationships: Enemy, Neutral, Ally
 		-Range:
-		Damage: 1750
-		Spread: 0c128
+		Damage: 2150
+		Spread: 0c256
 		Falloff: 100, 37, 14, 5, 0
 		Versus:
 			None: 100
@@ -137,9 +137,9 @@ MGatt:
 	-Report:
 	Range: 7c512
 	Warhead@1Dam: SpreadDamage
-		Damage: 680
+		Damage: 740
 	Warhead@smallDamage: SpreadDamage
-		Damage: 680
+		Damage: 740
 	Warhead@2Eff: CreateEffect
 		Explosions: piff, piff2
 		ValidTargets: Air, AirSmall
@@ -174,7 +174,7 @@ MGatt:
 ^LightMG:
 	Inherits: ^HeavyMG
 	Warhead@1Dam: SpreadDamage
-		Damage: 1200
+		Damage: 1600
 		Versus:
 			None: 150
 			Wood: 10
@@ -545,9 +545,9 @@ GrizzM60mg:
 	BurstDelays: 2
 	ReloadDelay: 25
 	Warhead@1Dam: SpreadDamage
-		Damage: 1550
+		Damage: 1850
 		Versus:
-			Light: 75
+			Light: 95
 	Warhead@2Eff: CreateEffect
 		Explosions: piff, piff2
 		Inaccuracy: 64
@@ -650,15 +650,21 @@ M60mgMD:
 M60mgMD.Attached:
 	Range: 8c0
 	Inherits: M60mgMD
+	Warhead@1Dam: SpreadDamage
+		Damage: 2000
+		Versus:
+			None: 170
+			Light: 45
+			Heavy: 15
 
 MGattG:
 	Inherits: ^HeavyMG
-	Range: 7c0
+	Range: 7c512
 	ReloadDelay: 5
 	-Report:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 330
+		Damage: 550
 		Versus:
 			None: 160
 			Wood: 35
@@ -667,7 +673,7 @@ MGattG:
 			Heavy: 35
 	Warhead@PercDam: HealthPercentageDamage
 		Spread: 42
-		Damage: 6
+		Damage: 9
 		Versus:
 			Light: 1
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath

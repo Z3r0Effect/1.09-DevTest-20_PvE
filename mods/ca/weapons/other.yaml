@@ -1384,7 +1384,7 @@ XOLaser:
 		SecondaryBeamColor: 79cd0040
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
-		Damage: 12500
+		Damage: 14500
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 		Versus:
 			None: 65
@@ -1412,10 +1412,10 @@ XOCoilGun:
 		TrailSpacing: 682
 		AllowSnapping: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
+		Spread: 0c256
 		Damage: 4000
 		Versus:
-			None: 100
+			None: 110
 			Wood: 10
 			Light: 90
 			Heavy: 65
@@ -1652,7 +1652,7 @@ VenomLaserAA.UPG:
 
 PointLaser:
 	Inherits: Laser
-	ReloadDelay: 85
+	ReloadDelay: 65
 	ValidTargets: Ground, Water, Missile
 	InvalidTargets: Infantry, Vehicle, Structure, Wall, Ship, Submarine
 	Range: 1c768
@@ -3939,7 +3939,7 @@ FloatingDiscResourceDrainer:
 		ValidTargets: ResourceDrainable
 
 ZoneTrooperRailgun:
-	ReloadDelay: 65
+	ReloadDelay: 55
 	Range: 7c128
 	Report: ztrp-fire1.aud, ztrp-fire2.aud, ztrp-fire3.aud
 	Projectile: RailgunCA

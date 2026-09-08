@@ -3955,7 +3955,7 @@ HQ.UPG:
 	-TransformOnCondition@UPG:
 	-GrantConditionOnPrerequisite@UPG:
 	Power:
-		Amount: -80
+		Amount: -50
 	Cargo:
 		Types: Hacker
 		MaxWeight: 5

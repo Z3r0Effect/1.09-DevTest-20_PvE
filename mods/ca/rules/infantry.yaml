@@ -3703,7 +3703,7 @@ RMBC:
 		Types: MarkedVeterancy
 		Prerequisites: player.marked
 	ProductionTimeMultiplier:
-		Multiplier: 80
+		Multiplier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProductionCostMultiplier:
 		Multiplier: 85
