@@ -82,7 +82,7 @@ DOG:
 		Range: 6c0
 	DetectCloaked@Mine:
 		DetectionTypes: Mine
-		Range: 5c0
+		Range: 7c0
 	RangedGpsRadarProvider:
 		Range: 18c0
 		TargetTypes: Infantry
@@ -4628,6 +4628,8 @@ SEAL:
 		Armaments: secondary, tertiary
 		PauseOnCondition: being-warped || blinded || reapersnare
 		FacingTolerance: 0
+	AutoTarget:
+		AllowMovement: false
 	Demolition:
 		DetonationDelay: 45
 		Voice: Demolish

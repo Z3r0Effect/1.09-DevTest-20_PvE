@@ -2581,7 +2581,7 @@ MNLY:
 		Margin: 4, 3
 		RequiresSelection: true
 	DetectCloaked:
-		Range: 5c0
+		Range: 7c0
 		DetectionTypes: Mine
 		RequiresCondition: !(empdisable || being-warped)
 	RenderDetectionCircle:
@@ -6397,7 +6397,7 @@ TRPC:
 		DetectionTypes: Cloak, AirCloak
 		RequiresCondition: !(empdisable || being-warped)
 	DetectCloaked@Mines:
-		Range: 6c0
+		Range: 7c0
 		DetectionTypes: Mine
 		RequiresCondition: !(empdisable || being-warped)
 	GivesBountyCA:
@@ -9034,6 +9034,8 @@ BATF:
 			mort.cryo: loaded
 			mort.sonic: loaded
 			mort.chem: loaded
+			deso: loaded
+			ttrp: loaded
 			cmsr: loaded
 			spy: loaded-spy
 			snip: loaded
@@ -9373,6 +9375,8 @@ CDRN:
 		Weapon: ChaosGas
 		RequiresCondition: triggered && ammo
 		AmmoPoolName: explosion
+	KillsSelf:
+		RequiresCondition: invulnerability
 	-Capturable:
 	Targetable@MindControlImmune:
 		TargetTypes: MindControlImmune

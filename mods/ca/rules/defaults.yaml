@@ -1195,9 +1195,6 @@
 	FirepowerMultiplier@CYBORGDAMAGE:
 		RequiresCondition: cyborgdmg-upgrade
 		Modifier: 115
-	ProductionTimeMultiplier@CYBORGPROD:
-		Multiplier: 75
-		Prerequisites: cyborgprod.upgrade
 	SpeedMultiplier@CYBORGSPEED:
 		RequiresCondition: cyborgspeed-upgrade
 		Modifier: 130
@@ -1865,7 +1862,8 @@
 	Inherits@HeavyArmor: ^HeavyArmor
 	Inherits@NodCovenantTarget: ^NodCovenantTarget
 	TooltipExtras:
-		Weaknesses: • Unarmed\n• Resistant to mind control
+		Weaknesses: • Unarmed
+		Attributes: • Resistant to mind control
 	Valued:
 		Cost: 1400
 	Tooltip:
@@ -2373,8 +2371,8 @@
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Infantry, Light, Water, Underwater, Defense
-		InvalidTargets: NoAutoTarget, WaterStructure, AntiAirDefense
+		ValidTargets: Infantry, Light, Ship, SubMarine, Defense
+		InvalidTargets: NoAutoTarget, AntiAirDefense
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Vehicle, Structure, AntiAirDefense, Mine
@@ -2384,8 +2382,8 @@
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Vehicle, Water, Underwater, Defense
-		InvalidTargets: NoAutoTarget, WaterStructure, AntiAirDefense
+		ValidTargets: Vehicle, Ship, SubMarine, Defense
+		InvalidTargets: NoAutoTarget, AntiAirDefense
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Infantry, Structure, AntiAirDefense, Mine
@@ -2395,8 +2393,8 @@
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Infantry, Vehicle, Water, Underwater, Defense
-		InvalidTargets: NoAutoTarget, WaterStructure, AntiAirDefense
+		ValidTargets: Infantry, Vehicle, Ship, SubMarine, Defense
+		InvalidTargets: NoAutoTarget, AntiAirDefense
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Structure, AntiAirDefense, Mine
@@ -2426,7 +2424,7 @@
 ^AutoTargetGroundAssaultMovePrioritizeVehicles:
 	Inherits: ^AutoTargetGroundAssaultMove
 	AutoTargetPriority@DEFAULTVEH:
-		ValidTargets: Vehicle, Ship
+		ValidTargets: Vehicle, Ship, Submarine
 		InvalidTargets: NoAutoTarget
 		Priority: 10
 
@@ -2457,8 +2455,8 @@
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Infantry, Vehicle, Water, Underwater, Air, AirSmall, Defense
-		InvalidTargets: NoAutoTarget, WaterStructure, AntiAirDefense
+		ValidTargets: Infantry, Vehicle, Ship, SubMarine, Air, AirSmall, Defense
+		InvalidTargets: NoAutoTarget, AntiAirDefense
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Structure, AntiAirDefense, Mine
@@ -2468,8 +2466,8 @@
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Infantry, Light, Water, Underwater, Air, AirSmall, Defense
-		InvalidTargets: NoAutoTarget, WaterStructure, AntiAirDefense
+		ValidTargets: Infantry, Light, Ship, SubMarine, Air, AirSmall, Defense
+		InvalidTargets: NoAutoTarget, AntiAirDefense
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Vehicle, Structure, AntiAirDefense, Mine
@@ -2492,7 +2490,7 @@
 ^AutoTargetAllAssaultMovePrioritizeGround:
 	Inherits: ^AutoTargetAllAssaultMove
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Infantry, Vehicle, Water, Underwater, Defense
+		ValidTargets: Infantry, Vehicle, Ship, SubMarine, Defense
 	AutoTargetPriority@DeprioritizedAir:
 		ValidTargets: Air, AirSmall
 		InvalidTargets: NoAutoTarget
@@ -2972,9 +2970,6 @@
 	Targetable:
 		RequiresCondition: !parachute && !being-warped
 		TargetTypes: Ground, Infantry
-	Targetable@Parachuting:
-		RequiresCondition: parachute
-		TargetTypes: AirSmall
 	Targetable@SpyDisguise:
 		TargetTypes: SpyDisguise
 	Targetable@TNTPlantable:
@@ -4998,7 +4993,7 @@
 		PauseOnCondition: being-warped
 		FacingTolerance: 0
 	DetectCloaked:
-		Range: 5c0
+		Range: 7c0
 		DetectionTypes: Mine
 	MineImmune:
 
