@@ -107,6 +107,21 @@
 	GrantConditionOnBotOwner@EasyAI:
 		Condition: owned-by-easy-ai
 		Bots: easy
+	GrantConditionOnFaction@Allies:
+		Factions: allies, england, germany, france, usa
+		Condition: allies
+	GrantConditionOnFaction@Soviets:
+		Factions: soviet, russia, ukraine, iraq, yuri
+		Condition: soviet
+	GrantConditionOnFaction@GDI:
+		Factions: gdi, talon, zocom, eagle, arc
+		Condition: gdi
+	GrantConditionOnFaction@NOD:
+		Factions: nod, blackh, marked, legion, shadow
+		Condition: nod
+	GrantConditionOnFaction@SCRIN:
+		Factions: scrin, reaper, traveler, harbinger, collector
+		Condition: scrin
 
 ^BotBuilding:
 	GrantConditionOnBotOwner@BrutalAI:
@@ -4307,7 +4322,7 @@
 		Modifier: 50
 		RequiresCondition: fast-regrowth
 	SeedsResourceMultiplier@IchorBoost:
-		Modifier: 25
+		Modifier: 50
 		RequiresCondition: ichor-boost
 	ExternalCondition@IchorBoost:
 		Condition: ichor-boost

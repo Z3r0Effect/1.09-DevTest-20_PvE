@@ -874,7 +874,7 @@ Commandobombbuilding:
 	Inherits: ^Artillery
 	ValidTargets: Structure
 	InvalidTargets: C4Attached, C4Immune
-	ReloadDelay: 150
+	ReloadDelay: 125
 	Range: 10c512
 	Report: grenade1.aud
 	Projectile: Bullet
@@ -908,21 +908,26 @@ Commandobombbuilding:
 	-Warhead@4EffWater:
 
 Commandobombvehicle:
-	Inherits: ^Artillery
 	ValidTargets: Vehicle
 	InvalidTargets: C4Attached, C4Immune
 	ReloadDelay: 85
 	Range: 13c0
-	Report: grenade1.aud
-	Projectile: Bullet
-		LaunchAngle: 15
-		Speed: 280
-		Inaccuracy: 0
-		Image: TNT
+	Report: scrin5b.aud
+	Projectile: MissileCA
+		MaximumLaunchSpeed: 192
+		MinimumLaunchSpeed: 75
+		Speed: 384
+		HorizontalRateOfTurn: 8
+		RangeLimit: 14c0
+		Blockable: false
+		Jammable: false
+		Shadow: true
+		Image: rmbctorp
+		Palette: tdeffect
 		ContrailLength: 6
-		ContrailStartColor: FF9900
-		ContrailStartColorAlpha: 192
-		ContrailEndColor: FF0000
+		ContrailStartColor: FF3030
+		ContrailStartColorAlpha: 220
+		ContrailEndColor: 800000
 		ContrailStartWidth: 0c40
 	Warhead@AttachDelayedWeapon: AttachDelayedWeapon
 		Weapon: CommandoTNTVehicle
@@ -935,14 +940,11 @@ Commandobombvehicle:
 	Warhead@TargetValidator: SpreadDamage
 	Warhead@Flash: FlashTarget
 		Spread: 0c256
-		Color: ffffff
+		Color: ff3030
 		ValidTargets: Vehicle
-	-Warhead@1Dam:
-	-Warhead@2Smu:
 	Warhead@3Eff: CreateEffect
 		Explosions: piff
 		ImpactSounds: dud1.aud
-	-Warhead@4EffWater:
 
 CommandoTNT:
 	Projectile: InstantHit
@@ -972,12 +974,12 @@ CommandoTNT:
 CommandoTNTVehicle:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c256
-		Damage: 9000
-		Falloff: 800, 300, 150, 75, 0
+		Spread: 1c0
+		Damage: 12000
+		Falloff: 400, 200, 100, 40, 0
 		ValidTargets: Vehicle
 		Versus:
-			None: 65
+			None: 30
 			Light: 85
 			Heavy: 90
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
@@ -2943,12 +2945,12 @@ CyCannon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 384
 		Falloff: 100, 60, 25, 0
-		Damage: 13000
+		Damage: 14000
 		Versus:
 			None: 75
 			Wood: 45
 			Light: 100
-			Heavy: 85
+			Heavy: 90
 			Concrete: 45
 			Brick: 75
 		DamageTypes: Prone350Percent, TriggerProne, ExplosionDeath

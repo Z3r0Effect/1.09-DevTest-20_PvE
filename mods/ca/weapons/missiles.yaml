@@ -833,11 +833,11 @@ StingerGTWR:
 	Projectile: MissileCA
 		Arm: 0
 		HorizontalRateOfTurn: 40
-		RangeLimit: 11c819
+		RangeLimit: 14c0
 		Speed: 400
 		LockOnBurstCounts: 1
 	Warhead@1Dam: SpreadDamage
-		Damage: 9000
+		Damage: 10000
 		Spread: 512
 		Versus:
 			None: 50

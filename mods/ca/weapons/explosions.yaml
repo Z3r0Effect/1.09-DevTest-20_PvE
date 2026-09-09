@@ -1117,7 +1117,7 @@ Mindblast:
 		ExplosionPalette: ra2effect-ignore-lighting-alpha75
 		ValidTargets: Ground, Trees, Water, Underwater, Air, AirSmall
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c128
+		Spread: 1c612
 		Damage: 20000
 		Falloff: 1000, 500, 300, 150, 60, 17, 5, 5
 		ValidTargets: Infantry, Vehicle, Structure, Ship
@@ -1136,9 +1136,9 @@ MindblastSlave:
 	Warhead@Eff: CreateEffect
 		Explosions: mindblastsm
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c768
+		Spread: 1c512
 		Damage: 40000
-		Falloff: 100, 65, 35, 15, 5, 0
+		Falloff: 100, 65, 45, 25, 15, 0
 		Versus:
 			None: 50
 	Warhead@2Dam: SpreadDamage

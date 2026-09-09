@@ -1463,6 +1463,9 @@ GTNK.squad:
 	DamageMultiplier@HUMAN:
 		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ProductionTimeMultiplier:
+		Multiplier: 95
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Soviets/Vehicles
 
@@ -1638,6 +1641,9 @@ ARTY:
 		FacingTolerance: 0
 	DamageMultiplier@HUMAN:
 		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ProductionTimeMultiplier:
+		Multiplier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithMuzzleOverlay:
 	FireWarheadsOnDeath:
@@ -1850,6 +1856,9 @@ ISU:
 		FacingTolerance: 0
 	DamageMultiplier@HUMAN:
 		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ProductionTimeMultiplier:
+		Multiplier: 95
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithMuzzleOverlay:
 	WithRestartableIdleOverlay@ATOMICAMMO:
@@ -4868,6 +4877,9 @@ HTNK:
 	DamageMultiplier@HUMAN:
 		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ProductionTimeMultiplier:
+		Multiplier: 95
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Upgradeable@ION:
 		Type: ionmam.upgrade
 		UpgradingCondition: upgrading
@@ -5213,6 +5225,9 @@ MSAM:
 	DamageMultiplier@HUMAN:
 		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ProductionTimeMultiplier:
+		Multiplier: 95
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: GDI/Vehicles
 
@@ -5381,6 +5396,9 @@ MLRS:
 	DamageMultiplier@HUMAN:
 		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ProductionTimeMultiplier:
+		Multiplier: 95
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Vehicles
 	EncyclopediaExtras:
@@ -5521,6 +5539,9 @@ STNK.Nod:
 	DamageMultiplier@HUMAN:
 		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ProductionTimeMultiplier:
+		Multiplier: 95
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Vehicles
 
@@ -5636,6 +5657,9 @@ HSTK:
 		RequiresCondition: hidden || invisibility
 	DamageMultiplier@HUMAN:
 		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ProductionTimeMultiplier:
+		Multiplier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Vehicles
@@ -6393,6 +6417,9 @@ TRPC:
 		RefundPercent: 10
 	DamageMultiplier@HUMAN:
 		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ProductionTimeMultiplier:
+		Multiplier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Soviets/Vehicles
@@ -7776,6 +7803,9 @@ TITN:
 	DamageMultiplier@HUMAN:
 		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ProductionTimeMultiplier:
+		Multiplier: 90
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	RangeMultiplier@SEEK:
 		RequiresCondition: seek && !gyrostabilizers
 	RangeMultiplier@SEEK2:
@@ -7940,6 +7970,9 @@ JUGG:
 		Offset: 0,0,512
 	DamageMultiplier@HUMAN:
 		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ProductionTimeMultiplier:
+		Multiplier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: GDI/Vehicles
@@ -10253,6 +10286,9 @@ APOC:
 		RequiresCondition: atomic-ammo && has-atomic-ammo < 6
 	DamageMultiplier@HUMAN:
 		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ProductionTimeMultiplier:
+		Multiplier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReplacedInQueue:
 		Actors: apoc.atomic, apoc.erad

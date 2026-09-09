@@ -58,7 +58,7 @@ VEHICLES.SCRIN:
 ^ResourceConversion:
 	Inherits: ^OnResourceConditions
 	AmmoPool@RESCONV:
-		Ammo: 8
+		Ammo: 6
 		InitialAmmo: 0
 		AmmoCondition: ammo
 		Armaments: primary-charged
@@ -67,7 +67,7 @@ VEHICLES.SCRIN:
 		Delay: 20
 		RequiresCondition: charging-on-resource
 	WithAmmoPipsDecoration@RESCONV:
-		PipCount: 8
+		PipCount: 6
 		RequiresCondition: ammo
 		RequiresSelection: true
 		Position: BottomLeft
@@ -504,7 +504,7 @@ VEHICLES.SCRIN:
 
 S1:
 	Inherits@SCRININFANTRY: ^ScrinInfantry
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetTroopGroundAssaultMove
 	Inherits@BERSERK: ^Berserk
 	Inherits@BOTHELPER: ^BotCaptureHelper
 	Inherits@HeroOfTheUnionTargetable: ^HeroOfTheUnionTargetable

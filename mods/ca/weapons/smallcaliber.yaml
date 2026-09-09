@@ -734,10 +734,10 @@ Colt45:
 	Inherits: ^SnipeWeapon
 	ReloadDelay: 10
 	Burst: 4
-	BurstDelays: 2,9,2
+	BurstDelays: 2,6,2
 	Range: 10c256
 	Warhead@1Dam: SpreadDamage
-		Damage: 4700
+		Damage: 4800
 		Versus:
 			Light: 75
 	Warhead@2Eff: CreateEffect
@@ -758,7 +758,7 @@ SMG:
 	ReloadDelay: 16
 	Range: 9c512
 	Warhead@1Dam: SpreadDamage
-		Damage: 25000
+		Damage: 20000
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piff, piff2
