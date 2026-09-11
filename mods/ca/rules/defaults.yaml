@@ -562,7 +562,7 @@
 	ExternalCondition@HeroOfTheUnion:
 		Condition: herooftheunion
 	FlatHealthDamageMultiplier@HeroOfTheUnion:
-		HP: 20000
+		HP: 24000
 		RequiresCondition: herooftheunion
 	SpeedMultiplier@HeroOfTheUnion:
 		Modifier: 120
@@ -610,7 +610,7 @@
 	ReloadDelayMultiplier@HeroOfTheUnion:
 		Modifier: 85
 	RangeMultiplier@HeroOfTheUnion:
-		Modifier: 110
+		Modifier: 115
 
 ^IdolOfKane:
 	ExternalCondition@IdolOfKaneBuff:
@@ -1486,7 +1486,7 @@
 		TargetTypes: AtomicAmmoTargetable
 	AmmoPool@ATOMICAMMO:
 		Armaments: primary
-		Ammo: 16
+		Ammo: 12
 		InitialAmmo: 0
 		AmmoCondition: has-atomic-ammo
 	WithAmmoPipsDecoration@ATOMICAMMO:
@@ -1498,12 +1498,12 @@
 		RequiresCondition: has-atomic-ammo
 		AmmoPools: primary
 	ReloadAmmoPool@ATOMICAMMO:
-		Count: 16
+		Count: 12
 		Delay: 1
 		RequiresCondition: atomic-ammo && has-atomic-ammo < 12
 	ReloadAmmoPoolCA@ATOMICAMMODECAY:
-		Count: -16
-		Delay: 1500
+		Count: -12
+		Delay: 3000
 		RequiresCondition: has-atomic-ammo
 		ShowSelectionBar: false
 
@@ -2533,7 +2533,7 @@
 		Multiplier: 80
 		Prerequisites: economy.policy, influence.level1, !influence.level2
 	ProductionTimeMultiplier@EconomyPolicy2:
-		Multiplier: 75
+		Multiplier: 80
 		Prerequisites: economy.policy, influence.level2, !influence.level3
 	ProductionTimeMultiplier@EconomyPolicy3:
 		Multiplier: 75
@@ -2555,15 +2555,15 @@
 		Condition: defense-policy2
 		Prerequisites: defense.policy, influence.level2
 	DamageMultiplier@DefensePolicy1:
-		Modifier: 80
+		Modifier: 85
 		RequiresCondition: defense-policy1 && !defense-policy2
 	DamageMultiplier@DefensePolicy2:
-		Modifier: 70
+		Modifier: 75
 		RequiresCondition: defense-policy2
 	ChangesHealth@DefensePolicyRepairs:
 		Step: 700
 		StartIfBelow: 100
-		Delay: 24
+		Delay: 22
 		DamageCooldown: 0
 		RequiresCondition: defense-policy2 && being-repaired
 	RevealsShroudMultiplier@DefensePolicyVision:
@@ -2575,7 +2575,7 @@
 		Condition: defense-policy3
 		Prerequisites: defense.policy, influence.level3
 	FirepowerMultiplier@DefensePolicyDamage:
-		Modifier: 130
+		Modifier: 120
 		RequiresCondition: defense-policy3
 
 ^DefensePolicyGapBonus:
@@ -2635,11 +2635,11 @@
 		Prerequisites: munp, !munplowpower
 	ReloadDelayMultiplier@MunitionsPlantBoost:
 		RequiresCondition: munp-boost
-		Modifier: 75
+		Modifier: 80
 
 ^OilRefCostReduction:
 	ProductionCostMultiplier@OilRef:
-		Multiplier: 90
+		Multiplier: 80
 		Prerequisites: oilr
 
 ^TDPalette:
@@ -4317,7 +4317,7 @@
 		Modifier: 50
 		RequiresCondition: fast-regrowth
 	SeedsResourceMultiplier@IchorBoost:
-		Modifier: 50
+		Modifier: 70
 		RequiresCondition: ichor-boost
 	ExternalCondition@IchorBoost:
 		Condition: ichor-boost
@@ -4331,7 +4331,7 @@
 		Offset: 0,0,300
 	SeedsResource@BlackTiberium:
 		ResourceType: BlackTiberium
-		Interval: 46
+		Interval: 56
 		RequiresCondition: voidspike
 	WithPalettedOverlay@VoidSpike:
 		Palette: voidspike
@@ -4362,7 +4362,7 @@
 		Categories: Resource spawn
 	ProximityExternalCondition@ONTIB:
 		Condition: on-tib
-		Range: 4c0
+		Range: 5c0
 		ValidRelationships: Ally, Neutral, Enemy
 
 ^Tree:

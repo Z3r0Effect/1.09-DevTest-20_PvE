@@ -73,7 +73,7 @@ PROXYMINESPAWNWATER:
 CRATE:
 	Inherits: ^Crate
 	GiveCashCrateAction:
-		Amount: 6000
+		Amount: 2000
 		SelectionShares: 50
 		UseCashTick: true
 	LevelUpCrateAction:

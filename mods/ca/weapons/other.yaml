@@ -439,31 +439,32 @@ TeslaZap:
 	Inherits: ^TeslaWeapon
 	Range: 12c256
 	Warhead@1Dam: SpreadDamage
+		Damage: 14000
 		Versus:
 			Wood: 60
 			Concrete: 75
 
 TeslaZapBoost1:
 	Inherits: TeslaZap
-	Range: 12c512
+	Range: 13c128
 	Warhead@1Dam: SpreadDamage
-		Damage: 12500
+		Damage: 15500
 
 TeslaZapBoost2:
 	Inherits: TeslaZap
-	Range: 13c768
+	Range: 14c256
 	Warhead@1Dam: SpreadDamage
-		Damage: 13500
+		Damage: 16500
 
 TeslaZapBoost3:
 	Inherits: TeslaZap
 	Range: 15c512
 	Warhead@1Dam: SpreadDamage
-		Damage: 14500
+		Damage: 17000
 
 PortaTesla:
 	Inherits: ^TeslaWeapon
-	ReloadDelay: 70
+	ReloadDelay: 65
 	Range: 7c0
 	Report: shktrop1.aud
 	Warhead@1Dam: SpreadDamage
@@ -482,13 +483,13 @@ PortaTesla.UPG:
 	Range: 7c768
 	Warhead@1Dam: SpreadDamage
 		Versus:
-			Heavy: 80
+			Heavy: 85
 			Light: 125
 
 PortaTeslaCharge:
 	Inherits: ^TeslaWeapon
 	ValidTargets: TeslaBoost
-	ReloadDelay: 60
+	ReloadDelay: 50
 	Range: 3c768
 	-Report:
 	-Warhead@1Dam:
@@ -506,22 +507,22 @@ PortaTeslaCharge:
 
 TTrackZap:
 	Inherits: ^TeslaWeapon
-	ReloadDelay: 70
+	ReloadDelay: 75
 	Range: 8c512
 	Warhead@1Dam: SpreadDamage
-		Damage: 11500
+		Damage: 18500
 		Versus:
 			Wood: 50
 			Concrete: 50
-			Light: 70
-			Heavy: 85
+			Light: 80
+			Heavy: 100
 
 TTrackZap.UPG:
 	Inherits: TTrackZap
 	Range: 8c768
 	Warhead@Arc: FireShrapnel
 		Weapon: TTrackArc1
-		Amount: 1
+		Amount: 2
 		AimChance: 100
 		ThrowWithoutTarget: false
 		AimTargetStances: Enemy, Neutral
@@ -554,12 +555,12 @@ TTankZap:
 	BurstDelays: 3
 	Range: 8c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 3000
+		Damage: 5000
 		Versus:
 			None: 380
 			Wood: 55
 			Concrete: 55
-			Heavy: 60
+			Heavy: 70
 
 TTankZap.UPG:
 	Inherits: TTankZap
@@ -573,13 +574,14 @@ TTankZap.UPG:
 TTankArc:
 	Inherits: TTankZap
 	-Report:
-	Range: 2c512
+	Range: 3c0
 	ValidTargets: Infantry, Vehicle, Defense
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Infantry, Vehicle, Defense
-		Damage: 1750
+		Damage: 2000
 		Versus:
 			None: 315
+			Heavy: 70
 
 DogJaw:
 	ValidTargets: Infantry
@@ -3896,14 +3898,14 @@ FloatingDiscLaser:
 	Inherits: Laser
 	ValidTargets: Ground, Water, Air, AirSmall
 	ReloadDelay: 60
-	Range: 7c768
+	Range: 7c512
 	Report: vfloatta.aud
 	Projectile: LaserZapCA
 		Color: eb39d380
 		SecondaryBeamColor: eb39d340
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground, Water, Air, AirSmall
-		Damage: 15000
+		Damage: 14000
 		Versus:
 			None: 100
 			Light: 75

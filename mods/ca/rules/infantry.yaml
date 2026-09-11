@@ -187,10 +187,10 @@ E1:
 		PauseOnCondition: being-warped || blinded || reapersnare
 		FacingTolerance: 0
 	DamageMultiplier@SOVIET:
-		Modifier: 80
+		Modifier: 70
 		RequiresCondition: soviet && !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@SOVIET:
-		Modifier: 125
+		Modifier: 150
 		RequiresCondition: soviet && !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageMultiplier@HUMAN:
 		Modifier: 50
@@ -380,6 +380,12 @@ E3:
 			RadiationDeath: 10
 			FrozenDeath: 11
 		CrushedSequence: die-crushed
+	DamageMultiplier@SOVIET:
+		Modifier: 80
+		RequiresCondition: soviet && !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	FirepowerMultiplier@SOVIET:
+		Modifier: 125
+		RequiresCondition: soviet && !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageMultiplier@HUMAN:
 		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)

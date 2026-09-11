@@ -2660,7 +2660,7 @@ TRUK.DROP:
 	-DeliversCash:
 	CashTrickler:
 		Interval: 50
-		Amount: 1250
+		Amount: 750
 	KillsSelf:
 		Delay: 50
 		RemoveInstead: true
@@ -6066,7 +6066,7 @@ BTR:
 			yuri: loaded-cmdo
 			mast: loaded-cmdo
 			cmsr: loaded-cmsr
-		InitialUnits: E1,E4,E4,E3,E3
+		InitialUnits: E1,E1,E1,E3,E3
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud
@@ -6322,7 +6322,7 @@ TRPC:
 			bori: loaded-cmdo
 			yuri: loaded-cmdo
 			mast: loaded-cmdo
-		InitialUnits: E1,E1,E1,E3,E3,E3,E3,E2,E2,E2
+		InitialUnits: E1,E1,E1,E1,E1,E3,E3,E3,E3,E3
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
 		ExitSounds: gexit1a.aud
@@ -8544,6 +8544,9 @@ TNKD:
 		DecorationBounds: 1194, 1194
 	DamageMultiplier@HUMAN:
 		Modifier: 75
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ProductionTimeMultiplier:
+		Multiplier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Allies/Vehicles

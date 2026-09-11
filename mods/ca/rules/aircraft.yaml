@@ -4999,7 +4999,7 @@ DISC:
 			ResourceDrainable: Steal
 		DefaultVoice: Attack
 	Aircraft:
-		Speed: 65
+		Speed: 60
 		CruiseAltitude: 2560
 		AltitudeVelocity: 0c100
 		TurnSpeed: 512

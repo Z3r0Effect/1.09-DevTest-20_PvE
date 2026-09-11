@@ -58,7 +58,7 @@ VEHICLES.SCRIN:
 ^ResourceConversion:
 	Inherits: ^OnResourceConditions
 	AmmoPool@RESCONV:
-		Ammo: 6
+		Ammo: 5
 		InitialAmmo: 0
 		AmmoCondition: ammo
 		Armaments: primary-charged
@@ -67,7 +67,7 @@ VEHICLES.SCRIN:
 		Delay: 20
 		RequiresCondition: charging-on-resource
 	WithAmmoPipsDecoration@RESCONV:
-		PipCount: 6
+		PipCount: 5
 		RequiresCondition: ammo
 		RequiresSelection: true
 		Position: BottomLeft
@@ -4994,7 +4994,7 @@ PROC.SCRIN:
 		MaxQueueLength: 12
 		RequiresCondition: !being-warped
 	StoresPlayerResourcesCA:
-		Capacity: 2000
+		Capacity: 3000
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -5651,7 +5651,7 @@ SILO.SCRIN:
 	WithResourceLevelSpriteBody:
 		Sequence: stages
 	StoresPlayerResourcesCA:
-		Capacity: 12000
+		Capacity: 6000
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3

@@ -82,7 +82,7 @@ FCOM:
 	GivesBuildableArea:
 		AreaTypes: building, defense
 	BaseProvider:
-		Range: 12c0
+		Range: 10c0
 	InstantlyRepairable:
 	Power:
 		Amount: 0
@@ -500,7 +500,7 @@ MISS:
 	Health:
 		HP: 60000
 	RevealsShroud:
-		Range: 18c0
+		Range: 14c0
 		RevealGeneratedShroud: False
 	RevealsShroud@GAPGEN:
 		Range: 10c0
@@ -597,7 +597,7 @@ OILB:
 	InstantlyRepairable:
 	CashTrickler:
 		Interval: 375
-		Amount: 200
+		Amount: 150
 		RequiresCondition: enabled
 	GrantPeriodicCondition@Tick:
 		ActiveDuration: 1
@@ -614,7 +614,7 @@ OILB:
 		Name: Oil Derrick
 	TooltipExtras:
 		Description: Provides additional funds.
-		Attributes: • Gives $200 every 15 seconds.\n• Gives $1000 on first capture.
+		Attributes: • Gives $200 every 15 seconds.\n• Gives $800 on first capture.
 	TooltipDescription@ally:
 		Description: Provides additional funds.
 		ValidRelationships: Ally
@@ -645,7 +645,7 @@ OILB:
 	GrantConditionIfOwnerIsNeutral:
 		Condition: is-neutral
 	GivesCashOnCapture@defloration:
-		Amount: 1000
+		Amount: 700
 		RequiresCondition: !has-been-captured
 	GivesCashOnCapture@subsequent:
 		Amount: 200
@@ -683,9 +683,9 @@ OILR:
 	Tooltip:
 		Name: Oil Refinery
 	TooltipExtras:
-		Description: Provides 12% discount on all unit production.
+		Description: Provides 20% discount on all unit production.
 	TooltipDescription@ally:
-		Description: Provides 12% discount on all unit production.
+		Description: Provides 20% discount on all unit production.
 		ValidRelationships: Ally
 	TooltipDescription@other:
 		Description: Capture to receive a 10% discount on all unit production.

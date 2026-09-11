@@ -168,7 +168,7 @@
 				TargetOffset: 256,-2048,0
 		Prerequisites: ~aircraft.usa
 		Icon: strafe
-		ChargeInterval: 3000
+		ChargeInterval: 4500
 		Name: Strafing Run
 		Description: Calls in P51 ground attack planes to perform strafing runs on the target.
 		SelectTargetSpeechNotification: SelectTarget
@@ -186,7 +186,7 @@
 		UseDirectionalTarget: True
 		DirectionArrowAnimation: paradirection
 		Strikes: 3
-		CircleDelay: 25
+		CircleDelay: 20
 		SupportPowerPaletteOrder: 45
 		TargetCircleRange: 3c512
 		TargetCircleColor: 999999AA
@@ -269,7 +269,7 @@
 		ExplosionWeapon: TimeWarp
 		Condition: being-warped
 		Duration: 375
-		Range: 4c512
+		Range: 3c512
 		ValidRelationships: Ally, Enemy, Neutral
 		AllowMultiple: false
 		SelectTargetSpeechNotification: SelectTarget
@@ -334,7 +334,7 @@
 		PauseOnCondition: disabled || empdisable || being-warped
 		Icon: heliosbomb
 		IconPalette: caneon
-		ChargeInterval: 8250
+		ChargeInterval: 7500
 		Name: Helios Bomb
 		Description: Calls in a bomber which drops a Helios bomb, blinding units in a large area.
 		SelectTargetSpeechNotification: SelectTarget
@@ -362,7 +362,7 @@
 ^BlackSkyStrikePower:
 	MissileStrikePower@BlackSkyStrike:
 		MissileActor: bsky
-		Range: 9c0
+		Range: 8c0
 		OrderName: blackskystrike
 		Prerequisites: ~korea.coalition, ~alhq
 		PauseOnCondition: disabled || empdisable || being-warped
@@ -768,8 +768,8 @@
 		ChargeInterval: 4500
 		Name: Atomic Shells
 		Condition: atomic-ammo
-		Range: 8c0
-		MaxTargets: 10
+		Range: 5c0
+		MaxTargets: 5
 		ShowTargetCount: true
 		ValidTargets: Vehicle
 		Duration: 1
@@ -799,8 +799,8 @@
 		ChargeInterval: 4500
 		Name: Atomic Shells
 		Condition: atomic-ammo
-		Range: 8c0
-		MaxTargets: 10
+		Range: 5c0
+		MaxTargets: 5
 		ShowTargetCount: true
 		ValidTargets: Vehicle
 		Duration: 1
@@ -831,7 +831,7 @@
 		ChargeInterval: 4500
 		Name: Heroes of the Union
 		Condition: herooftheunion
-		Range: 7c512
+		Range: 5c512
 		MaxTargets: 10
 		ShowTargetCount: true
 		ValidTargets: HeroOfUnionTargetable
@@ -934,12 +934,12 @@
 	GrantExternalConditionPowerCA@IRONCURTAIN:
 		OrderName: ironcurtain
 		Icon: invuln
-		ChargeInterval: 9000
+		ChargeInterval: 4500
 		ExplosionWeapon: IronCurtain
 		Name: supportpower-ironcurtain.name
 		Condition: invulnerability
-		Range: 6c0
-		MaxTargets: 6
+		Range: 5c0
+		MaxTargets: 5
 		MinTargets: 0
 		ShowTargetCount: true
 		ValidTargets: Vehicle, Ship, Structure
@@ -1009,7 +1009,7 @@
 		Prerequisites: ~radar.gdi, ~!player.arc
 		PauseOnCondition: disabled || empdisable || being-warped
 		Icon: uavicon
-		ChargeInterval: 3750
+		ChargeInterval: 3250
 		Name: Recon Drone
 		Description: A drone flies across the map, revealing the area as it passes.\n\nDetects cloaked units.
 		SelectTargetSpeechNotification: SelectTarget
@@ -1033,7 +1033,7 @@
 		Prerequisites: ~radar.gdi, ~player.arc
 		PauseOnCondition: disabled || empdisable || being-warped
 		Icon: uavicon
-		ChargeInterval: 1500
+		ChargeInterval: 2250
 		Name: Recon Drone
 		Description: A drone flies across the map, revealing the area as it passes.\n\nDetects cloaked units.
 		SelectTargetSpeechNotification: SelectTarget
@@ -1059,7 +1059,7 @@
 		Prerequisites: ~radar.talon
 		PauseOnCondition: disabled || empdisable || being-warped
 		Icon: xodrop
-		ChargeInterval: 10500
+		ChargeInterval: 9750
 		Name: X-O Drop
 		UnitType: ocar.xo
 		Description: An Orca transport drops a squad of X-O Powersuits at the target location.
@@ -1098,7 +1098,7 @@
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: Select target.
 		DisplayRadarPing: True
-		ChargeInterval: 5250
+		ChargeInterval: 4500
 		Weapon: DropPodArrive
 		UnitTypes: POD, POD, POD, POD, POD, POD2, POD2, POD3, POD3, POD3
 		ExactUnits: true
@@ -1117,7 +1117,7 @@
 		OrderName: dropzoneeagle
 		Icon: orcaca
 		IconPalette: chrometd
-		ChargeInterval: 3750
+		ChargeInterval: 3000
 		Name: Reinforcements
 		Description: An Orca Carryall drops an APC containing an infantry squad at the target location.
 		EndChargeSpeechNotification: Reinforce
@@ -1175,7 +1175,7 @@
 		Icon: nrepair
 		ChargeInterval: 5250
 		Condition: nrepair
-		Range: 7c512
+		Range: 6c512
 		MaxTargets: 12
 		ShowTargetCount: true
 		Duration: 725
@@ -1307,8 +1307,8 @@
 		TargetCircleRadius: 5c512
 		TargetCircleColor: b2b2e888
 		DisplayBeacon: True
-		BeaconAssumedLaunchDelay: 15
-		BeaconRemoveAdvance: 15
+		BeaconAssumedLaunchDelay: 12
+		BeaconRemoveAdvance: 12
 		BeaconAssumedProjectileSpeed: 600
 		BeaconPoster: emp
 		ArrowSequence: arrow
@@ -1554,7 +1554,7 @@
 		Prerequisites: ~radar.blackh
 		Icon: infbomb
 		IconPalette: chrometd
-		ChargeInterval: 9000
+		ChargeInterval: 9750
 		Name: Inferno Bomb
 		Description: A B2 Stealth Bomber drops inferno bombs on your target.
 		SelectTargetSpeechNotification: SelectTarget
@@ -1582,13 +1582,13 @@
 	CashHackPower@Legion:
 		OrderName: cashhack
 		Icon: chack
-		ChargeInterval: 5250
-		Minimum: 2000
-		Maximum: 8000
+		ChargeInterval: 6000
+		Minimum: 1000
+		Maximum: 3000
 		Prerequisites: ~radar.legion
 		AllowMultiple: false
 		Name: Cash Hack
-		Description: Steal up to $8000 credits from a targeted enemy Refinery.
+		Description: Steal up to $3000 credits from a targeted enemy Refinery.
 		OnFireSound: scashhac.aud
 		Notification: CreditsStolen
 		SelectTargetSpeechNotification: SelectTarget
@@ -1675,7 +1675,7 @@
 		OrderName: frenzy
 		Icon: frenzy
 		Prerequisites: ~tmpl.marked
-		ChargeInterval: 5500
+		ChargeInterval: 6500
 		ExplosionWeapon: Frenzy
 		Name: Frenzy
 		Condition: frenzyinit
@@ -1704,7 +1704,7 @@
 		Prerequisites: ~tmpl.legion
 		OrderName: techhack
 		Icon: techhack
-		ChargeInterval: 12000
+		ChargeInterval: 18000
 		Name: Technology Hack
 		Description: Hack the targeted enemy production structure, providing access to a unit developed using enemy technology.\n\nFor infantry, vehicle and air production respectively: \n\n• Allies: Cryo Mortar, Reckoner, Phantom\n• Soviets: Cyberdog, Cyclops, Kamov\n• GDI: Sonic Mortar, Basilisk, Shade\n• Nod: Chem Mortar, Mantis, Vertigo\n• Scrin: Cyberscrin, Viper, Manticore
 		SelectTargetSpeechNotification: SelectTarget
@@ -1726,7 +1726,7 @@
 		Type: ParadropInfantry
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: Select target.
-		ChargeInterval: 5250
+		ChargeInterval: 6000
 		Name: Assassin Squad
 		Description: Deploy a squad of Assassins that can snipe infantry from long range and destroy buildings with C4.\n\nTarget infantry production structure to deploy.
 		Actors: assa, assa, assa, assa, assa
@@ -1740,7 +1740,7 @@
 		Icon: assassinsquad
 		IconPalette: chrometd
 		Type: ParadropInfantry
-		ChargeInterval: 13500
+		ChargeInterval: 12000
 		Name: Assassin Squad (AI)
 		Description: Deploy a squad of Assassins that can destroy buildings and salvage technology.
 		Actors: assa, assa, assa, assa
@@ -1754,7 +1754,7 @@
 		Type: ParadropInfantry
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: Select target.
-		ChargeInterval: 5250
+		ChargeInterval: 6000
 		Name: Hacker Cell
 		Description: Deploy a squad of Hackers that can remotely capture buildings and take control of defenses.\n\nTarget infantry production structure to deploy.
 		Actors: hack, hack, hack, hack, hack
@@ -1767,7 +1767,7 @@
 		Prerequisites: unity.covenant, ~botplayer
 		Icon: hackercell
 		Type: ParadropInfantry
-		ChargeInterval: 13500
+		ChargeInterval: 12000
 		Name: Hacker Cell (AI)
 		Description: Deploy a squad of Hackers that can remotely capture buildings and take control of defenses.
 		Actors: hack, hack, hack, hack
@@ -1783,7 +1783,7 @@
 		Type: ParadropInfantry
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: Select target.
-		ChargeInterval: 5250
+		ChargeInterval: 6000
 		Name: Confessor Cabal
 		Description: Deploy a Confessor Cabal which is able to construct Idols of Kane that buffs allies and debuffs enemies.\n\nTarget infantry production structure to deploy.
 		Actors: conf, conf, conf, conf, conf
@@ -1797,7 +1797,7 @@
 		Icon: confessorcabal
 		IconPalette: chrometd
 		Type: ParadropInfantry
-		ChargeInterval: 13500
+		ChargeInterval: 12000
 		Name: Confessor Cabal (AI)
 		Description: Deploy a Confessor Cabal which is able to construct Idols of Kane that buffs allies and debuffs enemies.
 		Actors: conf, conf, conf, conf
@@ -1885,7 +1885,7 @@
 		IconPalette: chromes
 		Prerequisites: loyalist.allegiance
 		Cursor: ability
-		ChargeInterval: 3000
+		ChargeInterval: 6000
 		Name: Ichor Spike
 		ActivationDelay: 1
 		Description: Creates an Ichor Spike at the target location. Resources within its area of influence grow and spread faster.\n\nAlso empowers units with Resource Conversion upgrade.\n\nUp to 3 resource nodes are affected.
@@ -1910,7 +1910,7 @@
 		IconPalette: chromes
 		Prerequisites: rebel.allegiance
 		Cursor: ability
-		ChargeInterval: 4500
+		ChargeInterval: 7500
 		Name: Colony Spike
 		ActivationDelay: 1
 		Description: Creates a Colony Spike at the target location. Enables production of non-defensive structures.\n\nWhen fully charged allows non-defensive structures to be built nearby.\n\nMust be built within range of a Colony Platform.
@@ -1937,7 +1937,7 @@
 		IconPalette: chromes
 		Prerequisites: malefic.allegiance
 		Cursor: ability
-		ChargeInterval: 2500
+		ChargeInterval: 6000
 		Name: Voidspike
 		ActivationDelay: 1
 		Description: Creates a Voidspike at the target location. Gradually transforms nearby resources into Black Tiberium which is devoid of most of its useful properties.\n\nDamages nearby enemy units.
@@ -1960,7 +1960,7 @@
 	RevealActorsPower@RESOURCESCAN:
 		CameraActor: camera.resourcescan
 		TargetActors: mine, gmine, split2, split3, splitblue, proc, proc.td, proc.scrin
-		LifeTime: 350
+		LifeTime: 250
 		OrderName: resourcescan
 		Icon: rescanpower
 		ChargeInterval: 6000
@@ -2008,7 +2008,7 @@
 		IconPalette: chromes
 		Prerequisites: radar.harbinger, !botplayer
 		Cursor: ability
-		ChargeInterval: 4500
+		ChargeInterval: 7500
 		Name: Buzzer Swarm
 		ActivationDelay: 1
 		Description: Spawns a controllable swarm which blinds and damages anything nearby; particularly harmful to infantry.
@@ -2030,7 +2030,7 @@
 		IconPalette: chromes
 		Prerequisites: radar.harbinger, botplayer
 		Cursor: ability
-		ChargeInterval: 13500
+		ChargeInterval: 10500
 		Name: Buzzer Swarm (AI)
 		ActivationDelay: 1
 		Description: Spawns a controllable swarm which damages anything nearby; particularly harmful to infantry.
@@ -2069,7 +2069,7 @@
 		DisplayRadarPing: True
 		CameraActor: camera.dummy
 		CameraRemoveDelay: 1
-		TargetCircleRange: 7c0
+		TargetCircleRange: 6c0
 		TargetCircleColor: b070ff90
 		SupportPowerPaletteOrder: 50
 
@@ -2079,7 +2079,7 @@
 		Icon: ichorpower
 		Actor: ichorseeder
 		Prerequisites: ~!player.reaper
-		ChargeInterval: 7500
+		ChargeInterval: 6000
 		Name: Ichor Seed
 		LifeTime: -1
 		AllowMultiple: false
@@ -2101,7 +2101,7 @@
 		Icon: ichorpower
 		Actor: ichorseeder
 		Prerequisites: ~player.reaper
-		ChargeInterval: 3750
+		ChargeInterval: 4800
 		Name: Ichor Seed
 		LifeTime: -1
 		AllowMultiple: false
@@ -2126,7 +2126,7 @@
 		IconPalette: chromes
 		Prerequisites: scrt.collector
 		Cursor: ability
-		ChargeInterval: 3000
+		ChargeInterval: 4500
 		Name: Greater Coalescence
 		ActivationDelay: 1
 		Description: Spawns a controllable biomass which heals nearby allies and sustains itself by feeding off enemies.\n\nFeeding from power plants will shut them down temporarily.
@@ -2191,7 +2191,7 @@
 		IconPalette: chromes
 		Prerequisites: ~rebel.allegiance, ~techlevel.high
 		Cursor: ability
-		ChargeInterval: 4500
+		ChargeInterval: 6000
 		Name: Gateway
 		ActivationDelay: 1
 		Description: Creates a Gateway at the target location. Acts as the exit for any\n   targeted infantry or vehicle production structure.\n\nRequires target location to be within vision.
@@ -2215,7 +2215,7 @@
 		OrderName: anathema
 		Icon: anathema
 		IconPalette: chromes
-		ChargeInterval: 5250
+		ChargeInterval: 3000
 		Name: Anathema
 		Condition: anathema
 		Range: 5c0

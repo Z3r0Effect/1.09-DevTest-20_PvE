@@ -760,7 +760,7 @@ upgc.drop:
 		Description: Provides a dropzone for emergency supplies.
 		IconPalette: chrometd
 	TooltipExtras:
-		Strengths: + $1250 delivered every 20 seconds (normal speed)
+		Strengths: + $750 delivered every 20 seconds (normal speed)
 		Attributes: (!) Mutually exclusive with Firestorm Missile System, Advanced Radar System and Nanoshield Generator
 	RenderSprites:
 		PlayerPalette: playertd
@@ -1252,7 +1252,7 @@ hazmatsoviet.upgrade:
 		Description: Infantry are equipped with heavy hazmat suits which provides protection against Tiberium and radiation.\n\nUpgrades: Infantry
 	TooltipExtras:
 		Strengths: + Tiberium immunity\n+ High resistance to irradiated terrain
-		Weaknesses: – 33% slower movement across resources and rough terrain
+		Weaknesses: – 25% slower movement across resources and rough terrain
 	Valued:
 		Cost: 850
 	RenderSprites:
@@ -1647,7 +1647,7 @@ economy.policy:
 	Buildable:
 		BuildPaletteOrder: 1
 		Prerequisites: ~player.allies, influence.level1, !economy.policy, !defense.policy, !development.policy, ~techlevel.medium
-		Description: Pursue economic policy.\n\n• Level 1: -20% cost of Refineries, Harvesters & MCVs\n• Level 2: -25% cost of Refineries, Harvesters & MCVs, +30% MCV movement speed\n• Level 3: -25% cost of Refineries, Harvesters & MCVs, Free Chrono Miner upgrade, +75% Ore Purifier income
+		Description: Pursue economic policy.\n\n• Level 1: -20% cost of Refineries, Harvesters & MCVs\n• Level 2: -25% cost of Refineries, Harvesters & MCVs, +30% MCV movement speed\n• Level 3: -25% cost of Refineries, Harvesters & MCVs, Free Chrono Miner upgrade, +40% Ore Purifier income
 	TooltipExtras:
 		Attributes: (!) Only ONE Policy may be chosen.(!) Cost reductions do not stack
 	Valued:

@@ -1490,7 +1490,7 @@ PROC:
 		MaxQueueLength: 12
 		RequiresCondition: !being-warped
 	StoresPlayerResourcesCA:
-		Capacity: 2000
+		Capacity: 3000
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -1524,7 +1524,7 @@ PROC:
 		Facing: 256
 		RequiresCondition: spawn-charv && !spawn-harv && !build-incomplete
 	InfiltrateForCash:
-		Percentage: 50
+		Percentage: 60
 		Types: StealCreditsInfiltrate
 		InfiltrationNotification: CreditsStolen
 		PlayerExperience: 15
@@ -1589,7 +1589,7 @@ SILO:
 	WithResourceLevelSpriteBody:
 		Sequence: stages
 	StoresPlayerResourcesCA:
-		Capacity: 18000
+		Capacity: 6000
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -3965,27 +3965,27 @@ HQ.UPG:
 		Margin: 4, 3
 		RequiresSelection: true
 	CashTrickler@Hacker0:
-		Interval: 375
+		Interval: 500
 		Amount: 150
 		RequiresCondition: cargo == 0
 	CashTrickler@Hacker1:
-		Interval: 375
+		Interval: 500
 		Amount: 250
 		RequiresCondition: cargo == 1
 	CashTrickler@Hacker2:
-		Interval: 375
+		Interval: 500
 		Amount: 350
 		RequiresCondition: cargo == 2
 	CashTrickler@Hacker3:
-		Interval: 375
+		Interval: 500
 		Amount: 450
 		RequiresCondition: cargo == 3
 	CashTrickler@Hacker4:
-		Interval: 375
+		Interval: 500
 		Amount: 550
 		RequiresCondition: cargo == 4
 	CashTrickler@Hacker5:
-		Interval: 375
+		Interval: 500
 		Amount: 650
 		RequiresCondition: cargo == 5
 	RevealsShroud:
@@ -4383,7 +4383,7 @@ PROC.TD:
 		MaxQueueLength: 12
 		RequiresCondition: !being-warped
 	StoresPlayerResourcesCA:
-		Capacity: 2000
+		Capacity: 3000
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -4394,7 +4394,7 @@ PROC.TD:
 		DecorationBounds: 3114, 3072
 	InfiltrateForCash:
 		Types: StealCreditsInfiltrate
-		Percentage: 50
+		Percentage: 60
 		InfiltrationNotification: CreditsStolen
 		PlayerExperience: 15
 	GrantConditionOnPrerequisite@SHARVUPG:
@@ -4465,7 +4465,7 @@ SILO.TD:
 	WithResourceLevelSpriteBody:
 		Sequence: stages
 	StoresPlayerResourcesCA:
-		Capacity: 18000
+		Capacity: 6000
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -5856,10 +5856,10 @@ OREP:
 	Tooltip:
 		Name: Ore Purifier
 	ResourcePurifierCA@Normal:
-		Modifier: 50
+		Modifier: 25
 		RequiresCondition: !disabled && !being-warped && !tech-locked && !economy-policy3
 	ResourcePurifierCA@EconomyPolicy3:
-		Modifier: 75
+		Modifier: 40
 		RequiresCondition: !disabled && !being-warped && !tech-locked && economy-policy3
 	GrantConditionOnPrerequisite@EconomyPolicy3:
 		Condition: economy-policy3
