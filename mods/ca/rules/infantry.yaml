@@ -2501,7 +2501,7 @@ BORI:
 		AmmoCondition: scorched-ammo
 	ReloadAmmoPoolCA@ScorchedEarth:
 		AmmoPool: scorched
-		Delay: 250
+		Delay: 125
 		Count: 1
 		ShowSelectionBar: true
 		SelectionBarColor: ff6600

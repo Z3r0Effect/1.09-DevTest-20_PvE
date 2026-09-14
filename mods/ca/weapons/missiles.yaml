@@ -111,7 +111,7 @@ Maverick:
 
 MaverickAA:
 	Inherits: ^AirToAirMissile
-	Range: 8c128
+	Range: 9c256
 	ReloadDelay: 60
 	Report: missile7.aud
 	Burst: 2
@@ -165,7 +165,7 @@ MaverickSU:
 			Heavy: 85
 			Light: 55
 	Warhead@2Dam: SpreadDamage
-		Damage: 2200
+		Damage: 4000
 		Spread: 256
 		Versus:
 			None: 100
@@ -181,7 +181,7 @@ MaverickSU:
 		ImpactSounds: splashl1.aud, splashl2.aud
 
 SeismicMissile:
-	ReloadDelay: 70
+	ReloadDelay: 60
 	Range: 9c128
 	MinRange: 0c768
 	Report: rocket1.aud
@@ -205,7 +205,7 @@ SeismicMissile:
 		LaunchAngle: 0
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c128
-		Damage: 2000
+		Damage: 2400
 		Falloff: 1000, 368, 135, 75, 0
 		ValidTargets: Ground, Water
 		Versus:

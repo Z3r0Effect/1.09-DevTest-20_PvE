@@ -614,7 +614,7 @@ M60mgNHAW:
 		Spread: 512
 		Damage: 3000
 		Versus:
-			None: 165
+			None: 170
 			Light: 70
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, AirToGround
 

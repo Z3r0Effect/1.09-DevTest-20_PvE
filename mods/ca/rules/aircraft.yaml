@@ -932,7 +932,7 @@ NHAW:
 		RequiresCondition: !airborne
 	Cargo:
 		Types: Infantry, Hacker
-		MaxWeight: 12
+		MaxWeight: 10
 		LoadedCondition: cargo
 	WithCargoSounds:
 		EnterSounds: genter1a.aud
@@ -2926,6 +2926,9 @@ KIRO:
 	-SoundOnDamageTransitionCA:
 	Targetable@AirHighValue:
 		TargetTypes: AirHighValue
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	SpeedMultiplier@EMPDISABLE:
 		Modifier: 0
 		RequiresCondition: empdisable

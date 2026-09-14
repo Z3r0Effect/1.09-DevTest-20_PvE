@@ -3627,6 +3627,7 @@
 	Inherits@SovietT4Boost: ^SovietT4Boost
 	Inherits@oilcost: ^OilRefCostReduction
 	Inherits@C4: ^C4Plantable
+	Inherits@BOT: ^BotOwned
 	Inherits@TNT: ^TNTPlantable
 	Inherits@ionsurge: ^IonSurgable
 	Inherits@atomize: ^Atomizable
