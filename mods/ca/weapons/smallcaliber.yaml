@@ -603,7 +603,7 @@ M60mgJJAA:
 
 M60mgNHAW:
 	Inherits: M60mg
-	Range: 8c256
+	Range: 9c0
 	Projectile: Bullet
 		Blockable: false
 	-StartBurstReport:
@@ -611,8 +611,8 @@ M60mgNHAW:
 	Burst: 3
 	BurstDelays: 5
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
-		Damage: 3000
+		Spread: 384
+		Damage: 1800
 		Versus:
 			None: 170
 			Light: 70

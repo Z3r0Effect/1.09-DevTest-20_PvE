@@ -4080,7 +4080,7 @@ CryoSprayer:
 			Wood: 120
 			Light: 25
 			Heavy: 20
-			Concrete: 30
+			Concrete: 70
 			Brick: 0
 		ValidRelationships: Enemy, Neutral
 		DamageTypes: Prone50Percent, TriggerProne, FrozenDeath

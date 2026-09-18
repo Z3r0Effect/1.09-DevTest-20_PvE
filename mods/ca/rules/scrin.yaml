@@ -2540,7 +2540,7 @@ DARK:
 	Buildable:
 		Queue: VehicleSQ, VehicleMQ
 		BuildPaletteOrder: 292
-		Prerequisites: scrt, ~vehicles.scrin, ~malefic.allegiance, ~techlevel.high
+		Prerequisites: scrt, ~vehicles.scrin, ~malefic.allegiance, ~techlevel.medium
 		Description: Heavy hover tank armed with a rift cannon.
 		IconPalette: chromes
 	TooltipExtras:
@@ -2629,7 +2629,7 @@ RUIN:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 290
-		Prerequisites: scrt, ~vehicles.scrin, ~loyalist.allegiance, ~techlevel.high
+		Prerequisites: scrt, ~vehicles.scrin, ~loyalist.allegiance, ~techlevel.medium
 		Queue: VehicleSQ, VehicleMQ
 		Description: Long-range hover artillery.
 		IconPalette: chrome
@@ -2817,7 +2817,7 @@ TPOD:
 	Voiced:
 		VoiceSet: TripodVoice
 	Valued:
-		Cost: 1900
+		Cost: 1800
 	Selectable:
 		Bounds: 1280, 2218, 0, -426
 	Tooltip:
@@ -2825,7 +2825,7 @@ TPOD:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 98000
+		HP: 96000
 	Mobile:
 		Locomotor: heavytracked
 		Speed: 55
@@ -3123,7 +3123,7 @@ NULL:
 	Buildable:
 		Queue: VehicleSQ, VehicleMQ
 		BuildPaletteOrder: 291
-		Prerequisites: scrt, ~vehicles.scrin, ~rebel.allegiance, ~techlevel.high
+		Prerequisites: scrt, ~vehicles.scrin, ~rebel.allegiance, ~techlevel.medium
 		Description: Heavy hover tank that disables enemy weapons and vision.
 		IconPalette: chromes
 	TooltipExtras:

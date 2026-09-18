@@ -2314,14 +2314,14 @@ CryoMissileNHAW:
 	Report: vrocweaa.aud, vrocweab.aud
 	-Burst:
 	-BurstDelays:
-	Range: 9c128
+	Range: 9c0
 	Projectile: Bullet
 		Image: cmiss
 		Speed: 230
 		LaunchAngle: 3
 	Warhead@1Dam: SpreadDamage
 		Spread: 448
-		Damage: 6500
+		Damage: 5000
 		Falloff: 200, 125, 65, 25, 0
 		Versus:
 			None: 50

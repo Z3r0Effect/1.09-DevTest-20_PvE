@@ -4036,7 +4036,7 @@ AURO:
 		RearmActors: afld, afld.gdi
 	Voiced:
 		VoiceSet: AuroraVoice
-	-ProductionCostMultiplier@EagleBonus:
+	-ProductionCostMultiplier@EagleBonusAI:
 	-RangeMultiplier@SEEK:
 	-RangeMultiplier@SEEK2:
 	-RangeMultiplier@SEEK3:
