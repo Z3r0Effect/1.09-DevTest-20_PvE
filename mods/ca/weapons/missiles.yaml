@@ -333,7 +333,7 @@ DragonGI.CRYO:
 
 DragonGISeal:
 	Inherits: DragonGI
-	Range: 10c0
+	Range: 9c512
 	ReloadDelay: 75
 	ValidTargets: Vehicle, Structure, Wall
 	Projectile: MissileCA
@@ -605,7 +605,7 @@ MammothTusk:
 			Aircraft: 50
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigated
 	Warhead@smallDamage: SpreadDamage
-		Damage: 2400
+		Damage: 2600
 		Spread: 128
 		Falloff: 100, 50, 14, 0
 		ValidTargets: AirSmall
@@ -630,7 +630,7 @@ ApocalypseTusk:
 	ValidTargets: Air, AirSmall
 	ReloadDelay: 50
 	Burst: 4
-	Range: 8c512
+	Range: 8c768
 	Projectile: MissileCA
 		RangeLimit: 10c614
 		Speed: 401
@@ -649,7 +649,7 @@ TitanTusk:
 	Warhead@1Dam: SpreadDamage
 		Damage: 10000
 	Warhead@smallDamage: SpreadDamage
-		Damage: 4500
+		Damage: 4600
 
 TitanTusk.Gyro:
 	Inherits: TitanTusk
@@ -1119,14 +1119,14 @@ SCUD:
 		Shadow: True
 		LaunchAngle: 62
 	Warhead@1Dam: SpreadDamage
-		Spread: 341
+		Spread: 405
 		Damage: 3600
-		Falloff: 1000, 448, 192, 50, 18, 7, 0
+		Falloff: 1000, 470, 215, 60, 24, 10, 0
 		Versus:
 			None: 90
 			Wood: 80
-			Light: 65
-			Heavy: 45
+			Light: 75
+			Heavy: 55
 			Concrete: 50
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigated
 	Warhead@3Eff: CreateEffect
@@ -1166,14 +1166,14 @@ V3Weapon:
 	-Report:
 	ValidTargets: Ground, Trees, Water
 	Warhead@1Dam: SpreadDamage
-		Spread: 341
-		Damage: 3600
+		Spread: 448
+		Damage: 3800
 		Falloff: 1000, 448, 192, 50, 18, 7, 0
 		Versus:
 			None: 90
 			Wood: 100
 			Light: 65
-			Heavy: 45
+			Heavy: 60
 			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigated
 	Warhead@3Eff: CreateEffect
@@ -1189,7 +1189,7 @@ THWeapon:
 	ValidTargets: Ground, Trees, Water
 	Warhead@1Dam: SpreadDamage
 		Spread: 448
-		Damage: 3600
+		Damage: 3800
 		Falloff: 1000, 448, 192, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Trees
 		Versus:
@@ -1227,7 +1227,7 @@ KatyushaRockets:
 		Blockable: false
 	ValidTargets: Ground, Trees, Water
 	Warhead@1Dam: SpreadDamage
-		Damage: 6000
+		Damage: 7500
 		Spread: 512
 		Versus:
 			None: 100
@@ -1616,7 +1616,7 @@ IFVRocketsAAE.TibCore:
 	ReloadDelay: 85
 	Burst: 2
 	BurstDelays: 4
-	Range: 10c0
+	Range: 10c128
 	MinRange: 3c0
 	Report: rocket1.aud
 	Projectile: MissileCA
@@ -1630,14 +1630,14 @@ IFVRocketsAAE.TibCore:
 		MinimumLaunchAngle: 64
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 1200
+		Damage: 1600
 		Falloff: 1000, 448, 192, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Trees
 		Versus:
 			None: 100
 			Wood: 80
-			Light: 72
-			Heavy: 60
+			Light: 80
+			Heavy: 75
 			Concrete: 80
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigated
 	Warhead@3Eff: CreateEffect
@@ -1649,7 +1649,7 @@ IFVRocketsAAE.TibCore:
 227mmH:
 	Inherits: 227mm
 	Report: hovrmis1.aud
-	Range: 10c0
+	Range: 10c128
 
 227mm.upg:
 	Inherits: 227mm
@@ -1676,12 +1676,12 @@ IFVRocketsAAE.TibCore:
 		LaunchAngle: 40
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Damage: 1400
+		Damage: 1800
 		Versus:
 			None: 100
 			Wood: 80
-			Light: 80
-			Heavy: 50
+			Light: 85
+			Heavy: 80
 			Concrete: 80
 
 227mm.Hammerhead:
@@ -1694,7 +1694,7 @@ IFVRocketsAAE.TibCore:
 		-LockOnBurstCounts:
 		Speed: 250
 	Warhead@1Dam: SpreadDamage
-		Damage: 1350
+		Damage: 1650
 		Spread: 896
 		Falloff: 1000, 525, 260, 90, 30, 10, 0
 	Warhead@4Eff: CreateEffect
@@ -1719,26 +1719,26 @@ IFVRocketsAAE.TibCore:
 		CruiseAltitude: 0
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c128
-		Damage: 1050
+		Damage: 1500
 
 227mmH.Hypersonic:
 	Inherits: 227mm.Hypersonic
-	Range: 10c0
+	Range: 10c256
 
 227mmH.Hammerhead:
 	Inherits: 227mm.Hammerhead
-	Range: 10c0
+	Range: 10c256
 
 227mmH.Hailstorm:
 	Inherits: 227mm.Hailstorm
-	Range: 10c0
+	Range: 10c256
 
 227mmAA:
 	Inherits: ^AntiAirMissile
 	ReloadDelay: 75
 	Burst: 2
 	BurstDelays: 4
-	Range: 9c512
+	Range: 9c768
 	Report: rocket1.aud
 	Projectile: MissileCA
 		Speed: 230
@@ -1747,12 +1747,12 @@ IFVRocketsAAE.TibCore:
 		CruiseAltitude: 2c0
 		RangeLimit: 7c512
 	Warhead@1Dam: SpreadDamage
-		Damage: 2200
+		Damage: 2300
 		Falloff: 100, 37, 14, 5, 0
 		Spread: 0c256
 		-Range:
 	Warhead@smallDamage: SpreadDamage
-		Damage: 2200
+		Damage: 2300
 	Warhead@3Eff: CreateEffect
 		ImpactSounds: xplos.aud
 

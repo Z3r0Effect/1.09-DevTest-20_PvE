@@ -636,14 +636,14 @@ BruteAttack:
 	InvalidTargets: Structure
 	TargetActorCenter: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 42
+		Spread: 128
 		Damage: 12000
 		DamageTypes: DefaultDeath
 		InvalidTargets: Structure
 		Versus:
 			None: 40
-			Light: 85
-			Heavy: 100
+			Light: 80
+			Heavy: 85
 			Concrete: 50
 			Wood: 35
 
@@ -668,7 +668,7 @@ Commandeer:
 		ValidTargets: NoCrew
 
 Heal:
-	ReloadDelay: 65
+	ReloadDelay: 55
 	Range: 6c512
 	ValidTargets: Healable
 	Projectile: InstantHit
@@ -702,7 +702,7 @@ Heal:
 		Delay: 50
 
 CustodianHeal:
-	ReloadDelay: 75
+	ReloadDelay: 70
 	Range: 3c512
 	Report: custheal.aud
 	ValidTargets: HealableCyborg, Repairable
@@ -2852,6 +2852,7 @@ ApocRadBeamWeapon:
 		Spread: 256
 		Damage: 23500
 	Warhead@3Dam: SpreadDamage
+		Spread: 384
 		Damage: 5475
 
 RadEruptionWeapon:

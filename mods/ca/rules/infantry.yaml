@@ -2667,7 +2667,7 @@ ASSA:
 	RevealsShroud@GAPGEN:
 		Range: 6c0
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Infantry
+		ValidTargets: Infantry, Vehicle
 	Armament@PRIMARY:
 		Weapon: sniper.assa
 	Armament@BATF:

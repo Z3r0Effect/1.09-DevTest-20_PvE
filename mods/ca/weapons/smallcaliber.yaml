@@ -777,13 +777,13 @@ MP5:
 	ReloadDelay: 6
 	Burst: 3
 	BurstDelays: 2
-	Range: 9c0
+	Range: 9c512
 	InvalidTargets: Structure
 	Projectile: InstantHit
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 1650
+		Damage: 1750
 		Versus:
 			None: 100
 			Wood: 15

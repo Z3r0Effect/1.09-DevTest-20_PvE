@@ -346,16 +346,16 @@ VEHICLES.SCRIN:
 		Modifier: 50
 		RequiresCondition: anathema >= 4
 	DamageMultiplier@Anathema1:
-		Modifier: 80
+		Modifier: 60
 		RequiresCondition: anathema == 1
 	DamageMultiplier@Anathema2:
-		Modifier: 70
+		Modifier: 50
 		RequiresCondition: anathema == 2
 	DamageMultiplier@Anathema3:
-		Modifier: 60
+		Modifier: 40
 		RequiresCondition: anathema == 3
 	DamageMultiplier@Anathema4:
-		Modifier: 50
+		Modifier: 30
 		RequiresCondition: anathema >= 4
 	ValueScalingFirepowerMultiplier@Anathema1:
 		MinValue: 600

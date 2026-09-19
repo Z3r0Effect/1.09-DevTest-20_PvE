@@ -451,14 +451,14 @@ DevourerLaser:
 		GlowColor: ee00ff
 	Warhead@1Dam: SpreadDamage
 		Spread: 405
-		Damage: 1500
+		Damage: 1600
 		Versus:
 			None: 20
 			Light: 85
 			Wood: 45
 	Warhead@antiShip: SpreadDamage
 		ValidTargets: Water
-		Damage: 750
+		Damage: 1000
 
 DevourerLaserCharged:
 	Inherits: DevourerLaser
@@ -496,12 +496,12 @@ RiftCannon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 768
 		Falloff: 100, 65, 40, 25, 0
-		Damage: 12000
+		Damage: 8500
 		Versus:
 			None: 75
 			Wood: 45
-			Light: 70
-			Heavy: 85
+			Light: 75
+			Heavy: 80
 			Brick: 75
 		DamageTypes: BulletDeath
 	Warhead@2Dam: HealthPercentageSpreadDamage
@@ -757,8 +757,8 @@ TripodLaser:
 		MaxFacingDeviation: 128
 		GlowColor: ee00ff
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
-		Damage: 1400
+		Spread: 448
+		Damage: 1550
 		Versus:
 			None: 85
 			Light: 75
@@ -781,7 +781,7 @@ ReaperLaser:
 		GlowColor: 00ff00
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 1600
+		Damage: 1750
 
 ReaperLaserCharged:
 	Inherits: ReaperLaser
@@ -797,7 +797,7 @@ ReaperLaserCharged:
 		SegmentLength: 196
 		RecalculateDistortionInterval: 2
 	Warhead@1Dam: SpreadDamage
-		Damage: 1850
+		Damage: 1900
 
 TripodLaserReversed:
 	Inherits: TripodLaser
@@ -2125,7 +2125,7 @@ AtomizerBolts:
 		ContrailStartColorAlpha: 170
 	Warhead@1Dam: SpreadDamage
 		Spread: 405
-		Damage: 14000
+		Damage: 10000
 		ValidTargets: Ground, Water
 		Versus:
 			None: 45
@@ -2193,7 +2193,7 @@ AtomizerArc:
 		ValidTargets: Vehicle, Ship, Defense, Infantry
 	Warhead@2Dam: TargetDamage
 		DamageTypes: Prone50Percent, AtomizedDeath
-		Damage: 5000
+		Damage: 3000
 		Delay: 25
 		Versus:
 			None: 35
@@ -2201,7 +2201,7 @@ AtomizerArc:
 			Concrete: 90
 	Warhead@3Dam: TargetDamage
 		DamageTypes: Prone50Percent, AtomizedDeath
-		Damage: 6000
+		Damage: 4000
 		Delay: 50
 		Versus:
 			None: 15
@@ -2209,7 +2209,7 @@ AtomizerArc:
 			Concrete: 90
 	Warhead@4Dam: TargetDamage
 		DamageTypes: Prone50Percent, AtomizedDeath
-		Damage: 7000
+		Damage: 5000
 		Delay: 70
 		Versus:
 			None: 15
@@ -2217,7 +2217,7 @@ AtomizerArc:
 			Concrete: 90
 	Warhead@5Dam: TargetDamage
 		DamageTypes: Prone50Percent, AtomizedDeath
-		Damage: 8000
+		Damage: 6000
 		Delay: 100
 		Versus:
 			None: 15
@@ -2404,7 +2404,7 @@ ObliteratorBolt:
 		ValidTargets: Infantry, Structure, Vehicle
 
 NullifierBolt:
-	Range: 9c768
+	Range: 10c512
 	ReloadDelay: 70
 	Report: null-fire1.aud
 	Projectile: MissileCA
@@ -2424,13 +2424,13 @@ NullifierBolt:
 		Jammable: false
 		AllowSnapping: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c320
+		Spread: 0c512
 		Damage: 25000
 		Versus:
 			None: 100
 			Wood: 25
 			Light: 80
-			Heavy: 65
+			Heavy: 75
 			Concrete: 25
 			Brick: 10
 		DamageTypes: Prone50Percent, TriggerProne, ElectricityDeath

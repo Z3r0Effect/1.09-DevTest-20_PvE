@@ -10214,7 +10214,7 @@ APOC:
 	Health:
 		HP: 145000
 	Mobile:
-		Speed: 45
+		Speed: 46
 		TurnSpeed: 8
 		Locomotor: sheavytracked
 		Voice: Move
@@ -10461,7 +10461,7 @@ OVLD:
 	Health:
 		HP: 145000
 	Mobile:
-		Speed: 46
+		Speed: 52
 		TurnSpeed: 12
 		Locomotor: sheavytracked
 		Voice: Move
