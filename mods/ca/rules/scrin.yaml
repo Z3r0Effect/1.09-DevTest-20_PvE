@@ -2667,7 +2667,7 @@ RUIN:
 	WithMuzzleOverlay:
 	FireWarheadsOnDeath:
 		Weapon: ArtilleryExplode
-		LoadedChance: 75
+		LoadedChance: 25
 		RequiresCondition: !being-warped
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded

@@ -486,7 +486,7 @@ RiftCannon:
 	Inherits: ^ScrinLaser
 	Report: darkener-fire1.aud, darkener-fire2.aud
 	ReloadDelay: 70
-	Range: 11c0
+	Range: 11c512
 	Projectile: LaserZapCA
 		Duration: 20
 		Color: 000000FF
@@ -496,11 +496,12 @@ RiftCannon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 768
 		Falloff: 100, 65, 40, 25, 0
-		Damage: 5500
+		Damage: 12000
 		Versus:
 			None: 75
 			Wood: 45
-			Light: 100
+			Light: 70
+			Heavy: 85
 			Brick: 75
 		DamageTypes: BulletDeath
 	Warhead@2Dam: HealthPercentageSpreadDamage
@@ -509,7 +510,7 @@ RiftCannon:
 		Damage: 100
 		Versus:
 			Wood: 4
-			None: 6
+			None: 10
 			Concrete: 6
 			Brick: 6
 			Light: 20
@@ -536,7 +537,7 @@ MiniRift:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 692
-		Damage: 1200
+		Damage: 3600
 		Falloff: 100, 80, 30, 0
 		Versus:
 			None: 30
@@ -562,12 +563,12 @@ MiniRift:
 		ValidRelationships: Ally
 	Warhead@3Slow: GrantExternalConditionCA
 		Range: 1c0
-		Duration: 10
+		Duration: 50
 		Condition: slowed
 		ValidTargets: Vehicle, Ship, Cyborg
 	Warhead@4Slow: GrantExternalConditionCA
 		Range: 3c0
-		Duration: 10
+		Duration: 50
 		Condition: slowed
 		ValidTargets: Vehicle, Ship
 		ValidRelationships: Enemy, Neutral
@@ -699,7 +700,7 @@ RuinerCannon:
 	ReloadDelay: 70
 	Burst: 5
 	BurstDelays: 15
-	Range: 11c0
+	Range: 12c0
 	Projectile: Bullet
 		Speed: 195
 		Image: tibglob
@@ -707,14 +708,14 @@ RuinerCannon:
 		Inaccuracy: 384
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 5000
+		Damage: 9500
 		Versus:
-			None: 120
-			Wood: 100
-			Concrete: 80
+			None: 100
+			Wood: 80
+			Concrete: 60
 			Light: 110
-			Heavy: 75
-			Brick: 20
+			Heavy: 90
+			Brick: 30
 		DamageTypes: Prone50Percent, TriggerProne, RadiationDeath, FlakVestMitigatedMinor
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch-NoFlame
@@ -2104,7 +2105,7 @@ VoidSpike:
 
 AtomizerBolts:
 	Report: atomizer-fire1.aud
-	ReloadDelay: 80
+	ReloadDelay: 65
 	Range: 11c0
 	MinRange: 1c512
 	Projectile: MissileCA
@@ -2124,10 +2125,10 @@ AtomizerBolts:
 		ContrailStartColorAlpha: 170
 	Warhead@1Dam: SpreadDamage
 		Spread: 405
-		Damage: 6500
+		Damage: 14000
 		ValidTargets: Ground, Water
 		Versus:
-			None: 15
+			None: 45
 			Wood: 30
 			Light: 65
 			Heavy: 100
@@ -2192,15 +2193,15 @@ AtomizerArc:
 		ValidTargets: Vehicle, Ship, Defense, Infantry
 	Warhead@2Dam: TargetDamage
 		DamageTypes: Prone50Percent, AtomizedDeath
-		Damage: 3000
+		Damage: 5000
 		Delay: 25
 		Versus:
-			None: 15
+			None: 35
 			Light: 65
 			Concrete: 90
 	Warhead@3Dam: TargetDamage
 		DamageTypes: Prone50Percent, AtomizedDeath
-		Damage: 5000
+		Damage: 6000
 		Delay: 50
 		Versus:
 			None: 15
@@ -2208,7 +2209,7 @@ AtomizerArc:
 			Concrete: 90
 	Warhead@4Dam: TargetDamage
 		DamageTypes: Prone50Percent, AtomizedDeath
-		Damage: 5000
+		Damage: 7000
 		Delay: 70
 		Versus:
 			None: 15
@@ -2216,7 +2217,7 @@ AtomizerArc:
 			Concrete: 90
 	Warhead@5Dam: TargetDamage
 		DamageTypes: Prone50Percent, AtomizedDeath
-		Damage: 5000
+		Damage: 8000
 		Delay: 100
 		Versus:
 			None: 15
@@ -2361,7 +2362,7 @@ ObliteratorBolt:
 		ForceGround: DamageOnly
 		DamageFalloff@1:
 			Spread: 0c384
-			Falloff: 100, 45, 0
+			Falloff: 100, 65, 30, 0
 		ProjectileAnimation@1:
 			Image: obltbolt
 			Sequences: idle, idle2
@@ -2376,8 +2377,8 @@ ObliteratorBolt:
 			Palette: scrin
 			Inaccuracy: 110
 	Warhead@1Dam: SpreadDamage
-		Spread: 320
-		Damage: 16000
+		Spread: 384
+		Damage: 24000
 		Versus:
 			None: 60
 			Wood: 115
@@ -2423,13 +2424,13 @@ NullifierBolt:
 		Jammable: false
 		AllowSnapping: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c256
+		Spread: 0c320
 		Damage: 25000
 		Versus:
 			None: 100
 			Wood: 25
-			Light: 60
-			Heavy: 30
+			Light: 80
+			Heavy: 65
 			Concrete: 25
 			Brick: 10
 		DamageTypes: Prone50Percent, TriggerProne, ElectricityDeath
