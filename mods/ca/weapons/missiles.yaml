@@ -402,7 +402,7 @@ HellfireAG:
 		RangeLimit: 10c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 7500
+		Damage: 8000
 		Versus:
 			None: 60
 			Wood: 30
@@ -415,7 +415,7 @@ HellfireAG.Orca:
 	BurstDelays: 6
 	Warhead@1Dam: SpreadDamage
 		Spread: 768
-		Damage: 6000
+		Damage: 7600
 		Versus:
 			Heavy: 110
 
@@ -435,7 +435,7 @@ HellfireAG.Cryo:
 
 HindRockets:
 	Inherits: HellfireAG
-	Range: 8c128
+	Range: 8c256
 	ReloadDelay: 55
 	Report: hind-rocket1.aud, hind-rocket2.aud
 	ValidTargets: Ground
@@ -446,10 +446,10 @@ HindRockets:
 		Damage: 8500
 		Versus:
 			None: 100
-			Light: 90
+			Light: 95
 			Wood: 28
 			Concrete: 28
-			Heavy: 85
+			Heavy: 90
 
 HindRockets.Ukraine:
 	Inherits: HindRockets
@@ -513,12 +513,12 @@ HellfireAG.Horn:
 		ContrailLength: 0
 	Warhead@1Dam: SpreadDamage
 		Spread: 405
-		Damage: 800
+		Damage: 850
 		Versus:
 			None: 25
 			Wood: 85
 			Light: 95
-			Heavy: 75
+			Heavy: 80
 			Concrete: 50
 
 HellfireAA:
@@ -2126,9 +2126,9 @@ ScrinTorp:
 		Speed: 682
 		LaunchAngle: 10
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
+		Spread: 608
 		Damage: 800
-		Falloff: 1000, 248, 192, 64, 26, 10, 0
+		Falloff: 1000, 320, 225, 134, 75, 20, 0
 		Versus:
 			None: 30
 			Wood: 35
@@ -2575,7 +2575,7 @@ CyborgReaperMissiles:
 		ContrailStartWidth: 0c40
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 6500
+		Damage: 9500
 		Versus:
 			None: 100
 			Wood: 65

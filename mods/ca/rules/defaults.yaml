@@ -2149,7 +2149,7 @@
 		RequiresCondition: mindcontrolled
 	DamageMultiplier@MINDCONTROL:
 		RequiresCondition: mindcontrolled
-		Modifier: 50
+		Modifier: 20
 
 ^Hackable:
 	MindControllable@HACKABLE:

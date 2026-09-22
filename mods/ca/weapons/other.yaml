@@ -916,7 +916,7 @@ Commandobombvehicle:
 	Range: 13c0
 	Report: scrin5b.aud
 	Projectile: MissileCA
-		MaximumLaunchSpeed: 192
+		MaximumLaunchSpeed: 240
 		MinimumLaunchSpeed: 75
 		Speed: 384
 		HorizontalRateOfTurn: 8
@@ -934,7 +934,7 @@ Commandobombvehicle:
 	Warhead@AttachDelayedWeapon: AttachDelayedWeapon
 		Weapon: CommandoTNTVehicle
 		Type: tnt
-		TriggerTime: 20
+		TriggerTime: 10
 		DeathTypes: ExplosionDeath
 		Range: 1
 		AttachSounds: icraatta.aud
@@ -976,7 +976,7 @@ CommandoTNT:
 CommandoTNTVehicle:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c0
+		Spread: 1c256
 		Damage: 12000
 		Falloff: 400, 200, 100, 40, 0
 		ValidTargets: Vehicle
@@ -1487,9 +1487,9 @@ IFVLaser:
 		Damage: 4250
 
 EnlightenedBeam:
-	ReloadDelay: 65
+	ReloadDelay: 60
 	ValidTargets: Ground, Water
-	Range: 7c512
+	Range: 7c768
 	Report: enli-fire1.aud, enli-fire2.aud, enli-fire3.aud
 	Projectile: PlasmaBeam
 		Duration: 10
@@ -2947,7 +2947,7 @@ CyCannon:
 		Jammable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 384
-		Falloff: 100, 60, 25, 0
+		Falloff: 100, 75, 45, 0
 		Damage: 14000
 		Versus:
 			None: 75

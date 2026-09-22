@@ -1138,9 +1138,11 @@ MindblastSlave:
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c512
 		Damage: 40000
-		Falloff: 100, 65, 45, 25, 15, 0
+		Falloff: 100, 75, 50, 30, 15, 0
 		Versus:
 			None: 50
+			Heavy: 70
+			Light: 65
 	Warhead@2Dam: SpreadDamage
 		Damage: 50000
 		Range: 0, 1c0, 1c512, 2c512
@@ -1154,7 +1156,7 @@ JackknifeExplosion:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Damage: 45000
-		Spread: 640
+		Spread: 1c0
 		Falloff: 100, 90, 70, 40, 15, 0
 		Versus:
 			None: 50

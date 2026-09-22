@@ -227,7 +227,7 @@ ChainGun:
 	Inherits: ^HeavyMG
 	Report: gun13.aud
 	ReloadDelay: 16
-	Range: 8c128
+	Range: 8c256
 	MinRange: 0c768
 	Projectile: Bullet
 		Blockable: false
@@ -235,7 +235,7 @@ ChainGun:
 		Spread: 512
 		Damage: 4500
 		Versus:
-			None: 100
+			None: 120
 			Wood: 26
 			Light: 75
 			Heavy: 50
@@ -244,7 +244,7 @@ ChainGun:
 
 GAU8:
 	Inherits: ^HeavyMG
-	Range: 7c768
+	Range: 8c0
 	ReloadDelay: 80
 	BurstDelays: 1
 	Burst: 15

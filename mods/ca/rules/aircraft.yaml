@@ -4878,6 +4878,9 @@ VERT:
 	-ReloadDelayMultiplier@BOMBARD3:
 	SoundOnDamageTransitionCA:
 		DestroyedSounds: vcomdi1a.aud, vcomdi2a.aud
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
 	Encyclopedia:
