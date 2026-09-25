@@ -10051,10 +10051,10 @@ WOLV:
 	ReloadDelayMultiplier@GYRO:
 		Modifier: 85
 	DamageMultiplier@HUMAN:
-		Modifier: 70
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProductionTimeMultiplier:
-		Multiplier: 85
+		Multiplier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: GDI/Vehicles
@@ -10158,7 +10158,7 @@ XO:
 		LandingSounds: xo-land1.aud
 		LeapCondition: jumping
 		ShowSelectionBarWhenFull: false
-		ChargeDelay: 250
+		ChargeDelay: 150
 		SelectionBarColor: ffaa00
 		CircleColor: ffaa0077
 		MaxDistance: 18
@@ -10180,13 +10180,13 @@ XO:
 		TargetTypes: Temporal
 		RequiresCondition: !jumping
 	DamageMultiplier@HUMAN:
-		Modifier: 80
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProductionTimeMultiplier:
-		Multiplier: 85
+		Multiplier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	DamageMultiplier@Jumping:
-		Modifier: 50
+		Modifier: 40
 		RequiresCondition: jumping
 	Encyclopedia:
 		Category: GDI/Vehicles

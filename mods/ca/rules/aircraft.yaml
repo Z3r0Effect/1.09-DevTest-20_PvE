@@ -319,6 +319,9 @@ MIG:
 	WithProductionIconOverlay:
 		Types: Veterancy
 		Prerequisites: aircraft.upgraded
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Rearmable:
 		RearmActors: afld, afld.gdi
 	GrantConditionOnDamageState@SmokeTrail:
@@ -458,6 +461,9 @@ SUK:
 		Condition: enable-smoke
 	Voiced:
 		VoiceSet: SukVoice
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
 	Encyclopedia:
@@ -589,6 +595,9 @@ YAK:
 		Offset: 0,-683,-30
 	Contrail@2:
 		Offset: 0,683,-30
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnDamageState@SmokeTrail:
 		Condition: enable-smoke
 	Encyclopedia:
@@ -1018,6 +1027,9 @@ NHAW:
 	ParachuteCargoOnCondition:
 		RequiresCondition: dropcargo
 		ReturnToBase: false
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnAttack:
 		Condition: dropcargo
 		ArmamentNames: drop
@@ -1191,6 +1203,9 @@ HELI:
 		DecorationBounds: 1536, 1194
 	Rearmable:
 		RearmActors: hpad, hpad.td, afld, afld.gdi, grav
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnDamageState@SmokeTrail:
 		Condition: enable-smoke
 	Encyclopedia:
@@ -1351,6 +1366,9 @@ HIND:
 		RearmActors: hpad, hpad.td, afld, afld.gdi, grav
 	GrantConditionOnDamageState@SmokeTrail:
 		Condition: enable-smoke
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnPrerequisite@RocketPods:
 		Prerequisites: rocketpods.upgrade
 		Condition: rocketpods-upgrade
@@ -1669,8 +1687,11 @@ A10:
 	WithDecoration@UpgradeOverlay:
 		RequiresCondition: !airborne && !resupplied-for-upgrade && (sidewinders-upgrade || avenger-upgrade)
 	DamageMultiplier@Ceramic:
-		Modifier: 70
+		Modifier: 60
 		RequiresCondition: ceramic-upgrade
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: GDI/Aircraft
 
@@ -2204,6 +2225,9 @@ APCH:
 	WithProductionIconOverlay:
 		Types: Veterancy
 		Prerequisites: aircraft.upgraded
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnDamageState@SmokeTrail:
 		Condition: enable-smoke
 	Encyclopedia:
@@ -2353,6 +2377,9 @@ ORCA:
 		Condition: enable-smoke
 	SoundOnDamageTransitionCA:
 		DestroyedSounds: vcomdi1a.aud, vcomdi2a.aud
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
 	Encyclopedia:
@@ -2520,6 +2547,9 @@ ORCB:
 		Condition: enable-smoke
 	SoundOnDamageTransitionCA:
 		DestroyedSounds: vcomdi1a.aud, vcomdi2a.aud
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
 	Encyclopedia:
@@ -2726,6 +2756,9 @@ RAH:
 	WithShadow@CLOAKED:
 		ShadowColor: 00000033
 		RequiresCondition: invisibility || hidden
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Aircraft
 
@@ -2927,7 +2960,7 @@ KIRO:
 	Targetable@AirHighValue:
 		TargetTypes: AirHighValue
 	DamageMultiplier@HUMAN:
-		Modifier: 70
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	SpeedMultiplier@EMPDISABLE:
 		Modifier: 0
@@ -3280,6 +3313,9 @@ HARR:
 		Condition: enable-smoke
 	GpsRadarDot:
 		Sequence: Plane
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
 	Encyclopedia:
@@ -3431,6 +3467,9 @@ SCRN:
 		DestroyedSounds: vcomdi1a.aud, vcomdi2a.aud
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnPrerequisite@Wrath:
 		Condition: wrath-covenant
 		Prerequisites: wrath.covenant
@@ -3881,6 +3920,9 @@ VENM:
 		DestroyedSounds: vcomdi1a.aud, vcomdi2a.aud
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Aircraft
 	EncyclopediaExtras:
@@ -3957,7 +3999,7 @@ AURO:
 		Modifier: 170
 		RequiresCondition: afterburner
 	DamageMultiplier@AFTERBURNER:
-		Modifier: 70
+		Modifier: 60
 		RequiresCondition: afterburner
 	GrantConditionOnAttack@AFTERBURNERFINAL:
 		Condition: afterburner-final
@@ -4053,6 +4095,9 @@ AURO:
 		Condition: enable-smoke
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: GDI/Aircraft
 	EncyclopediaExtras:
@@ -4200,6 +4245,9 @@ PMAK:
 		VoiceSet: PeaceVoice
 	SoundOnDamageTransitionCA:
 		DestroyedSounds: vcomdi1a.aud, vcomdi2a.aud
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
 	Encyclopedia:
@@ -4328,6 +4376,9 @@ BEAG:
 		ChuteSound: gejecta.aud
 	Voiced:
 		VoiceSet: BlackEagleVoice
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Allies/Aircraft
 	EncyclopediaExtras:
@@ -4466,6 +4517,9 @@ PHAN:
 		Sequence: Plane
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Stolen Technology
 	EncyclopediaExtras:
@@ -4590,6 +4644,9 @@ KAMV:
 		Condition: enable-smoke
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Stolen Technology
 	EncyclopediaExtras:
@@ -4723,6 +4780,9 @@ SHDE:
 		DestroyedSounds: vcomdi1a.aud, vcomdi2a.aud
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Stolen Technology
 	EncyclopediaExtras:
@@ -4965,6 +5025,9 @@ MCOR:
 		DestroyedSounds: vcomdi1a.aud, vcomdi2a.aud
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
+	DamageMultiplier@HUMAN:
+		Modifier: 60
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Stolen Technology
 	EncyclopediaExtras:
@@ -5123,6 +5186,9 @@ DISC:
 		Type: Drain
 		ActiveUntilCancelled: true
 		TargetFrozenActors: true
+	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Soviets/Aircraft
 	EncyclopediaExtras:

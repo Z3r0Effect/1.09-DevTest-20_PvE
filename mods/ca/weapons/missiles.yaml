@@ -2446,7 +2446,7 @@ BlackEagleMissiles:
 		Versus:
 			None: 20
 			Concrete: 80
-			Light: 70
+			Light: 85
 			Heavy: 100
 	Warhead@VeiledCondition: GrantExternalConditionCA
 		Range: 4c0
