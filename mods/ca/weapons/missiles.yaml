@@ -868,7 +868,7 @@ APTusk:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground, Water, Air, AirSmall
 		Damage: 8000
-		Spread: 256
+		Spread: 448
 		Versus:
 			None: 15
 			Wood: 65

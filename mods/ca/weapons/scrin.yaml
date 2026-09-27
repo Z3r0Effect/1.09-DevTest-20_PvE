@@ -580,8 +580,8 @@ MiniRift:
 CyberscrinLaser:
 	Inherits: DevourerLaser
 	Report: cscr-fire1.aud
-	ReloadDelay: 50
-	Range: 6c512
+	ReloadDelay: 35
+	Range: 8c512
 	Projectile: PlasmaBeam
 		Colors: ff0000E6, ff6600E6
 		Radius: 1
@@ -595,11 +595,11 @@ CyberscrinLaser:
 		GlowColor: ff0000
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 1000
+		Damage: 5000
 		Versus:
 			None: 100
-			Heavy: 20
-			Light: 70
+			Heavy: 85
+			Light: 100
 			Concrete: 30
 
 CorrupterSpew:

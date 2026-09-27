@@ -1350,10 +1350,10 @@ RaiderBuggyLaser:
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
-		Damage: 8500
+		Damage: 9500
 		Versus:
-			Light: 80
-			Heavy: 75
+			Light: 85
+			Heavy: 80
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	-Warhead@2Eff:
 	Warhead@2Smu: LeaveSmudge
@@ -3646,7 +3646,8 @@ ViperLaser:
 		Colors: ff0000E6, cc0000E6
 		GlowColor: ff0000
 	Warhead@1Dam: SpreadDamage
-		Damage: 1550
+		Spread: 384
+		Damage: 1700
 
 AvatarLaser:
 	ReloadDelay: 90
@@ -3986,12 +3987,12 @@ ZoneRaiderGrenade:
 		ContrailStartColorAlpha: 128
 	Warhead@1Dam: SpreadDamage
 		Spread: 448
-		Damage: 9000
+		Damage: 9500
 		Versus:
 			None: 40
 			Wood: 90
 			Light: 110
-			Heavy: 85
+			Heavy: 90
 			Concrete: 70
 			Brick: 80
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigated
@@ -4202,7 +4203,7 @@ BasiliskPulse:
 
 CyclopsZap:
 	Inherits: TTrackZap
-	Range: 10c0
+	Range: 11c0
 
 JackknifeTargeter:
 	Range: 8c0

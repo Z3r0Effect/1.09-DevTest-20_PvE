@@ -543,6 +543,9 @@ S1:
 		FacingTolerance: 0
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
+	DamageMultiplier@HUMAN:
+		Modifier: 30
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithProductionIconOverlay:
 		Types: Veterancy
 		Prerequisites: barracks.upgraded
@@ -585,6 +588,9 @@ S2:
 	WithProductionIconOverlay:
 		Types: Veterancy
 		Prerequisites: barracks.upgraded
+	DamageMultiplier@HUMAN:
+		Modifier: 40
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	ReplacedInQueue:
@@ -647,6 +653,9 @@ S3:
 	ReloadAmmoPool:
 		Delay: 30
 		Count: 1
+	DamageMultiplier@HUMAN:
+		Modifier: 40
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 
@@ -1688,6 +1697,12 @@ GUNW:
 	DamageMultiplier@HUMAN:
 		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	FirepowerMultiplier@HUMAN:
+		Modifier: 120
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ReloadDelayMultiplier@HUMAN:
+		Modifier: 85
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
 
@@ -1724,6 +1739,12 @@ SHRW:
 		Modifier: 130
 	DamageMultiplier@HUMAN:
 		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	FirepowerMultiplier@HUMAN:
+		Modifier: 120
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ReloadDelayMultiplier@HUMAN:
+		Modifier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	-ReplacedInQueue:
 	-Upgradeable@SHRW:
@@ -1813,6 +1834,12 @@ SEEK:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
 	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	FirepowerMultiplier@HUMAN:
+		Modifier: 120
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ReloadDelayMultiplier@HUMAN:
 		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
@@ -1903,7 +1930,13 @@ LACE:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
 	DamageMultiplier@HUMAN:
-		Modifier: 80
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	FirepowerMultiplier@HUMAN:
+		Modifier: 120
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ReloadDelayMultiplier@HUMAN:
+		Modifier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
@@ -1962,6 +1995,12 @@ INTL:
 		LocalOffset: 470,0,30
 		RequiresCondition: player-harbinger
 	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	FirepowerMultiplier@HUMAN:
+		Modifier: 120
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ReloadDelayMultiplier@HUMAN:
 		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithMuzzleOverlay:
@@ -2136,6 +2175,9 @@ CORR:
 		Types: Veterancy
 		Prerequisites: vehicles.upgraded
 	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ReloadDelayMultiplier@HUMAN:
 		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithMoveAnimation:
@@ -2252,6 +2294,12 @@ LCHR:
 	GivesBountyCA:
 		RequiresCondition: global-bounty && !coalescence-upgrade
 	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	FirepowerMultiplier@HUMAN:
+		Modifier: 120
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ReloadDelayMultiplier@HUMAN:
 		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
@@ -2403,7 +2451,13 @@ STCR:
 		Types: Veterancy
 		Prerequisites: vehicles.upgraded
 	DamageMultiplier@HUMAN:
-		Modifier: 80
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	FirepowerMultiplier@HUMAN:
+		Modifier: 110
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ReloadDelayMultiplier@HUMAN:
+		Modifier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithShadow:
 		Offset: 80, 80, 0
@@ -2489,6 +2543,12 @@ DEVO:
 		MuzzleSequence: muzzle
 		MuzzlePalette: scrin
 	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	FirepowerMultiplier@HUMAN:
+		Modifier: 120
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ReloadDelayMultiplier@HUMAN:
 		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithMuzzleOverlay:
@@ -2599,6 +2659,9 @@ DARK:
 	KillsSelf@SINK:
 		RequiresCondition: onwater && (empdisable || driver-dead)
 	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ReloadDelayMultiplier@HUMAN:
 		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Targetable@ONWATER:
@@ -2714,6 +2777,9 @@ RUIN:
 	DamageMultiplier@HUMAN:
 		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ReloadDelayMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
 	EncyclopediaExtras:
@@ -2789,6 +2855,9 @@ ATMZ:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
 	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ReloadDelayMultiplier@HUMAN:
 		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
@@ -2887,6 +2956,12 @@ TPOD:
 		DamageCooldown: 100
 		RequiresCondition: on-resource
 	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	FirepowerMultiplier@HUMAN:
+		Modifier: 130
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ReloadDelayMultiplier@HUMAN:
 		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithDecoration@TibRepair:
@@ -3106,6 +3181,9 @@ OBLT:
 	DamageMultiplier@HUMAN:
 		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ReloadDelayMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Scrin/Vehicles
 	EncyclopediaExtras:
@@ -3182,6 +3260,9 @@ NULL:
 		Actor: NULL.Husk
 		RequiresCondition: !being-warped
 	DamageMultiplier@HUMAN:
+		Modifier: 80
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
+	ReloadDelayMultiplier@HUMAN:
 		Modifier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:

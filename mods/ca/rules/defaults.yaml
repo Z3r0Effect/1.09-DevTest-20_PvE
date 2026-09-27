@@ -3220,6 +3220,7 @@
 	Inherits: ^Soldier
 	Inherits@CYBORGUPG: ^NodCyborgUpgrade
 	Inherits@CustodianBuff: ^CustodianBuff
+	Inherits@BOT: ^BotOwned
 	Inherits@SLOWABLE: ^Slowable
 	Targetable@Cyborg:
 		TargetTypes: Cyborg
