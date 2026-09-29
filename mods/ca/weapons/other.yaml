@@ -876,7 +876,7 @@ Commandobombbuilding:
 	Inherits: ^Artillery
 	ValidTargets: Structure
 	InvalidTargets: C4Attached, C4Immune
-	ReloadDelay: 125
+	ReloadDelay: 100
 	Range: 10c512
 	Report: grenade1.aud
 	Projectile: Bullet
@@ -892,7 +892,7 @@ Commandobombbuilding:
 	Warhead@AttachDelayedWeapon: AttachDelayedWeapon
 		Weapon: CommandoTNT
 		Type: tnt
-		TriggerTime: 100
+		TriggerTime: 40
 		DeathTypes: ExplosionDeath
 		Range: 1
 		AttachSounds: icraatta.aud
@@ -912,11 +912,11 @@ Commandobombbuilding:
 Commandobombvehicle:
 	ValidTargets: Vehicle
 	InvalidTargets: C4Attached, C4Immune
-	ReloadDelay: 85
+	ReloadDelay: 75
 	Range: 13c0
 	Report: scrin5b.aud
 	Projectile: MissileCA
-		MaximumLaunchSpeed: 240
+		MaximumLaunchSpeed: 384
 		MinimumLaunchSpeed: 75
 		Speed: 384
 		HorizontalRateOfTurn: 8
@@ -934,7 +934,7 @@ Commandobombvehicle:
 	Warhead@AttachDelayedWeapon: AttachDelayedWeapon
 		Weapon: CommandoTNTVehicle
 		Type: tnt
-		TriggerTime: 10
+		TriggerTime: 5
 		DeathTypes: ExplosionDeath
 		Range: 1
 		AttachSounds: icraatta.aud
@@ -1301,7 +1301,7 @@ LaserTur.Adv:
 LightTankLaser:
 	Inherits: LaserTur
 	Range: 7c256
-	ReloadDelay: 40
+	ReloadDelay: 55
 	Report: tnklaser.aud
 	Warhead@1Dam: SpreadDamage
 		Damage: 7000
@@ -1323,17 +1323,19 @@ LightTankLaser:
 
 BattleTankLaser:
 	Inherits: LightTankLaser
-	ReloadDelay: 35
+	ReloadDelay: 50
 	Range: 7c768
 	Warhead@1Dam: SpreadDamage
 		Damage: 7500
 		Versus:
-			Heavy: 120
+			Light: 95
+			Heavy: 85
+			Wood: 35
 
 RaiderBuggyLaser:
 	Inherits: M60mgTD
 	Range: 7c768
-	ReloadDelay: 25
+	ReloadDelay: 35
 	-Burst:
 	-StartBurstReport:
 	Report: rbug-fire1.aud
@@ -1350,7 +1352,7 @@ RaiderBuggyLaser:
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
-		Damage: 9500
+		Damage: 6500
 		Versus:
 			Light: 85
 			Heavy: 80
@@ -2277,7 +2279,7 @@ TitanRailgunImpact:
 		ValidRelationships: Enemy, Neutral, Ally
 
 TanyaRailgun:
-	ReloadDelay: 60
+	ReloadDelay: 55
 	Range: 13c0
 	Report: titanrailgun1.aud, titanrailgun2.aud
 	ValidTargets: Vehicle
@@ -2301,8 +2303,8 @@ TanyaRailgun:
 		Versus:
 			None: 0
 			Wood: 0
-			Light: 90
-			Heavy: 105
+			Light: 95
+			Heavy: 115
 			Concrete: 0
 			Brick: 0
 		ValidTargets: Vehicle

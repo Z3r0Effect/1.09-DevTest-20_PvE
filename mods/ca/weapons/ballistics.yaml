@@ -42,8 +42,8 @@
 		Versus:
 			None: 25
 			Wood: 60
-			Light: 116
-			Heavy: 75
+			Light: 80
+			Heavy: 70
 			Concrete: 30
 
 25mmFRAG:
@@ -72,7 +72,7 @@
 		Damage: 3500
 		Versus:
 			Wood: 58
-			Heavy: 70
+			Heavy: 75
 			Concrete: 40
 
 76mm:
@@ -103,7 +103,7 @@
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			Concrete: 48
-			Heavy: 115
+			Heavy: 95
 
 105mm:
 	Inherits: 90mm
@@ -164,14 +164,15 @@
 	Burst: 1
 	ReloadDelay: 65
 	Warhead@1Dam: SpreadDamage
-		Damage: 8500
+		Damage: 7000
+			Heavy: 100
 
 125mmLasher:
 	Inherits: 125mm
 	Report: vlasatta.aud
 	Burst: 1
 	Warhead@1Dam: SpreadDamage
-		Damage: 7000
+		Damage: 6000
 
 125mmAtomic:
 	Inherits: 125mm
@@ -271,6 +272,9 @@
 	ReloadDelay: 28
 	Warhead@1Dam: SpreadDamage
 		Damage: 3400
+			Concrete: 45
+			Light: 70
+			Heavy: 105
 
 135mm:
 	Inherits: 130mm
@@ -440,8 +444,8 @@ TitanGun:
 			None: 90
 			Wood: 100
 			Concrete: 110
-			Light: 90
-			Heavy: 65
+			Light: 80
+			Heavy: 60
 
 155mmTD:
 	Inherits: 155mm
@@ -461,11 +465,11 @@ TitanGun:
 		Inaccuracy: 128
 	Warhead@1Dam: SpreadDamage
 		Damage: 12000
-		Spread: 512
+		Spread: 384
 		Versus:
 			Wood: 75
-			Light: 95
-			Heavy: 85
+			Light: 90
+			Heavy: 75
 	Warhead@3Eff: CreateEffect
 		Explosions: large_explosion
 		ImpactSounds: kaboom12.aud

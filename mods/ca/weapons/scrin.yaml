@@ -580,8 +580,8 @@ MiniRift:
 CyberscrinLaser:
 	Inherits: DevourerLaser
 	Report: cscr-fire1.aud
-	ReloadDelay: 35
-	Range: 8c512
+	ReloadDelay: 45
+	Range: 7c128
 	Projectile: PlasmaBeam
 		Colors: ff0000E6, ff6600E6
 		Radius: 1
@@ -594,12 +594,13 @@ CyberscrinLaser:
 		ImpactTicks: 0, 2, 4, 6, 8, 10, 12, 14, 16
 		GlowColor: ff0000
 	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 5000
+		Spread: 64
+		Damage: 3500
 		Versus:
 			None: 100
-			Heavy: 85
-			Light: 100
+			Heavy: 75
+			Light: 80
+			Wood: 30
 			Concrete: 30
 
 CorrupterSpew:
@@ -818,7 +819,7 @@ ReaperLaserChargedReversed:
 		FollowingOffset: 50,100,0
 
 StormriderZap:
-	Range: 8c0
+	Range: 8c256
 	Report: stormrider-fire1.aud, stormrider-fire2.aud, stormrider-fire3.aud
 	ReloadDelay: 50
 	Burst: 5
@@ -831,13 +832,13 @@ StormriderZap:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 4500
+		Damage: 6000
 		Versus:
-			None: 105
+			None: 100
 			Wood: 50
 			Concrete: 30
-			Light: 60
-			Heavy: 50
+			Light: 90
+			Heavy: 85
 			Brick: 20
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, AirToGround
 	Warhead@2Smu: LeaveSmudge
@@ -858,20 +859,20 @@ StormriderZap:
 
 StormRiderZapAA:
 	Inherits: StormriderZap
-	ReloadDelay: 70
+	ReloadDelay: 65
 	Projectile: Bullet
 		Image: scrinzap
 		Speed: 1c768
 	ValidTargets: Air, AirSmall
 	Warhead@1Dam: SpreadDamage
-		Damage: 2000
+		Damage: 3000
 		Range: 0, 0c64, 0c256, 1c768
 		Falloff: 100, 100, 30, 15
 		ValidTargets: Air
 		ValidRelationships: Enemy, Neutral
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@smallDamage: SpreadDamage
-		Damage: 1800
+		Damage: 2400
 		Spread: 341
 		Falloff: 100, 50, 14, 0
 		ValidTargets: AirSmall
@@ -896,14 +897,14 @@ TormentorZap:
 		SecondaryBeamColor: 7d00fe30
 		Duration: 10
 	Warhead@1Dam: SpreadDamage
-		Spread: 96
+		Spread: 448
 		Damage: 10000
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, TankBuster, AirToGround
 		Versus:
 			None: 20
-			Light: 65
+			Light: 90
 			Wood: 30
-			Heavy: 75
+			Heavy: 85
 			Concrete: 9
 			Brick: 50
 	Warhead@1Flash: FlashTarget

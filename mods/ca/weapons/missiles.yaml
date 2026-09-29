@@ -443,7 +443,7 @@ HindRockets:
 	Burst: 6
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 8500
+		Damage: 9500
 		Versus:
 			None: 100
 			Light: 95
@@ -2010,7 +2010,7 @@ BoatMissileAA:
 
 Rah66AG:
 	ReloadDelay: 35
-	Range: 8c256
+	Range: 8c128
 	MinRange: 0c768
 	Report: rocket2.aud
 	Burst: 4
@@ -2032,14 +2032,14 @@ Rah66AG:
 		ContrailStartWidth: 0c40
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 1200
+		Damage: 1000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 85
 			Wood: 55
 			Concrete: 30
-			Light: 80
-			Heavy: 70
+			Light: 90
+			Heavy: 80
 			Brick: 5
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, FlakVestMitigatedMinor, AirToGround
 	Warhead@3Eff: CreateEffect
@@ -2066,8 +2066,8 @@ Rah66AG.BlackHand:
 		Spread: 768
 		Versus:
 			Wood: 80
-			Light: 85
-			Heavy: 80
+			Light: 95
+			Heavy: 85
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
@@ -2132,10 +2132,10 @@ ScrinTorp:
 		Versus:
 			None: 30
 			Wood: 35
-			Concrete: 90
+			Concrete: 70
 			Light: 60
-			Heavy: 100
-			Brick: 95
+			Heavy: 80
+			Brick: 75
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, TankBuster, AirToGround
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
@@ -2178,9 +2178,9 @@ ScrinTorpAA:
 		-TrailImage:
 		Jammable: false
 	Warhead@1Dam: SpreadDamage
-		Damage: 4400
+		Damage: 4200
 	Warhead@smallDamage: SpreadDamage
-		Damage: 4400
+		Damage: 4200
 	Warhead@3Eff: CreateEffect
 		ImpactSounds: expnew17.aud
 	Warhead@Flash: FlashTarget

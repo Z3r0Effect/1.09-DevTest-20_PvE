@@ -244,7 +244,7 @@ ChainGun:
 
 GAU8:
 	Inherits: ^HeavyMG
-	Range: 8c0
+	Range: 8c768
 	ReloadDelay: 80
 	BurstDelays: 1
 	Burst: 15
@@ -283,7 +283,7 @@ GAU8.Building:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 1300
+		Damage: 5000
 		Versus:
 			Wood: 100
 		ValidTargets: Building

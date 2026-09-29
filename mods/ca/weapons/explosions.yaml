@@ -1156,15 +1156,15 @@ JackknifeExplosion:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Damage: 45000
-		Spread: 1c0
+		Spread: 1c256
 		Falloff: 100, 90, 70, 40, 15, 0
 		Versus:
 			None: 50
-			Wood: 20
+			Wood: 50
 			Light: 75
-			Heavy: 100
+			Heavy: 80
 			Concrete: 80
-			Brick: 20
+			Brick: 60
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, TankBuster
 		ValidTargets: Ground, Water, Air, AirSmall
 		InvalidTargets: Jackknife

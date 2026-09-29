@@ -462,7 +462,7 @@ SUK:
 	Voiced:
 		VoiceSet: SukVoice
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
@@ -596,7 +596,7 @@ YAK:
 	Contrail@2:
 		Offset: 0,683,-30
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnDamageState@SmokeTrail:
 		Condition: enable-smoke
@@ -1028,7 +1028,7 @@ NHAW:
 		RequiresCondition: dropcargo
 		ReturnToBase: false
 	DamageMultiplier@HUMAN:
-		Modifier: 80
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnAttack:
 		Condition: dropcargo
@@ -1204,7 +1204,7 @@ HELI:
 	Rearmable:
 		RearmActors: hpad, hpad.td, afld, afld.gdi, grav
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 40
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnDamageState@SmokeTrail:
 		Condition: enable-smoke
@@ -1367,7 +1367,7 @@ HIND:
 	GrantConditionOnDamageState@SmokeTrail:
 		Condition: enable-smoke
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 30
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnPrerequisite@RocketPods:
 		Prerequisites: rocketpods.upgrade
@@ -1690,7 +1690,7 @@ A10:
 		Modifier: 60
 		RequiresCondition: ceramic-upgrade
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: GDI/Aircraft
@@ -1843,6 +1843,9 @@ A10.GAU:
 		AmmoPools: secondary
 		FullSequence: pip-red
 	WithMuzzleOverlay:
+	DamageMultiplier@HUMAN:
+		Modifier: 40
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	EncyclopediaExtras:
 		Name: Avenger Warthog
 		VariantOf: A10
@@ -2226,7 +2229,7 @@ APCH:
 		Types: Veterancy
 		Prerequisites: aircraft.upgraded
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 40
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnDamageState@SmokeTrail:
 		Condition: enable-smoke
@@ -2378,7 +2381,7 @@ ORCA:
 	SoundOnDamageTransitionCA:
 		DestroyedSounds: vcomdi1a.aud, vcomdi2a.aud
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 40
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
@@ -2548,7 +2551,7 @@ ORCB:
 	SoundOnDamageTransitionCA:
 		DestroyedSounds: vcomdi1a.aud, vcomdi2a.aud
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 30
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
@@ -2665,8 +2668,8 @@ RAH:
 		Voice: Move
 	Cloak@NORMAL:
 		DetectionTypes: AirCloak
-		InitialDelay: 75
-		CloakDelay: 100
+		InitialDelay: 50
+		CloakDelay: 75
 		CloakSound: trans1.aud
 		UncloakSound: appear1md.aud
 		CloakStyle: Palette
@@ -2682,7 +2685,7 @@ RAH:
 		Condition: player-shadow
 		Prerequisites: player.shadow
 	SpeedMultiplier@ShadowCloak:
-		Modifier: 120
+		Modifier: 125
 		RequiresCondition: player-shadow && hidden
 	AutoTarget:
 		InitialStance: HoldFire
@@ -2757,7 +2760,7 @@ RAH:
 		ShadowColor: 00000033
 		RequiresCondition: invisibility || hidden
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Aircraft
@@ -3314,7 +3317,7 @@ HARR:
 	GpsRadarDot:
 		Sequence: Plane
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
@@ -3468,7 +3471,7 @@ SCRN:
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnPrerequisite@Wrath:
 		Condition: wrath-covenant
@@ -3569,6 +3572,9 @@ CV:
 		Prerequisites: player.arc
 	Targetable@AirHighValue:
 		TargetTypes: AirHighValue
+	DamageMultiplier@HUMAN:
+		Modifier: 70
+		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: GDI/Aircraft
 
@@ -3921,7 +3927,7 @@ VENM:
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Aircraft
@@ -4096,7 +4102,7 @@ AURO:
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 30
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: GDI/Aircraft
@@ -4246,7 +4252,7 @@ PMAK:
 	SoundOnDamageTransitionCA:
 		DestroyedSounds: vcomdi1a.aud, vcomdi2a.aud
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 30
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
@@ -4377,7 +4383,7 @@ BEAG:
 	Voiced:
 		VoiceSet: BlackEagleVoice
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 20
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Allies/Aircraft
@@ -4518,7 +4524,7 @@ PHAN:
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 20
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Stolen Technology
@@ -4645,7 +4651,7 @@ KAMV:
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 20
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Stolen Technology
@@ -4781,7 +4787,7 @@ SHDE:
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 20
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Stolen Technology
@@ -4939,7 +4945,7 @@ VERT:
 	SoundOnDamageTransitionCA:
 		DestroyedSounds: vcomdi1a.aud, vcomdi2a.aud
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 20
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
@@ -5026,7 +5032,7 @@ MCOR:
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 40
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Stolen Technology
@@ -5187,7 +5193,7 @@ DISC:
 		ActiveUntilCancelled: true
 		TargetFrozenActors: true
 	DamageMultiplier@HUMAN:
-		Modifier: 80
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Soviets/Aircraft
@@ -5215,7 +5221,7 @@ JACK:
 	Aircraft:
 		AltitudeVelocity: 0c100
 		TurnSpeed: 20
-		Speed: 140
+		Speed: 160
 		IdleSpeed: 72
 		Repulsable: false
 		Voice: Move
