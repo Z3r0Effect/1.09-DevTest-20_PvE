@@ -320,7 +320,7 @@ MIG:
 		Types: Veterancy
 		Prerequisites: aircraft.upgraded
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Rearmable:
 		RearmActors: afld, afld.gdi
@@ -462,7 +462,7 @@ SUK:
 	Voiced:
 		VoiceSet: SukVoice
 	DamageMultiplier@HUMAN:
-		Modifier: 70
+		Modifier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
@@ -596,7 +596,7 @@ YAK:
 	Contrail@2:
 		Offset: 0,683,-30
 	DamageMultiplier@HUMAN:
-		Modifier: 70
+		Modifier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnDamageState@SmokeTrail:
 		Condition: enable-smoke
@@ -1028,7 +1028,7 @@ NHAW:
 		RequiresCondition: dropcargo
 		ReturnToBase: false
 	DamageMultiplier@HUMAN:
-		Modifier: 70
+		Modifier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnAttack:
 		Condition: dropcargo
@@ -1687,10 +1687,10 @@ A10:
 	WithDecoration@UpgradeOverlay:
 		RequiresCondition: !airborne && !resupplied-for-upgrade && (sidewinders-upgrade || avenger-upgrade)
 	DamageMultiplier@Ceramic:
-		Modifier: 60
+		Modifier: 70
 		RequiresCondition: ceramic-upgrade
 	DamageMultiplier@HUMAN:
-		Modifier: 70
+		Modifier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: GDI/Aircraft
@@ -2760,7 +2760,7 @@ RAH:
 		ShadowColor: 00000033
 		RequiresCondition: invisibility || hidden
 	DamageMultiplier@HUMAN:
-		Modifier: 70
+		Modifier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Aircraft
@@ -2963,7 +2963,7 @@ KIRO:
 	Targetable@AirHighValue:
 		TargetTypes: AirHighValue
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	SpeedMultiplier@EMPDISABLE:
 		Modifier: 0
@@ -3317,7 +3317,7 @@ HARR:
 	GpsRadarDot:
 		Sequence: Plane
 	DamageMultiplier@HUMAN:
-		Modifier: 70
+		Modifier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
@@ -3471,7 +3471,7 @@ SCRN:
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
 	DamageMultiplier@HUMAN:
-		Modifier: 70
+		Modifier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	GrantConditionOnPrerequisite@Wrath:
 		Condition: wrath-covenant
@@ -3572,9 +3572,6 @@ CV:
 		Prerequisites: player.arc
 	Targetable@AirHighValue:
 		TargetTypes: AirHighValue
-	DamageMultiplier@HUMAN:
-		Modifier: 70
-		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: GDI/Aircraft
 
@@ -3927,7 +3924,7 @@ VENM:
 	EjectOnDeath:
 		ChuteSound: gejecta.aud
 	DamageMultiplier@HUMAN:
-		Modifier: 70
+		Modifier: 90
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Aircraft
@@ -4005,7 +4002,7 @@ AURO:
 		Modifier: 170
 		RequiresCondition: afterburner
 	DamageMultiplier@AFTERBURNER:
-		Modifier: 60
+		Modifier: 70
 		RequiresCondition: afterburner
 	GrantConditionOnAttack@AFTERBURNERFINAL:
 		Condition: afterburner-final
@@ -5192,9 +5189,6 @@ DISC:
 		Type: Drain
 		ActiveUntilCancelled: true
 		TargetFrozenActors: true
-	DamageMultiplier@HUMAN:
-		Modifier: 60
-		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Soviets/Aircraft
 	EncyclopediaExtras:

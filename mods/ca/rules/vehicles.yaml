@@ -917,10 +917,10 @@ GTNK.squad:
 	AttackTurreted:
 		PauseOnCondition: empdisable || being-warped || blinded || parachute
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
-		Modifier: 120
+		Modifier: 115
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 80
@@ -1228,10 +1228,10 @@ GTNK.squad:
 	ReplacedInQueue:
 		Actors: 3tnk.rhino.atomic, 3tnk.rhino.yuri
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
-		Modifier: 120
+		Modifier: 115
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 85
@@ -2039,7 +2039,7 @@ SPEC:
 		Modifier: 50
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
-		Modifier: 110
+		Modifier: 105
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 85
@@ -2155,7 +2155,7 @@ SAPC:
 		Modifier: 125
 		RequiresCondition: player-shadow && hidden
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	AutoTarget:
 		InitialStance: HoldFire
@@ -4619,7 +4619,7 @@ MTNK:
 	ReplacedInQueue:
 		Actors: mtnk.drone, mtnk.laser
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
 		Modifier: 150
@@ -5158,10 +5158,10 @@ HTNK.Hover:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	RangeMultiplier@HUMAN:
-		Modifier: 125
+		Modifier: 115
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	WithShadow:
 		Offset: 43, 128, 0
@@ -5254,7 +5254,7 @@ HTNK.Drone:
 		VoiceSet: MamDroneVoice
 		RequiresCondition: radarenabled && !empdisable
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Voiced@OFFLINE:
 		VoiceSet: OfflineDroneVoice
@@ -5425,16 +5425,16 @@ MSAM:
 	Voiced:
 		VoiceSet: MsamVoice
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
-		Modifier: 120
+		Modifier: 110
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProductionTimeMultiplier:
-		Multiplier: 90
+		Multiplier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: GDI/Vehicles
@@ -5602,16 +5602,16 @@ MLRS:
 		Condition: player-blackh
 		Prerequisites: player.blackh
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
-		Modifier: 120
+		Modifier: 110
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProductionTimeMultiplier:
-		Multiplier: 85
+		Multiplier: 80
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Nod/Vehicles
@@ -5751,13 +5751,13 @@ STNK.Nod:
 		Condition: inherited-cloak
 		RequiresCondition: hidden || invisibility
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
-		Modifier: 120
+		Modifier: 110
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
-		Modifier: 80
+		Modifier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProductionTimeMultiplier:
 		Multiplier: 90
@@ -5879,10 +5879,10 @@ HSTK:
 		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
-		Modifier: 120
+		Modifier: 110
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
-		Modifier: 80
+		Modifier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProductionTimeMultiplier:
 		Multiplier: 80
@@ -6666,10 +6666,10 @@ TRPC:
 	Sellable:
 		RefundPercent: 10
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProductionTimeMultiplier:
-		Multiplier: 90
+		Multiplier: 85
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Soviets/Vehicles
@@ -8051,10 +8051,10 @@ TITN:
 		BuildDuration: 100
 		RequiresCondition: !mindcontrolled
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
-		Modifier: 120
+		Modifier: 110
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 80
@@ -8090,10 +8090,10 @@ TITN.RAIL:
 		Weapon: TitanRailgunImpact
 		LocalOffset: 830,290,170
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
-		Modifier: 120
+		Modifier: 105
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 85
@@ -8234,7 +8234,7 @@ JUGG:
 		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
-		Modifier: 120
+		Modifier: 110
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 80
@@ -8352,7 +8352,7 @@ DISR:
 	-RangeMultiplier@SEEK2:
 	-RangeMultiplier@SEEK3:
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 85
@@ -8631,10 +8631,10 @@ RTNK:
 		Condition: inherited-cloak
 		RequiresCondition: hidden || invisibility
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
-		Modifier: 120
+		Modifier: 115
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 80
@@ -8826,10 +8826,10 @@ TNKD:
 	Selectable:
 		DecorationBounds: 1194, 1194
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
-		Modifier: 120
+		Modifier: 115
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 85
@@ -9068,7 +9068,7 @@ PTNK:
 		Modifier: 125
 		RequiresCondition: !undeployed
 	DamageMultiplier@HUMAN:
-		Modifier: 60
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 85
@@ -9114,12 +9114,12 @@ PCAN:
 		ChargeLevel: 15
 		ChargingSounds: pcancharge.aud
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Voiced:
 		VoiceSet: PrismCannonVoice
 	RangeMultiplier@Deployed:
-		Modifier: 130
+		Modifier: 120
 	-ReplacedInQueue:
 	-Upgradeable@PCAN:
 	-WithDecoration@UpgradeOverlay:
@@ -9223,10 +9223,10 @@ WTNK:
 		Condition: microwave-upgrade
 		Prerequisites: microwave.upgrade
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
-		Modifier: 120
+		Modifier: 115
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 85
@@ -9817,7 +9817,7 @@ CHPR:
 	WithIdleOverlay@MINDCONTROL:
 		Offset: -200,0,768
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	Encyclopedia:
 		Category: Allies/Vehicles
@@ -9982,7 +9982,7 @@ PBUL:
 		UseDisabledArmaments: true
 		TargetFrozenActors: true
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
 		Modifier: 110
@@ -10046,10 +10046,10 @@ CYCP:
 		Actor: CYCP.Husk
 		RequiresCondition: !being-warped
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
-		Modifier: 130
+		Modifier: 120
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 85
@@ -10141,7 +10141,7 @@ BASI:
 		Condition: inherited-cloak
 		RequiresCondition: hidden || invisibility
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 85
@@ -10292,10 +10292,10 @@ VIPR:
 		TargetTypes: Water, Ship
 		RequiresCondition: onwater
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
-		Modifier: 120
+		Modifier: 110
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 85
@@ -10382,10 +10382,10 @@ WOLV:
 	ReloadDelayMultiplier@GYRO:
 		Modifier: 85
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
-		Modifier: 120
+		Modifier: 115
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 85
@@ -10517,13 +10517,13 @@ XO:
 		TargetTypes: Temporal
 		RequiresCondition: !jumping
 	DamageMultiplier@HUMAN:
-		Modifier: 50
+		Modifier: 60
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ProductionTimeMultiplier:
 		Multiplier: 70
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	FirepowerMultiplier@HUMAN:
-		Modifier: 115
+		Modifier: 110
 		RequiresCondition: !(owned-by-brutal-ai || owned-by-vhard-ai || owned-by-hard-ai || owned-by-normal-ai || owned-by-easy-ai)
 	ReloadDelayMultiplier@HUMAN:
 		Modifier: 85
